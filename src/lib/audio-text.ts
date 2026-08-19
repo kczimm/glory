@@ -39,14 +39,18 @@ export function normalizeText(text: string): string {
   return text.replace(/\s+/g, " ").trim();
 }
 
-const CHUNK_MAX = 160;
+// Chunk at a generous ceiling so an ordinary verse is one whole file; only
+// genuinely long single sentences get split (at a clause boundary).
+const CHUNK_MAX = 220;
 
 /** Split text into sentence-sized chunks for utterance-length safety. */
 export function chunkText(text: string): string[] {
   const clean = normalizeText(text);
   if (!clean) return [];
   if (clean.length <= CHUNK_MAX) return [clean];
-  const sentences = clean.match(/[^.!?]+[.!?]+["')\]]*\s*|[^.!?]+$/g) ?? [clean];
+  // Split on sentence breaks; absorb the surrounding quotes (including curly
+  // quotes) into the sentence so the closing quote is never orphaned.
+  const sentences = clean.match(/[^.!?]+[.!?]+["')\]]\u201D\u2019]*\s*|[^.!?]+$/g) ?? [clean];
   const parts: string[] = [];
   let current = "";
   for (const raw of sentences) {
@@ -61,9 +65,40 @@ export function chunkText(text: string): string[] {
     }
   }
   if (current) parts.push(current);
-  return parts.flatMap((p) => (p.length > CHUNK_MAX ? hardSplit(p) : [p]));
+  return parts.flatMap((p) => (p.length > CHUNK_MAX ? splitLong(p) : [p]));
 }
 
+/**
+ * Split a single piece longer than the cap at clause boundaries (commas,
+ * semicolons, colons) so the break lands on a natural pause; fall back to a
+ * word splice only if there is no punctuation at all. An ordinary verse ends
+ * up as one file because it fits under CHUNK_MAX.
+ */
+function splitLong(text: string): string[] {
+  const out: string[] = [];
+  let rest = text.trim();
+  while (rest.length > CHUNK_MAX) {
+    const cut = findClauseCut(rest, CHUNK_MAX);
+    if (cut < 0) break;
+    out.push(rest.slice(0, cut).trim());
+    rest = rest.slice(cut).trimStart();
+  }
+  if (rest.length) out.push(rest.trim());
+  return out.flatMap((s) => (s.length > CHUNK_MAX ? hardSplit(s) : [s]));
+}
+
+/** Index just after the last clause separator within the first `max` chars. */
+function findClauseCut(text: string, max: number): number {
+  const window = text.slice(0, max);
+  let idx = -1;
+  for (let i = 0; i < window.length; i++) {
+    const ch = window[i];
+    if (ch === "," || ch === ";" || ch === ":") idx = i + 1;
+  }
+  return idx;
+}
+
+/** Last resort: splice on word boundaries. */
 function hardSplit(text: string): string[] {
   const out: string[] = [];
   let current = "";
