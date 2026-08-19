@@ -1194,10 +1194,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Daniel 7:13-14", "Mark 2:10", "Mark 10:45", "Hebrews 2:17"],
-    raises: ["is-the-son-of-man-title-judgment-or-mercy"],
+    raises: ["is-the-son-of-man-title-judgment-or-mercy", "why-did-jesus-tell-people-not-to-reveal-who-he-was"],
     followsFrom: ["who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god"],
     related: ["what-does-it-mean-that-jesus-is-the-son-of-god"],
-    planned: ["Why did Jesus often tell people not to reveal who He was?"],
+    planned: ["What does the title 'Christ' mean?"],
     order: 16,
   },
 
@@ -7165,5 +7165,91 @@ export const questions: Question[] = [
     related: ["what-happens-when-i-sin", "can-i-lose-my-salvation", "what-is-justification", "does-god-use-our-failures"],
     planned: ["What if I don't feel forgiven?"],
     order: 29,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Jesus Christ (continued: the hidden Christ)
+  // ------------------------------------------------------------------
+  {
+    slug: "why-did-jesus-tell-people-not-to-reveal-who-he-was",
+    question: "Why did Jesus often tell people not to reveal who He was?",
+    category: "jesus-christ",
+    summary:
+      "Jesus set strict limits on how and when His identity was made known, at times telling the healed, the demons, and even His own disciples not to say who He was. This was not secrecy for its own sake. Jesus came to reveal Himself, but on His own timing and terms, keeping the confession of His name tied to the cross and resurrection, so that the Christ would not be reduced to a rumor of a wonder-worker before the work was finished.",
+    passages: [
+      {
+        book: "Mark",
+        chapter: 1,
+        title: "A quiet beginning",
+        lookFor: "Jesus tells the healed leper to say nothing to anybody and silences the demons who knew Him: the revelation is kept under His control.",
+        focus: "21-45",
+      },
+      {
+        book: "Mark",
+        chapter: 3,
+        title: "He sternly ordered them not to make Him known",
+        lookFor: "The unclean spirits cry out that He is the Son of God, and Jesus strictly orders them not to make Him known.",
+        focus: "7-12",
+      },
+      {
+        book: "Mark",
+        chapter: 8,
+        title: "Do not tell anyone",
+        lookFor: "After Peter's confession, Jesus commands the disciples to tell no one, and immediately begins to teach that the Son of Man must suffer.",
+        focus: "27-38",
+      },
+      {
+        book: "Mark",
+        chapter: 9,
+        title: "Until the Son of Man has risen",
+        lookFor: "After the transfiguration, Jesus tells them to keep silent until after He rises from the dead: the full unveiling is tied to the cross.",
+        focus: "1-10",
+      },
+      {
+        book: "Matthew",
+        chapter: 16,
+        title: "Then He began to speak of His suffering",
+        lookFor: "He tells them not to say He is the Christ, and from that same moment begins to teach plainly that He must suffer and die and rise.",
+        focus: "13-28",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus repeatedly silenced talk about who He was",
+        body:
+          "The pattern is unmistakable. Jesus did not allow the demons to speak 'because they knew him.' When the unclean spirits cried that He was the Son of God, 'he sternly warned them that they should not make him known.' He told the healed leper, 'See you say nothing to anybody.' And after Peter confessed Him as the Christ, Jesus 'commanded the disciples that they should tell no one about him.'",
+        verses: ["Mark 1:34", "Mark 3:12", "Mark 1:44", "Mark 8:30"],
+      },
+      {
+        heading: "Even the demons were silenced",
+        body:
+          "Jesus would not accept testimony from the unclean spirits, however accurate their confession. They knew who He was and cried, 'You are the Christ, the Son of God!' but Jesus rebuked them and 'didn't allow them to speak.' Truth from the wrong source at the wrong time would have fed the very rumors He was not there to spread. Jesus alone, on His own terms, controls how His name is proclaimed.",
+        verses: ["Mark 3:11", "Mark 3:12", "Luke 4:41"],
+      },
+      {
+        heading: "The full unveiling was tied to the cross",
+        body:
+          "Again and again, the silence is broken by the cross. Jesus commands them to tell no one, then immediately begins to teach that the Son of Man must suffer many things, be killed, and rise again. At the transfiguration He charges them to tell no one 'until after the Son of Man had risen from the dead.' Matthew notes that from the moment He told them not to say He was the Christ, He began to speak plainly of His death and resurrection. The revelation of who He is comes through what He came to do.",
+        verses: ["Mark 8:30", "Mark 8:31", "Mark 9:9", "Matthew 16:20", "Matthew 16:21"],
+      },
+      {
+        heading: "So the Christ would not be made a rumor",
+        body:
+          "Left unchecked, word of miracles would have made Jesus a spectacle before the work was done, a wonder-worker the crowds wanted on their terms, not a Savior who must suffer and die. By guarding the confession of His name, Jesus was guarding the meaning of who He is: He would not let His identity be detached from the cross. The hiddenness was the holiness of His mission, keeping Him free to do what He came to do.”",
+        verses: ["Mark 3:12", "Matthew 12:16", "Mark 8:31", "Matthew 16:20"],
+      },
+      {
+        heading: "Yet the veiled King now calls us to open confession",
+        body:
+          "The season of secrecy served its purpose; it ended at the cross, the resurrection, and Pentecost. Now Jesus openly warns that whoever is ashamed of Him and His words in this generation, the Son of Man will be ashamed of when He comes in His Father's glory. He sends His disciples to make disciples of all nations and to let their light shine before others. The One who guarded His name until the work was finished now freely entrusts His name to us, and calls us to confess it boldly.",
+        verses: ["Mark 8:38", "Matthew 28:19", "Matthew 5:16", "Luke 24:45-47"],
+      },
+    ],
+    keyVerses: ["Mark 3:11-12", "Mark 9:9", "Mark 8:30", "Matthew 16:20-21", "Mark 8:38"],
+    raises: ["who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god", "why-did-jesus-have-to-die"],
+    followsFrom: ["why-did-jesus-call-himself-son-of-man", "what-does-it-mean-that-jesus-is-the-son-of-god"],
+    related: ["why-did-jesus-call-himself-son-of-man", "who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god", "between-the-cross-and-the-resurrection"],
+    planned: ["How much did the disciples understand while Jesus was with them?"],
+    order: 26,
   },
 ];
