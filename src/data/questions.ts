@@ -1422,10 +1422,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 6:11-14", "Galatians 5:16", "Colossians 3:5", "Hebrews 4:16"],
-    raises: ["what-is-the-flesh-versus-the-spirit"],
+    raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from"],
     followsFrom: ["what-happens-when-i-sin", "what-should-i-do-now-that-im-saved"],
     related: ["what-happens-when-i-sin"],
-    planned: ["Where does temptation come from?"],
+    planned: ["What is the difference between testing and temptation?"],
     order: 19,
   },
 
@@ -4053,5 +4053,88 @@ export const questions: Question[] = [
     related: ["what-happens-when-i-sin", "can-i-lose-my-salvation", "why-does-god-allow-suffering"],
     planned: ["What if I keep repeating the same sin?"],
     order: 24,
+  },
+
+  {
+    slug: "where-does-temptation-come-from",
+    question: "Where does temptation come from?",
+    category: "our-walk",
+    summary:
+      "Temptation rises from within, from our own desires, and it is also pressed on us from without, by a real enemy who distorts God's word. It never comes from God. Temptation itself is not sin, and its power is broken by the Word, by faith, and by the way of escape God promises to provide.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 3,
+        title: "The serpent and the fall",
+        lookFor: "The first temptation: a question that distorts what God said, aimed at desire and doubt.",
+        focus: "1-7",
+      },
+      {
+        book: "James",
+        chapter: 1,
+        title: "Trials, temptation, and the Giver of good gifts",
+        lookFor: "James separates testing from temptation, names the source within us, and clears God of any blame.",
+        focus: "1-18",
+      },
+      {
+        book: "Matthew",
+        chapter: 4,
+        title: "Jesus tempted in the wilderness",
+        lookFor: "The devil tempts the Son of God directly, and Jesus answers every assault with the Word.",
+        focus: "1-11",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 10,
+        title: "No temptation beyond what you can bear",
+        lookFor: "Israel's history as a warning, and the promise of a way of escape.",
+        focus: "1-13",
+      },
+      {
+        book: "Luke",
+        chapter: 22,
+        title: "The hour of trial",
+        lookFor: "Jesus warns the disciples to pray so they will not enter temptation, even as He faces His own hour.",
+        focus: "39-46",
+      },
+    ],
+    points: [
+      {
+        heading: "It rises from our own desires",
+        body:
+          "James is wonderfully honest: 'each one is tempted, when he is drawn away by his own lust, and enticed.' The bait is usually an unholy desire we already carry, not an idea dropped from nowhere. That is why the fight begins in the heart: the lust, when it has conceived, bears sin, and sin, full grown, produces death.",
+        verses: ["James 1:14", "James 1:15"],
+      },
+      {
+        heading: "It is pressed on us from without",
+        body:
+          "There is a real enemy who wants you to fall. He is the one who came to Eve and asked whether God had really said; Paul warns that Satan masquerades as an angel of light and that the serpent deceived Eve by his craftiness; and Peter pictures him as 'a roaring lion' seeking someone to devour. Temptation is not only internal wrestling; it is also a battle with a personal foe.",
+        verses: ["Genesis 3:1", "2 Corinthians 11:3", "2 Corinthians 11:14", "1 Peter 5:8"],
+      },
+      {
+        heading: "It never comes from God",
+        body:
+          "James rules it out completely: 'Let no man say when he is tempted, I am tempted by God, for God can't be tempted by evil, and he himself tempts no one.' God tests and refines, but He never entices anyone to sin. When temptation comes, it has another source: our own desires and the enemy who feeds them.",
+        verses: ["James 1:13", "James 1:2", "James 1:3"],
+      },
+      {
+        heading: "Being tempted is not the same as sinning",
+        body:
+          "Jesus Himself was tempted, yet without sin, which proves that temptation in itself is not the fall; sin begins when we yield and the lust conceives. This matters: you cannot always stop the tempting thought from knocking, but you are not guilty for the knock, only for opening the door. He who was tempted now helps those who are tempted.",
+        verses: ["Hebrews 4:15", "Hebrews 2:18", "James 1:14-15", "Matthew 4:1"],
+      },
+      {
+        heading: "The way out is the Word, faith, and the escape He provides",
+        body:
+          "Jesus answered every temptation with 'It is written,' not by matching the devil's cleverness but by resting on the word. James urges: resist the devil, and he will flee. And Paul gives the anchor promise: God is faithful, He will not allow you to be tempted beyond what you can bear, and He will provide the way of escape. Watch and pray, and take up the shield of faith.",
+        verses: ["Matthew 4:4", "James 4:7", "1 Corinthians 10:13", "Mark 14:38", "Ephesians 6:16", "1 Peter 5:9"],
+      },
+    ],
+    keyVerses: ["James 1:13-15", "1 Corinthians 10:13", "Hebrews 4:15", "Matthew 4:4", "James 4:7"],
+    raises: [],
+    followsFrom: ["how-do-i-fight-sin", "what-happens-when-i-sin"],
+    related: ["how-do-i-fight-sin", "who-is-satan", "what-is-the-flesh-versus-the-spirit", "who-is-the-father"],
+    planned: ["How can I help someone caught in sin without falling myself?"],
+    order: 25,
   },
 ];
