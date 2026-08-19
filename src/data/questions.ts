@@ -4114,7 +4114,7 @@ export const questions: Question[] = [
       {
         heading: "It never comes from God",
         body:
-          "James rules it out completely: 'Let no man say when he is tempted, I am tempted by God, for God can't be tempted by evil, and he himself tempts no one.' God tests and refines, but He never entices anyone to sin. When temptation comes, it has another source: our own desires and the enemy who feeds them.",
+          "James rules it out completely: no one should say, when tempted, that they are being tempted by God, for God cannot be tempted by evil, and He Himself tempts no one. God tests and refines, but He never entices anyone to sin. When temptation comes, it has another source: our own desires and the enemy who feeds them.",
         verses: ["James 1:13", "James 1:2", "James 1:3"],
       },
       {
