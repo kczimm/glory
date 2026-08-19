@@ -226,7 +226,7 @@ export const questions: Question[] = [
     raises: ["is-jesus-really-god", "who-is-the-father"],
     followsFrom: ["is-the-holy-spirit-god", "is-jesus-really-god"],
     related: ["who-is-the-holy-spirit", "who-is-the-father"],
-    planned: ["Can we really understand the Trinity?", "How do I pray to God as Father, Son, and Spirit?"],
+    planned: ["Can we really understand the Trinity?"],
     order: 3,
   },
 
@@ -1270,10 +1270,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 1:9-11", "Hebrews 7:25", "John 14:2-3", "Romans 8:34"],
-    raises: [],
+    raises: ["will-jesus-return-literally"],
     followsFrom: ["did-jesus-rise-from-the-dead"],
     related: ["what-happens-when-i-sin", "how-can-i-be-saved"],
-    planned: ["Will Jesus return literally and visibly?"],
+    planned: [],
     order: 17,
   },
 
@@ -1348,8 +1348,8 @@ export const questions: Question[] = [
     keyVerses: ["John 15:4-5", "Luke 9:23", "Colossians 3:12-14", "2 Peter 3:18"],
     raises: ["how-do-i-fight-sin"],
     followsFrom: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
-    related: ["who-is-the-holy-spirit", "how-do-i-receive-the-holy-spirit"],
-    planned: ["How do I read the Bible and pray?"],
+    related: ["who-is-the-holy-spirit", "how-do-i-receive-the-holy-spirit", "why-do-i-need-the-church", "how-should-i-read-the-bible", "how-do-i-pray"],
+    planned: [],
     order: 18,
   },
 
@@ -1422,10 +1422,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 6:11-14", "Galatians 5:16", "Colossians 3:5", "Hebrews 4:16"],
-    raises: [],
+    raises: ["what-is-the-flesh-versus-the-spirit"],
     followsFrom: ["what-happens-when-i-sin", "what-should-i-do-now-that-im-saved"],
     related: ["what-happens-when-i-sin"],
-    planned: ["What is the flesh versus the Spirit?", "Where does temptation come from?"],
+    planned: ["Where does temptation come from?"],
     order: 19,
   },
 
@@ -1503,8 +1503,8 @@ export const questions: Question[] = [
     keyVerses: ["John 14:9", "1 John 3:1", "John 3:16", "Matthew 6:9", "Ephesians 1:5"],
     raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit"],
     followsFrom: ["what-is-the-trinity"],
-    related: ["what-is-the-trinity", "who-is-jesus", "why-does-god-allow-suffering"],
-    planned: ["How do I pray to the Father?", "Why does He still call me son/daughter when I fail?"],
+    related: ["what-is-the-trinity", "who-is-jesus", "why-does-god-allow-suffering", "how-do-i-pray"],
+    planned: ["Why does He still call me son/daughter when I fail?"],
     order: 20,
   },
 
@@ -2035,8 +2035,8 @@ export const questions: Question[] = [
     keyVerses: ["Romans 8:28", "Genesis 50:20", "2 Corinthians 1:3-4", "Revelation 21:4"],
     raises: ["is-god-in-control"],
     followsFrom: [],
-    related: ["who-is-the-father", "where-is-jesus-now"],
-    planned: ["Where is God in my specific pain?", "Why does He seem silent when I suffer?"],
+    related: ["who-is-the-father", "where-is-jesus-now", "why-does-god-seem-silent"],
+    planned: ["Where is God in my specific pain?"],
     order: 27,
   },
 
@@ -2190,5 +2190,870 @@ export const questions: Question[] = [
     related: ["what-should-i-do-now-that-im-saved", "who-is-the-holy-spirit"],
     planned: ["What if I make the wrong decision?", "Does God have one specific plan for who I marry?"],
     order: 29,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Prayer
+  // ------------------------------------------------------------------
+  {
+    slug: "how-do-i-pray",
+    question: "How do I pray?",
+    category: "prayer",
+    summary:
+      "Prayer is simply talking with God through Jesus Christ, with the Spirit's help, trusting that He hears. Jesus gave us the shape of it in the Lord's Prayer: address God as Father, praise Him, ask for daily bread, forgiveness, and deliverance, and trust Him with the outcome.",
+    passages: [
+      { book: "Matthew", chapter: 6, title: "Jesus teaches us to pray", lookFor: "The model prayer and the warnings against showy praying.", focus: "5-13" },
+      { book: "Luke", chapter: 11, title: "The disciples ask to be taught", lookFor: "Ask, seek, knock: the Father gives good gifts to those who ask.", focus: "1-13" },
+      { book: "Philippians", chapter: 4, title: "Prayer and peace", lookFor: "In everything, with thanksgiving, and the peace of God guards the heart.", focus: "4-7" },
+      { book: "1 Thessalonians", chapter: 5, title: "Pray without ceasing", lookFor: "Prayer woven into the whole of life, not a slot on the schedule.", focus: "16-18" },
+    ],
+    points: [
+      {
+        heading: "Prayer is conversation with a Father, not a performance",
+        body: "Jesus warns us not to pray to be seen by others: go into your room, shut the door, and pray to your Father who sees in secret. He assumes we will pray; He simply tells us how not to corrupt it.",
+        verses: ["Matthew 6:5-6", "Matthew 6:7-8"],
+      },
+      {
+        heading: "The Spirit helps us pray",
+        body: "We often do not know how to pray as we should, but the Spirit Himself intercedes for us with groanings too deep for words. And Jesus invites us to ask the Father in His name, promising that He will give what we ask.",
+        verses: ["Romans 8:26-27", "John 14:13-14"],
+      },
+      {
+        heading: "Pray with thanksgiving, and peace guards your heart",
+        body: "In everything, by prayer and supplication with thanksgiving, let your requests be made known to God, and the peace of God, which surpasses all understanding, will guard your hearts and minds in Christ Jesus.",
+        verses: ["Philippians 4:6-7", "1 Thessalonians 5:17-18"],
+      },
+      {
+        heading: "Persist; He invites asking",
+        body: "Jesus says ask, seek, knock, for everyone who asks receives, and how much more will the heavenly Father give the Holy Spirit to those who ask Him. He told a parable that we should always pray and not lose heart.",
+        verses: ["Luke 11:9-13", "Luke 18:1"],
+      },
+    ],
+    keyVerses: ["Matthew 6:9-13", "Philippians 4:6-7", "Romans 8:26-27", "Luke 11:9"],
+    raises: ["what-does-the-lords-prayer-teach", "does-god-hear-my-prayers"],
+    followsFrom: [],
+    related: ["who-is-the-father", "what-should-i-do-now-that-im-saved"],
+    planned: [],
+    order: 30,
+  },
+
+  {
+    slug: "what-does-the-lords-prayer-teach",
+    question: "What does the Lord's Prayer teach?",
+    category: "prayer",
+    summary:
+      "The prayer Jesus gave us is a pattern for all prayer: it begins with God (His name, His kingdom, His will), then brings our needs (daily bread, forgiveness, protection), and ends in praise. It teaches us what to pray for and how to pray for it, simply, trustingly, together.",
+    passages: [
+      { book: "Matthew", chapter: 6, title: "The model prayer", lookFor: "God first, then our needs, then praise.", focus: "9-13" },
+      { book: "Luke", chapter: 11, title: "The same prayer, shorter", lookFor: "Jesus gives it again, even more briefly, in Luke.", focus: "1-4" },
+    ],
+    points: [
+      {
+        heading: "It starts with God, not us",
+        body: "Our Father in heaven, hallowed be your name. We come as children to a Father, and we begin with His glory, not our agenda. Prayer puts God first, and then everything else falls into place.",
+        verses: ["Matthew 6:9", "John 17:1"],
+      },
+      {
+        heading: "His kingdom and His will come first",
+        body: "Your kingdom come, your will be done, on earth as it is in heaven. Prayer aligns us with God's purposes before it asks anything for ourselves, and Jesus Himself modeled it in the garden: not my will, but yours.",
+        verses: ["Matthew 6:10", "Matthew 26:39"],
+      },
+      {
+        heading: "Daily bread: honest dependence",
+        body: "Give us today our daily bread. Not hoarding, not anxiety, just enough for today, received from His hand. It is a request for provision and a discipline against worry in one.",
+        verses: ["Matthew 6:11", "Matthew 6:25-26"],
+      },
+      {
+        heading: "Forgiveness received and given",
+        body: "Forgive us our debts, as we also forgive our debtors. Jesus underlines it: if you forgive others, your heavenly Father will also forgive you. The measure of our own forgiveness is the mercy we extend.",
+        verses: ["Matthew 6:12", "Matthew 6:14-15", "Ephesians 4:32"],
+      },
+      {
+        heading: "Deliverance and praise",
+        body: "Lead us not into temptation, but deliver us from evil, for yours is the kingdom, the power, and the glory. It ends where it began: with God. He is able to keep us, and to Him belongs the praise.",
+        verses: ["Matthew 6:13", "1 Corinthians 10:13"],
+      },
+    ],
+    keyVerses: ["Matthew 6:9-13", "Luke 11:2-4"],
+    raises: [],
+    followsFrom: ["how-do-i-pray"],
+    related: ["how-do-i-pray"],
+    planned: ["Why pray 'your will be done' if God already has a will?"],
+    order: 31,
+  },
+
+  {
+    slug: "does-god-hear-my-prayers",
+    question: "Does God really hear my prayers?",
+    category: "prayer",
+    summary:
+      "Yes. Because of Jesus, believers pray with bold confidence that God hears them, not on the basis of their own worthiness but on the basis of Christ's. Scripture also calls us to pray in faith, in His will, with unconfessed sin dealt with, and with hearts that do not ask selfishly.",
+    passages: [
+      { book: "1 John", chapter: 5, title: "The confidence we have", lookFor: "If we ask anything according to his will, he hears us.", focus: "13-15" },
+      { book: "John", chapter: 16, title: "Ask in my name", lookFor: "Asked in Jesus' name, so that your joy may be full.", focus: "23-24" },
+      { book: "Hebrews", chapter: 4, title: "The throne of grace", lookFor: "Draw near with boldness to receive mercy and find grace.", focus: "14-16" },
+      { book: "Psalm", chapter: 66, title: "If I had cherished sin", lookFor: "The heart that prays: purity and honesty before God.", focus: "16-20" },
+    ],
+    points: [
+      {
+        heading: "He hears those who come through Christ",
+        body: "This is the confidence we have in Him: if we ask anything according to His will, He hears us, and if we know He hears us, we know we have what we asked. Because of Jesus we draw near to the throne of grace with boldness, to receive mercy and find grace to help in time of need.",
+        verses: ["1 John 5:14-15", "Hebrews 4:16"],
+      },
+      {
+        heading: "Ask in His name, and He answers with joy",
+        body: "Whatever you ask the Father in my name, He will give you. Ask, and you will receive, that your joy may be made full. To ask in His name is to ask according to who He is and what He wants, and the Father delights to answer that.",
+        verses: ["John 16:23-24", "John 15:7", "John 14:13-14"],
+      },
+      {
+        heading: "Hindrances are real: unconfessed sin and selfish motives",
+        body: "If I cherished sin in my heart, the Lord would not listen. You ask and do not receive, because you ask wrongly, to spend it on your pleasures. The Lord's hand is not too short to save, but your iniquities have made a separation.",
+        verses: ["Psalm 66:18", "James 4:3", "Isaiah 59:1-2"],
+      },
+      {
+        heading: "Faith and persistence are the posture",
+        body: "Let him ask in faith, without doubting. Whatever you ask in prayer, believe that you have received it, and it will be yours. We keep what we ask in alignment with God's revealed will, and we ask in faith, because He rewards those who seek Him.",
+        verses: ["James 1:6-7", "Mark 11:24", "1 John 3:22"],
+      },
+    ],
+    keyVerses: ["1 John 5:14-15", "John 16:23-24", "Hebrews 4:16", "James 4:3"],
+    raises: ["why-does-god-seem-silent"],
+    followsFrom: ["how-do-i-pray"],
+    related: ["who-is-the-father"],
+    planned: [],
+    order: 32,
+  },
+
+  {
+    slug: "why-does-god-seem-silent",
+    question: "Why does God seem silent when I pray?",
+    category: "prayer",
+    summary:
+      "God's silence is not His absence. Scripture shows that His delays are purposeful: He grows our faith, purifies our desires, and readies us for answers better than we asked. The Psalms model honest waiting, and Jesus taught that persistent prayer is rewarded.",
+    passages: [
+      { book: "Psalm", chapter: 13, title: "How long, Lord?", lookFor: "Honest complaint that ends in trust." },
+      { book: "Luke", chapter: 18, title: "The persistent widow", lookFor: "Always pray and do not lose heart.", focus: "1-8" },
+      { book: "Habakkuk", chapter: 2, title: "Wait for the vision", lookFor: "It will surely come; it will not delay.", focus: "1-3" },
+      { book: "2 Corinthians", chapter: 12, title: "My grace is sufficient", lookFor: "Paul asked three times, and received a better answer.", focus: "7-10" },
+    ],
+    points: [
+      {
+        heading: "Silence is not absence; the Psalms say so",
+        body: "How long, Lord? Will you forget me forever? Even the psalmist felt God's distance. But the psalm does not end in the silence; it ends in trust: I have trusted in your loving kindness; my heart will rejoice in your salvation.",
+        verses: ["Psalm 13:1-2", "Psalm 13:5-6", "Psalm 22:1-2"],
+      },
+      {
+        heading: "Sometimes the answer is wait, or no, I have something better",
+        body: "The vision awaits its appointed time; though it tarries, wait for it, for it will surely come. Paul asked three times to remove the thorn, and the answer was: my grace is sufficient for you. A no can be a deeper yes.",
+        verses: ["Habakkuk 2:3", "2 Corinthians 12:8-9", "Isaiah 55:8-9"],
+      },
+      {
+        heading: "Delay grows faith and purifies desire",
+        body: "Wait for the Lord; be strong, and let your heart take courage. The testing of your faith produces steadfastness, so that you may be perfect and complete. God often works in the waiting, not just in the answer.",
+        verses: ["Psalm 27:14", "James 1:2-4", "1 Peter 1:6-7"],
+      },
+      {
+        heading: "Persist, like the widow",
+        body: "Jesus told a parable to show that we should always pray and not give up, and He reasoned from the lesser to the greater: if the unjust judge grants justice, will not God bring about justice for His elect who cry to Him day and night? Keep knocking.",
+        verses: ["Luke 18:1-8", "Luke 11:5-8", "Matthew 7:7-8"],
+      },
+    ],
+    keyVerses: ["Psalm 27:14", "Luke 18:1-8", "2 Corinthians 12:9", "Habakkuk 2:3"],
+    raises: [],
+    followsFrom: ["does-god-hear-my-prayers"],
+    related: ["why-does-god-allow-suffering", "is-god-in-control"],
+    planned: ["How do I know God's voice from my own thoughts?"],
+    order: 33,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Word of God
+  // ------------------------------------------------------------------
+  {
+    slug: "can-i-trust-the-bible",
+    question: "Can I trust the Bible?",
+    category: "word-of-god",
+    summary:
+      "Yes. Scripture claims to be God's own word, and its testimony holds up: it is consistent across centuries and authors, historically grounded, confirmed by Christ Himself, and it has proven true in the lives of countless people. Jesus said heaven and earth will pass away, but His words will not.",
+    passages: [
+      { book: "2 Timothy", chapter: 3, title: "God-breathed Scripture", lookFor: "All Scripture is God-breathed and profitable for every good work.", focus: "14-17" },
+      { book: "2 Peter", chapter: 1, title: "Men spoke from God", lookFor: "No prophecy came by human will, but men spoke from God as they were carried by the Spirit.", focus: "16-21" },
+      { book: "Psalm", chapter: 19, title: "The testimony of the Lord", lookFor: "Perfect, sure, right, pure: the excellence of God's word.", focus: "7-11" },
+      { book: "Matthew", chapter: 24, title: "His words will not pass away", lookFor: "Jesus' own verdict on the permanence of His word.", focus: "35" },
+    ],
+    points: [
+      {
+        heading: "Scripture claims to be God's word",
+        body: "All Scripture is God-breathed and profitable for teaching, for reproof, for correction, and for training in righteousness. No prophecy of Scripture came by the will of man, but men spoke from God, being carried along by the Holy Spirit.",
+        verses: ["2 Timothy 3:16-17", "2 Peter 1:20-21"],
+      },
+      {
+        heading: "Christ Himself trusted it",
+        body: "Heaven and earth will pass away, but my words will not pass away. Jesus called Scripture the word of God and said it cannot be broken, and He continually grounded Himself in it, from the wilderness to the cross.",
+        verses: ["Matthew 24:35", "John 10:35", "Luke 24:44-45"],
+      },
+      {
+        heading: "Its testimony is coherent and true",
+        body: "The law of the Lord is perfect, restoring the soul; the testimony of the Lord is sure, making wise the simple. The words of the Lord are pure words, like silver refined in a furnace. Every word of God proves true.",
+        verses: ["Psalm 19:7-9", "Psalm 12:6", "Proverbs 30:5"],
+      },
+      {
+        heading: "It is profitable for real life",
+        body: "The sacred writings are able to make you wise for salvation through faith in Christ Jesus, and they equip the man of God for every good work. The word of God is living and active, sharper than any two-edged sword, discerning the thoughts of the heart.",
+        verses: ["2 Timothy 3:15-17", "Hebrews 4:12", "1 Peter 1:23-25"],
+      },
+    ],
+    keyVerses: ["2 Timothy 3:16-17", "Matthew 24:35", "2 Peter 1:21", "Psalm 19:7"],
+    raises: ["how-should-i-read-the-bible", "is-the-whole-bible-about-jesus"],
+    followsFrom: [],
+    related: [],
+    planned: ["Why do Bible translations differ?"],
+    order: 34,
+  },
+
+  {
+    slug: "how-should-i-read-the-bible",
+    question: "How should I read the Bible?",
+    category: "word-of-god",
+    summary:
+      "Read it to know God, not just to gain knowledge: pray for understanding, read the whole counsel of God, look for Jesus, obey what you learn, and be like the Bereans, who searched the Scriptures daily to check what they heard.",
+    passages: [
+      { book: "Acts", chapter: 17, title: "The Bereans", lookFor: "They received the word eagerly and searched the Scriptures daily.", focus: "10-12" },
+      { book: "Luke", chapter: 24, title: "Jesus opens the Scriptures", lookFor: "Beginning with Moses and the prophets, he explained what concerned himself.", focus: "25-27" },
+      { book: "2 Timothy", chapter: 2, title: "Rightly handling the word", lookFor: "Be diligent, approved, rightly handling the word of truth.", focus: "15" },
+      { book: "Psalm", chapter: 119, title: "Open my eyes", lookFor: "Wonderful things from God's law, and a lamp for the path.", focus: "9-18" },
+    ],
+    points: [
+      {
+        heading: "Read to know the God who speaks",
+        body: "You search the Scriptures because you think that in them you have eternal life, and these are they which testify about me. Jesus is the goal of the Book. Open my eyes, that I may see wonderful things out of your law.",
+        verses: ["John 5:39", "Psalm 119:18"],
+      },
+      {
+        heading: "Come with humility and prayer",
+        body: "If any of you lacks wisdom, let him ask of God, who gives generously to all. Be diligent to present yourself approved to God, a worker who doesn't need to be ashamed, rightly handling the word of truth.",
+        verses: ["James 1:5", "2 Timothy 2:15", "Psalm 119:105"],
+      },
+      {
+        heading: "Look for Jesus on every page",
+        body: "Beginning with Moses and all the prophets, Jesus explained to them what was in all the Scriptures concerning Himself. The prophets searched and inquired carefully about this salvation that was to come, revealed in Christ.",
+        verses: ["Luke 24:27", "1 Peter 1:10-12", "Colossians 1:28"],
+      },
+      {
+        heading: "Be a Berean: search and verify",
+        body: "The Bereans received the word with all eagerness, examining the Scriptures daily to see whether these things were so. Test all things; hold fast that which is good. What you hear from any teacher is checked against the Word.",
+        verses: ["Acts 17:11", "1 Thessalonians 5:21", "2 Timothy 3:16"],
+      },
+      {
+        heading: "Do what it says",
+        body: "Be doers of the word, and not hearers only, deceiving your own selves. The blessing is not in the reading but in the doing, for blessed are those who hear the word of God and keep it.",
+        verses: ["James 1:22-25", "Luke 11:28", "John 14:21"],
+      },
+    ],
+    keyVerses: ["Acts 17:11", "Luke 24:27", "2 Timothy 2:15", "James 1:22"],
+    raises: [],
+    followsFrom: ["can-i-trust-the-bible"],
+    related: ["can-i-trust-the-bible", "what-should-i-do-now-that-im-saved"],
+    planned: ["How do I build a daily habit of reading the Bible?"],
+    order: 35,
+  },
+
+  {
+    slug: "is-the-whole-bible-about-jesus",
+    question: "Is the whole Bible about Jesus?",
+    category: "word-of-god",
+    summary:
+      "Jesus Himself said so: the Scriptures testify of Him, and He explained how Moses and all the prophets pointed to Him. The Old Testament prepares His coming through promise, type, and prophecy, and the New Testament declares that all the promises are yes in Christ.",
+    passages: [
+      { book: "Luke", chapter: 24, title: "He explained the Scriptures", lookFor: "Everything written about me must be fulfilled.", focus: "13-27" },
+      { book: "John", chapter: 5, title: "The Scriptures testify of me", lookFor: "If you believed Moses, you would believe me.", focus: "39-47" },
+      { book: "Hebrews", chapter: 1, title: "Spoken by the Son", lookFor: "God spoke by the prophets, and in these last days by His Son.", focus: "1-2" },
+      { book: "2 Corinthians", chapter: 1, title: "Yes in him", lookFor: "All the promises of God find their yes in Christ.", focus: "18-20" },
+    ],
+    points: [
+      {
+        heading: "Jesus said the Scriptures are about Him",
+        body: "You search the Scriptures, and these are they which testify about me. Beginning from Moses and all the prophets, He interpreted the things concerning Himself, and He said everything written about Him must be fulfilled.",
+        verses: ["John 5:39", "Luke 24:27", "Luke 24:44"],
+      },
+      {
+        heading: "The Old Testament promised Him",
+        body: "The offspring of the woman who crushes the serpent's head, the suffering Servant pierced for our transgressions, the King born in Bethlehem: God spoke long ago through the prophets, but in these last days He has spoken to us by His Son.",
+        verses: ["Genesis 3:15", "Isaiah 53:5", "Hebrews 1:1-2"],
+      },
+      {
+        heading: "The New Testament declares the promises are fulfilled",
+        body: "All the promises of God find their yes in him. Philip could say, we have found him of whom Moses and the prophets wrote. The apostles preached that the words of the prophets were fulfilled in Jesus.",
+        verses: ["2 Corinthians 1:20", "John 1:45", "Acts 13:27-29"],
+      },
+      {
+        heading: "Why it matters: the whole Bible is God's testimony to Christ",
+        body: "The prophets searched out the grace that was to come to you, which has now been revealed in the gospel preached through the Spirit. Christ in you, the hope of glory: the Book is one story, and He is the center of it.",
+        verses: ["1 Peter 1:10-12", "Colossians 1:27", "John 20:31"],
+      },
+    ],
+    keyVerses: ["Luke 24:27", "John 5:39", "2 Corinthians 1:20", "Genesis 3:15"],
+    raises: [],
+    followsFrom: ["can-i-trust-the-bible"],
+    related: ["who-is-jesus", "what-is-the-gospel"],
+    planned: [],
+    order: 36,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Church
+  // ------------------------------------------------------------------
+  {
+    slug: "why-do-i-need-the-church",
+    question: "Why do I need the church?",
+    category: "church",
+    summary:
+      "The church is not optional for the Christian: it is the family and body of Christ, the place where the Spirit works through word and sacrament, where gifts serve the whole, and where believers are built up and sent out. Lone Christianity is not biblical Christianity.",
+    passages: [
+      { book: "Hebrews", chapter: 10, title: "Do not forsake the gathering", lookFor: "Encourage one another, and all the more as the day approaches.", focus: "19-25" },
+      { book: "Ephesians", chapter: 4, title: "The body grows in love", lookFor: "Each part working, the whole body builds itself up in love.", focus: "11-16" },
+      { book: "Acts", chapter: 2, title: "The church at the start", lookFor: "Devoted to teaching, fellowship, the breaking of bread, and prayer.", focus: "42-47" },
+      { book: "1 Corinthians", chapter: 12, title: "One body, many members", lookFor: "You are the body of Christ, and each one of you is a part of it.", focus: "12-27" },
+    ],
+    points: [
+      {
+        heading: "The church is the body of Christ",
+        body: "You are the body of Christ, and members individually. We who are many are one body in Christ, and individually members of one another. The church is not a building or a meeting; it is the people in whom Christ dwells by His Spirit.",
+        verses: ["1 Corinthians 12:27", "Romans 12:4-5", "Ephesians 1:22-23"],
+      },
+      {
+        heading: "We need each other to grow",
+        body: "The whole body grows and builds itself up in love as each part does its work. Do not forsake the assembling of yourselves together, but encourage one another, and all the more as you see the day approaching. Growth is communal.",
+        verses: ["Ephesians 4:15-16", "Hebrews 10:24-25"],
+      },
+      {
+        heading: "God's gifts are given for the church",
+        body: "As each has received a gift, use it to serve one another, as good stewards of God's varied grace. To each is given the manifestation of the Spirit for the common good. Your gift was given to build the body, not to sit unused.",
+        verses: ["1 Peter 4:10", "1 Corinthians 12:7", "Ephesians 4:12"],
+      },
+      {
+        heading: "It is where the new life is lived out",
+        body: "They devoted themselves to the apostles' teaching and the fellowship, to the breaking of bread and the prayers. And the Lord added to their number day by day those who were being saved. The new life is lived together.",
+        verses: ["Acts 2:42", "Acts 2:46-47", "Colossians 3:16"],
+      },
+    ],
+    keyVerses: ["Hebrews 10:24-25", "Ephesians 4:15-16", "Acts 2:42", "1 Corinthians 12:27"],
+    raises: ["what-is-baptism", "what-is-the-lords-supper"],
+    followsFrom: [],
+    related: ["what-should-i-do-now-that-im-saved"],
+    planned: ["What does a healthy church look like?"],
+    order: 37,
+  },
+
+  {
+    slug: "what-is-baptism",
+    question: "What is baptism?",
+    category: "church",
+    summary:
+      "Baptism is the sign and seal of the new covenant: the believer, having trusted Christ, is immersed into His death and resurrection, publicly identifying with Him and being joined to His people. It is commanded by Jesus and received through faith, not a way of earning salvation.",
+    passages: [
+      { book: "Matthew", chapter: 28, title: "Jesus commands baptism", lookFor: "Baptizing them in the name of the Father, Son, and Holy Spirit.", focus: "16-20" },
+      { book: "Romans", chapter: 6, title: "Baptized into his death", lookFor: "Buried with him in baptism, raised to walk in newness of life.", focus: "1-14" },
+      { book: "Acts", chapter: 2, title: "Repent and be baptized", lookFor: "The gift of the Spirit and the forgiveness of sins.", focus: "37-41" },
+      { book: "Acts", chapter: 8, title: "The Ethiopian", lookFor: "See, here is water; what prevents me from being baptized?", focus: "26-40" },
+    ],
+    points: [
+      {
+        heading: "Jesus commanded it",
+        body: "Go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit. The early church obeyed immediately, baptizing three thousand on the day of Pentecost, and the Ethiopian asked for baptism the moment he believed.",
+        verses: ["Matthew 28:19", "Acts 2:41", "Acts 8:36-38"],
+      },
+      {
+        heading: "It pictures union with Christ",
+        body: "We who were baptized into Christ Jesus were baptized into his death, so that just as Christ was raised from the dead, we too might walk in newness of life. It is the visible picture of dying with Him and rising with Him.",
+        verses: ["Romans 6:3-5", "Colossians 2:12", "Galatians 3:27"],
+      },
+      {
+        heading: "It is the response of faith, not the work that saves",
+        body: "Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit. We are saved by grace through faith, not by works; baptism is the believer's obedient confession of that grace.",
+        verses: ["Acts 2:38", "Ephesians 2:8-9", "1 Peter 3:21"],
+      },
+      {
+        heading: "It joins you visibly to God's people",
+        body: "Those who received his word were baptized, and there were added that day about three thousand souls. By one Spirit we were all baptized into one body. Baptism is not a private event; it is the doorway into the visible church.",
+        verses: ["Acts 2:41", "1 Corinthians 12:13", "Acts 2:47"],
+      },
+    ],
+    keyVerses: ["Matthew 28:19", "Romans 6:3-5", "Acts 2:38", "1 Peter 3:21"],
+    raises: [],
+    followsFrom: ["why-do-i-need-the-church"],
+    related: ["what-does-it-mean-to-be-born-again", "how-do-i-receive-the-holy-spirit"],
+    planned: ["Should infants be baptized, or only believers?"],
+    order: 38,
+  },
+
+  {
+    slug: "what-is-the-lords-supper",
+    question: "What is the Lord's Supper?",
+    category: "church",
+    summary:
+      "The Lord's Supper is the meal Jesus gave His church in remembrance of Him: the bread and the cup proclaim His death until He comes, and believers share it in faith, examining themselves, receiving Christ, and renewing communion with Him and with one another.",
+    passages: [
+      { book: "Luke", chapter: 22, title: "Instituted by Jesus", lookFor: "This is my body, given for you; this cup is the new covenant in my blood.", focus: "14-20" },
+      { book: "1 Corinthians", chapter: 11, title: "Proclaim the Lord's death", lookFor: "Examine yourself, and eat and drink in remembrance of him.", focus: "23-34" },
+      { book: "Matthew", chapter: 26, title: "At the Last Supper", lookFor: "Until that day when I drink it anew with you in my Father's kingdom.", focus: "26-29" },
+    ],
+    points: [
+      {
+        heading: "Jesus instituted it at the Last Supper",
+        body: "This is my body, which is given for you. Do this in remembrance of me. And he took the cup, saying, this cup is the new covenant in my blood, which is poured out for you. It is His gift to the church, given the night He was betrayed.",
+        verses: ["Luke 22:19-20", "Matthew 26:26-28"],
+      },
+      {
+        heading: "It proclaims the gospel",
+        body: "As often as you eat this bread and drink this cup, you proclaim the Lord's death until he comes. It is a sermon in bread and wine, declaring the cross to ourselves, to the church, and to the watching world.",
+        verses: ["1 Corinthians 11:26", "1 Corinthians 11:23-25"],
+      },
+      {
+        heading: "It requires self-examination",
+        body: "Whoever eats the bread or drinks the cup of the Lord in an unworthy manner will be guilty of the body and blood of the Lord. Let a man examine himself, and so let him eat and drink. We come repentant, not perfect, but honest.",
+        verses: ["1 Corinthians 11:27-29", "1 Corinthians 11:31"],
+      },
+      {
+        heading: "It is communion with Christ and His people",
+        body: "The cup of blessing which we bless, is it not a sharing of the blood of Christ? We, who are many, are one bread, one body, for we all partake of the one bread. It is a family meal around the one Table.",
+        verses: ["1 Corinthians 10:16-17", "Acts 2:42"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 11:23-26", "Luke 22:19-20", "1 Corinthians 11:28"],
+    raises: [],
+    followsFrom: ["why-do-i-need-the-church"],
+    related: ["why-do-i-need-the-church", "what-is-the-gospel"],
+    planned: ["How often should the church celebrate the Lord's Supper?"],
+    order: 39,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Our Hope
+  // ------------------------------------------------------------------
+  {
+    slug: "what-happens-when-i-die",
+    question: "What happens when I die?",
+    category: "our-hope",
+    summary:
+      "For the believer, to die is to be with Christ: Scripture speaks of departing to be with Him as far better, and of being at home with the Lord. Then at His return comes the resurrection of the body. For those who reject Christ, death is separation, and judgment awaits.",
+    passages: [
+      { book: "2 Corinthians", chapter: 5, title: "At home with the Lord", lookFor: "Absent from the body, at home with the Lord.", focus: "1-9" },
+      { book: "Philippians", chapter: 1, title: "To die is gain", lookFor: "To depart and be with Christ, which is far better.", focus: "19-24" },
+      { book: "Luke", chapter: 23, title: "Today in paradise", lookFor: "Jesus' promise to the thief on the cross.", focus: "39-43" },
+      { book: "Hebrews", chapter: 9, title: "Appointed once to die", lookFor: "After this, judgment: the solemnity of death.", focus: "27-28" },
+    ],
+    points: [
+      {
+        heading: "To be absent from the body is to be at home with the Lord",
+        body: "We are always confident, and are willing rather to be absent from the body and at home with the Lord. For me to live is Christ, and to die is gain: my desire is to depart and be with Christ, which is far better.",
+        verses: ["2 Corinthians 5:6-8", "Philippians 1:21-23"],
+      },
+      {
+        heading: "Christ holds His own through death",
+        body: "I am the resurrection and the life. Whoever believes in me will live even if he dies. Jesus told the dying thief, today you will be with me in paradise, and He told His disciples, I go to prepare a place for you.",
+        verses: ["John 11:25-26", "Luke 23:43", "John 14:2-3"],
+      },
+      {
+        heading: "Death is not the end of the body; the resurrection is coming",
+        body: "We will all be changed, in a moment, in the twinkling of an eye, at the last trumpet, and the dead will be raised imperishable. God will bring with Jesus those who have fallen asleep in him. The body is not abandoned forever.",
+        verses: ["1 Corinthians 15:51-53", "1 Thessalonians 4:14", "Romans 8:11"],
+      },
+      {
+        heading: "For those apart from Christ, death is a solemn reality",
+        body: "It is appointed for men to die once, and after this, judgment. Whoever does not believe is condemned already, because he has not believed in the name of the only Son of God. This is why the gospel is urgent.",
+        verses: ["Hebrews 9:27", "John 3:18", "Revelation 20:12-13"],
+      },
+    ],
+    keyVerses: ["2 Corinthians 5:8", "Philippians 1:21", "Luke 23:43", "Hebrews 9:27"],
+    raises: ["what-is-the-resurrection", "will-jesus-return-literally"],
+    followsFrom: [],
+    related: ["where-is-jesus-now", "what-is-the-gospel"],
+    planned: [],
+    order: 40,
+  },
+
+  {
+    slug: "will-jesus-return-literally",
+    question: "Will Jesus return literally?",
+    category: "our-hope",
+    summary:
+      "Yes. The New Testament promises that the same Jesus who ascended will return visibly and bodily, with power and great glory, to gather His people, raise the dead, judge the world, and bring the kingdom in full. Until then, we wait, watch, and work.",
+    passages: [
+      { book: "Acts", chapter: 1, title: "The promise at the ascension", lookFor: "This same Jesus will come in the same way you saw him go.", focus: "9-11" },
+      { book: "1 Thessalonians", chapter: 4, title: "The Lord himself descends", lookFor: "The dead in Christ rise first, then we are caught up together to meet him.", focus: "13-18" },
+      { book: "Matthew", chapter: 24, title: "The Son of Man coming", lookFor: "Coming on the clouds of heaven with power and great glory.", focus: "29-31" },
+      { book: "Revelation", chapter: 1, title: "Every eye will see him", lookFor: "The one who was pierced, coming with the clouds.", focus: "7" },
+    ],
+    points: [
+      {
+        heading: "The angels promised it at the ascension",
+        body: "This Jesus, who was taken up from you into heaven, will come in like manner as you saw him going into heaven: visibly, bodily, personally. The ascension was not the end of His appearing; it was the guarantee of His return.",
+        verses: ["Acts 1:9-11", "Mark 13:26"],
+      },
+      {
+        heading: "The Lord Himself will descend",
+        body: "The Lord himself will descend from heaven with a shout, with the voice of the archangel and with God's trumpet. The dead in Christ will rise first, then we who are alive will be caught up together with them in the clouds, to meet the Lord in the air.",
+        verses: ["1 Thessalonians 4:16-17", "1 Corinthians 15:51-52"],
+      },
+      {
+        heading: "Every eye will see Him",
+        body: "Behold, he is coming with the clouds, and every eye will see him, including those who pierced him. They will see the Son of Man coming on the clouds of heaven with power and great glory. His return is public, not private.",
+        verses: ["Revelation 1:7", "Matthew 24:30", "Titus 2:13"],
+      },
+      {
+        heading: "So we wait, watch, and work",
+        body: "Since all these things will be dissolved, what kind of people ought you to be in holy conduct and godliness, waiting for the coming of the day of God? Stay awake, for you do not know on what day your Lord is coming.",
+        verses: ["2 Peter 3:11-13", "Matthew 24:42", "Revelation 22:20"],
+      },
+    ],
+    keyVerses: ["Acts 1:11", "1 Thessalonians 4:16-17", "Revelation 1:7", "2 Peter 3:12"],
+    raises: [],
+    followsFrom: ["what-happens-when-i-die", "where-is-jesus-now"],
+    related: ["where-is-jesus-now", "what-is-the-resurrection"],
+    planned: ["What signs should we look for before Jesus returns?"],
+    order: 41,
+  },
+
+  {
+    slug: "what-is-the-resurrection",
+    question: "What is the resurrection of the body?",
+    category: "our-hope",
+    summary:
+      "The resurrection is God's raising of the believer's body to eternal life on the last day: a body like Christ's glorified body, imperishable, glorious, powerful, and spiritual. Because Christ rose as the firstfruits, those who belong to Him will rise too.",
+    passages: [
+      { book: "1 Corinthians", chapter: 15, title: "How are the dead raised?", lookFor: "Sown perishable, raised imperishable; sown in weakness, raised in power.", focus: "35-58" },
+      { book: "Philippians", chapter: 3, title: "A body like his", lookFor: "He will transform our lowly body to be like his glorious body.", focus: "20-21" },
+      { book: "Romans", chapter: 8, title: "Life to your mortal bodies", lookFor: "The Spirit who raised Jesus will give life to your bodies.", focus: "18-25" },
+      { book: "John", chapter: 5, title: "Those who are in the tombs", lookFor: "A resurrection of life for those who have done good.", focus: "25-29" },
+    ],
+    points: [
+      {
+        heading: "Christ's resurrection is the firstfruits of ours",
+        body: "Christ has been raised from the dead, the firstfruits of those who have fallen asleep. For as in Adam all die, so also in Christ all will be made alive. His resurrection is the guarantee and the pattern of ours.",
+        verses: ["1 Corinthians 15:20-23", "Acts 26:8"],
+      },
+      {
+        heading: "Our bodies will be raised and transformed",
+        body: "He will transform the body of our humiliation to be conformed to the body of his glory. It is sown perishable, raised imperishable; sown in dishonor, raised in glory; sown in weakness, raised in power; sown a natural body, raised a spiritual body.",
+        verses: ["Philippians 3:20-21", "1 Corinthians 15:42-44"],
+      },
+      {
+        heading: "The Spirit guarantees it",
+        body: "If the Spirit of him who raised Jesus from the dead dwells in you, he who raised Christ Jesus from the dead will also give life to your mortal bodies through his Spirit who dwells in you. God has given us the Spirit as a down payment.",
+        verses: ["Romans 8:11", "2 Corinthians 5:4-5", "Ephesians 1:13-14"],
+      },
+      {
+        heading: "It means death is truly defeated",
+        body: "Death is swallowed up in victory. O death, where is your sting? The sting of death is sin, and the power of sin is the law, but thanks be to God, who gives us the victory through our Lord Jesus Christ. The last enemy is undone.",
+        verses: ["1 Corinthians 15:54-57", "1 Corinthians 15:26", "Revelation 21:4"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 15:42-44", "Philippians 3:20-21", "Romans 8:11", "1 Corinthians 15:54-57"],
+    raises: ["what-is-the-new-heaven-and-new-earth"],
+    followsFrom: ["what-happens-when-i-die"],
+    related: ["did-jesus-rise-from-the-dead"],
+    planned: [],
+    order: 42,
+  },
+
+  {
+    slug: "what-is-the-new-heaven-and-new-earth",
+    question: "What is the new heaven and new earth?",
+    category: "our-hope",
+    summary:
+      "At the end of the story, God does not abandon creation: He renews it. The new heaven and new earth are the redeemed creation where God dwells with His people, sin and death are gone, every tear is wiped away, and the dwelling of God is with man forever.",
+    passages: [
+      { book: "Revelation", chapter: 21, title: "A new heaven and a new earth", lookFor: "God dwelling with men, every tear wiped away, the city that has no temple.", focus: "1-8" },
+      { book: "Isaiah", chapter: 65, title: "The joy of the new creation", lookFor: "No more weeping; they build and inhabit; the wolf and the lamb feed together.", focus: "17-25" },
+      { book: "2 Peter", chapter: 3, title: "Where righteousness dwells", lookFor: "We look for new heavens and a new earth, in which righteousness dwells.", focus: "10-13" },
+      { book: "Romans", chapter: 8, title: "Creation set free", lookFor: "The creation itself will be delivered from its bondage to decay.", focus: "18-23" },
+    ],
+    points: [
+      {
+        heading: "God's plan is renewal, not abandonment",
+        body: "I saw a new heaven and a new earth, for the first heaven and the first earth had passed away. We look for new heavens and a new earth, in which righteousness dwells. God does not scrap His creation; He restores it.",
+        verses: ["Revelation 21:1-2", "2 Peter 3:13", "Isaiah 65:17"],
+      },
+      {
+        heading: "God Himself will dwell with His people",
+        body: "Behold, the tabernacle of God is with men, and he will dwell with them, and they will be his people. The Lord God Almighty and the Lamb are its temple, and the glory of God gives it light. The presence of God is the joy of the new creation.",
+        verses: ["Revelation 21:3", "Revelation 21:22-23", "Zechariah 14:9"],
+      },
+      {
+        heading: "Every tear is wiped away",
+        body: "He will wipe away every tear from their eyes, and death will be no more, nor mourning, nor crying, nor pain, for the former things have passed away. The voice of weeping will be heard in it no more. The last enemy, death, is no more.",
+        verses: ["Revelation 21:4", "Isaiah 65:19", "1 Corinthians 15:26"],
+      },
+      {
+        heading: "It is the home we were made for",
+        body: "They will build houses and inhabit them, and they will not labor in vain. The kings of the earth bring their glory into it. Creation itself will be set free from its bondage to decay. This is our hope: not escape from creation, but the healing of creation.",
+        verses: ["Isaiah 65:21-23", "Revelation 21:24-26", "Romans 8:21"],
+      },
+    ],
+    keyVerses: ["Revelation 21:3-4", "2 Peter 3:13", "Isaiah 65:17", "Revelation 21:22-23"],
+    raises: [],
+    followsFrom: ["what-is-the-resurrection"],
+    related: ["where-is-jesus-now", "why-does-god-allow-suffering"],
+    planned: ["What will we do in the new creation?"],
+    order: 43,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Who We Are
+  // ------------------------------------------------------------------
+  {
+    slug: "what-does-it-mean-to-be-made-in-gods-image",
+    question: "What does it mean to be made in God's image?",
+    category: "who-we-are",
+    summary:
+      "To be made in God's image means every human being reflects God: we have personality, reason, creativity, moral awareness, and the capacity for relationship, and we were made to rule the earth as God's representatives. The image is marred by sin but restored in Christ, who is the true image of God.",
+    passages: [
+      { book: "Genesis", chapter: 1, title: "Let us make man", lookFor: "In our image, after our likeness: the crown of creation.", focus: "26-28" },
+      { book: "Psalm", chapter: 8, title: "Crowned with glory", lookFor: "What is man, that you are mindful of him?", focus: "3-8" },
+      { book: "Genesis", chapter: 9, title: "The dignity of every person", lookFor: "Whoever sheds man's blood: for God made man in his own image.", focus: "5-6" },
+      { book: "Colossians", chapter: 3, title: "Renewed in the image", lookFor: "The new man, renewed in knowledge after the image of its creator.", focus: "9-10" },
+    ],
+    points: [
+      {
+        heading: "Humanity was created to mirror God",
+        body: "Let us make man in our image, after our likeness, and let them have dominion. Male and female he created them. You crowned him with glory and honor and made him ruler over the works of your hands. We were made to reflect God and represent Him on earth.",
+        verses: ["Genesis 1:26-27", "Psalm 8:5-6", "Genesis 2:7"],
+      },
+      {
+        heading: "The image gives dignity to every person",
+        body: "Whoever sheds man's blood, by man his blood will be shed, for God made man in his own image. We bless God even while cursing those made in His likeness, which must not be. Every human being carries this dignity, without exception.",
+        verses: ["Genesis 9:6", "James 3:9", "Acts 17:26"],
+      },
+      {
+        heading: "The image is marred by sin, not erased",
+        body: "All have sinned and fall short of the glory of God, and the fall distorted but did not destroy the image. God made mankind upright, but they have sought out many schemes. Even fallen humanity still bears the imprint and the dignity.",
+        verses: ["Romans 3:23", "Genesis 3:6-7", "Ecclesiastes 7:29"],
+      },
+      {
+        heading: "Christ is the perfect image, and in Him we are restored",
+        body: "The Son is the image of the invisible God, the firstborn of all creation. Put on the new man, which is being renewed in knowledge after the image of its creator. We are being transformed into the same image, from glory to glory, by the Spirit.",
+        verses: ["Colossians 1:15", "Colossians 3:9-10", "2 Corinthians 3:18", "Romans 8:29"],
+      },
+    ],
+    keyVerses: ["Genesis 1:26-27", "Psalm 8:5-6", "Colossians 3:10", "2 Corinthians 3:18"],
+    raises: ["what-is-sin"],
+    followsFrom: [],
+    related: ["who-is-the-father"],
+    planned: ["What does it mean that we were made for relationship?"],
+    order: 44,
+  },
+
+  {
+    slug: "what-is-sin",
+    question: "What is sin, and where did it come from?",
+    category: "who-we-are",
+    summary:
+      "Sin is any falling short of God's perfect standard, and at its root it is rebellion against God Himself. It entered the world through Adam's disobedience, it spreads to every person, and it brings death and separation. The good news is that where sin abounded, grace abounded much more in Christ.",
+    passages: [
+      { book: "Genesis", chapter: 3, title: "The first sin", lookFor: "The serpent, the tree, and the rupture of trust." },
+      { book: "Romans", chapter: 5, title: "Sin entered through one man", lookFor: "Through one man sin entered the world, and death through sin.", focus: "12-21" },
+      { book: "James", chapter: 1, title: "How temptation becomes sin", lookFor: "Desire conceived gives birth to sin, and sin brings forth death.", focus: "13-15" },
+      { book: "1 John", chapter: 3, title: "Sin is lawlessness", lookFor: "The definition, and the cure: the Son of God came to take away sin.", focus: "4-10" },
+    ],
+    points: [
+      {
+        heading: "Sin is lawlessness and falling short",
+        body: "Sin is lawlessness: transgression of God's revealed will. All have sinned and fall short of the glory of God. Whoever knows the right thing to do and does not do it, for him it is sin: sin is both what we do against God and what we refuse to do for Him.",
+        verses: ["1 John 3:4", "Romans 3:23", "James 4:17"],
+      },
+      {
+        heading: "It entered through one man's disobedience",
+        body: "Through one man sin entered into the world, and death through sin, and so death passed to all men, because all sinned. The woman saw that the tree was desirable, and she took it and gave it to her husband, and the world broke.",
+        verses: ["Romans 5:12", "Genesis 3:6-7", "Romans 5:19"],
+      },
+      {
+        heading: "Its wages are death and separation",
+        body: "The wages of sin is death. Your iniquities have separated you from your God, and your sins have hidden his face from you. You were dead in your trespasses and sins, children of wrath. Sin is not a small thing; it is cosmic rebellion with cosmic cost.",
+        verses: ["Romans 6:23", "Isaiah 59:2", "Ephesians 2:1-3"],
+      },
+      {
+        heading: "But grace abounded more",
+        body: "Where sin increased, grace abounded all the more, so that grace might reign through righteousness to eternal life through Jesus Christ our Lord. If we confess our sins, he is faithful and righteous to forgive us our sins and cleanse us from all unrighteousness. There is no condemnation for those in Christ.",
+        verses: ["Romans 5:20-21", "1 John 1:9", "Romans 8:1"],
+      },
+    ],
+    keyVerses: ["Romans 3:23", "Romans 5:12", "Romans 6:23", "1 John 3:4"],
+    raises: [],
+    followsFrom: ["what-does-it-mean-to-be-made-in-gods-image"],
+    related: ["why-did-jesus-have-to-die", "what-is-repentance", "what-happens-when-i-sin"],
+    planned: ["Does everyone deserve God's judgment?"],
+    order: 45,
+  },
+
+  {
+    slug: "what-is-the-flesh-versus-the-spirit",
+    question: "What is the flesh versus the Spirit?",
+    category: "who-we-are",
+    summary:
+      "The flesh is the fallen human nature that opposes God, and the Spirit is God's own life at work in the believer. They are in conflict: the flesh desires what is against the Spirit, and the Spirit what is against the flesh. The believer's calling is to walk by the Spirit, who produces His fruit in us.",
+    passages: [
+      { book: "Galatians", chapter: 5, title: "The two natures at war", lookFor: "The works of the flesh, the fruit of the Spirit, and the walk.", focus: "16-26" },
+      { book: "Romans", chapter: 8, title: "Flesh and Spirit", lookFor: "The mind of the flesh is death; the mind of the Spirit is life and peace.", focus: "1-17" },
+      { book: "Romans", chapter: 7, title: "Paul's own struggle", lookFor: "The good I desire I do not do; who will deliver me?", focus: "14-25" },
+      { book: "Colossians", chapter: 3, title: "Put off and put on", lookFor: "Set your minds on things above; put to death what is earthly.", focus: "1-10" },
+    ],
+    points: [
+      {
+        heading: "Two natures at war",
+        body: "The flesh lusts against the Spirit, and the Spirit against the flesh, for these are contrary to one another. The mind of the flesh is death, but the mind of the Spirit is life and peace. Every believer knows the conflict from the inside.",
+        verses: ["Galatians 5:17", "Romans 8:6-8"],
+      },
+      {
+        heading: "The works of the flesh",
+        body: "The works of the flesh are obvious: sexual immorality, idolatry, strife, jealousy, outbursts of anger, and the like. I warn you, as I did before, that those who practice such things will not inherit the kingdom of God. Paul names them so we can recognize the enemy.",
+        verses: ["Galatians 5:19-21", "Mark 7:21-23", "1 Corinthians 6:9-10"],
+      },
+      {
+        heading: "The fruit of the Spirit",
+        body: "The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control. Against such things there is no law. This is what the Spirit grows in a life that abides in Christ.",
+        verses: ["Galatians 5:22-23", "John 15:4-5"],
+      },
+      {
+        heading: "The battle is won by walking in the Spirit",
+        body: "Walk by the Spirit, and you will not fulfill the lust of the flesh. By the Spirit put to death the deeds of the body, and you will live. If anyone is in Christ, he is a new creation; the old things have passed away. The victory is His work in us.",
+        verses: ["Galatians 5:16", "Romans 8:13", "2 Corinthians 5:17"],
+      },
+    ],
+    keyVerses: ["Galatians 5:16-17", "Galatians 5:22-23", "Romans 8:6", "Romans 8:13"],
+    raises: [],
+    followsFrom: ["how-do-i-fight-sin"],
+    related: ["how-do-i-fight-sin", "who-is-the-holy-spirit"],
+    planned: ["What is the body, soul, and spirit?"],
+    order: 46,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Unseen Realm
+  // ------------------------------------------------------------------
+  {
+    slug: "who-is-satan",
+    question: "Who is Satan, and what does he do?",
+    category: "unseen-realm",
+    summary:
+      "Satan is a real created being, a fallen angel who leads the powers of darkness in rebellion against God. Scripture calls him the tempter, the accuser, the deceiver, and a roaring lion seeking someone to devour, but it also declares that he is defeated by Christ and will be finally destroyed.",
+    passages: [
+      { book: "Genesis", chapter: 3, title: "The deceiver", lookFor: "Questioning God's word, denying God's warning.", focus: "1-15" },
+      { book: "1 Peter", chapter: 5, title: "A roaring lion", lookFor: "Sober and watchful: your adversary the devil prowls.", focus: "8-9" },
+      { book: "Job", chapter: 1, title: "Before the Lord", lookFor: "Satan is real and powerful, but he acts within God's permission.", focus: "6-12" },
+      { book: "Revelation", chapter: 12, title: "The accuser defeated", lookFor: "Cast down, and his end is sure.", focus: "7-12" },
+    ],
+    points: [
+      {
+        heading: "He is a real person, not a symbol",
+        body: "Be sober and watchful, because your adversary the devil, like a roaring lion, walks about seeking whom he may devour. Job's account shows him coming before the Lord among the sons of God. He is a person, and he is to be taken seriously.",
+        verses: ["1 Peter 5:8", "Job 1:6-7", "John 8:44"],
+      },
+      {
+        heading: "His work: deceive, tempt, accuse",
+        body: "In the garden he questioned God's word and lied about the consequence. He is the accuser of our brothers, who accuses them before our God day and night. The thief comes only to steal, kill, and destroy. His strategy is doubt, temptation, and accusation.",
+        verses: ["Genesis 3:1", "Genesis 3:4-5", "Revelation 12:10", "John 10:10"],
+      },
+      {
+        heading: "He is powerful but limited",
+        body: "The Lord said to Satan, all that he has is in your hand; only do not touch him. Jesus told Peter, Satan demanded to sift you like wheat, but I prayed for you. His activity is real, but it is always within God's permission, and his end is destruction.",
+        verses: ["Job 1:12", "Luke 22:31-32", "2 Thessalonians 2:9-10"],
+      },
+      {
+        heading: "He is defeated and doomed",
+        body: "God disarmed the rulers and authorities and made a public spectacle of them, triumphing over them in the cross. Now the ruler of this world will be cast out. The devil who deceived them was thrown into the lake of fire. He has already lost the war.",
+        verses: ["Colossians 2:15", "John 12:31", "Revelation 20:10", "Hebrews 2:14"],
+      },
+    ],
+    keyVerses: ["1 Peter 5:8", "Revelation 12:10", "Colossians 2:15", "John 8:44"],
+    raises: ["what-is-spiritual-warfare"],
+    followsFrom: [],
+    related: ["how-do-i-fight-sin"],
+    planned: ["Are demons real and active today?"],
+    order: 47,
+  },
+
+  {
+    slug: "what-are-angels",
+    question: "What are angels, and what do they do?",
+    category: "unseen-realm",
+    summary:
+      "Angels are spiritual beings created by God, ministering spirits sent to serve those who inherit salvation. They worship God, carry His messages, protect and minister to His people, and will accompany Christ at His return. They are glorious, but they are creatures: we are not to worship them.",
+    passages: [
+      { book: "Hebrews", chapter: 1, title: "Ministering spirits", lookFor: "Sent out to serve for the sake of those who will inherit salvation.", focus: "13-14" },
+      { book: "Psalm", chapter: 103, title: "Angels who do his word", lookFor: "Excellent in strength, obeying the voice of his word.", focus: "19-21" },
+      { book: "Luke", chapter: 1, title: "Gabriel's announcement", lookFor: "An angel carrying God's message to Mary.", focus: "26-38" },
+      { book: "Revelation", chapter: 22, title: "Worship God, not the angel", lookFor: "The angel refuses John's worship: worship God.", focus: "8-9" },
+    ],
+    points: [
+      {
+        heading: "Angels are created spirits",
+        body: "Are they not all ministering spirits, sent out to serve for the sake of those who will inherit salvation? Praise him, all his angels; for he commanded, and they were created. They are glorious creatures, but they are creatures, made by the word of God.",
+        verses: ["Hebrews 1:14", "Psalm 148:2-5", "Colossians 1:16"],
+      },
+      {
+        heading: "They worship and serve God",
+        body: "I heard the voice of many angels around the throne, saying with a loud voice, worthy is the Lamb who was slain. Angels who excel in strength, who do his word, obeying the voice of his word. Their first occupation is worship and obedience.",
+        verses: ["Revelation 5:11-12", "Psalm 103:20", "Isaiah 6:2-3"],
+      },
+      {
+        heading: "They minister to God's people",
+        body: "Gabriel flew swiftly and touched Daniel and gave him insight and understanding. An angel was sent to Mary with the announcement of the Christ. To Elisha: do not fear, for those who are with us are more than those who are with them.",
+        verses: ["Hebrews 1:14", "Daniel 9:21-22", "2 Kings 6:16-17"],
+      },
+      {
+        heading: "They are not to be worshipped",
+        body: "When John fell to worship the angel, he said, do not do that; I am a fellow servant; worship God. Do not let anyone disqualify you by delighting in the worship of angels. Their service points to Christ, and our worship belongs to Him alone.",
+        verses: ["Revelation 22:8-9", "Colossians 2:18", "Hebrews 1:5-6"],
+      },
+    ],
+    keyVerses: ["Hebrews 1:14", "Psalm 103:20", "Revelation 22:8-9", "Daniel 9:21-22"],
+    raises: [],
+    followsFrom: [],
+    related: ["who-is-satan", "what-is-spiritual-warfare"],
+    planned: ["Do believers have guardian angels?"],
+    order: 48,
+  },
+
+  {
+    slug: "what-is-spiritual-warfare",
+    question: "What is spiritual warfare?",
+    category: "unseen-realm",
+    summary:
+      "Spiritual warfare is the real but unseen conflict between the kingdom of God and the kingdom of darkness, fought with spiritual weapons: the word of God, prayer, faith, truth, righteousness, and the gospel of peace. Our fight is not against people, and the victory is Christ's.",
+    passages: [
+      { book: "Ephesians", chapter: 6, title: "The armor of God", lookFor: "Our wrestling is not against flesh and blood, but against spiritual forces.", focus: "10-20" },
+      { book: "2 Corinthians", chapter: 10, title: "Weapons of the Spirit", lookFor: "Divine power to pull down strongholds and arguments against the knowledge of God.", focus: "3-5" },
+      { book: "James", chapter: 4, title: "Submit and resist", lookFor: "Resist the devil, and he will flee from you.", focus: "7-10" },
+      { book: "Matthew", chapter: 4, title: "Jesus in the wilderness", lookFor: "He answered every temptation with Scripture.", focus: "1-11" },
+    ],
+    points: [
+      {
+        heading: "The battle is real, but not against people",
+        body: "Our wrestling is not against flesh and blood, but against the principalities, the powers, and the rulers of the darkness of this world. Though we walk in the flesh, we do not wage war according to the flesh. Your enemy is not your neighbor; it is the enemy of your soul.",
+        verses: ["Ephesians 6:12", "2 Corinthians 10:3-4"],
+      },
+      {
+        heading: "The weapons are spiritual",
+        body: "The armor of God: the belt of truth, the breastplate of righteousness, the shoes of the gospel of peace, the shield of faith, the helmet of salvation, and the sword of the Spirit, which is the word of God. Divine power pulls down arguments and every lofty thing raised against the knowledge of God.",
+        verses: ["Ephesians 6:13-17", "2 Corinthians 10:4-5", "Hebrews 4:12"],
+      },
+      {
+        heading: "Prayer is the engine",
+        body: "With all prayer and supplication, pray at all times in the Spirit, staying watchful with all perseverance for all the saints. Watch and pray, that you may not enter into temptation. The armor is worn, and it is prayed on.",
+        verses: ["Ephesians 6:18", "Matthew 26:41", "Luke 22:40"],
+      },
+      {
+        heading: "Submit, resist, and he will flee",
+        body: "Submit to God. Resist the devil, and he will flee from you. Resist him, steadfast in your faith, for greater is he who is in you than he who is in the world. Not by might nor by power, but by my Spirit, says the Lord. The victory is Christ's, and we fight in it.",
+        verses: ["James 4:7", "1 Peter 5:8-9", "1 John 4:4", "Zechariah 4:6"],
+      },
+    ],
+    keyVerses: ["Ephesians 6:12", "Ephesians 6:13-17", "James 4:7", "1 John 4:4"],
+    raises: [],
+    followsFrom: ["who-is-satan"],
+    related: ["how-do-i-fight-sin", "who-is-satan"],
+    planned: ["How do I pray against the enemy without fearing him?"],
+    order: 49,
   },
 ];

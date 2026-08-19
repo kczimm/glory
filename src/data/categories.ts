@@ -53,6 +53,54 @@ export const categories: Category[] = [
     order: 6,
     entry: ["why-does-god-allow-suffering"],
   },
+  {
+    slug: "prayer",
+    title: "Prayer",
+    tagline:
+      "Talking with the Father through Christ: how to pray, what the Lord's Prayer teaches, and whether He truly hears us.",
+    order: 7,
+    entry: ["how-do-i-pray"],
+  },
+  {
+    slug: "word-of-god",
+    title: "The Word of God",
+    tagline:
+      "Why we can trust the Bible, how to read it, and why the whole Book is about Jesus.",
+    order: 8,
+    entry: ["can-i-trust-the-bible"],
+  },
+  {
+    slug: "church",
+    title: "The Church",
+    tagline:
+      "The body of Christ and its two great signs: why we need the church, and what baptism and the Lord's Supper mean.",
+    order: 9,
+    entry: ["why-do-i-need-the-church"],
+  },
+  {
+    slug: "our-hope",
+    title: "Our Hope",
+    tagline:
+      "Where this is all going: what happens when we die, the return of Christ, the resurrection, and the new creation.",
+    order: 10,
+    entry: ["what-happens-when-i-die"],
+  },
+  {
+    slug: "who-we-are",
+    title: "Who We Are",
+    tagline:
+      "What it means to be made in God's image, what sin is, and the conflict of flesh and Spirit within us.",
+    order: 11,
+    entry: ["what-does-it-mean-to-be-made-in-gods-image"],
+  },
+  {
+    slug: "unseen-realm",
+    title: "The Unseen Realm",
+    tagline:
+      "The spiritual world around us: who Satan is, what angels do, and how we fight spiritual warfare.",
+    order: 12,
+    entry: ["who-is-satan"],
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {

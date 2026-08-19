@@ -248,6 +248,51 @@ export const connections: Record<string, Connection[]> = {
     c("Luke 24:47", "theme", "Repentance and remission of sins proclaimed in his name."),
     c("Joel 2:13", "pattern", "Return to the LORD your God, for he is gracious and merciful, slow to anger and abundant in lovingkindness."),
   ],
+  "Romans 6:23": [
+    c("Romans 5:12", "theme", "Sin entered through one man, and death through sin: the wage of the offense."),
+    c("Ephesians 2:8", "contrast", "The wage is death, but the gift is eternal life: grace versus debt."),
+    c("1 John 5:11", "theme", "God gave us eternal life, and this life is in his Son: the gift."),
+  ],
+  "2 Timothy 3:16": [
+    c("2 Peter 1:21", "theme", "Men spoke from God, carried along by the Spirit: the origin of Scripture."),
+    c("Psalm 19:7", "theme", "The law of the Lord is perfect, restoring the soul."),
+    c("Hebrews 4:12", "theme", "The word of God is living and active, sharper than any two-edged sword."),
+  ],
+  "Ephesians 6:12": [
+    c("Ephesians 6:13-17", "theme", "The armor of God: how we stand against these spiritual forces."),
+    c("Colossians 2:15", "fulfilled", "Christ disarmed the rulers and authorities at the cross: the enemy we resist is already defeated."),
+    c("1 Peter 5:8", "parallel", "Your adversary the devil walks about as a roaring lion."),
+  ],
+  "Revelation 21:4": [
+    c("Isaiah 65:19", "quotes", "The voice of weeping and crying will be heard no more."),
+    c("1 Corinthians 15:26", "theme", "The last enemy, death, is destroyed."),
+    c("Revelation 7:17", "theme", "God will wipe away every tear from their eyes: the same promise to the martyrs."),
+  ],
+  "Hebrews 1:14": [
+    c("Psalm 103:20", "theme", "Angels who excel in strength, doing his word."),
+    c("Hebrews 1:5-6", "theme", "Above angels, the Son is worshiped; they are servants."),
+    c("2 Kings 6:17", "theme", "The mountain is full of horses and chariots of fire: angels minister unseen."),
+  ],
+  "Galatians 5:22": [
+    c("John 15:5", "theme", "Abide in the vine and bear fruit: the fruit of the Spirit grows in union with Christ."),
+    c("Ephesians 5:9", "theme", "The fruit of the light: goodness, righteousness, and truth."),
+    c("Colossians 3:12", "theme", "Put on compassion, kindness, humility: the same fruit described another way."),
+  ],
+  "Romans 5:12": [
+    c("Genesis 3:6-7", "theme", "The first disobedience through which sin entered the world."),
+    c("Romans 3:23", "theme", "All have sinned: because all died in the one man's transgression."),
+    c("Ezekiel 18:20", "contrast", "The soul who sins will die: the just sentence for the offense."),
+  ],
+  "1 Peter 5:8": [
+    c("Job 1:7", "theme", "Where have you come from? From roaming the earth: the prowler at work."),
+    c("Revelation 12:10", "theme", "The accuser who accuses our brothers day and night."),
+    c("Ephesians 6:12", "parallel", "Our wrestling is not against flesh and blood, but against him."),
+  ],
+  "Ephesians 6:13-17": [
+    c("Ephesians 6:12", "theme", "The foe we face: spiritual forces of darkness."),
+    c("2 Corinthians 10:4-5", "parallel", "Divine weapons to pull down the strongholds of the enemy."),
+    c("1 Thessalonians 5:8", "theme", "Put on the breastplate of faith and love, and the helmet of hope: the same armor."),
+  ],
 };
 
 /** Connections leaving from a verse reference. */
