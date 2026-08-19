@@ -2109,10 +2109,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 1:11", "Daniel 4:35", "Romans 8:28", "Matthew 10:29-31"],
-    raises: ["how-do-i-know-gods-will"],
+    raises: ["how-do-i-know-gods-will", "do-my-choices-matter"],
     followsFrom: ["why-does-god-allow-suffering"],
     related: ["who-is-the-father", "why-does-god-allow-suffering"],
-    planned: ["If God controls everything, do my choices matter?"],
+    planned: ["Does God change His mind?"],
     order: 28,
   },
 
@@ -4642,5 +4642,88 @@ export const questions: Question[] = [
     related: ["why-does-god-allow-suffering", "who-is-the-father", "why-does-god-seem-silent", "is-god-in-control"],
     planned: ["How long will this suffering last?"],
     order: 30,
+  },
+
+  {
+    slug: "do-my-choices-matter",
+    question: "If God controls everything, do my choices matter?",
+    category: "suffering-will",
+    summary:
+      "Yes, and more than they would if God were not in control. Scripture holds God's sovereign plan and our real choices together without embarrassment: His plan undergirds our freedom rather than erasing it. He ordains the end, yet He calls us to choose, repent, and obey, and our choices have real consequences.",
+    passages: [
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "The cross: God's plan and men's hands",
+        lookFor: "Peter holds both in one sentence: delivered up by God's determined plan, yet killed by the hand of lawless men.",
+        focus: "22-41",
+      },
+      {
+        book: "Acts",
+        chapter: 4,
+        title: "Whatever your hand and your counsel foreordained",
+        lookFor: "The church's prayer: Herod, Pilate, and the nations did whatever God's hand and counsel had foreordained.",
+        focus: "23-31",
+      },
+      {
+        book: "Genesis",
+        chapter: 50,
+        title: "You meant evil, but God meant it for good",
+        lookFor: "Joseph's brothers acted freely and wrongly, and God overruled their choice for good.",
+        focus: "14-21",
+      },
+      {
+        book: "Joshua",
+        chapter: 24,
+        title: "Choose this day whom you will serve",
+        lookFor: "God's people are summoned to a real, consequential choice, with no hint that it is a formality.",
+        focus: "1-28",
+      },
+      {
+        book: "Philippians",
+        chapter: 2,
+        title: "Work out, for God works in you",
+        lookFor: "Paul joins the urgency of our effort with the reality of God's working, in the same sentence.",
+        focus: "12-13",
+      },
+    ],
+    points: [
+      {
+        heading: "Scripture holds both together without embarrassment",
+        body:
+          "Peter states it in a single verse: Jesus was 'delivered up by the determined counsel and foreknowledge of God,' and yet was 'taken by the hand of lawless men,' crucified and killed. The church's prayer says the same: Herod, Pilate, the Gentiles, and Israel gathered together to do whatever God's hand and counsel had foreordained. Scripture does not see a conflict; it affirms both.",
+        verses: ["Acts 2:23", "Acts 4:27-28"],
+      },
+      {
+        heading: "The cross proves that God works through real choices",
+        body:
+          "The worst act ever done, the murder of the Son of God, was at once foreordained by God and freely committed by responsible men who were held accountable. And God wove that evil into the very salvation of the world. Joseph said it of his brothers' betrayal: 'You meant evil against me, but God meant it for good.' If God can do that with the worst free choice, your choices under His care are far from meaningless.",
+        verses: ["Acts 2:23", "Acts 4:27-28", "Genesis 50:20"],
+      },
+      {
+        heading: "God summons you to real choices",
+        body:
+          "Joshua did not tell Israel their decision was predetermined but irrelevant; he commanded them: 'Choose this day whom you will serve.' Moses set life and death before the people and urged, 'choose life.' Peter's sermon at Pentecost did not say no one could decide; it called on them to repent and be baptized. The urgency of such calls only makes sense if our decisions are real and matter.",
+        verses: ["Joshua 24:15", "Deuteronomy 30:19", "Acts 2:38", "2 Peter 3:9"],
+      },
+      {
+        heading: "Our choices have real consequences",
+        body:
+          "The farmer who sows to his flesh will reap corruption; the one who sows to the Spirit will reap eternal life. Jesus wept over Jerusalem, crying that He had longed to gather her children 'and you would not!' Ezekiel pleads with the wicked to turn and live, for God takes no pleasure in their death. Judgment and blessing treat our decisions as significant rather than as theater.",
+        verses: ["Galatians 6:7-8", "Matthew 23:37", "Ezekiel 18:30-32", "2 Corinthians 5:10"],
+      },
+      {
+        heading: "God's sovereignty undergirds, not undermines, our effort",
+        body:
+          "Paul puts our responsibility and God's work in the closest possible relationship: 'work out your own salvation with fear and trembling, for it is God who works in you both to will and to work, for his good pleasure.' God's working is not the reason to slacken; it is the ground of our confidence and the power behind every good choice. He works all things for good for those who are called, even conforming them to Christ.",
+        verses: ["Philippians 2:12-13", "Romans 8:28", "Romans 8:29-30"],
+      },
+    ],
+    keyVerses: ["Acts 2:23", "Genesis 50:20", "Philippians 2:12-13", "Galatians 6:7", "Deuteronomy 30:19"],
+    raises: ["how-do-i-know-gods-will"],
+    followsFrom: ["is-god-in-control", "why-does-god-allow-suffering"],
+    related: ["is-god-in-control", "why-does-god-allow-suffering", "faith-or-works"],
+    planned: ["What does it mean that God is sovereign?"],
+    order: 31,
   },
 ];
