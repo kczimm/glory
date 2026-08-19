@@ -2708,10 +2708,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 1:11", "1 Thessalonians 4:16-17", "Revelation 1:7", "2 Peter 3:12"],
-    raises: [],
+    raises: ["signs-before-jesus-returns"],
     followsFrom: ["what-happens-when-i-die", "where-is-jesus-now"],
     related: ["where-is-jesus-now", "what-is-the-resurrection"],
-    planned: ["What signs should we look for before Jesus returns?"],
+    planned: ["What is the rapture?"],
     order: 41,
   },
 
@@ -5480,5 +5480,91 @@ export const questions: Question[] = [
     related: ["what-is-the-lords-supper", "what-is-the-gospel", "what-is-a-healthy-church"],
     planned: ["How is Christ present in the Lord's Supper?"],
     order: 42,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Our Hope (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "signs-before-jesus-returns",
+    question: "What signs should we look for before Jesus returns?",
+    category: "our-hope",
+    summary:
+      "Jesus gave signs of the age, not a date: the gospel preached to all nations, wars and troubles as 'birth pains,' and false christs who would deceive many. Yet He was just as clear that no one knows the day or hour. The call is not to calculate but to watch, to be found faithful, and to live ready for His coming.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 24,
+        title: "Signs and the end",
+        lookFor: "Jesus describes the birth pains of the age, the gospel preached to all nations, and then His own warning: no one knows the day or hour.",
+        focus: "1-44",
+      },
+      {
+        book: "Mark",
+        chapter: 13,
+        title: "Watch, keep alert, and pray",
+        lookFor: "The parallel account of the signs, ending with the same command to watch and keep alert.",
+        focus: "1-13",
+      },
+      {
+        book: "1 Thessalonians",
+        chapter: 5,
+        title: "The day of the Lord comes like a thief",
+        lookFor: "The day comes suddenly for those in darkness, but for those who belong to the day it is something to watch for soberly.",
+        focus: "1-11",
+      },
+      {
+        book: "2 Thessalonians",
+        chapter: 2,
+        title: "The man of lawlessness",
+        lookFor: "Paul warns of a coming rebellion and the revelation of the man of lawlessness, and tells the church not to be shaken.",
+        focus: "1-12",
+      },
+      {
+        book: "Acts",
+        chapter: 1,
+        title: "It is not for you to know the times",
+        lookFor: "The risen Lord forbids speculation about the timeline and redirects His disciples to be His witnesses.",
+        focus: "6-11",
+      },
+    ],
+    points: [
+      {
+        heading: "The age is marked by 'birth pains'",
+        body:
+          "Jesus did not hide the shape of the age: 'You will hear of wars and rumors of wars... For nation will rise against nation... famines, plagues, and earthquakes in various places. But all these things are the beginning of birth pains.' He calls them birth pains, not the end itself: the world's troubles are the groaning of an age about to give way, and the end is not yet.",
+        verses: ["Matthew 24:6-8", "Mark 13:7-8"],
+      },
+      {
+        heading: "Watch for counterfeits",
+        body:
+          "Jesus warned that many would come in His name claiming to be the Christ, deceiving many, and that false christs and false prophets would show great signs and wonders so as to lead even the chosen astray, if possible. Paul warns of the man of lawlessness who exalts himself against all that is called God. The great sign of the age is not only trouble but deception, and we are called to know the true voice well enough not to be fooled.",
+        verses: ["Matthew 24:4-5", "Matthew 24:24", "2 Thessalonians 2:3-4"],
+      },
+      {
+        heading: "The gospel must first go to all nations",
+        body:
+          "Jesus tied the end to the spread of the good news: 'This Good News of the Kingdom will be preached in the whole world for a testimony to all the nations, and then the end will come.' Before the end, the mission runs its course, and the gospel that has been going out to every people is itself a sign that the King is coming. Every believer sent into the world with the good news is living in that sign.",
+        verses: ["Matthew 24:14", "Mark 13:10"],
+      },
+      {
+        heading: "But no one knows the day or hour",
+        body:
+          "For all the signs, Jesus is emphatic: 'But no one knows of that day and hour, not even the angels of heaven, but my Father only.' After His resurrection He told the disciples it was not for them to know the times set by the Father's own authority. Paul adds that the day of the Lord comes 'like a thief in the night.' The signs should stir us to readiness, never to the pride of a date.",
+        verses: ["Matthew 24:36", "Acts 1:7", "1 Thessalonians 5:2", "Mark 13:32"],
+      },
+      {
+        heading: "So we watch and live ready",
+        body:
+          "The point of the signs is not calculation but vigilance. Jesus commands, 'Watch therefore, for you don't know in what hour your Lord comes,' and Peter asks what kind of people we ought to be, 'in holy living and godliness, looking for and earnestly desiring the coming of the day of God.' We are to stay awake and sober, faithful in our work, looking for our Lord, with our lamps trimmed and our lives ready.",
+        verses: ["Matthew 24:42", "Mark 13:33", "1 Thessalonians 5:6", "2 Peter 3:11-12"],
+      },
+    ],
+    keyVerses: ["Matthew 24:14", "Matthew 24:36", "Mark 13:33", "1 Thessalonians 5:2", "Acts 1:7", "2 Peter 3:12"],
+    raises: ["what-happens-when-i-die"],
+    followsFrom: ["will-jesus-return-literally", "what-happens-when-i-die"],
+    related: ["will-jesus-return-literally", "where-is-jesus-now", "what-is-the-resurrection", "what-is-the-new-heaven-and-new-earth"],
+    planned: ["What is the great tribulation?"],
+    order: 44,
   },
 ];
