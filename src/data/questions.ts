@@ -1802,10 +1802,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 3:28", "Romans 4:5", "2 Corinthians 5:21", "Romans 5:1"],
-    raises: ["what-is-faith", "faith-or-works"],
+    raises: ["what-is-faith", "faith-or-works", "what-is-imputation"],
     followsFrom: ["faith-or-works", "what-is-grace"],
     related: ["faith-or-works", "how-can-i-be-saved"],
-    planned: ["What does it mean that Christ's righteousness is 'imputed' to us?"],
+    planned: ["How are justification and sanctification related?"],
     order: 24,
   },
 
@@ -4308,5 +4308,88 @@ export const questions: Question[] = [
     related: ["what-is-grace", "what-is-justification", "how-do-i-fight-sin", "what-is-repentance"],
     planned: ["What does it mean to be a slave of righteousness?"],
     order: 27,
+  },
+
+  {
+    slug: "what-is-imputation",
+    question: "What does it mean that Christ's righteousness is 'imputed' to us?",
+    category: "gospel",
+    summary:
+      "Imputation is the great exchange at the heart of the gospel: our sin laid on Christ at the cross, and His righteousness credited to our account. He took what we deserved; we receive what He earned. It is a legal transaction of grace, and it is the only ground on which a sinner can stand before God.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 15,
+        title: "Abraham believed, and it was credited to him",
+        lookFor: "The first great picture of imputation: Abraham believes God, and it is reckoned to him as righteousness.",
+        focus: "1-6",
+      },
+      {
+        book: "Romans",
+        chapter: 4,
+        title: "Credited righteousness and forgiven sins",
+        lookFor: "Paul unpacks imputation: God counts righteousness to the ungodly who believe, and David calls the man blessed whose sins are not counted.",
+        focus: "1-25",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 5,
+        title: "The great exchange",
+        lookFor: "God made Him who knew no sin to be sin for us, so that in Him we might become the righteousness of God.",
+        focus: "17-21",
+      },
+      {
+        book: "Philippians",
+        chapter: 3,
+        title: "Not my own righteousness",
+        lookFor: "Paul counts everything as loss to have a righteousness that is not his own, but God's through faith in Christ.",
+        focus: "4-11",
+      },
+      {
+        book: "Isaiah",
+        chapter: 53,
+        title: "The righteous servant justifies many",
+        lookFor: "The suffering servant bears our iniquities, and by His wounds many are accounted righteous.",
+        focus: "4-12",
+      },
+    ],
+    points: [
+      {
+        heading: "The word is about what is credited to your account",
+        body:
+          "'Imputed' is an accounting word: to reckon, to credit, to charge to an account. The Bible's first use is God crediting righteousness to Abraham: 'Abraham believed God, and it was accounted to him for righteousness.' Paul insists it is not a wage for work but a gift received by faith, credited to the one who believes in Him who justifies the ungodly.",
+        verses: ["Genesis 15:6", "Romans 4:3", "Romans 4:5", "Romans 4:22"],
+      },
+      {
+        heading: "Left to our own record, we stand condemned",
+        body:
+          "The account we bring to God on our own is a debt, not an asset: all have sinned and fall short of His glory, and the wages of sin is death. If we are judged on what we have done, no one is righteous, no not one. The clearing of that record is not something we can achieve; it must be done for us.",
+        verses: ["Romans 3:23", "Romans 6:23", "Romans 3:10"],
+      },
+      {
+        heading: "Christ came under our charge at the cross",
+        body:
+          "The other half of the exchange is ours to Him: God made Him who knew no sin to be sin on our behalf. Isaiah said Yahweh has laid on Him the iniquity of us all, and Peter that He bore our sins in His body on the tree. On the cross our guilt was charged to Christ, not canceled: He paid it, so it could not be charged to us.",
+        verses: ["2 Corinthians 5:21", "Isaiah 53:6", "1 Peter 2:24", "Romans 4:25"],
+      },
+      {
+        heading: "His righteousness is credited to our account",
+        body:
+          "Paul's yearning is to be found in Christ, 'not having a righteousness of my own, that which is of the law, but that which is through faith in Christ, the righteousness which is from God by faith.' David pronounced blessed the man to whom God credits righteousness apart from works, and the prophets even gave the coming King the name 'Yahweh our righteousness.' In Christ, God counts us righteous.",
+        verses: ["Philippians 3:9", "Romans 4:6-8", "Romans 4:23-24", "Jeremiah 23:6", "1 Corinthians 1:30"],
+      },
+      {
+        heading: "Why it matters: a full standing, no room to boast, real peace",
+        body:
+          "Imputation gives a whole standing before God: not a partial improvement but a complete righteousness received by faith. It rules out boasting, because the righteousness is not our own. And it gives peace: being justified by faith, we have peace with God through our Lord Jesus Christ. The one who could have held our debt against us has washed the record clean and credited us with His own.",
+        verses: ["Romans 5:1", "Romans 3:27", "Romans 8:1", "Romans 4:7-8"],
+      },
+    ],
+    keyVerses: ["2 Corinthians 5:21", "Romans 4:3", "Philippians 3:9", "Isaiah 53:6", "Romans 5:1"],
+    raises: [],
+    followsFrom: ["what-is-justification", "faith-or-works", "what-is-grace"],
+    related: ["what-is-justification", "faith-or-works", "how-can-i-be-saved", "what-is-grace"],
+    planned: ["If I am already credited righteous, why does obedience matter?"],
+    order: 28,
   },
 ];
