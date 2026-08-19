@@ -40,9 +40,11 @@ import {
   readFileSync,
   renameSync,
   rmSync,
+  writeFileSync,
 } from "node:fs";
 import { resolve } from "node:path";
-import { spawnSync } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 
 const arg = (name, fallback) => {
   const i = process.argv.indexOf(name);
@@ -59,6 +61,8 @@ const LIMIT = has("--limit") ? Number(arg("--limit", "0")) : 0;
 const FORCE = has("--force");
 const CHECK_BUCKET = has("--check-bucket");
 const BUCKET_URL = arg("--bucket-url", process.env.AUDIO_BUCKET_URL ?? process.env.NEXT_PUBLIC_AUDIO_ROOT ?? "").replace(/\/+$/, "");
+const WORKERS = has("--workers") ? Math.max(1, Number(arg("--workers", "1"))) : 1;
+const WORKER_SLICE = arg("--worker", ""); // internal: path to a JSON slice list
 const MODEL_ID = "onnx-community/Kokoro-82M-v1.0-ONNX";
 
 // ---- load manifest ---------------------------------------------------------
@@ -157,12 +161,119 @@ function encodeToM4a(wavPath, m4aPath) {
   const r = spawnSync(
     "ffmpeg",
     ["-y", "-i", wavPath, "-c:a", "aac", "-b:a", "64k", "-ac", "1", m4aPath],
-    { stdio: ["ignore", "ignore", "inherit"] }
+    { stdio: ["ignore", "ignore", "pipe"] }
   );
-  if (r.status !== 0) throw new Error(`ffmpeg failed for ${m4aPath}`);
+  if (r.status !== 0) {
+    const tail = (r.stderr ?? "").toString().split("\n").slice(-3).join(" ");
+    throw new Error(`ffmpeg failed for ${m4aPath}: ${tail}`);
+  }
+}
+
+// ---- worker mode ------------------------------------------------------------
+// A worker process synthesizes exactly the items in its slice file. It is
+// spawned by the parent (--workers) so each worker has its own model session
+// and the OS spreads them across CPU cores.
+
+async function runWorker() {
+  const slice = JSON.parse(readFileSync(WORKER_SLICE, "utf8"));
+  const { KokoroTTS } = await import("kokoro-js").catch((e) => {
+    console.error("kokoro-js is not installed. Run:  npm i -D kokoro-js");
+    console.error(e.message);
+    process.exit(1);
+  });
+  const tts = await KokoroTTS.from_pretrained(MODEL_ID, {
+    dtype: DTYPE,
+    device: "cpu",
+    progress_callback: () => {},
+  });
+  if (!tts.voices[synthVoice]) {
+    console.error(`Unknown voice "${synthVoice}"`);
+    process.exit(1);
+  }
+  const outDir = resolve(OUT_DIR, "v1", SLUG);
+  mkdirSync(outDir, { recursive: true });
+  const tmpDir = resolve(OUT_DIR, ".tmp");
+  mkdirSync(tmpDir, { recursive: true });
+  const tmpWav = resolve(tmpDir, `w${process.pid}.wav`);
+  const tmpM4a = resolve(tmpDir, `w${process.pid}.m4a`);
+  const t0 = Date.now();
+  for (let i = 0; i < slice.length; i++) {
+    const { hash, text } = slice[i];
+    try {
+      const spoken = cleanForSpeech(text);
+      const raw = await tts.generate(spoken, { voice: synthVoice, speed: 1 });
+      await raw.save(tmpWav);
+      encodeToM4a(tmpWav, tmpM4a);
+      rmSync(tmpWav, { force: true });
+      renameSync(tmpM4a, resolve(outDir, `${hash}.m4a`));
+      console.log(`  [w${process.pid} ${i + 1}/${slice.length}] ${hash.slice(0, 8)} ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+    } catch (err) {
+      console.error(`  [w${process.pid}] FAILED ${hash}: ${err?.message ?? err}`);
+      process.exit(1);
+    }
+  }
+  console.log(`  [w${process.pid}] done ${slice.length} files`);
+}
+
+async function runWorkers(work) {
+  // Round-robin so slow/long items balance across workers.
+  const slices = Array.from({ length: WORKERS }, () => []);
+  work.forEach(([hash, text], i) => slices[i % WORKERS].push({ hash, text }));
+  const outDir = resolve(OUT_DIR, "v1", SLUG);
+  mkdirSync(outDir, { recursive: true });
+  const tmpDir = resolve(OUT_DIR, ".tmp");
+  mkdirSync(tmpDir, { recursive: true });
+  const t0 = Date.now();
+  const script = fileURLToPath(import.meta.url);
+  const planned = [];
+  const children = slices
+    .filter((s) => s.length > 0)
+    .map((slice, idx) => {
+      const sliceFile = resolve(tmpDir, `slice-${idx}.json`);
+      writeFileSync(sliceFile, JSON.stringify(slice));
+      planned.push({ file: sliceFile, hashes: slice.map((s) => s.hash) });
+      return spawn(process.execPath, [
+        script,
+        "--worker", sliceFile,
+        "--out-dir", OUT_DIR,
+        "--slug", SLUG,
+        "--voice", synthVoice,
+        "--dtype", DTYPE,
+      ], { stdio: ["ignore", "inherit", "inherit"] });
+    });
+  // onnxruntime-node aborts at process teardown (mutex lock) AFTER every file
+  // is written, so exit codes are unreliable. Judge success by file presence:
+  // files are written atomically, so a missing hash means the worker's work is
+  // genuinely incomplete.
+  await Promise.all(
+    children.map(
+      (c) =>
+        new Promise((res) => {
+          c.on("close", () => res());
+          c.on("error", () => res());
+        })
+    )
+  );
+  let missing = 0;
+  for (const { file, hashes } of planned) {
+    for (const h of hashes) {
+      if (!existsSync(resolve(outDir, `${h}.m4a`))) missing++;
+    }
+    rmSync(file, { force: true });
+  }
+  const wrote = work.length - missing;
+  console.log(`\n${WORKERS} workers, ${work.length} files, ${((Date.now() - t0) / 1000).toFixed(1)}s wall; wrote ${wrote}, missing ${missing}`);
+  if (missing) process.exit(1);
 }
 
 // ---- main ------------------------------------------------------------------
+
+// A child worker handles only its own slice and exits; it never rebuilds the
+// manifest or plan.
+if (WORKER_SLICE) {
+  await runWorker();
+  process.exit(0);
+}
 
 // Unique chunks: hash -> text (file name is the hash of the raw text).
 const unique = new Map();
@@ -211,6 +322,12 @@ console.log(
 // If there is nothing to synthesize, exit before loading the model at all.
 if (work.length === 0 && !has("--list-voices")) {
   console.log("Nothing to generate.");
+  process.exit(0);
+}
+
+// Parallel mode: split the work across worker processes and wait.
+if (WORKERS > 1) {
+  await runWorkers(work);
   process.exit(0);
 }
 
