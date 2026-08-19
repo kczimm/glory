@@ -2,10 +2,12 @@ import { verses, chapters } from "./scripture";
 import { categories, getCategory } from "./categories";
 import { questions } from "./questions";
 import { connections, getConnections, connectionKindLabel } from "./connections";
+import { parseRef, questionsUsing, incomingConnections, graphVerseRefs, verseSlug, refFromSlug } from "./verseIndex";
 import type { Category, Question, Connection, ConnectionKind } from "./types";
 
 export { categories, questions, verses, chapters, getCategory };
 export { connections, getConnections, connectionKindLabel };
+export { parseRef, questionsUsing, incomingConnections, graphVerseRefs, verseSlug, refFromSlug };
 export type { Category, Question, Connection, ConnectionKind };
 
 /** content book name -> canonical scripture.ts key */

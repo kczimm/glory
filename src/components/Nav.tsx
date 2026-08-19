@@ -14,6 +14,12 @@ export default function Nav() {
         </Link>
         <nav className="flex items-center gap-6 text-sm">
           <Link
+            href="/verses"
+            className="text-ink-soft transition-colors hover:text-gold"
+          >
+            Verses
+          </Link>
+          <Link
             href="/questions"
             className="text-ink-soft transition-colors hover:text-gold"
           >

@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { getConnections, connectionKindLabel, getPassageText } from "@/data";
+import Link from "next/link";
+import { getConnections, connectionKindLabel, getPassageText, verseSlug } from "@/data";
 import type { ConnectionKind } from "@/data/types";
 
 /**
@@ -54,7 +55,12 @@ function ConnectionRow({
         <span className="shrink-0 rounded-full border border-gold/40 px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-gold-deep">
           {connectionKindLabel[kind]}
         </span>
-        <span className="text-[12.5px] font-semibold text-ink">{target}</span>
+        <Link
+          href={`/verses/${verseSlug(target)}`}
+          className="text-[12.5px] font-semibold text-gold-deep underline-offset-2 hover:underline"
+        >
+          {target}
+        </Link>
       </p>
       <p className="mt-1 text-[13px] leading-snug text-ink-soft">{note}</p>
       {text && (

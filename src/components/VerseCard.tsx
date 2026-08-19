@@ -1,4 +1,5 @@
-import { getPassageText } from "@/data";
+import { getPassageText, verseSlug } from "@/data";
+import Link from "next/link";
 import VerseConnections from "./VerseConnections";
 
 /**
@@ -13,8 +14,13 @@ export default function VerseCard({ verse }: { verse: string }) {
       <blockquote className="font-display text-[17px] italic leading-relaxed text-ink">
         {text}
       </blockquote>
-      <figcaption className="mt-1.5 text-[13px] font-semibold tracking-wide text-gold-deep">
-        — {verse}
+      <figcaption className="mt-1.5 text-[13px]">
+        <Link
+          href={`/verses/${verseSlug(verse)}`}
+          className="font-semibold tracking-wide text-gold-deep underline-offset-2 hover:underline"
+        >
+          — {verse}
+        </Link>
       </figcaption>
       <VerseConnections verse={verse} />
     </figure>
