@@ -2561,7 +2561,7 @@ export const questions: Question[] = [
       {
         heading: "Jesus commanded it",
         body: "Go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit. The early church obeyed immediately, baptizing three thousand on the day of Pentecost, and the Ethiopian asked for baptism the moment he believed.",
-        verses: ["Matthew 28:19", "Acts 2:41", "Acts 8:36-38"],
+        verses: ["Matthew 28:19", "Acts 2:41", "Acts 8:36", "Acts 8:38"],
       },
       {
         heading: "It pictures union with Christ",

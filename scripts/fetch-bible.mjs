@@ -18,6 +18,19 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const verses = new Map(); // "Genesis 1:1" -> text
 const chapters = new Map(); // "Genesis 1" -> [{n,text}]
 
+/**
+ * Strip USFM footnote markup that getbible.net leaks into the plain text
+ * (e.g. "cherubim/f + note about cherubim/f*") and normalize whitespace.
+ */
+function cleanVerse(text) {
+  return text
+    .replace(/\/f\s*\+?[\s\S]*?\/f\*/g, "") // slashed footnote spans
+    .replace(/\\f\s*\+?[\s\S]*?\\f\*/g, "") // USFM backslash spans
+    .replace(/[\\/]f\*?/g, "") // stray markers
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 let failures = [];
 for (let n = 1; n <= BOOKS; n++) {
   let ok = false;
@@ -31,7 +44,8 @@ for (let n = 1; n <= BOOKS; n++) {
         const ck = `${book.name} ${ch.chapter}`;
         if (!chapters.has(ck)) chapters.set(ck, []);
         for (const v of ch.verses) {
-          const text = v.text.replace(/\s+/g, " ").trim();
+          const text = cleanVerse(v.text);
+          if (!text) continue; // scriptural footnotes that carried a whole verse (e.g. Acts 8:37) omit it
           verses.set(`${book.name} ${v.chapter}:${v.verse}`, text);
           chapters.get(ck).push({ n: v.verse, text });
         }
