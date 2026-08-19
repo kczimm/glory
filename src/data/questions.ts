@@ -1118,10 +1118,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 12:4-7", "1 Corinthians 12:11", "1 Peter 4:10", "1 Corinthians 13:13"],
-    raises: [],
+    raises: ["are-sign-gifts-active"],
     followsFrom: ["how-do-i-receive-the-holy-spirit"],
     related: ["who-is-the-holy-spirit", "how-does-the-spirit-convict-the-world"],
-    planned: ["Are the 'sign' gifts still active today?", "How do I discover my gift?"],
+    planned: ["How do I discover my gift?"],
     order: 15,
   },
 
@@ -6152,5 +6152,91 @@ export const questions: Question[] = [
     related: ["what-is-spiritual-warfare", "who-is-satan", "are-demons-real", "how-do-i-pray"],
     planned: ["How does spiritual warfare relate to mental health?"],
     order: 52,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Holy Spirit (continued: gifts)
+  // ------------------------------------------------------------------
+  {
+    slug: "are-sign-gifts-active",
+    question: "Are the 'sign' gifts still active today?",
+    category: "holy-spirit",
+    summary:
+      "Faithful Christians have answered this question differently. Some see the spectacular gifts of healing, prophecy, and tongues as continuing today as the Spirit distributes them; others read 1 Corinthians 13 as pointing to their ceasing once the apostolic foundation and the completed Word arrived. Scripture is clear that the Spirit gives gifts to build up the church, that love is the greatest gift and the test of all gifts, and that we are not to forbid what the Spirit does nor quench His work. Seek love, desire the Spirit, and test all things by the Word.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 12,
+        title: "Varieties of gifts, one Spirit",
+        lookFor: "Paul's catalogue of gifts, from wisdom and faith to healings, miracles, prophecy, kinds of languages, and interpretation, all given by one Spirit.",
+        focus: "1-31",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 13,
+        title: "Love is the greatest gift",
+        lookFor: "The most excellent way: love never fails, while prophecies, tongues, and knowledge pass away; the greatest of the three is love.",
+        focus: "1-13",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 14,
+        title: "Desire prophecy; don't forbid tongues",
+        lookFor: "Paul urges the church to earnestly desire spiritual gifts, to prefer prophecy, and not to forbid speaking in tongues, all in order.",
+        focus: "1-5",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "The Spirit poured out at Pentecost",
+        lookFor: "The coming of the Spirit is announced in tongues and prophecy, as Peter explains the promise of Joel poured out on all flesh.",
+        focus: "1-21",
+      },
+      {
+        book: "Ephesians",
+        chapter: 4,
+        title: "Gifts to equip the saints",
+        lookFor: "Christ gave apostles, prophets, evangelists, shepherds, and teachers to equip the saints and build the body of Christ.",
+        focus: "7-16",
+      },
+    ],
+    points: [
+      {
+        heading: "The New Testament church was richly gifted",
+        body:
+          "Paul describes a church in which the Spirit distributed a wide range of gifts: the word of wisdom, the word of knowledge, faith, gifts of healings, workings of miracles, prophecy, discerning of spirits, various kinds of languages, and the interpretation of languages. 'To each one is given the manifestation of the Spirit for the profit of all.' The same Spirit did the same at Pentecost, filling the believers and giving them to speak with other languages as He gave them utterance. These were normal enough that Paul could list them and expect the church to recognize them.",
+        verses: ["1 Corinthians 12:8-10", "1 Corinthians 12:7", "1 Corinthians 12:11", "Acts 2:4"],
+      },
+      {
+        heading: "The apostles told the church to desire them",
+        body:
+          "Paul's posture toward the gifts is eager and orderly, not suspicious. He says, 'Follow after love, and earnestly desire spiritual gifts, but especially that you may prophesy,' and 'desire earnestly to prophesy, and don't forbid speaking with other languages.' The New Testament does not tell the church to be afraid of the Spirit's gifts.",
+        verses: ["1 Corinthians 14:1", "1 Corinthians 14:39", "1 Corinthians 12:31"],
+      },
+      {
+        heading: "But there is a genuine disagreement about today",
+        body:
+          "Paul also wrote that love never fails, while 'where there are prophecies, they will be done away with... where there is knowledge, it will be done away with,' because 'when that which is complete has come, then that which is partial will be done away with.' Some see that completion in the finished apostolic Word, noting that the church is 'built on the foundation of the apostles and prophets,' a foundation laid once. Others see 'the perfect' as the return of Christ and believe the Spirit continues to give these gifts today, distributing to each as He wills. Both views are held by earnest, Bible-loving Christians, and both deserve charity.",
+        verses: ["1 Corinthians 13:8", "1 Corinthians 13:9", "1 Corinthians 13:10", "Ephesians 2:20", "1 Corinthians 12:11", "1 Corinthians 13:12"],
+      },
+      {
+        heading: "Love is the greatest gift and the test of every gift",
+        body:
+          "Whatever a person believes about the sign gifts, Paul is unambiguous about the central thing: if someone speaks with the languages of men and of angels but has not love, they are nothing; love is greater than prophecy, miracles, and every sign. 'But now faith, hope, and love remain... the greatest of these is love.' However the spectacular gifts are understood, their worth is judged by whether they are exercised in love and for the building up of the church.",
+        verses: ["1 Corinthians 13:1", "1 Corinthians 13:2", "1 Corinthians 13:13", "1 Corinthians 14:12"],
+      },
+      {
+        heading: "The posture for both views: seek love, test, and don't despise",
+        body:
+          "Where faithful Christians differ, Scripture still points the way: do not quench the Spirit, and do not despise prophecies, but test all things and hold fast to what is good. Test the spirits, because not every voice is from God. And remember that gifts, however humble or spectacular, are given to build up the body for maturity in Christ. Whether you believe the sign gifts continue or passed with the apostles, you can honor the Spirit's work, test everything by the Word, and love.",
+        verses: ["1 Thessalonians 5:19", "1 Thessalonians 5:20", "1 Thessalonians 5:21", "1 John 4:1", "Ephesians 4:12", "Ephesians 4:13"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 12:8-10", "1 Corinthians 13:13", "1 Corinthians 14:1", "1 Corinthians 12:11", "1 Corinthians 13:8"],
+    raises: ["what-are-spiritual-gifts"],
+    followsFrom: ["what-are-spiritual-gifts", "how-do-i-receive-the-holy-spirit"],
+    related: ["what-are-spiritual-gifts", "how-do-i-know-the-spirit-is-leading-me", "how-does-the-spirit-convict-the-world", "is-it-okay-to-doubt"],
+    planned: ["How can I test a claimed prophecy or miracle?"],
+    order: 21,
   },
 ];
