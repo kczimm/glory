@@ -15,16 +15,23 @@
  *   aws s3 sync audio-out/v1 s3://<bucket>/v1 \
  *     --endpoint-url https://<accountid>.r2.cloudflarestorage.com
  *
- * Notes:
- *  - Idempotent and resumable: existing .m4a files are skipped, so
- *    re-runs only do the work still missing.
- *  - The file NAME (URL) is the SHA-1 of the ORIGINAL text. Pronunciation
- *    cleaning changes only what is spoken, never the file name, so the
- *    app's lookup still matches.
- *  - Dependencies: `npm i -D kokoro-js` and a system ffmpeg.
+ *  - Notes:
+ *    - Idempotent and resumable: existing .m4a files are skipped, so
+ *      re-runs only do the work still missing.
+ *    - The file NAME (URL) is the SHA-1 of the ORIGINAL text. Pronunciation
+ *      cleaning changes only what is spoken, never the file name, so the
+ *      app's lookup still matches.
+ *    - Dependencies: `npm i -D kokoro-js` and a system ffmpeg.
  *  - Usage: node scripts/generate-audio.mjs [--manifest X] [--voice ID]
- *            [--out-dir D] [--dtype q8] [--only <hash|itemId>] [--limit N]
+ *            [--slug URLNS] [--out-dir D] [--dtype q8]
+ *            [--only <hash|itemId>] [--key <group>] [--limit N]
  *            [--force] [--list-voices]
+ *            [--check-bucket --bucket-url https://...r2.dev]
+ *    --check-bucket probes each hash's public URL (ranged GET, bytes=0-0)
+ *    and skips files already live in the bucket, so a fresh machine (or
+ *    CI) only generates what is genuinely missing. Bucket URL defaults to
+ *    the AUDIO_BUCKET_URL or NEXT_PUBLIC_AUDIO_ROOT env var; files are
+ *    checked at {bucket-url}/v1/{slug}/{hash}.m4a.
  */
 
 import {
@@ -46,9 +53,12 @@ const has = (name) => process.argv.includes(name);
 const MANIFEST = arg("--manifest", "audio-manifest.json");
 const OUT_DIR = resolve(arg("--out-dir", "audio-out"));
 const DTYPE = arg("--dtype", "q8");
-const ONLY = arg("--only", ""); // substring match on hash or itemId
+const ONLY = arg("--only", ""); // substring match on hash or itemId/label text
+const KEY = arg("--key", ""); // substring match on manifest entry key (e.g. ":John 3")
 const LIMIT = has("--limit") ? Number(arg("--limit", "0")) : 0;
 const FORCE = has("--force");
+const CHECK_BUCKET = has("--check-bucket");
+const BUCKET_URL = arg("--bucket-url", process.env.AUDIO_BUCKET_URL ?? process.env.NEXT_PUBLIC_AUDIO_ROOT ?? "").replace(/\/+$/, "");
 const MODEL_ID = "onnx-community/Kokoro-82M-v1.0-ONNX";
 
 // ---- load manifest ---------------------------------------------------------
@@ -65,7 +75,7 @@ if (!manifest.entries?.length) {
   process.exit(1);
 }
 
-const SLUG = manifest.voice || "kokoro-am_michael"; // used in URLs
+const SLUG = arg("--slug", manifest.voice || "kokoro-am_michael"); // URL namespace
 // The Kokoro model voice id is usually the slug minus the "kokoro-" prefix.
 const synthVoice = arg("--voice", SLUG.replace(/^kokoro-/, "") || "am_michael");
 
@@ -105,6 +115,42 @@ function cleanForSpeech(text) {
   return text.replace(pronunciationRe, (m) => PRONUNCIATION[m] ?? m);
 }
 
+// ---- bucket existence (optional) -------------------------------------------
+// Some public buckets (r2.dev included) do not answer HEAD reliably, so use a
+// ranged GET (bytes=0-0): 200/206 means the object exists. The body is never
+// read, so a full 200 (range ignored) costs only a tiny transfer.
+
+async function existsInBucket(url) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 8000);
+  try {
+    const res = await fetch(url, {
+      headers: { Range: "bytes=0-0" },
+      signal: controller.signal,
+    });
+    if (res.body) await res.body.cancel(); // we only need the status
+    return res.status === 200 || res.status === 206;
+  } catch {
+    return false; // offline or error: treat as missing so we still generate locally
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/** Which of `hashes` already resolve publicly in the bucket. */
+async function filterExistingInBucket(hashes, concurrency = 16) {
+  const existing = new Set();
+  let i = 0;
+  const worker = async () => {
+    while (i < hashes.length) {
+      const hash = hashes[i++];
+      if (await existsInBucket(`${BUCKET_URL}/v1/${SLUG}/${hash}.m4a`)) existing.add(hash);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(concurrency, hashes.length || 1) }, worker));
+  return existing;
+}
+
 // ---- ffmpeg ----------------------------------------------------------------
 
 function encodeToM4a(wavPath, m4aPath) {
@@ -117,6 +163,56 @@ function encodeToM4a(wavPath, m4aPath) {
 }
 
 // ---- main ------------------------------------------------------------------
+
+// Unique chunks: hash -> text (file name is the hash of the raw text).
+const unique = new Map();
+for (const e of manifest.entries) {
+  if (!unique.has(e.hash)) unique.set(e.hash, e.text);
+}
+
+const outDir = resolve(OUT_DIR, "v1", SLUG);
+mkdirSync(outDir, { recursive: true });
+const tmpDir = resolve(OUT_DIR, ".tmp");
+mkdirSync(tmpDir, { recursive: true });
+
+// Work set: hashes in scope, minus any already present locally.
+const selected = new Set();
+for (const e of manifest.entries) {
+  const inOnly = !ONLY || e.hash.startsWith(ONLY) || e.text.includes(ONLY);
+  const inKey = !KEY || e.key.includes(KEY);
+  if (inOnly && inKey) selected.add(e.hash);
+}
+const selectedUnique = [...unique].filter(([hash]) => selected.has(hash));
+let work = FORCE
+  ? selectedUnique
+  : selectedUnique.filter(([hash]) => !existsSync(resolve(outDir, `${hash}.m4a`)));
+
+// Skip anything already live in the bucket (HEAD each public URL), so a fresh
+// machine never regenerates audio that is already being served.
+if (CHECK_BUCKET) {
+  if (!BUCKET_URL) {
+    console.error("--check-bucket needs --bucket-url (or AUDIO_BUCKET_URL / NEXT_PUBLIC_AUDIO_ROOT).");
+    process.exit(1);
+  }
+  const inBucket = await filterExistingInBucket(work.map(([h]) => h));
+  if (inBucket.size) {
+    work = work.filter(([h]) => !inBucket.has(h));
+    console.log(`  ${inBucket.size} already in the bucket; skipped by --check-bucket`);
+  }
+}
+
+if (LIMIT > 0) work = work.slice(0, LIMIT);
+
+const skipped = selectedUnique.length - work.length;
+console.log(
+  `${unique.size} unique chunks; ${selectedUnique.length} in scope; ${work.length} to generate (${skipped} already present${CHECK_BUCKET ? ", incl. bucket" : ""})`
+);
+
+// If there is nothing to synthesize, exit before loading the model at all.
+if (work.length === 0 && !has("--list-voices")) {
+  console.log("Nothing to generate.");
+  process.exit(0);
+}
 
 const { KokoroTTS } = await import("kokoro-js").catch((e) => {
   console.error("kokoro-js is not installed. Run:  npm i -D kokoro-js");
@@ -143,25 +239,6 @@ if (!tts.voices[synthVoice]) {
   process.exit(1);
 }
 console.log(`Synthesizing with voice "${synthVoice}" (male: am_*)`);
-
-// Unique chunks: hash -> text (file name is the hash of the raw text).
-const unique = new Map();
-for (const e of manifest.entries) {
-  if (!unique.has(e.hash)) unique.set(e.hash, e.text);
-}
-
-const outDir = resolve(OUT_DIR, "v1", SLUG);
-mkdirSync(outDir, { recursive: true });
-const tmpDir = resolve(OUT_DIR, ".tmp");
-mkdirSync(tmpDir, { recursive: true });
-
-// Work set: skip what already exists.
-let work = [...unique.entries()];
-if (ONLY) work = work.filter(([hash, text]) => hash.startsWith(ONLY) || text.includes(ONLY));
-if (!FORCE) work = work.filter(([hash]) => !existsSync(resolve(outDir, `${hash}.m4a`)));
-if (LIMIT > 0) work = work.slice(0, LIMIT);
-
-console.log(`${unique.size} unique chunks; ${work.length} to generate (${unique.size - work.length} already present)`);
 
 const t0 = Date.now();
 let done = 0;
