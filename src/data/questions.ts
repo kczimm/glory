@@ -81,7 +81,7 @@ export const questions: Question[] = [
     raises: ["is-the-holy-spirit-god", "how-do-i-receive-the-holy-spirit"],
     followsFrom: [],
     related: ["who-is-jesus"],
-    planned: ["What are the gifts of the Spirit, and are they for today?"],
+    planned: ["Why does Jesus call the Spirit 'another Helper'?"],
     order: 1,
   },
 
@@ -154,10 +154,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 5:3-4", "Matthew 28:19", "1 Corinthians 2:10-11", "Hebrews 9:14"],
-    raises: ["what-is-the-trinity"],
+    raises: ["what-is-the-trinity", "how-does-the-spirit-convict-the-world"],
     followsFrom: ["who-is-the-holy-spirit"],
     related: ["is-jesus-really-god"],
-    planned: ["How does the Spirit convict the world?"],
+    planned: ["How is the Holy Spirit at work in the Old Testament?"],
     order: 2,
   },
 
@@ -292,13 +292,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 2:38-39", "Ephesians 1:13-14", "Romans 8:15-16", "Galatians 3:2"],
-    raises: [],
+    raises: ["what-are-spiritual-gifts"],
     followsFrom: ["who-is-the-holy-spirit"],
     related: ["who-is-the-holy-spirit", "how-can-i-be-saved"],
-    planned: [
-      "What are spiritual gifts, and how do they work?",
-      "How do I know the Spirit is leading me?",
-    ],
+    planned: ["How do I know the Spirit is leading me?"],
     order: 4,
   },
 
@@ -374,10 +371,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 1:1", "John 1:14", "Philippians 2:9-11", "Hebrews 1:3", "Mark 10:45"],
-    raises: ["is-jesus-really-god", "why-did-jesus-have-to-die", "what-does-it-mean-that-jesus-is-the-son-of-god"],
+    raises: ["is-jesus-really-god", "why-did-jesus-have-to-die", "what-does-it-mean-that-jesus-is-the-son-of-god", "why-did-jesus-call-himself-son-of-man"],
     followsFrom: [],
     related: ["who-is-the-holy-spirit"],
-    planned: ["What does it mean that Jesus calls himself the Son of Man?"],
+    planned: [],
     order: 5,
   },
 
@@ -608,10 +605,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 2:8-9", "Romans 10:9-10", "John 14:6", "Romans 8:38-39", "1 John 5:11-13"],
-    raises: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-happens-when-i-sin"],
+    raises: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-happens-when-i-sin", "what-should-i-do-now-that-im-saved"],
     followsFrom: ["why-did-jesus-have-to-die", "did-jesus-rise-from-the-dead"],
     related: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
-    planned: ["What should I do now that I'm saved?"],
+    planned: [],
     order: 8,
   },
 
@@ -687,10 +684,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 15:3-8", "1 Corinthians 15:20", "Luke 24:39", "Romans 8:11"],
-    raises: ["how-can-i-be-saved"],
+    raises: ["how-can-i-be-saved", "where-is-jesus-now"],
     followsFrom: ["why-did-jesus-have-to-die"],
     related: ["is-jesus-really-god"],
-    planned: ["What happened between the cross and the resurrection?", "Where is Jesus now?"],
+    planned: ["What happened between the cross and the resurrection?"],
     order: 9,
   },
 
@@ -975,10 +972,460 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 John 2:1-2", "1 John 1:9", "Hebrews 4:15-16", "Romans 8:1"],
-    raises: [],
+    raises: ["how-do-i-fight-sin"],
     followsFrom: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
     related: ["can-i-lose-my-salvation"],
-    planned: ["How do I fight sin in my life?", "Does God use our failures for our good?"],
+    planned: ["Does God use our failures for our good?"],
     order: 13,
+  },
+
+  // ------------------------------------------------------------------
+  // More questions — Holy Spirit, Christ, and the walk
+  // ------------------------------------------------------------------
+  {
+    slug: "how-does-the-spirit-convict-the-world",
+    question: "How does the Spirit convict the world of sin?",
+    category: "holy-spirit",
+    summary:
+      "Jesus said the Spirit would 'convict the world concerning sin, righteousness, and judgment.' Conviction is not mere guilt — it is God persuading the conscience of the truth, so that people see their sin, their need of Christ's righteousness, and the judgment to come — and turn to the Savior.",
+    passages: [
+      {
+        book: "John",
+        chapter: 16,
+        title: "The Spirit's convicting work",
+        lookFor: "Concerning sin, righteousness, and judgment — Jesus explains all three.",
+        focus: "5-15",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Cut to the heart",
+        lookFor: "The preaching of the Spirit-bearing church — and the response: 'what must we do?'",
+        focus: "37-41",
+      },
+      {
+        book: "Romans",
+        chapter: 3,
+        title: "Every mouth is silenced",
+        lookFor: "The law leaves every mouth shut — the groundwork the Spirit uses to lead us to Christ.",
+        focus: "19-26",
+      },
+    ],
+    points: [
+      {
+        heading: "Conviction is convincing, not just feeling bad",
+        body:
+          "Jesus said the Spirit 'will convict the world concerning sin, righteousness, and judgment.' To convict is to bring proof and persuade — the Spirit doesn't merely make people uncomfortable, He opens their eyes to the truth about God, themselves, and the gospel.",
+        verses: ["John 16:8"],
+      },
+      {
+        heading: "Concerning sin — because they do not believe in Jesus",
+        body:
+          "The sin the Spirit exposes first is not a list of behaviors but the root: 'because they do not believe in me.' Weeping over a broken marriage is one thing; being convinced that refusing Christ is the deepest wrong is the Spirit's work. He uses the gospel to name that sin.",
+        verses: ["John 16:9", "John 3:19-20"],
+      },
+      {
+        heading: "Concerning righteousness — because Jesus went to the Father",
+        body:
+          "Jesus went to the Father and the world saw Him no more — yet the Father vindicated Him by the resurrection and ascension. The Spirit convinces the world that Christ is the righteous One, and that His righteousness is what we need. The verdict on Jesus becomes the news we receive.",
+        verses: ["John 16:10", "Acts 2:32-33", "Romans 3:21-22"],
+      },
+      {
+        heading: "Concerning judgment — because the ruler of this world is judged",
+        body:
+          "Satan, the accuser, has been judged at the cross. The Spirit assures us that evil will not have the last word — that the powers behind the world's rebellion are already defeated. Judgment, promised and certain, is part of the good news that calls us to safety in Christ.",
+        verses: ["John 16:11", "John 12:31", "Colossians 2:15"],
+      },
+      {
+        heading: "Conviction leads to life, not despair",
+        body:
+          "When the crowd was 'cut to the heart' under the Spirit's conviction, Peter did not leave them in guilt — he called them to repent and be baptized, and to receive the gift of the Spirit. God's kindness leads to repentance. The Spirit who convicts is the same Spirit who gives the new birth.",
+        verses: ["Acts 2:37-38", "Romans 2:4"],
+      },
+    ],
+    keyVerses: ["John 16:8-11", "Acts 2:37-38", "John 3:19-20"],
+    raises: ["how-do-i-receive-the-holy-spirit"],
+    followsFrom: ["is-the-holy-spirit-god"],
+    related: ["who-is-the-holy-spirit"],
+    planned: ["What does it mean that the world hates Jesus?"],
+    order: 14,
+  },
+
+  {
+    slug: "what-are-spiritual-gifts",
+    question: "What are spiritual gifts, and how do they work?",
+    category: "holy-spirit",
+    summary:
+      "Spiritual gifts are abilities the Holy Spirit gives to every believer for building up the church and serving others — not for show. They are diverse, but all come from the one Spirit, and their whole purpose is to make Christ known and His people strong.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 12,
+        title: "Gifts in the body",
+        lookFor: "One Spirit, many gifts — each given for the common good.",
+      },
+      {
+        book: "Romans",
+        chapter: 12,
+        title: "Gifts as members of one body",
+        lookFor: "The Spirit's gifts listed as ways of serving the body.",
+        focus: "3-8",
+      },
+      {
+        book: "Ephesians",
+        chapter: 4,
+        title: "Gifts to equip the church",
+        lookFor: "The ascended Christ gives gifts so the body grows up into Him.",
+        focus: "7-16",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 13,
+        title: "The more excellent way",
+        lookFor: "All gifts are worthless without love — and love never fails.",
+      },
+    ],
+    points: [
+      {
+        heading: "Every believer has been given at least one",
+        body:
+          "'To each one is given the manifestation of the Spirit for the common good.' The Spirit apportions gifts 'to each one individually just as he wills.' No Christian is giftless — gifts are not for a spiritual elite, but for the whole body.",
+        verses: ["1 Corinthians 12:7", "1 Corinthians 12:11", "1 Peter 4:10"],
+      },
+      {
+        heading: "They are diverse — but there is one Spirit",
+        body:
+          "Paul lists 'varieties of gifts, but the same Spirit; and varieties of service, but the same Lord; and varieties of workings, but the same God who works all things in all.' The diversity is not a flaw to envy or despise — it is the beauty of a body made to need every member.",
+        verses: ["1 Corinthians 12:4-11"],
+      },
+      {
+        heading: "They build the church — they don't show off the church",
+        body:
+          "The purpose of every gift is edification: 'let all things be done for building up.' Gifts are given 'to equip the saints for the work of ministry, to build up the body of Christ.' A gift used for applause is a gift misused; a gift used for the good of others is a gift well used.",
+        verses: ["1 Corinthians 12:25-26", "1 Corinthians 14:26", "Ephesians 4:12"],
+      },
+      {
+        heading: "Love is greater than all gifts",
+        body:
+          "Paul can imagine tongues, prophecy, and mountain-moving faith — and call them nothing without love. Gifts are for this age; love never fails. The most impressive gift exercised without love does not resemble Christ at all. So we pursue gifts, but we pursue love most of all.",
+        verses: ["1 Corinthians 13:1-3", "1 Corinthians 13:13"],
+      },
+      {
+        heading: "The fruit is the goal of the gifts",
+        body:
+          "The Spirit's gifts build the church, and the Spirit's fruit in your character — love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control — shows Christ. 'Eagerly desire the greater gifts,' Paul says, and then shows the way that is still more excellent: love.",
+        verses: ["Galatians 5:22-23", "1 Corinthians 12:31", "Romans 12:6-8"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 12:4-7", "1 Corinthians 12:11", "1 Peter 4:10", "1 Corinthians 13:13"],
+    raises: [],
+    followsFrom: ["how-do-i-receive-the-holy-spirit"],
+    related: ["who-is-the-holy-spirit", "how-does-the-spirit-convict-the-world"],
+    planned: ["Are the 'sign' gifts still active today?", "How do I discover my gift?"],
+    order: 15,
+  },
+
+  {
+    slug: "why-did-jesus-call-himself-son-of-man",
+    question: "Why did Jesus call himself the Son of Man?",
+    category: "jesus-christ",
+    summary:
+      "'Son of Man' was Jesus' favorite title for Himself. It comes from Daniel 7, where 'one like a son of man' receives an everlasting kingdom from God. By using it, Jesus claimed to be that divine, reigning figure — while also owning His full humanity and His calling to suffer and serve.",
+    passages: [
+      {
+        book: "Daniel",
+        chapter: 7,
+        title: "One like a son of man",
+        lookFor: "The figure of Daniel's vision — given dominion, glory, and an everlasting kingdom.",
+        focus: "13-14",
+      },
+      {
+        book: "Mark",
+        chapter: 2,
+        title: "Authority to forgive sins",
+        lookFor: "Jesus answers 'who can forgive sins but God alone?' by describing the Son of Man.",
+        focus: "1-12",
+      },
+      {
+        book: "Hebrews",
+        chapter: 2,
+        title: "Truly one of us",
+        lookFor: "He was made like His brothers in every way — a Son of Man who shares our flesh.",
+        focus: "5-18",
+      },
+      {
+        book: "Mark",
+        chapter: 10,
+        title: "The Son of Man came to serve",
+        lookFor: "The title that spans glory and suffering — He came to give His life as a ransom.",
+        focus: "35-45",
+      },
+    ],
+    points: [
+      {
+        heading: "It comes from Daniel's vision of the One who rules",
+        body:
+          "Daniel saw 'one like a son of man' come with the clouds of heaven and receive dominion, glory, and a kingdom that will never be destroyed — words the Bible uses for God's own rule. Jesus took this title as His own, especially when speaking of His glory and return.",
+        verses: ["Daniel 7:13-14", "Matthew 26:64", "Revelation 1:13"],
+      },
+      {
+        heading: "It is a claim to divine authority and to be the Messiah",
+        body:
+          "When the scribes asked who could forgive sins but God alone, Jesus answered by asserting that 'the Son of Man has authority on earth to forgive sins' — claiming the divine prerogative. And the Father 'gave him authority to execute judgment, because he is a Son of Man.'",
+        verses: ["Mark 2:5-7", "Mark 2:10", "John 5:27"],
+      },
+      {
+        heading: "It owns His full humanity",
+        body:
+          "The Son of God did not merely appear human — He became human. He 'shared in flesh and blood' so that He could be 'made like his brothers in every way' and become a merciful High Priest. Calling Himself the Son of Man declares He is the true Man, our representative.",
+        verses: ["Hebrews 2:14-17", "Philippians 2:7-8"],
+      },
+      {
+        heading: "It spans both glory and suffering",
+        body:
+          "The same title reaches two directions: a glorious reigning figure in Daniel, and 'the Son of Man came not to be served, but to serve, and to give his life as a ransom for many' in the Gospels. Jesus is the Suffering Servant who becomes the reigning King.",
+        verses: ["Mark 10:45", "Luke 9:22", "Matthew 20:28"],
+      },
+      {
+        heading: "Why both titles matter",
+        body:
+          "As the Son of God He is fully God; as the Son of Man He is fully man — able to stand in our place, represent us, suffer for us, and one day judge us. He is the bridge our humanity needed: the divine Son who became man so that man could be reconciled to God.",
+        verses: ["Hebrews 2:17-18", "1 Timothy 2:5", "Romans 5:19"],
+      },
+    ],
+    keyVerses: ["Daniel 7:13-14", "Mark 2:10", "Mark 10:45", "Hebrews 2:17"],
+    raises: [],
+    followsFrom: ["who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god"],
+    related: ["what-does-it-mean-that-jesus-is-the-son-of-god"],
+    planned: ["Is the Son of Man title about judgment or mercy?"],
+    order: 16,
+  },
+
+  {
+    slug: "where-is-jesus-now",
+    question: "Where is Jesus now?",
+    category: "jesus-christ",
+    summary:
+      "After His resurrection, Jesus ascended into heaven and is seated at the right hand of God the Father — reigning, interceding for His people, preparing a place for them, and waiting to return. He is Lord of all right now.",
+    passages: [
+      {
+        book: "Acts",
+        chapter: 1,
+        title: "The ascension",
+        lookFor: "Taken up before their eyes — and promised to come again in the same way.",
+        focus: "1-11",
+      },
+      {
+        book: "Hebrews",
+        chapter: 7,
+        title: "He always lives to intercede",
+        lookFor: "Because He lives forever, His priesthood is permanent — He intercedes for His people.",
+        focus: "23-28",
+      },
+      {
+        book: "John",
+        chapter: 14,
+        title: "I go to prepare a place",
+        lookFor: "His departure is not abandonment — it is preparation for our arrival.",
+        focus: "1-6",
+      },
+      {
+        book: "1 Thessalonians",
+        chapter: 4,
+        title: "The Lord himself will descend",
+        lookFor: "Where He is and where He is going — He will return for His own.",
+        focus: "13-18",
+      },
+    ],
+    points: [
+      {
+        heading: "He ascended and is seated at God's right hand",
+        body:
+          "After His resurrection, Jesus was taken up into heaven, and Scripture places Him 'at the right hand of the Majesty on high.' The right hand is the place of honor, authority, and rule. He did not vanish into retirement — He was exalted to the throne.",
+        verses: ["Acts 1:9-11", "Hebrews 1:3", "Mark 16:19"],
+      },
+      {
+        heading: "He reigns as Lord now",
+        body:
+          "'He must reign until he has put all his enemies under his feet,' Peter preaching: 'God exalted him at his right hand… and made him both Lord and Christ.' Raised 'far above all rule and authority,' He is head over all things — for the benefit of His church.",
+        verses: ["1 Corinthians 15:25", "Acts 2:33", "Ephesians 1:20-23"],
+      },
+      {
+        heading: "He intercedes for His people",
+        body:
+          "'He is able to save to the uttermost those who draw near to God through him, since he always lives to make intercession for them.' The risen Christ is at the Father's right hand pleading for you — and He is our advocate when we sin.",
+        verses: ["Hebrews 7:25", "Romans 8:34", "1 John 2:1"],
+      },
+      {
+        heading: "He is preparing a place",
+        body:
+          "Jesus told His disciples not to be troubled: 'In my Father's house are many rooms. If it were not so, I would have told you. I go to prepare a place for you.' His absence from our sight is not His absence from our story — He is making ready for us.",
+        verses: ["John 14:2-3"],
+      },
+      {
+        heading: "He will return for His own",
+        body:
+          "The angels at the ascension promised: 'This Jesus, who was taken up from you into heaven, will come in like manner as you saw him going into heaven.' At His return the dead in Christ will rise and he will gather His people — and so we wait for Him with hope.",
+        verses: ["Acts 1:11", "1 Thessalonians 4:16-17", "Revelation 22:20"],
+      },
+    ],
+    keyVerses: ["Acts 1:9-11", "Hebrews 7:25", "John 14:2-3", "Romans 8:34"],
+    raises: [],
+    followsFrom: ["did-jesus-rise-from-the-dead"],
+    related: ["what-happens-when-i-sin", "how-can-i-be-saved"],
+    planned: ["Will Jesus return literally and visibly?"],
+    order: 17,
+  },
+
+  {
+    slug: "what-should-i-do-now-that-im-saved",
+    question: "What should I do now that I'm saved?",
+    category: "our-walk",
+    summary:
+      "Now that you belong to Christ, the life of faith begins: follow Him, abide in Him, be changed into His likeness, love His people, bear witness to His grace, and grow in the knowledge of Christ. Not to earn salvation — because of it.",
+    passages: [
+      {
+        book: "John",
+        chapter: 15,
+        title: "Abide in the vine",
+        lookFor: "The secret of the whole Christian life — remaining in Christ so His life flows through you.",
+        focus: "1-8",
+      },
+      {
+        book: "Colossians",
+        chapter: 3,
+        title: "Put on the new self",
+        lookFor: "Seek the things above; put on compassion, kindness, humility, love.",
+        focus: "1-14",
+      },
+      {
+        book: "Matthew",
+        chapter: 28,
+        title: "Make disciples",
+        lookFor: "The risen King sends His people out — and promises to be with them always.",
+        focus: "16-20",
+      },
+      {
+        book: "John",
+        chapter: 13,
+        title: "Love one another",
+        lookFor: "The mark of discipleship — love that mirrors His.",
+        focus: "34-35",
+      },
+    ],
+    points: [
+      {
+        heading: "Follow Jesus — daily",
+        body:
+          "Following is not a one-time decision but the shape of a whole life: 'If anyone wants to come after me, let him deny himself, take up his cross, and follow me.' His sheep 'hear his voice… and they follow him.' It is a walk, not a moment.",
+        verses: ["Luke 9:23", "John 10:27", "Matthew 16:24"],
+      },
+      {
+        heading: "Abide in Him",
+        body:
+          "Jesus is the vine and we are the branches: 'Remain in me, and I in you… apart from me you can do nothing.' Abiding means staying connected to Christ — through His word, prayer, and obedience — so that His life flows through us and we bear fruit that remains.",
+        verses: ["John 15:4-5", "John 15:7-8"],
+      },
+      {
+        heading: "Be changed into His likeness",
+        body:
+          "The Spirit transforms us 'into the same image, from glory to glory.' In the gospel we are being renewed by the Spirit to reflect Christ — putting on compassion, kindness, humility, gentleness, and love, and being transformed by the renewing of our minds.",
+        verses: ["2 Corinthians 3:18", "Colossians 3:12-14", "Romans 12:2"],
+      },
+      {
+        heading: "Love His people",
+        body:
+          "Jesus gave us a new command: 'love one another, just as I have loved you' — and said that by this, everyone will know we are His disciples. We are not meant to walk alone. We gather, we encourage, we carry one another's burdens, and we do not forsake the assembly.",
+        verses: ["John 13:34-35", "Hebrews 10:24-25", "Galatians 6:2"],
+      },
+      {
+        heading: "Bear witness and grow",
+        body:
+          "The risen Christ sends us: 'Go, and make disciples of all nations.' And He tells us to 'grow in the grace and knowledge of our Lord and Savior Jesus Christ.' Saved people tell others about the Savior, and they keep growing in Him — all the way home.",
+        verses: ["Matthew 28:19-20", "2 Peter 3:18", "Acts 1:8"],
+      },
+    ],
+    keyVerses: ["John 15:4-5", "Luke 9:23", "Colossians 3:12-14", "2 Peter 3:18"],
+    raises: ["how-do-i-fight-sin"],
+    followsFrom: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
+    related: ["who-is-the-holy-spirit", "how-do-i-receive-the-holy-spirit"],
+    planned: ["How do I read the Bible and pray?"],
+    order: 18,
+  },
+
+  {
+    slug: "how-do-i-fight-sin",
+    question: "How do I fight sin in my life?",
+    category: "our-walk",
+    summary:
+      "You fight sin not by grit alone, but by reckoning yourself dead to sin and alive to God in Christ, and by walking in the Spirit. It is a battle of faith — winnable not because you are strong, but because He is.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 6,
+        title: "Dead to sin, alive to God",
+        lookFor: "The identity underneath the battle — reckon yourselves dead to sin and alive to God.",
+        focus: "1-14",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "By the Spirit, put to death",
+        lookFor: "The Spirit is the power — we fight in step with Him.",
+        focus: "5-14",
+      },
+      {
+        book: "Galatians",
+        chapter: 5,
+        title: "Walk by the Spirit",
+        lookFor: "Walk by the Spirit and you will not gratify the desires of the flesh.",
+        focus: "16-26",
+      },
+      {
+        book: "Colossians",
+        chapter: 3,
+        title: "Put to death what is earthly",
+        lookFor: "Fight specific sins specifically — put off, and put on.",
+        focus: "1-10",
+      },
+    ],
+    points: [
+      {
+        heading: "Fight from the identity Christ gave you",
+        body:
+          "Our 'old self' was crucified with Christ so that we would no longer be slaves to sin. Paul tells us to 'reckon yourselves to be dead to sin, but alive to God in Christ Jesus' and not to let sin reign. The battle begins with who He has made you — a freed person, not a slave.",
+        verses: ["Romans 6:6", "Romans 6:11-14"],
+      },
+      {
+        heading: "Walk in the Spirit — don't grind in the flesh",
+        body:
+          "'Walk by the Spirit, and you will not fulfill the lust of the flesh.' By the Spirit we 'put to death the deeds of the body.' The battle is not sheer willpower but dependence — the Spirit produces love, joy, peace, and self-control as we stay in step with Him.",
+        verses: ["Galatians 5:16-17", "Romans 8:13", "Galatians 5:22-23"],
+      },
+      {
+        heading: "Put to death — specifically",
+        body:
+          "Paul is practical: 'Put to death therefore your members which are on the earth' — and name them. 'Put off' anger, wrath, and malice; 'put on' Christ and make no provision for the flesh. Vague dislike of sin changes nothing; a specific fight, by the Spirit, does.",
+        verses: ["Colossians 3:5", "Colossians 3:8", "Romans 13:14"],
+      },
+      {
+        heading: "It's grace-driven, not a self-help project",
+        body:
+          "We come 'boldly to the throne of grace, that we may receive mercy and find grace to help in time of need.' Where we are weak, His grace is sufficient — and He provides a way of escape in every temptation. The fight is fought in His strength, not ours.",
+        verses: ["Hebrews 4:16", "2 Corinthians 12:9", "1 Corinthians 10:13"],
+      },
+      {
+        heading: "Don't fight alone",
+        body:
+          "Jesus told His disciples to 'watch and pray, that you may not enter into temptation.' We confess our struggles to one another, bear one another's burdens, and stay sober and watchful against the enemy. Victory grows where a brother or sister fights beside us.",
+        verses: ["Matthew 26:41", "James 5:16", "Galatians 6:1-2", "1 Peter 5:8-9"],
+      },
+    ],
+    keyVerses: ["Romans 6:11-14", "Galatians 5:16", "Colossians 3:5", "Hebrews 4:16"],
+    raises: [],
+    followsFrom: ["what-happens-when-i-sin", "what-should-i-do-now-that-im-saved"],
+    related: ["what-happens-when-i-sin"],
+    planned: ["What is the flesh versus the Spirit?", "Where does temptation come from?"],
+    order: 19,
   },
 ];

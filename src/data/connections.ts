@@ -148,6 +148,45 @@ export const connections: Record<string, Connection[]> = {
     c("1 Corinthians 6:14", "theme", "The Spirit who raised Jesus will also raise us — resurrection is His work."),
     c("Ezekiel 37:5-6", "pattern", "The Spirit gives life to dry bones — the same Spirit who will raise our mortal bodies."),
   ],
+
+  // ------------------------------------------------------------------
+  // The Spirit's work + the walk (new questions)
+  // ------------------------------------------------------------------
+  "John 16:11": [
+    c("Colossians 2:15", "fulfilled", "The cross disarmed the rulers and authorities — the prince of this world is judged."),
+    c("John 12:31", "theme", "'Now the ruler of this world will be cast out' — Jesus said at the cross."),
+  ],
+  "Daniel 7:13-14": [
+    c("Mark 14:62", "fulfilled", "At His trial Jesus answers the high priest: 'You will see the Son of Man sitting at the right hand of power, coming with the clouds' — Daniel's vision, claimed by Christ."),
+    c("Revelation 1:13", "theme", "John sees 'one like a son of man' among the lampstands — the risen Jesus bearing Daniel's title."),
+    c("Matthew 26:64", "fulfilled", "Jesus applies Daniel's 'Son of Man' to Himself before the Sanhedrin."),
+  ],
+  "John 15:5": [
+    c("Colossians 1:27", "theme", "'Christ in you' — the union that makes fruitfulness possible."),
+    c("Galatians 2:20", "theme", "'It is no longer I who live, but Christ who lives in me' — the branch-life he describes."),
+  ],
+  "2 Corinthians 3:18": [
+    c("2 Corinthians 4:6", "theme", "The glory of God shining in the face of Christ — the glory we are being changed into."),
+    c("Romans 12:2", "theme", "Transformed by the renewing of the mind — the Spirit's ongoing work."),
+    c("1 John 3:2", "promise", "When He appears we will be like Him — the transformation's glorious destination."),
+  ],
+  "Galatians 5:16": [
+    c("Romans 8:5-8", "theme", "Those who live according to the flesh vs. those who live according to the Spirit."),
+    c("Colossians 3:1-2", "theme", "Set your minds on things above — the bent of the Spirit-led life."),
+  ],
+  "Romans 6:11": [
+    c("Galatians 2:20", "theme", "Crucified with Christ, and yet alive — He lives in me."),
+    c("Colossians 3:3", "theme", "You died, and your life is hidden with Christ in God."),
+  ],
+  "Hebrews 7:25": [
+    c("Romans 8:34", "parallel", "Christ at the right hand of God is interceding for us."),
+    c("Hebrews 4:16", "theme", "Because He ever lives to intercede, we come boldly for grace."),
+    c("1 John 2:1", "theme", "We have an advocate with the Father, Jesus Christ the righteous."),
+  ],
+  "John 14:2-3": [
+    c("Revelation 21:1-4", "promise", "A new heaven and a new earth — God dwelling with His people, the place He prepared."),
+    c("Hebrews 11:16", "promise", "He has prepared a city for them — a better, heavenly country."),
+  ],
 };
 
 /** Connections leaving from a verse reference. */
