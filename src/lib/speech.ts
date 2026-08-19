@@ -1,7 +1,12 @@
 "use client";
 
 /**
- * Glory speech engine: text-to-speech over the Web Speech API.
+ * Glory speech engine: text-to-speech with two sinks.
+ *
+ *  - Native: the Web Speech API (device voices, works offline).
+ *  - Files: pre-generated sample files (see audioFiles.ts) when a catalog
+ *    is configured via NEXT_PUBLIC_AUDIO_ROOT, with per-chunk fallback to
+ *    native when a file is missing.
  *
  * The queue is spoken one chunk at a time (a verse, or a sentence-sized
  * piece of a long verse). Chunking:
@@ -19,6 +24,16 @@
  * so importing the data layer here would drag the whole vendored Bible into
  * every page load.
  */
+
+import {
+  audioDurationSeconds,
+  audioEnabled,
+  audioUrlFor,
+  playAudioFile,
+  prefetchAudio,
+  resetAudioDuration,
+  stopAudio,
+} from "./audioFiles";
 
 export interface SpeechItem {
   /** stable id, e.g. "John 3:16", or "John 3:16|2" for a chunk of a long verse */
@@ -110,6 +125,10 @@ const INITIAL: SpeechState = {
 let state: SpeechState = INITIAL;
 let session = 0;
 let voiceLoadStarted = false;
+/** Consecutive file-sink misses; a queue gives up on files after a couple. */
+let audioMisses = 0;
+/** Cancels the watchdog of the chunk currently being played, if armed. */
+let currentWatch: (() => void) | null = null;
 const listeners = new Set<() => void>();
 
 function notify() {
@@ -228,13 +247,34 @@ function advance(sess: number) {
   if (sess !== session) return;
   const next = state.index + 1;
   if (next < state.queue.length) {
-    speakAt(next, sess);
+    playChunkAt(next, sess);
   } else {
     stopInternal();
   }
 }
 
-function speakAt(i: number, sess: number) {
+/**
+ * Pick the sink for a chunk: pre-generated files when available, otherwise
+ * the native Web Speech API. `audioMisses` stops a queue from retrying the
+ * network after the first couple of misses (e.g. the catalog is not
+ * generated yet), while still falling back per chunk when files appear
+ * progressively.
+ */
+function playChunkAt(i: number, sess: number) {
+  const item = state.queue[i];
+  if (!item) return;
+  currentWatch?.();
+  currentWatch = null;
+  resetAudioDuration();
+  commit({ ...state, status: "playing", index: i });
+  if (audioEnabled() && audioMisses < 2) {
+    playFileAt(i, sess);
+  } else {
+    speakNativeAt(i, sess);
+  }
+}
+
+function speakNativeAt(i: number, sess: number) {
   const s = synth();
   const item = state.queue[i];
   if (!s || !item) return;
@@ -243,44 +283,123 @@ function speakAt(i: number, sess: number) {
   const v = voiceFor(state.voiceURI);
   if (v) u.voice = v;
   u.onend = () => {
-    if (sess !== session) return;
+    if (sess !== session || state.index !== i) return;
+    currentWatch = null;
     advance(sess);
   };
   u.onerror = (e) => {
-    if (sess !== session) return;
+    if (sess !== session || state.index !== i) return;
     if (e.error === "interrupted" || e.error === "canceled") return;
+    currentWatch = null;
     advance(sess);
   };
   s.speak(u);
-  commit({ ...state, status: "playing", index: i });
-  // Watchdog: if the engine never fires onend (a browser cutoff, or an iOS
-  // stall after a lock/cancel), move on so the queue never silently dies.
-  const est = Math.max(14000, item.text.length * 100);
-  window.setTimeout(() => {
-    if (sess !== session) return;
+  currentWatch = watchChunk(i, sess);
+}
+
+function playFileAt(i: number, sess: number) {
+  const item = state.queue[i];
+  if (!item) return;
+  const url = audioUrlFor(item);
+  if (!url) {
+    speakNativeAt(i, sess);
+    return;
+  }
+  currentWatch = watchChunk(i, sess);
+  playAudioFile(
+    url,
+    state.rate,
+    () => {
+      if (sess !== session || state.index !== i) return;
+      audioMisses = 0;
+      currentWatch = null;
+      advance(sess);
+    },
+    () => {
+      if (sess !== session || state.index !== i) return;
+      audioMisses++;
+      // Drop this chunk's watchdog before falling back: it is anchored at
+      // the file attempt's start and would otherwise advance mid-phrase.
+      currentWatch = null;
+      speakNativeAt(i, sess);
+    }
+  );
+  prefetchNext();
+}
+
+/** Warm the cache for the chunk after the current one. */
+function prefetchNext() {
+  const next = state.queue[state.index + 1];
+  if (!next) return;
+  const url = audioUrlFor(next);
+  if (url) prefetchAudio(url);
+}
+
+/**
+ * Safety net: if the engine never signals completion (browser cutoff, iOS
+ * stall, stalled network stream), move on so the queue never silently dies.
+ * Uses the real file duration once known, the text estimate otherwise.
+ * Returns a function that cancels the watchdog (used when the chunk is
+ * restarted through a different sink on the same index).
+ */
+function watchChunk(i: number, sess: number): () => void {
+  let cancelled = false;
+  const item = state.queue[i];
+  const fallbackMs = Math.max(14000, (item?.text.length ?? 0) * 100);
+  const startedAt = Date.now();
+  let deadline = startedAt + fallbackMs;
+  let timer: number;
+
+  const tick = () => {
+    if (cancelled || sess !== session) return;
     if (state.status !== "playing" || state.index !== i) return;
+    const dur = audioDurationSeconds();
+    if (dur !== null) {
+      // File audio: metadata gives the true run length; wait it out.
+      deadline = startedAt + dur * 1000 + 2000;
+    }
+    const remaining = deadline - Date.now();
+    if (remaining > 0) {
+      timer = window.setTimeout(tick, Math.min(2000, remaining + 60));
+      return;
+    }
     advance(sess);
-  }, est);
+  };
+  timer = window.setTimeout(tick, 2000);
+  return () => {
+    cancelled = true;
+    window.clearTimeout(timer);
+  };
+}
+
+/** Cancel whatever the engines are doing: native utterances and audio files. */
+function stopEngines() {
+  synth()?.cancel();
+  stopAudio();
 }
 
 /** Chrome can drop an utterance spoken immediately after cancel(); defer it. */
 function speakAfterCancel(i: number, sess: number) {
   window.setTimeout(() => {
     if (sess !== session) return;
-    speakAt(i, sess);
+    playChunkAt(i, sess);
   }, 60);
 }
 
 function restartCurrent() {
   if (state.queue.length === 0 || state.status !== "playing") return;
   session++;
-  synth()?.cancel();
+  stopEngines();
+  currentWatch?.();
+  currentWatch = null;
   speakAfterCancel(state.index, session);
 }
 
 function stopInternal() {
   session++;
-  synth()?.cancel();
+  stopEngines();
+  currentWatch?.();
+  currentWatch = null;
   commit({ ...state, status: "idle", sourceId: null, queue: [], index: 0 });
 }
 
@@ -293,23 +412,26 @@ export function playPassage(sourceId: string, items: SpeechItem[]) {
   // may only just have become visible to the engine.
   refreshVoices();
   const wasActive = state.status !== "idle";
+  audioMisses = 0;
   session++;
-  if (wasActive) s.cancel();
+  if (wasActive) stopEngines();
   commit({ ...state, status: "playing", sourceId, queue: items, index: 0 });
   if (wasActive) speakAfterCancel(0, session);
-  else speakAt(0, session);
+  else playChunkAt(0, session);
 }
 
 export function pause() {
   if (state.status !== "playing") return;
   session++;
-  synth()?.cancel();
+  stopEngines();
+  currentWatch?.();
+  currentWatch = null;
   commit({ ...state, status: "paused" });
 }
 
 export function resume() {
   if (state.status !== "paused" || !state.queue.length) return;
-  speakAt(state.index, session);
+  playChunkAt(state.index, session);
 }
 
 export function stop() {
@@ -321,9 +443,9 @@ export function seek(i: number) {
   const clamped = Math.max(0, Math.min(state.queue.length - 1, i));
   const wasPlaying = state.status === "playing";
   session++;
-  if (wasPlaying) synth()?.cancel();
+  if (wasPlaying) stopEngines();
   if (wasPlaying) speakAfterCancel(clamped, session);
-  else speakAt(clamped, session);
+  else playChunkAt(clamped, session);
 }
 
 export function nextItem() {
