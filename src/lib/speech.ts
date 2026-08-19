@@ -65,7 +65,16 @@ const CHUNK_MAX = 160;
 
 /** Voices known to read Scripture well; the first one on the device wins. */
 const PREFERRED_VOICES = [
-  // iOS 17+ natural English voices (most pleasant on iPhone/iPad)
+  // iOS 17.4+ "Premium" downloads (most natural on iPhone/iPad)
+  "Zoe Premium",
+  "Allison Premium",
+  "Ava Premium",
+  "Aaron Premium",
+  "Fred Premium",
+  "Nicky Premium",
+  "Susan Premium",
+  "Samantha Premium",
+  // iOS 17+ natural voices (non-premium fallbacks)
   "Aaron",
   "Allison",
   "Ava",
@@ -158,12 +167,44 @@ function collectVoices(): VoiceInfo[] {
   return s.getVoices().map((v) => ({ uri: v.voiceURI, name: v.name, lang: v.lang }));
 }
 
+/** Compare voice names loosely (case, spaces, and parentheses ignored). */
+function norm(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
 function pickVoice(voices: VoiceInfo[]): string | null {
   if (!voices.length) return null;
-  const hit = voices.find((v) => PREFERRED_VOICES.includes(v.name));
-  if (hit) return hit.uri;
+  const exact = voices.find((v) => PREFERRED_VOICES.includes(v.name));
+  if (exact) return exact.uri;
+  // lenient match, e.g. "Zoe (Premium)" vs our "Zoe Premium"
+  const lenient = voices.find((v) =>
+    PREFERRED_VOICES.some((p) => norm(p) === norm(v.name))
+  );
+  if (lenient) return lenient.uri;
   const en = voices.filter((v) => v.lang.toLowerCase().startsWith("en"));
   return (en[0] ?? voices[0]).uri;
+}
+
+/**
+ * Re-read the device voice list and merge any changes into state. Safe to
+ * call any time (e.g. after the user downloads a new voice in iOS Settings)
+ * and while playback is active.
+ */
+export function refreshVoices() {
+  const s = synth();
+  if (!s) return;
+  const voices = collectVoices();
+  const prefs = readPrefs();
+  const next: Partial<SpeechState> = {};
+  if (voices.length) next.voices = voices;
+  if (typeof prefs.rate === "number") next.rate = prefs.rate;
+  if (prefs.voiceURI && voices.some((v) => v.uri === prefs.voiceURI)) {
+    next.voiceURI = prefs.voiceURI;
+  } else if (voices.length && !state.voiceURI) {
+    next.voiceURI = pickVoice(voices);
+  }
+  state = { ...state, ...next };
+  notify();
 }
 
 /** Start loading device voices (they arrive asynchronously). Idempotent. */
@@ -171,22 +212,8 @@ export function ensureVoices() {
   const s = synth();
   if (!s || voiceLoadStarted) return;
   voiceLoadStarted = true;
-  const refresh = () => {
-    const voices = collectVoices();
-    const prefs = readPrefs();
-    const next: Partial<SpeechState> = {};
-    if (voices.length) next.voices = voices;
-    if (typeof prefs.rate === "number") next.rate = prefs.rate;
-    if (prefs.voiceURI && voices.some((v) => v.uri === prefs.voiceURI)) {
-      next.voiceURI = prefs.voiceURI;
-    } else if (voices.length && !state.voiceURI) {
-      next.voiceURI = pickVoice(voices);
-    }
-    state = { ...state, ...next };
-    notify();
-  };
-  s.addEventListener("voiceschanged", refresh);
-  refresh();
+  s.addEventListener("voiceschanged", refreshVoices);
+  refreshVoices();
 }
 
 // ---- playback -------------------------------------------------------------
@@ -262,6 +289,9 @@ function stopInternal() {
 export function playPassage(sourceId: string, items: SpeechItem[]) {
   const s = synth();
   if (!s || !items.length) return;
+  // Re-read the voice list first: a voice downloaded while the app was open
+  // may only just have become visible to the engine.
+  refreshVoices();
   const wasActive = state.status !== "idle";
   session++;
   if (wasActive) s.cancel();

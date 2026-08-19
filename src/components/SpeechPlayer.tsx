@@ -11,12 +11,20 @@ import {
   nextItem,
   pause,
   prevItem,
+  refreshVoices,
   resume,
   setVoice,
   stop,
   subscribe,
 } from "@/lib/speech";
-import { NextIcon, PauseIcon, PlayIcon, PrevIcon, StopIcon } from "@/components/speech-icons";
+import {
+  NextIcon,
+  PauseIcon,
+  PlayIcon,
+  PrevIcon,
+  RefreshIcon,
+  StopIcon,
+} from "@/components/speech-icons";
 
 /**
  * The global player bar, mounted in the root layout. It stays mounted across
@@ -85,6 +93,15 @@ export default function SpeechPlayer() {
               <span className="shrink-0 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-ink-faint">
                 Voice
               </span>
+              <button
+                type="button"
+                onClick={refreshVoices}
+                aria-label="Refresh voice list"
+                title="Refresh voice list (new downloads appear here)"
+                className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-ink-faint transition-colors hover:bg-cream hover:text-gold-deep"
+              >
+                <RefreshIcon />
+              </button>
               <select
                 value={speech.voiceURI ?? ""}
                 onChange={(e) => setVoice(e.target.value)}
