@@ -326,12 +326,15 @@ function playFileAt(i: number, sess: number) {
   prefetchNext();
 }
 
-/** Warm the cache for the chunk after the current one. */
+/** Fetch the next two chunks into memory so transitions stay gapless. */
 function prefetchNext() {
-  const next = state.queue[state.index + 1];
-  if (!next) return;
-  const url = audioUrlFor(next);
-  if (url) prefetchAudio(url);
+  const queue = state.queue;
+  for (let k = 1; k <= 2; k++) {
+    const next = queue[state.index + k];
+    if (!next) break;
+    const url = audioUrlFor(next);
+    if (url) prefetchAudio(url);
+  }
 }
 
 /**

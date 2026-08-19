@@ -45,12 +45,11 @@ export function audioUrlFor(item: SpeechItem): string | null {
 
 // ---- a single shared <audio> element --------------------------------------
 // One player element keeps iOS satisfied (start once from the user's tap,
-// then re-src it per chunk), and one prefetcher warms the cache so chunk
-// transitions stay gapless. Neither is created when the sink is disabled.
+// then re-src it per chunk). Forward chunks are fully fetched into a memory
+// Blob so transitions are gapless (no just-in-time network fetch). Elements
+// are not created when the sink is disabled.
 
 const player =
-  audioEnabled() && typeof Audio !== "undefined" ? new Audio() : null;
-const prefetcher =
   audioEnabled() && typeof Audio !== "undefined" ? new Audio() : null;
 if (player) {
   player.preload = "auto";
@@ -60,7 +59,6 @@ if (player) {
     /* older engines */
   }
 }
-if (prefetcher) prefetcher.preload = "auto";
 
 let playToken = 0;
 let timeoutTimer: number | undefined;
@@ -68,6 +66,30 @@ let endCb: (() => void) | null = null;
 let errCb: (() => void) | null = null;
 /** Duration in seconds of the current src, once known (for the watchdog). */
 let loadedDuration: number | null = null;
+/** url -> object URL for chunks already fully fetched into memory. */
+const blobCache = new Map<string, string>();
+
+/** Fully fetch a chunk and cache it as an in-memory Blob (gapless). */
+async function cacheBlob(url: string): Promise<string | null> {
+  const cached = blobCache.get(url);
+  if (cached) return cached;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const buf = await res.arrayBuffer();
+    const objectUrl = URL.createObjectURL(new Blob([buf], { type: "audio/x-m4a" }));
+    blobCache.set(url, objectUrl);
+    return objectUrl;
+  } catch {
+    // CORS not configured or offline: leave un-cached and play the URL directly.
+    return null;
+  }
+}
+
+/** Object URL when available, otherwise the plain URL. */
+function sourceFor(url: string): string {
+  return blobCache.get(url) ?? url;
+}
 
 function clearTimers() {
   if (timeoutTimer !== undefined) window.clearTimeout(timeoutTimer);
@@ -121,7 +143,9 @@ export function playAudioFile(
     { once: true }
   );
 
-  player.src = url;
+  // Play from the in-memory Blob when the chunk was prefetched, for gapless
+  // transitions; otherwise the plain URL (fetched just in time).
+  player.src = sourceFor(url);
   player.load();
   try {
     player.playbackRate = rate;
@@ -150,6 +174,14 @@ export function playAudioFile(
 export function stopAudio() {
   playToken++;
   clearTimers();
+  for (const objectUrl of blobCache.values()) {
+    try {
+      URL.revokeObjectURL(objectUrl);
+    } catch {
+      /* noop */
+    }
+  }
+  blobCache.clear();
   if (!player) return;
   player.removeEventListener("ended", handleEnded);
   player.removeEventListener("error", handleError);
@@ -171,13 +203,7 @@ export function resetAudioDuration() {
   loadedDuration = null;
 }
 
-/** Warm the cache for a coming chunk so transitions stay gapless. */
+/** Fully fetch a coming chunk into memory so transitions stay gapless. */
 export function prefetchAudio(url: string) {
-  if (!prefetcher) return;
-  try {
-    prefetcher.src = url;
-    prefetcher.load();
-  } catch {
-    /* noop */
-  }
+  void cacheBlob(url);
 }
