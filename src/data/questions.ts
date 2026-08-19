@@ -2837,10 +2837,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 1:26-27", "Psalm 8:5-6", "Colossians 3:10", "2 Corinthians 3:18"],
-    raises: ["what-is-sin"],
+    raises: ["what-is-sin", "made-for-relationship"],
     followsFrom: [],
     related: ["who-is-the-father"],
-    planned: ["What does it mean that we were made for relationship?"],
+    planned: ["Why does every human life have dignity and worth?"],
     order: 44,
   },
 
@@ -5649,5 +5649,91 @@ export const questions: Question[] = [
     related: ["what-is-the-new-heaven-and-new-earth", "what-happens-when-i-die", "where-is-jesus-now", "why-does-god-allow-suffering"],
     planned: ["What does the Bible mean by 'God all in all'?"],
     order: 45,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Who We Are (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "made-for-relationship",
+    question: "What does it mean that we were made for relationship?",
+    category: "who-we-are",
+    summary:
+      "We were not made to be alone. We bear the image of a God who is love and who lives in relationship, and He made us for relationship: with Himself and with one another. Scripture moves from 'it is not good for man to be alone' to the gospel, in which we are brought into the very fellowship of God and called to love one another. Our deepest loneliness is healed in belonging to God through Christ and to His people.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 1,
+        title: "Made in the image of a relational God",
+        lookFor: "'Let us make man in our image...' and 'male and female he created them': we are made in the image of a God who is relationship.",
+        focus: "26-31",
+      },
+      {
+        book: "Genesis",
+        chapter: 2,
+        title: "It is not good for man to be alone",
+        lookFor: "The very first thing God calls 'not good' is isolation; He makes a helper, and the two become one flesh.",
+        focus: "18-25",
+      },
+      {
+        book: "Mark",
+        chapter: 3,
+        title: "Appointed to be with Him",
+        lookFor: "Jesus appointed the twelve first of all 'that they might be with him': discipleship begins in a company, not in isolation.",
+        focus: "13-19",
+      },
+      {
+        book: "John",
+        chapter: 15,
+        title: "Friends and vines",
+        lookFor: "Jesus calls His disciples friends and abides in them, telling them to love one another as He has loved them.",
+        focus: "9-17",
+      },
+      {
+        book: "1 John",
+        chapter: 1,
+        title: "Fellowship with the Father and the Son",
+        lookFor: "The gospel is fellowship: what the apostles saw and heard, they declare so that we share in fellowship with the Father and the Son.",
+        focus: "1-4",
+      },
+    ],
+    points: [
+      {
+        heading: "We bear the image of a God who is love",
+        body:
+          "'Let us make man in our image,' God said, and He created them male and female in His image. We are made like a God who is love and who, before the foundation of the world, lived in the love of Father and Son. To be made in His image is to be made for love and for relationship: the capacity for communion is not an add-on to being human; it is what being human is for.",
+        verses: ["Genesis 1:26", "Genesis 1:27", "1 John 4:8", "John 17:24"],
+      },
+      {
+        heading: "'It is not good for man to be alone'",
+        body:
+          "The first thing God pronounced 'not good' in all of creation was solitude: 'It is not good for the man to be alone. I will make him a helper comparable to him.' And so woman was made, and the two, leaving father and mother, become one flesh. The wise man agreed that two are better than one, and that a threefold cord is not quickly broken. From the very beginning, we are created for companionship, first in marriage and by extension in the family of humanity and the family of God.",
+        verses: ["Genesis 2:18", "Genesis 2:24", "Ecclesiastes 4:9", "Ecclesiastes 4:12"],
+      },
+      {
+        heading: "Jesus chose us for companionship",
+        body:
+          "Mark records that Jesus 'appointed twelve, that they might be with him.' Before He sent them out, He called them in. And He told His disciples, 'No longer do I call you servants... But I have called you friends,' and He commanded them to love one another as He loved them. Following Christ is not a solitary ascent; it is life in His company and in His family.",
+        verses: ["Mark 3:14", "John 15:15", "John 13:34-35"],
+      },
+      {
+        heading: "The gospel is fellowship with God",
+        body:
+          "John declares what he saw and heard 'that you also may have fellowship with us. Yes, and our fellowship is with the Father, and with his Son, Jesus Christ.' This is the heart of the gospel: not only forgiveness, but communion. Jesus says that those who love Him will be loved by the Father, and that He and the Father will come and make their home with them. We love, because He first loved us: our capacity for love is our maker's gift, and He has acted in Christ to give us the relationship we were made for.",
+        verses: ["1 John 1:3", "John 14:23", "1 John 4:19"],
+      },
+      {
+        heading: "And into the family of God",
+        body:
+          "Because we are made for relationship, God does not save us into isolation but into a household. We are 'fellow citizens with the saints, and of the household of God,' and John writes that as many as received Christ were given the right to become children of God. The end of it all is a wedding: the marriage of the Lamb has come and His bride has made herself ready, and 'blessed are those who are invited to the marriage supper of the Lamb.' We were made for love, and God has been working from the first page to the last to bring us home to it.",
+        verses: ["Ephesians 2:19", "John 1:12-13", "Revelation 19:7", "Revelation 19:9"],
+      },
+    ],
+    keyVerses: ["Genesis 1:27", "Genesis 2:18", "John 15:15", "1 John 1:3", "Ephesians 2:19"],
+    raises: ["why-do-i-need-the-church", "who-is-the-father", "what-is-the-lords-supper"],
+    followsFrom: ["what-does-it-mean-to-be-made-in-gods-image", "who-is-jesus"],
+    related: ["what-does-it-mean-to-be-made-in-gods-image", "who-is-the-father", "why-do-i-need-the-church", "what-is-the-new-heaven-and-new-earth"],
+    planned: ["Why do I still feel lonely?"],
+    order: 47,
   },
 ];
