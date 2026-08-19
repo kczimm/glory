@@ -78,10 +78,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 14:16-17", "John 16:13-14", "Romans 8:9", "1 Corinthians 6:19", "Galatians 5:22-23"],
-    raises: ["is-the-holy-spirit-god", "how-do-i-receive-the-holy-spirit"],
+    raises: ["is-the-holy-spirit-god", "how-do-i-receive-the-holy-spirit", "why-jesus-calls-the-spirit-another-helper"],
     followsFrom: [],
     related: ["who-is-jesus"],
-    planned: ["Why does Jesus call the Spirit 'another Helper'?"],
+    planned: ["Why did the Spirit wait until Pentecost?"],
     order: 1,
   },
 
@@ -3055,5 +3055,84 @@ export const questions: Question[] = [
     related: ["how-do-i-fight-sin", "who-is-satan"],
     planned: ["How do I pray against the enemy without fearing him?"],
     order: 49,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Holy Spirit (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "why-jesus-calls-the-spirit-another-helper",
+    question: "Why does Jesus call the Spirit 'another Helper'?",
+    category: "holy-spirit",
+    summary:
+      "Jesus calls the Spirit 'another Helper' to tell us two things at once: the Spirit is a Person, not a force, and He is a Helper of the same kind as Jesus Himself. He is Jesus' continuing presence with His people: the One who teaches, testifies, and stays with us forever.",
+    passages: [
+      {
+        book: "John",
+        chapter: 14,
+        title: "Another Helper is promised",
+        lookFor: "Jesus promises 'another Counselor': a Person who will be with His disciples forever.",
+        focus: "15-31",
+      },
+      {
+        book: "John",
+        chapter: 15,
+        title: "The Helper from the Father",
+        lookFor: "Jesus explains what the Helper does: He testifies about Jesus, alongside the disciples.",
+        focus: "18-27",
+      },
+      {
+        book: "Acts",
+        chapter: 1,
+        title: "Wait for the promise of the Father",
+        lookFor: "Jesus tells them to wait in Jerusalem for the promise: they will be baptized with the Holy Spirit.",
+        focus: "1-11",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "The Helper comes at Pentecost",
+        lookFor: "The promised Helper arrives, and Peter explains that the promise is now open to everyone who repents.",
+        focus: "1-21",
+      },
+    ],
+    points: [
+      {
+        heading: "'Another' means of the same kind",
+        body:
+          "In the upper room, Jesus promised 'another Counselor': the Greek word is the one used for another of the same sort, not a different or lesser one. The Spirit is exactly what Jesus had been to His disciples: Teacher, Friend, and constant Presence. He is not a substitute for Jesus; He is Jesus' own gift of Himself.",
+        verses: ["John 14:16", "John 14:26"],
+      },
+      {
+        heading: "The Helper is a Person, not an influence",
+        body:
+          "The Helper speaks, teaches, reminds, testifies, guides, and hears. Peter even charges Ananias with lying to the Holy Spirit, which only a Person can be. No one grieved an influence or was lied to by a power; the Helper is Someone to know, follow, and never grieve.",
+        verses: ["John 14:26", "John 15:26", "John 16:13", "Acts 5:3", "Ephesians 4:30"],
+      },
+      {
+        heading: "He is how Jesus stays with us",
+        body:
+          "The promise of the Helper is immediately followed by: 'I will not leave you orphans. I will come to you.' The Spirit is the presence of the risen Jesus with His people. Jesus even said it was to our advantage for Him to go away, so that the Helper could come and abide with us forever.",
+        verses: ["John 14:18", "John 16:7", "John 14:23"],
+      },
+      {
+        heading: "His one aim is to make Jesus known",
+        body:
+          "The Helper teaches all things and reminds us of what Jesus said. He testifies about Jesus, and He glorifies Jesus by taking what belongs to Christ and declaring it to us. Whenever the Spirit is genuinely at work, Jesus becomes more real, never less.",
+        verses: ["John 14:26", "John 15:26", "John 16:13-14"],
+      },
+      {
+        heading: "The promise is for everyone who repents",
+        body:
+          "Pentecost was the arrival of the Helper: the Spirit poured out on all flesh, young and old, sons and daughters. And Peter's invitation still stands: repent and be baptized in the name of Jesus Christ, and you will receive the gift of the Holy Spirit, for the promise is for you.",
+        verses: ["Acts 2:17-18", "Acts 2:38-39"],
+      },
+    ],
+    keyVerses: ["John 14:16-17", "John 14:18", "John 16:7", "John 15:26", "Acts 2:38-39"],
+    raises: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
+    followsFrom: ["who-is-the-holy-spirit"],
+    related: ["who-is-the-holy-spirit", "is-the-holy-spirit-god", "what-are-spiritual-gifts"],
+    planned: ["What is the unpardonable sin?"],
+    order: 16,
   },
 ];
