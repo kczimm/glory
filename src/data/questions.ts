@@ -1044,10 +1044,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 16:8-11", "Acts 2:37-38", "John 3:19-20"],
-    raises: ["how-do-i-receive-the-holy-spirit"],
+    raises: ["how-do-i-receive-the-holy-spirit", "what-does-it-mean-that-the-world-hates-jesus"],
     followsFrom: ["is-the-holy-spirit-god"],
     related: ["who-is-the-holy-spirit"],
-    planned: ["What does it mean that the world hates Jesus?"],
+    planned: ["What is the difference between the world and the kingdom of God?"],
     order: 14,
   },
 
@@ -6320,6 +6320,92 @@ export const questions: Question[] = [
     followsFrom: ["what-are-spiritual-gifts", "how-do-i-receive-the-holy-spirit"],
     related: ["what-are-spiritual-gifts", "are-sign-gifts-active", "what-the-new-life-looks-like", "who-is-the-holy-spirit"],
     planned: ["How do I grow in the fruit of the Spirit?"],
+    order: 22,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Jesus Christ (continued: the world's hostility)
+  // ------------------------------------------------------------------
+  {
+    slug: "what-does-it-mean-that-the-world-hates-jesus",
+    question: "What does it mean that the world hates Jesus?",
+    category: "jesus-christ",
+    summary:
+      "The world's hatred of Jesus is not accidental; it is the moral response of darkness to light. Because Jesus exposes the works of the world as evil, and because those who belong to Him are no longer of the world, the world that rejected Him will also reject His people. Jesus warned His followers plainly and called them blessed in the face of it, because His victory, and theirs, is assured.",
+    passages: [
+      {
+        book: "John",
+        chapter: 15,
+        title: "If the world hates you, it hated me first",
+        lookFor: "Jesus' plain warning to His disciples: if the world hates you, know that it hated me before it hated you, and it will persecute you as it persecuted me.",
+        focus: "18-27",
+      },
+      {
+        book: "John",
+        chapter: 16,
+        title: "Persecution promised, and the victory promised",
+        lookFor: "The hour when killing believers will seem like serving God; and the same chapter's word of peace: I have overcome the world.",
+        focus: "1-4",
+      },
+      {
+        book: "John",
+        chapter: 3,
+        title: "Loved darkness rather than light",
+        lookFor: "The root of the hatred: everyone who does evil hates the light and will not come to it, lest his works be exposed.",
+        focus: "16-21",
+      },
+      {
+        book: "1 John",
+        chapter: 3,
+        title: "Do not be surprised if the world hates you",
+        lookFor: "John tells believers not to be astonished: the world's hostility is the family likeness it shows to those who belong to Christ.",
+        focus: "11-18",
+      },
+      {
+        book: "Matthew",
+        chapter: 5,
+        title: "Blessed are those who are persecuted for my sake",
+        lookFor: "Jesus pronounces blessing, not curse, on those who are reproached and persecuted on His account.",
+        focus: "10-12",
+      },
+    ],
+    points: [
+      {
+        heading: "The root of the hatred is the light's exposure of darkness",
+        body:
+          "John gives the reason the world rejects Jesus: 'This is the judgment, that the light has come into the world, and men loved the darkness rather than the light; for their works were evil. For everyone who does evil hates the light, and doesn't come to the light, lest his works would be exposed.' Jesus said plainly, 'the world can't hate you, but it hates me, because I testify about it, that its works are evil.' The world does not hate brightness in the abstract; it hates being exposed.",
+        verses: ["John 3:19", "John 3:20", "John 7:7"],
+      },
+      {
+        heading: "Jesus told His followers to expect the same",
+        body:
+          "There was no ambiguity in the warning. 'If the world hates you, you know that it has hated me before it hated you,' Jesus said, and 'if they persecuted me, they will also persecute you.' He prayed that His disciples would be kept from the evil one, and He said plainly that the world hates them because they are not of the world, even as He is not of the world. Following Christ means facing some measure of the world's disapproval.",
+        verses: ["John 15:18", "John 15:20", "John 17:14"],
+      },
+      {
+        heading: "Because His people belong to another world",
+        body:
+          "The reason for the collision is identity. John explains that if you were of the world, the world would love its own; but because you are not of the world, since Christ chose you out of the world, therefore the world hates you. John's brotherly word is measured and calm: 'Don't be surprised, my brothers, if the world hates you.' The world's friendship is not the Christian's home, and that is why the cross-shaped life can feel at odds with it.",
+        verses: ["John 15:19", "1 John 3:13", "John 17:14"],
+      },
+      {
+        heading: "And it can cost real suffering",
+        body:
+          "This was never a theoretical warning. Jesus told His disciples the hour would come when those who killed them would think they were offering service to God, and Paul states his expectation plainly: 'all who desire to live godly in Christ Jesus will suffer persecution.' Down through the centuries, from the first martyr to believers facing hostility today, following the One whom the world rejected has often carried a real cost. Jesus prepared His people for it, not to frighten them but to steady them.",
+        verses: ["John 16:2", "2 Timothy 3:12", "Matthew 5:12"],
+      },
+      {
+        heading: "Yet He calls it blessed, and claims the victory",
+        body:
+          "Jesus does not frame the world's hatred as a curse but as a beatitude: 'Blessed are you when people reproach you, persecute you, and say all kinds of evil against you falsely, for my sake. Rejoice, and be exceedingly glad, for great is your reward in heaven.' Peter echoes it for the insulted. This is not a call to provoke the world, but an honest and joyful promise for those who are faithful when the world turns against them and their Lord; for in this world we have trouble, but He has overcome the world.",
+        verses: ["Matthew 5:11", "Matthew 5:12", "1 Peter 4:14", "John 16:33"],
+      },
+    ],
+    keyVerses: ["John 15:18-19", "John 3:19-20", "John 17:14", "Matthew 5:11-12", "2 Timothy 3:12"],
+    raises: ["why-does-god-allow-suffering", "is-god-in-control", "how-can-i-be-saved"],
+    followsFrom: ["how-does-the-spirit-convict-the-world", "who-is-jesus"],
+    related: ["who-is-jesus", "why-does-god-allow-suffering", "between-the-cross-and-the-resurrection", "spirits-witness-or-my-own-feelings"],
+    planned: ["How do I stand firm when following Jesus costs me?"],
     order: 22,
   },
 ];
