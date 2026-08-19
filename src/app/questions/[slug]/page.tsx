@@ -12,6 +12,7 @@ import {
 import VerseCard from "@/components/VerseCard";
 import ChapterReader from "@/components/ChapterReader";
 import JourneyBreadcrumb from "@/components/JourneyBreadcrumb";
+import StudyListen from "@/components/StudyListen";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -108,12 +109,17 @@ export default async function QuestionPage({ params }: Props) {
 
         {/* The study */}
         <section className="border-t border-line py-12">
-          <p className="text-[12px] font-semibold uppercase tracking-[0.24em] text-gold-deep">
-            The study
-          </p>
-          <h2 className="mt-2 font-display text-2xl font-medium text-ink sm:text-3xl">
-            What the Scripture says
-          </h2>
+          <div className="flex flex-wrap items-end justify-between gap-x-4 gap-y-3">
+            <div>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.24em] text-gold-deep">
+                The study
+              </p>
+              <h2 className="mt-2 font-display text-2xl font-medium text-ink sm:text-3xl">
+                What the Scripture says
+              </h2>
+            </div>
+            <StudyListen question={question} />
+          </div>
           <div className="mt-8 space-y-10">
             {question.points.map((point, i) => (
               <div key={i} className="grid gap-5 sm:grid-cols-[44px_1fr]">

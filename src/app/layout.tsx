@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import SpeechPlayer from "@/components/SpeechPlayer";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
+        <SpeechPlayer />
       </body>
     </html>
   );
