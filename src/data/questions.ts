@@ -2493,10 +2493,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Luke 24:27", "John 5:39", "2 Corinthians 1:20", "Genesis 3:15"],
-    raises: [],
+    raises: ["how-do-i-find-christ-in-the-old-testament"],
     followsFrom: ["can-i-trust-the-bible"],
     related: ["who-is-jesus", "what-is-the-gospel"],
-    planned: ["How do I find Christ in the Old Testament?"],
+    planned: ["What are the greatest promises God made before Christ?"],
     order: 36,
   },
 
@@ -8715,5 +8715,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["how-should-i-read-the-bible", "daily-habit-of-reading-the-bible", "what-the-new-life-looks-like", "gods-voice-or-my-own-thoughts"],
     planned: ["What is the difference between reading the Bible and studying it?"],
     order: 40,
+  },
+
+  {
+    slug: "how-do-i-find-christ-in-the-old-testament",
+    question: "How do I find Christ in the Old Testament?",
+    category: "word-of-god",
+    summary:
+      "The Old Testament is not a separate book about a different God; it is the first half of the one story that is about Jesus. Jesus Himself said the Scriptures testify of Him, and on the Emmaus road He opened the law, the prophets, and the psalms and explained the things concerning Himself. We find Christ in the Old Testament in its promises and prophecies, its types and patterns, its covenants and sacrifices, and its expectation of a coming King, all of which He came to fulfill.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "The road to Emmaus",
+        lookFor: "Beginning from Moses and all the prophets, Jesus explained the things concerning Himself in all the Scriptures, and their hearts burned.",
+        focus: "13-32",
+      },
+      {
+        book: "John",
+        chapter: 5,
+        title: "The Scriptures testify about me",
+        lookFor: "Jesus tells those who search the Scriptures that they are the ones that testify about Him.",
+        focus: "36-40",
+      },
+      {
+        book: "Matthew",
+        chapter: 5,
+        title: "I came to fulfill the law and the prophets",
+        lookFor: "Jesus did not come to destroy the Law or the Prophets but to fulfill them.",
+        focus: "17-20",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 10,
+        title: "The rock was Christ",
+        lookFor: "Paul reads the wilderness history as pointing to Christ: the rock that followed them was Christ, and the exodus was a warning for us.",
+        focus: "1-13",
+      },
+      {
+        book: "1 Peter",
+        chapter: 1,
+        title: "The prophets searched for the Christ",
+        lookFor: "The Spirit of Christ was in the prophets, predicting the sufferings of Christ and the glories that would follow.",
+        focus: "10-12",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus Himself told us where to find Him",
+        body:
+          "The key to the Old Testament is Christ, and Jesus gave it to us Himself. He said, 'You search the Scriptures... and these are they which testify about me.' On the road to Emmaus, 'beginning from Moses and from all the prophets, he explained to them in all the Scriptures the things concerning himself.' And later He said that everything written in the law of Moses, the prophets, and the psalms concerning Him must be fulfilled. Jesus is the subject the whole book has been waiting for.",
+        verses: ["John 5:39", "Luke 24:27", "Luke 24:44"],
+      },
+      {
+        heading: "The Old Testament is promise; Christ is fulfillment",
+        body:
+          "Jesus said plainly, 'Don't think that I came to destroy the law or the prophets. I didn't come to destroy, but to fulfill.' Paul says that however many the promises of God are, 'in him is the Yes'; Peter announces that what God foretold through all the prophets, that the Christ should suffer, He has fulfilled. The Old Testament raises the expectation; Christ is the one who meets it, so that reading the promise without Him is reading a story without its ending.",
+        verses: ["Matthew 5:17", "2 Corinthians 1:20", "Acts 3:18", "Luke 24:44"],
+      },
+      {
+        heading: "It is full of types and patterns that point to Him",
+        body:
+          "The Old Testament is thick with anticipations of Christ. Paul could read the wilderness and say, 'the rock was Christ,' and speak of the exodus as a warning pointing to ourselves. John saw in the Passover lamb the one who takes away the sin of the world. Hebrews says the law had 'a shadow of the good to come,' and Colossians calls the festivals and holy days a shadow, 'but the body is Christ's.' The sacrifices of the tabernacle, the lamb, the rock, the bread: each is a finger pointing to Christ.",
+        verses: ["1 Corinthians 10:4", "John 1:29", "Hebrews 10:1", "Colossians 2:17", "1 Corinthians 10:1"],
+      },
+      {
+        heading: "It holds a lineage of expectation: King and Suffering Servant",
+        body:
+          "From the beginning, the Old Testament is a waiting room for Christ. It promises a son of David whose throne lasts forever, a child to be born whose name is Wonderful Counselor and Prince of Peace, a righteous Branch who will reign. And it portrays a Suffering Servant, pierced for our transgressions, whose cry the crucified Jesus took on His own lips: 'My God, my God, why have you forsaken me?' Peter says the Spirit of Christ in the prophets predicted 'the sufferings of Christ, and the glories that would follow them.'",
+        verses: ["Matthew 1:1", "Luke 1:32", "Jeremiah 23:5", "Isaiah 9:6", "Isaiah 53:5", "Psalm 22:1", "1 Peter 1:11"],
+      },
+      {
+        heading: "And we read it with Christ in view and the gospel in hand",
+        body:
+          "To find Christ in the Old Testament, we read it with Him in view: asking of each part how it anticipates Him, how it promises Him, how it is fulfilled in Him, and how it prepares the way for the gospel. The veil is removed when we turn to the Lord, as Paul says; the same Scriptures that seemed hidden are opened when Christ is seen. Whatever was written in earlier times was written for our instruction. Read the Old Testament with Jesus on the page, and it becomes what it always was: the gospel before the cross.",
+        verses: ["2 Corinthians 3:14", "2 Corinthians 3:16", "Romans 15:4", "Luke 24:32", "Luke 24:27"],
+      },
+    ],
+    keyVerses: ["John 5:39", "Luke 24:27", "Matthew 5:17", "1 Peter 1:11", "2 Corinthians 1:20"],
+    raises: ["who-is-jesus", "why-did-jesus-have-to-die", "can-i-trust-the-bible"],
+    followsFrom: ["is-the-whole-bible-about-jesus", "who-is-jesus"],
+    related: ["is-the-whole-bible-about-jesus", "who-is-jesus", "what-is-the-gospel", "how-should-i-read-the-bible"],
+    planned: ["How should I read the Psalms?"],
+    order: 41,
   },
 ];
