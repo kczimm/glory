@@ -897,10 +897,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 10:27-29", "Romans 8:38-39", "Philippians 1:6", "John 6:37-39"],
-    raises: [],
+    raises: ["spirits-witness-or-my-own-feelings"],
     followsFrom: ["how-can-i-be-saved"],
     related: ["what-happens-when-i-sin", "who-is-the-holy-spirit", "what-is-faith"],
-    planned: ["How do I know the Spirit's witness from my own feelings?"],
+    planned: ["What does it mean to be sealed with the Holy Spirit?"],
     order: 12,
   },
 
@@ -3887,5 +3887,88 @@ export const questions: Question[] = [
     related: ["born-again-and-baptism", "how-do-i-fight-sin", "how-do-i-pray", "who-is-the-holy-spirit", "what-are-spiritual-gifts"],
     planned: ["How do I grow in Christlikeness?"],
     order: 22,
+  },
+
+  {
+    slug: "spirits-witness-or-my-own-feelings",
+    question: "How do I know the Spirit's witness from my own feelings?",
+    category: "our-walk",
+    summary:
+      "The Spirit's witness is a fact grounded in God's promise, not a mood to be chased. He testifies with our spirit that we are God's children; we hold that testimony by faith in what God has said, not by the shifting temperature of our feelings. Feelings are real, but the Word is the anchor.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "The Spirit of adoption",
+        lookFor: "The Spirit himself testifies with our spirit that we are children of God: the witness, and no more bondage to fear.",
+        focus: "1-17",
+      },
+      {
+        book: "Galatians",
+        chapter: 4,
+        title: "The Spirit crying 'Abba, Father'",
+        lookFor: "Because we are sons, God sent the Spirit of His Son into our hearts, crying 'Abba, Father!'",
+        focus: "4-7",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 1,
+        title: "Sealed, with the Spirit as the down payment",
+        lookFor: "God has sealed us and given us the Spirit as the down payment: assurance rooted in His doing, not our feeling.",
+        focus: "18-22",
+      },
+      {
+        book: "1 John",
+        chapter: 3,
+        title: "When our heart condemns us",
+        lookFor: "The honest cases: when our hearts condemn us, God is greater than our hearts and knows all things.",
+        focus: "19-24",
+      },
+      {
+        book: "Hebrews",
+        chapter: 10,
+        title: "Draw near in full assurance of faith",
+        lookFor: "The invitation: draw near with a true heart, fully assured, because of what Christ has done.",
+        focus: "19-25",
+      },
+    ],
+    points: [
+      {
+        heading: "The witness is a fact, not a feeling",
+        body:
+          "Paul does not tell the Romans to check their emotional weather: he tells them 'the Spirit himself testifies with our spirit that we are children of God.' It is an ongoing testimony, anchored in God's own doing. God has sealed us and given us the Spirit as the down payment of our inheritance: a pledge, not a pulse.",
+        verses: ["Romans 8:16", "2 Corinthians 1:22", "Ephesians 1:13-14"],
+      },
+      {
+        heading: "It is about who you belong to, not what you feel",
+        body:
+          "The Spirit's presence is what marks you as Christ's: 'if any man doesn't have the Spirit of Christ, he is not his.' And the Spirit you have received is not a spirit of slavery leading back into fear, but the Spirit of adoption, by whom you cry, 'Abba, Father!' The question is not how full of feeling you are right now, but whose child you are.",
+        verses: ["Romans 8:9", "Romans 8:15", "Galatians 4:6"],
+      },
+      {
+        heading: "Feelings are real, but they are not the test",
+        body:
+          "John assumes believers sometimes feel condemned: 'if our heart condemns us, God is greater than our heart, and knows all things' and when our hearts do not condemn us, we have boldness toward God. Your feelings about yourself are not the final word, because God's knowledge of you is truer than your feelings about you. Paul's test is objective: test whether Christ is in you, by the reality of faith and the Spirit, not by the strength of an emotion.",
+        verses: ["1 John 3:19-20", "2 Corinthians 13:5", "1 John 3:21"],
+      },
+      {
+        heading: "We hold the witness by faith in the promise",
+        body:
+          "John ties the testimony to belief: 'He who believes in the Son of God has the testimony in himself.' The way to hold the Spirit's witness when feelings dip is not to manufacture a feeling but to believe what God has promised. God's love has been poured into our hearts through the Holy Spirit, and we draw near to Him with a true heart in full assurance of faith.",
+        verses: ["1 John 5:10", "Romans 5:5", "Hebrews 10:22"],
+      },
+      {
+        heading: "Fear and assurance cannot live in the same house",
+        body:
+          "John says perfect love casts out fear, and that God's love gives us boldness on the day of judgment; and he writes so that we may know we have eternal life, for he who has the Son has the life. Certainty, not guesswork: the Spirit's witness does not make you conceited; it makes you safe. When the heart grows loud, the Word is louder.",
+        verses: ["1 John 4:18", "1 John 4:17", "1 John 5:13", "1 John 5:12"],
+      },
+    ],
+    keyVerses: ["Romans 8:16", "2 Corinthians 1:22", "Galatians 4:6", "1 John 5:10", "1 John 5:13"],
+    raises: [],
+    followsFrom: ["can-i-lose-my-salvation", "who-is-the-holy-spirit", "how-do-i-receive-the-holy-spirit"],
+    related: ["can-i-lose-my-salvation", "what-is-faith", "how-do-i-know-the-spirit-is-leading-me"],
+    planned: ["What does holy living have to do with assurance?"],
+    order: 23,
   },
 ];
