@@ -1346,10 +1346,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 15:4-5", "Luke 9:23", "Colossians 3:12-14", "2 Peter 3:18"],
-    raises: ["how-do-i-fight-sin"],
+    raises: ["how-do-i-fight-sin", "how-do-i-share-my-faith-with-others"],
     followsFrom: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
     related: ["who-is-the-holy-spirit", "how-do-i-receive-the-holy-spirit", "why-do-i-need-the-church", "how-should-i-read-the-bible", "how-do-i-pray"],
-    planned: ["How do I share my faith with others?"],
+    planned: ["What role does prayer play in sharing the gospel?"],
     order: 18,
   },
 
@@ -7337,5 +7337,88 @@ export const questions: Question[] = [
     related: ["why-do-i-need-the-church", "what-is-a-healthy-church", "what-is-baptism", "what-is-the-lords-supper"],
     planned: ["What is the difference between the universal church and the local church?"],
     order: 43,
+  },
+
+  {
+    slug: "how-do-i-share-my-faith-with-others",
+    question: "How do I share my faith with others?",
+    category: "our-walk",
+    summary:
+      "Sharing faith is less about a perfect script and more about a prepared life and a ready answer. Scripture calls us to be ready to give a reason for the hope within us, to walk in wisdom toward outsiders, to let our speech be gracious, to tell what the Lord has done for us, and to trust God with the results, who alone opens hearts and doors for the gospel.",
+    passages: [
+      {
+        book: "1 Peter",
+        chapter: 3,
+        title: "Always be ready to give an answer",
+        lookFor: "Sanctify the Lord in your hearts, always ready to answer anyone who asks about the hope in you, with humility and a good conscience.",
+        focus: "8-17",
+      },
+      {
+        book: "Colossians",
+        chapter: 4,
+        title: "Wisdom toward outsiders, gracious speech",
+        lookFor: "Walk in wisdom toward those who are outside, redeeming the time, and let your speech be with grace, seasoned with salt.",
+        focus: "2-6",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 5,
+        title: "Ambassadors of reconciliation",
+        lookFor: "God reconciled us to Himself and committed to us the message of reconciliation; we are ambassadors for Christ.",
+        focus: "14-21",
+      },
+      {
+        book: "Acts",
+        chapter: 1,
+        title: "You will be my witnesses",
+        lookFor: "You will receive power when the Holy Spirit comes upon you, and you will be my witnesses to the ends of the earth.",
+        focus: "6-11",
+      },
+      {
+        book: "John",
+        chapter: 4,
+        title: "Come, see a man who told me everything",
+        lookFor: "The Samaritan woman tells her town about Jesus, and many believe because of her simple testimony.",
+        focus: "1-42",
+      },
+    ],
+    points: [
+      {
+        heading: "Be ready to give an answer",
+        body:
+          "Peter lays the groundwork: sanctify the Lord God in your hearts, 'and always be ready to give an answer to everyone who asks you a reason concerning the hope that is in you, with humility and fear.' Paul adds the tone: 'Let your speech always be with grace, seasoned with salt, that you may know how you ought to answer each one.' You do not need a script for every debate; you need a ready heart and graced words.",
+        verses: ["1 Peter 3:15", "Colossians 4:6"],
+      },
+      {
+        heading: "Back the words with a life",
+        body:
+          "The message is carried by the messenger. Peter says to give the answer 'with humility,' keeping a good conscience, 'that, while you are spoken against as evildoers, they may be disappointed who curse your good way of life in Christ.' Paul says to walk in wisdom toward outsiders, redeeming the time. A life changed by the gospel makes the gospel believable; the fruit of the Spirit is the background music of the witness.",
+        verses: ["1 Peter 3:15", "1 Peter 3:16", "Colossians 4:5"],
+      },
+      {
+        heading: "Tell what the Lord has done for you",
+        body:
+          "Jesus sent the healed man home with a simple assignment: 'Go to your house, to your friends, and tell them what great things the Lord has done for you, and how he had mercy on you.' And the Samaritan woman needed no theology degree: she told her town, and John records that 'many of the Samaritans believed in him because of the word of the woman.' Your story of encounter with Jesus is a legitimate and powerful part of your witness.",
+        verses: ["Mark 5:19", "John 4:39", "Acts 4:20"],
+      },
+      {
+        heading: "You are carrying God's own message",
+        body:
+          "The gospel is not your opinion; it is a message entrusted to you. Paul writes that God reconciled us to Himself through Christ 'and gave to us the ministry of reconciliation,' and 'we are therefore ambassadors on behalf of Christ, as though God were entreating by us: we beg you on behalf of Christ, be reconciled to God.' He also asks how people will believe without hearing, and how they will hear without a preacher, and calls the feet of those who bring the good news beautiful. When you share, God speaks through you.",
+        verses: ["2 Corinthians 5:18", "2 Corinthians 5:19", "2 Corinthians 5:20", "Romans 10:14", "Romans 10:15"],
+      },
+      {
+        heading: "Trust God with the results",
+        body:
+          "The outcome never rests on your eloquence. Jesus promised the Holy Spirit's power and the role of witness to the ends of the earth, and the apostles, forbidden to speak, said they could not help telling what they had seen and heard. Paul urged prayer for open doors: 'praying together for us also, that God may open to us a door for the word.' You plant and water, and God gives the growth. Share faithfully, pray boldly, and leave the harvest to Him.",
+        verses: ["Acts 1:8", "Acts 4:20", "Colossians 4:2", "Colossians 4:3", "1 Corinthians 3:6"],
+      },
+    ],
+    keyVerses: ["1 Peter 3:15", "Colossians 4:6", "2 Corinthians 5:20", "Romans 10:14-15", "Acts 1:8"],
+    raises: ["what-is-the-gospel", "how-can-i-be-saved", "does-god-hear-my-prayers"],
+    followsFrom: ["what-should-i-do-now-that-im-saved", "what-is-the-gospel"],
+    related: ["what-is-the-gospel", "what-should-i-do-now-that-im-saved", "is-it-okay-to-doubt", "why-do-i-need-the-church"],
+    planned: ["How do I respond when someone rejects the gospel?"],
+    order: 30,
   },
 ];
