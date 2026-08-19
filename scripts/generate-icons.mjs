@@ -23,12 +23,17 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const SPARK_1 = "M131 41.5 L134.1 52.1 L138.5 49 L134.1 45.9 L131 56.5 L127.9 45.9 L123.5 49 L127.9 52.1 Z";
 const SPARK_2 = "M49 123.5 L52.1 134.1 L56.5 131 L52.1 127.9 L49 138.5 L45.9 127.9 L41.5 131 L45.9 134.1 Z";
 
-// The cross: two rounded gold bars (same fill) read as one Latin cross:
-//   horizontal arm  x 56..124, y 85..107  (68 wide x 22 tall)
-//   vertical member x 79..101, y 44..148  (22 wide x 104 tall)
+// The cross: two rounded gold bars (same fill, NO stroke) so the union reads
+// as one seamless cross with no visible junction lines. The crossbar sits
+// ABOVE the vertical's midpoint (long bottom arm) so it reads as a Latin
+// cross, not a "+".
+//   horizontal arm  x 53..127, y 79..101  (74 wide x 22 tall, center y 90)
+//   vertical member x 79..101, y 48..148  (22 wide x 100 tall, center y 98)
 const CROSS = `
-  <rect x="56" y="85" width="68" height="22" rx="11" fill="url(#gold)" stroke="#6f5420" stroke-width="2"/>
-  <rect x="79" y="44" width="22" height="104" rx="11" fill="url(#gold)" stroke="#6f5420" stroke-width="2"/>`;
+  <g filter="url(#shadow)">
+    <rect x="53" y="79" width="74" height="22" rx="11" fill="url(#gold)"/>
+    <rect x="79" y="48" width="22" height="100" rx="11" fill="url(#gold)"/>
+  </g>`;
 
 // The 180x180 mark WITHOUT the full-bleed background (so a rounded variant
 // can supply its own backdrop). Shared by both variants.
@@ -47,6 +52,9 @@ const MARK = `
       <stop offset="0%" stop-color="#dcc78f"/>
       <stop offset="100%" stop-color="#b2944c"/>
     </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#3a2f14" flood-opacity="0.16"/>
+    </filter>
   </defs>
   <circle cx="90" cy="96" r="72" fill="none" stroke="url(#ring)" stroke-width="2" opacity="0.5"/>
   <circle cx="90" cy="96" r="62" fill="none" stroke="#e6ddc9" stroke-width="1.5" opacity="0.9"/>
