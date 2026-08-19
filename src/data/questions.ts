@@ -2966,10 +2966,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Peter 5:8", "Revelation 12:10", "Colossians 2:15", "John 8:44"],
-    raises: ["what-is-spiritual-warfare"],
+    raises: ["what-is-spiritual-warfare", "are-demons-real"],
     followsFrom: [],
     related: ["how-do-i-fight-sin"],
-    planned: ["Are demons real and active today?"],
+    planned: ["How can I discern demonic influence from ordinary struggles?"],
     order: 47,
   },
 
@@ -5900,5 +5900,91 @@ export const questions: Question[] = [
     related: ["what-is-the-flesh-versus-the-spirit", "what-happens-when-i-die", "what-is-the-resurrection", "how-do-i-fight-sin"],
     planned: ["How should I care for my body as a Christian?"],
     order: 49,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Unseen Realm (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "are-demons-real",
+    question: "Are demons real and active today?",
+    category: "unseen-realm",
+    summary:
+      "Yes. The New Testament treats demons as real personal spirits, fallen angels in service of evil, who oppose God and deceive people. Jesus cast them out, and the apostles met them in the open. But their power is not ultimate: the Son of God was revealed to destroy the works of the devil, and His people resist them through the Word, prayer, and faith, without fear.",
+    passages: [
+      {
+        book: "Mark",
+        chapter: 5,
+        title: "Legion is set free",
+        lookFor: "Jesus meets a man possessed by many demons, speaks to them as persons, and sets him free; the demons are real and He is their master.",
+        focus: "1-20",
+      },
+      {
+        book: "Luke",
+        chapter: 10,
+        title: "Even the demons are subject to us",
+        lookFor: "The seventy return rejoicing that evil spirits are subject to them in Jesus' name, and Jesus speaks of seeing Satan fallen like lightning.",
+        focus: "17-24",
+      },
+      {
+        book: "Acts",
+        chapter: 16,
+        title: "A spirit expelled in Philippi",
+        lookFor: "Paul commands a spirit of divination out of a girl in the name of Jesus Christ, and it leaves that very hour.",
+        focus: "16-24",
+      },
+      {
+        book: "Ephesians",
+        chapter: 6,
+        title: "Our wrestling is not against flesh and blood",
+        lookFor: "Paul names our real opponents: the rulers of the darkness of this world, spiritual forces of wickedness, and the armor to stand against them.",
+        focus: "10-20",
+      },
+      {
+        book: "1 John",
+        chapter: 3,
+        title: "He came to destroy the works of the devil",
+        lookFor: "The devil sins from the beginning, and the Son of God was revealed to destroy his works.",
+        focus: "4-10",
+      },
+    ],
+    points: [
+      {
+        heading: "The New Testament treats demons as real persons",
+        body:
+          "This is not myth or metaphor; the Gospels show Jesus speaking to demons as persons. He asked one man's unclean spirit its name, and it replied, 'My name is Legion, for we are many.' The seventy reported with astonishment, 'Lord, even the demons are subject to us in your name!' When evening came, the people brought the demon-possessed to Jesus, and 'he cast out the spirits with a word.' Demons speak, choose, and act.",
+        verses: ["Mark 5:9", "Luke 10:17", "Matthew 8:16"],
+      },
+      {
+        heading: "They are fallen angels, not rivals of God",
+        body:
+          "Demons are created spirits who rebelled. Peter says God did not spare angels when they sinned but cast them into pits of darkness, held for judgment, and Jude speaks of angels who did not keep their own domain, kept in everlasting bonds. Revelation calls the dragon's angels thrown down with him. They are powerful, but they are creatures under God's judgment, never His equals.",
+        verses: ["2 Peter 2:4", "Jude 1:6", "Revelation 12:9", "Ephesians 6:12"],
+      },
+      {
+        heading: "They are active in deception and false teaching",
+        body:
+          "Their work today is often subtle. Paul warns that in later times some will fall away from the faith, 'paying attention to seducing spirits and doctrines of demons.' He adds that Satan himself masquerades as an angel of light. John tells us to test the spirits, because not every voice is from God. The enemy's activity is real, and much of it is aimed at lies, division, and falsehood within reach of the church.",
+        verses: ["1 Timothy 4:1", "2 Corinthians 11:14", "1 John 4:1"],
+      },
+      {
+        heading: "Jesus is their conqueror",
+        body:
+          "Demons fled from Jesus, and He saw Satan fallen like lightning. John's summary is decisive: 'To this end the Son of God was revealed, that he might destroy the works of the devil.' Paul says Christ 'stripped the principalities and the powers' and made a public spectacle of them, triumphing over them at the cross. Whatever demons are, they are a defeated enemy whose Leader has already won the war.",
+        verses: ["Luke 10:17", "Luke 10:18", "1 John 3:8", "Colossians 2:15"],
+      },
+      {
+        heading: "So the believer resists, not fears",
+        body:
+          "Because demons are real, so is the call to resist them. James says, 'Resist the devil, and he will flee from you,' and Peter urges us to be watchful and to withstand him steadfast in faith. Even the demons believe and shudder, yet they do not control those who are in Christ: 'greater is he who is in you than he who is in the world.' We are not to be naive, and we are not to be afraid.",
+        verses: ["James 4:7", "James 2:19", "1 Peter 5:8-9", "1 John 4:4", "Ephesians 6:11"],
+      },
+    ],
+    keyVerses: ["Mark 5:9", "Luke 10:17", "Ephesians 6:12", "James 2:19", "1 John 3:8"],
+    raises: ["what-is-spiritual-warfare"],
+    followsFrom: ["who-is-satan"],
+    related: ["who-is-satan", "what-is-spiritual-warfare", "how-do-i-fight-sin", "gods-voice-or-my-own-thoughts"],
+    planned: ["Can a Christian be tormented by demons?"],
+    order: 50,
   },
 ];

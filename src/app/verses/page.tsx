@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { graphVerseRefs, getConnections, verseSlug } from "@/data";
+import { graphVerseRefs, getConnections, incomingConnections, verseSlug } from "@/data";
 
 export const metadata: Metadata = {
   title: "The Word, connected",
@@ -22,6 +22,11 @@ const BOOKS = [
 
 export default function VersesIndex() {
   const refs = graphVerseRefs();
+  // How many cross-reference edges touch this verse (leaving + reaching it).
+  const degreeCache = new Map<string, number>();
+  for (const r of refs) {
+    degreeCache.set(r, getConnections(r).length + incomingConnections(r).length);
+  }
   const groups = BOOKS.map((book) => ({
     book,
     refs: refs
@@ -59,9 +64,11 @@ export default function VersesIndex() {
                   className="rounded-full border border-line bg-white/60 px-3 py-1 text-[13px] text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
                 >
                   {ref}
-                  <span className="ml-1 text-[10.5px] text-gold">
-                    · {getConnections(ref).length}
-                  </span>
+                  {degreeCache.get(ref)! > 0 && (
+                    <span className="ml-1 text-[10.5px] text-gold">
+                      · {degreeCache.get(ref)}
+                    </span>
+                  )}
                 </Link>
               ))}
             </div>
