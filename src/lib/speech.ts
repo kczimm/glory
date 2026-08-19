@@ -42,6 +42,8 @@ export interface SpeechItem {
   label: string;
   /** the words to speak */
   text: string;
+  /** page element id to scroll/highlight while this chunk is read (study listen) */
+  targetId?: string;
 }
 
 export type SpeechStatus = "idle" | "playing" | "paused";

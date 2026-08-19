@@ -127,15 +127,17 @@ export default async function QuestionPage({ params }: Props) {
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="font-display text-xl font-medium text-ink">
+                  <h3 id={`sp-${i}`} className="font-display text-xl font-medium text-ink">
                     {point.heading}
                   </h3>
-                  <p className="dropcap mt-3 max-w-[65ch] text-[15.5px] leading-[1.85] text-ink">
+                  <p id={`sp-${i}-b`} className="dropcap mt-3 max-w-[65ch] text-[15.5px] leading-[1.85] text-ink">
                     {point.body}
                   </p>
                   <div className="mt-4 space-y-2.5">
-                    {point.verses.map((ref) => (
-                      <VerseCard key={ref} verse={ref} />
+                    {point.verses.map((ref, j) => (
+                      <div key={ref} id={`sp-${i}-v-${j}`}>
+                        <VerseCard verse={ref} />
+                      </div>
                     ))}
                   </div>
                 </div>

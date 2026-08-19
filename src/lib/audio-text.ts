@@ -12,6 +12,8 @@ export interface AudioChunk {
   id: string;
   label: string;
   text: string;
+  /** page element id to scroll/highlight while this chunk is read (study listen) */
+  targetId?: string;
 }
 
 export interface AudioTextVerse {
@@ -181,34 +183,37 @@ export function chapterItems(
 }
 
 /**
- * The study listening queue: the question, summary, then each point with
- * its body and grounding verses (spoken as "John chapter 3, verse 16. ...").
- * Mirrors StudyListen. `verseText` resolves a ref like getPassageText.
+ * The study listening queue: each point with its body and grounding verses
+ * (spoken as "John chapter 3, verse 16. ..."). Starts at the first point,
+ * not the question/summary at the top of the page. Every item carries a
+ * targetId pointing at the region of the page being read, so the reader can
+ * scroll/highlight it as it goes. `verseText` resolves a ref like
+ * getPassageText. Mirrors StudyListen.
  */
 export function studyItems(
   question: AudioTextStudy,
   verseText: (ref: string) => string | null
 ): AudioChunk[] {
-  const out: AudioChunk[] = [
-    { id: "q", label: "The question", text: question.question },
-    { id: "s", label: "In short", text: question.summary },
-  ];
+  const out: AudioChunk[] = [];
   question.points.forEach((p, i) => {
     const prefix = `p${i}`;
-    out.push({ id: `${prefix}h`, label: p.heading, text: p.heading });
+    out.push({ id: `${prefix}h`, targetId: `sp-${i}`, label: p.heading, text: p.heading });
     chunkText(p.body).forEach((text, k) => {
       out.push({
         id: k === 0 ? `${prefix}b` : `${prefix}b|${k + 1}`,
+        targetId: `sp-${i}-b`,
         label: p.heading,
         text,
       });
     });
-    p.verses.forEach((ref) => {
+    p.verses.forEach((ref, j) => {
       const text = verseText(ref);
       if (!text) return;
+      const targetId = `sp-${i}-v-${j}`;
       chunkText(text).forEach((t, k) => {
         out.push({
           id: k === 0 ? ref : `${ref}|${k + 1}`,
+          targetId,
           label: ref,
           text: k === 0 ? `${speechRef(ref)}. ${t}` : t,
         });
