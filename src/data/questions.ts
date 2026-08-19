@@ -73,13 +73,13 @@ export const questions: Question[] = [
       {
         heading: "He transforms us from the inside",
         body:
-          "The Spirit produces His fruit in our character: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control. He gives gifts for serving others, and when we don't know how to pray, He Himself intercedes for us with groanings too deep for words.",
+          "The Spirit produces His fruit in our character: love, joy, peace, patience, kindness, goodness, faith, gentleness, self-control. He gives gifts for serving others, and when we don't know how to pray, He Himself intercedes for us with groanings too deep for words.",
         verses: ["Galatians 5:22-23", "1 Corinthians 12:4-11", "Romans 8:26-27"],
       },
     ],
     keyVerses: ["John 14:16-17", "John 16:13-14", "Romans 8:9", "1 Corinthians 6:19", "Galatians 5:22-23"],
     raises: ["is-the-holy-spirit-god", "how-do-i-receive-the-holy-spirit", "why-jesus-calls-the-spirit-another-helper"],
-    followsFrom: [],
+    followsFrom: ["who-is-the-father", "why-jesus-calls-the-spirit-another-helper"],
     related: ["who-is-jesus"],
     planned: ["Why did the Spirit wait until Pentecost?"],
     order: 1,
@@ -194,7 +194,7 @@ export const questions: Question[] = [
       {
         heading: "There is one God",
         body:
-          "Scripture is emphatic: 'Hear, Israel: the LORD our God, the LORD is one.' God declares, 'I am the LORD, and there is no other.' The Bible is fiercely monotheistic: there is one God, and nothing else is to be worshipped.",
+          "Scripture is emphatic: 'Hear, Israel: Yahweh our God, Yahweh is one.' God declares, 'I am Yahweh, and there is no one else.' The Bible is fiercely monotheistic: there is one God, and nothing else is to be worshipped.",
         verses: ["Deuteronomy 6:4", "Isaiah 45:5", "Mark 12:29"],
       },
       {
@@ -372,7 +372,7 @@ export const questions: Question[] = [
     ],
     keyVerses: ["John 1:1", "John 1:14", "Philippians 2:9-11", "Hebrews 1:3", "Mark 10:45"],
     raises: ["is-jesus-really-god", "why-did-jesus-have-to-die", "what-does-it-mean-that-jesus-is-the-son-of-god", "why-did-jesus-call-himself-son-of-man"],
-    followsFrom: [],
+    followsFrom: ["who-is-the-father"],
     related: ["who-is-the-holy-spirit"],
     planned: ["What did Jesus teach about the kingdom of God?"],
     order: 5,
@@ -465,7 +465,7 @@ export const questions: Question[] = [
         book: "Isaiah",
         chapter: 53,
         title: "The suffering Servant",
-        lookFor: "Written 700 years before Christ: pierced for our transgressions, crushed for our iniquities.",
+        lookFor: "Written centuries before Christ: pierced for our transgressions, crushed for our iniquities.",
       },
       {
         book: "Romans",
@@ -500,7 +500,7 @@ export const questions: Question[] = [
       {
         heading: "The problem: we have all sinned against a holy God",
         body:
-          "Scripture's diagnosis is total: 'All have sinned and fall short of the glory of God.' Isaiah says it like a confession: 'All we like sheep have gone astray; each of us has turned to his own way.' The problem is not that God is too strict; it is that we have actually rebelled against Him.",
+          "Scripture's diagnosis is total: 'All have sinned and fall short of the glory of God.' Isaiah says it like a confession: 'All we like sheep have gone astray; everyone has turned to his own way.' The problem is not that God is too strict; it is that we have actually rebelled against Him.",
         verses: ["Romans 3:23", "Isaiah 53:6"],
       },
       {
@@ -518,7 +518,7 @@ export const questions: Question[] = [
       {
         heading: "The substitution: Christ took our place",
         body:
-          "The heart of the cross is exchange. He was pierced for our transgressions and crushed for our iniquities; the LORD laid on Him the iniquity of us all. He Himself bore our sins in His body on the tree. God made Him who knew no sin to be sin for us. He died the death we owed, in our place.",
+          "The heart of the cross is exchange. He was pierced for our transgressions and crushed for our iniquities; Yahweh has laid on Him the iniquity of us all. He Himself bore our sins in His body on the tree. God made Him who knew no sin to be sin for us. He died the death we owed, in our place.",
         verses: ["Isaiah 53:5-6", "1 Peter 2:24", "2 Corinthians 5:21", "Mark 10:45"],
       },
       {
@@ -620,7 +620,7 @@ export const questions: Question[] = [
     question: "Did Jesus really rise from the dead?",
     category: "jesus-christ",
     summary:
-      "Yes, the resurrection is the best-attested event of the ancient world and the hinge of the Christian faith. If Christ did not rise, our faith is futile; because He did, death is defeated and we have a living hope.",
+      "Yes, the resurrection is a historically attested event with multiple independent witnesses, and it is the hinge of the Christian faith. If Christ did not rise, our faith is futile; because He did, death is defeated and we have a living hope.",
     passages: [
       {
         book: "1 Corinthians",
@@ -829,7 +829,7 @@ export const questions: Question[] = [
     ],
     keyVerses: ["John 3:3", "John 1:12-13", "2 Corinthians 5:17", "1 Peter 1:3"],
     raises: ["how-do-i-receive-the-holy-spirit", "what-happens-when-i-sin", "born-again-and-baptism", "what-the-new-life-looks-like"],
-    followsFrom: [],
+    followsFrom: ["how-can-i-be-saved", "what-is-faith"],
     related: ["how-can-i-be-saved"],
     planned: ["What does it mean to be a child of God?"],
     order: 11,
@@ -955,7 +955,7 @@ export const questions: Question[] = [
       {
         heading: "The path back is confession",
         body:
-          "'If we confess our sins, he is faithful and righteous to forgive us our sins, and to cleanse us from all unrighteousness.' David learned it: 'I acknowledged my sin to you… and you forgave the iniquity of my sin.' Whoever conceals his sin does not prosper, but whoever confesses and forsakes it obtains mercy.",
+          "'If we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.' David learned it: 'I acknowledged my sin to you… and you forgave the iniquity of my sin.' Whoever conceals his sin does not prosper, but whoever confesses and forsakes it obtains mercy.",
         verses: ["1 John 1:9", "Psalm 32:5", "Proverbs 28:13"],
       },
       {
@@ -1113,7 +1113,7 @@ export const questions: Question[] = [
       {
         heading: "The fruit is the goal of the gifts",
         body:
-          "The Spirit's gifts build the church, and the Spirit's fruit in your character, love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control, shows Christ. 'Eagerly desire the greater gifts,' Paul says, and then shows the way that is still more excellent: love.",
+          "The Spirit's gifts build the church, and the Spirit's fruit in your character, love, joy, peace, patience, kindness, goodness, faith, gentleness, self-control, shows Christ. 'Eagerly desire the greater gifts,' Paul says, and then shows the way that is still more excellent: love.",
         verses: ["Galatians 5:22-23", "1 Corinthians 12:31", "Romans 12:6-8"],
       },
     ],
@@ -1484,7 +1484,7 @@ export const questions: Question[] = [
       {
         heading: "His heart is love: He gave His Son",
         body:
-          "'God so loved the world, that he gave his only born Son.' This is not an abstract principle; it is the measure of the Father's heart. He shows His love for us in this: while we were still sinners, Christ died for us. Even when we wander, the Father runs to meet us.",
+          "'God so loved the world, that he gave his one and only Son.' This is not an abstract principle; it is the measure of the Father's heart. He shows His love for us in this: while we were still sinners, Christ died for us. Even when we wander, the Father runs to meet us.",
         verses: ["John 3:16", "1 John 3:1", "Romans 5:8", "Luke 15:20"],
       },
       {
@@ -1633,7 +1633,7 @@ export const questions: Question[] = [
       {
         heading: "The message: a Person and His finished work",
         body:
-          "The gospel centers on Jesus, not on our efforts. 'God so loved the world that he gave his only born Son, that whoever believes in him should not perish, but have eternal life.' The good news is who He is and what He did for us.",
+          "The gospel centers on Jesus, not on our efforts. 'God so loved the world that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life.' The good news is who He is and what He did for us.",
         verses: ["John 3:16", "1 Corinthians 15:3-4", "2 Corinthians 5:19"],
       },
       {
@@ -2034,7 +2034,7 @@ export const questions: Question[] = [
     ],
     keyVerses: ["Romans 8:28", "Genesis 50:20", "2 Corinthians 1:3-4", "Revelation 21:4"],
     raises: ["is-god-in-control", "where-is-god-in-my-pain"],
-    followsFrom: [],
+    followsFrom: ["what-does-it-mean-that-the-world-hates-jesus"],
     related: ["who-is-the-father", "where-is-jesus-now", "why-does-god-seem-silent"],
     planned: ["What does it look like to suffer well?"],
     order: 27,
@@ -2468,7 +2468,7 @@ export const questions: Question[] = [
       { book: "Luke", chapter: 24, title: "He explained the Scriptures", lookFor: "Everything written about me must be fulfilled.", focus: "13-27" },
       { book: "John", chapter: 5, title: "The Scriptures testify of me", lookFor: "If you believed Moses, you would believe me.", focus: "39-47" },
       { book: "Hebrews", chapter: 1, title: "Spoken by the Son", lookFor: "God spoke by the prophets, and in these last days by His Son.", focus: "1-2" },
-      { book: "2 Corinthians", chapter: 1, title: "Yes in him", lookFor: "All the promises of God find their yes in Christ.", focus: "18-20" },
+      { book: "2 Corinthians", chapter: 1, title: "Yes in him", lookFor: "Every promise of God is 'Yes' in Christ.", focus: "18-20" },
     ],
     points: [
       {
@@ -2478,12 +2478,12 @@ export const questions: Question[] = [
       },
       {
         heading: "The Old Testament promised Him",
-        body: "The offspring of the woman who crushes the serpent's head, the suffering Servant pierced for our transgressions, the King born in Bethlehem: God spoke long ago through the prophets, but in these last days He has spoken to us by His Son.",
+        body: "The offspring of the woman who bruises the serpent's head, the suffering Servant pierced for our transgressions, the King born in Bethlehem: God spoke long ago through the prophets, but in these last days He has spoken to us by His Son.",
         verses: ["Genesis 3:15", "Isaiah 53:5", "Hebrews 1:1-2"],
       },
       {
         heading: "The New Testament declares the promises are fulfilled",
-        body: "All the promises of God find their yes in him. Philip could say, we have found him of whom Moses and the prophets wrote. The apostles preached that the words of the prophets were fulfilled in Jesus.",
+        body: "All the promises of God find their 'Yes' in him. Philip could say, we have found him of whom Moses and the prophets wrote. The apostles preached that the words of the prophets were fulfilled in Jesus.",
         verses: ["2 Corinthians 1:20", "John 1:45", "Acts 13:27-29"],
       },
       {
@@ -2533,13 +2533,13 @@ export const questions: Question[] = [
       },
       {
         heading: "It is where the new life is lived out",
-        body: "They devoted themselves to the apostles' teaching and the fellowship, to the breaking of bread and the prayers. And the Lord added to their number day by day those who were being saved. The new life is lived together.",
+        body: "They devoted themselves to the apostles' teaching and the fellowship, to the breaking of bread and prayer. And the Lord added to the assembly day by day those who were being saved. The new life is lived together.",
         verses: ["Acts 2:42", "Acts 2:46-47", "Colossians 3:16"],
       },
     ],
     keyVerses: ["Hebrews 10:24-25", "Ephesians 4:15-16", "Acts 2:42", "1 Corinthians 12:27"],
     raises: ["what-is-baptism", "what-is-the-lords-supper", "what-is-a-healthy-church"],
-    followsFrom: [],
+    followsFrom: ["made-for-relationship"],
     related: ["what-should-i-do-now-that-im-saved"],
     planned: ["What is church discipline?"],
     order: 37,
@@ -2667,7 +2667,7 @@ export const questions: Question[] = [
     ],
     keyVerses: ["2 Corinthians 5:8", "Philippians 1:21", "Luke 23:43", "Hebrews 9:27"],
     raises: ["what-is-the-resurrection", "will-jesus-return-literally"],
-    followsFrom: [],
+    followsFrom: ["signs-before-jesus-returns"],
     related: ["where-is-jesus-now", "what-is-the-gospel"],
     planned: ["What is heaven like?"],
     order: 40,
@@ -2874,7 +2874,7 @@ export const questions: Question[] = [
       },
       {
         heading: "But grace abounded more",
-        body: "Where sin increased, grace abounded all the more, so that grace might reign through righteousness to eternal life through Jesus Christ our Lord. If we confess our sins, he is faithful and righteous to forgive us our sins and cleanse us from all unrighteousness. There is no condemnation for those in Christ.",
+        body: "Where sin increased, grace abounded all the more, so that grace might reign through righteousness to eternal life through Jesus Christ our Lord. If we confess our sins, he is faithful and righteous to forgive us the sins and to cleanse us from all unrighteousness. There is no condemnation for those in Christ.",
         verses: ["Romans 5:20-21", "1 John 1:9", "Romans 8:1"],
       },
     ],
@@ -2911,7 +2911,7 @@ export const questions: Question[] = [
       },
       {
         heading: "The fruit of the Spirit",
-        body: "The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control. Against such things there is no law. This is what the Spirit grows in a life that abides in Christ.",
+        body: "The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faith, gentleness, self-control. Against such things there is no law. This is what the Spirit grows in a life that abides in Christ.",
         verses: ["Galatians 5:22-23", "John 15:4-5"],
       },
       {
@@ -2967,7 +2967,7 @@ export const questions: Question[] = [
     ],
     keyVerses: ["1 Peter 5:8", "Revelation 12:10", "Colossians 2:15", "John 8:44"],
     raises: ["what-is-spiritual-warfare", "are-demons-real"],
-    followsFrom: [],
+    followsFrom: ["praying-against-the-enemy"],
     related: ["how-do-i-fight-sin"],
     planned: ["How can I discern demonic influence from ordinary struggles?"],
     order: 47,
@@ -3009,7 +3009,7 @@ export const questions: Question[] = [
     ],
     keyVerses: ["Hebrews 1:14", "Psalm 103:20", "Revelation 22:8-9", "Daniel 9:21-22"],
     raises: ["do-believers-have-guardian-angels"],
-    followsFrom: [],
+    followsFrom: ["do-believers-have-guardian-angels"],
     related: ["who-is-satan", "what-is-spiritual-warfare"],
     planned: ["What do angels look like, and can believers see them?"],
     order: 48,
@@ -3098,9 +3098,9 @@ export const questions: Question[] = [
     ],
     points: [
       {
-        heading: "'Another' means of the same kind",
+        heading: "'Another' Helper: a Person just like Jesus",
         body:
-          "In the upper room, Jesus promised 'another Counselor': the Greek word is the one used for another of the same sort, not a different or lesser one. The Spirit is exactly what Jesus had been to His disciples: Teacher, Friend, and constant Presence. He is not a substitute for Jesus; He is Jesus' own gift of Himself.",
+          "In the upper room, Jesus promised 'another Counselor' and made clear that the Helper would be to His disciples what He Himself had been: a Teacher, a Friend, and a constant Presence who would abide with them forever. He is not a substitute for Jesus; He is Jesus' own gift of Himself, sent so that Jesus' presence would never leave them.",
         verses: ["John 14:16", "John 14:26"],
       },
       {
@@ -4626,7 +4626,7 @@ export const questions: Question[] = [
       {
         heading: "Christ entered our suffering Himself",
         body:
-          "In Gethsemane, Jesus said His soul was exceedingly sorrowful even to death, and He prayed that the cup might pass. He was 'a man of suffering, and acquainted with disease,' and at the tomb of His friend, the shortest and perhaps the most moving verse in the Bible: 'Jesus wept.' He does not watch our pain from a distance; He has known it, and He is able to help those who are suffering and tempted.",
+          "In Gethsemane, Jesus said His soul was exceedingly sorrowful even to death, and He prayed that the cup might pass. He was 'a man of suffering, and acquainted with disease,' and at the tomb of His friend the Scriptures record two words: 'Jesus wept.' He does not watch our pain from a distance; He has known it, and He is able to help those who are suffering and tempted.",
         verses: ["Matthew 26:38-39", "Isaiah 53:3", "John 11:35", "Hebrews 2:18", "Hebrews 4:15-16"],
       },
       {
@@ -5050,7 +5050,7 @@ export const questions: Question[] = [
       {
         heading: "The test is what it produces",
         body:
-          "The Spirit's voice glorifies Christ, and it produces His fruit: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control. God's voice never whispers you into pride, fear, or sin; it leads to humble obedience. We know that we know Him, John says, if we keep His commandments. The voice that tells you to walk as Christ walked, toward love and holiness, is the voice worth following.",
+          "The Spirit's voice glorifies Christ, and it produces His fruit: love, joy, peace, patience, kindness, goodness, faith, gentleness, and self-control. God's voice never whispers you into pride, fear, or sin; it leads to humble obedience. We know that we know Him, John says, if we keep His commandments. The voice that tells you to walk as Christ walked, toward love and holiness, is the voice worth following.",
         verses: ["John 16:14", "Galatians 5:22-23", "1 John 2:3", "1 John 2:6"],
       },
     ],
@@ -6311,7 +6311,7 @@ export const questions: Question[] = [
       {
         heading: "Love and character are the foundation",
         body:
-          "Above all things, Peter says, be earnest in your love, for love covers a multitude of sins. The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control, and Paul's whole chapter on gifts ends by showing the still more excellent way of love. A gift without love is nothing. Pursue Christlikeness, and your gift will find its proper place in a life that loves.",
+          "Above all things, Peter says, be earnest in your love, for love covers a multitude of sins. The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faith, gentleness, and self-control, and Paul's whole chapter on gifts ends by showing the still more excellent way of love. A gift without love is nothing. Pursue Christlikeness, and your gift will find its proper place in a life that loves.",
         verses: ["1 Peter 4:8", "Galatians 5:22-23", "1 Corinthians 13:13", "1 Corinthians 14:1"],
       },
     ],
