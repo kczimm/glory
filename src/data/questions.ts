@@ -2109,10 +2109,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Ephesians 1:11", "Daniel 4:35", "Romans 8:28", "Matthew 10:29-31"],
-    raises: ["how-do-i-know-gods-will", "do-my-choices-matter"],
+    raises: ["how-do-i-know-gods-will", "do-my-choices-matter", "does-god-change-his-mind"],
     followsFrom: ["why-does-god-allow-suffering"],
     related: ["who-is-the-father", "why-does-god-allow-suffering"],
-    planned: ["Does God change His mind?"],
+    planned: ["What does it mean that God is faithful?"],
     order: 28,
   },
 
@@ -8045,5 +8045,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["why-does-god-allow-suffering", "where-is-god-in-my-pain", "does-god-use-our-failures", "is-it-okay-to-doubt"],
     planned: ["What does God promise those who suffer for Him?"],
     order: 34,
+  },
+
+  {
+    slug: "does-god-change-his-mind",
+    question: "Does God change His mind?",
+    category: "suffering-will",
+    summary:
+      "Scripture says both, without contradiction: God is unchanging in His character and purposes, 'I, the LORD, do not change,' and yet He responds to people, relenting from threatened judgment when they repent and turning in mercy. The Bible uses the language of God 'repenting' to describe His faithful, gracious response to human change, while insisting that His nature, His faithfulness, and His eternal purposes stand firm. God may be trusted never to change.",
+    passages: [
+      {
+        book: "Malachi",
+        chapter: 3,
+        title: "I, the LORD, do not change",
+        lookFor: "God's own declaration of His unchanging nature, and the mercy it implies.",
+        focus: "6",
+      },
+      {
+        book: "Numbers",
+        chapter: 23,
+        title: "God is not a man, that he should repent",
+        lookFor: "Balaam's word of God's faithfulness: He is not fickle like a man; has He said, and will He not do it?",
+        focus: "19",
+      },
+      {
+        book: "Exodus",
+        chapter: 32,
+        title: "The LORD relents at Moses' plea",
+        lookFor: "Moses intercedes after the golden calf, and the text says the LORD repented of the evil He said He would do.",
+        focus: "11-14",
+      },
+      {
+        book: "Jonah",
+        chapter: 3,
+        title: "God relents when Nineveh repents",
+        lookFor: "The threatened judgment was real, and when the people turned, God relented of the disaster He had said He would do.",
+        focus: "1-10",
+      },
+      {
+        book: "James",
+        chapter: 1,
+        title: "The Father of lights, with no variation",
+        lookFor: "Every good gift comes from the Father of lights, with whom there is no variation or turning shadow.",
+        focus: "17",
+      },
+    ],
+    points: [
+      {
+        heading: "God's character and purposes never change",
+        body:
+          "Scripture is emphatic that God is not fickle. He declares, 'For I, Yahweh, don't change; therefore you, sons of Jacob, are not consumed.' James says that with the Father of lights 'can be no variation, nor turning shadow.' And through Balaam comes the ancient word: 'God is not a man, that he should lie, nor the son of man, that he should repent.' God's word stands; His purposes do not shift with the wind like ours.",
+        verses: ["Malachi 3:6", "James 1:17", "Numbers 23:19"],
+      },
+      {
+        heading: "Yet Scripture plainly speaks of God relenting",
+        body:
+          "The Bible is also honest that God responds. At the golden calf, after Moses pleaded, 'Yahweh repented of the evil which he said he would do to his people.' When Nineveh repented in sackcloth and ashes, 'God relented of the disaster which he said he would do to them, and he didn't do it.' And God said of Saul, 'It grieves me that I have set up Saul to be king.' The same Scriptures that say God does not change also show Him turning in response to people.",
+        verses: ["Exodus 32:14", "Jonah 3:10", "1 Samuel 15:11"],
+      },
+      {
+        heading: "They hold together in God's faithful consistency",
+        body:
+          "There is no contradiction, because the God who does not change is the God who has always been merciful to the repentant. Jonah knew this about Him: 'you are a gracious God, and merciful, slow to anger, and abundant in loving kindness, and you relent of doing harm.' The threatened judgment was real; the mercy toward those who turn is equally real and never changes. Because God is unchangingly merciful, He responds to genuine repentance in exactly the way He always has.",
+        verses: ["Jonah 4:2", "Jonah 3:9", "Jonah 3:10", "Exodus 32:12"],
+      },
+      {
+        heading: "God's 'repenting' is not a change as a man changes",
+        body:
+          "The Bible uses the language of God repenting to speak of His real grief and His real turning, but it guards the meaning: 'the Strength of Israel will not lie nor repent; for he is not a man, that he should repent.' When God relents, He is not being persuaded against His nature; He is being consistent with His nature, responding to our change in the way His unchanging character has always promised. We can plead with God, as Moses did, and He hears, because He is a person, not a machine.",
+        verses: ["1 Samuel 15:29", "Numbers 23:19", "Exodus 32:11", "Exodus 32:12"],
+      },
+      {
+        heading: "What this means for us: pray boldly, trust forever",
+        body:
+          "Because God responds, our prayers matter: Moses interceded and the Lord relented, and we are invited to bring our requests to a God who hears. Because God does not change, our hope is secure: 'the counsel of Yahweh stands fast forever,' and 'Jesus Christ is the same yesterday, today, and forever.' He who began a good work in you will complete it. We can pray with boldness to a God who is responsive, and trust without fear a God who is unchanging in His faithfulness and love.",
+        verses: ["Exodus 32:14", "Psalm 33:11", "Hebrews 13:8", "Philippians 1:6", "James 1:17"],
+      },
+    ],
+    keyVerses: ["Malachi 3:6", "Numbers 23:19", "James 1:17", "Jonah 3:10", "Exodus 32:14"],
+    raises: ["how-do-i-pray", "does-god-hear-my-prayers", "is-god-in-control"],
+    followsFrom: ["is-god-in-control", "how-do-i-know-gods-will"],
+    related: ["is-god-in-control", "how-do-i-pray", "does-god-hear-my-prayers", "why-pray-your-will-be-done"],
+    planned: ["If God doesn't change, why does prayer matter?"],
+    order: 35,
   },
 ];
