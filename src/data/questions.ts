@@ -2033,10 +2033,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Romans 8:28", "Genesis 50:20", "2 Corinthians 1:3-4", "Revelation 21:4"],
-    raises: ["is-god-in-control", "where-is-god-in-my-pain"],
+    raises: ["is-god-in-control", "where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well"],
     followsFrom: ["what-does-it-mean-that-the-world-hates-jesus"],
     related: ["who-is-the-father", "where-is-jesus-now", "why-does-god-seem-silent"],
-    planned: ["What does it look like to suffer well?"],
+    planned: ["How do I help a friend who is suffering?"],
     order: 27,
   },
 
@@ -7959,5 +7959,91 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["what-is-repentance", "what-is-the-gospel", "can-gods-grace-really-cover-my-worst-sins", "what-happens-when-i-sin"],
     planned: ["Can someone repent and still struggle with the same sin?"],
     order: 35,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Suffering & God's Will (continued: suffering well)
+  // ------------------------------------------------------------------
+  {
+    slug: "what-does-it-look-like-to-suffer-well",
+    question: "What does it look like to suffer well?",
+    category: "suffering-will",
+    summary:
+      "Suffering well does not mean feeling no pain; it means suffering in a way that glorifies God. Scripture pictures it as entrusting ourselves to our faithful Creator, keeping our eyes on the eternal glory that suffering is working, rejoicing that we share Christ's own sufferings, and drawing near to God in our weakness. It is not a stoic endurance but a trust-filled, prayerful, hope-shaped way of facing pain.",
+    passages: [
+      {
+        book: "1 Peter",
+        chapter: 2,
+        title: "Christ, the example of patient suffering",
+        lookFor: "Christ suffered for us, leaving an example: when reviled he did not revile, but committed himself to the righteous Judge.",
+        focus: "19-25",
+      },
+      {
+        book: "1 Peter",
+        chapter: 4,
+        title: "Do not be surprised at the fiery trial",
+        lookFor: "Rejoice insofar as you share Christ's sufferings, and entrust your soul to the faithful Creator who does good.",
+        focus: "12-19",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 4,
+        title: "An eternal weight of glory",
+        lookFor: "Our light, momentary affliction works for us an eternal weight of glory, as we look at the unseen, not the seen.",
+        focus: "16-18",
+      },
+      {
+        book: "Romans",
+        chapter: 5,
+        title: "Suffering produces endurance, character, and hope",
+        lookFor: "We rejoice in our sufferings, because God uses them to grow an unshakable hope in Christ.",
+        focus: "1-5",
+      },
+      {
+        book: "1 Peter",
+        chapter: 5,
+        title: "Cast your worries on Him",
+        lookFor: "The God of all grace will restore, establish, and strengthen you after you have suffered a little while.",
+        focus: "6-11",
+      },
+    ],
+    points: [
+      {
+        heading: "Suffering well follows Christ's example",
+        body:
+          "Peter roots suffering well in Jesus: 'Christ also suffered for us, leaving you an example, that you should follow his steps.' When He was reviled, He did not revile; when He suffered, He did not threaten, 'but committed himself to him who judges righteously.' It is a gracious thing, mindful of God, to endure unjust suffering patiently. Suffering well looks like Jesus: unretaliating, patient, and entrusting the outcome to God.",
+        verses: ["1 Peter 2:21", "1 Peter 2:23", "1 Peter 2:19"],
+      },
+      {
+        heading: "Do not be surprised; rejoice in sharing Christ's sufferings",
+        body:
+          "Suffering for Christ is not an accident but a sharing in Him. Peter urges, 'don't be astonished at the fiery trial which has come upon you, to test you, as though a strange thing happened to you. But because you are partakers of Christ's sufferings, rejoice; that at the revelation of his glory you also may rejoice with exceeding joy.' And 'if you are insulted for the name of Christ, you are blessed.' Suffering well finds in pain a fellowship with Jesus and a promise of joy.",
+        verses: ["1 Peter 4:12", "1 Peter 4:13", "1 Peter 4:14"],
+      },
+      {
+        heading: "Entrust yourself to the faithful Creator",
+        body:
+          "The end of the posture is surrender to God. Peter says that those who suffer according to God's will 'entrust their souls to him, as to a faithful Creator,' and cast all their worries on Him because He cares for them. The God of all grace, after you have suffered a little while, will himself restore, establish, strengthen, and settle you. Suffering well holds its pain in the hands of a faithful, caring God, and waits for His strengthening.",
+        verses: ["1 Peter 4:19", "1 Peter 5:7", "1 Peter 5:10"],
+      },
+      {
+        heading: "Keep your eyes on the glory it is working",
+        body:
+          "Paul gives suffering an eternal horizon: our outer man is wasting away, but our inner man is renewed day by day, for 'our light affliction, which is for the moment, works for us more and more exceedingly an eternal weight of glory,' as we look not at the seen but at the unseen. He even rejoices in sufferings because they produce endurance, character, and hope that will not disappoint. Suffering well looks through the pain to the glory God is working in us.",
+        verses: ["2 Corinthians 4:16", "2 Corinthians 4:17", "2 Corinthians 4:18", "Romans 5:3", "Romans 5:4"],
+      },
+      {
+        heading: "And it is marked by patience and prayer",
+        body:
+          "Suffering well is a sustained posture, not a single heroic moment. We are called to rejoice in hope, to be patient in tribulation, and to continue steadfastly in prayer. James says to count it all joy when we fall into trials, letting endurance have its perfect work, and to ask God for wisdom. Grace is sufficient in our weakness, and His strength is made perfect there. Suffering well is done one day at a time, in patience, in prayer, and in the daily strength He gives.",
+        verses: ["Romans 12:12", "James 1:2", "James 1:3", "James 1:5", "2 Corinthians 12:9"],
+      },
+    ],
+    keyVerses: ["1 Peter 2:23", "1 Peter 4:12-13", "2 Corinthians 4:17-18", "1 Peter 5:7", "1 Peter 5:10"],
+    raises: ["where-is-god-in-my-pain", "does-god-use-our-failures", "why-does-god-seem-silent"],
+    followsFrom: ["why-does-god-allow-suffering", "what-does-it-mean-that-the-world-hates-jesus"],
+    related: ["why-does-god-allow-suffering", "where-is-god-in-my-pain", "does-god-use-our-failures", "is-it-okay-to-doubt"],
+    planned: ["What does God promise those who suffer for Him?"],
+    order: 34,
   },
 ];
