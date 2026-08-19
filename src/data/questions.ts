@@ -2580,10 +2580,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 28:19", "Romans 6:3-5", "Acts 2:38", "1 Peter 3:21"],
-    raises: [],
+    raises: ["who-should-be-baptized"],
     followsFrom: ["why-do-i-need-the-church"],
     related: ["what-does-it-mean-to-be-born-again", "how-do-i-receive-the-holy-spirit"],
-    planned: ["Should infants be baptized, or only believers?"],
+    planned: ["What is the difference between baptism and the Lord's Supper?"],
     order: 38,
   },
 
@@ -5314,5 +5314,88 @@ export const questions: Question[] = [
     related: ["why-do-i-need-the-church", "what-should-i-do-now-that-im-saved", "what-the-new-life-looks-like"],
     planned: ["What does a church need from its leaders?"],
     order: 40,
+  },
+
+  {
+    slug: "who-should-be-baptized",
+    question: "Should infants be baptized, or only believers?",
+    category: "church",
+    summary:
+      "In the New Testament, baptism is given to those who repent and believe, following a profession of faith: the Gospels and Acts consistently show belief leading to baptism. Some faithful churches, seeing the covenant as one sign given from infancy, baptize the young children of believers as well. This is an honest difference among godly Christians, tried since the early church. Follow Scripture, your church, and a clear conscience, and hold the shared center: baptism belongs to those who belong to Christ.",
+    passages: [
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Repent, and be baptized",
+        lookFor: "The pattern Peter gives: repent and be baptized in the name of Jesus Christ, and those who received his word were baptized that day.",
+        focus: "37-41",
+      },
+      {
+        book: "Acts",
+        chapter: 8,
+        title: "The eunuch's confession",
+        lookFor: "A man reading Scripture is baptized after hearing and believing the good news about Jesus.",
+        focus: "26-39",
+      },
+      {
+        book: "Acts",
+        chapter: 16,
+        title: "The jailer's household",
+        lookFor: "The question, the answer, and the baptism: 'Believe in the Lord Jesus Christ, and you will be saved, you and your household'; he was baptized that very hour.",
+        focus: "25-34",
+      },
+      {
+        book: "Colossians",
+        chapter: 2,
+        title: "Baptism as the new covenant sign",
+        lookFor: "Paul links baptism to circumcision: a circumcision not made with hands, buried with Christ in baptism.",
+        focus: "11-14",
+      },
+      {
+        book: "Genesis",
+        chapter: 17,
+        title: "The old covenant sign given to infants",
+        lookFor: "God's covenant sign was received by children at eight days old: the background some churches draw on for infant baptism.",
+        focus: "9-14",
+      },
+    ],
+    points: [
+      {
+        heading: "In the New Testament, faith leads to baptism",
+        body:
+          "The consistent New Testament picture is a person believing and then being baptized. Peter tells the crowd, 'Repent, and be baptized, every one of you,' and 'those who gladly received his word were baptized.' The eunuch is baptized after believing; the jailer is told to believe in the Lord Jesus and is baptized immediately, he and his whole household, having believed in God. Wherever Acts shows people baptized, faith has come first.",
+        verses: ["Acts 2:38", "Acts 2:41", "Acts 8:36", "Acts 16:31", "Acts 16:33", "Acts 16:34"],
+      },
+      {
+        heading: "Baptism is for disciples",
+        body:
+          "Jesus' command links baptism to discipleship: make disciples of all nations, baptizing them and teaching them to observe all that He commanded. Baptism is the sign given to those who are being made disciples, who have heard the word, believed, and come. In the pages of the New Testament, it is the mark of a person who has entered the school of Christ, not merely a stamp on a birth.",
+        verses: ["Matthew 28:19-20", "Acts 2:41", "Acts 8:36", "Acts 8:38"],
+      },
+      {
+        heading: "The households that were baptized",
+        body:
+          "The Gospels and Acts speak of whole households being baptized: Lydia and her household, the jailer and all his, the household of Stephanas. Faithful readers understand these differently. Some see in them entire families, including little children, baptized with the believing head. Others point out that in the accounts the household 'believed' and 'rejoiced greatly, with all his household, having believed in God,' and so see believers baptized with their believing children and household. The text is read both ways, and has been for centuries.",
+        verses: ["Acts 16:15", "Acts 16:33-34", "1 Corinthians 1:16"],
+      },
+      {
+        heading: "The covenant view: the sign from infancy",
+        body:
+          "Those who baptize infants point to the covenant. In the Old Testament, God's sign was given to children at eight days old, as a token of the covenant with their parents (Genesis 17:11-12). Paul links baptism to circumcision as the New Testament counterpart, a circumcision 'not made with hands' in Christ, and Peter says 'the promise is to you, and to your children.' On this reading, the sign belongs to believers and their covenant children, as circumcision did.",
+        verses: ["Genesis 17:11-12", "Colossians 2:11-12", "Acts 2:39"],
+      },
+      {
+        heading: "How to hold this difference as a family of God",
+        body:
+          "This is a question the church has never settled into one answer, and both sides have loved the Lord and His word. What Scripture does make plain is that the heart of baptism is union with Christ, that its proper recipients are those who belong to Him through faith, and that the patterns of preaching and conversion lead to water. Where faithful churches differ on the timing, Paul's spirit rules: 'Let each man be fully assured in his own mind.' Seek your church's teaching, examine Scripture yourself, and do not make the age of baptism the dividing line of fellowship.",
+        verses: ["Romans 14:5", "Acts 2:38", "Matthew 28:19", "Colossians 2:12"],
+      },
+    ],
+    keyVerses: ["Acts 2:38", "Acts 8:36", "Matthew 28:19", "Colossians 2:11-12", "Genesis 17:11-12"],
+    raises: ["what-is-baptism"],
+    followsFrom: ["what-is-baptism", "why-do-i-need-the-church"],
+    related: ["what-is-baptism", "born-again-and-baptism", "who-is-the-father"],
+    planned: ["Does baptism save a person?"],
+    order: 41,
   },
 ];
