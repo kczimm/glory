@@ -154,10 +154,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 5:3-4", "Matthew 28:19", "1 Corinthians 2:10-11", "Hebrews 9:14"],
-    raises: ["what-is-the-trinity", "how-does-the-spirit-convict-the-world", "holy-spirit-in-the-old-testament"],
+    raises: ["what-is-the-trinity", "how-does-the-spirit-convict-the-world", "holy-spirit-in-the-old-testament", "what-is-the-fruit-of-the-spirit"],
     followsFrom: ["who-is-the-holy-spirit"],
     related: ["is-jesus-really-god"],
-    planned: ["What is the fruit of the Spirit?"],
+    planned: ["What is the difference between the fruit and the works of the flesh?"],
     order: 2,
   },
 
@@ -6407,5 +6407,91 @@ export const questions: Question[] = [
     related: ["who-is-jesus", "why-does-god-allow-suffering", "between-the-cross-and-the-resurrection", "spirits-witness-or-my-own-feelings"],
     planned: ["How do I stand firm when following Jesus costs me?"],
     order: 22,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Holy Spirit (continued: fruit)
+  // ------------------------------------------------------------------
+  {
+    slug: "what-is-the-fruit-of-the-spirit",
+    question: "What is the fruit of the Spirit?",
+    category: "holy-spirit",
+    summary:
+      "The fruit of the Spirit is Christlike character grown in the believer by the Spirit: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control. It is not produced by anxious effort but grows as we walk by the Spirit, abide in Christ, and keep in step with Him. It is the character of the kingdom, and the evidence that the Spirit's life is at work in us.",
+    passages: [
+      {
+        book: "Galatians",
+        chapter: 5,
+        title: "The fruit of the Spirit",
+        lookFor: "Paul's great list: against such fruit there is no law, over against the works of the flesh.",
+        focus: "16-26",
+      },
+      {
+        book: "John",
+        chapter: 15,
+        title: "Abide in me, and bear fruit",
+        lookFor: "The vine and the branches: fruit grows by abiding, not by striving, and it glorifies the Father.",
+        focus: "1-17",
+      },
+      {
+        book: "Romans",
+        chapter: 14,
+        title: "The kingdom is righteousness, peace, and joy in the Spirit",
+        lookFor: "The ways of the kingdom are not food and drink but the Spirit's character: righteousness, peace, and joy.",
+        focus: "17-19",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 13,
+        title: "The greatest of these is love",
+        lookFor: "Love, the first and fullest of the fruit, described in concrete action, the most excellent way.",
+        focus: "1-13",
+      },
+      {
+        book: "Colossians",
+        chapter: 3,
+        title: "Put on the new self",
+        lookFor: "The character of Christ 'put on' like clothes, with love as the bond that holds it all.",
+        focus: "12-17",
+      },
+    ],
+    points: [
+      {
+        heading: "It is the Spirit's work in our character",
+        body:
+          "Paul names it as one fruit with many graces: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control, and adds, 'against such things there is no law.' Paul elsewhere calls it 'the fruit of the Spirit' in all goodness, righteousness, and truth. This is not a to-do list of behaviors we manufacture; it is the character Christ produces through His Spirit in those who belong to Him.",
+        verses: ["Galatians 5:22", "Galatians 5:23", "Ephesians 5:9"],
+      },
+      {
+        heading: "It grows as we abide in Christ",
+        body:
+          "Jesus gave the secret: remain in me, and I in you; 'As the branch can't bear fruit by itself, unless it remains in the vine, so neither can you, unless you remain in me.' Fruit is not forced from a branch; it grows out of a living connection. And Jesus said, 'in this is my Father glorified, that you bear much fruit': the fruit is real, and it glorifies the Father.",
+        verses: ["John 15:4", "John 15:5", "John 15:8", "Galatians 5:25"],
+      },
+      {
+        heading: "Its center is love",
+        body:
+          "The fruit list begins with love, and Paul's whole portrait of it is love in action: love is patient and kind, does not envy, does not brag, is not proud. 'But now faith, hope, and love remain... the greatest of these is love.' Jesus made love the mark of His disciples. All the other graces grow in the soil of love: we are patient and kind because we love.",
+        verses: ["1 Corinthians 13:4", "1 Corinthians 13:13", "John 13:34-35", "Colossians 3:14"],
+      },
+      {
+        heading: "It is cultivated by walking by the Spirit",
+        body:
+          "Paul sets the fruit of the Spirit against the works of the flesh, and then tells us how it grows: 'walk by the Spirit, and you won't fulfill the lust of the flesh,' and 'if we live by the Spirit, let's also walk by the Spirit.' He pictures it as putting on Christlike character like clothes, with love as the binding, and letting the peace of Christ rule in the heart. The Spirit does the growing; our part is to keep in step with Him.",
+        verses: ["Galatians 5:16", "Galatians 5:19", "Galatians 5:21", "Galatians 5:25", "Colossians 3:12", "Colossians 3:14"],
+      },
+      {
+        heading: "It is the character of the kingdom and the evidence of the Spirit",
+        body:
+          "Paul says the kingdom of God is not about eating and drinking, but 'righteousness, peace, and joy in the Holy Spirit.' The fruit is the shape of the life to come, already being formed in us. And it is evidence: where the Spirit is truly at work, this character appears, gently and over time. It is not instant and it is not cheap; it is a life grown by repeated dependence on Jesus, and it is the surest evidence that He is alive in us.",
+        verses: ["Romans 14:17", "Galatians 5:22-23", "John 15:8", "Galatians 5:25"],
+      },
+    ],
+    keyVerses: ["Galatians 5:22-23", "John 15:5", "1 Corinthians 13:13", "Romans 14:17", "Galatians 5:16"],
+    raises: ["discovering-my-gift", "what-are-spiritual-gifts", "how-do-i-fight-sin"],
+    followsFrom: ["is-the-holy-spirit-god", "who-is-the-holy-spirit"],
+    related: ["who-is-the-holy-spirit", "is-the-holy-spirit-god", "what-the-new-life-looks-like", "what-is-the-flesh-versus-the-spirit"],
+    planned: ["How are the fruit of the Spirit and the gifts of the Spirit different?"],
+    order: 23,
   },
 ];
