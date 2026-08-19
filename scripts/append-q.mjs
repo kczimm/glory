@@ -34,6 +34,7 @@ function obj(o, indent) {
   return lines;
 }
 
-const block = obj(q, 0).join("\n");
+const bodyLines = obj(q, 0);
+const block = "  {\n" + bodyLines.join("\n") + "\n  },";
 writeFileSync(path, head + ",\n" + block + "\n];\n");
 console.log("appended", q.slug);
