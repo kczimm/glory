@@ -828,10 +828,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 3:3", "John 1:12-13", "2 Corinthians 5:17", "1 Peter 1:3"],
-    raises: ["how-do-i-receive-the-holy-spirit", "what-happens-when-i-sin"],
+    raises: ["how-do-i-receive-the-holy-spirit", "what-happens-when-i-sin", "born-again-and-baptism"],
     followsFrom: [],
     related: ["how-can-i-be-saved"],
-    planned: ["What is the difference between being born again and being baptized?", "What does the new life look like day to day?"],
+    planned: ["What does the new life look like day to day?"],
     order: 11,
   },
 
@@ -3718,5 +3718,91 @@ export const questions: Question[] = [
     related: ["why-did-jesus-call-himself-son-of-man", "what-happens-when-i-die", "is-god-in-control"],
     planned: ["What is the final judgment, and who will be there?"],
     order: 21,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Our Walk with Him (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "born-again-and-baptism",
+    question: "What is the difference between being born again and being baptized?",
+    category: "our-walk",
+    summary:
+      "Being born again is the Spirit's work of giving new life within; baptism is the water sign of that new life, given to believers, by which they are publicly joined to Christ in His death and resurrection. One is the reality God does in the heart; the other is the sign that declares it to the world.",
+    passages: [
+      {
+        book: "John",
+        chapter: 3,
+        title: "Nicodemus and the new birth",
+        lookFor: "Jesus is clear: the new birth is from above, by water and the Spirit, and it is mysterious, like the wind.",
+        focus: "1-21",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Repent and be baptized",
+        lookFor: "Peter joins them: repent, be baptized in the name of Jesus Christ, and receive the gift of the Holy Spirit.",
+        focus: "37-41",
+      },
+      {
+        book: "Acts",
+        chapter: 8,
+        title: "Samaria believes and is baptized",
+        lookFor: "The pattern in one account: they believe the gospel preached, they are baptized, and the Spirit comes upon them.",
+        focus: "4-17",
+      },
+      {
+        book: "Acts",
+        chapter: 10,
+        title: "Cornelius: the Spirit first, then water",
+        lookFor: "The order is flexible: here the Spirit falls on believers before the water, and Peter baptizes them at once.",
+        focus: "44-48",
+      },
+      {
+        book: "Romans",
+        chapter: 6,
+        title: "Baptized into Christ's death",
+        lookFor: "What baptism means: union with Christ, buried with Him, raised to walk in newness of life.",
+        focus: "1-11",
+      },
+    ],
+    points: [
+      {
+        heading: "The new birth is the Spirit's work in the heart",
+        body:
+          "Jesus told Nicodemus that no one can see or enter the kingdom of God without being born again: born of water and the Spirit, like the wind, unseen and real. John adds that God's children are born not of blood or human will, but of God. Nothing you do produces it; it is a birth you receive.",
+        verses: ["John 3:3", "John 3:5-6", "John 3:8", "John 1:12-13"],
+      },
+      {
+        heading: "Baptism is the sign and confession of that new life",
+        body:
+          "Peter preached: 'Repent, and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of sins, and you will receive the gift of the Holy Spirit.' Those who received the word were baptized the same day. Baptism is the water sign of cleansing and of being joined to Christ: Paul describes it as being buried with Christ and raised to walk in newness of life, and as putting on Christ.",
+        verses: ["Acts 2:38", "Acts 2:41", "Romans 6:3-4", "Colossians 2:12", "Galatians 3:27"],
+      },
+      {
+        heading: "Faith comes first; baptism follows",
+        body:
+          "Everywhere in Acts, faith leads and baptism follows. The Samaritans believed the good news and were baptized; even there, the Spirit came upon them only afterward. The eunuch asked what could keep him from the water after believing; and Cornelius and his household received the Spirit while Peter was still speaking and were baptized immediately after. The order can flex, but the direction never does: baptism is for those who have believed.",
+        verses: ["Acts 8:12", "Acts 8:16", "Acts 8:36", "Acts 10:44", "Acts 10:47-48", "Acts 19:5"],
+      },
+      {
+        heading: "The sign points to the reality, it does not replace it",
+        body:
+          "Peter explains: baptism is a symbol that saves you, 'not the putting away of the filth of the flesh, but the answer of a good conscience toward God.' The water does not wash away sin; it pictures the cleansing Christ gives through faith in His death and resurrection. When Paul speaks of being saved through the washing of regeneration and renewal by the Holy Spirit, it is the Spirit's renewing work, not the water, that washes. The sign is precious; the reality it declares is what saves.",
+        verses: ["1 Peter 3:21", "Romans 6:4", "Titus 3:5"],
+      },
+      {
+        heading: "One new life, one baptism",
+        body:
+          "Paul names the great unities of the faith: 'one Lord, one faith, one baptism.' There are not many ways to be born again, and there is not one baptism for one kind of person and another for a different kind. All who belong to Christ share the same new birth and confess it in the same baptism, into the same body by the same Spirit.",
+        verses: ["Ephesians 4:5", "1 Corinthians 12:13", "Galatians 3:27"],
+      },
+    ],
+    keyVerses: ["John 3:5-6", "Acts 2:38", "Romans 6:3-4", "1 Peter 3:21", "Colossians 2:12"],
+    raises: [],
+    followsFrom: ["what-does-it-mean-to-be-born-again", "how-can-i-be-saved"],
+    related: ["what-is-baptism", "what-does-it-mean-to-be-born-again", "how-do-i-receive-the-holy-spirit"],
+    planned: ["Does baptism wash away sin?"],
+    order: 20,
   },
 ];
