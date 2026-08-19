@@ -2451,10 +2451,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 17:11", "Luke 24:27", "2 Timothy 2:15", "James 1:22"],
-    raises: [],
+    raises: ["daily-habit-of-reading-the-bible"],
     followsFrom: ["can-i-trust-the-bible"],
     related: ["can-i-trust-the-bible", "what-should-i-do-now-that-im-saved"],
-    planned: ["How do I build a daily habit of reading the Bible?"],
+    planned: ["What does it mean to meditate on Scripture?"],
     order: 35,
   },
 
@@ -5146,5 +5146,87 @@ export const questions: Question[] = [
     related: ["can-i-trust-the-bible", "how-should-i-read-the-bible", "is-the-whole-bible-about-jesus", "gods-voice-or-my-own-thoughts"],
     planned: ["What is the difference between the Old and New Testaments?"],
     order: 37,
+  },
+
+  {
+    slug: "daily-habit-of-reading-the-bible",
+    question: "How do I build a daily habit of reading the Bible?",
+    category: "word-of-god",
+    summary:
+      "A daily Bible habit is built on grace, not guilt. Reading the word is a way of knowing Christ, and it grows the way such things do: by small, faithful steps, a simple plan, reading to obey, and company along the way. We read not to earn God's favor but because His word is a lamp to our feet and the voice of the One we love.",
+    passages: [
+      {
+        book: "Psalm",
+        chapter: 1,
+        title: "Delight in the law, day and night",
+        lookFor: "The blessed life begins with delight in God's word, meditated on day and night, like a tree planted by water.",
+      },
+      {
+        book: "Psalm",
+        chapter: 119,
+        title: "Your word is a lamp to my feet",
+        lookFor: "A whole psalm of love for God's word, including hiding it in the heart and finding light for the path.",
+        focus: "9-16",
+      },
+      {
+        book: "Deuteronomy",
+        chapter: 6,
+        title: "These words on your heart",
+        lookFor: "God's words are to live in ordinary rhythms: when you sit, walk, lie down, and rise up. The habit is a whole-life posture.",
+        focus: "1-9",
+      },
+      {
+        book: "Joshua",
+        chapter: 1,
+        title: "Meditate on it day and night, so you do it",
+        lookFor: "God tells Joshua the book must not leave his mouth: meditate and observe it, and his way will prosper.",
+        focus: "1-9",
+      },
+      {
+        book: "Acts",
+        chapter: 17,
+        title: "Examining the Scriptures daily",
+        lookFor: "The Bereans received the word eagerly and examined the Scriptures daily to check what they were taught.",
+        focus: "10-12",
+      },
+    ],
+    points: [
+      {
+        heading: "Reading grows from delight, not from duty alone",
+        body:
+          "The blessed man does not merely schedule the word; he delights in it, meditating on God's law day and night like a tree planted by streams of water. Psalm 119 is a love song to the word: the psalmist hides God's word in his heart so that he might not sin against Him, and calls it a lamp to his feet and a light to his path. A habit rooted in delight lasts; one kept only by guilt does not.",
+        verses: ["Psalm 1:2", "Psalm 119:11", "Psalm 119:105"],
+      },
+      {
+        heading: "Make it small, steady, and woven into your day",
+        body:
+          "Moses told Israel that God's words were to be on their hearts and spoken of when they sat at home and walked along the way, when they lay down and when they rose. Joshua was told to let the book not depart from his mouth, meditating on it day and night. The habit does not need to be long or spectacular; it needs to be faithful, a few minutes every day finding their way into the ordinary turns of your life.",
+        verses: ["Deuteronomy 6:6-7", "Joshua 1:8"],
+      },
+      {
+        heading: "Read with a plan, and let the word build the habit",
+        body:
+          "A simple plan helps: a book at a time, or a passage a day, read slowly and prayed over. What sustains the habit is not resolve alone but the word itself, which is living and active, able to discern the thoughts and intentions of the heart. Jesus said the Scriptures testify about Him, so the more you read with Him in view, the more you will want to keep reading. The habit feeds on the hunger it creates.",
+        verses: ["Hebrews 4:12", "John 5:39"],
+      },
+      {
+        heading: "Read to obey",
+        body:
+          "A Bible read rightly is a Bible lived. James warns against being hearers only, who see their face in the mirror and then forget, and commends the one who looks into the perfect law and continues in it. Paul says Scripture is profitable for teaching, reproof, correction, and training in righteousness, so that the man of God may be complete. Reading changes you when you do what you read.",
+        verses: ["James 1:22-25", "2 Timothy 3:16-17"],
+      },
+      {
+        heading: "Do it with others, and start again tomorrow",
+        body:
+          "The Bereans examined the Scriptures daily, checking what they were taught, and they were commended for it. Hebrews urges us not to neglect gathering together, to stir one another to love and good works. When a day is missed, do not let one miss become a week: start again. The word is not a mountain you must summit in one season; it is a path you walk in, step by step, for a lifetime.",
+        verses: ["Acts 17:11", "Hebrews 10:24-25"],
+      },
+    ],
+    keyVerses: ["Psalm 1:2", "Psalm 119:105", "Joshua 1:8", "Acts 17:11", "James 1:22"],
+    raises: ["how-should-i-read-the-bible", "why-do-bible-translations-differ", "is-the-whole-bible-about-jesus"],
+    followsFrom: ["how-should-i-read-the-bible"],
+    related: ["how-should-i-read-the-bible", "why-do-bible-translations-differ", "can-i-trust-the-bible", "what-the-new-life-looks-like"],
+    planned: ["How can I understand hard passages in the Bible?"],
+    order: 38,
   },
 ];
