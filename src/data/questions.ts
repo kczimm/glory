@@ -1726,10 +1726,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 2:8-9", "Romans 3:24", "2 Corinthians 12:9", "Titus 2:11"],
-    raises: ["what-is-justification"],
+    raises: ["what-is-justification", "does-grace-mean-live-how-i-want"],
     followsFrom: ["what-is-the-gospel"],
     related: ["what-is-the-gospel", "how-can-i-be-saved"],
-    planned: ["Does grace mean I can live however I want?"],
+    planned: ["What is the difference between grace and mercy?"],
     order: 23,
   },
 
@@ -4222,5 +4222,91 @@ export const questions: Question[] = [
     related: ["who-is-the-father", "does-god-use-our-failures", "what-happens-when-i-sin", "can-i-lose-my-salvation"],
     planned: ["How does God discipline His children?"],
     order: 21,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Gospel (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "does-grace-mean-live-how-i-want",
+    question: "Does grace mean I can live however I want?",
+    category: "gospel",
+    summary:
+      "No. Grace does not loosen the grip of sin; it breaks it. The same grace that forgives is the grace that teaches: it frees us from slavery to sin, not from loyalty to Christ. To turn grace into a license to sin is to misunderstand what grace is for.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 6,
+        title: "Shall we continue in sin that grace may abound?",
+        lookFor: "Paul anticipates the very question and answers it bluntly: those who died to sin cannot live in it.",
+        focus: "1-14",
+      },
+      {
+        book: "Titus",
+        chapter: 2,
+        title: "Grace teaches us to say no",
+        lookFor: "Grace is not silent about conduct: it has appeared, bringing salvation, and it instructs us to deny ungodliness.",
+        focus: "11-14",
+      },
+      {
+        book: "Galatians",
+        chapter: 5,
+        title: "Freedom, for love",
+        lookFor: "You were called for freedom, but not freedom for the flesh: freedom that serves one another through love.",
+        focus: "13-26",
+      },
+      {
+        book: "1 Peter",
+        chapter: 2,
+        title: "Free, yet servants of God",
+        lookFor: "Peter says live as free people, but never use your freedom as a cloak for wickedness.",
+        focus: "9-16",
+      },
+      {
+        book: "Jude",
+        chapter: 1,
+        title: "Turning grace into indecency",
+        lookFor: "Jude's warning about those who twist the grace of God into a cover for loose living.",
+        focus: "1-4",
+      },
+    ],
+    points: [
+      {
+        heading: "The question is as old as the gospel",
+        body:
+          "Paul did not wait for someone to ask; he asked it for us: 'What shall we say then? Shall we continue in sin, that grace may abound?' And his answer is flat: 'May it never be! We who died to sin, how could we live in it any longer?' Grace is not a smaller view of sin; it is the power that took us out of sin's grip.",
+        verses: ["Romans 6:1-2", "Romans 6:15"],
+      },
+      {
+        heading: "Grace unites you to Christ, and that union changes everything",
+        body:
+          "Why can't a Christian keep sinning? Because of what grace did: you were baptized into Christ Jesus and into His death, so that the old self was crucified and you are no longer a slave of sin. Christ died for all, 'that those who live should no longer live to themselves, but to him who for their sakes died and rose again.' Under grace does not mean free to sin; it means free from it.",
+        verses: ["Romans 6:2-6", "Romans 6:14", "2 Corinthians 5:15"],
+      },
+      {
+        heading: "Grace is not permission; it is teaching",
+        body:
+          "Paul's own description of grace is anything but permissive: 'the grace of God has appeared, bringing salvation... instructing us... that denying ungodliness and worldly lusts, we would live soberly, righteously, and godly in this present world.' Grace forgives the past and trains the present. And Jude warns against 'turning the grace of our God into indecency.'",
+        verses: ["Titus 2:11-12", "Jude 1:4"],
+      },
+      {
+        heading: "Freedom is for love, not from love",
+        body:
+          "The freedom grace gives is freedom to love, not freedom from God. Paul says you were called to freedom; only do not use your freedom to indulge the flesh, but through love serve one another. Peter echoes it: live as free people, 'and not using your freedom for a cloak of wickedness, but as bondservants of God.' Paul adds a guardrail: 'all things are lawful for me,' but not all things are expedient, and he will not be brought under the power of anything. The freest man in the world is the one who is free to serve.",
+        verses: ["Galatians 5:13", "1 Peter 2:16", "1 Corinthians 6:12"],
+      },
+      {
+        heading: "The same grace forgives and re-creates",
+        body:
+          "Grace is one gift with two motions. It saves you: 'by grace you have been saved through faith.' And the very same grace re-creates you: 'we are his workmanship, created in Christ Jesus for good works, which God prepared before that we would walk in them.' Where sin once shaped you, grace now reshapes you. Forgiven and being remade: that is the life grace actually produces.",
+        verses: ["Ephesians 2:8-10", "2 Corinthians 5:17", "Romans 6:23"],
+      },
+    ],
+    keyVerses: ["Romans 6:1-2", "Romans 6:14", "Titus 2:11-12", "Galatians 5:13", "Ephesians 2:8-10"],
+    raises: [],
+    followsFrom: ["what-is-grace", "what-is-the-gospel"],
+    related: ["what-is-grace", "what-is-justification", "how-do-i-fight-sin", "what-is-repentance"],
+    planned: ["What does it mean to be a slave of righteousness?"],
+    order: 27,
   },
 ];
