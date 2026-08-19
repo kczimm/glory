@@ -72,6 +72,7 @@ out += "## keyVerses\n";
 for (const k of refs(/keyVerses: \[([^\]]*)\]/)) out += "  " + refText(k) + "\n";
 
 const dir = process.env.GLORY_WORKDIR ?? ".";
+void dir;
 const path = `scripts/packs/${target}.md`;
 import { mkdirSync, writeFileSync } from "node:fs";
 mkdirSync("scripts/packs", { recursive: true });

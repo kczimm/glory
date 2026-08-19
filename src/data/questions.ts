@@ -2185,10 +2185,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Psalm 119:105", "Romans 12:2", "James 1:5", "Proverbs 3:5-6"],
-    raises: ["what-if-i-make-the-wrong-decision"],
+    raises: ["what-if-i-make-the-wrong-decision", "does-god-have-one-plan-for-my-marriage"],
     followsFrom: ["is-god-in-control"],
     related: ["what-should-i-do-now-that-im-saved", "who-is-the-holy-spirit"],
-    planned: ["Does God have one specific plan for who I marry?"],
+    planned: ["How do I balance planning with trusting God?"],
     order: 29,
   },
 
@@ -4808,5 +4808,88 @@ export const questions: Question[] = [
     related: ["how-do-i-know-gods-will", "do-my-choices-matter", "does-god-use-our-failures", "is-it-okay-to-doubt"],
     planned: ["How do I recover from a decision I deeply regret?"],
     order: 32,
+  },
+
+  {
+    slug: "does-god-have-one-plan-for-my-marriage",
+    question: "Does God have one specific plan for who I marry?",
+    category: "suffering-will",
+    summary:
+      "The Bible does not teach that there is one hidden 'soulmate' you must discover, as if missing them meant missing God's will. It does teach that marriage is a covenant of great weight, entered with wisdom, holiness, and faith, and it gives clear counsel: marry a believer, marry in the Lord, and build the marriage on Christ. The choice is yours, made in faith under His guidance.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 2,
+        title: "The first marriage",
+        lookFor: "It is not good for the man to be alone; the two become one flesh, a covenant of leaving and cleaving.",
+        focus: "18-25",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 6,
+        title: "Do not be unequally yoked",
+        lookFor: "The clearest single principle for choosing a spouse: what fellowship has light with darkness?",
+        focus: "14-18",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 7,
+        title: "Married only in the Lord",
+        lookFor: "Paul's counsel on marriage and singleness: the freedom and gift of the unmarried, and marriage 'only in the Lord.'",
+        focus: "25-40",
+      },
+      {
+        book: "Proverbs",
+        chapter: 31,
+        title: "The worthy wife",
+        lookFor: "What Scripture holds up in a spouse: character, diligence, kindness, and the fear of the Lord.",
+        focus: "10-31",
+      },
+      {
+        book: "Matthew",
+        chapter: 19,
+        title: "What God has joined together",
+        lookFor: "Jesus upholds the permanence of the marriage covenant, and honors singleness as a gift.",
+        focus: "1-12",
+      },
+    ],
+    points: [
+      {
+        heading: "Scripture gives principles, not a 'soulmate' map",
+        body:
+          "Nowhere does the Bible say God has secretly chosen one specific person for you to find, and that your whole future hinges on finding the exact one. It speaks of marriage in terms of wisdom, character, faithfulness, and covenant. The weight is placed not on decoding a hidden plan but on choosing with wisdom and holiness a person you can honor in the lifelong covenant of marriage.",
+        verses: ["Genesis 2:24", "Proverbs 18:22", "Matthew 19:6"],
+      },
+      {
+        heading: "The clearest command: marry 'in the Lord'",
+        body:
+          "Paul is direct: 'Don't be unequally yoked with unbelievers, for what fellowship have righteousness and iniquity?' And a widow is free to remarry, 'only in the Lord.' Amos asks, 'Do two walk together, unless they have agreed?' There is wisdom for every generation in that limit: a husband and wife are fellow travelers, and if they are walking two different directions, the journey fractures.",
+        verses: ["2 Corinthians 6:14", "1 Corinthians 7:39", "Amos 3:3"],
+      },
+      {
+        heading: "Character is the measure, not romance alone",
+        body:
+          "Scripture's portrait of a good spouse is a portrait of character. The worthy wife is praised not for beauty but because 'charm is deceitful, and beauty is vain; but a woman who fears Yahweh, she shall be praised.' Whoever finds a wife finds a good thing and obtains favor from the Lord. Look for a fearer of God, someone kind, faithful, and wise whom you can love and serve for a lifetime.",
+        verses: ["Proverbs 31:10", "Proverbs 31:30", "Proverbs 18:22"],
+      },
+      {
+        heading: "Marriage is a covenant of weight, not a transaction",
+        body:
+          "Marriage is not a romantic transaction God merely blesses; it is a covenant He joins. 'Therefore a man will leave his father and his mother, and will join with his wife, and they will be one flesh,' and Jesus adds, 'what therefore God has joined together, don't let man tear apart.' Husbands are called to love their wives as Christ loved the church. The 'specific plan' for marriage is to honor this covenant faithfully, with the person you have chosen, in the Lord.",
+        verses: ["Genesis 2:24", "Matthew 19:6", "Ephesians 5:25"],
+      },
+      {
+        heading: "Trust God with the person, and honor Him with the path",
+        body:
+          "Seek first His kingdom, and trust Him with the rest: 'trust in Yahweh with all your heart... and he will make your paths straight.' And remember that marriage is a gift, not the measure of a life: Paul affirms that the unmarried, like the married, can devote themselves to the Lord's things, and that each has his own gift from God. You are not required to solve a divine riddle; you are called to walk faithfully and let God order your steps.",
+        verses: ["Matthew 6:33", "Proverbs 3:5-6", "1 Corinthians 7:32-34", "1 Corinthians 7:7"],
+      },
+    ],
+    keyVerses: ["2 Corinthians 6:14", "1 Corinthians 7:39", "Genesis 2:24", "Proverbs 31:10", "Matthew 19:6"],
+    raises: [],
+    followsFrom: ["how-do-i-know-gods-will", "what-if-i-make-the-wrong-decision"],
+    related: ["how-do-i-know-gods-will", "who-is-the-father", "what-the-new-life-looks-like"],
+    planned: ["What makes a marriage glorify God?"],
+    order: 33,
   },
 ];
