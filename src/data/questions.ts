@@ -897,10 +897,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 10:27-29", "Romans 8:38-39", "Philippians 1:6", "John 6:37-39"],
-    raises: ["spirits-witness-or-my-own-feelings"],
+    raises: ["spirits-witness-or-my-own-feelings", "what-does-it-mean-to-be-sealed-with-the-holy-spirit"],
     followsFrom: ["how-can-i-be-saved"],
     related: ["what-happens-when-i-sin", "who-is-the-holy-spirit", "what-is-faith"],
-    planned: ["What does it mean to be sealed with the Holy Spirit?"],
+    planned: ["What is the difference between assurance and presumption?"],
     order: 12,
   },
 
@@ -6999,5 +6999,88 @@ export const questions: Question[] = [
     related: ["what-does-it-mean-to-be-born-again", "who-is-the-father", "still-my-father-when-i-fail", "spirits-witness-or-my-own-feelings"],
     planned: ["What does it look like to love God as a Father?"],
     order: 27,
+  },
+
+  {
+    slug: "what-does-it-mean-to-be-sealed-with-the-holy-spirit",
+    question: "What does it mean to be sealed with the Holy Spirit?",
+    category: "our-walk",
+    summary:
+      "To be sealed with the Holy Spirit is God's mark of ownership upon us and His guarantee of our inheritance. When we believed the gospel, God sealed us with the Holy Spirit of promise, who is the down payment of what is coming. The seal means we belong to God and are secure until the day of redemption. It is God's doing, not ours, and it is the ground of our assurance.",
+    passages: [
+      {
+        book: "Ephesians",
+        chapter: 1,
+        title: "Sealed with the Spirit of promise",
+        lookFor: "Having believed the gospel, you were sealed with the Holy Spirit of promise, who is the guarantee of the inheritance.",
+        focus: "3-14",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 1,
+        title: "God sealed us and gave us the Spirit",
+        lookFor: "He establishes us in Christ, anoints us, seals us, and puts the Spirit in our hearts as the down payment.",
+        focus: "18-22",
+      },
+      {
+        book: "Ephesians",
+        chapter: 4,
+        title: "Sealed for the day of redemption",
+        lookFor: "Do not grieve the Holy Spirit, in whom you were sealed for the day of redemption.",
+        focus: "25-32",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "The Spirit witnesses with our spirit",
+        lookFor: "The Spirit of adoption testifies that we are God's children, and nothing can separate us from His love.",
+        focus: "1-17",
+      },
+      {
+        book: "2 Timothy",
+        chapter: 2,
+        title: "The firm foundation that stands",
+        lookFor: "The seal on God's foundation: the Lord knows those who are His, and let everyone who names His name depart from unrighteousness.",
+        focus: "19-21",
+      },
+    ],
+    points: [
+      {
+        heading: "The seal is given when we believe the gospel",
+        body:
+          "The seal is bound to faith. Paul writes that in Christ, 'having heard the word of the truth, the Good News of your salvation, in whom, having also believed, you were sealed with the Holy Spirit of promise.' It is not a second stage for the spiritually elite; it is what happens when a person hears and believes the gospel. At the very start of the Christian life, God puts His mark upon the believer.",
+        verses: ["Ephesians 1:13", "Ephesians 1:14", "2 Corinthians 1:21"],
+      },
+      {
+        heading: "It is God's mark of ownership and His guarantee",
+        body:
+          "A seal marks a thing as belonging to its owner, and the Spirit is exactly that. God establishes us in Christ and anoints us, and He 'also sealed us, and gave us the down payment of the Spirit in our hearts.' Paul calls the Spirit 'the pledge of our inheritance, to the redemption of God's own possession.' God has marked us as His, and the Spirit is the first installment of everything He has promised, a guarantee that the rest is coming.",
+        verses: ["2 Corinthians 1:21", "2 Corinthians 1:22", "Ephesians 1:13", "Ephesians 1:14"],
+      },
+      {
+        heading: "Assurance rests on God's act, not our moods",
+        body:
+          "Because the seal is God's doing, our assurance does not rise and fall with our feelings. The Spirit witnesses with our spirit that we are God's children, and the Spirit of adoption enables us to cry 'Abba, Father.' John says that he who believes in the Son of God has the testimony in himself. The Spirit is the constant witness, the down payment already given; assurance is believing what God has done, even when our emotions waver.",
+        verses: ["Romans 8:15", "Romans 8:16", "1 John 5:10", "Romans 8:38-39"],
+      },
+      {
+        heading: "The seal can be grieved",
+        body:
+          "Paul's warning keeps the seal from presumption: 'Don't grieve the Holy Spirit of God, in whom you were sealed for the day of redemption.' The seal is not a license to sin carelessly; it is the presence of a Person who lives in us and can be grieved by what we do. The same Spirit who is the guarantee of our redemption is the Spirit we can wound, and the day of redemption that secures us is also the day toward which we are to live in holiness.",
+        verses: ["Ephesians 4:30", "2 Timothy 2:19", "Romans 8:1"],
+      },
+      {
+        heading: "So we are secure, and we live toward the day",
+        body:
+          "The ground of our security is laid by God: His firm foundation stands, having this seal, 'the Lord knows those who are his.' For those in Christ there is no condemnation, and nothing can separate us from the love of God. And precisely because we are sealed for the day of redemption, we live expectantly and carefully, bearing the mark of Him who owns us until the day He brings us fully home. The seal is the promise that the redemption is certain, and it is already begun.",
+        verses: ["2 Timothy 2:19", "Romans 8:1", "Romans 8:38-39", "Ephesians 1:14", "Ephesians 4:30"],
+      },
+    ],
+    keyVerses: ["Ephesians 1:13-14", "2 Corinthians 1:21-22", "Ephesians 4:30", "Romans 8:16", "2 Timothy 2:19"],
+    raises: ["spirits-witness-or-my-own-feelings", "can-i-lose-my-salvation"],
+    followsFrom: ["can-i-lose-my-salvation", "how-do-i-receive-the-holy-spirit"],
+    related: ["can-i-lose-my-salvation", "spirits-witness-or-my-own-feelings", "what-does-it-mean-to-be-a-child-of-god", "who-is-the-holy-spirit"],
+    planned: ["What does it mean to grieve the Holy Spirit?"],
+    order: 28,
   },
 ];
