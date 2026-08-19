@@ -1878,10 +1878,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Hebrews 11:1", "Romans 10:17", "John 6:29", "2 Timothy 1:12"],
-    raises: ["faith-or-works", "what-does-it-mean-to-be-born-again"],
+    raises: ["faith-or-works", "what-does-it-mean-to-be-born-again", "is-it-okay-to-doubt"],
     followsFrom: ["can-i-lose-my-salvation", "what-is-justification"],
     related: ["faith-or-works", "how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
-    planned: ["Is it okay to have doubts sometimes?"],
+    planned: ["What does it mean to walk by faith and not by sight?"],
     order: 25,
   },
 
@@ -4391,5 +4391,88 @@ export const questions: Question[] = [
     related: ["what-is-justification", "faith-or-works", "how-can-i-be-saved", "what-is-grace"],
     planned: ["If I am already credited righteous, why does obedience matter?"],
     order: 28,
+  },
+
+  {
+    slug: "is-it-okay-to-doubt",
+    question: "Is it okay to have doubts sometimes?",
+    category: "gospel",
+    summary:
+      "Yes. Doubt is not the same as unbelief: unbelief is a settled refusal of Christ, while doubt is a question that still wants Him. Scripture shows believers struggling, asking, even demanding answers, and Jesus met them with gentleness, not distance. Bring your doubts to Him, and hold the promise while the feelings waver.",
+    passages: [
+      {
+        book: "John",
+        chapter: 20,
+        title: "Thomas doubts, and believes",
+        lookFor: "Thomas refuses to believe without seeing, and Jesus meets him where he is and blesses those who believe without seeing.",
+        focus: "24-31",
+      },
+      {
+        book: "Mark",
+        chapter: 9,
+        title: "Help my unbelief",
+        lookFor: "A father's honest cry: 'I believe. Help my unbelief!' and Jesus' ready answer to his boy.",
+        focus: "14-29",
+      },
+      {
+        book: "Matthew",
+        chapter: 11,
+        title: "John's question from prison",
+        lookFor: "Even the Baptist, who had pointed to Jesus, asks if He is the Coming One, and Jesus answers with grace.",
+        focus: "2-19",
+      },
+      {
+        book: "Psalm",
+        chapter: 73,
+        title: "Asaph's struggle with God's ways",
+        lookFor: "A psalmist's honest doubt about the prosperity of the wicked, resolved only when he goes into the sanctuary.",
+        focus: "1-28",
+      },
+      {
+        book: "2 Timothy",
+        chapter: 1,
+        title: "I know whom I have believed",
+        lookFor: "Paul's confidence: not that he knows all the answers, but that he knows the One he has trusted.",
+        focus: "6-14",
+      },
+    ],
+    points: [
+      {
+        heading: "Doubt is not the same as unbelief",
+        body:
+          "Unbelief is a settled decision that Christ is not worth trusting; doubt is an open question that is still reaching for Him. The father in Mark 9 brought both at once: 'I believe. Help my unbelief!' and Jesus did not scold him for the honesty; He healed his son. A struggling faith is still faith, so long as it is still looking to Christ.",
+        verses: ["Mark 9:24", "Mark 9:22-23"],
+      },
+      {
+        heading: "Honest doubt brought to Jesus is welcomed",
+        body:
+          "Thomas demanded to see the nail marks, yet he stayed with the disciples, and Jesus came to him and offered exactly what he asked for. Even John the Baptist, from a prison cell, asked through his disciples, 'Are you he who comes, or should we look for another?' Jesus answered by pointing to His works, and blessed the one who finds no occasion for stumbling in Him. Doubt is safe in His hands.",
+        verses: ["John 20:27", "John 20:29", "Matthew 11:3", "Matthew 11:6"],
+      },
+      {
+        heading: "God is not threatened by our questions",
+        body:
+          "Asaph ended envious and confused about why the wicked prosper, and he said plainly that his feet had almost slipped. Yet he brought it into the sanctuary, into the presence of God, and there his understanding cleared. James tells the one who lacks wisdom to ask God, who gives generously without reproach. Bring the hard questions to Him rather than burying them or letting them drive you away.",
+        verses: ["Psalm 73:2", "Psalm 73:16-17", "James 1:5"],
+      },
+      {
+        heading: "Faith finally rests on a Person, not on answers",
+        body:
+          "Paul's confidence was not that he had resolved every question but that he knew the One he had trusted: 'I know him whom I have believed, and I am persuaded that he is able to guard that which I have committed to him.' Faith is assurance of things hoped for: it holds to Christ when the answers are slow. And nothing, Paul insists, can separate us from His love.",
+        verses: ["2 Timothy 1:12", "Hebrews 11:1", "Romans 8:38-39", "Proverbs 3:5"],
+      },
+      {
+        heading: "The danger is a doubt that refuses Christ, not one that seeks Him",
+        body:
+          "The warning in Scripture is not against asking questions; it is against a double-mindedness that will not commit, a faith tossed like a wave. Doubt that drives you back to Christ is an invitation; doubt that keeps you away from Him is a danger to resist. Keep returning to the Word, to the Body of Christ, and to His table, and bring the wavering heart to the One who strengthens the weak, holding the faith that, though tested by fire, is more precious than gold.",
+        verses: ["James 1:6", "Jude 1:22", "1 Peter 1:6-7"],
+      },
+    ],
+    keyVerses: ["Mark 9:24", "John 20:29", "Matthew 11:6", "2 Timothy 1:12", "Hebrews 11:1"],
+    raises: ["why-does-god-seem-silent", "what-is-faith"],
+    followsFrom: ["what-is-faith", "can-i-lose-my-salvation"],
+    related: ["what-is-faith", "can-i-lose-my-salvation", "spirits-witness-or-my-own-feelings", "why-does-god-seem-silent"],
+    planned: ["Why does God seem to hide Himself sometimes?"],
+    order: 29,
   },
 ];
