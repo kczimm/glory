@@ -2185,10 +2185,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Psalm 119:105", "Romans 12:2", "James 1:5", "Proverbs 3:5-6"],
-    raises: ["what-if-i-make-the-wrong-decision", "does-god-have-one-plan-for-my-marriage"],
+    raises: ["what-if-i-make-the-wrong-decision", "does-god-have-one-plan-for-my-marriage", "how-do-i-balance-planning-with-trusting-god"],
     followsFrom: ["is-god-in-control"],
     related: ["what-should-i-do-now-that-im-saved", "who-is-the-holy-spirit"],
-    planned: ["How do I balance planning with trusting God?"],
+    planned: ["What is the difference between wise planning and worry?"],
     order: 29,
   },
 
@@ -8128,5 +8128,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["is-god-in-control", "how-do-i-pray", "does-god-hear-my-prayers", "why-pray-your-will-be-done"],
     planned: ["If God doesn't change, why does prayer matter?"],
     order: 35,
+  },
+
+  {
+    slug: "how-do-i-balance-planning-with-trusting-god",
+    question: "How do I balance planning with trusting God?",
+    category: "suffering-will",
+    summary:
+      "Scripture calls us to the balance of faithful planning and humble trust: make plans, work diligently, and use wisdom, while holding our plans loosely before a sovereign God, saying with James, 'if the Lord wills.' Planning without trust becomes anxious control; trust without planning becomes lazy passivity. God honors faithful stewardship and directs the steps of those who commit their way to Him.",
+    passages: [
+      {
+        book: "James",
+        chapter: 4,
+        title: "If the Lord wills",
+        lookFor: "James warns against planning as if the future were ours, and shows how to plan humbly: 'if the Lord wills.'",
+        focus: "13-17",
+      },
+      {
+        book: "Proverbs",
+        chapter: 16,
+        title: "Commit your works to the LORD",
+        lookFor: "Plan, but commit your deeds to God, for a man plans his course yet the LORD directs his steps.",
+        focus: "1-9",
+      },
+      {
+        book: "Psalm",
+        chapter: 37,
+        title: "Commit your way to the LORD",
+        lookFor: "Delight in the LORD and commit your way to Him, trusting Him to act.",
+        focus: "1-9",
+      },
+      {
+        book: "Matthew",
+        chapter: 6,
+        title: "Seek first the kingdom",
+        lookFor: "Do not be anxious about tomorrow; seek first God's kingdom and His righteousness, and trust Him for each day.",
+        focus: "25-34",
+      },
+      {
+        book: "Luke",
+        chapter: 12,
+        title: "The fool who stored up treasure",
+        lookFor: "The prosperous man who planned for years and forgot God is called a fool: plans, yes, but not as though life were ours.",
+        focus: "16-34",
+      },
+    ],
+    points: [
+      {
+        heading: "Plan as a faithful steward, with open hands",
+        body:
+          "James does not forbid planning; he forbids the spirit that plans as though the future were guaranteed and self-made. He warns those who say, 'today or tomorrow we'll go into this city... trade, and make a profit,' because 'you don't know what your life will be like tomorrow.' The right way is to say, 'If the Lord wills, we will both live, and do this or that.' Plan well, and hold the plan in an open hand before God.",
+        verses: ["James 4:13", "James 4:14", "James 4:15"],
+      },
+      {
+        heading: "Commit your work to the Lord",
+        body:
+          "Planning is done in dependence. The proverb promises, 'Commit your deeds to Yahweh, and your plans shall succeed,' and 'a man's heart plans his course, but Yahweh directs his steps.' David sang, 'Commit your way to Yahweh. Trust also in him, and he will do this.' We are not to abandon planning for passivity; we are to plan within a deeper trust, offering our plans to the God who directs and overrules.",
+        verses: ["Proverbs 16:3", "Proverbs 16:9", "Psalm 37:5", "Proverbs 19:21"],
+      },
+      {
+        heading: "But do not boast as though the future were yours",
+        body:
+          "The warning is against presumption. James calls such confident planning what it is when God is left out: 'you glory in your boasting. All such boasting is evil.' And Jesus told of a man who had abundant crops and planned years of ease, saying to his soul, 'you have many goods laid up for many years,' only to hear, 'You foolish one, tonight your soul is required of you.' We plan, and we remember that we do not own tomorrow.",
+        verses: ["James 4:16", "Luke 12:19", "Luke 12:20", "James 4:14"],
+      },
+      {
+        heading: "Seek first the kingdom, not anxious security",
+        body:
+          "Trust keeps planning from becoming worry. Jesus tells us not to be anxious about what we will eat, drink, or wear, 'for your heavenly Father knows that you need all these things. But seek first God's Kingdom, and his righteousness; and all these things will be given to you as well,' and not to be anxious about tomorrow, for each day has enough of its own trouble. We work and plan, but our security is in the Father, not in our arrangements.",
+        verses: ["Matthew 6:33", "Matthew 6:34", "Matthew 6:8", "Luke 12:29"],
+      },
+      {
+        heading: "The wise balance: work hard, trust fully",
+        body:
+          "The balance is not a compromise; it is wholehearted in both directions. Work with all your might, as the Preacher urges, whatever your hand finds to do, because that is the stewardship God gives. Trust in the Lord with all your heart and do not lean on your own understanding, and in all your ways acknowledge Him. Let your requests be made known to God in everything, and do not set your hope on uncertain riches but on the living God. Plan diligently, pray constantly, and rest in the God who holds all steps.",
+        verses: ["Ecclesiastes 9:10", "Proverbs 3:5", "Proverbs 3:6", "Philippians 4:6", "1 Timothy 6:17"],
+      },
+    ],
+    keyVerses: ["James 4:15", "Proverbs 16:3", "Proverbs 16:9", "Matthew 6:33", "Psalm 37:5"],
+    raises: ["how-do-i-know-gods-will", "is-god-in-control", "do-my-choices-matter"],
+    followsFrom: ["how-do-i-know-gods-will", "does-god-change-his-mind"],
+    related: ["how-do-i-know-gods-will", "does-god-change-his-mind", "what-if-i-make-the-wrong-decision", "do-my-choices-matter"],
+    planned: ["What if my plans keep failing?"],
+    order: 36,
   },
 ];
