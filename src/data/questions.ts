@@ -1118,10 +1118,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 12:4-7", "1 Corinthians 12:11", "1 Peter 4:10", "1 Corinthians 13:13"],
-    raises: ["are-sign-gifts-active"],
+    raises: ["are-sign-gifts-active", "discovering-my-gift"],
     followsFrom: ["how-do-i-receive-the-holy-spirit"],
     related: ["who-is-the-holy-spirit", "how-does-the-spirit-convict-the-world"],
-    planned: ["How do I discover my gift?"],
+    planned: ["What is the difference between a talent and a spiritual gift?"],
     order: 15,
   },
 
@@ -6238,5 +6238,88 @@ export const questions: Question[] = [
     related: ["what-are-spiritual-gifts", "how-do-i-know-the-spirit-is-leading-me", "how-does-the-spirit-convict-the-world", "is-it-okay-to-doubt"],
     planned: ["How can I test a claimed prophecy or miracle?"],
     order: 21,
+  },
+
+  {
+    slug: "discovering-my-gift",
+    question: "How do I discover my gift?",
+    category: "holy-spirit",
+    summary:
+      "You discover your gift the way God has always grown His servants: by serving, with the Body, in love. The New Testament says every believer has received a gift to use for the good of all, that the gifts are diverse and mostly ordinary, and that they are given to build up the church. Look at what Scripture names, see what God has already placed in your hands, serve where you can, and let the Body of Christ affirm what it sees in you. Gift discovery grows out of faithfulness, not revelation.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 12,
+        title: "Diverse gifts, each used in service",
+        lookFor: "Paul lists the practical gifts after the call to surrender: prophecy, service, teaching, exhorting, giving, leading, showing mercy, each used soberly.",
+        focus: "1-8",
+      },
+      {
+        book: "1 Peter",
+        chapter: 4,
+        title: "Good stewards of God's varied grace",
+        lookFor: "Each has received a gift; use it to serve one another, that in all things God may be glorified.",
+        focus: "7-11",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 12,
+        title: "One Spirit, many gifts, one body",
+        lookFor: "The Spirit distributes to each as He wills, and each member is placed in the body just as God desired.",
+        focus: "1-11",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 14,
+        title: "Seek to build up the church",
+        lookFor: "Whatever gift you pursue, the goal is the same: 'seek that you may abound to the building up of the assembly.'",
+        focus: "1-12",
+      },
+      {
+        book: "Matthew",
+        chapter: 25,
+        title: "The talents put to work",
+        lookFor: "The master gives each servant something and expects them to use it; faithfulness over a little is what is rewarded.",
+        focus: "14-30",
+      },
+    ],
+    points: [
+      {
+        heading: "Every believer has received a gift",
+        body:
+          "Peter assumes it: 'As each has received a gift, employ it in serving one another, as good managers of the grace of God in its various forms.' Paul says to each one is given the manifestation of the Spirit for the common good, and the same Spirit distributes to each one separately as He wills. Even receipt of the gift is grace: 'to each one of us was the grace given according to the measure of the gift of Christ.' You are not a bystander in the body.",
+        verses: ["1 Peter 4:10", "1 Corinthians 12:7", "1 Corinthians 12:11", "Ephesians 4:7"],
+      },
+      {
+        heading: "The gifts are diverse and mostly ordinary",
+        body:
+          "When Paul lists the gifts, most of them are not spectacular: prophecy, serving, teaching, exhorting, giving, leading, and showing mercy. In the longer list, alongside miracles and tongues, he includes helps and governments. God places each member in the body just as He desires, and most of us are placed in humble, daily service. So look where God has already fitted you, in capacities and opportunities He has given, not only at the flashy.",
+        verses: ["Romans 12:6-8", "1 Corinthians 12:28", "1 Corinthians 12:18"],
+      },
+      {
+        heading: "Gifts are for building up, not for display",
+        body:
+          "The measure of a gift is what it does for others. Paul says, since you are zealous for spiritual gifts, 'seek that you may abound to the building up of the assembly,' and Peter says that whether one speaks or serves, the aim is 'that in all things God may be glorified through Jesus Christ.' A gift is a channel for grace, not a trophy for the self. The test of your gift is not how impressive it looks but how much it serves.",
+        verses: ["1 Corinthians 14:12", "1 Corinthians 12:7", "1 Peter 4:11"],
+      },
+      {
+        heading: "You find it by serving",
+        body:
+          "Gift discovery is not primarily a revelation; it is discovery in action. In the parable, the master gave each servant something and then expected faithfulness with it; the faithful servant, not the idle one, heard 'well done, good and faithful servant.' Serve where the need is, use what is in your hand, try what Scripture names, and let the Body of Christ confirm what it sees in you. Gifts become known as they are used.",
+        verses: ["Matthew 25:21", "Romans 12:6", "1 Peter 4:10"],
+      },
+      {
+        heading: "Love and character are the foundation",
+        body:
+          "Above all things, Peter says, be earnest in your love, for love covers a multitude of sins. The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control, and Paul's whole chapter on gifts ends by showing the still more excellent way of love. A gift without love is nothing. Pursue Christlikeness, and your gift will find its proper place in a life that loves.",
+        verses: ["1 Peter 4:8", "Galatians 5:22-23", "1 Corinthians 13:13", "1 Corinthians 14:1"],
+      },
+    ],
+    keyVerses: ["1 Peter 4:10", "Romans 12:6-8", "1 Corinthians 12:7", "1 Corinthians 12:11", "1 Corinthians 14:12"],
+    raises: ["what-are-spiritual-gifts", "are-sign-gifts-active"],
+    followsFrom: ["what-are-spiritual-gifts", "how-do-i-receive-the-holy-spirit"],
+    related: ["what-are-spiritual-gifts", "are-sign-gifts-active", "what-the-new-life-looks-like", "who-is-the-holy-spirit"],
+    planned: ["How do I grow in the fruit of the Spirit?"],
+    order: 22,
   },
 ];
