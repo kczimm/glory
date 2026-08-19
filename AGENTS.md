@@ -37,6 +37,13 @@ Next.js 16 (App Router) + TypeScript + Tailwind CSS v4.
 - `src/components/` — UI: `Nav`, `Footer`, `VerseCard`, `ChapterReader`, `QuestionCard`, `SearchBox`
 - `src/data/` — the content layer (typed, the heart of the app)
 - `scripts/fetch-bible.mjs` — vendors the full WEB Bible offline
+- **LAN dev gotcha**: if the dev server serves pages but clicks/interactivity
+  do nothing on a phone, it is Next's dev-only cross-origin guard. Requests
+  come with the phone's Host header, and `allowedDevOrigins` in
+  `next.config.ts` must list that host as a **bare hostname** (no scheme/port,
+  e.g. `192.168.1.149`). Check the server log for "Blocked cross-origin
+  request" — it means exactly this. `npm run start:lan` (production) has no
+  such guard.
 
 In Next 16, route `params` is a **Promise** — `await params` before reading it.
 
