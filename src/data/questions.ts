@@ -1422,10 +1422,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 6:11-14", "Galatians 5:16", "Colossians 3:5", "Hebrews 4:16"],
-    raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from"],
+raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from", "what-is-the-difference-between-testing-and-temptation"],
     followsFrom: ["what-happens-when-i-sin", "what-should-i-do-now-that-im-saved"],
     related: ["what-happens-when-i-sin"],
-    planned: ["What is the difference between testing and temptation?"],
+    planned: ["How do trials make us more like Christ?"],
     order: 19,
   },
 
@@ -7420,5 +7420,58 @@ export const questions: Question[] = [
     related: ["what-is-the-gospel", "what-should-i-do-now-that-im-saved", "is-it-okay-to-doubt", "why-do-i-need-the-church"],
     planned: ["How do I respond when someone rejects the gospel?"],
     order: 30,
+  },
+
+  {
+    slug: "what-is-the-difference-between-testing-and-temptation",
+    question: "What is the difference between testing and temptation?",
+    category: "our-walk",
+    summary:
+      "Scripture uses related but distinct words: testing is what God allows to prove and strengthen us, while temptation is the enticement to sin, which never comes from God. James makes the difference explicit: God tempts no one. The same difficulty can be, by grace, a test that builds endurance, or, if yielded to, a temptation that becomes sin. We can face trials with joy and resist temptation by relying on God's faithfulness and His way of escape.",
+    passages: [
+      { book: "James", chapter: 1, title: "Trials and temptation", lookFor: "James separates the two: count it all joy in trials, and never blame God for temptation, for He tempts no one.", focus: "1-18" },
+      { book: "Genesis", chapter: 22, title: "God tested Abraham", lookFor: "The clearest old testament test: God tests Abraham by asking him to offer Isaac, and Abraham's faith is proved.", focus: "1-19" },
+      { book: "Deuteronomy", chapter: 8, title: "Testing in the wilderness", lookFor: "God led Israel forty years to humble and test them, to know what was in their hearts.", focus: "1-10" },
+      { book: "1 Peter", chapter: 1, title: "Trials prove your faith", lookFor: "The testing of your faith, more precious than gold, is meant to praise and honor Christ.", focus: "3-9" },
+      { book: "1 Corinthians", chapter: 10, title: "The way of escape", lookFor: "Temptation is common and God is faithful: He will not allow beyond what you can bear, and provides the way out.", focus: "1-13" },
+    ],
+    points: [
+      {
+        heading: "Testings build endurance",
+        body:
+          "James sets the frame for trials: 'Count it all joy, my brothers, when you fall into various temptations, knowing that the testing of your faith produces endurance.' The word here is not enticement to sin but a proving. Peter says trials come 'that the proof of your faith... may be found to result in praise, glory, and honor at the revelation of Jesus Christ.' God allows trials so that our faith, tested, would be shown real and become strong.",
+        verses: ["James 1:2", "James 1:3", "1 Peter 1:6", "1 Peter 1:7"],
+      },
+      {
+        heading: "Temptation entices toward sin",
+        body:
+          "Temptation has the opposite aim. James describes it from the inside: 'each one is tempted, when he is drawn away by his own lust, and enticed. Then the lust, when it has conceived, bears sin; and the sin, when it is full grown, produces death.' Where the test is meant to prove us toward good, temptation is the bait toward evil, and its end, left unmet, is death.",
+        verses: ["James 1:14", "James 1:15"],
+      },
+      {
+        heading: "God never tempts, but He does test",
+        body:
+          "James draws the hard line: 'Let no man say when he is tempted, I am tempted by God, for God can't be tempted by evil, and he himself tempts no one.' Yet Scripture is equally clear that God tests: 'God tested Abraham,' and Moses recalled how God led Israel through the wilderness 'that he might humble you, to prove you, to know what was in your heart.' The test comes from God's hand for our good; temptation rises from our own desires and the enemy who feeds them.",
+        verses: ["James 1:13", "Genesis 22:1", "Deuteronomy 8:2", "Hebrews 11:17"],
+      },
+      {
+        heading: "The same moment can be either",
+        body:
+          "A hardship is not automatically one or the other; it becomes what we do with it. Peter urges the fiery trial not to be treated as strange, 'to test you' and show faith real. Paul warns that 'no temptation has taken you except what is common to man,' and promises God will not allow beyond what you can bear and will make the way of escape. The enemy turns what God means as a test into an occasion of temptation; God turns even the temptation into a place where His faithfulness is seen.",
+        verses: ["1 Peter 4:12", "1 Corinthians 10:13", "1 Peter 1:7"],
+      },
+      {
+        heading: "So we meet trials with joy and resist temptation",
+        body:
+          "Because a trial is a testing that builds endurance, we can 'count it all joy' and ask for the wisdom to pass through it. Because temptation is enticement to sin, we resist the devil, draw near to God, and trust the way of escape God provides. Abraham, when he was tested, trusted that God could raise even the dead. The trial and the temptation may touch the same moment, but the responses differ: joy and perseverance in the testing, resistance and dependence in the temptation.",
+        verses: ["James 1:2", "James 1:5", "James 4:7", "1 Corinthians 10:13", "Hebrews 11:19"],
+      },
+    ],
+    keyVerses: ["James 1:2-3", "James 1:13", "James 1:14-15", "Genesis 22:1", "1 Corinthians 10:13"],
+    raises: ["where-does-temptation-come-from", "how-do-i-fight-sin", "why-does-god-allow-suffering"],
+    followsFrom: ["how-do-i-fight-sin", "where-does-temptation-come-from"],
+    related: ["how-do-i-fight-sin", "where-does-temptation-come-from", "why-does-god-allow-suffering", "is-it-okay-to-doubt"],
+    planned: ["How do trials make us more like Christ?"],
+    order: 31,
   },
 ];
