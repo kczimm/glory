@@ -1577,10 +1577,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Ephesians 2:8-10", "Romans 4:5", "James 2:17", "James 2:26", "Galatians 5:6"],
-    raises: ["what-is-justification"],
+    raises: ["what-is-justification", "what-is-sanctification-and-how-does-it-happen"],
     followsFrom: ["how-can-i-be-saved"],
     related: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again", "what-should-i-do-now-that-im-saved", "what-is-the-gospel"],
-    planned: ["What is sanctification, and how does it happen?"],
+    planned: ["How does growth in holiness happen over time?"],
     order: 21,
   },
 
@@ -7488,5 +7488,58 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["who-is-the-father", "still-my-father-when-i-fail", "what-is-the-trinity", "can-gods-grace-really-cover-my-worst-sins"],
     planned: ["How do I experience the love of God day to day?"],
     order: 22,
+  },
+
+  {
+    slug: "what-is-sanctification-and-how-does-it-happen",
+    question: "What is sanctification, and how does it happen?",
+    category: "our-walk",
+    summary:
+      "Sanctification is the lifelong work of the Holy Spirit by which God makes us progressively holy, conforming us to the likeness of Christ. It is rooted in our union with Christ, who became to us sanctification; it is worked in us by the Spirit through the Word; and it calls for our active participation. By grace, God sets us apart and is at work changing us from one degree of glory to another, so that our lives increasingly reflect our holy calling.",
+    passages: [
+      { book: "1 Thessalonians", chapter: 4, title: "This is the will of God: your sanctification", lookFor: "God's will is our holiness, and the path is spelled out in how we live, especially in purity.", focus: "1-8" },
+      { book: "1 Thessalonians", chapter: 5, title: "Sanctify you completely", lookFor: "The prayer that the God of peace would sanctify us entirely, spirit, soul, and body, blameless.", focus: "16-24" },
+      { book: "2 Corinthians", chapter: 3, title: "Transformed into the same image", lookFor: "With unveiled face we behold the glory of the Lord and are transformed into the same image, from glory to glory, by the Spirit.", focus: "12-18" },
+      { book: "1 Peter", chapter: 1, title: "You shall be holy, for I am holy", lookFor: "As He who called you is holy, be holy in all your behavior.", focus: "13-16" },
+      { book: "John", chapter: 17, title: "Sanctify them in your truth", lookFor: "Jesus prays for His people to be sanctified and set apart by the truth of His word.", focus: "14-19" },
+    ],
+    points: [
+      {
+        heading: "Sanctification is God's will and His setting-apart",
+        body:
+          "Paul does not present holiness as an optional extra: 'this is the will of God: your sanctification.' And he prays that 'the God of peace himself sanctify you completely,' that your whole spirit, soul, and body be kept blameless. Sanctification begins as God's own purpose and action: He sets His people apart as His own and intends to make them holy, a work He does rather than a project we volunteer for.",
+        verses: ["1 Thessalonians 4:3", "1 Thessalonians 5:23"],
+      },
+      {
+        heading: "It flows from our union with Christ",
+        body:
+          "Our holiness is not something we import into our relationship with Christ; it grows out of it. Paul says Christ 'was made to us wisdom from God, and righteousness and sanctification, and redemption,' and Hebrews adds that both He who sanctifies and those who are sanctified are all of one. Because we belong to the holy Christ, we are being made holy; sanctification is the working out of our union with Him.",
+        verses: ["1 Corinthians 1:30", "Hebrews 2:11"],
+      },
+      {
+        heading: "It is the Spirit's work of transformation",
+        body:
+          "Sanctification is the Spirit's labor in us. Paul writes that 'we all, with unveiled face seeing the glory of the Lord as in a mirror, are transformed into the same image from glory to glory, even as from the Lord, the Spirit.' God's purpose is that we be 'conformed to the image of his Son.' Little by little, degree by degree, the Spirit is reshaping us into the likeness of Christ.",
+        verses: ["2 Corinthians 3:18", "Romans 8:29"],
+      },
+      {
+        heading: "It happens through the Word and prayer",
+        body:
+          "Jesus names the instrument: 'Sanctify them in your truth. Your word is truth.' Paul pictures Christ cleansing His own by 'the washing of water with the word.' And the calling is urgent and concrete: 'as he who called you is holy, you yourselves also be holy in all of your behavior; because it is written, you shall be holy, for I am holy.' The Word is how the Spirit works holiness into daily life.",
+        verses: ["John 17:17", "Ephesians 5:26", "1 Peter 1:15", "1 Peter 1:16"],
+      },
+      {
+        heading: "And it calls for our participation",
+        body:
+          "Sanctification is neither passive nor self-powered. Paul joins the two together: 'work out your own salvation with fear and trembling, for it is God who works in you both to will and to work, for his good pleasure.' We are to follow after 'the sanctification without which no man will see the Lord.' The growth is God's work in us, and our calling is to respond: to pursue it, to live it out, and to keep walking in the holiness He gives.",
+        verses: ["Philippians 2:12", "Philippians 2:13", "Hebrews 12:14"],
+      },
+    ],
+    keyVerses: ["1 Thessalonians 4:3", "1 Corinthians 1:30", "2 Corinthians 3:18", "1 Peter 1:15-16", "Philippians 2:12-13"],
+    raises: ["what-the-new-life-looks-like", "what-is-justification", "how-do-i-fight-sin"],
+    followsFrom: ["faith-or-works", "what-is-justification"],
+    related: ["faith-or-works", "what-is-justification", "what-the-new-life-looks-like", "how-do-i-fight-sin"],
+    planned: ["What does holiness look like in daily life?"],
+    order: 32,
   },
 ];
