@@ -42,6 +42,10 @@ export default function SpeechPlayer() {
     return null;
   }
 
+  const englishVoices = speech.voices
+    .filter((v) => v.lang.toLowerCase().startsWith("en"))
+    .sort((a, b) => a.name.localeCompare(b.name));
+
   const item = speech.queue[speech.index];
   const playing = speech.status === "playing";
   const pct = ((speech.index + 1) / speech.queue.length) * 100;
@@ -88,7 +92,7 @@ export default function SpeechPlayer() {
           </button>
         </div>
         <div className="mt-2 flex items-center gap-2">
-          {speech.voices.length > 1 && (
+          {englishVoices.length > 1 && (
             <>
               <span className="shrink-0 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-ink-faint">
                 Voice
@@ -107,7 +111,7 @@ export default function SpeechPlayer() {
                 onChange={(e) => setVoice(e.target.value)}
                 className="min-w-0 flex-1 rounded-full border border-line bg-white px-3 py-1.5 text-[12px] text-ink-soft sm:max-w-xs"
               >
-                {speech.voices.map((v) => (
+                {englishVoices.map((v) => (
                   <option key={v.uri} value={v.uri}>
                     {v.name}
                   </option>
