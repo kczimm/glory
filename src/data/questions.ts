@@ -2404,10 +2404,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Timothy 3:16-17", "Matthew 24:35", "2 Peter 1:21", "Psalm 19:7"],
-    raises: ["how-should-i-read-the-bible", "is-the-whole-bible-about-jesus"],
+    raises: ["how-should-i-read-the-bible", "is-the-whole-bible-about-jesus", "why-do-bible-translations-differ"],
     followsFrom: [],
     related: [],
-    planned: ["Why do Bible translations differ?"],
+    planned: ["How was the Bible written down?"],
     order: 34,
   },
 
@@ -5060,5 +5060,91 @@ export const questions: Question[] = [
     related: ["why-does-god-seem-silent", "how-do-i-know-the-spirit-is-leading-me", "can-i-trust-the-bible", "is-it-okay-to-doubt"],
     planned: ["What should I do when God's voice is quiet?"],
     order: 35,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Word of God (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "why-do-bible-translations-differ",
+    question: "Why do Bible translations differ?",
+    category: "word-of-god",
+    summary:
+      "Translations differ because the Bible came to us in Hebrew and Greek and has always been a translated book, and because translators make faithful choices: some versions aim for a more literal rendering, others for a clearer thought-for-thought one. The differences are matters of wording, not of message. Scripture itself shows the word being read, explained, and trusted: it is God-breathed, it endures, it is clear in what is essential, and from start to finish it speaks of Jesus. Because God has preserved and spoken His word, we can trust any faithful translation to give us His truth.",
+    passages: [
+      {
+        book: "Nehemiah",
+        chapter: 8,
+        title: "Reading the law, giving the sense",
+        lookFor: "Ezra and the Levites read the law and gave the sense of it, so the people understood: God's people have always needed the word made plain.",
+        focus: "1-8",
+      },
+      {
+        book: "Acts",
+        chapter: 8,
+        title: "The Ethiopian reading Isaiah",
+        lookFor: "A man reading the Scriptures still needed help to understand, and Philip 'beginning from this Scripture, preached to him Jesus.'",
+        focus: "26-40",
+      },
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "Jesus opens the Scriptures",
+        lookFor: "Beginning from Moses and all the prophets, Jesus explained the things concerning Himself in all the Scriptures.",
+        focus: "25-32",
+      },
+      {
+        book: "2 Timothy",
+        chapter: 3,
+        title: "All Scripture is God-breathed",
+        lookFor: "Whatever translation we read, it is this book that is God-breathed and profitable for teaching and training.",
+        focus: "14-17",
+      },
+      {
+        book: "John",
+        chapter: 5,
+        title: "The Scriptures testify about Jesus",
+        lookFor: "The written word has one great subject: 'these are they which testify about me.'",
+        focus: "36-40",
+      },
+    ],
+    points: [
+      {
+        heading: "God's word is meant to be understood",
+        body:
+          "From the pages of Scripture itself, the word of God is read and explained so that people understand it. In Nehemiah, the Levites 'read in the book, in the law of God, distinctly; and they gave the sense, so that they understood the reading.' And on the road to Gaza, Philip found an official reading Isaiah aloud and asked, 'Do you understand what you are reading?' then explained it to him. God's word is not meant to stay locked in one language; it is meant to reach the heart of every reader.",
+        verses: ["Nehemiah 8:8", "Acts 8:30", "Acts 8:35"],
+      },
+      {
+        heading: "God's word endures through every faithful telling",
+        body:
+          "The message does not depend on one fragile copy or one perfect rendering. Isaiah declares that while grass withers and flowers fade, 'the word of our God stands forever'; Peter says the Lord's word endures forever. Jesus even insisted that not the smallest stroke of the law would pass away. Whatever faithful translation you hold, you are holding the enduring word of the God who has kept it across every age and every language.",
+        verses: ["Isaiah 40:8", "1 Peter 1:25", "Matthew 5:18"],
+      },
+      {
+        heading: "The word is clear in what matters most",
+        body:
+          "The Bible does not say its message is hidden and hard to find; it says the word is near, in your mouth and in your heart, that you may do it. Scripture is able to make a person wise for salvation through faith in Christ Jesus, and God's law, sure testimony, is 'making wise the simple.' The essentials of the faith, the gospel itself, are plain in every faithful translation; differences of rendering do not blur them.",
+        verses: ["Deuteronomy 30:11", "Deuteronomy 30:14", "2 Timothy 3:15", "Psalm 19:7"],
+      },
+      {
+        heading: "Every rendering points to one Person",
+        body:
+          "The whole book has a single subject. Jesus said, 'You search the Scriptures... and these are they which testify about me.' On the road to Emmaus, beginning from Moses and all the prophets, He explained the things concerning Himself in all the Scriptures. Translation can shift the shade of a word, but it cannot lose the central message: the Scriptures, in any faithful translation, are telling you about Jesus.",
+        verses: ["John 5:39", "Luke 24:27"],
+      },
+      {
+        heading: "We read with help, as the word has always been opened",
+        body:
+          "Understanding comes as the word is read with help, the way it has always been opened. The people in Ezra's day needed the law read distinctly and explained; the Ethiopian needed Philip to show him that the passage was about Jesus. The Spirit who inspired the word also opens it to us: the things of God are spiritually discerned. A good translation brings the word to you; reading it with an open heart, and with the Body of Christ, lets you hear the voice behind it.",
+        verses: ["Nehemiah 8:8", "Acts 8:30", "Acts 8:35", "1 Corinthians 2:14"],
+      },
+    ],
+    keyVerses: ["Nehemiah 8:8", "Acts 8:35", "2 Timothy 3:15", "John 5:39", "Luke 24:27"],
+    raises: ["how-should-i-read-the-bible", "is-the-whole-bible-about-jesus"],
+    followsFrom: ["can-i-trust-the-bible"],
+    related: ["can-i-trust-the-bible", "how-should-i-read-the-bible", "is-the-whole-bible-about-jesus", "gods-voice-or-my-own-thoughts"],
+    planned: ["What is the difference between the Old and New Testaments?"],
+    order: 37,
   },
 ];
