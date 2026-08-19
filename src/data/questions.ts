@@ -1878,10 +1878,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Hebrews 11:1", "Romans 10:17", "John 6:29", "2 Timothy 1:12"],
-    raises: ["faith-or-works", "what-does-it-mean-to-be-born-again", "is-it-okay-to-doubt"],
+    raises: ["faith-or-works", "what-does-it-mean-to-be-born-again", "is-it-okay-to-doubt", "what-does-it-mean-to-walk-by-faith-and-not-by-sight"],
     followsFrom: ["can-i-lose-my-salvation", "what-is-justification"],
     related: ["faith-or-works", "how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
-    planned: ["What does it mean to walk by faith and not by sight?"],
+    planned: ["How do I grow in faith?"],
     order: 25,
   },
 
@@ -7793,5 +7793,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["what-is-justification", "what-is-sanctification-and-how-does-it-happen", "faith-or-works", "does-grace-mean-live-how-i-want"],
     planned: ["What does it mean to be a new creation in Christ?"],
     order: 33,
+  },
+
+  {
+    slug: "what-does-it-mean-to-walk-by-faith-and-not-by-sight",
+    question: "What does it mean to walk by faith and not by sight?",
+    category: "gospel",
+    summary:
+      "To walk by faith and not by sight is to live our lives trusting God's word and promises rather than what we can currently see or feel. It is the normal posture of the whole Christian life, rooted in the assurance of things hoped for, lived out in daily trust and obedience, and held patiently because we will one day see what we now believe. Faith does not ignore reality; it interprets it by God's promises.",
+    passages: [
+      {
+        book: "2 Corinthians",
+        chapter: 5,
+        title: "We walk by faith, not by sight",
+        lookFor: "Paul's frame for life: at home in the body, away from the Lord, we walk by faith, aiming to please Him.",
+        focus: "1-10",
+      },
+      {
+        book: "Hebrews",
+        chapter: 11,
+        title: "The faith of the ancients",
+        lookFor: "Faith is the assurance of things hoped for, and the heroes of faith acted on the unseen, from Abraham to those who never saw the promise in full.",
+        focus: "1-13",
+      },
+      {
+        book: "Romans",
+        chapter: 1,
+        title: "The righteous shall live by faith",
+        lookFor: "The gospel reveals a righteousness that is received, and the way of life that follows: faith.",
+        focus: "16-17",
+      },
+      {
+        book: "Galatians",
+        chapter: 2,
+        title: "The life I live, I live by faith",
+        lookFor: "Paul's own walk: no longer I who live, but Christ in me; the life I live, I live by faith in the Son of God.",
+        focus: "20-21",
+      },
+      {
+        book: "John",
+        chapter: 20,
+        title: "Blessed are those who have not seen and have believed",
+        lookFor: "Thomas needed to see; Jesus pronounces the blessing on those who believe without seeing.",
+        focus: "24-31",
+      },
+    ],
+    points: [
+      {
+        heading: "Walking by faith is God's call for the whole life",
+        body:
+          "Faith is not only how we begin the Christian life; it is how we live it. Paul says flatly, 'we walk by faith, not by sight.' The gospel reveals that 'the righteous shall live by faith,' the very words the prophet Habakkuk used and that the New Testament returns to again and again. From first to last, from the moment of salvation to the end of the road, faith is the way God's people relate to Him.",
+        verses: ["2 Corinthians 5:7", "Romans 1:17", "Habakkuk 2:4", "Galatians 3:11"],
+      },
+      {
+        heading: "Faith is assurance of things not seen",
+        body:
+          "The writer of Hebrews defines it: 'Now faith is assurance of things hoped for, proof of things not seen.' And he adds the urgency of it: 'without faith it is impossible to be well pleasing to him, for he who comes to God must believe that he exists, and that he is a rewarder of those who seek him.' Faith lays hold of what is real but unseen, and makes it the ground of how we live.",
+        verses: ["Hebrews 11:1", "Hebrews 11:6"],
+      },
+      {
+        heading: "Abraham walked without seeing the way",
+        body:
+          "The great example is Abraham. 'By faith, Abraham, when he was called, obeyed to go out to the place which he was to receive for an inheritance. He went out, not knowing where he went,' looking for a city whose builder and maker is God. When the promise seemed impossible, he did not waver in unbelief but was fully assured that God was able to do what He had promised. Walking by faith means obeying God even when we cannot see the road ahead.",
+        verses: ["Hebrews 11:8", "Hebrews 11:10", "Romans 4:20", "Romans 4:21"],
+      },
+      {
+        heading: "Faith lives by the Son of God",
+        body:
+          "The object of this walk is a Person. Paul describes it at its center: 'It is no longer I that live, but Christ living in me. That life which I now live in the flesh, I live by faith in the Son of God, who loved me, and gave himself up for me.' And Jesus pronounces blessed 'those who have not seen, and have believed.' Our faith is not confidence in an idea but trust in a Person who gave Himself for us, and whom we love though we have not seen Him.",
+        verses: ["Galatians 2:20", "John 20:29", "1 Peter 1:8"],
+      },
+      {
+        heading: "It means living for the unseen, in daily obedience",
+        body:
+          "Walking by faith looks like a daily choice to live for what is eternal rather than what is merely seen. Paul says we fix our eyes not on the seen but on the unseen, for the seen is temporary and the unseen eternal, and he makes his aim, whether at home or away, to please the Lord. And John says this is the victory that overcomes the world, our faith. When feelings and circumstances say otherwise, faith holds to God's promise and obeys Him.",
+        verses: ["2 Corinthians 4:18", "2 Corinthians 5:9", "James 1:6", "1 John 5:4"],
+      },
+    ],
+    keyVerses: ["2 Corinthians 5:7", "Hebrews 11:1", "Romans 1:17", "Galatians 2:20", "Hebrews 11:6"],
+    raises: ["what-is-faith", "is-it-okay-to-doubt", "spirits-witness-or-my-own-feelings"],
+    followsFrom: ["what-is-faith", "what-is-justification"],
+    related: ["what-is-faith", "is-it-okay-to-doubt", "where-is-god-in-my-pain", "spirits-witness-or-my-own-feelings"],
+    planned: ["What is the difference between faith and certainty?"],
+    order: 34,
   },
 ];
