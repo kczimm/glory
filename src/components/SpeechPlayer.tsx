@@ -17,6 +17,7 @@ import {
   stop,
   subscribe,
 } from "@/lib/speech";
+import { audioEnabled } from "@/lib/audioFiles";
 import {
   NextIcon,
   PauseIcon,
@@ -92,7 +93,9 @@ export default function SpeechPlayer() {
           </button>
         </div>
         <div className="mt-2 flex items-center gap-2">
-          {englishVoices.length > 1 && (
+          {/* When the file sink is active the voice is baked into the audio;
+              a picker would be misleading, so only show it in native mode. */}
+          {!audioEnabled() && englishVoices.length > 1 && (
             <>
               <span className="shrink-0 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-ink-faint">
                 Voice
