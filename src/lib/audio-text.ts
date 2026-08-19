@@ -36,7 +36,11 @@ export interface AudioTextStudy {
 
 /** Collapse whitespace runs and trim, matching what the app speaks. */
 export function normalizeText(text: string): string {
-  return text.replace(/\s+/g, " ").trim();
+  return text
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 // Chunk at a generous ceiling so an ordinary verse is one whole file; only
@@ -48,9 +52,10 @@ export function chunkText(text: string): string[] {
   const clean = normalizeText(text);
   if (!clean) return [];
   if (clean.length <= CHUNK_MAX) return [clean];
-  // Split on sentence breaks; absorb the surrounding quotes (including curly
-  // quotes) into the sentence so the closing quote is never orphaned.
-  const sentences = clean.match(/[^.!?]+[.!?]+["')\]]\u201D\u2019]*\s*|[^.!?]+$/g) ?? [clean];
+  // Split on sentence breaks; absorb trailing quotes so the closing quote is
+  // never orphaned into its own chunk. Curly quotes were already normalized
+  // to straight ones by normalizeText, so a plain quote class suffices.
+  const sentences = clean.match(/[^.!?]+[.!?]+["')\]]*\s*|[^.!?]+$/g) ?? [clean];
   const parts: string[] = [];
   let current = "";
   for (const raw of sentences) {

@@ -27,6 +27,7 @@ import {
   canonicalBook,
   chapterItems,
   filterFocus,
+  normalizeText,
   sha1Hex,
   studyItems,
 } from "../src/lib/audio-text.ts";
@@ -146,3 +147,80 @@ if (missing) {
   process.exit(1);
 }
 console.log("  all source verses resolve; manifest OK");
+
+// ---- chunk health audit ----------------------------------------------------
+// Reconstruct every unique Bible verse from its manifest chunks and verify
+// the chunking never drops/alters text and never breaks mid-sentence (the
+// failure that made John 3:2 sound garbled).
+
+const SENT_END = new Set([".", "?", "!", ";", ":", ","]);
+const versesByRef = new Map(); // ref -> { source, chunks: [{ text, k }] }
+
+for (const q of questions) {
+  for (const p of q.passages) {
+    const cb = canonicalBook(p.book);
+    const ch = chapters[`${cb} ${p.chapter}`];
+    const list = ch ? filterFocus(ch, p.focus) : [];
+    for (const item of chapterItems(p.book, p.chapter, list)) {
+      const m = item.id.match(/^(.+?)\s(\d+):(\d+)$/) || item.id.match(/^(.+?)\s(\d+):(\d+)\|(\d+)$/);
+      if (!m || item.id === "intro") continue;
+      const ref = `${m[1]} ${m[2]}:${m[3]}`;
+      const src = verses[`${canonicalBook(m[1])} ${m[2]}:${m[3]}`];
+      if (!src) continue;
+      const k = m[4] ? Number(m[4]) : 1;
+      if (!versesByRef.has(ref)) {
+        versesByRef.set(ref, { source: normalizeText(src.replace(/\n+/g, " ")), chunks: [], seen: new Set() });
+      }
+      const rec = versesByRef.get(ref);
+      // The same verse is a passage in several studies; keep one representative.
+      if (!rec.seen.has(item.text)) {
+        rec.seen.add(item.text);
+        rec.chunks.push({ text: item.text, k });
+      }
+    }
+  }
+}
+
+let checked = 0;
+let altered = 0;
+let midSentence = 0;
+let tiny = 0;
+const problems = [];
+
+for (const [ref, { source, chunks }] of versesByRef) {
+  checked++;
+  const ordered = chunks.sort((a, b) => a.k - b.k);
+  // Invariant: concatenating the chunks reproduces the verse exactly.
+  const joined = ordered.map((c) => c.text).join(" ");
+  if (joined !== source) {
+    altered++;
+    problems.push(`  [altered] ${ref}: chunks do not reassemble the source`);
+  }
+  // Rule: every non-final chunk must end at a sentence/clause boundary.
+  for (let i = 0; i < ordered.length - 1; i++) {
+    // Ignore trailing quotes/brackets/whitespace: "…God of your father.""
+    // ends at the period, not the quote.
+    const last = ordered[i].text.trim().replace(/[\s"')\]]+$/, "").slice(-1);
+    if (!SENT_END.has(last)) {
+      midSentence++;
+      problems.push(`  [mid-break] ${ref}: chunk ends "…${ordered[i].text.trim().slice(-24)}"`);
+    }
+  }
+  // Rule: no chunk may be just a stray quote mark or whitespace.
+  if (ordered.some((c) => c.text.trim().length <= 3)) {
+    tiny++;
+    problems.push(`  [orphan] ${ref}: tiny chunk "${JSON.stringify(ordered.find((c) => c.text.trim().length <= 3)?.text)}"`);
+  }
+}
+
+if (checked) {
+  console.log(`\nChunk health: ${checked} unique verses checked`);
+  console.log(`  reassemble exactly:      ${altered ? "FAIL " + altered : "all pass (" + checked + " verses)"}`);
+  console.log(`  no mid-sentence breaks:  ${midSentence ? "FAIL " + midSentence : "all pass"}`);
+  console.log(`  no tiny/orphan chunks:   ${tiny ? "FAIL " + tiny : "all pass"}`);
+  if (problems.length) console.log("suspicious:\n" + problems.slice(0, 40).join("\n"));
+  if (altered + midSentence + tiny > 0) {
+    console.log("\nChunking health check FAILED. Inspect the flagged verses before generating audio.");
+    process.exit(1);
+  }
+}
