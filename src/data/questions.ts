@@ -2921,10 +2921,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Galatians 5:16-17", "Galatians 5:22-23", "Romans 8:6", "Romans 8:13"],
-    raises: [],
+    raises: ["body-soul-and-spirit"],
     followsFrom: ["how-do-i-fight-sin"],
     related: ["how-do-i-fight-sin", "who-is-the-holy-spirit"],
-    planned: ["What is the body, soul, and spirit?"],
+    planned: ["What is the difference between the heart, soul, and mind?"],
     order: 46,
   },
 
@@ -5817,5 +5817,88 @@ export const questions: Question[] = [
     related: ["what-is-sin", "why-did-jesus-have-to-die", "what-happens-when-i-die", "is-god-in-control"],
     planned: ["What is hell?"],
     order: 48,
+  },
+
+  {
+    slug: "body-soul-and-spirit",
+    question: "What is the body, soul, and spirit?",
+    category: "who-we-are",
+    summary:
+      "Scripture presents the human person as a unity made by God: dust that He breathed into living being. It speaks of body, soul, and spirit to describe the whole person in relation to God and to eternity, not to divide us into detachable parts. We are embodied souls, meant to be whole, and destined not to shed our bodies but to have them raised and renewed.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 2,
+        title: "Dust and the breath of life",
+        lookFor: "God forms man from the dust and breathes into him the breath of life, and the man becomes a living being: body and spirit from His hand.",
+        focus: "1-7",
+      },
+      {
+        book: "Psalm",
+        chapter: 139,
+        title: "Fearfully and wonderfully made",
+        lookFor: "The psalmist marvels at being woven together in the womb and known by God to the depths of his being.",
+        focus: "1-18",
+      },
+      {
+        book: "1 Thessalonians",
+        chapter: 5,
+        title: "Spirit, soul, and body",
+        lookFor: "Paul's prayer that the whole person, spirit, soul, and body, be kept blameless until the Lord's coming.",
+        focus: "16-24",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 15,
+        title: "Raised a spiritual body",
+        lookFor: "The body is not discarded but transformed: sown a natural body, raised a spiritual body, the perishable putting on the imperishable.",
+        focus: "35-58",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 6,
+        title: "Your body is the Lord's",
+        lookFor: "Your body is a temple of the Holy Spirit, the body is for the Lord, and you are to glorify God in your body.",
+        focus: "12-20",
+      },
+    ],
+    points: [
+      {
+        heading: "We are dust and breath from God's hand",
+        body:
+          "Genesis gives the shape of the human person: 'Yahweh God formed man from the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.' We are not a spirit trapped in a body, nor a body that happens to think; we are a created unity, earth and breath joined by the hand of God, fearfully and wonderfully made.",
+        verses: ["Genesis 2:7", "Psalm 139:14", "Job 33:4"],
+      },
+      {
+        heading: "Body, soul, and spirit name the whole person",
+        body:
+          "When Scripture lists 'spirit, soul, and body,' it is praying for the whole person to be kept blameless, not drawing a diagram of detachable parts. Jesus said to love God with all your heart, soul, mind, and strength: the whole of who we are, in every dimension, is to be His. These words describe our life from the inside out and under God, every part belonging to Him.",
+        verses: ["1 Thessalonians 5:23", "Mark 12:30", "Luke 10:27"],
+      },
+      {
+        heading: "At death, body and spirit are parted for a season",
+        body:
+          "At death the dust returns to the earth as it was, and the spirit returns to God who gave it. For the believer, this is not the end but a going home: to be absent from the body is to be at home with the Lord. On the cross Jesus Himself committed His spirit into the Father's hands, and Paul said that to depart is to be with Christ, which is far better.",
+        verses: ["Ecclesiastes 12:7", "2 Corinthians 5:8", "Luke 23:46", "Philippians 1:23"],
+      },
+      {
+        heading: "But we are destined for a raised, whole body",
+        body:
+          "The Christian hope is not a disembodied eternity but a resurrection. It is sown a natural body, Paul says, and raised a spiritual body; this perishable must put on the imperishable. The Spirit who raised Jesus will give life to our mortal bodies. Our bodies are not garbage to be shed but God's creation to be redeemed, and we await their renewal, not their loss.",
+        verses: ["1 Corinthians 15:44", "1 Corinthians 15:53", "Romans 8:11", "Philippians 3:21"],
+      },
+      {
+        heading: "So we honor God in the body as well as the soul",
+        body:
+          "Because our bodies belong to the Lord, the whole of embodied life is worship. Your body is a temple of the Holy Spirit, and you were bought with a price, so you are to glorify God in your body. Do not let sin reign in your mortal body, Paul urges, but present your members to God as instruments of righteousness. Our hands, our words, our physical lives, our unseen hearts: all of it is His.",
+        verses: ["1 Corinthians 6:19", "1 Corinthians 6:20", "Romans 6:12", "Romans 6:13"],
+      },
+    ],
+    keyVerses: ["Genesis 2:7", "1 Thessalonians 5:23", "Ecclesiastes 12:7", "2 Corinthians 5:8", "1 Corinthians 6:19-20"],
+    raises: ["what-is-the-resurrection", "what-is-the-flesh-versus-the-spirit"],
+    followsFrom: ["what-is-the-flesh-versus-the-spirit", "what-happens-when-i-die"],
+    related: ["what-is-the-flesh-versus-the-spirit", "what-happens-when-i-die", "what-is-the-resurrection", "how-do-i-fight-sin"],
+    planned: ["How should I care for my body as a Christian?"],
+    order: 49,
   },
 ];
