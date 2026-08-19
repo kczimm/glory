@@ -529,10 +529,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 3:23", "Romans 5:8", "Isaiah 53:5-6", "2 Corinthians 5:21", "Mark 10:45"],
-    raises: ["how-can-i-be-saved", "did-jesus-rise-from-the-dead"],
+    raises: ["how-can-i-be-saved", "did-jesus-rise-from-the-dead", "between-the-cross-and-the-resurrection"],
     followsFrom: ["who-is-jesus", "is-jesus-really-god"],
     related: [],
-    planned: ["What happened between the cross and the resurrection?"],
+    planned: ["What does the creed mean by 'he descended into hell'?"],
     order: 7,
   },
 
@@ -684,10 +684,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 15:3-8", "1 Corinthians 15:20", "Luke 24:39", "Romans 8:11"],
-    raises: ["how-can-i-be-saved", "where-is-jesus-now"],
+    raises: ["how-can-i-be-saved", "where-is-jesus-now", "between-the-cross-and-the-resurrection"],
     followsFrom: ["why-did-jesus-have-to-die"],
     related: ["is-jesus-really-god"],
-    planned: ["What happened between the cross and the resurrection?"],
+    planned: ["Why did the disciples not recognize Him after He rose?"],
     order: 9,
   },
 
@@ -3469,5 +3469,88 @@ export const questions: Question[] = [
     related: ["is-jesus-really-god", "what-is-the-trinity", "is-the-holy-spirit-god"],
     planned: ["What does it mean that God is one?"],
     order: 18,
+  },
+
+  {
+    slug: "between-the-cross-and-the-resurrection",
+    question: "What happened between the cross and the resurrection?",
+    category: "jesus-christ",
+    summary:
+      "Jesus died a real death, was buried, and descended into the realm of the dead; and in that hidden interval He was already Lord. The tomb was the proof of a finished work, and the resurrection morning was its announcement: death itself no longer had the keys.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 23,
+        title: "The crucifixion, the thief, and the burial",
+        lookFor: "The promise to the thief, the final words, and the careful burial: real death, real body.",
+        focus: "32-56",
+      },
+      {
+        book: "Matthew",
+        chapter: 27,
+        title: "Darkness, the torn veil, and the opened tombs",
+        lookFor: "The earth's response to the death of its Maker, and the first signs of the resurrection already stirring.",
+        focus: "45-61",
+      },
+      {
+        book: "Ephesians",
+        chapter: 4,
+        title: "He descended into the lower parts of the earth",
+        lookFor: "Paul reads the ascension back through a descent: He who ascended first descended.",
+        focus: "7-10",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Not abandoned to Hades",
+        lookFor: "Peter's Pentecost sermon: the Christ's soul was not left in Hades, nor did His flesh see decay.",
+        focus: "22-36",
+      },
+      {
+        book: "1 Peter",
+        chapter: 3,
+        title: "Preaching to the spirits in prison",
+        lookFor: "The mysterious passage: Christ went and made proclamation, alive in the spirit, in the days between death and resurrection.",
+        focus: "18-22",
+      },
+    ],
+    points: [
+      {
+        heading: "The work was finished on the cross",
+        body:
+          "Jesus' last word from the cross was not defeat; it was completion: 'It is finished.' In the same hour the veil of the temple was torn from top to bottom, the earth shook, and the centurion confessed, 'Truly this man was the Son of God!' And to the thief beside Him came the immediate promise: 'Today you will be with me in Paradise.'",
+        verses: ["John 19:30", "Matthew 27:51", "Mark 15:39", "Luke 23:43"],
+      },
+      {
+        heading: "He really died, and was really buried",
+        body:
+          "The earliest confession says it plainly: 'that he was buried.' Joseph of Arimathea and Nicodemus took the body down, wrapped it in linen with spices, and laid it in a new tomb. This was not an apparent death; the soldiers found Him already dead and did not break His legs, and the tomb was sealed and guarded. Whatever happened next, it began from a real grave.",
+        verses: ["1 Corinthians 15:4", "John 19:38-42", "John 19:33", "Matthew 27:62-66"],
+      },
+      {
+        heading: "He descended into the depths",
+        body:
+          "Paul reasons from the ascension to the descent: 'He who descended is the one who also ascended far above all the heavens.' Peter preached at Pentecost that Christ's soul was not left in Hades. Between Friday and Sunday the crucified Lord was active where death reigns, and 1 Peter says He went and preached to the spirits in prison. The exact scope of that proclamation is debated, but the direction is unmistakable: Christ went into the realm of the dead, and He was not its prisoner.",
+        verses: ["Ephesians 4:9-10", "Acts 2:27", "Acts 2:31", "1 Peter 3:18-19"],
+      },
+      {
+        heading: "He holds the keys of death",
+        body:
+          "The risen Christ could say of that weekend: 'I was dead, and behold, I am alive forever more. Amen. I have the keys of Death and of Hades.' And Paul draws the conclusion for everyone who ever asked where death leads: 'To this end Christ died, rose, and lived again, that he might be Lord of both the dead and the living.' Between the cross and the resurrection, death did not win a victory; it met its master.",
+        verses: ["Revelation 1:18", "Romans 14:9"],
+      },
+      {
+        heading: "The resurrection had already begun",
+        body:
+          "Matthew records that at the death of Jesus the tombs were opened, and after His resurrection many bodies of the saints who had fallen asleep were raised and appeared to many. The resurrection did not happen in spite of what came before; it was the firstfruits of the harvest for which everything before had been prepared. The cross to the tomb was the planting; Easter morning was the first harvest.",
+        verses: ["Matthew 27:52-53", "1 Corinthians 15:20"],
+      },
+    ],
+    keyVerses: ["John 19:30", "Luke 23:43", "Ephesians 4:9-10", "Acts 2:31", "Revelation 1:18"],
+    raises: [],
+    followsFrom: ["why-did-jesus-have-to-die", "did-jesus-rise-from-the-dead"],
+    related: ["did-jesus-rise-from-the-dead", "where-is-jesus-now", "what-happens-when-i-die"],
+    planned: ["Who were 'the spirits in prison', and what did Christ preach to them?"],
+    order: 19,
   },
 ];
