@@ -1,4 +1,5 @@
 import { verses, chapters } from "./scripture";
+import { canonicalBook, filterFocus } from "../lib/audio-text";
 import { categories, getCategory } from "./categories";
 import { questions } from "./questions";
 import { connections, getConnections, connectionKindLabel } from "./connections";
@@ -6,18 +7,10 @@ import { parseRef, questionsUsing, incomingConnections, graphVerseRefs, verseSlu
 import type { Category, Question, Connection, ConnectionKind } from "./types";
 
 export { categories, questions, verses, chapters, getCategory };
+export { canonicalBook, filterFocus };
 export { connections, getConnections, connectionKindLabel };
 export { parseRef, questionsUsing, incomingConnections, graphVerseRefs, verseSlug, refFromSlug };
 export type { Category, Question, Connection, ConnectionKind };
-
-/** content book name -> canonical scripture.ts key */
-const BOOK_ALIASES: Record<string, string> = {
-  Psalm: "Psalms",
-};
-
-export function canonicalBook(book: string): string {
-  return BOOK_ALIASES[book] ?? book;
-}
 
 export interface ParsedRef {
   book: string;
@@ -71,12 +64,7 @@ export function getChapterFocus(
 ): { n: number; text: string }[] | null {
   const ch = getChapter(book, chapter);
   if (!ch) return null;
-  if (!focus) return ch;
-  const m = focus.match(/^(\d+)(?:-(\d+))?$/);
-  if (!m) return ch;
-  const start = Number(m[1]);
-  const end = Number(m[2] ?? m[1]);
-  return ch.filter((v) => v.n >= start && v.n <= end);
+  return filterFocus(ch, focus);
 }
 
 // ---- questions ------------------------------------------------------------

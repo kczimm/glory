@@ -76,7 +76,6 @@ export const RATES: RateOption[] = [
 ];
 
 const PREFS_KEY = "glory:speech";
-const CHUNK_MAX = 160;
 
 /** Voices known to read Scripture well; the first one on the device wins. */
 const PREFERRED_VOICES = [
@@ -477,57 +476,16 @@ export function matchesVerse(itemId: string | undefined, ref: string): boolean {
   return itemId === ref || (itemId !== undefined && itemId.startsWith(ref + "|"));
 }
 
-/** Split text into sentence-sized chunks for utterance-length safety. */
-export function chunkText(text: string): string[] {
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (!clean) return [];
-  if (clean.length <= CHUNK_MAX) return [clean];
-  const sentences = clean.match(/[^.!?]+[.!?]+["')\]]*\s*|[^.!?]+$/g) ?? [clean];
-  const parts: string[] = [];
-  let current = "";
-  for (const raw of sentences) {
-    const piece = raw.trim();
-    if (!piece) continue;
-    const candidate = current ? `${current} ${piece}` : piece;
-    if (candidate.length > CHUNK_MAX && current) {
-      parts.push(current);
-      current = piece;
-    } else {
-      current = candidate;
-    }
-  }
-  if (current) parts.push(current);
-  return parts.flatMap((p) => (p.length > CHUNK_MAX ? hardSplit(p) : [p]));
-}
-
-function hardSplit(text: string): string[] {
-  const out: string[] = [];
-  let current = "";
-  for (const word of text.split(" ")) {
-    const candidate = current ? `${current} ${word}` : word;
-    if (candidate.length > CHUNK_MAX && current) {
-      out.push(current);
-      current = word;
-    } else {
-      current = candidate;
-    }
-  }
-  if (current) out.push(current);
-  return out;
-}
-
-/** Format a verse ref for the ear: "John chapter 3, verse 16". */
-export function speechRef(ref: string): string {
-  const m = ref.match(/^(.+?)\s(\d+):(\d+)(?:-(\d+))?$/);
-  if (!m) return ref;
-  const book = m[1];
-  const chapter = Number(m[2]);
-  const start = Number(m[3]);
-  const end = Number(m[4] ?? m[3]);
-  return start === end
-    ? `${book} chapter ${chapter}, verse ${start}`
-    : `${book} chapter ${chapter}, verses ${start} through ${end}`;
-}
+// Chunking, ref formatting, queue builders, and hashing live in the shared
+// audio-text module so the generation pipeline uses byte-identical logic.
+export {
+  canonicalBook,
+  chapterItems,
+  chunkText,
+  filterFocus,
+  speechRef,
+  studyItems,
+} from "./audio-text";
 
 // ---- background recovery --------------------------------------------------
 // iOS stops TTS when the tab is hidden; when the user returns, restart the

@@ -5,7 +5,7 @@ import { useSyncExternalStore } from "react";
 import type { Passage } from "@/data/types";
 import { getChapter, getChapterFocus } from "@/data";
 import {
-  chunkText,
+  chapterItems,
   getServerSnapshot,
   getSnapshot,
   matchesVerse,
@@ -35,21 +35,7 @@ export default function ChapterReader({ passage }: { passage: Passage }) {
 
   const items = useMemo<SpeechItem[]>(() => {
     if (!verses) return [];
-    const out: SpeechItem[] = [
-      {
-        id: "intro",
-        label: `${passage.book} ${passage.chapter}`,
-        text: `${passage.book} chapter ${passage.chapter}.`,
-      },
-    ];
-    for (const v of verses) {
-      const ref = `${passage.book} ${passage.chapter}:${v.n}`;
-      const chunks = chunkText(v.text);
-      chunks.forEach((text, k) => {
-        out.push({ id: k === 0 ? ref : `${ref}|${k + 1}`, label: ref, text });
-      });
-    }
-    return out;
+    return chapterItems(passage.book, passage.chapter, verses);
   }, [verses, passage.book, passage.chapter]);
 
   const active = speech.sourceId === sourceId && speech.status !== "idle";
