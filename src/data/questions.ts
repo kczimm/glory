@@ -2275,10 +2275,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Matthew 6:9-13", "Luke 11:2-4"],
-    raises: ["why-pray-your-will-be-done"],
+    raises: ["why-pray-your-will-be-done", "what-does-it-mean-to-pray-in-the-holy-spirit"],
     followsFrom: ["how-do-i-pray"],
     related: ["how-do-i-pray"],
-    planned: ["What does it mean to pray in the Holy Spirit?"],
+    planned: ["How do I pray when I don't know what to say?"],
     order: 31,
   },
 
@@ -8297,5 +8297,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["how-do-i-pray", "what-does-the-lords-prayer-teach", "who-is-the-father", "what-the-new-life-looks-like"],
     planned: ["How do I pray when I am desperate?"],
     order: 36,
+  },
+
+  {
+    slug: "what-does-it-mean-to-pray-in-the-holy-spirit",
+    question: "What does it mean to pray in the Holy Spirit?",
+    category: "prayer",
+    summary:
+      "To pray in the Spirit is to pray in dependence on the Holy Spirit and in line with His work. He helps our weakness when we do not know how to pray, He intercedes for us according to God's will, He dwells in us making us children who cry 'Abba, Father,' and He empowers the church's prayer. It is not a special technique for the few; it is the Spirit-empowered prayer of every believer, prayed through Christ and aligned with God's will.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "The Spirit helps us pray",
+        lookFor: "The Spirit helps our weakness and makes intercession for the saints according to the will of God.",
+        focus: "26-27",
+      },
+      {
+        book: "Galatians",
+        chapter: 4,
+        title: "The Spirit cries 'Abba, Father'",
+        lookFor: "Because we are children, God sent the Spirit of His Son into our hearts, crying 'Abba, Father.'",
+        focus: "4-7",
+      },
+      {
+        book: "Ephesians",
+        chapter: 6,
+        title: "Praying in the Spirit",
+        lookFor: "With all prayer, pray at all times in the Spirit, watchful and persevering for all the saints.",
+        focus: "18-20",
+      },
+      {
+        book: "Jude",
+        chapter: 1,
+        title: "Build yourselves up, praying in the Holy Spirit",
+        lookFor: "Jude links prayer in the Spirit to being built up in most holy faith and kept in the love of God.",
+        focus: "20-21",
+      },
+      {
+        book: "Zechariah",
+        chapter: 12,
+        title: "A spirit of grace and supplication",
+        lookFor: "God promises to pour out a spirit of grace and of supplication, enabling His people to pray and turn to Him.",
+        focus: "10",
+      },
+    ],
+    points: [
+      {
+        heading: "The Spirit helps our weakness in prayer",
+        body:
+          "Praying in the Spirit begins with dependence. Paul writes, 'the Spirit also helps our weaknesses, for we don't know how to pray as we ought. But the Spirit himself makes intercession for us with groanings which can't be uttered.' When we do not know how to ask, the Spirit prays in us and for us. Prayer in the Spirit is not a perfected technique but a Spirit-carried dependence.",
+        verses: ["Romans 8:26", "Romans 8:27"],
+      },
+      {
+        heading: "It is prayer surrendered to God's will",
+        body:
+          "The Spirit who intercedes 'makes intercession for the saints according to God.' John says that if we ask anything according to His will, He hears us. To pray in the Spirit is to have our asking drawn into the Spirit's own alignment with God's will, so that our prayer grows from 'what I want' toward 'what God wills,' the deepest and truest thing we could ever pray.",
+        verses: ["Romans 8:27", "1 John 5:14"],
+      },
+      {
+        heading: "It flows from the Spirit of adoption",
+        body:
+          "The Spirit who teaches us to pray is the Spirit who makes us children. Paul says, 'you didn't receive the spirit of bondage again to fear, but you received the Spirit of adoption, by whom we cry, Abba, Father.' Galatians adds, 'God sent out the Spirit of his Son into your hearts, crying, Abba, Father.' And God has promised to pour out a spirit of grace and supplication. The Spirit both makes us sons and empowers the prayer of sons.",
+        verses: ["Romans 8:15", "Galatians 4:6", "Zechariah 12:10"],
+      },
+      {
+        heading: "It is the Spirit-empowered prayer of the church",
+        body:
+          "Praying in the Spirit is built into ordinary believing prayer, not a rare elevation. Paul urges the Ephesians to pray at all times in the Spirit with all prayer and requests, watchful and persevering for all the saints, and Jude calls believers to build themselves up in most holy faith, 'praying in the Holy Spirit,' keeping themselves in the love of God. It is the normal prayer of the church, in the Spirit's power, for the saints and for the world.",
+        verses: ["Ephesians 6:18", "Jude 1:20", "Jude 1:21"],
+      },
+      {
+        heading: "It uses the whole self, mind and heart",
+        body:
+          "Praying in the Spirit is not opposed to understanding. Paul says, 'I will pray with the spirit, and I will pray with the understanding also.' The Spirit indwells every believer, and to pray in the Spirit is simply to pray as a Christian, with our whole selves, mind and heart, depending on the Spirit who lives in us and who prays the will of God in us. It is the Spirit-worked prayer of a child of God, through Christ, to the Father.",
+        verses: ["1 Corinthians 14:15", "1 Corinthians 12:13", "Romans 8:15"],
+      },
+    ],
+    keyVerses: ["Romans 8:26-27", "Galatians 4:6", "Ephesians 6:18", "Jude 1:20", "Zechariah 12:10"],
+    raises: ["how-do-i-pray", "does-god-hear-my-prayers", "who-is-the-holy-spirit"],
+    followsFrom: ["what-does-the-lords-prayer-teach", "how-do-i-pray"],
+    related: ["how-do-i-pray", "what-does-the-lords-prayer-teach", "who-is-the-holy-spirit", "what-is-the-fruit-of-the-spirit"],
+    planned: ["What is the role of the Spirit in public worship?"],
+    order: 37,
   },
 ];
