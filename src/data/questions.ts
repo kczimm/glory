@@ -684,10 +684,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 15:3-8", "1 Corinthians 15:20", "Luke 24:39", "Romans 8:11"],
-    raises: ["how-can-i-be-saved", "where-is-jesus-now", "between-the-cross-and-the-resurrection"],
+    raises: ["how-can-i-be-saved", "where-is-jesus-now", "between-the-cross-and-the-resurrection", "why-did-the-disciples-not-recognize-him-after-he-rose"],
     followsFrom: ["why-did-jesus-have-to-die"],
     related: ["is-jesus-really-god"],
-    planned: ["Why did the disciples not recognize Him after He rose?"],
+    planned: ["What was it like to see the risen Jesus?"],
     order: 9,
   },
 
@@ -6748,5 +6748,88 @@ export const questions: Question[] = [
     related: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again", "what-is-repentance", "spirits-witness-or-my-own-feelings"],
     planned: ["How do I know God has given me a new heart?"],
     order: 26,
+  },
+
+  {
+    slug: "why-did-the-disciples-not-recognize-him-after-he-rose",
+    question: "Why did the disciples not recognize Him after He rose?",
+    category: "jesus-christ",
+    summary:
+      "A number of the resurrection accounts tell us that the risen Jesus was not immediately recognized: the two on the road, Mary, the disciples on the shore. He was always the same Jesus, now risen and glorious, and recognition came as He revealed Himself, by His word, at the breaking of bread, in calling a name. The appearances teach us that we recognize our risen Lord by faith, through the means He has given, not by sight alone.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "The road to Emmaus",
+        lookFor: "Two disciples walk with the risen Jesus without recognizing Him, until He opens the Scriptures and takes bread, and then their eyes are opened.",
+        focus: "13-43",
+      },
+      {
+        book: "John",
+        chapter: 20,
+        title: "Mary at the tomb",
+        lookFor: "Mary does not know it is Jesus standing before her until He calls her name.",
+        focus: "11-18",
+      },
+      {
+        book: "John",
+        chapter: 21,
+        title: "On the shore of the sea",
+        lookFor: "The disciples have fished all night and do not recognize the figure on the beach, until the catch of fish and the cry, 'It's the Lord.'",
+        focus: "1-14",
+      },
+      {
+        book: "Mark",
+        chapter: 16,
+        title: "He appeared in another form",
+        lookFor: "Mark notes that Jesus appeared in a different form to two of them as they walked, and later upbraided the eleven for their unbelief.",
+        focus: "9-14",
+      },
+      {
+        book: "John",
+        chapter: 20,
+        title: "Show me, and I will believe",
+        lookFor: "Even the doubter is met with grace: reach here your finger, see my hands, and do not be unbelieving but believing.",
+        focus: "24-31",
+      },
+    ],
+    points: [
+      {
+        heading: "The accounts are honest: sometimes He was not recognized at first",
+        body:
+          "The witnesses do not hide it. The two on the road to Emmaus 'were kept from recognizing him.' Mary stood before the risen Jesus and 'didn't know that it was Jesus.' The disciples on the shore 'didn't know that it was Jesus,' and in the upper room they were terrified, thinking they saw a spirit. Whatever the reason, it was the disciples' eyes and minds that failed to see at first, not the reality of the risen Lord before them.",
+        verses: ["Luke 24:16", "John 20:14", "John 21:4", "Luke 24:37"],
+      },
+      {
+        heading: "Yet it was always the same Jesus, now risen and glorious",
+        body:
+          "The risen Jesus insisted on continuity with the crucified One. He showed them His hands and feet: 'See my hands and my feet, that it is truly me. Touch me and see, for a spirit doesn't have flesh and bones, as you see that I have.' He ate with them, and He offered His wounds to Thomas. The glory did not erase His identity; it fulfilled it. He is the same Lord, risen, bodily, and present.",
+        verses: ["Luke 24:39", "Luke 24:42-43", "John 20:27"],
+      },
+      {
+        heading: "Recognition came as He revealed Himself",
+        body:
+          "In every case, the blindness was lifted when Jesus acted. On the road, it was when He took bread, blessed it, and broke it that their eyes were opened and they recognized Him. To Mary, it was when He said her name: 'Jesus said to her, Mary.' At the sea, it was the miraculous catch that led John to say, 'It's the Lord.' The disciples did not find Him by their own insight; He made Himself known.",
+        verses: ["Luke 24:30-31", "John 20:16", "John 21:6", "John 21:7"],
+      },
+      {
+        heading: "He opened their minds through the Scriptures",
+        body:
+          "On the Emmaus road, before their eyes were opened, their hearts were burning as He opened the Scriptures to them; even after the empty tomb, they had not yet understood the Scripture that He must rise from the dead. Later, He 'opened their minds, that they might understand the Scriptures.' The risen Jesus connects His resurrection to the whole word of God, from Moses and all the prophets to everything written about Him. Recognition came through the word He had given, and it still does: He makes Himself known as He opens the Scriptures to His people.",
+        verses: ["Luke 24:25-27", "Luke 24:32", "Luke 24:44-45", "John 20:9"],
+      },
+      {
+        heading: "So we recognize Him by faith, not by sight",
+        body:
+          "Jesus told Thomas, 'Because you have seen me, you have believed. Blessed are those who have not seen, and have believed.' Peter celebrates that those who have not seen Him love Him and rejoice in Him with inexpressible joy, and Paul says we walk by faith, not by sight. The risen Lord is with His people, making Himself known in His word, at His table, and in His care; and like the disciples, we recognize Him not by seeing with our eyes but by believing with our hearts.",
+        verses: ["John 20:29", "1 Peter 1:8", "2 Corinthians 5:7", "Matthew 28:20"],
+      },
+    ],
+    keyVerses: ["Luke 24:16", "Luke 24:30-31", "John 20:16", "John 20:29", "2 Corinthians 5:7"],
+    raises: ["did-jesus-rise-from-the-dead", "what-is-faith", "where-is-jesus-now"],
+    followsFrom: ["did-jesus-rise-from-the-dead", "where-is-jesus-now"],
+    related: ["did-jesus-rise-from-the-dead", "is-it-okay-to-doubt", "what-is-faith", "where-is-jesus-now"],
+    planned: ["Why did Jesus appear only to certain people after His resurrection?"],
+    order: 24,
   },
 ];
