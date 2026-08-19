@@ -1954,10 +1954,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 3:19", "2 Corinthians 7:10", "Mark 1:15", "Ezekiel 18:31"],
-    raises: ["what-happens-when-i-sin", "how-do-i-fight-sin"],
+    raises: ["what-happens-when-i-sin", "how-do-i-fight-sin", "repentance-one-time-or-lifelong"],
     followsFrom: ["what-is-the-gospel"],
     related: ["what-is-the-gospel", "what-happens-when-i-sin", "how-can-i-be-saved"],
-    planned: ["Is repentance a one-time decision or a lifelong posture?"],
+    planned: ["How do I know my repentance is genuine?"],
     order: 26,
   },
 
@@ -4474,5 +4474,88 @@ export const questions: Question[] = [
     related: ["what-is-faith", "can-i-lose-my-salvation", "spirits-witness-or-my-own-feelings", "why-does-god-seem-silent"],
     planned: ["Why does God seem to hide Himself sometimes?"],
     order: 29,
+  },
+
+  {
+    slug: "repentance-one-time-or-lifelong",
+    question: "Is repentance a one-time decision or a lifelong posture?",
+    category: "gospel",
+    summary:
+      "Both. Repentance begins with a decisive turning at conversion, and it continues as a lifelong posture of turning back whenever we wander. The same word covers the once-for-all turn and the daily re-turn; both are real, both are the work of grace, and heaven rejoices over each one.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 3,
+        title: "Produce fruit worthy of repentance",
+        lookFor: "John's baptism of repentance, and his demand that real repentance show in the fruit of a changed life.",
+        focus: "1-12",
+      },
+      {
+        book: "Luke",
+        chapter: 15,
+        title: "Joy over one sinner who repents",
+        lookFor: "The parables of the lost sheep and the lost coin: each one is a picture of the joy of a sinner's repentance.",
+        focus: "1-10",
+      },
+      {
+        book: "Acts",
+        chapter: 26,
+        title: "Repent, and turn to God",
+        lookFor: "Paul's testimony to Agrippa: he preached repentance toward God, with works worthy of repentance.",
+        focus: "12-23",
+      },
+      {
+        book: "Revelation",
+        chapter: 2,
+        title: "The churches called to repent",
+        lookFor: "The risen Christ calls whole churches to repent, and to repent again: 'repent, and do the first works.'",
+        focus: "1-7",
+      },
+      {
+        book: "Mark",
+        chapter: 1,
+        title: "Repent, and believe the Good News",
+        lookFor: "Jesus begins His own preaching with the call to repent and believe: the doorway and the path.",
+        focus: "1-15",
+      },
+    ],
+    points: [
+      {
+        heading: "Repentance begins with a decisive turning",
+        body:
+          "Jesus' first words in Mark are 'Repent, and believe in the Good News.' Peter's summons is explicit: 'Repent therefore, and turn again, that your sins may be blotted out.' There is a first repentance, a turning around that marks the start of the journey with Christ, and the New Testament takes it with a seriousness that leaves no room for delay.",
+        verses: ["Mark 1:15", "Acts 3:19", "Luke 13:3", "Acts 26:20"],
+      },
+      {
+        heading: "It continues as a lifelong posture",
+        body:
+          "The risen Christ does not tell the Ephesian church to repent once and be finished; He tells this already-begun church, 'repent and do the first works.' And to another He says, 'I gave her time to repent.' Repentance is not only the door a believer walks through; it is the way they keep walking, turning back whenever they recognize they have wandered.",
+        verses: ["Revelation 2:5", "Revelation 2:21", "1 John 1:9", "Luke 15:7"],
+      },
+      {
+        heading: "Real repentance shows in fruit",
+        body:
+          "John the Baptist refused to accept claimed repentance without evidence: 'Produce fruit worthy of repentance!' Paul preached the same, that people 'should repent and turn to God, doing works worthy of repentance.' Repentance is not a feeling of regret that goes nowhere; it is a turning that changes direction, and a changed direction shows.",
+        verses: ["Matthew 3:8", "Acts 26:20", "2 Corinthians 7:10"],
+      },
+      {
+        heading: "It is the doorway, and it is also the path",
+        body:
+          "Hebrews calls repentance a foundational principle: 'repentance from dead works' is part of the foundation, not the building itself. And yet believers are told to go on repenting when they stray. Repentance opens the door to the kingdom, and it is also the road by which the kingdom's citizens keep coming home. It is not the whole of the Christian life; it is the turning at its heart.",
+        verses: ["Hebrews 6:1", "Revelation 2:5", "Acts 26:20"],
+      },
+      {
+        heading: "Each turning is met by an open Father",
+        body:
+          "Nothing makes repentance bitter: 'godly sorrow works repentance to salvation, which brings no regret.' And heaven is not grudging about it: 'there will be more joy in heaven over one sinner who repents' over ninety-nine who need no repentance. To repent is not to grovel; it is to come home, and every time you turn, the Father is already running toward you.",
+        verses: ["2 Corinthians 7:10", "Luke 15:7", "1 John 1:9", "Acts 3:19"],
+      },
+    ],
+    keyVerses: ["Matthew 3:8", "Acts 26:20", "2 Corinthians 7:10", "Revelation 2:5", "Luke 15:7"],
+    raises: ["what-happens-when-i-sin", "does-god-use-our-failures"],
+    followsFrom: ["what-is-repentance", "what-is-the-gospel"],
+    related: ["what-is-repentance", "what-happens-when-i-sin", "how-do-i-fight-sin", "does-grace-mean-live-how-i-want"],
+    planned: ["What is the difference between godly sorrow and worldly regret?"],
+    order: 30,
   },
 ];
