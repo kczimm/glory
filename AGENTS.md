@@ -21,7 +21,7 @@ exact verses.
 
 ```bash
 npm run dev          # local dev (localhost:3000)
-npm run dev:lan      # dev on LAN, port 3100 (already running on this machine)
+npm run dev:lan      # dev on LAN, port 3100
 npm run build        # production build
 npm run start        # production serve
 npm run start:lan    # production serve on LAN, port 3100
