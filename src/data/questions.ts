@@ -828,10 +828,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 3:3", "John 1:12-13", "2 Corinthians 5:17", "1 Peter 1:3"],
-    raises: ["how-do-i-receive-the-holy-spirit", "what-happens-when-i-sin", "born-again-and-baptism"],
+    raises: ["how-do-i-receive-the-holy-spirit", "what-happens-when-i-sin", "born-again-and-baptism", "what-the-new-life-looks-like"],
     followsFrom: [],
     related: ["how-can-i-be-saved"],
-    planned: ["What does the new life look like day to day?"],
+    planned: ["What does it mean to be a child of God?"],
     order: 11,
   },
 
@@ -3804,5 +3804,88 @@ export const questions: Question[] = [
     related: ["what-is-baptism", "what-does-it-mean-to-be-born-again", "how-do-i-receive-the-holy-spirit"],
     planned: ["Does baptism wash away sin?"],
     order: 20,
+  },
+
+  {
+    slug: "what-the-new-life-looks-like",
+    question: "What does the new life look like day to day?",
+    category: "our-walk",
+    summary:
+      "The new life is a new direction more than an instant perfection: it is daily abiding in Christ, walking by the Spirit, feeding on the Word, praying, belonging to the church, and getting back up when we fall. It looks like a life that is being renewed, not a life that has already arrived.",
+    passages: [
+      {
+        book: "2 Corinthians",
+        chapter: 5,
+        title: "A new creation in Christ",
+        lookFor: "The old has passed away; everything has become new. This is where the new life begins.",
+        focus: "14-21",
+      },
+      {
+        book: "Colossians",
+        chapter: 3,
+        title: "Set your minds on things above",
+        lookFor: "Paul's portrait of the new life: put off the old self, put on the new, and let the word of Christ dwell richly.",
+        focus: "1-17",
+      },
+      {
+        book: "John",
+        chapter: 15,
+        title: "The vine and the branches",
+        lookFor: "Jesus shows the daily secret: remain in Him, and you bear fruit; apart from Him, nothing.",
+        focus: "1-8",
+      },
+      {
+        book: "Ephesians",
+        chapter: 4,
+        title: "Put off the old, put on the new",
+        lookFor: "The concrete shape of change: speech that builds up, and a heart that forgives as it has been forgiven.",
+        focus: "17-32",
+      },
+      {
+        book: "1 John",
+        chapter: 1,
+        title: "Walk in the light",
+        lookFor: "A realistic picture of daily life: we walk in the light, and when we stumble we confess and are cleansed.",
+        focus: "5-10",
+      },
+    ],
+    points: [
+      {
+        heading: "A new direction, not instant perfection",
+        body:
+          "Paul does not promise that a believer wakes up flawless. He says that in Christ you are a new creation: the old things have passed away, and in Christ they have truly become new, and are being renewed day by day. He who began a good work in you will carry it on, and even Paul himself said, 'Not that I have already obtained, or am already made perfect; but I press on.'",
+        verses: ["2 Corinthians 5:17", "Colossians 3:9-10", "Philippians 1:6", "Philippians 3:12"],
+      },
+      {
+        heading: "The daily secret is abiding",
+        body:
+          "Jesus gave the whole new life in one picture: remain in Him, and He in you, for He said, 'apart from me you can do nothing.' The branch does not strain to make fruit; it stays joined to the vine. So the daily walk is not grim effort but remaining in Christ and walking by His Spirit, even as the flesh pulls the other way.",
+        verses: ["John 15:4-5", "John 15:8", "John 15:16", "Galatians 5:16", "Galatians 5:17"],
+      },
+      {
+        heading: "It feeds on the Word and renews the mind",
+        body:
+          "The new life is shaped from the inside. Paul tells us to set our minds on the things that are above, and to be transformed by the renewing of the mind. The word of Christ is meant to dwell in us richly, teaching and admonishing one another in all wisdom. What fills the mind day by day slowly becomes what fills the life.",
+        verses: ["Colossians 3:1-2", "Colossians 3:16", "Romans 12:2"],
+      },
+      {
+        heading: "It keeps the practices that feed the flame",
+        body:
+          "The new life is lived in ordinary, repeatable habits. Rejoice always, pray without ceasing, give thanks in everything. Do not neglect meeting together, but stir one another to love and good works. Seek first His kingdom, and present your body as a living sacrifice. These are not the fuel of salvation; they are the steady breathing of a life that already belongs to God.",
+        verses: ["1 Thessalonians 5:16-18", "Hebrews 10:24-25", "Matthew 6:33", "Romans 12:1-2"],
+      },
+      {
+        heading: "It is dressed in Christ's character, and it gets back up",
+        body:
+          "Paul names the new clothes: compassion, kindness, humility, gentleness, patience, and, over them all, love. He puts away bitterness and slander, and he both receives and gives forgiveness: 'as Christ forgave you, so you also do.' And when a believer falls, the new life does not end: he who confesses is forgiven and cleansed. A righteous man falls seven times and rises again, and every morning God's mercies are new.",
+        verses: ["Colossians 3:12-14", "Ephesians 4:29", "Ephesians 4:31-32", "1 John 1:7-9", "Proverbs 24:16", "Lamentations 3:22-23"],
+      },
+    ],
+    keyVerses: ["2 Corinthians 5:17", "John 15:4-5", "Colossians 3:12-14", "1 John 1:9", "Galatians 5:16"],
+    raises: ["how-do-i-fight-sin"],
+    followsFrom: ["what-does-it-mean-to-be-born-again", "born-again-and-baptism"],
+    related: ["born-again-and-baptism", "how-do-i-fight-sin", "how-do-i-pray", "who-is-the-holy-spirit", "what-are-spiritual-gifts"],
+    planned: ["How do I grow in Christlikeness?"],
+    order: 22,
   },
 ];
