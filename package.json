@@ -1,6 +1,7 @@
 {
   "name": "glory",
   "version": "0.1.0",
+  "description": "Question-driven Scripture study: come with a question, read whole chapters, and let the Word raise the next one.",
   "private": true,
   "scripts": {
     "dev": "next dev",
