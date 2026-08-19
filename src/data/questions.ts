@@ -2404,10 +2404,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["2 Timothy 3:16-17", "Matthew 24:35", "2 Peter 1:21", "Psalm 19:7"],
-    raises: ["how-should-i-read-the-bible", "is-the-whole-bible-about-jesus", "why-do-bible-translations-differ"],
+    raises: ["how-should-i-read-the-bible", "is-the-whole-bible-about-jesus", "why-do-bible-translations-differ", "how-was-the-bible-written-down"],
     followsFrom: [],
     related: [],
-    planned: ["How was the Bible written down?"],
+    planned: ["How do we know which books belong in the Bible?"],
     order: 34,
   },
 
@@ -8545,6 +8545,92 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     followsFrom: ["why-does-god-seem-silent", "can-i-trust-the-bible"],
     related: ["why-does-god-seem-silent", "can-i-trust-the-bible", "gods-voice-or-my-own-thoughts", "how-do-i-know-the-spirit-is-leading-me"],
     planned: ["What does it mean to hear God speak through His word?"],
+    order: 39,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Word of God (continued: its origin)
+  // ------------------------------------------------------------------
+  {
+    slug: "how-was-the-bible-written-down",
+    question: "How was the Bible written down?",
+    category: "word-of-god",
+    summary:
+      "The Bible was written over many centuries by many human authors, yet Scripture insists these writings are not merely human products; they are God-breathed. God spoke through the prophets, moved holy men to write by the Holy Spirit, and had His words written down in books, until in these last days He spoke finally through His Son and the Spirit guided the apostles to write the gospel down. The Bible is God's message, written by men whom He carried along.",
+    passages: [
+      {
+        book: "2 Peter",
+        chapter: 1,
+        title: "Men spoke from God, moved by the Holy Spirit",
+        lookFor: "No prophecy of Scripture came by human will, but holy men spoke from God as they were carried along by the Spirit.",
+        focus: "16-21",
+      },
+      {
+        book: "2 Timothy",
+        chapter: 3,
+        title: "All Scripture is God-breathed",
+        lookFor: "Every Scripture is breathed out by God, profitable for teaching, correction, and training in righteousness.",
+        focus: "14-17",
+      },
+      {
+        book: "Hebrews",
+        chapter: 1,
+        title: "God spoke through the prophets, and by His Son",
+        lookFor: "God spoke at many times and in various ways through the prophets, and in these last days through His Son.",
+        focus: "1-4",
+      },
+      {
+        book: "Jeremiah",
+        chapter: 36,
+        title: "Write in a book all the words I have spoken",
+        lookFor: "God tells Jeremiah to take a scroll and write down the words He had spoken: prophecy connected to writing from the beginning.",
+        focus: "1-8",
+      },
+      {
+        book: "Luke",
+        chapter: 1,
+        title: "An orderly account from eyewitnesses",
+        lookFor: "Luke writes an accurate, orderly account of what was delivered by eyewitnesses, so the reader may be certain.",
+        focus: "1-4",
+      },
+    ],
+    points: [
+      {
+        heading: "God spoke, and had His words written down",
+        body:
+          "From the very beginning, God's speaking was joined to writing. The LORD said to Moses, 'Write you these words: for in accordance with these words I have made a covenant with you,' and Moses wrote the words of the law in a book. God told Jeremiah, 'Take a scroll of a book, and write therein all the words that I have spoken to you.' The spoken word of God was preserved in written form, because He intended it to endure for His people.",
+        verses: ["Exodus 34:27", "Deuteronomy 31:24", "Jeremiah 36:2"],
+      },
+      {
+        heading: "The prophets wrote as men moved by the Spirit",
+        body:
+          "Scripture is honest about its human writers and clear about its divine origin. Peter writes, 'no prophecy ever came by the will of man, but holy men of God spoke, being moved by the Holy Spirit,' and that 'no prophecy of Scripture is of private interpretation.' The human authors were real men in real circumstances, and the Holy Spirit carried them along, so that what they wrote is at once their words and God's.",
+        verses: ["2 Peter 1:21", "2 Peter 1:20", "Hebrews 1:1"],
+      },
+      {
+        heading: "All Scripture is God-breathed",
+        body:
+          "The Bible's own account of itself is that its breath comes from God: 'Every Scripture is God-breathed and profitable for teaching, for reproof, for correction, and for instruction in righteousness.' Paul could say of his own writings that they were 'the commandment of the Lord,' and Hebrews traces the whole thing back: God spoke through the prophets, and in these last days through His Son. The book is God's own word to us.",
+        verses: ["2 Timothy 3:16", "1 Corinthians 14:37", "Hebrews 1:1", "Hebrews 1:2"],
+      },
+      {
+        heading: "The New Testament was written by eyewitnesses",
+        body:
+          "The New Testament claims the anchor of testimony. Luke wrote 'having traced the course of all things accurately from the first,' an orderly account of what eyewitnesses delivered, that the reader might know the certainty of what was taught. Peter declared, 'we did not follow cunningly devised fables... but we were eyewitnesses of his majesty.' John wrote so that his readers might believe that Jesus is the Christ. These writings rest on those who saw and heard.",
+        verses: ["Luke 1:3", "Luke 1:4", "2 Peter 1:16", "John 20:31"],
+      },
+      {
+        heading: "Many writers, one Author",
+        body:
+          "The Bible was written over centuries by prophets, kings, a shepherd, fishermen, a tax collector, a physician, and an apostle, in different lands and languages; yet it is one book with one Author. God spoke at 'many times and in various ways' through the prophets, and holy men wrote as they were carried along by the Holy Spirit, so that all of it is 'God-breathed.' The many careful human hands are all guided by the one Spirit, and the whole library is the word of the one God.",
+        verses: ["Hebrews 1:1", "2 Peter 1:21", "2 Timothy 3:16", "Hebrews 1:2"],
+      },
+    ],
+    keyVerses: ["2 Peter 1:20-21", "2 Timothy 3:16", "Hebrews 1:1-2", "1 Corinthians 14:37", "John 20:31"],
+    raises: ["can-i-trust-the-bible", "why-do-bible-translations-differ", "how-should-i-read-the-bible"],
+    followsFrom: ["can-i-trust-the-bible"],
+    related: ["can-i-trust-the-bible", "why-do-bible-translations-differ", "is-the-whole-bible-about-jesus", "how-should-i-read-the-bible"],
+    planned: ["What does it mean that the Bible is both human and divine?"],
     order: 39,
   },
 ];
