@@ -2792,10 +2792,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Revelation 21:3-4", "2 Peter 3:13", "Isaiah 65:17", "Revelation 21:22-23"],
-    raises: [],
+    raises: ["what-will-we-do-in-the-new-creation"],
     followsFrom: ["what-is-the-resurrection"],
     related: ["where-is-jesus-now", "why-does-god-allow-suffering"],
-    planned: ["What will we do in the new creation?"],
+    planned: ["Is the new creation a place or a state?"],
     order: 43,
   },
 
@@ -5566,5 +5566,88 @@ export const questions: Question[] = [
     related: ["will-jesus-return-literally", "where-is-jesus-now", "what-is-the-resurrection", "what-is-the-new-heaven-and-new-earth"],
     planned: ["What is the great tribulation?"],
     order: 44,
+  },
+
+  {
+    slug: "what-will-we-do-in-the-new-creation",
+    question: "What will we do in the new creation?",
+    category: "our-hope",
+    summary:
+      "The new creation is not an endless rest with nothing to do; it is the healing and renewal of all things. Scripture shows God dwelling with His people, every tear wiped away, the curse gone, and His people serving Him, reigning with Him, seeing His face, and living in a world of righteousness, abundance, and joy without end.",
+    passages: [
+      {
+        book: "Revelation",
+        chapter: 21,
+        title: "God dwells with His people",
+        lookFor: "A new heaven and a new earth, God's dwelling with people, no more death, mourning, or pain, and the One on the throne making all things new.",
+        focus: "1-7",
+      },
+      {
+        book: "Revelation",
+        chapter: 22,
+        title: "The river of life and the throne",
+        lookFor: "No more curse, the servants of God serving Him and seeing His face, reigning forever, with the river and tree of life.",
+        focus: "1-7",
+      },
+      {
+        book: "Isaiah",
+        chapter: 65,
+        title: "New heavens and a new earth",
+        lookFor: "The prophets' picture: no more weeping, people building and planting, and a renewed world where nothing hurts or destroys.",
+        focus: "17-25",
+      },
+      {
+        book: "Revelation",
+        chapter: 7,
+        title: "Before the throne, serving without ceasing",
+        lookFor: "A great multitude before the throne, serving God day and night, with every tear wiped from their eyes.",
+        focus: "9-17",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 2,
+        title: "What God has prepared",
+        lookFor: "Eyes have not seen and ears have not heard what God has prepared for those who love Him: the new creation outruns our imagination.",
+        focus: "6-10",
+      },
+    ],
+    points: [
+      {
+        heading: "It is the healing of the world, not a leaving of it",
+        body:
+          "John saw 'a new heaven and a new earth,' and the prophets pictured the same: God says, 'I create new heavens and a new earth,' and Peter says we look for a new heavens and earth 'in which righteousness dwells.' The earth is not to be discarded; it is to be renewed, the fallen world made whole and set free at last.",
+        verses: ["Revelation 21:1", "Isaiah 65:17", "2 Peter 3:13"],
+      },
+      {
+        heading: "God Himself will dwell with us",
+        body:
+          "The center of the new creation is not a place but a presence: 'God's dwelling is with people, and he will dwell with them, and they will be his people, and God himself will be with them as their God.' And He will wipe away every tear; there will be no more death, mourning, crying, or pain, for the first things have passed away. The One on the throne declares, 'Behold, I am making all things new.' The God we have loved from afar will at last be with us face to face.",
+        verses: ["Revelation 21:3", "Revelation 21:4", "Revelation 21:5"],
+      },
+      {
+        heading: "We will serve Him and reign with Him",
+        body:
+          "The new creation is full of purpose, not of empty time. In the new Jerusalem there is 'no curse any more. The throne of God and of the Lamb will be in it, and his servants serve him,' and John says, 'They will reign forever and ever.' The great multitude is 'before the throne of God, they serve him day and night in his temple.' Our created purpose, to know God and serve Him, finds its full, unbroken expression there.",
+        verses: ["Revelation 22:3", "Revelation 22:5", "Revelation 7:15"],
+      },
+      {
+        heading: "We will see His face",
+        body:
+          "Scripture's highest promise is intimacy, not scenery: 'They will see his face, and his name will be on their foreheads.' Where we now 'see in a mirror, dimly,' then we shall see face to face and know even as we are known. To see God, to be with Him, to bear His name: this is the deep rest and the deep joy that no earthly happiness can satisfy, and that the new creation will give fully.",
+        verses: ["Revelation 22:4", "1 Corinthians 13:12", "Revelation 21:3"],
+      },
+      {
+        heading: "A world of abundance and peace",
+        body:
+          "The prophets paint a renewed world of real life: people build houses and inhabit them, plant vineyards and eat their fruit, and 'the wolf and the lamb shall feed together... They shall not hurt nor destroy in all my holy mountain.' The river of the water of life flows from the throne, and the tree of life bears its fruit for the healing of the nations. Scripture says that no eye has seen and no ear has heard what God has prepared for those who love Him. We will work without exhaustion, delight without decay, and live in a world where nothing is broken anymore.",
+        verses: ["Isaiah 65:21", "Isaiah 65:25", "Revelation 22:1-2", "1 Corinthians 2:9"],
+      },
+    ],
+    keyVerses: ["Revelation 21:3-4", "2 Peter 3:13", "Isaiah 65:17", "Revelation 22:4-5", "1 Corinthians 2:9"],
+    raises: ["what-is-the-resurrection"],
+    followsFrom: ["what-is-the-new-heaven-and-new-earth"],
+    related: ["what-is-the-new-heaven-and-new-earth", "what-happens-when-i-die", "where-is-jesus-now", "why-does-god-allow-suffering"],
+    planned: ["What does the Bible mean by 'God all in all'?"],
+    order: 45,
   },
 ];
