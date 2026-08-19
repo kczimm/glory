@@ -3,6 +3,7 @@ import { categories, questions, resolveQuestions } from "@/data";
 import SearchBox from "@/components/SearchBox";
 import QuestionCard from "@/components/QuestionCard";
 import VerseCard from "@/components/VerseCard";
+import JourneyHomeCard from "@/components/JourneyHomeCard";
 
 export default function Home() {
   return (
@@ -69,6 +70,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Continue the journey */}
+      <JourneyHomeCard />
 
       {/* Trails */}
       <section className="mx-auto max-w-5xl px-5 pb-16">

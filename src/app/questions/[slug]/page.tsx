@@ -11,6 +11,7 @@ import {
 } from "@/data";
 import VerseCard from "@/components/VerseCard";
 import ChapterReader from "@/components/ChapterReader";
+import JourneyBreadcrumb from "@/components/JourneyBreadcrumb";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -43,6 +44,7 @@ export default async function QuestionPage({ params }: Props) {
 
   return (
     <article>
+      <JourneyBreadcrumb key={slug} slug={slug} />
       {/* Header */}
       <header className="border-b border-line bg-gradient-to-b from-cream/70 to-parchment">
         <div className="mx-auto max-w-3xl px-5 pb-12 pt-12 sm:pt-16">

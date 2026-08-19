@@ -95,6 +95,21 @@ network call. To refresh/repair it, run `node scripts/fetch-bible.mjs`
   `getChapterFocus`.
 - Book alias: `Psalm` → `Psalms` (handled in `canonicalBook`).
 
+### The journey record
+
+A browser-local trail of the questions a reader has walked (the "✦ Your
+journey" breadcrumb on each study page, and the "Continue your journey" card
+on the home page).
+
+- `src/lib/journey.ts` is a `useSyncExternalStore` over `localStorage`
+  (`glory:journey`). `subscribe` / `getSnapshot` / `getServerSnapshot` are
+  passed to `useSyncExternalStore`; `recordVisit(slug)` and `clearJourney()`
+  mutate and notify.
+- `JourneyBreadcrumb` records each question visit and renders the sequence;
+  `JourneyHomeCard` offers "pick up where you left off". Key the breadcrumb by
+  `slug` so it remounts (and records) on each stop.
+- Kept browser-only: SSR snapshot is empty, so there's no hydration mismatch.
+
 ## Design system
 
 - Tailwind v4 tokens in `@theme` (`globals.css`): `parchment` bg, `cream`,
