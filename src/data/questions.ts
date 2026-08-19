@@ -374,7 +374,7 @@ export const questions: Question[] = [
     raises: ["is-jesus-really-god", "why-did-jesus-have-to-die", "what-does-it-mean-that-jesus-is-the-son-of-god", "why-did-jesus-call-himself-son-of-man"],
     followsFrom: [],
     related: ["who-is-the-holy-spirit"],
-    planned: [],
+    planned: ["What did Jesus teach about the kingdom of God?"],
     order: 5,
   },
 
@@ -608,7 +608,7 @@ export const questions: Question[] = [
     raises: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-happens-when-i-sin", "what-should-i-do-now-that-im-saved", "faith-or-works"],
     followsFrom: ["why-did-jesus-have-to-die", "did-jesus-rise-from-the-dead"],
     related: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
-    planned: [],
+    planned: ["What is the new heart that God promised?"],
     order: 8,
   },
 
@@ -1273,7 +1273,7 @@ export const questions: Question[] = [
     raises: ["will-jesus-return-literally"],
     followsFrom: ["did-jesus-rise-from-the-dead"],
     related: ["what-happens-when-i-sin", "how-can-i-be-saved"],
-    planned: [],
+    planned: ["What is the church?"],
     order: 17,
   },
 
@@ -1349,7 +1349,7 @@ export const questions: Question[] = [
     raises: ["how-do-i-fight-sin"],
     followsFrom: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
     related: ["who-is-the-holy-spirit", "how-do-i-receive-the-holy-spirit", "why-do-i-need-the-church", "how-should-i-read-the-bible", "how-do-i-pray"],
-    planned: [],
+    planned: ["How do I share my faith with others?"],
     order: 18,
   },
 
@@ -1580,7 +1580,7 @@ export const questions: Question[] = [
     raises: ["what-is-justification"],
     followsFrom: ["how-can-i-be-saved"],
     related: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again", "what-should-i-do-now-that-im-saved", "what-is-the-gospel"],
-    planned: [],
+    planned: ["What is sanctification, and how does it happen?"],
     order: 21,
   },
 
@@ -1659,7 +1659,7 @@ export const questions: Question[] = [
     raises: ["what-is-grace", "what-is-justification", "what-is-faith", "what-is-repentance", "how-can-i-be-saved"],
     followsFrom: [],
     related: ["who-is-jesus", "how-can-i-be-saved", "faith-or-works"],
-    planned: [],
+    planned: ["What is the kingdom of God?"],
     order: 22,
   },
 
@@ -2233,7 +2233,7 @@ export const questions: Question[] = [
     raises: ["what-does-the-lords-prayer-teach", "does-god-hear-my-prayers"],
     followsFrom: [],
     related: ["who-is-the-father", "what-should-i-do-now-that-im-saved"],
-    planned: [],
+    planned: ["What is fasting, and does it belong with prayer?"],
     order: 30,
   },
 
@@ -2320,7 +2320,7 @@ export const questions: Question[] = [
     raises: ["why-does-god-seem-silent"],
     followsFrom: ["how-do-i-pray"],
     related: ["who-is-the-father"],
-    planned: [],
+    planned: ["What does it mean to pray in Jesus' name?"],
     order: 32,
   },
 
@@ -2496,7 +2496,7 @@ export const questions: Question[] = [
     raises: [],
     followsFrom: ["can-i-trust-the-bible"],
     related: ["who-is-jesus", "what-is-the-gospel"],
-    planned: [],
+    planned: ["How do I find Christ in the Old Testament?"],
     order: 36,
   },
 
@@ -2669,7 +2669,7 @@ export const questions: Question[] = [
     raises: ["what-is-the-resurrection", "will-jesus-return-literally"],
     followsFrom: [],
     related: ["where-is-jesus-now", "what-is-the-gospel"],
-    planned: [],
+    planned: ["What is heaven like?"],
     order: 40,
   },
 
@@ -2753,7 +2753,7 @@ export const questions: Question[] = [
     raises: ["what-is-the-new-heaven-and-new-earth"],
     followsFrom: ["what-happens-when-i-die"],
     related: ["did-jesus-rise-from-the-dead"],
-    planned: [],
+    planned: ["Will we recognize each other in the resurrection?"],
     order: 42,
   },
 
