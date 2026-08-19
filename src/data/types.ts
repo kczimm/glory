@@ -65,3 +65,25 @@ export interface Question {
   planned: string[];
   order: number;
 }
+
+/**
+ * The knowledge graph: typed cross-reference edges between verses.
+ * Scripture interprets Scripture — these edges show HOW verses connect.
+ */
+export type ConnectionKind =
+  | "quotes" // the text is quoted / alluded to elsewhere
+  | "promise" // a promise or prophecy made in this verse
+  | "fulfilled" // a promise/prophecy fulfilled in this verse
+  | "pattern" // a type / foreshadowing
+  | "parallel" // an account or saying set alongside
+  | "theme" // the same theme or thread running through
+  | "contrast"; // one passage set against another
+
+export interface Connection {
+  /** target verse reference, e.g. "Isaiah 53:5" */
+  target: string;
+  /** how this verse relates to the target */
+  kind: ConnectionKind;
+  /** one sentence explaining the relationship — the pedagogy */
+  note: string;
+}

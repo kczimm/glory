@@ -1,10 +1,12 @@
 import { verses, chapters } from "./scripture";
 import { categories, getCategory } from "./categories";
 import { questions } from "./questions";
-import type { Category, Question } from "./types";
+import { connections, getConnections, connectionKindLabel } from "./connections";
+import type { Category, Question, Connection, ConnectionKind } from "./types";
 
 export { categories, questions, verses, chapters, getCategory };
-export type { Category, Question };
+export { connections, getConnections, connectionKindLabel };
+export type { Category, Question, Connection, ConnectionKind };
 
 /** content book name -> canonical scripture.ts key */
 const BOOK_ALIASES: Record<string, string> = {

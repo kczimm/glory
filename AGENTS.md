@@ -59,6 +59,29 @@ In Next 16, route `params` is a **Promise** — `await params` before reading it
 When adding content, keep every study point **grounded in specific verses**,
 and wire `raises`/`followsFrom` so journeys continue organically.
 
+### The knowledge graph
+
+Beyond questions, Glory has **typed cross-reference edges between verses**
+(the "biblical pedagogy" layer). They live in `src/data/connections.ts`,
+keyed by verse ref:
+
+```ts
+connections = {
+  "John 8:58": [
+    { target: "Exodus 3:14", kind: "quotes", note: "Jesus takes the name God revealed in the burning bush — 'I AM WHO I AM' — as His own." },
+    // ...
+  ],
+}
+```
+
+- `Connection = { target, kind, note }`. `kind` is one of `quotes | promise |
+  fulfilled | pattern | parallel | theme | contrast` (see `types.ts`).
+- The `note` is the pedagogy — one sentence explaining HOW the verses relate.
+- `getConnections(ref)` returns the edges; `VerseConnections` renders them as
+the "✦ Cross-references" disclosure inside every `VerseCard`.
+- Because the **whole Bible is vendored**, every `target` resolves to text —
+there is no missing-verse problem. Add edges freely.
+
 ## Verse references
 
 - Use canonical refs: `"John 14:16-17"`, `"John 3:16"`.

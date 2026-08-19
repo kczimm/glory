@@ -21,6 +21,14 @@ export const categories: Category[] = [
     order: 2,
     entry: ["who-is-jesus"],
   },
+  {
+    slug: "our-walk",
+    title: "Our Walk with Him",
+    tagline:
+      "How we come to know Him and what the life He gives looks like — new birth, assurance, and following Him when we fail.",
+    order: 3,
+    entry: ["what-does-it-mean-to-be-born-again"],
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {

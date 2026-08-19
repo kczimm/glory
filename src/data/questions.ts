@@ -374,10 +374,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 1:1", "John 1:14", "Philippians 2:9-11", "Hebrews 1:3", "Mark 10:45"],
-    raises: ["is-jesus-really-god", "why-did-jesus-have-to-die"],
+    raises: ["is-jesus-really-god", "why-did-jesus-have-to-die", "what-does-it-mean-that-jesus-is-the-son-of-god"],
     followsFrom: [],
     related: ["who-is-the-holy-spirit"],
-    planned: ["What does it mean that Jesus is the Son of God?"],
+    planned: ["What does it mean that Jesus calls himself the Son of Man?"],
     order: 5,
   },
 
@@ -532,10 +532,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 3:23", "Romans 5:8", "Isaiah 53:5-6", "2 Corinthians 5:21", "Mark 10:45"],
-    raises: ["how-can-i-be-saved"],
+    raises: ["how-can-i-be-saved", "did-jesus-rise-from-the-dead"],
     followsFrom: ["who-is-jesus", "is-jesus-really-god"],
     related: [],
-    planned: ["Did Jesus really rise from the dead?", "What happened between the cross and the resurrection?"],
+    planned: ["What happened between the cross and the resurrection?"],
     order: 7,
   },
 
@@ -608,15 +608,377 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 2:8-9", "Romans 10:9-10", "John 14:6", "Romans 8:38-39", "1 John 5:11-13"],
-    raises: [],
-    followsFrom: ["why-did-jesus-have-to-die"],
+    raises: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-happens-when-i-sin"],
+    followsFrom: ["why-did-jesus-have-to-die", "did-jesus-rise-from-the-dead"],
     related: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
-    planned: [
-      "What happens when I sin after I've come to Christ?",
-      "Can I lose my salvation?",
-      "What does it mean to be born again?",
-      "What should I do now that I'm saved?",
-    ],
+    planned: ["What should I do now that I'm saved?"],
     order: 8,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Jesus Christ (continued) / Our Walk with Him
+  // ------------------------------------------------------------------
+  {
+    slug: "did-jesus-rise-from-the-dead",
+    question: "Did Jesus really rise from the dead?",
+    category: "jesus-christ",
+    summary:
+      "Yes — the resurrection is the best-attested event of the ancient world and the hinge of the Christian faith. If Christ did not rise, our faith is futile; because He did, death is defeated and we have a living hope.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 15,
+        title: "The earliest account",
+        lookFor: "Paul lists the witnesses — many still alive and checkable when he wrote.",
+        focus: "1-20",
+      },
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "The empty tomb and the risen Lord",
+        lookFor: "He is not here — He has risen, and He appears bodily, not as a ghost.",
+        focus: "1-43",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Peter's first sermon",
+        lookFor: "The resurrection is the proof — 'God raised him up, having freed him from the agony of death.'",
+        focus: "22-36",
+      },
+      {
+        book: "John",
+        chapter: 20,
+        title: "Thomas believes",
+        lookFor: "The risen Jesus offers His wounds — and Thomas worships Him as Lord and God.",
+        focus: "24-29",
+      },
+    ],
+    points: [
+      {
+        heading: "A historical claim with checkable witnesses",
+        body:
+          "This is not myth. Paul delivers what he 'received' — Christ died for our sins, was buried, and rose the third day according to the Scriptures, and appeared to Peter, then the twelve, then more than five hundred brothers at once, then James, then Paul. Most of those witnesses were still alive when he wrote and could be questioned.",
+        verses: ["1 Corinthians 15:3-8"],
+      },
+      {
+        heading: "The tomb was empty",
+        body:
+          "The women found the stone rolled away and the tomb empty; the grave clothes were left behind. The angel's words are the heart of it: 'He is not here, for he has risen, just like he said.' No one has ever produced His body — because there was none to produce.",
+        verses: ["Luke 24:1-6", "Matthew 28:6", "John 20:6-7"],
+      },
+      {
+        heading: "He appeared bodily, not as a ghost",
+        body:
+          "Jesus insisted He was not a spirit: 'See my hands and my feet, that it is truly me. Touch me and see, for a spirit does not have flesh and bones, as you see that I have.' He even ate in their presence and invited Thomas to touch His wounds. The resurrection was a bodily, physical event.",
+        verses: ["Luke 24:39-43", "John 20:27"],
+      },
+      {
+        heading: "The resurrection vindicates who He is",
+        body:
+          "Paul writes that Jesus was 'declared to be the Son of God with power… by the resurrection from the dead.' Peter tells the crowd that God has made Him both Lord and Christ — and raised Him as public proof. The resurrection is God's own verdict on Jesus.",
+        verses: ["Romans 1:4", "Acts 2:32-36", "Acts 17:31"],
+      },
+      {
+        heading: "It means death is defeated for us",
+        body:
+          "Christ is the firstfruits of the resurrection — and because He rose, those who belong to Him will rise too. The Spirit who raised Jesus will give life to our mortal bodies, and we are born again to a living hope through His resurrection. His victory is ours.",
+        verses: ["1 Corinthians 15:20-22", "Romans 8:11", "1 Peter 1:3"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 15:3-8", "1 Corinthians 15:20", "Luke 24:39", "Romans 8:11"],
+    raises: ["how-can-i-be-saved"],
+    followsFrom: ["why-did-jesus-have-to-die"],
+    related: ["is-jesus-really-god"],
+    planned: ["What happened between the cross and the resurrection?", "Where is Jesus now?"],
+    order: 9,
+  },
+
+  {
+    slug: "what-does-it-mean-that-jesus-is-the-son-of-god",
+    question: "What does it mean that Jesus is the Son of God?",
+    category: "jesus-christ",
+    summary:
+      "When Scripture calls Jesus the Son of God, it is not saying He is a created being or 'less than' God — it is declaring His full divinity and His perfect relationship with the Father. He is the eternal Son, of one nature with the Father.",
+    passages: [
+      {
+        book: "John",
+        chapter: 5,
+        title: "Equal with the Father",
+        lookFor: "Jesus explains His relationship to the Father — and the Jews understand it as a claim to equality.",
+        focus: "16-23",
+      },
+      {
+        book: "John",
+        chapter: 10,
+        title: "I and the Father are one",
+        lookFor: "Jesus' own words — and the crowd's reaction: they reach for stones.",
+        focus: "22-39",
+      },
+      {
+        book: "Hebrews",
+        chapter: 1,
+        title: "The Son, greater than angels",
+        lookFor: "The Father calls Him 'Son' and addresses Him as God.",
+      },
+    ],
+    points: [
+      {
+        heading: "'Son' speaks of nature, not of being made",
+        body:
+          "In Scripture, sonship describes likeness of nature and relationship. The Son is 'the radiance of God's glory and the exact imprint of his nature.' The word speaks of who He eternally is in relation to the Father — not of a point when He began to exist.",
+        verses: ["Hebrews 1:3", "Hebrews 1:5"],
+      },
+      {
+        heading: "Everyone understood it as a claim to equality",
+        body:
+          "When Jesus called God His own Father, 'the Jews sought all the more to kill him, because he not only broke the Sabbath, but also called God his own Father, making himself equal with God.' They knew exactly what sonship meant — He was claiming to be God.",
+        verses: ["John 5:17-18", "John 10:33"],
+      },
+      {
+        heading: "The Son does the Father's own works",
+        body:
+          "As the Father raises the dead and gives life, so the Son gives life to whom He will. All judgment has been given to the Son, 'that all may honor the Son even as they honor the Father.' These are not the works of a servant doing another's bidding — they are the works of God.",
+        verses: ["John 5:19", "John 5:21-23"],
+      },
+      {
+        heading: "He is one with the Father",
+        body:
+          "Jesus said plainly, 'I and the Father are one.' The crowd immediately understood: 'because you, being a man, make yourself God.' The Son is not one god among many — He and the Father are one in being, distinct in Person.",
+        verses: ["John 10:30", "John 10:33"],
+      },
+      {
+        heading: "Why it matters for salvation",
+        body:
+          "Our life is in the Son: 'He who has the Son has life.' And because the Son is God, He is fully able to save. The Father's love is measured by this — He 'did not spare his own Son, but delivered him up for us all.' A lesser Christ could not bear a whole world's sin; the Son of God can.",
+        verses: ["1 John 5:11-12", "Romans 8:32", "John 3:16"],
+      },
+    ],
+    keyVerses: ["John 5:18", "John 10:30", "Hebrews 1:3", "John 5:21"],
+    raises: ["is-jesus-really-god"],
+    followsFrom: ["who-is-jesus"],
+    related: ["who-is-the-holy-spirit"],
+    planned: ["Why did Jesus also call himself the Son of Man?"],
+    order: 10,
+  },
+
+  {
+    slug: "what-does-it-mean-to-be-born-again",
+    question: "What does it mean to be born again?",
+    category: "our-walk",
+    summary:
+      "To be born again is to receive new spiritual life from God through faith in Christ — a second birth, not of the flesh but of the Spirit, which makes you a child of God and a new creation. It is the doorway of the entire Christian life.",
+    passages: [
+      {
+        book: "John",
+        chapter: 3,
+        title: "Nicodemus comes by night",
+        lookFor: "Jesus' great teaching: 'Unless one is born again, he cannot see the kingdom of God.'",
+        focus: "1-16",
+      },
+      {
+        book: "1 Peter",
+        chapter: 1,
+        title: "Born again to a living hope",
+        lookFor: "The new birth — by the resurrection of Christ, through the living and abiding word of God.",
+        focus: "3-9",
+      },
+      {
+        book: "Titus",
+        chapter: 3,
+        title: "The washing of regeneration",
+        lookFor: "God saved us by mercy — the renewal of the Holy Spirit.",
+        focus: "3-7",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 5,
+        title: "A new creation",
+        lookFor: "If anyone is in Christ — a new creation; the old has passed away.",
+        focus: "16-21",
+      },
+    ],
+    points: [
+      {
+        heading: "It is a second birth",
+        body:
+          "Nicodemus was a religious expert, and Jesus told him he still needed to be 'born again' — born of water and the Spirit, not of the flesh. Flesh gives birth to flesh; the Spirit gives birth to spirit. The new birth is not self-improvement; it is a new beginning from above.",
+        verses: ["John 3:3", "John 3:5-8"],
+      },
+      {
+        heading: "It is God's work, not ours",
+        body:
+          "We become children of God 'not of blood, nor of the will of the flesh, nor of the will of man, but of God.' It is God who saves us 'by his mercy, through the washing of regeneration and renewing of the Holy Spirit.' We cannot birth ourselves; we receive the birth He gives.",
+        verses: ["John 1:12-13", "Titus 3:5", "Ephesians 2:8-9"],
+      },
+      {
+        heading: "It makes us a new creation",
+        body:
+          "'If anyone is in Christ, he is a new creation. The old things have passed away. Behold, all things have become new.' The new birth is not a fresh coat of paint on the old life — it is a new life, the life of Christ in you.",
+        verses: ["2 Corinthians 5:17", "Galatians 6:15"],
+      },
+      {
+        heading: "It gives a living hope",
+        body:
+          "We are 'born again to a living hope through the resurrection of Jesus Christ from the dead,' and 'born again, not of corruptible seed, but of incorruptible, through the living and abiding word of God.' The life you are born to can't die.",
+        verses: ["1 Peter 1:3", "1 Peter 1:23"],
+      },
+      {
+        heading: "How do you receive it? By believing the gospel",
+        body:
+          "The new birth comes as you trust what God says about His Son. Having believed, you are sealed with the Spirit — and the Spirit Himself testifies with your spirit that you are God's child. It is a gift to receive, not an achievement to earn.",
+        verses: ["John 3:16", "Ephesians 1:13", "Romans 8:15-16"],
+      },
+    ],
+    keyVerses: ["John 3:3", "John 1:12-13", "2 Corinthians 5:17", "1 Peter 1:3"],
+    raises: ["how-do-i-receive-the-holy-spirit", "what-happens-when-i-sin"],
+    followsFrom: [],
+    related: ["how-can-i-be-saved"],
+    planned: ["What is the difference between being born again and being baptized?", "What does the new life look like day to day?"],
+    order: 11,
+  },
+
+  {
+    slug: "can-i-lose-my-salvation",
+    question: "Can I lose my salvation?",
+    category: "our-walk",
+    summary:
+      "No. Salvation is the work of God — secured by Christ, sealed by the Spirit, and kept by His power. Those who truly belong to Him cannot be snatched from His hand. Scripture's warnings against falling away call us to persevere in real faith, not to doubt God's ability to keep His own.",
+    passages: [
+      {
+        book: "John",
+        chapter: 10,
+        title: "No one can snatch them from my hand",
+        lookFor: "The Shepherd's promise of eternal security.",
+        focus: "22-30",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "Nothing can separate us",
+        lookFor: "Paul's resounding conclusion of assurance.",
+        focus: "31-39",
+      },
+      {
+        book: "Philippians",
+        chapter: 1,
+        title: "He who began will complete it",
+        lookFor: "The certainty of the God who finishes what He starts.",
+        focus: "3-6",
+      },
+    ],
+    points: [
+      {
+        heading: "The Shepherd holds His sheep",
+        body:
+          "Jesus said His sheep hear His voice, He knows them, they follow Him, and He gives them eternal life — 'and they will never perish, and no one will snatch them out of my hand.' The Father who gave them is greater than all, and no one can snatch them out of the Father's hand either.",
+        verses: ["John 10:27-29"],
+      },
+      {
+        heading: "Nothing can separate us from His love",
+        body:
+          "Paul lists the worst that could be named — tribulation, distress, persecution, famine, nakedness, peril, sword, even death itself — and asks: 'Who will separate us from Christ's love?' His answer is a trumpet: neither death nor life, nor anything in all creation, can separate us from the love of God in Christ Jesus our Lord.",
+        verses: ["Romans 8:35-39"],
+      },
+      {
+        heading: "He who began the work will finish it",
+        body:
+          "'He who began a good work in you will complete it until the day of Jesus Christ.' Jesus said of those the Father gives Him: 'I will lose none of them, but raise them up at the last day,' and 'whoever comes to me I will in no way throw out.' Your keeping rests on His faithfulness, not your grip.",
+        verses: ["Philippians 1:6", "John 6:37-39"],
+      },
+      {
+        heading: "The warnings are real — and they call us to abide",
+        body:
+          "Scripture warns solemnly against falling away (Hebrews 6:4-6), and those warnings are meant to keep us clinging to Christ — genuine faith perseveres. John explains that those who left 'were not of us; for if they had been of us, they would have continued with us.' Real children keep abiding.",
+        verses: ["Hebrews 6:4-6", "1 John 2:19", "John 15:4-5"],
+      },
+      {
+        heading: "Assurance is the Spirit's witness, not our record",
+        body:
+          "John wrote his first letter 'that you may know that you have eternal life' — certainty, not guesswork. The Holy Spirit witnesses with our spirit that we are God's children. The question is not 'Am I good enough to keep it?' but 'Have I truly trusted the One who is strong enough to keep me?'",
+        verses: ["1 John 5:11-13", "Romans 8:15-16", "1 John 2:19"],
+      },
+    ],
+    keyVerses: ["John 10:27-29", "Romans 8:38-39", "Philippians 1:6", "John 6:37-39"],
+    raises: [],
+    followsFrom: ["how-can-i-be-saved"],
+    related: ["what-happens-when-i-sin", "who-is-the-holy-spirit"],
+    planned: ["What is faith, exactly?", "How do I know the Spirit's witness from my own feelings?"],
+    order: 12,
+  },
+
+  {
+    slug: "what-happens-when-i-sin",
+    question: "What happens when I sin after I've come to Christ?",
+    category: "our-walk",
+    summary:
+      "When a believer sins, their salvation is not undone — Christ is their advocate with the Father. But the Spirit is grieved and fellowship is clouded. The remedy is confession: God is faithful to forgive and cleanse, and He grows us through our failures.",
+    passages: [
+      {
+        book: "1 John",
+        chapter: 1,
+        title: "Walk in the light — confess",
+        lookFor: "The honest realism that believers still sin — and the promise of cleansing.",
+        focus: "5-10",
+      },
+      {
+        book: "1 John",
+        chapter: 2,
+        title: "We have an advocate",
+        lookFor: "If anyone sins — we have Jesus Christ the righteous, the propitiation for our sins.",
+        focus: "1-2",
+      },
+      {
+        book: "Hebrews",
+        chapter: 4,
+        title: "Approach the throne of grace",
+        lookFor: "A High Priest who was tempted as we are — so we may come boldly for mercy.",
+        focus: "14-16",
+      },
+      {
+        book: "Psalm",
+        chapter: 32,
+        title: "The joy of forgiveness",
+        lookFor: "David's confession and the blessedness of one whose transgression is forgiven.",
+      },
+    ],
+    points: [
+      {
+        heading: "Honesty: believers still struggle",
+        body:
+          "'If we say that we have no sin, we deceive ourselves, and the truth is not in us.' Even Paul cried out over a war within: 'The good that I desire, I don't do; but the evil that I don't desire, that I practice.' A believer is not someone who never fails — but someone who refuses to make peace with failure.",
+        verses: ["1 John 1:8", "Romans 7:19-24"],
+      },
+      {
+        heading: "But you have an advocate",
+        body:
+          "The gospel does not leave you stranded in guilt. 'If anyone sins, we have an advocate with the Father, Jesus Christ the righteous. He is the propitiation for our sins.' Your standing before God rests on His finished work, not on your performance — and He is right now pleading for you.",
+        verses: ["1 John 2:1-2", "Hebrews 7:25"],
+      },
+      {
+        heading: "The path back is confession",
+        body:
+          "'If we confess our sins, he is faithful and righteous to forgive us our sins, and to cleanse us from all unrighteousness.' David learned it: 'I acknowledged my sin to you… and you forgave the iniquity of my sin.' Whoever conceals his sin does not prosper, but whoever confesses and forsakes it obtains mercy.",
+        verses: ["1 John 1:9", "Psalm 32:5", "Proverbs 28:13"],
+      },
+      {
+        heading: "Come boldly — not cowering",
+        body:
+          "We do not approach God on the strength of our clean record but on the faithfulness of our High Priest, who was tempted in every way as we are, yet without sin. Because of Him we can 'draw near with boldness to the throne of grace, that we may receive mercy and find grace to help in time of need.'",
+        verses: ["Hebrews 4:15-16"],
+      },
+      {
+        heading: "No condemnation for those in Christ",
+        body:
+          "'There is therefore now no condemnation for those who are in Christ Jesus.' The Spirit, not the accuser, is the one who convicts — and He convicts to restore, not to destroy. God even works our failures for our good, making His grace sufficient in our weakness.",
+        verses: ["Romans 8:1", "Romans 8:26-27", "2 Corinthians 12:9"],
+      },
+    ],
+    keyVerses: ["1 John 2:1-2", "1 John 1:9", "Hebrews 4:15-16", "Romans 8:1"],
+    raises: [],
+    followsFrom: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
+    related: ["can-i-lose-my-salvation"],
+    planned: ["How do I fight sin in my life?", "Does God use our failures for our good?"],
+    order: 13,
   },
 ];
