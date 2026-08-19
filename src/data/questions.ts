@@ -2621,10 +2621,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 11:23-26", "Luke 22:19-20", "1 Corinthians 11:28"],
-    raises: [],
+    raises: ["how-often-the-lords-supper"],
     followsFrom: ["why-do-i-need-the-church"],
     related: ["why-do-i-need-the-church", "what-is-the-gospel"],
-    planned: ["How often should the church celebrate the Lord's Supper?"],
+    planned: ["Who may take the Lord's Supper?"],
     order: 39,
   },
 
@@ -5397,5 +5397,88 @@ export const questions: Question[] = [
     related: ["what-is-baptism", "born-again-and-baptism", "who-is-the-father"],
     planned: ["Does baptism save a person?"],
     order: 41,
+  },
+
+  {
+    slug: "how-often-the-lords-supper",
+    question: "How often should the church celebrate the Lord's Supper?",
+    category: "church",
+    summary:
+      "The New Testament does not fix an exact frequency. Its own words are 'as often as' you eat the bread and drink the cup, so that you proclaim the Lord's death until He comes. The first church broke bread regularly and gathered to do so on the first day of the week, and Paul's warning to examine oneself governs how we come more than when. Celebrate it often, worthily, and in remembrance of Him.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 11,
+        title: "The Supper and the self-examination",
+        lookFor: "Paul hands down what he received from the Lord: 'do this in memory of me... for as often as you eat and drink, you proclaim the Lord's death.'",
+        focus: "23-34",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Devoted to the breaking of bread",
+        lookFor: "The first church kept teaching, fellowship, the breaking of bread, and prayer: the Table belongs to the gathered life.",
+        focus: "42-47",
+      },
+      {
+        book: "Acts",
+        chapter: 20,
+        title: "Breaking bread on the first day of the week",
+        lookFor: "The disciples gathered on the first day of the week to break bread: a picture of the church's gathered rhythm.",
+        focus: "7-12",
+      },
+      {
+        book: "Luke",
+        chapter: 22,
+        title: "Do this in memory of me",
+        lookFor: "Jesus takes the bread and the cup and gives one command: do this in memory of me.",
+        focus: "14-20",
+      },
+      {
+        book: "Matthew",
+        chapter: 26,
+        title: "The institution of the Supper",
+        lookFor: "At the last meal, Christ gives thanks, breaks the bread, and gives it to His disciples with the cup of the new covenant.",
+        focus: "26-29",
+      },
+    ],
+    points: [
+      {
+        heading: "The command is to remember",
+        body:
+          "At the last supper, Jesus took bread, gave thanks, broke it, and said, 'This is my body... Do this in memory of me.' The word He left is a word of remembrance, and there is no record of Him dictating a calendar. What He commands is that His people keep coming to the bread and the cup, doing this, in memory of Him, until He comes.",
+        verses: ["Luke 22:19", "1 Corinthians 11:24-25"],
+      },
+      {
+        heading: "'As often as' leaves the rhythm open",
+        body:
+          "Paul's own words about the Supper point to regularity, not to a number: 'For as often as you eat this bread and drink this cup, you proclaim the Lord's death until he comes.' The emphasis is on the doing and the proclaiming, and the frequency is left to the church's faithful ordering. The New Testament is far more concerned that we come than that we count.",
+        verses: ["1 Corinthians 11:26"],
+      },
+      {
+        heading: "The first church came often",
+        body:
+          "The earliest believers devoted themselves to 'the breaking of bread' as one of the steady marks of their life together, and Luke says they broke bread at home day by day. When the disciples gathered on the first day of the week, it was to break bread. The New Testament's trajectory leans toward frequent celebration, woven into the ordinary rhythm of the church's gathering.",
+        verses: ["Acts 2:42", "Acts 2:46", "Acts 20:7"],
+      },
+      {
+        heading: "How we come matters more than when",
+        body:
+          "Paul's warning is not about a schedule but about readiness: those who eat and drink 'in a way unworthy of the Lord' are guilty of the body and blood of the Lord, and each one is to examine himself and discern the body. If we discerned ourselves, he says, we would not be judged. The Lord's Supper is for those who come in faith, confession, and love, not merely for those who show up.",
+        verses: ["1 Corinthians 11:27", "1 Corinthians 11:28", "1 Corinthians 11:29", "1 Corinthians 11:31"],
+      },
+      {
+        heading: "So churches celebrate often and worthily",
+        body:
+          "Given the New Testament's open rhythm and early practice, churches faithfully order the Supper on their own gathered pattern, many weekly and others at intervals, all in remembrance and proclamation. The point is not to maximize frequency for its own sake but to keep doing this until He comes, in faith and love, so that the Table remains a living center where the church remembers its Savior and proclaims His death until He returns.",
+        verses: ["1 Corinthians 11:26", "Acts 20:7", "Acts 2:42"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 11:24-26", "Luke 22:19", "Acts 20:7", "1 Corinthians 11:27-28", "Acts 2:42"],
+    raises: ["what-is-the-lords-supper"],
+    followsFrom: ["what-is-the-lords-supper", "why-do-i-need-the-church"],
+    related: ["what-is-the-lords-supper", "what-is-the-gospel", "what-is-a-healthy-church"],
+    planned: ["How is Christ present in the Lord's Supper?"],
+    order: 42,
   },
 ];
