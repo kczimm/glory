@@ -8,26 +8,22 @@
       <stop offset="55%" stop-color="#fbf7ee"/>
       <stop offset="100%" stop-color="#efe4cb"/>
     </radialGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#c69c3f"/>
-      <stop offset="100%" stop-color="#8a6625"/>
-    </linearGradient>
-    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#dcc78f"/>
-      <stop offset="100%" stop-color="#b2944c"/>
-    </linearGradient>
+    <radialGradient id="goldr" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#d8b255"/>
+      <stop offset="55%" stop-color="#ba8f34"/>
+      <stop offset="100%" stop-color="#966f26"/>
+    </radialGradient>
     <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#3a2f14" flood-opacity="0.16"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#3a2f14" flood-opacity="0.18"/>
     </filter>
   </defs>
-  <circle cx="90" cy="96" r="72" fill="none" stroke="url(#ring)" stroke-width="2" opacity="0.5"/>
-  <circle cx="90" cy="96" r="62" fill="none" stroke="#e6ddc9" stroke-width="1.5" opacity="0.9"/>
-  <path d="M131 41.5 L134.1 52.1 L138.5 49 L134.1 45.9 L131 56.5 L127.9 45.9 L123.5 49 L127.9 52.1 Z" fill="#c9a951" opacity="0.7"/>
-  <path d="M49 123.5 L52.1 134.1 L56.5 131 L52.1 127.9 L49 138.5 L45.9 127.9 L41.5 131 L45.9 134.1 Z" fill="#c9a951" opacity="0.5"/>
+  <circle cx="90" cy="90" r="62" fill="url(#goldr)"/>
+  <circle cx="90" cy="90" r="62" fill="none" stroke="#7d5f21" stroke-width="2" opacity="0.4"/>
+  <circle cx="90" cy="90" r="56" fill="none" stroke="#fff" stroke-width="1" opacity="0.08"/>
   
   <g filter="url(#shadow)">
-    <rect x="53" y="79" width="74" height="22" rx="11" fill="url(#gold)"/>
-    <rect x="79" y="48" width="22" height="100" rx="11" fill="url(#gold)"/>
+    <rect x="53" y="79" width="74" height="22" rx="11" fill="#fbf7ee"/>
+    <rect x="79" y="48" width="22" height="100" rx="11" fill="#fbf7ee"/>
   </g>
 
   </g>
