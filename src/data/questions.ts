@@ -3050,10 +3050,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 6:12", "Ephesians 6:13-17", "James 4:7", "1 John 4:4"],
-    raises: [],
+    raises: ["praying-against-the-enemy"],
     followsFrom: ["who-is-satan"],
     related: ["how-do-i-fight-sin", "who-is-satan"],
-    planned: ["How do I pray against the enemy without fearing him?"],
+    planned: ["What is the armor of God, piece by piece?"],
     order: 49,
   },
 
@@ -6069,5 +6069,88 @@ export const questions: Question[] = [
     related: ["what-are-angels", "who-is-satan", "where-is-jesus-now"],
     planned: ["What is the difference between angels and the Holy Spirit in guarding us?"],
     order: 51,
+  },
+
+  {
+    slug: "praying-against-the-enemy",
+    question: "How do I pray against the enemy without fearing him?",
+    category: "unseen-realm",
+    summary:
+      "Praying against the enemy is not a dramatic duel with an equal; it is humble, confident prayer that keeps its eyes on Christ, who has already won. Jesus taught us to ask the Father to deliver us from the evil one, and the Scriptures call us to submit to God, resist, put on the armor, and pray in the Spirit, resting in the greater One who is in us. Fear comes from forgetting the victory; faith comes from remembering who has conquered.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 6,
+        title: "Deliver us from the evil one",
+        lookFor: "Toward the close of the prayer Jesus taught, the daily cry: lead us not into temptation, but deliver us from the evil one.",
+        focus: "9-13",
+      },
+      {
+        book: "Ephesians",
+        chapter: 6,
+        title: "The armor, and praying in the Spirit",
+        lookFor: "After the armor, the engine: praying always with all prayer and supplication in the Spirit, watchful and persevering.",
+        focus: "10-20",
+      },
+      {
+        book: "Luke",
+        chapter: 10,
+        title: "Authority in Jesus' name",
+        lookFor: "The seventy find demons subject to them in Jesus' name, and Jesus declares He saw Satan fall: the victory behind the authority.",
+        focus: "17-20",
+      },
+      {
+        book: "James",
+        chapter: 4,
+        title: "Submit, resist, and draw near",
+        lookFor: "The order that matters: submit to God, resist the devil and he will flee, draw near to God and He will draw near to you.",
+        focus: "6-10",
+      },
+      {
+        book: "2 Thessalonians",
+        chapter: 3,
+        title: "The Lord guards you from the evil one",
+        lookFor: "Paul's prayer trust: the Lord is faithful, who will establish you and guard you from the evil one.",
+        focus: "1-5",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus made it an ordinary prayer",
+        body:
+          "The battle is real, but the prayer is not exotic. In the prayer He taught, Jesus put it on our lips every day: lead us not into temptation, but deliver us from the evil one. And Paul grounds the whole fight in the Lord's faithfulness: 'the Lord is faithful, who will establish you, and guard you from the evil one.' John adds that the one born of God is kept, and the evil one does not touch him. We do not need a special ceremony; we need a daily, trusting cry.",
+        verses: ["Matthew 6:13", "2 Thessalonians 3:3", "1 John 5:18"],
+      },
+      {
+        heading: "The posture is submission, then resistance",
+        body:
+          "James gives the order: submit to God, and resist the devil, and he will flee from you. Peter adds the watchfulness: be sober and watchful, resist the devil steadfast in your faith. We do not wrestle in panic or on our own strength; we stand in Christ, and from that standing we resist. The enemy flees not from our fury but from our place in God.",
+        verses: ["James 4:7", "1 Peter 5:8-9", "Matthew 26:41"],
+      },
+      {
+        heading: "Prayer is how the armor is worn",
+        body:
+          "Paul lists the whole armor of God, and then names what moves it all: praying at all times in the Spirit with all prayer and requests, watchful and persevering. Faith holds the shield, the word is the sword, and prayer is the breath of the battle. Lay the armor on and pray it on: the two belong together.",
+        verses: ["Ephesians 6:11", "Ephesians 6:16", "Ephesians 6:18", "2 Corinthians 10:4"],
+      },
+      {
+        heading: "The enemy is already defeated",
+        body:
+          "When the seventy told Jesus that even the demons were subject to them, He answered that He saw Satan fallen like lightning, and He gave them authority to tread on serpents and scorpions, over all the power of the enemy, with nothing able to harm them. At the cross Christ stripped the principalities and powers and made a public spectacle of them. We do not fight for a victory yet to be won; we fight from Christ's already-won victory, and 'greater is he who is in you than he who is in the world.'",
+        verses: ["Luke 10:17", "Luke 10:18", "Luke 10:19", "Colossians 2:15", "1 John 4:4", "John 16:33"],
+      },
+      {
+        heading: "So we pray with calm courage",
+        body:
+          "Fear and prayer cannot both rule the same heart. Cast all your worries on Him, because He cares for you; and in all these things, Paul says, we are more than conquerors through Him who loved us. We watch and pray because the enemy is real, and we do not fear because the victory is Christ's. A prayer that fears Him who is in us more than him who is in the world is a prayer prayed in its right mind.",
+        verses: ["1 Peter 5:7", "Romans 8:37", "Matthew 26:41", "1 John 4:4"],
+      },
+    ],
+    keyVerses: ["Matthew 6:13", "Ephesians 6:18", "James 4:7", "1 John 4:4", "Luke 10:19"],
+    raises: ["what-is-spiritual-warfare", "how-do-i-fight-sin", "who-is-satan"],
+    followsFrom: ["what-is-spiritual-warfare", "who-is-satan", "are-demons-real"],
+    related: ["what-is-spiritual-warfare", "who-is-satan", "are-demons-real", "how-do-i-pray"],
+    planned: ["How does spiritual warfare relate to mental health?"],
+    order: 52,
   },
 ];
