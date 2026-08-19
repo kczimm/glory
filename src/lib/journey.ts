@@ -2,7 +2,7 @@
 
 /**
  * The journey record: a persistent, local-only trail of the questions you've
- * explored — "you started here, came through here, now here."
+ * explored: "you started here, came through here, now here."
  *
  * A tiny external store (React `useSyncExternalStore`) over localStorage so the
  * components can render it without setState-in-effect. Runs only in the
@@ -29,7 +29,7 @@ function write(list: JourneyEntry[]) {
   try {
     localStorage.setItem(KEY, JSON.stringify(list));
   } catch {
-    /* private mode / quota — fail silently */
+    /* private mode / quota: fail silently */
   }
 }
 
@@ -42,12 +42,12 @@ function notify() {
 
 const EMPTY: JourneyEntry[] = [];
 
-/** SSR snapshot — always empty (the journey is browser-local only). */
+/** SSR snapshot: always empty (the journey is browser-local only). */
 export function getServerSnapshot(): JourneyEntry[] {
   return EMPTY;
 }
 
-/** React `subscribe` — returns an unsubscribe. */
+/** React `subscribe`: returns an unsubscribe. */
 export function subscribe(cb: () => void): () => void {
   listeners.add(cb);
   return () => {
@@ -55,7 +55,7 @@ export function subscribe(cb: () => void): () => void {
   };
 }
 
-/** React `getSnapshot` — referentially stable until the journey changes. */
+/** React `getSnapshot`: referentially stable until the journey changes. */
 export function getSnapshot(): JourneyEntry[] {
   if (cache === null) cache = read();
   return cache;

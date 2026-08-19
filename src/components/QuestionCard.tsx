@@ -3,7 +3,7 @@ import type { Question } from "@/data/types";
 import { categoryOf } from "@/data";
 
 /**
- * A question card — shows the question, short answer, and its key verses.
+ * A question card: shows the question, short answer, and its key verses.
  */
 export default function QuestionCard({ question }: { question: Question }) {
   const category = categoryOf(question);

@@ -23,7 +23,7 @@ function SearchView() {
         Search the Scriptures
       </h1>
       <p className="mt-3 text-[15px] leading-relaxed text-ink-soft sm:text-[16px]">
-        Every word of the Word, offline — and the studies that point to it.
+        Every word of the Word, offline, and the studies that point to it.
         Search the Scriptures, “because in them you think you have eternal life”
         (John 5:39).
       </p>
@@ -47,7 +47,7 @@ function SearchView() {
       {term && (
         <p className="mt-4 text-[13px] text-ink-faint">
           {verses.length} {verses.length === 1 ? "verse" : "verses"} ·{" "}
-          {questions.length} {questions.length === 1 ? "study" : "studies"} — for
+          {questions.length} {questions.length === 1 ? "study" : "studies"} for
           “{term}”
         </p>
       )}
@@ -55,7 +55,7 @@ function SearchView() {
       {empty && (
         <p className="mt-6 rounded-2xl border border-line bg-cream/50 px-5 py-6 text-center text-[14px] text-ink-soft">
           No match for “{term}” in the Word we have. Try a shorter or different
-          word — “grace”, “faith”, “come to the Father”.
+          word: “grace”, “faith”, “come to the Father”.
         </p>
       )}
 

@@ -13,7 +13,7 @@ import { subscribe, getSnapshot, getServerSnapshot, recordVisit, clearJourney } 
 export default function JourneyBreadcrumb({ slug }: { slug: string }) {
   const entries = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
-  // Record this stop after mount. No setState here — the store notifies React.
+  // Record this stop after mount. No setState here; the store notifies React.
   useEffect(() => {
     recordVisit(slug);
   }, [slug]);

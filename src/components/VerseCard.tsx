@@ -3,7 +3,7 @@ import Link from "next/link";
 import VerseConnections from "./VerseConnections";
 
 /**
- * A scripture callout — the reference, the exact text (WEB), and any
+ * A scripture callout: the reference, the exact text (WEB), and any
  * cross-reference connections from the knowledge graph.
  */
 export default function VerseCard({ verse }: { verse: string }) {

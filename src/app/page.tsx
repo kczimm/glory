@@ -20,7 +20,7 @@ export default function Home() {
             <span className="italic text-gold-deep">Leave with Scripture.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-ink-soft sm:mt-6 sm:text-[16px]">
-            Ask what you genuinely want to know — who Jesus is, how we come to
+            Ask what you genuinely want to know: who Jesus is, how we come to
             know Him, what the Holy Spirit does. Then read the passages that
             answer it, and let the Word itself raise the next question.
           </p>
@@ -40,17 +40,17 @@ export default function Home() {
             {
               n: "1",
               t: "Come with a question",
-              d: "No reading plan, no guilt. Ask what you actually want to understand — about God, about Jesus, about your own soul.",
+              d: "No reading plan, no guilt. Ask what you actually want to understand: about God, about Jesus, about your own soul.",
             },
             {
               n: "2",
               t: "Read the Scripture",
-              d: "Every answer sends you into the Word itself — whole chapters to read, and every point grounded in specific verses.",
+              d: "Every answer sends you into the Word itself: whole chapters to read, and every point grounded in specific verses.",
             },
             {
               n: "3",
               t: "Let the Word lead",
-              d: "What you read raises the next question. Follow it — question by question, Scripture by Scripture, deeper into the knowledge of God.",
+              d: "What you read raises the next question. Follow it: question by question, Scripture by Scripture, deeper into the knowledge of God.",
             },
           ].map((s) => (
             <div

@@ -96,7 +96,7 @@ export default async function QuestionPage({ params }: Props) {
             Go into the Word
           </h2>
           <p className="mt-2 text-[14.5px] leading-relaxed text-ink-soft">
-            Not a summary of these passages — the passages themselves. Read
+            Not a summary of these passages: the passages themselves. Read
             them, then come back to the study below.
           </p>
           <div className="mt-6 space-y-3">
@@ -148,7 +148,7 @@ export default async function QuestionPage({ params }: Props) {
           </h2>
           <p className="mt-2 max-w-[60ch] text-[14.5px] leading-relaxed text-ink-soft">
             Studying the Word naturally opens more of it. Follow what you just
-            read — it leads somewhere.
+            read: it leads somewhere.
           </p>
           {(raised.length > 0 || question.planned.length > 0) && (
             <div className="mt-7 space-y-3">

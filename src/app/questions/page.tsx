@@ -4,7 +4,7 @@ import QuestionCard from "@/components/QuestionCard";
 export const metadata = {
   title: "All Questions",
   description:
-    "Every question in Glory — a question-driven study of who God is and our relationship with Him, grounded in Scripture.",
+    "Every question in Glory: a question-driven study of who God is and our relationship with Him, grounded in Scripture.",
 };
 
 export default function QuestionsIndex() {
@@ -18,7 +18,7 @@ export default function QuestionsIndex() {
           Every question leads to Scripture
         </h1>
         <p className="mt-4 text-[16px] leading-relaxed text-ink-soft">
-          Each question is answered by reading the Word itself — whole chapters,
+          Each question is answered by reading the Word itself: whole chapters,
           and study points grounded in specific verses. And what you read will
           raise the next question.
         </p>
@@ -51,7 +51,7 @@ export default function QuestionsIndex() {
       </div>
 
       <p className="mt-16 rounded-2xl border border-line bg-cream/50 p-6 text-center text-[13.5px] leading-relaxed text-ink-soft">
-        More questions are being gathered — the Bible always has more to show
+        More questions are being gathered: the Bible always has more to show
         us. If you have a question of your own, bring it: the Word has an
         answer.
       </p>

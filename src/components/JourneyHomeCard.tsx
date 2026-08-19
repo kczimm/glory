@@ -6,7 +6,7 @@ import { getQuestion } from "@/data";
 import { subscribe, getSnapshot, getServerSnapshot } from "@/lib/journey";
 
 /**
- * "Continue your journey" — appears on the home page when the reader has
+ * "Continue your journey": appears on the home page when the reader has
  * been walking a trail. Picks up where they left off.
  */
 export default function JourneyHomeCard() {

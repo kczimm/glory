@@ -33,7 +33,7 @@ export default function ChapterReader({ passage }: { passage: Passage }) {
             {passage.book} {passage.chapter}
           </p>
           <p className="text-[13px] text-ink-soft">
-            {passage.title} — {passage.lookFor}
+            {passage.title}: {passage.lookFor}
           </p>
         </div>
         <span

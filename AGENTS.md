@@ -132,6 +132,15 @@ cached). `searchScripture` / `searchQuestions` / `searchAll` / `snippet`
 - `ChapterReader` is a client component (collapsible full-chapter reader,
   highlights the `focus` range).
 
+## Copy style
+
+- **Never use em dashes (—) in site copy.** Prefer commas, colons, semicolons,
+  or a sentence restructure.
+- The only acceptable use is the source attribution under a quoted verse, e.g.
+  `— John 1:1` (the pattern `VerseCard` renders from its `verse` prop).
+- Em dashes inside `src/data/scripture.ts` are the WEB's own punctuation
+  (generated file, quoted text, not our copy). Leave them alone.
+
 ## Before you finish
 
 `npm run lint` and `npm run build` must both pass.

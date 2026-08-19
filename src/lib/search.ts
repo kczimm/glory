@@ -2,7 +2,7 @@ import { verses, questions, type Question } from "@/data";
 
 /**
  * Search over the vendored World English Bible and over the study questions.
- * Pure data logic — safe to run on the server (build/request) or client.
+ * Pure data logic: safe to run on the server (build/request) or client.
  * The Bible index is built lazily on first search and cached.
  */
 

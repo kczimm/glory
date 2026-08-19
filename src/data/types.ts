@@ -1,5 +1,5 @@
 /**
- * Glory — core data model.
+ * Glory: core data model.
  *
  * The app is a question-driven journey through Scripture:
  *   Question -> read Scripture (chapters + verses) -> Scripture raises new questions -> continue.
@@ -47,7 +47,7 @@ export interface Question {
   question: string;
   /** category slug */
   category: string;
-  /** short answer — shown on cards and as the lead paragraph */
+  /** short answer, shown on cards and as the lead paragraph */
   summary: string;
   /** whole chapters to read as the heart of the study */
   passages: Passage[];
@@ -55,7 +55,7 @@ export interface Question {
   points: StudyPoint[];
   /** verses to meditate on / memorize */
   keyVerses: string[];
-  /** question slugs this study naturally raises — the journey continues here */
+  /** question slugs this study naturally raises; the journey continues here */
   raises: string[];
   /** question slugs that lead to this one */
   followsFrom: string[];
@@ -68,7 +68,7 @@ export interface Question {
 
 /**
  * The knowledge graph: typed cross-reference edges between verses.
- * Scripture interprets Scripture — these edges show HOW verses connect.
+ * Scripture interprets Scripture: these edges show HOW verses connect.
  */
 export type ConnectionKind =
   | "quotes" // the text is quoted / alluded to elsewhere
@@ -84,6 +84,6 @@ export interface Connection {
   target: string;
   /** how this verse relates to the target */
   kind: ConnectionKind;
-  /** one sentence explaining the relationship — the pedagogy */
+  /** one sentence explaining the relationship: the pedagogy */
   note: string;
 }

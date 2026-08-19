@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!text) return {};
   return {
     title: verse,
-    description: `${verse} — read in the World English Bible, with the study questions and cross-references that connect to it.`,
+    description: `${verse}: read in the World English Bible, with the study questions and cross-references that connect to it.`,
   };
 }
 
@@ -87,7 +87,7 @@ export default async function VersePage({ params }: Props) {
             </div>
           ) : (
             <p className="mt-3 text-[14px] text-ink-soft">
-              Not yet the focus of a full study — but it is connected in the
+              Not yet the focus of a full study, but it is connected in the
               Word below.
             </p>
           )}

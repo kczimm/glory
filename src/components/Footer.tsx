@@ -9,7 +9,7 @@ export default function Footer() {
         </p>
         <p className="max-w-md text-[13px] leading-relaxed text-ink-faint">
           Scripture quotations are from the {translation} ({translationNote}).
-          Study with the Bereans in mind — “searching the Scriptures daily to
+          Study with the Bereans in mind: “searching the Scriptures daily to
           see whether these things were so” (Acts 17:11).
         </p>
       </div>

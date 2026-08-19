@@ -5,7 +5,7 @@ import { graphVerseRefs, getConnections, verseSlug } from "@/data";
 export const metadata: Metadata = {
   title: "The Word, connected",
   description:
-    "Browse the cross-reference knowledge graph of Glory — every verse and the other scriptures it connects to.",
+    "Browse the cross-reference knowledge graph of Glory: every verse and the other scriptures it connects to.",
 };
 
 const BOOKS = [
@@ -39,7 +39,7 @@ export default function VersesIndex() {
           Scripture opens Scripture
         </h1>
         <p className="mt-4 text-[16px] leading-relaxed text-ink-soft">
-          Every verse below has its own page — where it is studied, and the
+          Every verse below has its own page: where it is studied, and the
           cross-references that tie it to the rest of the Word. {refs.length}{" "}
           verses in the graph so far.
         </p>
