@@ -1,5 +1,6 @@
 import { questions } from "./questions";
 import { connections } from "./connections";
+import { verses } from "./scripture";
 import type { Connection } from "./types";
 
 /**
@@ -82,5 +83,24 @@ export function verseSlug(ref: string): string {
 
 /** Reverse: find the canonical ref for a slug. */
 export function refFromSlug(slug: string): string | undefined {
-  return graphVerseRefs().find((r) => verseSlug(r) === slug);
+  return verseSlugIndex().get(slug);
+}
+
+/**
+ * Lazy reverse index over the ENTIRE vendored Bible (plus graph refs, which
+ * may be ranges). Search results can point at any of ~31k verses, so the
+ * /verses/[slug] route resolves any of them (rendering on demand), not just
+ * the pre-generated graph hubs.
+ */
+let slugIndex: Map<string, string> | null = null;
+function verseSlugIndex(): Map<string, string> {
+  if (slugIndex) return slugIndex;
+  slugIndex = new Map();
+  for (const ref of Object.keys(verses)) {
+    slugIndex.set(verseSlug(ref), ref);
+  }
+  for (const ref of graphVerseRefs()) {
+    slugIndex.set(verseSlug(ref), ref); // ranges and connection targets, e.g. "Isaiah 53:10-12"
+  }
+  return slugIndex;
 }
