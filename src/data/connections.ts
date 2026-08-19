@@ -215,8 +215,8 @@ export const connections: Record<string, Connection[]> = {
     c("1 Corinthians 13:13", "theme", "The greatest of gifts is love, and genuine faith 'works through love.'"),
   ],
   "1 Corinthians 15:3": [
-    c("Romans 5:8", "theme", "Christ died for the ungodly — 'for our sins,' as the gospel says."),
-    c("Isaiah 53:5", "fulfilled", "He was pierced for our transgressions — the death 'for our sins' the Servant-song foretold."),
+    c("Romans 5:8", "theme", "Christ died for the ungodly: 'for our sins,' as the gospel says."),
+    c("Isaiah 53:5", "fulfilled", "He was pierced for our transgressions: the death 'for our sins' the Servant-song foretold."),
     c("Mark 10:45", "theme", "The Son of Man came to give his life as a ransom for many."),
   ],
   "Romans 3:24": [
@@ -225,11 +225,11 @@ export const connections: Record<string, Connection[]> = {
     c("Romans 4:5", "parallel", "Faith credited as righteousness: Paul's own explanation of how we are justified."),
   ],
   "Hebrews 11:1": [
-    c("Hebrews 11:6", "theme", "Without faith it is impossible to please God — the same letter, the same point."),
-    c("Romans 10:17", "theme", "Faith comes by hearing the word — the content and the confidence of biblical faith."),
+    c("Hebrews 11:6", "theme", "Without faith it is impossible to please God: the same letter, the same point."),
+    c("Romans 10:17", "theme", "Faith comes by hearing the word: the content and the confidence of biblical faith."),
   ],
   "Romans 8:28": [
-    c("Genesis 50:20", "parallel", "You meant evil against me, but God meant it for good — the same sovereign working."),
+    c("Genesis 50:20", "parallel", "You meant evil against me, but God meant it for good: the same sovereign working."),
     c("Romans 8:18", "theme", "The present sufferings are not worth comparing with the glory to come."),
     c("2 Corinthians 4:17", "theme", "A light affliction working an eternal weight of glory."),
   ],
@@ -239,7 +239,7 @@ export const connections: Record<string, Connection[]> = {
     c("Ephesians 1:11", "theme", "He works all things after the counsel of his will."),
   ],
   "Proverbs 3:5": [
-    c("James 1:5", "theme", "Ask God for wisdom, and he will give it — the trust that leads to guidance."),
+    c("James 1:5", "theme", "Ask God for wisdom, and he will give it: the trust that leads to guidance."),
     c("Psalm 32:8", "theme", "I will instruct you and teach you in the way that you should go."),
     c("Romans 12:2", "theme", "Renew your mind, and you will discern the will of God."),
   ],

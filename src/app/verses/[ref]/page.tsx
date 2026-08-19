@@ -57,7 +57,7 @@ export default async function VersePage({ params }: Props) {
             {text}
           </p>
           <p className="mt-3 text-[14px] font-semibold tracking-wide text-gold-deep">
-            — {verse} (World English Bible)
+            {verse} · World English Bible
           </p>
         </div>
       </header>

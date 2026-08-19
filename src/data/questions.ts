@@ -1612,14 +1612,14 @@ export const questions: Question[] = [
         book: "John",
         chapter: 3,
         title: "God so loved",
-        lookFor: "Why the Son was sent — not to condemn but to save.",
+        lookFor: "Why the Son was sent: not to condemn but to save.",
         focus: "16-18",
       },
       {
         book: "Acts",
         chapter: 16,
         title: "The jailer's question",
-        lookFor: "'What must I do to be saved?' — and the one-sentence answer.",
+        lookFor: "'What must I do to be saved?' And the one-sentence answer.",
         focus: "25-34",
       },
     ],
@@ -1627,13 +1627,13 @@ export const questions: Question[] = [
       {
         heading: "It is good news, not good advice",
         body:
-          "The gospel is not a list of instructions to improve yourself — it is an announcement of what God has done. Paul delivers what he received: 'that Christ died for our sins according to the Scriptures, that he was buried, and that he was raised on the third day.' It is something to believe, not something to achieve.",
+          "The gospel is not a list of instructions to improve yourself: it is an announcement of what God has done. Paul delivers what he received: 'that Christ died for our sins according to the Scriptures, that he was buried, and that he was raised on the third day.' It is something to believe, not something to achieve.",
         verses: ["1 Corinthians 15:1-4", "Romans 1:16"],
       },
       {
         heading: "The message: a Person and His finished work",
         body:
-          "The gospel centers on Jesus — not on our efforts. 'God so loved the world that he gave his only born Son, that whoever believes in him should not perish, but have eternal life.' The good news is who He is and what He did for us.",
+          "The gospel centers on Jesus, not on our efforts. 'God so loved the world that he gave his only born Son, that whoever believes in him should not perish, but have eternal life.' The good news is who He is and what He did for us.",
         verses: ["John 3:16", "1 Corinthians 15:3-4", "2 Corinthians 5:19"],
       },
       {
@@ -1651,7 +1651,7 @@ export const questions: Question[] = [
       {
         heading: "It is for everyone",
         body:
-          "The gospel is 'the power of God for salvation for everyone who believes.' God did not send the Son into the world to condemn the world, but that the world through Him might be saved. It is good news for all — the worst and the best alike.",
+          "The gospel is 'the power of God for salvation for everyone who believes.' God did not send the Son into the world to condemn the world, but that the world through Him might be saved. It is good news for all: the worst and the best alike.",
         verses: ["Romans 1:16", "John 3:17", "1 Timothy 2:4"],
       },
     ],
@@ -1674,7 +1674,7 @@ export const questions: Question[] = [
         book: "Ephesians",
         chapter: 2,
         title: "Saved by grace",
-        lookFor: "By grace through faith — not of works.",
+        lookFor: "By grace through faith, not of works.",
         focus: "1-10",
       },
       {
@@ -1695,7 +1695,7 @@ export const questions: Question[] = [
         book: "Luke",
         chapter: 15,
         title: "The grace of the Father",
-        lookFor: "A gift to the utterly undeserving — the prodigal received more than he deserved.",
+        lookFor: "A gift to the utterly undeserving: the prodigal received more than he deserved.",
         focus: "11-32",
       },
     ],
@@ -1703,25 +1703,25 @@ export const questions: Question[] = [
       {
         heading: "Grace is unearned favor",
         body:
-          "'By grace you have been saved through faith, and that not of yourselves; it is the gift of God, not of works, that no one would boast.' Paul adds: if it is by grace, it is no longer of works — otherwise grace would no longer be grace. A gift that can be earned is not a gift.",
+          "'By grace you have been saved through faith, and that not of yourselves; it is the gift of God, not of works, that no one would boast.' Paul adds: if it is by grace, it is no longer of works; otherwise grace would no longer be grace. A gift that can be earned is not a gift.",
         verses: ["Ephesians 2:8-9", "Romans 11:6", "Romans 4:4"],
       },
       {
         heading: "God gives what we do not deserve",
         body:
-          "We had all sinned and fallen short — yet we are 'justified freely by his grace through the redemption that is in Christ Jesus.' Grace runs to the undeserving, almost shockingly: the prodigal's father runs and embraces him while he is still a long way off.",
+          "We had all sinned and fallen short, yet we are 'justified freely by his grace through the redemption that is in Christ Jesus.' Grace runs to the undeserving, almost shockingly: the prodigal's father runs and embraces him while he is still a long way off.",
         verses: ["Romans 3:23-24", "Luke 15:20", "Ephesians 1:7"],
       },
       {
         heading: "Grace is a Person and a power, not just a feeling",
         body:
-          "'The grace of God has appeared, bringing salvation to all.' Grace is embodied in Jesus, who came full of grace and truth — and it is the power that sustains us: 'My grace is sufficient for you, for my power is made perfect in weakness.' It saves, and it keeps.",
+          "'The grace of God has appeared, bringing salvation to all.' Grace is embodied in Jesus, who came full of grace and truth, and it is the power that sustains us: 'My grace is sufficient for you, for my power is made perfect in weakness.' It saves, and it keeps.",
         verses: ["Titus 2:11", "2 Corinthians 12:9", "John 1:16"],
       },
       {
         heading: "Where sin abounded, grace abounded more",
         body:
-          "'Where sin increased, grace abounded all the more: that as sin reigned in death, even so grace might reign through righteousness to eternal life.' Grace is not the license to sin — it is the power that frees us from sin's reign.",
+          "'Where sin increased, grace abounded all the more: that as sin reigned in death, even so grace might reign through righteousness to eternal life.' Grace is not the license to sin; it is the power that frees us from sin's reign.",
         verses: ["Romans 5:20-21", "Romans 6:1-2", "Titus 2:12"],
       },
     ],
@@ -1738,13 +1738,13 @@ export const questions: Question[] = [
     question: "What does it mean to be justified?",
     category: "gospel",
     summary:
-      "Justification is God's declaration that a person is righteous — not on the basis of who they are or what they have done, but on the basis of Christ. In it, the Judge accepts the sinner for Jesus' sake, pardoning their sins and crediting Christ's righteousness to them.",
+      "Justification is God's declaration that a person is righteous, not on the basis of who they are or what they have done, but on the basis of Christ. In it, the Judge accepts the sinner for Jesus' sake, pardoning their sins and crediting Christ's righteousness to them.",
     passages: [
       {
         book: "Romans",
         chapter: 3,
         title: "Justified freely by grace",
-        lookFor: "God has set forth Jesus as a propitiation — that He might be just and the justifier.",
+        lookFor: "God has set forth Jesus as a propitiation, that He might be just and the justifier.",
         focus: "21-26",
       },
       {
@@ -1765,7 +1765,7 @@ export const questions: Question[] = [
         book: "Romans",
         chapter: 5,
         title: "Peace with God",
-        lookFor: "Justified by faith — we have peace with God through our Lord Jesus Christ.",
+        lookFor: "Justified by faith: we have peace with God through our Lord Jesus Christ.",
         focus: "1-11",
       },
     ],
@@ -1773,7 +1773,7 @@ export const questions: Question[] = [
       {
         heading: "It is a legal declaration, not a moral change",
         body:
-          "Justification is a courtroom word — the verdict of the Judge: 'righteous.' Paul says we are 'justified by faith apart from the works of the law,' and asks, 'Who is he who condemns? It is Christ who died… who is at the right hand of God.' God is the one who justifies; the verdict is His, and it is final.",
+          "Justification is a courtroom word, the verdict of the Judge: 'righteous.' Paul says we are 'justified by faith apart from the works of the law,' and asks, 'Who is he who condemns? It is Christ who died… who is at the right hand of God.' God is the one who justifies; the verdict is His, and it is final.",
         verses: ["Romans 3:28", "Romans 8:33-34"],
       },
       {
@@ -1783,7 +1783,7 @@ export const questions: Question[] = [
         verses: ["Romans 3:24-25", "Romans 5:9", "2 Corinthians 5:21"],
       },
       {
-        heading: "Its instrument is faith — counted, not achieved",
+        heading: "Its instrument is faith: counted, not achieved",
         body:
           "'To him who does not work, but believes in him who justifies the ungodly, his faith is credited for righteousness.' Blessed is the one 'whose sin the Lord will not count against them.' Faith is not the merit; it is the hand that receives what is freely given.",
         verses: ["Romans 4:5", "Romans 4:8", "Galatians 2:16"],
@@ -1797,7 +1797,7 @@ export const questions: Question[] = [
       {
         heading: "Its fruit is peace and salvation",
         body:
-          "'Being justified by faith, we have peace with God through our Lord Jesus Christ.' Those He justifies, He glorifies — and we stand 'heirs according to the hope of eternal life.' Justification is not the end of the story; it is the peaceful foundation of everything that follows.",
+          "'Being justified by faith, we have peace with God through our Lord Jesus Christ.' Those He justifies, He glorifies, and we stand 'heirs according to the hope of eternal life.' Justification is not the end of the story; it is the peaceful foundation of everything that follows.",
         verses: ["Romans 5:1", "Romans 8:30", "Titus 3:7"],
       },
     ],
@@ -1814,7 +1814,7 @@ export const questions: Question[] = [
     question: "What is faith, exactly?",
     category: "gospel",
     summary:
-      "Faith is not blind wishing — it is trust that rests on the character and promises of God. It believes God's testimony about Christ and entrusts the whole life to Him. Faith has a content (the gospel) and a confidence (God's faithfulness).",
+      "Faith is not blind wishing: it is trust that rests on the character and promises of God. It believes God's testimony about Christ and entrusts the whole life to Him. Faith has a content (the gospel) and a confidence (God's faithfulness).",
     passages: [
       {
         book: "Hebrews",
@@ -1827,7 +1827,7 @@ export const questions: Question[] = [
         book: "Romans",
         chapter: 10,
         title: "Faith comes by hearing",
-        lookFor: "Faith is anchored to the word — to hearing about Christ.",
+        lookFor: "Faith is anchored to the word: to hearing about Christ.",
         focus: "14-17",
       },
       {
@@ -1849,17 +1849,17 @@ export const questions: Question[] = [
       {
         heading: "Faith is confidence grounded in something real",
         body:
-          "'Faith is the assurance of things hoped for, the conviction of things not seen' — and 'without faith it is impossible to be well pleasing to him, for he who comes to God must believe that he exists, and that he is a rewarder of those who seek him.' Faith trusts a God who has spoken.",
+          "'Faith is the assurance of things hoped for, the conviction of things not seen,' and 'without faith it is impossible to be well pleasing to him, for he who comes to God must believe that he exists, and that he is a rewarder of those who seek him.' Faith trusts a God who has spoken.",
         verses: ["Hebrews 11:1", "Hebrews 11:6", "2 Corinthians 5:7"],
       },
       {
-        heading: "Faith rests on its object — the gospel of Christ",
+        heading: "Faith rests on its object: the gospel of Christ",
         body:
-          "'Faith comes by hearing, and hearing by the word of Christ.' Saving faith is not generic optimism; it is trust in a Person — 'if you will confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.' The object is Jesus.",
+          "'Faith comes by hearing, and hearing by the word of Christ.' Saving faith is not generic optimism; it is trust in a Person: 'if you will confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.' The object is Jesus.",
         verses: ["Romans 10:17", "Romans 10:9-10", "John 20:31"],
       },
       {
-        heading: "Faith is not a work we offer — it receives",
+        heading: "Faith is not a work we offer; it receives",
         body:
           "When they asked what they must do to do the works of God, Jesus answered: 'This is the work of God, that you believe in him whom he has sent.' Faith saves 'through faith… not of works,' as a gift. Faith is the empty hand stretched out to receive.",
         verses: ["John 6:28-29", "Ephesians 2:8-9", "Romans 4:4-5"],
@@ -1873,7 +1873,7 @@ export const questions: Question[] = [
       {
         heading: "Faith produces a life of following",
         body:
-          "Faith is not mere agreement with facts — it is reliance that reshapes a life. 'Faith working through love,' and 'faith without works is dead.' To live by faith is to say with Paul, 'I have been crucified with Christ… I live by faith in the Son of God.'",
+          "Faith is not mere agreement with facts; it is reliance that reshapes a life. 'Faith working through love,' and 'faith without works is dead.' To live by faith is to say with Paul, 'I have been crucified with Christ… I live by faith in the Son of God.'",
         verses: ["Galatians 2:20", "James 2:17", "Galatians 5:6"],
       },
     ],
@@ -1890,13 +1890,13 @@ export const questions: Question[] = [
     question: "What is repentance?",
     category: "gospel",
     summary:
-      "Repentance is a change of mind that leads to a change of direction — turning from sin and turning to God. It is the necessary companion of faith: to believe the gospel is to turn from the sins it forgives. Repentance is God's gift and the doorway to a new life.",
+      "Repentance is a change of mind that leads to a change of direction: turning from sin and turning to God. It is the necessary companion of faith: to believe the gospel is to turn from the sins it forgives. Repentance is God's gift and the doorway to a new life.",
     passages: [
       {
         book: "Luke",
         chapter: 13,
         title: "Unless you repent",
-        lookFor: "Jesus: everyone is under judgment apart from repentance — no one is exempt.",
+        lookFor: "Jesus: everyone is under judgment apart from repentance; no one is exempt.",
         focus: "1-9",
       },
       {
@@ -1910,7 +1910,7 @@ export const questions: Question[] = [
         book: "2 Corinthians",
         chapter: 7,
         title: "Godly sorrow",
-        lookFor: "The sorrow that leads to repentance — and what it actually produces.",
+        lookFor: "The sorrow that leads to repentance, and what it actually produces.",
         focus: "8-11",
       },
       {
@@ -1925,7 +1925,7 @@ export const questions: Question[] = [
       {
         heading: "Repentance is a turn toward God",
         body:
-          "Jesus' first word was 'repent, and believe in the gospel.' Paul declared that people should 'repent and turn to God, performing deeds consistent with repentance.' It is not just feeling sorry — it is changing direction, from sin and toward God.",
+          "Jesus' first word was 'repent, and believe in the gospel.' Paul declared that people should 'repent and turn to God, performing deeds consistent with repentance.' It is not just feeling sorry; it is changing direction, from sin and toward God.",
         verses: ["Mark 1:15", "Acts 26:20", "1 Thessalonians 1:9"],
       },
       {
@@ -1937,7 +1937,7 @@ export const questions: Question[] = [
       {
         heading: "Godly sorrow fuels it",
         body:
-          "'Godly sorrow produces a repentance leading to salvation, bringing no regret' — unlike worldly sorrow that only grieved over being caught. It is sorrow over sin, toward God — the broken and contrite heart He will not despise.",
+          "'Godly sorrow produces a repentance leading to salvation, bringing no regret,' unlike worldly sorrow that only grieved over being caught. It is sorrow over sin, toward God: the broken and contrite heart He will not despise.",
         verses: ["2 Corinthians 7:10", "Psalm 51:17", "Joel 2:13"],
       },
       {
@@ -1982,21 +1982,21 @@ export const questions: Question[] = [
         book: "Romans",
         chapter: 8,
         title: "Creation groans; God works all things for good",
-        lookFor: "Hope in the middle of suffering — and the promise that all things work together for good.",
+        lookFor: "Hope in the middle of suffering, and the promise that all things work together for good.",
         focus: "18-28",
       },
       {
         book: "John",
         chapter: 9,
         title: "Not always from personal sin",
-        lookFor: "Jesus rejects the easy answer — the man was born blind 'that the works of God might be displayed.'",
+        lookFor: "Jesus rejects the easy answer: the man was born blind 'that the works of God might be displayed.'",
         focus: "1-7",
       },
       {
         book: "2 Corinthians",
         chapter: 1,
         title: "The God of all comfort",
-        lookFor: "Suffering is not detached from God — He comforts us in all our affliction.",
+        lookFor: "Suffering is not detached from God; He comforts us in all our affliction.",
         focus: "3-7",
       },
     ],
@@ -2004,7 +2004,7 @@ export const questions: Question[] = [
       {
         heading: "Evil entered through human rebellion, not from God",
         body:
-          "The world God made was good — 'God saw everything that he had made, and indeed it was very good.' Sin and its curse entered through Adam's disobedience, and 'through one man sin entered into the world, and death through sin.' Suffering is an intruder into a good creation, not God's original design.",
+          "The world God made was good: 'God saw everything that he had made, and indeed it was very good.' Sin and its curse entered through Adam's disobedience, and 'through one man sin entered into the world, and death through sin.' Suffering is an intruder into a good creation, not God's original design.",
         verses: ["Genesis 1:31", "Genesis 3:17-19", "Romans 5:12"],
       },
       {
@@ -2026,7 +2026,7 @@ export const questions: Question[] = [
         verses: ["Isaiah 53:3", "John 11:35", "Hebrews 4:15", "2 Corinthians 1:3-4"],
       },
       {
-        heading: "Suffering is not forever — and not meaningless",
+        heading: "Suffering is not forever, and it is not meaningless",
         body:
           "One day God 'will wipe away every tear from their eyes, and death will be no more, nor mourning, nor crying, nor pain.' Our present suffering works for us 'an eternal weight of glory' far beyond all comparison. The story does not end in the valley.",
         verses: ["Revelation 21:4", "2 Corinthians 4:17", "1 Peter 5:10", "Romans 8:18"],
@@ -2072,7 +2072,7 @@ export const questions: Question[] = [
         book: "Matthew",
         chapter: 10,
         title: "The Father's care",
-        lookFor: "Not a sparrow falls apart from your Father — and you are of more value.",
+        lookFor: "Not a sparrow falls apart from your Father, and you are of more value.",
         focus: "28-31",
       },
     ],
@@ -2080,25 +2080,25 @@ export const questions: Question[] = [
       {
         heading: "God rules over all",
         body:
-          "'He does according to his will among the host of heaven and among the inhabitants of the earth; no one can stay his hand or say to him, What have you done?' The final word in the universe is not chance or fate — it is God's sovereign rule.",
+          "'He does according to his will among the host of heaven and among the inhabitants of the earth; no one can stay his hand or say to him, What have you done?' The final word in the universe is not chance or fate; it is God's sovereign rule.",
         verses: ["Daniel 4:34-35", "Psalm 115:3", "Isaiah 46:9-10"],
       },
       {
         heading: "He works all things according to His will",
         body:
-          "We were 'predestined according to the purpose of him who works all things after the counsel of his will.' From Him and through Him and to Him are all things — the whole course of history answers to His purpose.",
+          "We were 'predestined according to the purpose of him who works all things after the counsel of his will.' From Him and through Him and to Him are all things; the whole course of history answers to His purpose.",
         verses: ["Ephesians 1:11", "Romans 11:36", "Proverbs 21:1"],
       },
       {
         heading: "He is sovereign even over evil and the cross",
         body:
-          "The worst event in history was also the most planned: Jesus was 'delivered up by the predetermined plan and foreknowledge of God,' and 'whatever your hand and your plan predestined to take place' — that took place. Evil is real, but it is never outside God's control and is always within His purpose.",
+          "The worst event in history was also the most planned: Jesus was 'delivered up by the predetermined plan and foreknowledge of God,' and 'whatever your hand and your plan predestined to take place'; that took place. Evil is real, but it is never outside God's control and is always within His purpose.",
         verses: ["Acts 2:23", "Acts 4:27-28", "Genesis 50:20"],
       },
       {
-        heading: "He is not a distant tyrant — He is a Father who cares",
+        heading: "He is not a distant tyrant; He is a Father who cares",
         body:
-          "Jesus grounds God's sovereignty in love: 'Even the hairs of your head are all numbered. So do not be afraid.' Not a sparrow falls apart from your Father — and 'you are of more value than many sparrows.' His control over the universe is exercised with a Father's heart for you.",
+          "Jesus grounds God's sovereignty in love: 'Even the hairs of your head are all numbered. So do not be afraid.' Not a sparrow falls apart from your Father, and 'you are of more value than many sparrows.' His control over the universe is exercised with a Father's heart for you.",
         verses: ["Matthew 10:29-31", "Psalm 139:16", "Romans 8:28"],
       },
       {
@@ -2121,20 +2121,20 @@ export const questions: Question[] = [
     question: "How do I know God's will?",
     category: "suffering-will",
     summary:
-      "God's will is first and foremost revealed — in Scripture, in Christ, and through the Spirit. For daily decisions He guides through His Word, wisdom, godly counsel, prayer, and open doors — and He promises to make the path plain to those who trust and acknowledge Him.",
+      "God's will is first and foremost revealed: in Scripture, in Christ, and through the Spirit. For daily decisions He guides through His Word, wisdom, godly counsel, prayer, and open doors, and He promises to make the path plain to those who trust and acknowledge Him.",
     passages: [
       {
         book: "Psalm",
         chapter: 119,
         title: "A lamp to my feet",
-        lookFor: "God's word is the sure light on the path — start with what He has already said.",
+        lookFor: "God's word is the sure light on the path: start with what He has already said.",
         focus: "105-112",
       },
       {
         book: "Romans",
         chapter: 12,
         title: "Discerning God's will",
-        lookFor: "Be transformed by the renewing of your mind — that you may prove the will of God.",
+        lookFor: "Be transformed by the renewing of your mind, that you may prove the will of God.",
         focus: "1-2",
       },
       {
@@ -2148,13 +2148,13 @@ export const questions: Question[] = [
         book: "James",
         chapter: 1,
         title: "Ask for wisdom",
-        lookFor: "If any lacks wisdom, let him ask of God — who gives generously and without reproach.",
+        lookFor: "If any lacks wisdom, let him ask of God, who gives generously and without reproach.",
         focus: "5-8",
       },
     ],
     points: [
       {
-        heading: "God's moral will is already revealed — in the Word",
+        heading: "God's moral will is already revealed: in the Word",
         body:
           "Your word is 'a lamp to my feet and a light for my path.' The Scriptures 'are able to make you wise for salvation' and 'equip us for every good work.' What God has already said is the sure foundation for knowing what He wants; 'the secret things belong to God, but the things revealed belong to us.'",
         verses: ["Psalm 119:105", "2 Timothy 3:16-17", "Deuteronomy 29:29"],
@@ -2162,7 +2162,7 @@ export const questions: Question[] = [
       {
         heading: "His will for your character is clear",
         body:
-          "'This is the will of God: your sanctification.' Rejoice always, pray without ceasing, give thanks in all circumstances — 'for this is the will of God in Christ Jesus for you.' Much of what we call guidance is simply obedience to what God has already plainly commanded.",
+          "'This is the will of God: your sanctification.' Rejoice always, pray without ceasing, give thanks in all circumstances: 'for this is the will of God in Christ Jesus for you.' Much of what we call guidance is simply obedience to what God has already plainly commanded.",
         verses: ["1 Thessalonians 4:3", "1 Thessalonians 5:16-18", "1 Peter 2:15"],
       },
       {
@@ -2172,15 +2172,15 @@ export const questions: Question[] = [
         verses: ["Romans 12:2", "Psalm 25:12", "Colossians 1:9"],
       },
       {
-        heading: "Ask for wisdom — He gives it generously",
+        heading: "Ask for wisdom: He gives it generously",
         body:
           "'If any of you lacks wisdom, let him ask of God, who gives to all generously and without reproach, and it will be given to him.' Trust in the Lord with all your heart, lean not on your own understanding; in all your ways acknowledge Him, and He will make your paths straight.",
         verses: ["James 1:5", "Proverbs 3:5-6", "Proverbs 16:3"],
       },
       {
-        heading: "Trust and walk — not fear and freeze",
+        heading: "Trust and walk, not fear and freeze",
         body:
-          "God leads those who are walking, not those paralyzed by the fear of choosing wrong: 'Your ears will hear a word behind you, saying, This is the way, walk in it.' He guides with His eye upon us — step by step, as we follow Him. If the Lord wills, you will do this or that.",
+          "God leads those who are walking, not those paralyzed by the fear of choosing wrong: 'Your ears will hear a word behind you, saying, This is the way, walk in it.' He guides with His eye upon us, step by step, as we follow Him. If the Lord wills, you will do this or that.",
         verses: ["Isaiah 30:21", "Psalm 32:8", "James 4:15", "Galatians 5:25"],
       },
     ],

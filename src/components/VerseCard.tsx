@@ -19,7 +19,7 @@ export default function VerseCard({ verse }: { verse: string }) {
           href={`/verses/${verseSlug(verse)}`}
           className="font-semibold tracking-wide text-gold-deep underline-offset-2 hover:underline"
         >
-          — {verse}
+          {verse}
         </Link>
       </figcaption>
       <VerseConnections verse={verse} />
