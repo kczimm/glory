@@ -135,9 +135,11 @@ cached). `searchScripture` / `searchQuestions` / `searchAll` / `snippet`
 ## Copy style
 
 - **Never use em dashes (—) in site copy.** Prefer commas, colons, semicolons,
-  or a sentence restructure.
-- The only acceptable use is the source attribution under a quoted verse, e.g.
-  `— John 1:1` (the pattern `VerseCard` renders from its `verse` prop).
+  or a sentence restructure. This is an absolute rule, with no exceptions: the
+  previous `— John 1:1` citation pattern under verse cards was swept out too, so
+  verse references now render with no dash (see `VerseCard`).
+- Run `grep -rn "—" src --include="*.ts" --include="*.tsx" | grep -v scripture.ts`
+  before finishing to confirm the copy is clean.
 - Em dashes inside `src/data/scripture.ts` are the WEB's own punctuation
   (generated file, quoted text, not our copy). Leave them alone.
 
