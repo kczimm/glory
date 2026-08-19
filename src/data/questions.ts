@@ -1954,10 +1954,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Acts 3:19", "2 Corinthians 7:10", "Mark 1:15", "Ezekiel 18:31"],
-    raises: ["what-happens-when-i-sin", "how-do-i-fight-sin", "repentance-one-time-or-lifelong"],
+    raises: ["what-happens-when-i-sin", "how-do-i-fight-sin", "repentance-one-time-or-lifelong", "how-do-i-know-my-repentance-is-genuine"],
     followsFrom: ["what-is-the-gospel"],
     related: ["what-is-the-gospel", "what-happens-when-i-sin", "how-can-i-be-saved"],
-    planned: ["How do I know my repentance is genuine?"],
+    planned: ["What is the difference between repentance and turning over a new leaf?"],
     order: 26,
   },
 
@@ -7876,5 +7876,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["what-is-faith", "is-it-okay-to-doubt", "where-is-god-in-my-pain", "spirits-witness-or-my-own-feelings"],
     planned: ["What is the difference between faith and certainty?"],
     order: 34,
+  },
+
+  {
+    slug: "how-do-i-know-my-repentance-is-genuine",
+    question: "How do I know my repentance is genuine?",
+    category: "gospel",
+    summary:
+      "Genuine repentance shows itself in fruit. Scripture distinguishes real repentance from mere regret: godly sorrow works repentance to salvation and brings no regret, while worldly sorrow works death. Real repentance is a turning from sin to God that changes direction and, over time, produces the evidence of a changed life. We can examine ourselves by the Word: has my heart turned, has my life changed, am I bearing the fruit of repentance?",
+    passages: [
+      {
+        book: "2 Corinthians",
+        chapter: 7,
+        title: "Godly sorrow and worldly sorrow",
+        lookFor: "Paul separates the two: godly sorrow works repentance to salvation, but worldly sorrow works death, and the Corinthians' sorrow produced earnest change.",
+        focus: "8-11",
+      },
+      {
+        book: "Matthew",
+        chapter: 3,
+        title: "Produce fruit worthy of repentance",
+        lookFor: "John refuses to accept claimed repentance without evidence: it must bear fruit.",
+        focus: "1-12",
+      },
+      {
+        book: "Luke",
+        chapter: 19,
+        title: "Zacchaeus makes it right",
+        lookFor: "The tax collector's repentance is shown in restitution, and Jesus says salvation came to his house.",
+        focus: "1-10",
+      },
+      {
+        book: "Psalm",
+        chapter: 51,
+        title: "A broken and contrite heart",
+        lookFor: "After his fall, David pleads for a clean heart, and names the sacrifice God accepts: a broken and contrite heart.",
+        focus: "1-17",
+      },
+      {
+        book: "Acts",
+        chapter: 26,
+        title: "Repent, turn, and do works worthy",
+        lookFor: "Paul's summary of his preaching: they should repent and turn to God, doing works worthy of repentance.",
+        focus: "12-23",
+      },
+    ],
+    points: [
+      {
+        heading: "Real repentance is godly sorrow, not mere regret",
+        body:
+          "Paul draws a line that helps us check our own hearts: 'godly sorrow works repentance to salvation, which brings no regret. But the sorrow of the world works death.' Regret is sorry for being caught or for the consequences; repentance is sorrow over the sin itself that turns us to God. Paul rejoiced that the Corinthians' sorry had been 'to repentance' in a godly way, and he could point to what it worked: 'what earnest care... what defense, indignation, fear, longing, zeal!' The proof of genuine sorrow was the change it worked.",
+        verses: ["2 Corinthians 7:10", "2 Corinthians 7:9", "2 Corinthians 7:11"],
+      },
+      {
+        heading: "It produces fruit",
+        body:
+          "John the Baptist met claimed repentance with a demand: 'Produce fruit worthy of repentance!' When the crowds asked what they should do, he pointed to concrete changes, giving to the needy and turning from greed. Genuine repentance is not a feeling that goes nowhere; it is a turning that changes what a person actually does, and the changed behavior is its evidence.",
+        verses: ["Matthew 3:8", "Luke 3:11", "Acts 26:20"],
+      },
+      {
+        heading: "It makes right what it can",
+        body:
+          "Where repentance can restore, it does. Zacchaeus, after meeting Jesus, declared, 'half of my goods I give to the poor. If I have wrongfully exacted anything of anyone, I restore four times as much,' and Jesus replied, 'Today, salvation has come to this house.' And James summons us to confess our offenses to one another and pray, that we may be healed. The man who had grown rich by cheating turned and set things right, and that visible turning, confessed and restored, was the sign that his heart had genuinely changed.",
+        verses: ["Luke 19:8", "Luke 19:9", "James 5:16"],
+      },
+      {
+        heading: "It humbles us, with a broken heart before God",
+        body:
+          "Real repentance does not defend itself; it casts itself on God. David, after his terrible fall, prayed, 'Create in me a clean heart, O God. Renew a right spirit within me,' and he named the thing God accepts: 'a broken and contrite heart, O God, you will not despise.' Jesus said the tax collector who cried, 'God, be merciful to me, a sinner!' went home justified, while the self-justifying man did not. The humble are the ones who truly repent.",
+        verses: ["Psalm 51:10", "Psalm 51:17", "Luke 18:13", "Luke 18:14"],
+      },
+      {
+        heading: "And it turns to God and keeps going",
+        body:
+          "Repentance is measured by its direction. Paul preached that people should 'repent and turn to God, doing works worthy of repentance,' and John wrote that if we confess our sins, God is faithful to forgive and cleanse. Repentance is not a single burst of feeling but a turning that continues: we own our sin honestly, we turn from it, we make it right where we can, and over time the fruit of a changed life confirms that it was real, because the one who turns to God keeps walking toward Him.",
+        verses: ["Acts 26:20", "1 John 1:9", "2 Corinthians 7:11", "Matthew 3:8"],
+      },
+    ],
+    keyVerses: ["2 Corinthians 7:10", "Matthew 3:8", "Psalm 51:17", "Luke 19:8", "Acts 26:20"],
+    raises: ["what-is-repentance", "what-happens-when-i-sin", "how-do-i-fight-sin"],
+    followsFrom: ["what-is-repentance", "what-is-the-gospel"],
+    related: ["what-is-repentance", "what-is-the-gospel", "can-gods-grace-really-cover-my-worst-sins", "what-happens-when-i-sin"],
+    planned: ["Can someone repent and still struggle with the same sin?"],
+    order: 35,
   },
 ];
