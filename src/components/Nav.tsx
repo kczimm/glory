@@ -20,6 +20,12 @@ export default function Nav() {
             Verses
           </Link>
           <Link
+            href="/search"
+            className="text-ink-soft transition-colors hover:text-gold"
+          >
+            Search
+          </Link>
+          <Link
             href="/questions"
             className="text-ink-soft transition-colors hover:text-gold"
           >

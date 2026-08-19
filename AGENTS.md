@@ -110,6 +110,17 @@ on the home page).
   `slug` so it remounts (and records) on each stop.
 - Kept browser-only: SSR snapshot is empty, so there's no hydration mismatch.
 
+### Search
+
+`src/lib/search.ts` searches the **whole vendored Bible** plus the studies —
+case-insensitive phrase matching (lazy-built lowercase index over `scripture.ts`,
+cached). `searchScripture` / `searchQuestions` / `searchAll` / `snippet`
+(highlight extraction).
+- Home `SearchBox` shows grouped live results (limit ~5 verses / 4 questions) with a
+  link to `/search?q=`. The `/search` page is a client component (Suspense +
+  `useSearchParams`) doing it client-side, initialized from `?q=`.
+- Deep-links into `/verses/[slug]` and `/questions/[slug]`.
+
 ## Design system
 
 - Tailwind v4 tokens in `@theme` (`globals.css`): `parchment` bg, `cream`,

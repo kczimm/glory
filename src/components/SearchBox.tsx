@@ -2,26 +2,28 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { questions } from "@/data";
+import { verseSlug } from "@/data";
+import { searchScripture, searchQuestions, snippet } from "@/lib/search";
 
 /**
- * Live search over every question — come with a question, find it.
+ * Search the Word: matches both Scripture text (the vendored WEB) and the
+ * study questions. Live, grouped, offline.
  */
 export default function SearchBox() {
   const [q, setQ] = useState("");
 
-  const results = useMemo(() => {
-    const term = q.trim().toLowerCase();
-    if (!term) return [];
-    return questions
-      .filter((question) =>
-        [question.question, question.summary, ...question.keyVerses]
-          .join(" ")
-          .toLowerCase()
-          .includes(term)
-      )
-      .slice(0, 6);
-  }, [q]);
+  const term = q.trim();
+
+  const verses = useMemo(
+    () => (term ? searchScripture(term, 5) : []),
+    [term]
+  );
+  const questions = useMemo(
+    () => (term ? searchQuestions(term, 4) : []),
+    [term]
+  );
+
+  const empty = term.length > 0 && verses.length === 0 && questions.length === 0;
 
   return (
     <div className="relative mx-auto w-full max-w-xl">
@@ -34,33 +36,79 @@ export default function SearchBox() {
           type="search"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="Ask a question… e.g. “Who is the Holy Spirit?”"
+          placeholder="Ask a question… or search the Word"
           className="w-full bg-transparent text-[15px] text-ink outline-none placeholder:text-ink-faint"
-          aria-label="Ask a question"
+          aria-label="Search the Bible and studies"
         />
       </div>
-      {q.trim() && (
-        <div className="absolute inset-x-0 top-full z-30 mt-2 overflow-hidden rounded-2xl border border-line bg-white shadow-xl">
-          {results.length === 0 ? (
+
+      {term && (
+        <div className="absolute inset-x-0 top-full z-30 mt-2 max-h-[70vh] overflow-y-auto rounded-2xl border border-line bg-white shadow-xl">
+          {empty && (
             <p className="px-5 py-4 text-sm text-ink-faint">
-              No question yet — but the Bible always has an answer. Try “Who is
-              Jesus?” or “How can I be saved?”
+              No match for “{term}” yet. Try “grace”, “born again”, or “Who is
+              Jesus?”
             </p>
-          ) : (
-            results.map((question) => (
-              <Link
-                key={question.slug}
-                href={`/questions/${question.slug}`}
-                className="block border-b border-line px-5 py-3.5 transition-colors last:border-b-0 hover:bg-gold-wash/50"
-              >
-                <p className="font-display text-[15.5px] font-medium text-ink">
-                  {question.question}
-                </p>
-                <p className="mt-0.5 line-clamp-1 text-[12.5px] text-ink-faint">
-                  {question.summary}
-                </p>
-              </Link>
-            ))
+          )}
+
+          {verses.length > 0 && (
+            <div className="border-b border-line px-5 pb-1 pt-3">
+              <p className="mb-1 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                Scripture · {verses.length}
+              </p>
+              {verses.map((v) => {
+                const sn = snippet(v.text, term, 60);
+                return (
+                  <Link
+                    key={v.ref}
+                    href={`/verses/${verseSlug(v.ref)}`}
+                    className="-mx-5 block border-b border-line/70 px-5 py-2.5 transition-colors last:border-b-0 hover:bg-gold-wash/50"
+                  >
+                    <span className="text-[12px] font-semibold text-gold-deep">
+                      {v.ref}
+                    </span>{" "}
+                    <span className="text-[13px] leading-snug text-ink">
+                      {sn.before}
+                      <em className="rounded bg-gold-wash px-0.5 not-italic text-gold-deep">
+                        {sn.match}
+                      </em>
+                      {sn.after}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+
+          {questions.length > 0 && (
+            <div className="px-5 py-3">
+              <p className="mb-1 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                Questions · {questions.length}
+              </p>
+              {questions.map((question) => (
+                <Link
+                  key={question.slug}
+                  href={`/questions/${question.slug}`}
+                  className="-mx-5 block border-b border-line/70 px-5 py-2.5 transition-colors last:border-b-0 hover:bg-gold-wash/50"
+                >
+                  <p className="font-display text-[14.5px] font-medium text-ink">
+                    {question.question}
+                  </p>
+                  <p className="mt-0.5 line-clamp-1 text-[12.5px] text-ink-faint">
+                    {question.summary}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {!empty && (
+            <Link
+              href={`/search?q=${encodeURIComponent(term)}`}
+              className="block border-t border-line px-5 py-3 text-center text-[13px] font-medium text-gold-deep transition-colors hover:bg-gold-wash/40"
+            >
+              Search all of Scripture →
+            </Link>
           )}
         </div>
       )}
