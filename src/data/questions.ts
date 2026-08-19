@@ -752,10 +752,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 5:18", "John 10:30", "Hebrews 1:3", "John 5:21"],
-    raises: ["is-jesus-really-god"],
+    raises: ["is-jesus-really-god", "why-is-jesus-both-son-of-god-and-son-of-man"],
     followsFrom: ["who-is-jesus"],
     related: ["who-is-the-holy-spirit"],
-    planned: ["Why did Jesus also call himself the Son of Man?"],
+    planned: ["What does it mean that Jesus is the Son of David?"],
     order: 10,
   },
 
@@ -3552,5 +3552,88 @@ export const questions: Question[] = [
     related: ["did-jesus-rise-from-the-dead", "where-is-jesus-now", "what-happens-when-i-die"],
     planned: ["Who were 'the spirits in prison', and what did Christ preach to them?"],
     order: 19,
+  },
+
+  {
+    slug: "why-is-jesus-both-son-of-god-and-son-of-man",
+    question: "Why is Jesus called both the Son of God and the Son of Man?",
+    category: "jesus-christ",
+    summary:
+      "Jesus wears two titles that seem to pull in opposite directions: Son of God and Son of Man. One declares His divinity, the other His full humanity, and Scripture insists on both, because a Savior who can stand between God and us must be truly God and truly one of us. The church's confession of Christ has always been both at once.",
+    passages: [
+      {
+        book: "John",
+        chapter: 5,
+        title: "The Son does the Father's works",
+        lookFor: "Jesus speaks as the Son of God, and in the same breath calls Himself the Son of Man with authority to judge.",
+        focus: "19-30",
+      },
+      {
+        book: "Hebrews",
+        chapter: 1,
+        title: "The Son: God's radiance and heir",
+        lookFor: "The opening of Hebrews: the Son is the appointed heir of all things, the exact imprint of God's nature, addressed as God.",
+        focus: "1-9",
+      },
+      {
+        book: "Hebrews",
+        chapter: 2,
+        title: "Made like his brothers",
+        lookFor: "The same Son is the man Jesus, crowned with glory through suffering, tasting death for everyone.",
+        focus: "5-9",
+      },
+      {
+        book: "Luke",
+        chapter: 1,
+        title: "The annunciation",
+        lookFor: "Gabriel declares both: the child will be called the Son of the Most High, and the Holy Spirit will come on Mary so the holy one born will be called the Son of God.",
+        focus: "30-35",
+      },
+      {
+        book: "Mark",
+        chapter: 14,
+        title: "Before the high priest",
+        lookFor: "The two titles meet in one answer: asked if He is the Son of the Blessed, Jesus answers that He is, and they will see the Son of Man coming with the clouds.",
+        focus: "60-64",
+      },
+    ],
+    points: [
+      {
+        heading: "Scripture gives Jesus both titles without apology",
+        body:
+          "Gabriel announces the child as the Son of the Most High, and in the next breath says He will sit on the throne of David. At the baptism, the Father calls Him 'my beloved Son.' And before the high priest, asked, 'Are you the Christ, the Son of the Blessed?' Jesus answered yes, and immediately named Himself the Son of Man coming with the clouds. The two titles belong to one Person.",
+        verses: ["Luke 1:32", "Luke 1:35", "Mark 1:11", "Mark 14:61-62"],
+      },
+      {
+        heading: "Son of God: His divine origin and majesty",
+        body:
+          "Hebrews opens with the Son as the appointed heir of all things, the radiance of God's glory, the exact imprint of God's nature, and it quotes the Father's own words to Him: 'Your throne, O God, is forever and ever.' Jesus taught that the Son does the Father's works and is honored just as the Father is honored. As the Son of God, He is God's equal.",
+        verses: ["Hebrews 1:2-3", "Hebrews 1:5", "Hebrews 1:8", "John 5:19", "John 5:22", "John 5:23"],
+      },
+      {
+        heading: "Son of Man: His full and real humanity",
+        body:
+          "The same Jesus is the Son of Man, as genuinely human as the title sounds. Hebrews applies the psalm to Him: made a little lower than the angels, crowned with glory and honor through suffering, tasting death for everyone. He shared in flesh and blood, was made like his brothers in every way, and was tempted in every way as we are, yet without sin. He is not a God pretending to be human; He is the God-man.",
+        verses: ["Hebrews 2:6-9", "Hebrews 2:14", "Hebrews 2:17", "Hebrews 4:15", "Philippians 2:7-8"],
+      },
+      {
+        heading: "Why both: only such a One can save us",
+        body:
+          "To reconcile God and man, the mediator must know both sides. If Jesus were only God, He could not die for men; if only a man, His death could not save. Paul names Him 'one mediator between God and men, the man Christ Jesus.' As the Son of Man He can suffer and die in our place; as the Son of God His death has infinite worth. The two titles are the two halves of the gospel's only bridge.",
+        verses: ["1 Timothy 2:5", "Hebrews 4:14-15", "John 1:18", "1 John 2:1-2"],
+      },
+      {
+        heading: "The church confesses both, because the Bible does",
+        body:
+          "Thomas met the risen Jesus and cried, 'My Lord and my God,' and the church has confessed Jesus as Lord and God ever since, without ever ceasing to confess that He is man. John saw Him as 'the one and only Son, who is in the bosom of the Father,' who lived among us full of grace and truth. Not a Jesus diminished to fit our categories: the fully divine Son of God who is also fully the Son of Man.",
+        verses: ["John 20:28", "John 1:14", "John 1:18", "Philippians 2:9-11"],
+      },
+    ],
+    keyVerses: ["Mark 14:61-62", "John 5:22-23", "Hebrews 1:3", "Hebrews 2:9", "1 Timothy 2:5"],
+    raises: [],
+    followsFrom: ["what-does-it-mean-that-jesus-is-the-son-of-god", "who-is-jesus"],
+    related: ["why-did-jesus-call-himself-son-of-man", "what-does-it-mean-that-jesus-is-the-son-of-god", "is-jesus-really-god", "does-jesus-sharing-gods-nature-mean-two-gods"],
+    planned: ["How can one Person be fully God and fully man at once?"],
+    order: 20,
   },
 ];
