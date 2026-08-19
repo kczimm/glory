@@ -447,10 +447,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 1:1", "John 8:58", "Colossians 2:9", "Hebrews 1:3", "John 20:28"],
-    raises: ["why-did-jesus-have-to-die", "what-is-the-trinity", "does-jesus-sharing-gods-nature-mean-two-gods"],
+    raises: ["why-did-jesus-have-to-die", "what-is-the-trinity", "does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man"],
     followsFrom: ["who-is-jesus"],
     related: ["is-the-holy-spirit-god"],
-    planned: ["Why did God become a man?"],
+    planned: ["How does Jesus' becoming man show us the Father's love?"],
     order: 6,
   },
 
@@ -6576,5 +6576,91 @@ export const questions: Question[] = [
     related: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit", "holy-spirit-in-the-old-testament", "what-are-spiritual-gifts"],
     planned: ["What is speaking in tongues, and is it for today?"],
     order: 24,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Jesus Christ (continued: incarnation)
+  // ------------------------------------------------------------------
+  {
+    slug: "why-did-god-become-a-man",
+    question: "Why did God become a man?",
+    category: "jesus-christ",
+    summary:
+      "God the Son became a man because only One who is both fully God and fully man could save us. He came to reveal the Father, to share our nature and take our place in death, to be a high priest who sympathizes with our weakness, and to bring us into God's family as children. The incarnation is not a detour; it is the only road to our salvation.",
+    passages: [
+      {
+        book: "John",
+        chapter: 1,
+        title: "The Word became flesh",
+        lookFor: "The eternal Word, who was God, took on flesh and dwelt among us, full of grace and truth, and made the Father known.",
+        focus: "1-18",
+      },
+      {
+        book: "Philippians",
+        chapter: 2,
+        title: "He emptied Himself, taking the form of a servant",
+        lookFor: "Christ, being in the form of God, emptied Himself and became obedient to death, even death on a cross.",
+        focus: "5-11",
+      },
+      {
+        book: "Hebrews",
+        chapter: 2,
+        title: "He had to be made like his brothers",
+        lookFor: "Why the Son shared our flesh and blood: to taste death for everyone, to destroy the devil, and to become a merciful high priest.",
+        focus: "5-18",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "God sent His own Son in the likeness of sinful flesh",
+        lookFor: "What the law could not do, God did: sending His Son, He condemned sin in the flesh and set us free.",
+        focus: "1-17",
+      },
+      {
+        book: "Galatians",
+        chapter: 4,
+        title: "Born to redeem, that we might be adopted",
+        lookFor: "God sent His Son, born of a woman, to redeem those under the law, that we might receive adoption as children.",
+        focus: "4-7",
+      },
+    ],
+    points: [
+      {
+        heading: "He came to reveal God and to give us life",
+        body:
+          "John opens with the deepest reason: 'The Word became flesh, and lived among us. We saw his glory... full of grace and truth.' No one has seen God at any time, but the only Son, who is in the bosom of the Father, has made Him known. And John names the outcome: God sent His one and only Son into the world 'that we might live through him.' God became man so that we could see Him and so that we could live.",
+        verses: ["John 1:14", "John 1:18", "1 John 4:9"],
+      },
+      {
+        heading: "He came to take our place",
+        body:
+          "Paul puts it in a sentence: 'what the law couldn't do, in that it was weak through the flesh, God did, sending his own Son in the likeness of sinful flesh and for sin, he condemned sin in the flesh.' The Son who had known no sin came into the world, as Hebrews says, to do the Father's will and to offer Himself. A true substitute must share our nature, and He did.",
+        verses: ["Romans 8:3", "2 Corinthians 5:21", "Hebrews 10:5", "Hebrews 10:7"],
+      },
+      {
+        heading: "He had to be truly man, and truly God",
+        body:
+          "Only God could save, and only a man could die in a man's place. Hebrews explains the necessity: 'Since then the children have shared in flesh and blood, he also himself in the same way partook of the same, that through death he might bring to nothing him who had the power of death.' And he had to be made like his brothers so that he could become a merciful and faithful high priest. Paul names the One who did it: Christ Jesus, who was in the form of God and emptied Himself to take the form of a servant, and who is the one mediator between God and men, the man Christ Jesus. The incarnation is what makes both true: He is the man who can represent us, and the God who can save us.",
+        verses: ["Hebrews 2:14", "Hebrews 2:17", "1 Timothy 2:5", "Philippians 2:6-8"],
+      },
+      {
+        heading: "He became man to sympathize with our weakness",
+        body:
+          "Because He became man, Christ was tempted in every way that we are, yet without sin, and because He suffered when He was tempted, He is able to help those who are being tempted. This is why we can draw near to the throne of grace with confidence, to find mercy and grace in time of need. God became man not only to atone for our sins but to feel our grief, so that His mercy would come to us as a brother's, not a stranger's.",
+        verses: ["Hebrews 2:18", "Hebrews 4:15", "Hebrews 4:16"],
+      },
+      {
+        heading: "And to bring us into His family",
+        body:
+          "The end of the incarnation is family. God sent His Son, born of a woman, 'that he might redeem those who were under the law, that we might receive the adoption of children.' To as many as received Christ, He gave the right to become children of God, and Paul says we have received the Spirit of adoption, by whom we cry 'Abba! Father!' And Hebrews adds the astonishing note: because He sanctified us, 'he is not ashamed to call them brothers.' The eternal Son took our humanity so that, in Him, we might share His sonship.",
+        verses: ["Galatians 4:4-5", "John 1:12", "Hebrews 2:11", "Romans 8:15"],
+      },
+    ],
+    keyVerses: ["John 1:14", "Hebrews 2:14-17", "Romans 8:3", "1 Timothy 2:5", "Galatians 4:4-5"],
+    raises: ["why-did-jesus-have-to-die", "why-is-jesus-both-son-of-god-and-son-of-man", "who-is-the-father"],
+    followsFrom: ["is-jesus-really-god", "who-is-jesus"],
+    related: ["is-jesus-really-god", "who-is-jesus", "why-is-jesus-both-son-of-god-and-son-of-man", "who-is-the-father"],
+    planned: ["What was the world waiting for before Jesus came?"],
+    order: 23,
   },
 ];
