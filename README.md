@@ -65,15 +65,11 @@ npm run dev:lan      # dev server on port 3100, bound to 0.0.0.0
 npm run start:lan    # production serve on port 3100
 ```
 
-Then on any device on the same network, open `http://<your-ip>:3100`.
-Find your IP with:
-
-```bash
-ipconfig getifaddr en0
-```
+Then on any device on the same network, open `http://<your-ip>:3100`, where
+`<your-ip>` is the host machine's address on that network (e.g.
+`ipconfig getifaddr en0` on macOS).
 
 Notes:
-- Port **3100** is used because 3000 is often taken on this machine.
 - Next 16 blocks non-localhost dev requests unless allowed — LAN origins are
   whitelisted in `next.config.ts` (`allowedDevOrigins`). If your machine's IP
   changes (DHCP), update it there, or set a static/reserved IP in your router.
