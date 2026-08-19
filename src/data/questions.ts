@@ -292,10 +292,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 2:38-39", "Ephesians 1:13-14", "Romans 8:15-16", "Galatians 3:2"],
-    raises: ["what-are-spiritual-gifts"],
+    raises: ["what-are-spiritual-gifts", "how-do-i-know-the-spirit-is-leading-me"],
     followsFrom: ["who-is-the-holy-spirit"],
     related: ["who-is-the-holy-spirit", "how-can-i-be-saved"],
-    planned: ["How do I know the Spirit is leading me?"],
+    planned: ["What does it mean to be baptized with the Holy Spirit?"],
     order: 4,
   },
 
@@ -3129,7 +3129,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 14:16-17", "John 14:18", "John 16:7", "John 15:26", "Acts 2:38-39"],
-    raises: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
+    raises: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit", "how-do-i-know-the-spirit-is-leading-me"],
     followsFrom: ["who-is-the-holy-spirit"],
     related: ["who-is-the-holy-spirit", "is-the-holy-spirit-god", "what-are-spiritual-gifts"],
     planned: ["What is the unpardonable sin?"],
@@ -3300,5 +3300,88 @@ export const questions: Question[] = [
     related: ["what-is-the-trinity", "who-is-the-father"],
     planned: ["How is the Trinity like a family, and unlike a family?"],
     order: 18,
+  },
+
+  {
+    slug: "how-do-i-know-the-spirit-is-leading-me",
+    question: "How do I know the Spirit is leading me?",
+    category: "holy-spirit",
+    summary:
+      "The Spirit leads every child of God, and His leading never whispers against His own Word. He guides through Scripture, through wisdom and godly counsel, through doors opened and closed in the course of obedience, and through a deepening inner witness of peace and fruit as we walk with Him.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "Led by the Spirit",
+        lookFor: "Being led by the Spirit is what it means to be a child of God; it is not a special elite calling.",
+        focus: "1-17",
+      },
+      {
+        book: "Galatians",
+        chapter: 5,
+        title: "Walk by the Spirit",
+        lookFor: "The daily walk: keep in step with the Spirit, and His fruit grows in you.",
+        focus: "16-26",
+      },
+      {
+        book: "Acts",
+        chapter: 15,
+        title: "The church discerns together",
+        lookFor: "The whole council seeks wisdom together, and concludes it seemed good to the Holy Spirit and to them.",
+        focus: "22-29",
+      },
+      {
+        book: "Acts",
+        chapter: 16,
+        title: "Open doors and closed doors",
+        lookFor: "The Spirit forbids one path and opens another; the gospel moves forward through real decisions.",
+        focus: "6-15",
+      },
+      {
+        book: "1 John",
+        chapter: 4,
+        title: "Test the spirits",
+        lookFor: "Not every impulse is the Spirit: there is a test, and the test is Christ.",
+        focus: "1-6",
+      },
+    ],
+    points: [
+      {
+        heading: "Being led is the normal Christian life",
+        body:
+          "Paul does not describe being led by the Spirit as an unusual experience for unusually spiritual people: 'as many as are led by the Spirit of God, these are children of God.' Every child of God is led by the Spirit. The call is simple and daily: walk by the Spirit, and you will not gratify the desires of the flesh.",
+        verses: ["Romans 8:14", "Galatians 5:16", "Galatians 5:18", "Galatians 5:25"],
+      },
+      {
+        heading: "The Spirit never leads against His own Word",
+        body:
+          "The Spirit who inspired Scripture does not contradict Scripture. John's test for any spirit is about Christ: every spirit that confesses Jesus Christ come in the flesh is of God. Paul urges us to test everything against the Word, and the Bereans were praised for examining the Scriptures to check what they were taught. A leading that fights the Bible is not the Spirit's leading.",
+        verses: ["2 Timothy 3:16", "1 John 4:1-2", "Acts 17:11", "Psalm 119:105"],
+      },
+      {
+        heading: "He works through wisdom, prayer, and the Body",
+        body:
+          "Direction is rarely a mystery dropped from heaven; it comes as wisdom sought, asked for, and weighed. James promises that God gives wisdom generously to all who ask. The early church made its great decisions together, and the council at Jerusalem could say, 'It seemed good to the Holy Spirit, and to us.' Listen for the Spirit in Scripture, in prayer, and in the counsel of godly brothers and sisters.",
+        verses: ["James 1:5", "Proverbs 11:14", "Acts 15:28"],
+      },
+      {
+        heading: "He opens doors and closes doors in the path of obedience",
+        body:
+          "Paul did not receive a blueprint for his journeys; he received a prohibition here and a door there. The Spirit closed the road into Asia and Bithynia, and opened a vision of a man in Macedonia calling for help. The leading came while they were already moving with the gospel, not standing still waiting. Obedience is the atmosphere in which guidance is given.",
+        verses: ["Acts 16:6-10", "James 4:15"],
+      },
+      {
+        heading: "The inner witness grows as we walk",
+        body:
+          "The Spirit testifies with our spirit that we are God's children, and His fruit grows in lives walked by Him. The peace of God rules in hearts that belong to His body, and His peace guards hearts and minds in Christ Jesus. The leading of the Spirit deepens with the walk of the Spirit: conviction moves toward settled peace as it lines up with the Word.",
+        verses: ["Romans 8:16", "Galatians 5:22-23", "Colossians 3:15", "Philippians 4:7"],
+      },
+    ],
+    keyVerses: ["Romans 8:14", "Galatians 5:16", "Acts 15:28", "1 John 4:1", "Colossians 3:15"],
+    raises: [],
+    followsFrom: ["how-do-i-receive-the-holy-spirit", "why-jesus-calls-the-spirit-another-helper"],
+    related: ["who-is-the-holy-spirit", "how-do-i-receive-the-holy-spirit", "what-are-spiritual-gifts"],
+    planned: ["How do I grow in sensitivity to the Spirit?"],
+    order: 19,
   },
 ];
