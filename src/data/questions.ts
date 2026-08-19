@@ -2185,10 +2185,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Psalm 119:105", "Romans 12:2", "James 1:5", "Proverbs 3:5-6"],
-    raises: [],
+    raises: ["what-if-i-make-the-wrong-decision"],
     followsFrom: ["is-god-in-control"],
     related: ["what-should-i-do-now-that-im-saved", "who-is-the-holy-spirit"],
-    planned: ["What if I make the wrong decision?", "Does God have one specific plan for who I marry?"],
+    planned: ["Does God have one specific plan for who I marry?"],
     order: 29,
   },
 
@@ -4725,5 +4725,88 @@ export const questions: Question[] = [
     related: ["is-god-in-control", "why-does-god-allow-suffering", "faith-or-works"],
     planned: ["What does it mean that God is sovereign?"],
     order: 31,
+  },
+
+  {
+    slug: "what-if-i-make-the-wrong-decision",
+    question: "What if I make the wrong decision?",
+    category: "suffering-will",
+    summary:
+      "God is not thrown off course by your wrong turns. He guides His people, He works all things for good for those who love Him, and even our mistaken choices fall within His sovereign care. Ask for wisdom, own the mistake before Him, and keep trusting the One who will complete the good work He began.",
+    passages: [
+      {
+        book: "Proverbs",
+        chapter: 3,
+        title: "Trust in Yahweh with all your heart",
+        lookFor: "The promise that God makes straight the paths of those who acknowledge Him in all their ways.",
+        focus: "1-12",
+      },
+      {
+        book: "Psalm",
+        chapter: 37,
+        title: "Commit your way to the Lord",
+        lookFor: "The Lord establishes a good man's steps, and holds him up even when he stumbles.",
+        focus: "1-9",
+      },
+      {
+        book: "Jeremiah",
+        chapter: 29,
+        title: "Plans of peace to give you hope and a future",
+        lookFor: "God's word to exiles in a wrong turn of their own history: He has thoughts of peace and a future for them.",
+        focus: "4-14",
+      },
+      {
+        book: "James",
+        chapter: 1,
+        title: "If any of you lacks wisdom",
+        lookFor: "The open invitation to ask God for wisdom, who gives generously and without reproach.",
+        focus: "1-8",
+      },
+      {
+        book: "Philippians",
+        chapter: 3,
+        title: "Forgetting what is behind, press on",
+        lookFor: "Paul's posture after his own life of wrong turns: forget what is behind, and press on toward the goal.",
+        focus: "7-14",
+      },
+    ],
+    points: [
+      {
+        heading: "You are not left to guess alone",
+        body:
+          "James promises that if any of you lacks wisdom, let him ask of God, who gives liberally and without reproach. Proverbs ties trusting God to straight paths: trust in Yahweh with all your heart, and do not lean on your own understanding; acknowledge Him in all your ways, and He will make your paths straight. A man plans his course, but the Lord directs his steps.",
+        verses: ["James 1:5", "Proverbs 3:5-6", "Proverbs 16:9"],
+      },
+      {
+        heading: "God is sovereign over the outcome",
+        body:
+          "You do not carry the weight of the future alone. For those who love God, all things work together for good. He who began a good work in you will carry it on to completion. Even God's word to exiled Israel in a season of their own failure was a plan for good: 'thoughts of peace, and not of evil, to give you hope and a future.' Your wrong turn is not the end of His purposes.",
+        verses: ["Romans 8:28", "Philippians 1:6", "Jeremiah 29:11", "Genesis 50:20"],
+      },
+      {
+        heading: "His guidance is usually wisdom, not a hidden map",
+        body:
+          "God has already told us most of what we need to decide well. Micah sums it up: 'to act justly, to love mercy, and to walk humbly with your God.' Jesus adds: seek first His kingdom and His righteousness. The difficult decisions are usually made in the same way as the easy ones: by wisdom, Scripture, prayer, and godly counsel, trusting that a heart set on Him is being guided by Him.",
+        verses: ["Micah 6:8", "Matthew 6:33", "Proverbs 3:5-6", "Romans 12:2"],
+      },
+      {
+        heading: "Even a wrong step can be redeemed",
+        body:
+          "The psalm promises that though a good man stumbles, he shall not fall, because the Lord holds him up with His hand. God's track record is written in redemptive detours: Joseph's brothers meant evil, but God meant it for good. Your choice is not beyond His reach; He has a long history of bending fallen choices toward His purposes, not because the wrong was right, but because His grace is larger.",
+        verses: ["Psalm 37:23-24", "Genesis 50:20", "Romans 8:28"],
+      },
+      {
+        heading: "The way forward after a mistake",
+        body:
+          "When you realize you chose wrongly, do not spiral or freeze: own it before God, for He is faithful to forgive and cleanse when we confess. Ask for the wisdom you lacked, and then press on. Paul, who had made ruinously wrong choices in his past, said it best: forgetting what is behind and straining toward what is ahead, I press on toward the goal. One step of faithfulness after a fall is still faithfulness.",
+        verses: ["1 John 1:9", "James 1:5", "Philippians 3:13-14", "Lamentations 3:22-23"],
+      },
+    ],
+    keyVerses: ["Proverbs 3:5-6", "Romans 8:28", "James 1:5", "Psalm 37:23-24", "Philippians 3:13-14"],
+    raises: ["how-do-i-know-gods-will", "does-god-use-our-failures"],
+    followsFrom: ["how-do-i-know-gods-will", "do-my-choices-matter"],
+    related: ["how-do-i-know-gods-will", "do-my-choices-matter", "does-god-use-our-failures", "is-it-okay-to-doubt"],
+    planned: ["How do I recover from a decision I deeply regret?"],
+    order: 32,
   },
 ];
