@@ -16,10 +16,19 @@ import { fileURLToPath } from "node:url";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 // ---- Design (180x180, full-bleed square; iOS applies its own mask) ----
+// The mark is a gold Latin cross (the classic option), framed by the halo
+// rings and small sparkles so it stays on-brand with the app. Everything is
+// centered at (90,96) so the cross sits inside a concentric halo.
 
-const STAR = "M90 36 L112.3 67.7 L144 90 L112.3 112.3 L90 144 L67.7 112.3 L36 90 L67.7 67.7 Z";
 const SPARK_1 = "M131 41.5 L134.1 52.1 L138.5 49 L134.1 45.9 L131 56.5 L127.9 45.9 L123.5 49 L127.9 52.1 Z";
 const SPARK_2 = "M49 123.5 L52.1 134.1 L56.5 131 L52.1 127.9 L49 138.5 L45.9 127.9 L41.5 131 L45.9 134.1 Z";
+
+// The cross: two rounded gold bars (same fill) read as one Latin cross:
+//   horizontal arm  x 56..124, y 85..107  (68 wide x 22 tall)
+//   vertical member x 79..101, y 44..148  (22 wide x 104 tall)
+const CROSS = `
+  <rect x="56" y="85" width="68" height="22" rx="11" fill="url(#gold)" stroke="#6f5420" stroke-width="2"/>
+  <rect x="79" y="44" width="22" height="104" rx="11" fill="url(#gold)" stroke="#6f5420" stroke-width="2"/>`;
 
 // The 180x180 mark WITHOUT the full-bleed background (so a rounded variant
 // can supply its own backdrop). Shared by both variants.
@@ -30,28 +39,20 @@ const MARK = `
       <stop offset="55%" stop-color="#fbf7ee"/>
       <stop offset="100%" stop-color="#efe4cb"/>
     </radialGradient>
-    <linearGradient id="star" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#c69c3f"/>
       <stop offset="100%" stop-color="#8a6625"/>
-    </linearGradient>
-    <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#dcc78f"/>
       <stop offset="100%" stop-color="#b2944c"/>
     </linearGradient>
-    <clipPath id="starclip"><path d="${STAR}"/></clipPath>
   </defs>
-  <circle cx="90" cy="90" r="70" fill="none" stroke="url(#ring)" stroke-width="2" opacity="0.5"/>
-  <circle cx="90" cy="90" r="60" fill="none" stroke="#e6ddc9" stroke-width="1.5" opacity="0.9"/>
-  <g clip-path="url(#starclip)">
-    <path d="${STAR}" fill="url(#star)" stroke="#6f5420" stroke-width="2" stroke-linejoin="round"/>
-    <rect width="180" height="180" fill="url(#gloss)"/>
-  </g>
-  <path d="${SPARK_1}" fill="#c9a951" opacity="0.75"/>
-  <path d="${SPARK_2}" fill="#c9a951" opacity="0.55"/>
+  <circle cx="90" cy="96" r="72" fill="none" stroke="url(#ring)" stroke-width="2" opacity="0.5"/>
+  <circle cx="90" cy="96" r="62" fill="none" stroke="#e6ddc9" stroke-width="1.5" opacity="0.9"/>
+  <path d="${SPARK_1}" fill="#c9a951" opacity="0.7"/>
+  <path d="${SPARK_2}" fill="#c9a951" opacity="0.5"/>
+  ${CROSS}
 `;
 
 const SVG_180 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
