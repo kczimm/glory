@@ -605,10 +605,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 2:8-9", "Romans 10:9-10", "John 14:6", "Romans 8:38-39", "1 John 5:11-13"],
-    raises: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-happens-when-i-sin", "what-should-i-do-now-that-im-saved", "faith-or-works"],
+    raises: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-happens-when-i-sin", "what-should-i-do-now-that-im-saved", "faith-or-works", "what-is-the-new-heart-that-god-promised"],
     followsFrom: ["why-did-jesus-have-to-die", "did-jesus-rise-from-the-dead"],
     related: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
-    planned: ["What is the new heart that God promised?"],
+    planned: ["How is the new covenant different from the old one?"],
     order: 8,
   },
 
@@ -6662,5 +6662,91 @@ export const questions: Question[] = [
     related: ["is-jesus-really-god", "who-is-jesus", "why-is-jesus-both-son-of-god-and-son-of-man", "who-is-the-father"],
     planned: ["What was the world waiting for before Jesus came?"],
     order: 23,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Our Walk with Him (continued: the new heart)
+  // ------------------------------------------------------------------
+  {
+    slug: "what-is-the-new-heart-that-god-promised",
+    question: "What is the new heart that God promised?",
+    category: "our-walk",
+    summary:
+      "God promised through the prophets to give His people a new heart: not just better behavior but a changed inner life, with the heart of stone replaced by a heart of flesh, His law written on the heart, and His Spirit put within to enable obedience. That promise is fulfilled in the new covenant in Christ, where God gives us new hearts and puts His Spirit in us, working in us both to will and to do His good pleasure.",
+    passages: [
+      {
+        book: "Ezekiel",
+        chapter: 36,
+        title: "A new heart and a new spirit",
+        lookFor: "God promises to cleanse His people, give them a new heart, put a new spirit within them, and set His Spirit within them to cause them to walk in His statutes.",
+        focus: "22-32",
+      },
+      {
+        book: "Ezekiel",
+        chapter: 11,
+        title: "The heart of stone replaced by a heart of flesh",
+        lookFor: "The same promise: one new heart, the stony heart taken out, a heart of flesh given, so that they walk in God's statutes as His people.",
+        focus: "14-21",
+      },
+      {
+        book: "Jeremiah",
+        chapter: 31,
+        title: "The new covenant written on the heart",
+        lookFor: "God will make a new covenant, writing His law on the heart, so that all know Him and their sin is remembered no more.",
+        focus: "31-34",
+      },
+      {
+        book: "Psalm",
+        chapter: 51,
+        title: "Create in me a clean heart",
+        lookFor: "David, after his sin, begs God to do the very thing Ezekiel promised: create a clean heart, renew a right spirit within him.",
+        focus: "1-12",
+      },
+      {
+        book: "Deuteronomy",
+        chapter: 30,
+        title: "The circumcision of the heart",
+        lookFor: "Moses points forward: the Lord your God will circumcise your heart so that you love Him with all your heart and soul.",
+        focus: "1-14",
+      },
+    ],
+    points: [
+      {
+        heading: "God promised a changed heart, not just changed rules",
+        body:
+          "Ezekiel declares the promise in God's own voice: 'I will also give you a new heart, and I will put a new spirit within you; and I will take away the stony heart out of your flesh, and I will give you a heart of flesh.' The new covenant is written deeper than tablets of stone: 'I will put my law in their inward parts, and in their heart will I write it.' The promise is not a better list of rules but a transformed inner life.",
+        verses: ["Ezekiel 36:26", "Jeremiah 31:33"],
+      },
+      {
+        heading: "It is a divine gift, not self-improvement",
+        body:
+          "Everything about the promise is what God will do: 'I will give them one heart... I will take the stony heart out of their flesh, and will give them a heart of flesh.' When David begged for a clean heart after his fall, he prayed the same way, 'create in me a clean heart, O God. Renew a right spirit within me.' We cannot manufacture a new heart; it has to be given.",
+        verses: ["Ezekiel 11:19", "Psalm 51:10"],
+      },
+      {
+        heading: "It is the shape of the new covenant",
+        body:
+          "Jeremiah calls it by name: 'Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel.' And its heart is inward and forgiving: God writes His law on the heart, all know Him from the least to the greatest, and 'I will forgive their iniquity, and their sin will I remember no more.' Ezekiel joins cleansing and the Spirit to the same promise: God washes, gives a new heart, and puts His Spirit within.",
+        verses: ["Jeremiah 31:31", "Jeremiah 31:33", "Jeremiah 31:34", "Ezekiel 36:25-27"],
+      },
+      {
+        heading: "It comes to be in Christ",
+        body:
+          "The new covenant promised through the prophets is inaugurated in Christ. Jesus told Nicodemus that to enter the kingdom you must be born of water and the Spirit, and in Christ, Paul says, 'if anyone is in Christ, he is a new creation.' The heart of stone replaced by a heart of flesh is what regeneration is: God giving us a new heart in the new birth, and it is God who works in us 'both to will and to work, for his good pleasure.' The promise comes true in everyone He makes new.",
+        verses: ["John 3:5", "2 Corinthians 5:17", "Philippians 2:13"],
+      },
+      {
+        heading: "Its fruit is hearts that love God",
+        body:
+          "The new heart is for relationship. Moses pointed to the end: 'Yahweh your God will circumcise your heart... to love Yahweh your God with all your heart.' Ezekiel says the Spirit within 'cause you to walk in my statutes... and do them,' and David's prayer moves from a clean heart to the joy and ready spirit of salvation. The change of heart is not an end in itself; it is new hearts, enabled by the Spirit, that love God, obey Him, and find their joy in Him.",
+        verses: ["Deuteronomy 30:6", "Ezekiel 36:27", "Psalm 51:10", "Psalm 51:12"],
+      },
+    ],
+    keyVerses: ["Ezekiel 36:26-27", "Jeremiah 31:33", "Psalm 51:10", "Ezekiel 11:19", "Deuteronomy 30:6"],
+    raises: ["what-does-it-mean-to-be-born-again", "how-do-i-receive-the-holy-spirit"],
+    followsFrom: ["how-can-i-be-saved", "what-is-repentance"],
+    related: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again", "what-is-repentance", "spirits-witness-or-my-own-feelings"],
+    planned: ["How do I know God has given me a new heart?"],
+    order: 26,
   },
 ];
