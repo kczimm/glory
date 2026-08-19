@@ -187,6 +187,33 @@ export const connections: Record<string, Connection[]> = {
     c("Revelation 21:1-4", "promise", "A new heaven and a new earth — God dwelling with His people, the place He prepared."),
     c("Hebrews 11:16", "promise", "He has prepared a city for them — a better, heavenly country."),
   ],
+
+  // ------------------------------------------------------------------
+  // God the Father + faith & works
+  // ------------------------------------------------------------------
+  "John 14:9": [
+    c("John 1:18", "theme", "The only Son, who is at the Father's side, has made Him known."),
+    c("Colossians 1:15", "theme", "Jesus is the image of the invisible God — to see Him is to see the Father."),
+    c("Hebrews 1:3", "theme", "The Son is the exact imprint of God's nature."),
+  ],
+  "1 John 3:1": [
+    c("John 3:16", "theme", "God so loved — the same love that gave His Son makes us His children."),
+    c("Galatians 4:4-5", "theme", "He sent forth His Son… that we might receive adoption as children."),
+    c("Ephesians 1:5", "theme", "Predestined us for adoption through Jesus Christ — in love."),
+  ],
+  "James 2:17": [
+    c("Romans 3:28", "contrast", "Paul: justified by faith apart from works. James: faith without works is dead. Two sides of the same reality."),
+    c("John 15:5", "theme", "A branch that abides in the vine bears fruit — genuine faith naturally produces works."),
+    c("Ephesians 2:8-9", "contrast", "Paul's 'saved apart from works' — while James insists real faith works. The same Spirit wrote both."),
+  ],
+  "James 2:26": [
+    c("Romans 4:5", "contrast", "Paul: faith counted as righteousness. James: faith without works is dead. The ground and the fruit of the same faith."),
+    c("James 2:17", "parallel", "James' own summary — a body without the spirit is dead, so faith without works is dead."),
+  ],
+  "Galatians 5:6": [
+    c("Ephesians 2:10", "theme", "Created in Christ Jesus for good works — faith that works through love."),
+    c("1 Corinthians 13:13", "theme", "The greatest of gifts is love — and genuine faith 'works through love.'"),
+  ],
 };
 
 /** Connections leaving from a verse reference. */

@@ -223,9 +223,9 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 28:19", "John 14:16-17", "2 Corinthians 13:14", "Hebrews 1:3"],
-    raises: ["is-jesus-really-god"],
+    raises: ["is-jesus-really-god", "who-is-the-father"],
     followsFrom: ["is-the-holy-spirit-god", "is-jesus-really-god"],
-    related: ["who-is-the-holy-spirit"],
+    related: ["who-is-the-holy-spirit", "who-is-the-father"],
     planned: ["Can we really understand the Trinity?", "How do I pray to God as Father, Son, and Spirit?"],
     order: 3,
   },
@@ -605,7 +605,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 2:8-9", "Romans 10:9-10", "John 14:6", "Romans 8:38-39", "1 John 5:11-13"],
-    raises: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-happens-when-i-sin", "what-should-i-do-now-that-im-saved"],
+    raises: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-happens-when-i-sin", "what-should-i-do-now-that-im-saved", "faith-or-works"],
     followsFrom: ["why-did-jesus-have-to-die", "did-jesus-rise-from-the-dead"],
     related: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
     planned: [],
@@ -1427,5 +1427,160 @@ export const questions: Question[] = [
     related: ["what-happens-when-i-sin"],
     planned: ["What is the flesh versus the Spirit?", "Where does temptation come from?"],
     order: 19,
+  },
+
+  // ------------------------------------------------------------------
+  // God the Father + faith & works
+  // ------------------------------------------------------------------
+  {
+    slug: "who-is-the-father",
+    question: "Who is God the Father?",
+    category: "god-the-father",
+    summary:
+      "The Father is the first Person of the Trinity — fully God, the Creator and sovereign Lord, who loves the world so much that He gave His only Son, and who draws us into His own family as adopted children. Jesus came to reveal the Father to us.",
+    passages: [
+      {
+        book: "John",
+        chapter: 14,
+        title: "Show us the Father",
+        lookFor: "Philip asks to see the Father — and Jesus answers: he who has seen me has seen the Father.",
+        focus: "1-14",
+      },
+      {
+        book: "Matthew",
+        chapter: 6,
+        title: "Our Father in heaven",
+        lookFor: "Jesus teaches us to pray to the Father — and to trust His care.",
+        focus: "5-15",
+      },
+      {
+        book: "Luke",
+        chapter: 15,
+        title: "The father's heart",
+        lookFor: "The prodigal's father runs to embrace his returning son — a window into the Father's love.",
+        focus: "11-24",
+      },
+      {
+        book: "1 John",
+        chapter: 3,
+        title: "See what love the Father has given us",
+        lookFor: "The staggering fact of the gospel: we are called children of God.",
+        focus: "1-3",
+      },
+    ],
+    points: [
+      {
+        heading: "The Father is the one true God",
+        body:
+          "Jesus' own definition of eternal life is this: 'that they should know you, the only true God, and him whom you sent, Jesus Christ.' For us there is one God, the Father, from whom all things come. He is not 'the god behind the gods' — He is the God.",
+        verses: ["John 17:3", "1 Corinthians 8:6", "Isaiah 46:9-10"],
+      },
+      {
+        heading: "He is revealed in Jesus",
+        body:
+          "Philip asked to see the Father, and Jesus replied, 'He who has seen me has seen the Father.' No one has ever seen God, but the only Son, who is at the Father's side, has made Him known. We do not guess at God's character — we look at Jesus and see the Father.",
+        verses: ["John 14:8-9", "John 1:18", "Colossians 1:15"],
+      },
+      {
+        heading: "His heart is love — He gave His Son",
+        body:
+          "'God so loved the world, that he gave his only born Son.' This is not an abstract principle; it is the measure of the Father's heart. He shows His love for us in this: while we were still sinners, Christ died for us. Even when we wander, the Father runs to meet us.",
+        verses: ["John 3:16", "1 John 3:1", "Romans 5:8", "Luke 15:20"],
+      },
+      {
+        heading: "He has adopted us as His children",
+        body:
+          "In love He predestined us for adoption as sons through Jesus Christ. We are no longer slaves or strangers — through the Spirit we cry, 'Abba, Father.' 'See what kind of love the Father has given to us, that we should be called children of God! And that is what we are.'",
+        verses: ["Galatians 4:4-7", "Ephesians 1:5", "1 John 3:1-2", "Matthew 6:9"],
+      },
+      {
+        heading: "You come to the Father through Jesus",
+        body:
+          "Jesus is 'the way, the truth, and the life. No one comes to the Father except through me.' Through Him we both have access to the Father by one Spirit — and through Him we may ask the Father in His name, and the door is open. The Father who sent the Son welcomes all who come through the Son.",
+        verses: ["John 14:6", "Ephesians 2:18", "John 14:13-14"],
+      },
+    ],
+    keyVerses: ["John 14:9", "1 John 3:1", "John 3:16", "Matthew 6:9", "Ephesians 1:5"],
+    raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit"],
+    followsFrom: ["what-is-the-trinity"],
+    related: ["what-is-the-trinity", "who-is-jesus"],
+    planned: ["How do I pray to the Father?", "Why does He still call me son/daughter when I fail?"],
+    order: 20,
+  },
+
+  {
+    slug: "faith-or-works",
+    question: "Does James contradict Paul — is it faith or works?",
+    category: "our-walk",
+    summary:
+      "No. Paul and James answer two different questions. Paul asks how a person is declared righteous before God, and answers: by faith alone. James asks how we can tell a faith is real, and answers: by the works that genuine faith produces. Far from contradicting, they complete each other — real saving faith always works.",
+    passages: [
+      {
+        book: "Ephesians",
+        chapter: 2,
+        title: "Saved by grace through faith",
+        lookFor: "Paul: not of works — yet created in Christ Jesus for good works. Both halves matter.",
+        focus: "8-10",
+      },
+      {
+        book: "Romans",
+        chapter: 4,
+        title: "Abraham justified by faith",
+        lookFor: "Paul's argument: to the one who does not work but believes, faith is counted as righteousness.",
+        focus: "1-8",
+      },
+      {
+        book: "James",
+        chapter: 2,
+        title: "Faith without works is dead",
+        lookFor: "James's answer — and his example of the very same Abraham.",
+        focus: "14-26",
+      },
+      {
+        book: "Galatians",
+        chapter: 2,
+        title: "Justified by faith in Christ",
+        lookFor: "Even Paul: we know a person is not justified by works of the law, but by faith in Christ.",
+        focus: "15-21",
+      },
+    ],
+    points: [
+      {
+        heading: "They are answering different questions",
+        body:
+          "Paul is fighting self-righteousness — the idea that we can earn our place with God. His question: 'How is a sinner declared righteous before God?' James is fighting empty profession — the idea that agreeing with the facts is enough. His question: 'What does a real faith look like?' The Bible answers both, because we need both.",
+        verses: ["Romans 3:28", "James 2:14-17"],
+      },
+      {
+        heading: "Paul: justification is by faith, apart from works",
+        body:
+          "'By grace you have been saved through faith… not of works, so that no one can boast.' To the one who does not work but believes, 'faith is counted as righteousness.' A person is not justified by works of the law but 'through faith in Christ Jesus.' This is the ground of salvation.",
+        verses: ["Ephesians 2:8-9", "Romans 4:4-5", "Galatians 2:16", "Titus 3:5"],
+      },
+      {
+        heading: "James: real faith cannot be a dead faith",
+        body:
+          "'What good is it if someone says he has faith, but he doesn't have works? Can that faith save him?' Faith by itself, if it has no works, is dead — 'as the body without the spirit is dead, so also faith without works is dead.' James is not teaching that works save; he is exposing a bare 'faith' that never produces fruit.",
+        verses: ["James 2:14", "James 2:17", "James 2:26"],
+      },
+      {
+        heading: "They both use Abraham — two sides of the same faith",
+        body:
+          "Paul points to Abraham 'believed God, and it was counted to him as righteousness.' James points to the same man when he offered Isaac: 'faith worked with his works, and by the works his faith was made complete.' One shows the ground (faith received); the other shows the fruit (faith perfected through obedience).",
+        verses: ["Romans 4:1-3", "James 2:21-24"],
+      },
+      {
+        heading: "They agree: grace creates good works",
+        body:
+          "Paul himself says we are 'created in Christ Jesus for good works, which God prepared before that we should walk in them' — and that what matters is 'faith working through love.' So the resolution is not 'faith or works' but 'faith alone, and authentic faith never remains alone.' The faith that saves is the faith that works.",
+        verses: ["Ephesians 2:10", "Galatians 5:6", "Titus 2:14"],
+      },
+    ],
+    keyVerses: ["Ephesians 2:8-10", "Romans 4:5", "James 2:17", "James 2:26", "Galatians 5:6"],
+    raises: [],
+    followsFrom: ["how-can-i-be-saved"],
+    related: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again", "what-should-i-do-now-that-im-saved"],
+    planned: ["What does it mean to be justified?"],
+    order: 21,
   },
 ];
