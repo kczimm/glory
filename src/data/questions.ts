@@ -2033,10 +2033,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 8:28", "Genesis 50:20", "2 Corinthians 1:3-4", "Revelation 21:4"],
-    raises: ["is-god-in-control"],
+    raises: ["is-god-in-control", "where-is-god-in-my-pain"],
     followsFrom: [],
     related: ["who-is-the-father", "where-is-jesus-now", "why-does-god-seem-silent"],
-    planned: ["Where is God in my specific pain?"],
+    planned: ["What does it look like to suffer well?"],
     order: 27,
   },
 
@@ -4556,6 +4556,91 @@ export const questions: Question[] = [
     followsFrom: ["what-is-repentance", "what-is-the-gospel"],
     related: ["what-is-repentance", "what-happens-when-i-sin", "how-do-i-fight-sin", "does-grace-mean-live-how-i-want"],
     planned: ["What is the difference between godly sorrow and worldly regret?"],
+    order: 30,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Suffering & God's Will (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "where-is-god-in-my-pain",
+    question: "Where is God in my specific pain?",
+    category: "suffering-will",
+    summary:
+      "God is not distant from your pain; He is near to it. He knows your specific tears, He is with you in the valley, and He has entered suffering Himself in Christ. His presence in pain is not a vague comfort but a covenant promise, and He is working even the deepest valley toward good.",
+    passages: [
+      {
+        book: "Psalm",
+        chapter: 34,
+        title: "Yahweh is near to the brokenhearted",
+        lookFor: "The nearness of God to those who are crushed in spirit, and the invitation to taste and see that He is good.",
+        focus: "15-22",
+      },
+      {
+        book: "Psalm",
+        chapter: 23,
+        title: "Through the valley of the shadow of death",
+        lookFor: "The Shepherd walks through the valley with his sheep; the comfort is not escape but presence.",
+      },
+      {
+        book: "John",
+        chapter: 16,
+        title: "In the world you have trouble, but I have overcome",
+        lookFor: "Jesus is honest about the trouble His people face, and promises His peace and His victory.",
+        focus: "25-33",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 1,
+        title: "The God of all comfort",
+        lookFor: "The Father of mercies comforts us in all our affliction, so that we can comfort others.",
+        focus: "3-11",
+      },
+      {
+        book: "1 Peter",
+        chapter: 4,
+        title: "Suffer as a Christian, entrusting your soul to a faithful Creator",
+        lookFor: "Peter's frame for suffering: rejoice to share Christ's sufferings, and entrust your soul to the faithful Creator.",
+        focus: "12-19",
+      },
+    ],
+    points: [
+      {
+        heading: "God draws near to the broken",
+        body:
+          "The psalmist says it plainly: 'Yahweh is near to those who have a broken heart, and saves those who have a crushed spirit.' God does not wait for you to be whole before He comes close; He is nearest when you are most broken. He heals the broken in heart and binds up their wounds, and He says He dwells with the contrite and humble to revive their spirit.",
+        verses: ["Psalm 34:18", "Psalm 147:3", "Isaiah 57:15"],
+      },
+      {
+        heading: "He knows your specific pain",
+        body:
+          "Your suffering is not anonymous to God. The psalmist could say to Him, 'You number my wanderings. You put my tears into your bottle.' Jesus taught that the very hairs of your head are numbered. This is not a God who handles suffering in general; this is a God who knows exactly what you are carrying, and who has counted it.",
+        verses: ["Psalm 56:8", "Matthew 10:30", "Psalm 139:1-4"],
+      },
+      {
+        heading: "He is with you in the valley",
+        body:
+          "The twenty-third psalm does not promise we will never walk through the valley; it promises the Shepherd is there: 'Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me.' God's word through Isaiah is the same: 'When you pass through the waters, I will be with you.' And He adds, 'Don't you be afraid, for I am with you. Don't be dismayed, for I am your God. I will strengthen you.' His presence is the promise: He is with you always, even to the end of the age, a stronghold in the day of trouble who knows those who take refuge in Him.",
+        verses: ["Psalm 23:4", "Isaiah 41:10", "Isaiah 43:2", "Matthew 28:20", "Nahum 1:7"],
+      },
+      {
+        heading: "Christ entered our suffering Himself",
+        body:
+          "In Gethsemane, Jesus said His soul was exceedingly sorrowful even to death, and He prayed that the cup might pass. He was 'a man of suffering, and acquainted with disease,' and at the tomb of His friend, the shortest and perhaps the most moving verse in the Bible: 'Jesus wept.' He does not watch our pain from a distance; He has known it, and He is able to help those who are suffering and tempted.",
+        verses: ["Matthew 26:38-39", "Isaiah 53:3", "John 11:35", "Hebrews 2:18", "Hebrews 4:15-16"],
+      },
+      {
+        heading: "He is working it toward good, and one day He will wipe every tear",
+        body:
+          "For those who love God, all things work together for good, even the things that feel nothing like good today. God is 'the Father of mercies and God of all comfort; who comforts us in all our affliction' so that we can comfort others. And the end is not vague; it is a promise: 'He will wipe away from them every tear from their eyes... The first things have passed away.' Even on the darkest day, He does not cast off forever; though He cause grief, He will have compassion, and He does not afflict willingly. Courage: in the world you have trouble, but He has overcome the world.",
+        verses: ["Romans 8:28", "2 Corinthians 1:3-4", "Revelation 21:4", "John 16:33", "Lamentations 3:31-33"],
+      },
+    ],
+    keyVerses: ["Psalm 34:18", "Psalm 23:4", "Isaiah 41:10", "2 Corinthians 1:3-4", "John 16:33"],
+    raises: ["is-god-in-control", "why-does-god-seem-silent", "does-god-use-our-failures"],
+    followsFrom: ["why-does-god-allow-suffering"],
+    related: ["why-does-god-allow-suffering", "who-is-the-father", "why-does-god-seem-silent", "is-god-in-control"],
+    planned: ["How long will this suffering last?"],
     order: 30,
   },
 ];
