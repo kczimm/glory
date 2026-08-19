@@ -27,6 +27,7 @@ npm run start        # production serve
 npm run start:lan    # production serve on LAN, port 3100
 npm run lint         # eslint
 node scripts/fetch-bible.mjs   # re-vendor the full WEB into src/data/scripture.ts
+node scripts/generate-icons.mjs  # regenerate brand icons (iOS home screen, PWA manifest, favicon)
 ```
 
 ## Architecture

@@ -18,12 +18,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  applicationName: "Glory",
   title: {
     default: "Glory: A question-driven study of Scripture",
     template: "%s · Glory",
   },
   description:
     "Come with a question. Leave with Scripture. A topical, question-driven Bible study of who God is and our relationship with Him, grounded in the World English Bible.",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "Glory",
+    statusBarStyle: "default",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -972,10 +972,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 John 2:1-2", "1 John 1:9", "Hebrews 4:15-16", "Romans 8:1"],
-    raises: ["how-do-i-fight-sin"],
+    raises: ["how-do-i-fight-sin", "does-god-use-our-failures"],
     followsFrom: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
     related: ["can-i-lose-my-salvation"],
-    planned: ["Does God use our failures for our good?"],
+    planned: ["Can God's grace really cover my worst sins?"],
     order: 13,
   },
 
@@ -3970,5 +3970,88 @@ export const questions: Question[] = [
     related: ["can-i-lose-my-salvation", "what-is-faith", "how-do-i-know-the-spirit-is-leading-me"],
     planned: ["What does holy living have to do with assurance?"],
     order: 23,
+  },
+
+  {
+    slug: "does-god-use-our-failures",
+    question: "Does God use our failures for our good?",
+    category: "our-walk",
+    summary:
+      "Yes. Scripture's own story is full of people whose worst hours God worked into something good: Joseph's betrayal, Peter's denial, Paul's thorn. The promise of Romans 8 is that God works all things, even our failures, for good for those who love Him, and the good He is working is our growth into the likeness of Christ.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 50,
+        title: "Joseph: 'You meant evil, but God meant it for good'",
+        lookFor: "Joseph looks back over years of betrayal and prison and sees God's hand: evil meant against him, worked for good.",
+        focus: "14-21",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "All things work for good",
+        lookFor: "The great promise, and its definition of 'good': being conformed to the image of God's Son.",
+        focus: "18-30",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 12,
+        title: "Paul's thorn and God's grace",
+        lookFor: "Paul's humbling weakness, three prayerful appeals, and the answer: my grace is sufficient for you.",
+        focus: "1-10",
+      },
+      {
+        book: "Luke",
+        chapter: 22,
+        title: "Peter's denial, and the prayer that held him",
+        lookFor: "Jesus foretells Peter's fall, prays that his faith not fail, and sends him to strengthen his brothers after he turns back.",
+        focus: "24-34",
+      },
+      {
+        book: "Philippians",
+        chapter: 1,
+        title: "In prison, the gospel advances",
+        lookFor: "Even Paul's chains 'have turned out rather to the progress of the Good News': confinement became opportunity.",
+        focus: "12-21",
+      },
+    ],
+    points: [
+      {
+        heading: "God has done this before",
+        body:
+          "Joseph's brothers sold him into slavery, lied about it, and left him for dead; years later Joseph looked them in the eye and said, 'You meant evil against me, but God meant it for good.' It is one of the most hopeful sentences in the Bible, and it is not a theory: it is what had actually happened in a real family, over decades.",
+        verses: ["Genesis 50:20", "Genesis 37:26-28", "Genesis 39:21-23"],
+      },
+      {
+        heading: "The promise is wide, and the good is specific",
+        body:
+          "Paul writes that all things work together for good for those who love God and are called according to His purpose: not that every event is good in itself, but that God works them all into His good. And the good is named: that we might be conformed to the image of His Son. The goal is not merely our happiness; it is our Christlikeness, and that is worth suffering for.",
+        verses: ["Romans 8:28", "Romans 8:29", "Romans 8:18", "Romans 5:3-5"],
+      },
+      {
+        heading: "Our failures do not have the last word",
+        body:
+          "Peter swore he would never deny Jesus, and then did it three times, in the very courtyard Jesus had warned him about. But Jesus had prayed for him: 'that your faith wouldn't fail. You, when once you have turned again, establish your brothers.' The failure was real, and so was the grace. There is no condemnation for those in Christ, and confession brings cleansing.",
+        verses: ["Luke 22:31-32", "Romans 8:1", "1 John 1:9"],
+      },
+      {
+        heading: "Even our humbling is made to serve us",
+        body:
+          "Paul was given 'a thorn in the flesh' to keep him humble, and he begged three times for it to be removed. God's answer was not an explanation; it was grace: 'My grace is sufficient for you, for my power is made perfect in weakness.' Paul then wrote that believers are pressed on every side, yet not crushed. The weakness we wish away is often the very place God's strength is seen.",
+        verses: ["2 Corinthians 12:7-9", "2 Corinthians 4:8-9", "2 Corinthians 12:10"],
+      },
+      {
+        heading: "He weaves our falls into growth and usefulness",
+        body:
+          "After the suffering, 1 Peter promises that the God of all grace himself perfects, establishes, strengthens, and settles us. The psalmist learned from his affliction, and Paul could say his imprisonment advanced the gospel. The failures are not the whole story, and they are not wasted: God works them into the character of Christ in us and into usefulness for His kingdom.",
+        verses: ["1 Peter 5:10", "Psalm 119:71", "Philippians 1:12", "Romans 8:28-29"],
+      },
+    ],
+    keyVerses: ["Genesis 50:20", "Romans 8:28", "Romans 8:29", "2 Corinthians 12:9", "Luke 22:32"],
+    raises: [],
+    followsFrom: ["what-happens-when-i-sin", "why-does-god-allow-suffering"],
+    related: ["what-happens-when-i-sin", "can-i-lose-my-salvation", "why-does-god-allow-suffering"],
+    planned: ["What if I keep repeating the same sin?"],
+    order: 24,
   },
 ];

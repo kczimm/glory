@@ -1,5 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="#fbf7ee"/>
-  <path d="M32 10l5.2 12.8L50 28l-12.8 5.2L32 46l-5.2-12.8L14 28l12.8-5.2z" fill="#a07c2e"/>
-  <circle cx="32" cy="32" r="20" fill="none" stroke="#cdb77e" stroke-width="1.5" opacity="0.6"/>
+  <g transform="scale(0.355556)">
+
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="34%" r="88%">
+      <stop offset="0%" stop-color="#fffef8"/>
+      <stop offset="55%" stop-color="#fbf7ee"/>
+      <stop offset="100%" stop-color="#efe4cb"/>
+    </radialGradient>
+    <linearGradient id="star" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c69c3f"/>
+      <stop offset="100%" stop-color="#8a6625"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dcc78f"/>
+      <stop offset="100%" stop-color="#b2944c"/>
+    </linearGradient>
+    <clipPath id="starclip"><path d="M90 36 L112.3 67.7 L144 90 L112.3 112.3 L90 144 L67.7 112.3 L36 90 L67.7 67.7 Z"/></clipPath>
+  </defs>
+  <circle cx="90" cy="90" r="70" fill="none" stroke="url(#ring)" stroke-width="2" opacity="0.5"/>
+  <circle cx="90" cy="90" r="60" fill="none" stroke="#e6ddc9" stroke-width="1.5" opacity="0.9"/>
+  <g clip-path="url(#starclip)">
+    <path d="M90 36 L112.3 67.7 L144 90 L112.3 112.3 L90 144 L67.7 112.3 L36 90 L67.7 67.7 Z" fill="url(#star)" stroke="#6f5420" stroke-width="2" stroke-linejoin="round"/>
+    <rect width="180" height="180" fill="url(#gloss)"/>
+  </g>
+  <path d="M131 41.5 L134.1 52.1 L138.5 49 L134.1 45.9 L131 56.5 L127.9 45.9 L123.5 49 L127.9 52.1 Z" fill="#c9a951" opacity="0.75"/>
+  <path d="M49 123.5 L52.1 134.1 L56.5 131 L52.1 127.9 L49 138.5 L45.9 127.9 L41.5 131 L45.9 134.1 Z" fill="#c9a951" opacity="0.55"/>
+
+  </g>
 </svg>
