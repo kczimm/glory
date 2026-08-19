@@ -1270,10 +1270,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 1:9-11", "Hebrews 7:25", "John 14:2-3", "Romans 8:34"],
-    raises: ["will-jesus-return-literally"],
+    raises: ["will-jesus-return-literally", "what-is-the-church"],
     followsFrom: ["did-jesus-rise-from-the-dead"],
     related: ["what-happens-when-i-sin", "how-can-i-be-saved"],
-    planned: ["What is the church?"],
+    planned: ["What is the church's mission in the world?"],
     order: 17,
   },
 
@@ -7251,5 +7251,91 @@ export const questions: Question[] = [
     related: ["why-did-jesus-call-himself-son-of-man", "who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god", "between-the-cross-and-the-resurrection"],
     planned: ["How much did the disciples understand while Jesus was with them?"],
     order: 26,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Church (continued: identity)
+  // ------------------------------------------------------------------
+  {
+    slug: "what-is-the-church",
+    question: "What is the church?",
+    category: "church",
+    summary:
+      "The church is not a building or a program; it is the people of God, the whole company of those joined to Christ by faith. Scripture calls it the body of Christ, the bride of Christ, the household and temple of the living God, and the assembly Christ is building. It is the community that belongs to Him and grows into Him, lived out in local gatherings now and gathered in fullness when He returns.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 16,
+        title: "I will build my church",
+        lookFor: "Jesus speaks of His assembly being built on the rock of His identity, and the gates of Hades not prevailing against it.",
+        focus: "13-20",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "The marks of the first church",
+        lookFor: "The first believers devoted to teaching, fellowship, the breaking of bread, and prayer, with the Lord adding to them daily those being saved.",
+        focus: "42-47",
+      },
+      {
+        book: "Ephesians",
+        chapter: 1,
+        title: "The body of Christ",
+        lookFor: "Christ is head over all things for the church, which is His body, the fullness of Him who fills all in all.",
+        focus: "15-23",
+      },
+      {
+        book: "1 Timothy",
+        chapter: 3,
+        title: "The pillar and ground of the truth",
+        lookFor: "The church is the household of God and the assembly of the living God, the pillar and ground of the truth.",
+        focus: "14-16",
+      },
+      {
+        book: "Ephesians",
+        chapter: 5,
+        title: "The bride of Christ",
+        lookFor: "Christ loved the church and gave Himself up for her, to present her to Himself without spot or wrinkle.",
+        focus: "25-32",
+      },
+    ],
+    points: [
+      {
+        heading: "The church is a people, not a place",
+        body:
+          "Jesus called it His assembly, and the word in the Greek is the called-out gathering of people, not bricks and mortar. He promised, 'I will build my assembly, and the gates of Hades will not prevail against it.' In Acts, the living picture is people: as they believed and were saved, 'the Lord added to the assembly day by day those who were being saved.' The church is the company of the redeemed, wherever they gather.",
+        verses: ["Matthew 16:18", "Acts 2:47", "Acts 2:42"],
+      },
+      {
+        heading: "It is the body of Christ",
+        body:
+          "Paul's favorite image is a body. God put all things in subjection under Christ's feet and 'gave him to be head over all things for the assembly, which is his body, the fullness of him who fills all in all.' Colossians echoes it: Christ is 'the head of the body, the assembly.' And each believer is a member, 'the body of Christ, and members individually,' joined to the Head and to one another.",
+        verses: ["Ephesians 1:22", "Ephesians 1:23", "Colossians 1:18", "1 Corinthians 12:27"],
+      },
+      {
+        heading: "It is the bride of Christ",
+        body:
+          "The deepest picture is a wedding. Paul says Christ loved the assembly and gave Himself up for it, 'that he might present the assembly to himself gloriously, not having spot or wrinkle or any such thing,' but holy and without defect. The church is not an organization Christ runs from a distance; she is the bride He died for, is cleansing, and will one day present to Himself. The end of all history is 'the marriage of the Lamb' when the bride is made ready.",
+        verses: ["Ephesians 5:25-27", "Revelation 19:7", "Ephesians 5:27"],
+      },
+      {
+        heading: "It is the household and temple of the living God",
+        body:
+          "The church is God's family and God's dwelling. Paul calls it 'the assembly of the living God, the pillar and ground of the truth,' and says believers are built together, on the foundation of the apostles and prophets with Christ as the cornerstone, into 'a holy temple in the Lord,' 'a habitation of God in the Spirit.' Peter pictures believers as living stones being built into a spiritual house. The place where God dwells is His people.",
+        verses: ["1 Timothy 3:15", "Ephesians 2:20", "Ephesians 2:21", "Ephesians 2:22", "1 Peter 2:5"],
+      },
+      {
+        heading: "It is a present reality and a future hope",
+        body:
+          "The church is lived out today in local gatherings, devoted to word, fellowship, the Table, and prayer, as in Acts. And it is headed toward a consummation: the writer of Hebrews speaks of our having come to 'the assembly of the firstborn who are enrolled in heaven,' and Revelation shows the holy city, New Jerusalem, 'prepared like a bride adorned for her husband,' where God dwells with His people forever. The church on earth is the beginning of that city, and its end is glorious.",
+        verses: ["Acts 2:42", "Acts 2:46", "Hebrews 12:23", "Revelation 21:2", "Revelation 21:3"],
+      },
+    ],
+    keyVerses: ["Matthew 16:18", "Ephesians 1:22-23", "1 Timothy 3:15", "Ephesians 5:25-27", "Acts 2:47"],
+    raises: ["why-do-i-need-the-church", "what-is-a-healthy-church"],
+    followsFrom: ["where-is-jesus-now", "why-do-i-need-the-church"],
+    related: ["why-do-i-need-the-church", "what-is-a-healthy-church", "what-is-baptism", "what-is-the-lords-supper"],
+    planned: ["What is the difference between the universal church and the local church?"],
+    order: 43,
   },
 ];
