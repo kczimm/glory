@@ -1501,10 +1501,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 14:9", "1 John 3:1", "John 3:16", "Matthew 6:9", "Ephesians 1:5"],
-    raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit"],
+    raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit", "still-my-father-when-i-fail"],
     followsFrom: ["what-is-the-trinity"],
     related: ["what-is-the-trinity", "who-is-jesus", "why-does-god-allow-suffering", "how-do-i-pray"],
-    planned: ["Why does He still call me son/daughter when I fail?"],
+    planned: ["What does it mean that God is love?"],
     order: 20,
   },
 
@@ -4136,5 +4136,91 @@ export const questions: Question[] = [
     related: ["how-do-i-fight-sin", "who-is-satan", "what-is-the-flesh-versus-the-spirit", "who-is-the-father"],
     planned: ["How can I help someone caught in sin without falling myself?"],
     order: 25,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: God the Father (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "still-my-father-when-i-fail",
+    question: "Why does He still call me son/daughter when I fail?",
+    category: "god-the-father",
+    summary:
+      "Because belonging to God as a child rests on His adopting love and His promise, not on your performance. When His children fail, He does not stop being Father: He is the Father who runs to His returning child, who disciplines because He loves, and whose claim on you is a covenant, not a balance sheet.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 15,
+        title: "The father runs to his son",
+        lookFor: "The prodigal's failure changes everything about his condition, and nothing about whose son he is: the father runs to embrace him.",
+        focus: "11-32",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "The Spirit of adoption",
+        lookFor: "You received the Spirit of adoption, not a spirit of slavery to fear: you cry 'Abba, Father,' and the Spirit witnesses that you are God's child.",
+        focus: "12-17",
+      },
+      {
+        book: "Galatians",
+        chapter: 4,
+        title: "God sent His Son, that we might receive adoption",
+        lookFor: "Adoption is something God did, not something you earned: He sent His Son and His Spirit so we could be called children.",
+        focus: "4-7",
+      },
+      {
+        book: "Hebrews",
+        chapter: 12,
+        title: "The Lord disciplines those He loves",
+        lookFor: "Discipline is the mark of a son, not proof of being disowned: He treats us as children because He loves us.",
+        focus: "5-11",
+      },
+      {
+        book: "1 John",
+        chapter: 3,
+        title: "See what love the Father has given us",
+        lookFor: "That we should be called children of God: a love that names us, whatever the world or our conscience says.",
+        focus: "1-3",
+      },
+    ],
+    points: [
+      {
+        heading: "Sonship is a gift of adoption, not a wage",
+        body:
+          "You were not adopted because you were good enough; you were adopted because God chose to. Paul says God sent His Son and poured out His Spirit so that we might receive adoption as children. The invitation is not 'prove yourself, and then I will call you son.' It is the opposite: 'you are a child, therefore cry Abba, Father.'",
+        verses: ["Galatians 4:4-6", "Romans 8:15", "1 John 3:1", "Ephesians 1:5"],
+      },
+      {
+        heading: "His love for you is a covenant, not a balance sheet",
+        body:
+          "Human parents can be a poor picture; God's love is not running on your record. 'We love him, because he first loved us.' Even when a mother could forget her nursing child, God says He will not forget us; His compassion is on those who fear Him. He does not keep a tally of your failures against the love He has pledged.",
+        verses: ["1 John 4:10", "1 John 4:19", "Isaiah 49:15-16", "Psalm 103:13", "Romans 5:8"],
+      },
+      {
+        heading: "The Father runs toward the returning child",
+        body:
+          "The prodigal rehearsed a speech about being treated as a hired servant, but he never got to the punchline. While he was still far off, his father saw him, was moved with compassion, ran to him, and embraced him. The robe, the ring, and the shoes came before any lecture. Failure did not make him less a son; the father received him still calling him 'this, my son,' and to the elder son's complaint he answered, 'Son, you are always with me, and all that is mine is yours': the son's place never depended on what he earned.",
+        verses: ["Luke 15:20", "Luke 15:22-24", "Luke 15:31-32"],
+      },
+      {
+        heading: "Discipline is the mark of a son, not proof of being disowned",
+        body:
+          "Hebrews tackles the very worry you have when you fail: it can feel like God has turned His back. But the Word says the Lord disciplines the one He loves, and chastises every son He receives. God deals with you as with children. It is painful for the moment, but it yields the peaceful fruit of righteousness; a father who does not discipline is not showing love, and He does discipline because you are His.",
+        verses: ["Hebrews 12:6", "Hebrews 12:7", "Hebrews 12:10-11"],
+      },
+      {
+        heading: "His voice still calls you His, and His forgiveness is complete",
+        body:
+          "When you fail, the enemy wants you to doubt the name; God points you back to the deed. 'Who is a God like you, who pardons iniquity... He will again have compassion on us. He will tread our iniquities under foot.' And if you sin, John reminds you: we have an advocate with the Father, Jesus Christ the righteous, the atoning sacrifice for our sins. And because Jesus was tempted in every way like us, yet without sin, we can draw near to the throne of grace and find mercy in time of need. You are not the one who holds your place in His family; He is.",
+        verses: ["Micah 7:18-19", "1 John 2:1-2", "Romans 8:16-17", "Hebrews 4:15-16"],
+      },
+    ],
+    keyVerses: ["1 John 3:1", "Romans 8:15", "Luke 15:20", "Hebrews 12:6", "Micah 7:19"],
+    raises: ["does-god-use-our-failures"],
+    followsFrom: ["who-is-the-father", "does-god-use-our-failures"],
+    related: ["who-is-the-father", "does-god-use-our-failures", "what-happens-when-i-sin", "can-i-lose-my-salvation"],
+    planned: ["How does God discipline His children?"],
+    order: 21,
   },
 ];
