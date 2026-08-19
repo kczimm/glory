@@ -2538,10 +2538,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Hebrews 10:24-25", "Ephesians 4:15-16", "Acts 2:42", "1 Corinthians 12:27"],
-    raises: ["what-is-baptism", "what-is-the-lords-supper"],
+    raises: ["what-is-baptism", "what-is-the-lords-supper", "what-is-a-healthy-church"],
     followsFrom: [],
     related: ["what-should-i-do-now-that-im-saved"],
-    planned: ["What does a healthy church look like?"],
+    planned: ["What is church discipline?"],
     order: 37,
   },
 
@@ -5228,5 +5228,91 @@ export const questions: Question[] = [
     related: ["how-should-i-read-the-bible", "why-do-bible-translations-differ", "can-i-trust-the-bible", "what-the-new-life-looks-like"],
     planned: ["How can I understand hard passages in the Bible?"],
     order: 38,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Church (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "what-is-a-healthy-church",
+    question: "What does a healthy church look like?",
+    category: "church",
+    summary:
+      "A healthy church is not a perfect church; it is one that keeps the apostolic marks: faithful teaching of the word, the gospel at its center, love among its members as a real body, prayer and the Table practiced together, and care that reaches both inward and outward. It grows as every part does its work under Christ the head.",
+    passages: [
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "The marks of the first church",
+        lookFor: "They devoted themselves to the apostles' teaching, fellowship, the breaking of bread, and prayer; and the Lord added to them daily.",
+        focus: "42-47",
+      },
+      {
+        book: "Ephesians",
+        chapter: 4,
+        title: "Growing up into Christ the head",
+        lookFor: "The church is a body being built up in love, as each part works so that it grows into Christ.",
+        focus: "1-16",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 12,
+        title: "One body, many members",
+        lookFor: "The church is not an audience but a body: every member has a place, and none is unnecessary.",
+        focus: "12-27",
+      },
+      {
+        book: "Acts",
+        chapter: 20,
+        title: "Guard the flock",
+        lookFor: "Paul entrusts the church to elders who are to shepherd the flock God purchased with His own blood.",
+        focus: "17-32",
+      },
+      {
+        book: "Revelation",
+        chapter: 2,
+        title: "What Christ commends",
+        lookFor: "Christ's own words to a church: your deeds, your labor, your endurance, and this, that you have not grown weary.",
+        focus: "1-7",
+      },
+    ],
+    points: [
+      {
+        heading: "It is a word-and-grace community",
+        body:
+          "The first church kept four clear marks: 'the apostles' teaching and fellowship, in the breaking of bread, and prayer.' Paul entrusted the elders to God 'and to the word of his grace, which is able to build up,' and he told a young pastor to preach the word in season and out of season. A healthy church is built on the teaching of Scripture and on the gospel of grace; when the word is faithful, the church has a spine.",
+        verses: ["Acts 2:42", "Acts 20:32", "2 Timothy 4:2", "2 Timothy 3:16"],
+      },
+      {
+        heading: "It is a body, not a crowd",
+        body:
+          "Paul is blunt: 'Now you are the body of Christ, and members individually.' When one member suffers, all suffer with it; when one is honored, all rejoice. Christ gave shepherds and teachers to the church so that the whole body, fitted and knit together, grows up into Him who is the head. A healthy church is not a room of spectators; it is a working body in which every member has a place.",
+        verses: ["1 Corinthians 12:12", "1 Corinthians 12:26", "1 Corinthians 12:27", "Ephesians 4:11-12", "Ephesians 4:15-16"],
+      },
+      {
+        heading: "Love is its defining mark",
+        body:
+          "Jesus gave one sign by which His disciples would be known: 'By this everyone will know that you are my disciples, if you have love for one another.' Paul names what that love looks like in the church, bearing with one another and forgiving as Christ forgave. And the greatest of the three enduring things, Paul insists, is love. Programs may come and go, but a church that loves is unmistakably Christ's.",
+        verses: ["John 13:34-35", "Colossians 3:12-14", "1 Corinthians 13:13"],
+      },
+      {
+        heading: "It gathers to practice the means of grace",
+        body:
+          "Healthy churches keep gathering. The first church broke bread and prayed together, praising God, and 'the Lord added to the assembly day by day those who were being saved.' Hebrews urges us not to forsake meeting together but to stir one another to love and good works. And Paul pictures the word of Christ dwelling richly in the assembly, teaching and admonishing with song. The gathered life matters.",
+        verses: ["Acts 2:46-47", "Hebrews 10:24-25", "Colossians 3:16"],
+      },
+      {
+        heading: "It shepherds the flock and reaches out",
+        body:
+          "Paul's charge is weighty: elders are to shepherd the flock of God, the assembly 'which he purchased with his own blood.' And the church's mission is outward as well as inward: Jesus sent His disciples to make disciples of all nations, baptizing and teaching all that He commanded. A healthy church cares for its own and does not forget the world; it guards the sheep and goes to the lost.",
+        verses: ["Acts 20:28", "1 Peter 5:2", "Matthew 28:19-20"],
+      },
+    ],
+    keyVerses: ["Acts 2:42", "1 Corinthians 12:27", "John 13:35", "Hebrews 10:24-25", "Ephesians 4:15-16"],
+    raises: ["what-is-baptism", "what-is-the-lords-supper"],
+    followsFrom: ["why-do-i-need-the-church"],
+    related: ["why-do-i-need-the-church", "what-should-i-do-now-that-im-saved", "what-the-new-life-looks-like"],
+    planned: ["What does a church need from its leaders?"],
+    order: 40,
   },
 ];
