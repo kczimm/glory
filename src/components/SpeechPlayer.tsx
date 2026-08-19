@@ -50,55 +50,63 @@ export default function SpeechPlayer() {
           style={{ width: `${pct}%` }}
         />
       </div>
-      <div className="mx-auto flex max-w-3xl items-center gap-1.5 px-4 py-2.5 sm:gap-2">
-        <div className="min-w-0 flex-1">
-          <p className="truncate font-display text-[14px] font-medium leading-tight text-ink">
-            {item.label}
-          </p>
-          <p className="text-[11px] leading-tight text-ink-faint">
-            {speech.index + 1} of {speech.queue.length}
-            {!playing ? ", paused" : ""}
-          </p>
-        </div>
-        <button type="button" onClick={prevItem} aria-label="Previous verse" className={ctl}>
-          <PrevIcon />
-        </button>
-        <button
-          type="button"
-          onClick={() => (playing ? pause() : resume())}
-          aria-label={playing ? "Pause" : "Resume"}
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold text-parchment shadow-sm transition-colors hover:bg-gold-deep"
-        >
-          {playing ? <PauseIcon size={15} /> : <PlayIcon size={15} />}
-        </button>
-        <button type="button" onClick={nextItem} aria-label="Next verse" className={ctl}>
-          <NextIcon />
-        </button>
-        <button type="button" onClick={stop} aria-label="Stop reading" className={ctl}>
-          <StopIcon size={13} />
-        </button>
-        <button
-          type="button"
-          onClick={cycleRate}
-          aria-label="Reading speed"
-          className="shrink-0 rounded-full border border-line bg-white px-2.5 py-1 text-[11px] font-semibold text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
-        >
-          {rateLabel}
-        </button>
-        {speech.voices.length > 1 && (
-          <select
-            value={speech.voiceURI ?? ""}
-            onChange={(e) => setVoice(e.target.value)}
-            aria-label="Voice"
-            className="hidden max-w-[150px] shrink-0 rounded-full border border-line bg-white px-2 py-1 text-[11px] text-ink-soft sm:block"
+      <div className="mx-auto max-w-3xl px-4 py-2.5">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <div className="min-w-0 flex-1">
+            <p className="truncate font-display text-[14px] font-medium leading-tight text-ink">
+              {item.label}
+            </p>
+            <p className="text-[11px] leading-tight text-ink-faint">
+              {speech.index + 1} of {speech.queue.length}
+              {!playing ? ", paused" : ""}
+            </p>
+          </div>
+          <button type="button" onClick={prevItem} aria-label="Previous verse" className={ctl}>
+            <PrevIcon />
+          </button>
+          <button
+            type="button"
+            onClick={() => (playing ? pause() : resume())}
+            aria-label={playing ? "Pause" : "Resume"}
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold text-parchment shadow-sm transition-colors hover:bg-gold-deep"
           >
-            {speech.voices.map((v) => (
-              <option key={v.uri} value={v.uri}>
-                {v.name}
-              </option>
-            ))}
-          </select>
-        )}
+            {playing ? <PauseIcon size={15} /> : <PlayIcon size={15} />}
+          </button>
+          <button type="button" onClick={nextItem} aria-label="Next verse" className={ctl}>
+            <NextIcon />
+          </button>
+          <button type="button" onClick={stop} aria-label="Stop reading" className={ctl}>
+            <StopIcon size={13} />
+          </button>
+        </div>
+        <div className="mt-2 flex items-center gap-2">
+          {speech.voices.length > 1 && (
+            <>
+              <span className="shrink-0 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-ink-faint">
+                Voice
+              </span>
+              <select
+                value={speech.voiceURI ?? ""}
+                onChange={(e) => setVoice(e.target.value)}
+                className="min-w-0 flex-1 rounded-full border border-line bg-white px-3 py-1.5 text-[12px] text-ink-soft sm:max-w-xs"
+              >
+                {speech.voices.map((v) => (
+                  <option key={v.uri} value={v.uri}>
+                    {v.name}
+                  </option>
+                ))}
+              </select>
+            </>
+          )}
+          <button
+            type="button"
+            onClick={cycleRate}
+            aria-label="Reading speed"
+            className="ml-auto shrink-0 rounded-full border border-line bg-white px-2.5 py-1 text-[11px] font-semibold text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
+          >
+            {rateLabel}
+          </button>
+        </div>
       </div>
     </div>
   );

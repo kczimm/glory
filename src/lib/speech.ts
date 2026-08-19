@@ -65,16 +65,26 @@ const CHUNK_MAX = 160;
 
 /** Voices known to read Scripture well; the first one on the device wins. */
 const PREFERRED_VOICES = [
-  "Microsoft Aria Online (Natural) - English (United States)",
-  "Google US English",
-  "Samantha",
-  "Ava",
+  // iOS 17+ natural English voices (most pleasant on iPhone/iPad)
+  "Aaron",
   "Allison",
+  "Ava",
+  "Fred",
+  "Nicky",
+  "Samantha",
+  "Susan",
+  "Zoe",
+  // Android / Chrome
+  "Google US English",
+  "Google UK English Female",
+  // Windows / Edge
+  "Microsoft Aria Online (Natural) - English (United States)",
+  "Microsoft Jenny Online (Natural) - English (United States)",
+  "Microsoft Zira - English (United States)",
+  // macOS
+  "Alex",
   "Karen",
   "Daniel",
-  "Microsoft Jenny Online (Natural) - English (United States)",
-  "Google UK English Female",
-  "Microsoft Zira - English (United States)",
 ];
 
 const INITIAL: SpeechState = {
