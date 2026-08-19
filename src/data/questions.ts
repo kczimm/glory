@@ -752,10 +752,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 5:18", "John 10:30", "Hebrews 1:3", "John 5:21"],
-    raises: ["is-jesus-really-god", "why-is-jesus-both-son-of-god-and-son-of-man"],
+    raises: ["is-jesus-really-god", "why-is-jesus-both-son-of-god-and-son-of-man", "what-does-it-mean-that-jesus-is-the-son-of-david"],
     followsFrom: ["who-is-jesus"],
     related: ["who-is-the-holy-spirit"],
-    planned: ["What does it mean that Jesus is the Son of David?"],
+    planned: ["What does it mean that Jesus is the Lion of Judah?"],
     order: 10,
   },
 
@@ -6831,5 +6831,87 @@ export const questions: Question[] = [
     related: ["did-jesus-rise-from-the-dead", "is-it-okay-to-doubt", "what-is-faith", "where-is-jesus-now"],
     planned: ["Why did Jesus appear only to certain people after His resurrection?"],
     order: 24,
+  },
+
+  {
+    slug: "what-does-it-mean-that-jesus-is-the-son-of-david",
+    question: "What does it mean that Jesus is the Son of David?",
+    category: "jesus-christ",
+    summary:
+      "Son of David is the title of the promised Messiah: the King God promised to David, whose throne would be established forever. Jesus is that King by descent, born of David's line, and He fulfills the Davidic covenant. Yet He is more than David's son, as Jesus Himself showed: He is also David's Lord. As Son of David, Jesus is our promised, merciful, never-ending King.",
+    passages: [
+      {
+        book: "2 Samuel",
+        chapter: 7,
+        title: "The promise to David",
+        lookFor: "God promises David that his offspring will have an everlasting kingdom and an eternal throne: the covenant of the King to come.",
+        focus: "1-17",
+      },
+      {
+        book: "Psalm",
+        chapter: 110,
+        title: "David's Lord",
+        lookFor: "Yahweh says to my Lord, sit at my right hand: the oracle Jesus used to show the Christ is David's son and David's Lord.",
+      },
+      {
+        book: "Matthew",
+        chapter: 22,
+        title: "Whose son is the Christ?",
+        lookFor: "Jesus asks the question that points beyond a human line: if David calls the Messiah Lord, how is he his son?",
+        focus: "41-46",
+      },
+      {
+        book: "Luke",
+        chapter: 18,
+        title: "Son of David, have mercy on me",
+        lookFor: "The blind man greets Jesus as Son of David and receives sight: the Messiah-King comes with mercy and healing.",
+        focus: "35-43",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "God made him both Lord and Christ",
+        lookFor: "Peter links David's promise to the risen Jesus: David's throne fulfilled, and the risen Christ made both Lord and Christ.",
+        focus: "29-36",
+      },
+    ],
+    points: [
+      {
+        heading: "God promised David a King whose throne would never end",
+        body:
+          "Through Nathan, God promised David: 'I will set up your seed after you... and I will establish his kingdom,' and 'I will establish the throne of his kingdom forever.' The angel told Mary that the child would be given 'the throne of his father David' and that 'of his kingdom there will be no end,' and Jeremiah looked for the day when God would raise to David a righteous Branch who would reign as king. This is the promise Jesus came to fulfill.",
+        verses: ["2 Samuel 7:12", "2 Samuel 7:13", "2 Samuel 7:16", "Luke 1:32", "Luke 1:33", "Jeremiah 23:5"],
+      },
+      {
+        heading: "Jesus is David's son by descent",
+        body:
+          "Matthew opens with the claim of the royal line: 'The book of the genealogy of Jesus Christ, the son of David, the son of Abraham.' Paul says Christ was born 'of the seed of David according to the flesh,' and Joseph was of the house and family of David, so Jesus, born in Bethlehem, the city of David, was the promised descendant of the king. The title rests on real ancestry.",
+        verses: ["Matthew 1:1", "Romans 1:3", "Luke 2:4"],
+      },
+      {
+        heading: "The Son of David comes with mercy and healing",
+        body:
+          "The Gospels show people crying to this King in their need: the blind beggar by the road cried, 'Jesus, you son of David, have mercy on me,' and Jesus gave him back his sight. The Messiah-King does not come to rule from a distance; He comes near to the broken, showing mercy and healing, and His kingdom is made of such rescue.",
+        verses: ["Luke 18:38", "Luke 18:40", "Matthew 9:27"],
+      },
+      {
+        heading: "Yet David's son is also David's Lord",
+        body:
+          "Jesus pressed the deeper mystery: 'What do you think of the Christ? Whose son is he?' They said, 'Of David.' Then He asked how David, in the Spirit, calls Him Lord, quoting the psalm: 'The LORD says to my Lord, sit at my right hand.' If the Messiah were only David's son, David would not call Him Lord. Jesus is the son of David by birth and the Son of God by nature, the root and the offspring of David, David's son and David's Lord.",
+        verses: ["Matthew 22:42", "Matthew 22:43", "Matthew 22:45", "Psalm 110:1", "Acts 2:34", "Revelation 22:16"],
+      },
+      {
+        heading: "So we greet Him as our everlasting King",
+        body:
+          "Peter's Pentecost sermon brings the promise home: David's throne is fulfilled in the risen Jesus, whom 'God has made both Lord and Christ,' 'this Jesus whom you crucified.' Jesus, the Son of David, is the King who was raised from the dead and declared the Son of God in power. His is a kingdom that will not pass away, and to follow Him is to belong to a King whose throne lasts forever.",
+        verses: ["Acts 2:34", "Acts 2:36", "2 Samuel 7:16", "Romans 1:3-4", "Luke 1:33"],
+      },
+    ],
+    keyVerses: ["2 Samuel 7:12-13", "Psalm 110:1", "Matthew 22:42-45", "Romans 1:3", "Luke 18:38"],
+    raises: ["who-is-jesus", "why-is-jesus-both-son-of-god-and-son-of-man"],
+    followsFrom: ["what-does-it-mean-that-jesus-is-the-son-of-god", "who-is-jesus"],
+    related: ["what-does-it-mean-that-jesus-is-the-son-of-god", "who-is-jesus", "why-did-god-become-a-man"],
+    planned: ["What does it mean that Jesus is our King?"],
+    order: 25,
   },
 ];
