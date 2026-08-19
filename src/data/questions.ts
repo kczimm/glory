@@ -223,10 +223,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 28:19", "John 14:16-17", "2 Corinthians 13:14", "Hebrews 1:3"],
-    raises: ["is-jesus-really-god", "who-is-the-father"],
+    raises: ["is-jesus-really-god", "who-is-the-father", "can-we-understand-the-trinity"],
     followsFrom: ["is-the-holy-spirit-god", "is-jesus-really-god"],
     related: ["who-is-the-holy-spirit", "who-is-the-father"],
-    planned: ["Can we really understand the Trinity?"],
+    planned: ["How do the Persons of the Trinity relate to one another?"],
     order: 3,
   },
 
@@ -3217,5 +3217,88 @@ export const questions: Question[] = [
     related: ["who-is-the-holy-spirit", "is-the-holy-spirit-god", "why-jesus-calls-the-spirit-another-helper"],
     planned: ["Why did the Old Testament Spirit come and go?"],
     order: 17,
+  },
+
+  {
+    slug: "can-we-understand-the-trinity",
+    question: "Can we really understand the Trinity?",
+    category: "holy-spirit",
+    summary:
+      "Not exhaustively, no; but truly, yes. The Trinity is a revealed mystery, not a puzzle to be solved: God has shown us who He is, and He invites us to know Him. We can know the triune God truly, the way a child knows a father, without comprehending Him fully, the way no one can fathom the depths of God.",
+    passages: [
+      {
+        book: "Deuteronomy",
+        chapter: 29,
+        title: "The secret things and the revealed things",
+        lookFor: "God keeps His secrets, and gives us what He reveals: enough to know and obey Him.",
+        focus: "29",
+      },
+      {
+        book: "Job",
+        chapter: 11,
+        title: "Can you fathom God?",
+        lookFor: "Zophar's question is a good one even if his application was wrong: God is beyond our measures.",
+        focus: "7-9",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 2,
+        title: "The Spirit reveals the deep things of God",
+        lookFor: "We know God's depths because His Spirit has searched them and revealed them to us.",
+        focus: "6-16",
+      },
+      {
+        book: "Isaiah",
+        chapter: 55,
+        title: "Higher than the heavens",
+        lookFor: "God's thoughts and ways tower over ours, and He calls us to come and listen.",
+        focus: "8-11",
+      },
+      {
+        book: "John",
+        chapter: 17,
+        title: "Jesus prays that we may know",
+        lookFor: "Eternal life is knowing the Father and the Son, and Jesus prays for us to enter that love.",
+        focus: "20-26",
+      },
+    ],
+    points: [
+      {
+        heading: "God reveals what He wants us to know",
+        body:
+          "Moses drew the line honestly: 'The secret things belong to Yahweh our God; but the things that are revealed belong to us and to our children forever, that we may do all the words of this law.' God has not left us guessing. He spoke through the prophets, and in these last days He has spoken to us by His Son, inviting us to glory in the one thing that matters: knowing Him.",
+        verses: ["Deuteronomy 29:29", "Hebrews 1:1-2", "Jeremiah 9:24"],
+      },
+      {
+        heading: "The Trinity is received, not reasoned into existence",
+        body:
+          "No one sat down and invented the Trinity. The church confessed it because Scripture kept saying it: the Father and the Son and the Spirit all present at Jesus' baptism, all at work in redemption, all joined in one name at the Great Commission. We know it the way we know anything about God: because He showed us.",
+        verses: ["Matthew 3:16-17", "Matthew 28:19", "2 Corinthians 13:14"],
+      },
+      {
+        heading: "We can know God truly without comprehending Him fully",
+        body:
+          "'Can you fathom the mystery of God?' Job is asked; Paul answers, 'How unsearchable are his judgments, and his ways past tracing out!' Yet Jesus says that eternal life is knowing the only true God. Knowing a person is not the same as comprehending a person: a child knows his father truly, and has not yet begun to fathom him. So with God: we know Him truly, truly enough to love and trust and follow, and His greatness is unsearchable.",
+        verses: ["Job 11:7", "Romans 11:33", "John 17:3", "Psalm 145:3"],
+      },
+      {
+        heading: "The whole story of salvation is trinitarian",
+        body:
+          "The Bible does not teach the Trinity as a doctrine to memorize; it lives it. Creation and redemption move on three-fold rhythm: the Father sends the Son, the Son accomplishes the work, the Spirit applies it. We have access to the Father through the Son, in one Spirit; God's love has been poured into our hearts through the Holy Spirit; and the Spirit makes us cry, 'Abba, Father!'",
+        verses: ["John 3:16", "Ephesians 2:18", "Romans 5:5", "Galatians 4:6", "Romans 8:26"],
+      },
+      {
+        heading: "The right response is worship, not frustration",
+        body:
+          "Paul does not end his survey of God's ways with a quiz; he ends in doxology: 'For of him, and through him, and to him, are all things. To him be the glory for ever! Amen.' He prays for us to be strengthened to comprehend the love of Christ, and his prayer ends with glory in the church to all generations. The mystery we cannot exhaust is the mystery we were made to praise.",
+        verses: ["Romans 11:33-36", "Ephesians 3:18-21"],
+      },
+    ],
+    keyVerses: ["Deuteronomy 29:29", "John 17:3", "Romans 11:33", "1 Corinthians 2:10-11", "Isaiah 55:9"],
+    raises: [],
+    followsFrom: ["what-is-the-trinity", "is-the-holy-spirit-god", "is-jesus-really-god"],
+    related: ["what-is-the-trinity", "who-is-the-father"],
+    planned: ["How is the Trinity like a family, and unlike a family?"],
+    order: 18,
   },
 ];
