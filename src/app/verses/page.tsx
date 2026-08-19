@@ -32,10 +32,10 @@ export default function VersesIndex() {
   return (
     <div className="mx-auto max-w-5xl px-5 py-16">
       <header className="mb-10 max-w-2xl">
-        <p className="text-[12px] font-semibold uppercase tracking-[0.3em] text-gold-deep">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-gold-deep sm:text-[12px] sm:tracking-[0.3em]">
           ✦ The Word connected
         </p>
-        <h1 className="mt-4 font-display text-4xl font-medium tracking-tight text-ink sm:text-5xl">
+        <h1 className="mt-4 font-display text-3xl font-medium tracking-tight text-ink sm:text-5xl">
           Scripture opens Scripture
         </h1>
         <p className="mt-4 text-[16px] leading-relaxed text-ink-soft">

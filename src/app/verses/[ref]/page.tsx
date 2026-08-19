@@ -46,14 +46,14 @@ export default async function VersePage({ params }: Props) {
   return (
     <article>
       <header className="border-b border-line bg-gradient-to-b from-cream/70 to-parchment">
-        <div className="mx-auto max-w-3xl px-5 pb-12 pt-12">
+        <div className="mx-auto max-w-3xl px-5 pb-10 pt-8 sm:pb-12 sm:pt-12">
           <Link
             href="/verses"
             className="text-[12px] font-semibold uppercase tracking-[0.2em] text-gold-deep hover:underline"
           >
             ✦ The Word connected
           </Link>
-          <p className="mt-6 font-display text-2xl italic leading-relaxed text-ink sm:text-[28px]">
+          <p className="mt-6 font-display text-[22px] italic leading-relaxed text-ink sm:text-[28px]">
             {text}
           </p>
           <p className="mt-3 text-[14px] font-semibold tracking-wide text-gold-deep">

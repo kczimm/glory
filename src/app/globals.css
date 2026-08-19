@@ -28,6 +28,8 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* guard against any stray horizontal scroll on small screens */
+  overflow-x: clip;
 }
 
 ::selection {
@@ -44,13 +46,18 @@ body {
   border-radius: 4px;
 }
 
-/* drop cap for study point bodies */
+/* drop cap for study point bodies (smaller on mobile) */
 .dropcap::first-letter {
   font-family: var(--font-display);
   font-weight: 600;
   float: left;
-  font-size: 2.9em;
-  line-height: 0.82;
+  font-size: 2.2em;
+  line-height: 0.85;
   padding-right: 0.08em;
   color: var(--color-gold);
+}
+@media (min-width: 640px) {
+  .dropcap::first-letter {
+    font-size: 2.9em;
+  }
 }

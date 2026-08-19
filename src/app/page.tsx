@@ -10,24 +10,24 @@ export default function Home() {
     <div>
       {/* Hero */}
       <section className="border-b border-line bg-gradient-to-b from-cream/80 to-parchment">
-        <div className="mx-auto max-w-5xl px-5 pb-20 pt-16 text-center sm:pt-24">
-          <p className="text-[12px] font-semibold uppercase tracking-[0.3em] text-gold-deep">
+        <div className="mx-auto max-w-5xl px-5 pb-16 pt-12 text-center sm:pb-20 sm:pt-24">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-deep sm:text-[12px] sm:tracking-[0.3em]">
             A question-driven study of the Word
           </p>
-          <h1 className="mx-auto mt-6 max-w-3xl font-display text-5xl font-medium leading-[1.08] tracking-tight text-ink sm:text-6xl">
+          <h1 className="mx-auto mt-5 max-w-3xl font-display text-[2.5rem] font-medium leading-[1.06] tracking-tight text-ink sm:text-6xl">
             Come with a question.
             <br />
             <span className="italic text-gold-deep">Leave with Scripture.</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-[16px] leading-relaxed text-ink-soft">
+          <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-ink-soft sm:mt-6 sm:text-[16px]">
             Ask what you genuinely want to know — who Jesus is, how we come to
             know Him, what the Holy Spirit does. Then read the passages that
             answer it, and let the Word itself raise the next question.
           </p>
-          <div className="mt-10">
+          <div className="mt-8 sm:mt-10">
             <SearchBox />
           </div>
-          <div className="mt-12 flex justify-center">
+          <div className="mt-10 flex justify-center sm:mt-12">
             <VerseCard verse="John 5:39" />
           </div>
         </div>
@@ -60,10 +60,10 @@ export default function Home() {
               <span className="font-display text-2xl italic text-gold">
                 {s.n}.
               </span>
-              <h2 className="mt-1 font-display text-lg font-medium text-ink">
+            <h2 className="mt-1 font-display text-lg font-medium text-ink">
                 {s.t}
               </h2>
-              <p className="mt-2 text-[14px] leading-relaxed text-ink-soft">
+              <p className="mt-2 text-[13.5px] leading-relaxed text-ink-soft sm:text-[14px]">
                 {s.d}
               </p>
             </div>
@@ -78,10 +78,10 @@ export default function Home() {
       <section className="mx-auto max-w-5xl px-5 pb-16">
         <div className="mb-8 flex items-end justify-between">
           <div>
-            <p className="text-[12px] font-semibold uppercase tracking-[0.24em] text-gold-deep">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-deep sm:text-[12px] sm:tracking-[0.24em]">
               Begin a trail
             </p>
-            <h2 className="mt-2 font-display text-3xl font-medium text-ink">
+            <h2 className="mt-2 font-display text-2xl font-medium text-ink sm:text-3xl">
               Where do you want to begin?
             </h2>
           </div>
@@ -134,13 +134,13 @@ export default function Home() {
 
       {/* All questions */}
       <section className="border-t border-line bg-cream/40">
-        <div className="mx-auto max-w-5xl px-5 py-16">
+        <div className="mx-auto max-w-5xl px-5 py-14 sm:py-16">
           <div className="mb-8 flex items-end justify-between">
             <div>
-              <p className="text-[12px] font-semibold uppercase tracking-[0.24em] text-gold-deep">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-deep sm:text-[12px] sm:tracking-[0.24em]">
                 The questions
               </p>
-              <h2 className="mt-2 font-display text-3xl font-medium text-ink">
+              <h2 className="mt-2 font-display text-2xl font-medium text-ink sm:text-3xl">
                 Explore the essentials
               </h2>
             </div>

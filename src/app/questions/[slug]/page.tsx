@@ -47,7 +47,7 @@ export default async function QuestionPage({ params }: Props) {
       <JourneyBreadcrumb key={slug} slug={slug} />
       {/* Header */}
       <header className="border-b border-line bg-gradient-to-b from-cream/70 to-parchment">
-        <div className="mx-auto max-w-3xl px-5 pb-12 pt-12 sm:pt-16">
+        <div className="mx-auto max-w-3xl px-5 pb-10 pt-8 sm:pb-12 sm:pt-16">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[12px]">
             <Link
               href="/questions"
@@ -60,7 +60,7 @@ export default async function QuestionPage({ params }: Props) {
               Trail: {category?.title}
             </span>
           </div>
-          <h1 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-ink sm:text-5xl">
+          <h1 className="mt-5 font-display text-3xl font-medium leading-tight tracking-tight text-ink sm:mt-6 sm:text-5xl">
             {question.question}
           </h1>
           <p className="mt-5 text-[17px] leading-relaxed text-ink-soft">
