@@ -2359,10 +2359,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Psalm 27:14", "Luke 18:1-8", "2 Corinthians 12:9", "Habakkuk 2:3"],
-    raises: ["gods-voice-or-my-own-thoughts"],
+    raises: ["gods-voice-or-my-own-thoughts", "does-god-still-speak-today"],
     followsFrom: ["does-god-hear-my-prayers"],
     related: ["why-does-god-allow-suffering", "is-god-in-control"],
-    planned: ["Does God still speak today?"],
+    planned: ["What should I do when God feels distant?"],
     order: 33,
   },
 
@@ -8463,5 +8463,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["does-god-hear-my-prayers", "how-do-i-pray", "what-does-it-mean-to-pray-in-the-holy-spirit", "why-does-god-seem-silent"],
     planned: ["What does it mean to approach God with boldness?"],
     order: 38,
+  },
+
+  {
+    slug: "does-god-still-speak-today",
+    question: "Does God still speak today?",
+    category: "prayer",
+    summary:
+      "Yes. God has spoken, and God still speaks. He spoke through the prophets and has spoken finally and fully in His Son; He speaks through His word, which is God-breathed; He speaks by the Holy Spirit, who opens the word and guides God's people into truth; and He speaks to the hearts of those who hear His voice and follow. God is not silent today: He speaks in Christ, in Scripture, and by His Spirit.",
+    passages: [
+      {
+        book: "Hebrews",
+        chapter: 1,
+        title: "God has spoken to us by His Son",
+        lookFor: "God spoke through the prophets in the past, and in these last days has spoken to us by His Son.",
+        focus: "1-4",
+      },
+      {
+        book: "2 Timothy",
+        chapter: 3,
+        title: "All Scripture is God-breathed",
+        lookFor: "Every Scripture is breathed out by God, profitable for teaching, so the man of God may be complete.",
+        focus: "14-17",
+      },
+      {
+        book: "John",
+        chapter: 10,
+        title: "My sheep hear my voice",
+        lookFor: "Jesus' people hear His voice and follow; the Shepherd speaks, and His sheep know Him.",
+        focus: "1-30",
+      },
+      {
+        book: "John",
+        chapter: 16,
+        title: "The Spirit guides into all truth",
+        lookFor: "The Spirit of truth will guide you into all truth and glorify Christ, declaring what is His.",
+        focus: "5-15",
+      },
+      {
+        book: "Psalm",
+        chapter: 95,
+        title: "Today, if you hear his voice",
+        lookFor: "God's word is 'today': hear His voice, and do not harden your heart.",
+        focus: "7-8",
+      },
+    ],
+    points: [
+      {
+        heading: "God has spoken, and finally in His Son",
+        body:
+          "The Bible opens the question of whether God still speaks by showing how much He has already said. Hebrews begins, 'God, having in the past spoken to the fathers through the prophets at many times and in various ways, has at the end of these days spoken to us by his Son.' God is not a distant God who has gone quiet; He has spoken through prophets, and He has spoken fully and finally in Christ, and all of it is gathered in the word He has given us.",
+        verses: ["Hebrews 1:1", "Hebrews 1:2", "2 Timothy 3:16"],
+      },
+      {
+        heading: "God still speaks through His word today",
+        body:
+          "The word God has given is not a museum piece; it is living. Paul says all Scripture is 'God-breathed' and profitable for teaching, reproof, correction, and training in righteousness, so that the man of God may be complete. The writer of Hebrews calls the word of God 'living, and active.' Peter calls the prophetic word 'the more sure word of prophecy,' a lamp shining in a dark place. When we read Scripture, the living God speaks to us.",
+        verses: ["2 Timothy 3:16", "2 Timothy 3:17", "Hebrews 4:12", "2 Peter 1:19"],
+      },
+      {
+        heading: "God speaks by His Spirit",
+        body:
+          "The Spirit who inspired the word is the Spirit who brings it home. Jesus promised, 'when he, the Spirit of truth, has come, he will guide you into all truth,' and 'he will glorify me, for he will take from what is mine, and will declare it to you.' Paul speaks of words 'which the Holy Spirit teaches,' and Jesus pictures His people as sheep who hear His voice and follow. The Spirit makes the written word heard in the heart.",
+        verses: ["John 16:13", "John 16:14", "1 Corinthians 2:13", "John 10:27"],
+      },
+      {
+        heading: "God speaks today, and we are to hear",
+        body:
+          "Psalm 95 frames God's speaking as a present address: 'Today, oh that you would hear his voice!' Hear His voice, and do not harden the heart, as at Meribah in the wilderness. The writer of Hebrews applies it directly to the church: 'as the Holy Spirit says, Today if you will hear his voice, don't harden your hearts.' And John writes that God's people hear what the Spirit says to the churches. God's speaking is not only in the past; He speaks now, and the first response is to hear and not to harden the heart.",
+        verses: ["Psalm 95:7", "Psalm 95:8", "Hebrews 3:7", "Hebrews 3:8", "Revelation 2:7"],
+      },
+      {
+        heading: "So we listen to the word God has given",
+        body:
+          "Because God has spoken completely in Christ and in Scripture, we do not wait for new words to be added to the Bible. But we are to listen, and listen well: to study the word He has given, to hear it preached, to test what is claimed in His name by the Scriptures as the Bereans did, to ask for the Spirit to open our eyes, and to obey what we hear. Faithful Christians differ about whether God grants new prophetic words today, but we all agree on this: God has spoken, and His word is sufficient, and by His Spirit He is still speaking to every heart that will hear.",
+        verses: ["2 Timothy 3:16", "2 Timothy 3:17", "Acts 17:11", "John 16:13", "Hebrews 3:7"],
+      },
+    ],
+    keyVerses: ["Hebrews 1:1-2", "2 Timothy 3:16", "John 10:27", "Psalm 95:7-8", "John 16:13"],
+    raises: ["gods-voice-or-my-own-thoughts", "can-i-trust-the-bible", "what-does-it-mean-to-pray-in-the-holy-spirit"],
+    followsFrom: ["why-does-god-seem-silent", "can-i-trust-the-bible"],
+    related: ["why-does-god-seem-silent", "can-i-trust-the-bible", "gods-voice-or-my-own-thoughts", "how-do-i-know-the-spirit-is-leading-me"],
+    planned: ["What does it mean to hear God speak through His word?"],
+    order: 39,
   },
 ];
