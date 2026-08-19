@@ -3008,10 +3008,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Hebrews 1:14", "Psalm 103:20", "Revelation 22:8-9", "Daniel 9:21-22"],
-    raises: [],
+    raises: ["do-believers-have-guardian-angels"],
     followsFrom: [],
     related: ["who-is-satan", "what-is-spiritual-warfare"],
-    planned: ["Do believers have guardian angels?"],
+    planned: ["What do angels look like, and can believers see them?"],
     order: 48,
   },
 
@@ -5986,5 +5986,88 @@ export const questions: Question[] = [
     related: ["who-is-satan", "what-is-spiritual-warfare", "how-do-i-fight-sin", "gods-voice-or-my-own-thoughts"],
     planned: ["Can a Christian be tormented by demons?"],
     order: 50,
+  },
+
+  {
+    slug: "do-believers-have-guardian-angels",
+    question: "Do believers have guardian angels?",
+    category: "unseen-realm",
+    summary:
+      "The Bible does not teach a rigid doctrine of one assigned 'guardian angel' per person, but it does show angels sent by God to guard and serve His people. Scripture speaks of angels who watch over the little ones, minister to those who will inherit salvation, and are deployed by God for our protection. The comfort is not that we each have a personal guardian, but that the God we serve commands His angels to help us, whether or not we ever see them.",
+    passages: [
+      {
+        book: "Psalm",
+        chapter: 91,
+        title: "He will command his angels concerning you",
+        lookFor: "The promise that God puts His angels in charge of those who dwell in His shelter, to guard them in all their ways.",
+        focus: "9-13",
+      },
+      {
+        book: "Hebrews",
+        chapter: 1,
+        title: "Ministering spirits for the heirs of salvation",
+        lookFor: "Angels are sent to serve the people of God: 'sent out to do service for the sake of those who will inherit salvation.'",
+        focus: "13-14",
+      },
+      {
+        book: "Daniel",
+        chapter: 6,
+        title: "The angel shuts the lions' mouths",
+        lookFor: "God sends His angel to protect Daniel in the den, and Daniel testifies to it plainly.",
+        focus: "16-24",
+      },
+      {
+        book: "Acts",
+        chapter: 12,
+        title: "An angel opens the prison",
+        lookFor: "Peter is sleeping in chains, and an angel of the Lord wakes him and leads him out of prison.",
+        focus: "1-19",
+      },
+      {
+        book: "Matthew",
+        chapter: 18,
+        title: "Their angels always see the Father's face",
+        lookFor: "Jesus speaks of little ones whose angels are always before the Father: the strongest 'guardian angel' language in the New Testament.",
+        focus: "1-14",
+      },
+    ],
+    points: [
+      {
+        heading: "Angels are ministering spirits for God's people",
+        body:
+          "Hebrews asks about the angels: 'Aren't they all serving spirits, sent out to do service for the sake of those who will inherit salvation?' And the psalmist says the angel of the Lord encamps around those who fear Him and delivers them. Angels serve God by serving His people; that is their work, and it is for us, even when we cannot see it.",
+        verses: ["Hebrews 1:14", "Psalm 34:7", "Psalm 103:20"],
+      },
+      {
+        heading: "God sends them to guard His people",
+        body:
+          "Again and again in Scripture, angels are sent for protection. Daniel could say, 'My God has sent his angel, and has shut the lions' mouths.' An angel woke Peter and led him out of prison, his chains falling off. Paul was told in a storm by an angel of the God he served that he and all who sailed with him would be safe. This is the consistent pattern: God's care, carried by His holy angels.",
+        verses: ["Daniel 6:22", "Acts 12:7", "Acts 27:23-24", "Psalm 91:11-12"],
+      },
+      {
+        heading: "Jesus speaks of angels watching over the little ones",
+        body:
+          "Jesus gave the closest thing to 'guardian angel' language in all of Scripture: 'See that you don't despise one of these little ones, for I tell you that in heaven their angels always see the face of my Father who is in heaven.' And Psalm 91 promises that God will put His angels in charge of those who take refuge in Him, to guard them in all their ways. The protection is real, and its source is the Father's care.",
+        verses: ["Matthew 18:10", "Psalm 91:11-12"],
+      },
+      {
+        heading: "But angels are servants, not objects of worship",
+        body:
+          "The Bible keeps angels firmly in their place. When John fell down to worship the angel who showed him the revelation, he was told, 'See you don't do it!... Worship God.' Paul also warns against a false humility that worships angels. Angels are mighty, but they are creatures, sent by God and pointing beyond themselves; our trust belongs to God, not to any creature, however glorious.",
+        verses: ["Revelation 22:8-9", "Colossians 2:18", "Psalm 103:20"],
+      },
+      {
+        heading: "So we rest in God's care, with or without seeing",
+        body:
+          "We are not promised to see the unseen realm, but we are promised its reality. When Elisha's servant was afraid, Elisha prayed that his eyes would be opened, and he saw the mountain full of horses and chariots of fire. The writer of Hebrews even adds that by showing hospitality, some have entertained angels without knowing it. God's care is not limited to what we can perceive: whether He sends angels or simply watches, He is with His people.",
+        verses: ["2 Kings 6:17", "Hebrews 13:2", "Psalm 91:11"],
+      },
+    ],
+    keyVerses: ["Psalm 91:11-12", "Hebrews 1:14", "Matthew 18:10", "Psalm 34:7", "Daniel 6:22"],
+    raises: ["what-are-angels"],
+    followsFrom: ["what-are-angels", "who-is-satan"],
+    related: ["what-are-angels", "who-is-satan", "where-is-jesus-now"],
+    planned: ["What is the difference between angels and the Holy Spirit in guarding us?"],
+    order: 51,
   },
 ];
