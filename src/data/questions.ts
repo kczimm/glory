@@ -2879,10 +2879,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 3:23", "Romans 5:12", "Romans 6:23", "1 John 3:4"],
-    raises: [],
+    raises: ["does-everyone-deserve-gods-judgment"],
     followsFrom: ["what-does-it-mean-to-be-made-in-gods-image"],
     related: ["why-did-jesus-have-to-die", "what-is-repentance", "what-happens-when-i-sin"],
-    planned: ["Does everyone deserve God's judgment?"],
+    planned: ["How does God judge people who never heard of Jesus?"],
     order: 45,
   },
 
@@ -5735,5 +5735,87 @@ export const questions: Question[] = [
     related: ["what-does-it-mean-to-be-made-in-gods-image", "who-is-the-father", "why-do-i-need-the-church", "what-is-the-new-heaven-and-new-earth"],
     planned: ["Why do I still feel lonely?"],
     order: 47,
+  },
+
+  {
+    slug: "does-everyone-deserve-gods-judgment",
+    question: "Does everyone deserve God's judgment?",
+    category: "who-we-are",
+    summary:
+      "In the honest witness of Scripture, yes: all have sinned and fall short of God's glory, the wages of sin is death, and every mouth is silenced before God. No one is righteous on their own, so judgment is not arbitrary but just. Yet this verdict is not the end of the story: it is the very verdict for which Christ died, and there is no condemnation for those who are in Him.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 3,
+        title: "All have sinned",
+        lookFor: "Paul's verdict against the whole world: no one is righteous, all have sinned, and every mouth is silenced before God.",
+        focus: "9-26",
+      },
+      {
+        book: "Psalm",
+        chapter: 14,
+        title: "There is no one who does good",
+        lookFor: "David's bleak assessment of humanity apart from God: they have all turned aside, and no one does good.",
+      },
+      {
+        book: "Isaiah",
+        chapter: 53,
+        title: "All we like sheep have gone astray",
+        lookFor: "The confession of every one of us: each has turned to his own way, and the LORD laid our iniquity on the Servant.",
+        focus: "4-12",
+      },
+      {
+        book: "Revelation",
+        chapter: 20,
+        title: "The judgment and the book of life",
+        lookFor: "The dead stand before the throne and are judged by what is written; whoever is not found in the book of life is cast into the lake of fire.",
+        focus: "11-15",
+      },
+      {
+        book: "John",
+        chapter: 3,
+        title: "Condemned already, or saved through Him",
+        lookFor: "Whoever does not believe is condemned already; whoever believes in the Son is not condemned but has eternal life.",
+        focus: "16-21",
+      },
+    ],
+    points: [
+      {
+        heading: "The diagnosis reaches everyone",
+        body:
+          "Paul is not gentle with us about our condition: 'all have sinned, and fall short of the glory of God.' The psalmist says there is no one who does good, not even one, and Isaiah has us all confess: 'All we like sheep have gone astray. Everyone has turned to his own way.' This is not a few bad people; it is the diagnosis of the whole world.",
+        verses: ["Romans 3:23", "Psalm 14:3", "Isaiah 53:6"],
+      },
+      {
+        heading: "The verdict is just, not arbitrary",
+        body:
+          "God's judgment falls on every mouth and silences it: the whole world is accountable to God, and none has an excuse. David, after his own great sin, said his sin was 'against you, and you only... that you may be proved right when you speak, and justified when you judge.' The judgment that rightly falls on sin is what a holy God must do; it is not cruelty but justice. The wages of sin is death.",
+        verses: ["Romans 3:19", "Romans 1:20", "Psalm 51:4", "Romans 6:23"],
+      },
+      {
+        heading: "No one escapes by comparison",
+        body:
+          "It is tempting to hope we escape judgment because we are not as bad as others. Paul dismantles that: whoever judges another condemns himself, for the same things are practiced. And Jesus said that not everyone who calls Him 'Lord' will enter the kingdom, but the one who does the will of His Father, and to those whom He never knew He will say, 'I never knew you. Depart from me, you who work iniquity.' We are not saved by being better than someone else; none of us is righteous enough on our own.",
+        verses: ["Romans 2:1", "Romans 2:3", "Matthew 7:21", "Matthew 7:23"],
+      },
+      {
+        heading: "The judgment is real, and its end is solemn",
+        body:
+          "Revelation does not soften the outcome: the dead stand before the throne and are judged by what is written in the books, and 'if anyone was not found written in the book of life, he was cast into the lake of fire.' John adds that whoever does not believe 'has been judged already,' and Hebrews that after death comes judgment. These are not words meant to frighten us into denial but to be honest about the stakes.",
+        verses: ["Revelation 20:12", "Revelation 20:15", "John 3:18", "Hebrews 9:27"],
+      },
+      {
+        heading: "And that verdict is what grace answers",
+        body:
+          "The point of the verdict is not despair but the cross. Because we all deserve judgment, God did what we could not: 'God didn't send his Son into the world to judge the world, but that the world should be saved through him.' For those who are in Christ Jesus there is no condemnation: He who knew no sin became sin for us, so that in Him we might become the righteousness of God. And Paul says we are justified freely by His grace, through the redemption that is in Christ Jesus, so that God is both just and the justifier. The judgment is real, and it has been carried by Another for all who trust Him.",
+        verses: ["Romans 8:1", "John 3:16-17", "2 Corinthians 5:21", "Romans 3:24", "Romans 3:26"],
+      },
+    ],
+    keyVerses: ["Romans 3:23", "Romans 6:23", "Romans 3:19", "Psalm 51:4", "Romans 8:1"],
+    raises: ["why-did-jesus-have-to-die", "how-can-i-be-saved", "what-is-justification"],
+    followsFrom: ["what-is-sin", "what-does-it-mean-to-be-made-in-gods-image"],
+    related: ["what-is-sin", "why-did-jesus-have-to-die", "what-happens-when-i-die", "is-god-in-control"],
+    planned: ["What is hell?"],
+    order: 48,
   },
 ];
