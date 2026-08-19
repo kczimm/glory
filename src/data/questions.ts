@@ -1726,10 +1726,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Ephesians 2:8-9", "Romans 3:24", "2 Corinthians 12:9", "Titus 2:11"],
-    raises: ["what-is-justification", "does-grace-mean-live-how-i-want"],
+    raises: ["what-is-justification", "does-grace-mean-live-how-i-want", "what-is-the-difference-between-grace-and-mercy"],
     followsFrom: ["what-is-the-gospel"],
     related: ["what-is-the-gospel", "how-can-i-be-saved"],
-    planned: ["What is the difference between grace and mercy?"],
+    planned: ["What does it mean to grow in grace?"],
     order: 23,
   },
 
@@ -7627,5 +7627,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["what-is-the-gospel", "who-is-jesus", "signs-before-jesus-returns", "what-will-we-do-in-the-new-creation"],
     planned: ["What does it mean to pray 'your kingdom come'?"],
     order: 31,
+  },
+
+  {
+    slug: "what-is-the-difference-between-grace-and-mercy",
+    question: "What is the difference between grace and mercy?",
+    category: "gospel",
+    summary:
+      "Mercy and grace are God's twin compassion, and they are closely related. Mercy withholds what we deserve, the punishment our sin has earned; grace gives what we do not deserve, forgiveness, salvation, and every blessing. Both are rooted in God's love and meet at the cross, where the punishment for sin was carried by Christ and righteousness is freely given. Neither is something we earn, and both change how we live.",
+    passages: [
+      {
+        book: "Ephesians",
+        chapter: 2,
+        title: "Rich in mercy, saved by grace",
+        lookFor: "God, being rich in mercy and full of love, made us alive together with Christ; by grace you have been saved.",
+        focus: "1-10",
+      },
+      {
+        book: "Psalm",
+        chapter: 103,
+        title: "Mercy and forgiveness",
+        lookFor: "The LORD is merciful and gracious, and does not deal with us according to our sins or repay us for our iniquities.",
+        focus: "8-13",
+      },
+      {
+        book: "Romans",
+        chapter: 9,
+        title: "I will have mercy on whom I have mercy",
+        lookFor: "God's mercy is His own to give, rooted in His character, not in anything in us.",
+        focus: "14-26",
+      },
+      {
+        book: "Romans",
+        chapter: 6,
+        title: "The free gift of God",
+        lookFor: "The wages of sin is death, but the free gift of God is eternal life in Christ Jesus.",
+        focus: "20-23",
+      },
+      {
+        book: "Titus",
+        chapter: 3,
+        title: "Saved according to His mercy",
+        lookFor: "He saved us, not by works of righteousness we had done, but according to His mercy.",
+        focus: "4-7",
+      },
+    ],
+    points: [
+      {
+        heading: "Mercy withholds what we deserve",
+        body:
+          "Mercy is God's compassion that does not give us what our sin deserves. The psalmist celebrates it: God 'has not dealt with us according to our sins, nor repaid us for our iniquities,' though He is merciful and gracious. Lamentations sings that His loving kindness does not cease and His compassions never fail, but are new every morning. Mercy is the hand of God not falling on us as it might, judgment withheld because of love.",
+        verses: ["Psalm 103:10", "Psalm 103:8", "Lamentations 3:22", "Lamentations 3:23"],
+      },
+      {
+        heading: "Grace gives what we do not deserve",
+        body:
+          "If mercy holds back the punishment we earned, grace goes further: it gives us the blessing we could never earn. Paul writes, 'by grace you have been saved through faith, and that not of yourselves; it is the gift of God,' not of works. The same chapter contrasts the wages of sin, death, with 'the free gift of God, eternal life in Christ Jesus.' Grace is undeserved favor, lavished on sinners who merit nothing.",
+        verses: ["Ephesians 2:8", "Ephesians 2:9", "Romans 6:23"],
+      },
+      {
+        heading: "They meet together in salvation",
+        body:
+          "Mercy and grace work as one in our salvation. Paul writes of God, 'being rich in mercy, for his great love with which he loved us... made us alive together with Christ (by grace you have been saved).' Titus joins them: he saved us, not by works of righteousness that we ourselves had done, but according to His mercy, through the washing of regeneration and renewal by the Holy Spirit Mercy spares us; grace raises us to new life in Christ. Both are free, both are loving, and both are His.",
+        verses: ["Ephesians 2:4", "Ephesians 2:5", "Titus 3:5"],
+      },
+      {
+        heading: "Both are given on God's own terms",
+        body:
+          "Neither mercy nor grace can be claimed as a right; they are given by God's free determination. Paul cites God's word to Moses: 'I will have mercy on whom I have mercy, and I will have compassion on whom I have compassion.' David, after his great sin, cast himself entirely on God: 'Have mercy on me, God, according to your loving kindness... blot out my transgressions.' We ask for mercy because we cannot demand it, and we receive grace because we cannot earn it.",
+        verses: ["Romans 9:15", "Psalm 51:1"],
+      },
+      {
+        heading: "And both are meant to shape our lives",
+        body:
+          "Those who have received mercy and grace are called to extend them. Jesus says, 'Therefore be merciful, even as your Father is also merciful.' Paul urges us to 'be kind to one another, tender hearted, forgiving each other, just as God also in Christ forgave you.' The mercy we did not deserve makes us slow to exact our pound of flesh from others, and the grace that has saved us makes us gracious. The forgiven become forgivers, and the remembered grace makes us kind.",
+        verses: ["Luke 6:36", "Ephesians 4:32", "Colossians 3:12", "Colossians 3:13"],
+      },
+    ],
+    keyVerses: ["Ephesians 2:8-9", "Psalm 103:10", "Romans 6:23", "Titus 3:5", "Lamentations 3:22-23"],
+    raises: ["what-is-justification", "can-gods-grace-really-cover-my-worst-sins", "does-grace-mean-live-how-i-want"],
+    followsFrom: ["what-is-grace", "what-is-the-gospel"],
+    related: ["what-is-grace", "what-is-justification", "does-grace-mean-live-how-i-want", "can-gods-grace-really-cover-my-worst-sins"],
+    planned: ["How do God's mercy and justice work together?"],
+    order: 32,
   },
 ];
