@@ -828,10 +828,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 3:3", "John 1:12-13", "2 Corinthians 5:17", "1 Peter 1:3"],
-    raises: ["how-do-i-receive-the-holy-spirit", "what-happens-when-i-sin", "born-again-and-baptism", "what-the-new-life-looks-like"],
+    raises: ["how-do-i-receive-the-holy-spirit", "what-happens-when-i-sin", "born-again-and-baptism", "what-the-new-life-looks-like", "what-does-it-mean-to-be-a-child-of-god"],
     followsFrom: ["how-can-i-be-saved", "what-is-faith"],
     related: ["how-can-i-be-saved"],
-    planned: ["What does it mean to be a child of God?"],
+    planned: ["How does being a child of God change how I live?"],
     order: 11,
   },
 
@@ -6913,5 +6913,91 @@ export const questions: Question[] = [
     related: ["what-does-it-mean-that-jesus-is-the-son-of-god", "who-is-jesus", "why-did-god-become-a-man"],
     planned: ["What does it mean that Jesus is our King?"],
     order: 25,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Our Walk with Him (continued: children of God)
+  // ------------------------------------------------------------------
+  {
+    slug: "what-does-it-mean-to-be-a-child-of-god",
+    question: "What does it mean to be a child of God?",
+    category: "our-walk",
+    summary:
+      "To be a child of God is to be brought, by the new birth and by adoption, into the family of God: given the right to be God's child through faith in Christ, sealed with the Spirit of adoption by whom we cry 'Abba, Father,' made heirs with Christ, and called to live as children who resemble their Father. It is the deepest belonging a person can have, and it is permanent.",
+    passages: [
+      {
+        book: "John",
+        chapter: 1,
+        title: "Born of God",
+        lookFor: "To as many as received Him, He gave the right to become children of God: born not of blood or human will, but of God.",
+        focus: "1-18",
+      },
+      {
+        book: "1 John",
+        chapter: 3,
+        title: "See what love the Father has given us",
+        lookFor: "That we should be called children of God; and what we will be has not yet appeared, for we shall be like Him.",
+        focus: "1-10",
+      },
+      {
+        book: "Galatians",
+        chapter: 4,
+        title: "Adoption as sons",
+        lookFor: "God sent His Son to redeem us, that we might receive adoption, and sent the Spirit of His Son into our hearts crying 'Abba, Father.'",
+        focus: "4-7",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "The Spirit of adoption and fellow heirs",
+        lookFor: "Led by the Spirit, crying 'Abba, Father,' witnessed as God's children, heirs of God and joint heirs with Christ.",
+        focus: "12-17",
+      },
+      {
+        book: "Matthew",
+        chapter: 5,
+        title: "Called children of God",
+        lookFor: "In the Beatitudes Jesus names the family likeness: the peacemakers, the pure, and the merciful are called children of God.",
+        focus: "1-16",
+      },
+    ],
+    points: [
+      {
+        heading: "It is a gift of adoption, not a status we earn",
+        body:
+          "Sonship is given, not achieved. John says that to as many as received Christ, He gave the right to become children of God, born not of blood nor human will but of God. Paul says God sent His Son, born of a woman, 'that we might receive the adoption of children.' And John marvels at it: 'See how great a love the Father has bestowed on us, that we should be called children of God.' We do not become God's children by effort; we are given the name.",
+        verses: ["John 1:12", "John 1:13", "Galatians 4:5", "1 John 3:1"],
+      },
+      {
+        heading: "It is sealed by the Spirit of adoption",
+        body:
+          "God does not merely call us His children; He marks us with the Spirit who cries out in our hearts. Paul says you received 'the Spirit of adoption, by whom we cry, Abba, Father,' and that the Spirit Himself witnesses with our spirit that we are children of God. Galatians says the same: 'God sent out the Spirit of his Son into your hearts, crying, Abba, Father.' The Spirit is the evidence and the experience of our sonship.",
+        verses: ["Romans 8:15", "Romans 8:16", "Galatians 4:6"],
+      },
+      {
+        heading: "It makes us heirs with Christ",
+        body:
+          "Being God's child is not only a name; it is an inheritance. Paul writes, 'if children, then heirs; heirs of God, and joint heirs with Christ,' and 'if a son, then an heir of God through Christ.' Whatever belongs to the Father through the Son is shared with all who are in the Son. We are not servants earning a wage but sons and daughters who inherit, and the inheritance is everything that is Christ's.",
+        verses: ["Romans 8:17", "Galatians 4:7"],
+      },
+      {
+        heading: "It shapes our family likeness",
+        body:
+          "Children bear the family resemblance. Jesus says the peacemakers shall be called children of God, and Paul urges us to be imitators of God as beloved children. God's own promise runs through the prophets: 'I will be to you a Father. You will be to me sons and daughters.' To be a child of God is to be called, and to grow, into a life that mirrors the Father's mercy, purity, and love.",
+        verses: ["Matthew 5:9", "Ephesians 5:1", "2 Corinthians 6:18"],
+      },
+      {
+        heading: "It is already true, and still becoming",
+        body:
+          "John holds both together: 'Now we are children of God, and it is not yet revealed what we will be.' We are already, truly, God's children; and what that will finally look like is still coming, for when Christ appears we shall be like Him, for we shall see Him as He is. Sonship is our standing now and our destiny forever, the deepest identity a soul can carry: called, and finally made, children of God.",
+        verses: ["1 John 3:1", "1 John 3:2"],
+      },
+    ],
+    keyVerses: ["John 1:12", "1 John 3:1", "Romans 8:15-16", "Galatians 4:6", "Romans 8:17"],
+    raises: ["spirits-witness-or-my-own-feelings", "still-my-father-when-i-fail"],
+    followsFrom: ["what-does-it-mean-to-be-born-again", "born-again-and-baptism", "who-is-the-father"],
+    related: ["what-does-it-mean-to-be-born-again", "who-is-the-father", "still-my-father-when-i-fail", "spirits-witness-or-my-own-feelings"],
+    planned: ["What does it look like to love God as a Father?"],
+    order: 27,
   },
 ];
