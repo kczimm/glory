@@ -154,10 +154,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 5:3-4", "Matthew 28:19", "1 Corinthians 2:10-11", "Hebrews 9:14"],
-    raises: ["what-is-the-trinity", "how-does-the-spirit-convict-the-world"],
+    raises: ["what-is-the-trinity", "how-does-the-spirit-convict-the-world", "holy-spirit-in-the-old-testament"],
     followsFrom: ["who-is-the-holy-spirit"],
     related: ["is-jesus-really-god"],
-    planned: ["How is the Holy Spirit at work in the Old Testament?"],
+    planned: ["What is the fruit of the Spirit?"],
     order: 2,
   },
 
@@ -3134,5 +3134,88 @@ export const questions: Question[] = [
     related: ["who-is-the-holy-spirit", "is-the-holy-spirit-god", "what-are-spiritual-gifts"],
     planned: ["What is the unpardonable sin?"],
     order: 16,
+  },
+
+  {
+    slug: "holy-spirit-in-the-old-testament",
+    question: "How is the Holy Spirit at work in the Old Testament?",
+    category: "holy-spirit",
+    summary:
+      "The Spirit is not a New Testament arrival: He is present from the very first page of the Bible. In the Old Testament He creates, empowers judges and kings, inspires prophets, and can be grieved; and the prophets pointed to a day when He would be poured out on all flesh and put within God's people.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 1,
+        title: "The Spirit at creation",
+        lookFor: "The Spirit of God is present at the very beginning, hovering over the deep.",
+        focus: "1-3",
+      },
+      {
+        book: "Numbers",
+        chapter: 11,
+        title: "The Spirit on the seventy elders",
+        lookFor: "Moses wishes that all God's people had the Spirit on them: the whole people, not just leaders.",
+        focus: "16-30",
+      },
+      {
+        book: "1 Samuel",
+        chapter: 16,
+        title: "The Spirit comes on David",
+        lookFor: "The anointing of David: the Spirit of Yahweh comes mightily on him from that day forward.",
+        focus: "1-13",
+      },
+      {
+        book: "Ezekiel",
+        chapter: 37,
+        title: "Dry bones and the Spirit's breath",
+        lookFor: "The Spirit is the breath that brings the dead to life, and God promises to put His Spirit within His people.",
+        focus: "1-14",
+      },
+      {
+        book: "Joel",
+        chapter: 2,
+        title: "The promised outpouring",
+        lookFor: "The prophecy Peter quoted at Pentecost: the Spirit poured out on all flesh, on sons and daughters and servants.",
+        focus: "28-32",
+      },
+    ],
+    points: [
+      {
+        heading: "The Spirit is present from the very beginning",
+        body:
+          "The second verse of the Bible shows the Spirit of God hovering over the face of the waters at creation. Job confesses, 'The Spirit of God has made me,' and the psalm praises God who sends out His Spirit to renew the face of the ground. The Spirit is no afterthought; He is woven into the world from the start.",
+        verses: ["Genesis 1:2", "Job 33:4", "Psalm 104:30"],
+      },
+      {
+        heading: "He empowers God's servants for God's work",
+        body:
+          "The Spirit came on judges like Othniel and Gideon to deliver Israel. He came mightily on Saul and on David at their anointing. He filled Bezalel with wisdom and skill for the tabernacle, and He filled prophets like Micah with power to declare the word of God. The work of God has always been the work of the Spirit.",
+        verses: ["Judges 3:10", "Judges 6:34", "1 Samuel 10:6", "1 Samuel 16:13", "Exodus 31:3", "Micah 3:8", "2 Peter 1:21"],
+      },
+      {
+        heading: "He could be grieved, and even depart",
+        body:
+          "The Spirit was not an impersonal blessing to be stored: He was a Person who could be sinned against. David, after his great fall, pleaded with God not to take His holy Spirit from him. Isaiah tells how God's people rebelled and grieved His holy Spirit, and Samson discovered that the Lord could depart from him. The Spirit's presence was real, and losing it was a real tragedy.",
+        verses: ["Psalm 51:11", "Isaiah 63:10", "Judges 16:20"],
+      },
+      {
+        heading: "The prophets looked forward to a far greater gift",
+        body:
+          "Moses could only wish for a day when all God's people would have the Spirit. Joel saw it coming: a pouring out on all flesh, on sons and daughters and servants alike. Ezekiel promised a new heart and God's own Spirit put within His people, causing them to walk in His statutes, and breath filling dry bones with life. The Old Testament ends leaning forward, waiting.",
+        verses: ["Numbers 11:29", "Joel 2:28-29", "Ezekiel 36:26-27", "Ezekiel 37:14"],
+      },
+      {
+        heading: "With them then, in them now",
+        body:
+          "Jesus Himself marked the change: He told the disciples the Spirit 'lives with you, and will be in you,' and John explains that the Spirit was not yet given because Jesus was not yet glorified. The Old Testament knew the Spirit with God's people, upon leaders and prophets; Pentecost began the age when the Spirit would be poured out on all flesh and dwell within every believer.",
+        verses: ["John 14:17", "John 7:39", "Acts 2:16-18"],
+      },
+    ],
+    keyVerses: ["Genesis 1:2", "Psalm 51:11", "Joel 2:28", "Ezekiel 36:26-27", "2 Peter 1:21"],
+    raises: ["why-jesus-calls-the-spirit-another-helper", "how-do-i-receive-the-holy-spirit"],
+    followsFrom: ["is-the-holy-spirit-god"],
+    related: ["who-is-the-holy-spirit", "is-the-holy-spirit-god", "why-jesus-calls-the-spirit-another-helper"],
+    planned: ["Why did the Old Testament Spirit come and go?"],
+    order: 17,
   },
 ];
