@@ -2451,10 +2451,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Acts 17:11", "Luke 24:27", "2 Timothy 2:15", "James 1:22"],
-    raises: ["daily-habit-of-reading-the-bible"],
+    raises: ["daily-habit-of-reading-the-bible", "what-does-it-mean-to-meditate-on-scripture"],
     followsFrom: ["can-i-trust-the-bible"],
     related: ["can-i-trust-the-bible", "what-should-i-do-now-that-im-saved"],
-    planned: ["What does it mean to meditate on Scripture?"],
+    planned: ["What is the difference between reading the Bible and studying it?"],
     order: 35,
   },
 
@@ -5194,7 +5194,7 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       {
         heading: "Reading grows from delight, not from duty alone",
         body:
-          "The blessed man does not merely schedule the word; he delights in it, meditating on God's law day and night like a tree planted by streams of water. Psalm 119 is a love song to the word: the psalmist hides God's word in his heart so that he might not sin against Him, and calls it a lamp to his feet and a light to his path. A habit rooted in delight lasts; one kept only by guilt does not.",
+          "The blessed man does not merely schedule the word; he delights in it, meditating on God's law day and night like a tree planted by the streams of water. Psalm 119 is a love song to the word: the psalmist hides God's word in his heart so that he might not sin against Him, and calls it a lamp to his feet and a light to his path. A habit rooted in delight lasts; one kept only by guilt does not.",
         verses: ["Psalm 1:2", "Psalm 119:11", "Psalm 119:105"],
       },
       {
@@ -8632,5 +8632,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["can-i-trust-the-bible", "why-do-bible-translations-differ", "is-the-whole-bible-about-jesus", "how-should-i-read-the-bible"],
     planned: ["What does it mean that the Bible is both human and divine?"],
     order: 39,
+  },
+
+  {
+    slug: "what-does-it-mean-to-meditate-on-scripture",
+    question: "What does it mean to meditate on Scripture?",
+    category: "word-of-god",
+    summary:
+      "Biblical meditation is not emptying the mind but filling it: a thoughtful, prayerful dwelling on the word of God, chewing it over until it sinks from the head into the heart and shapes the life. The psalmist delights in the law and meditates on it day and night, and the blessed man is 'like a tree planted by the streams of water.' Meditation is how the word we read becomes the word we live.",
+    passages: [
+      {
+        book: "Psalm",
+        chapter: 1,
+        title: "Meditates on the law day and night",
+        lookFor: "The blessed man delights in God's law and meditates on it day and night, like a tree planted by the streams of water.",
+        focus: "1-3",
+      },
+      {
+        book: "Psalm",
+        chapter: 119,
+        title: "I will meditate on your precepts",
+        lookFor: "A psalm of heartfelt love for God's word: meditating on His precepts, statutes, and wonders.",
+        focus: "15-48",
+      },
+      {
+        book: "Joshua",
+        chapter: 1,
+        title: "Meditate on it day and night, so you do it",
+        lookFor: "God tells Joshua to let the book not depart from his mouth, meditating on it day and night, that he may be careful to do all that is written.",
+        focus: "1-9",
+      },
+      {
+        book: "1 Timothy",
+        chapter: 4,
+        title: "Be diligent in these things; give yourself wholly to them",
+        lookFor: "Paul urges Timothy to devote himself to the reading, teaching, and meditating on the word, that his progress may be evident.",
+        focus: "11-16",
+      },
+      {
+        book: "Philippians",
+        chapter: 4,
+        title: "Think about these things",
+        lookFor: "Believers are to fill their minds with what is true, honorable, just, pure, lovely, and praiseworthy.",
+        focus: "8-9",
+      },
+    ],
+    points: [
+      {
+        heading: "Meditation is filling the mind, not emptying it",
+        body:
+          "Unlike the world's meditation, biblical meditation is not a blanking of the mind but a deliberate filling of it with the word of God. The psalmist speaks of meditating on God's precepts and considering His ways, delighting in the law and pondering it day and night. Jesus' mother Mary 'kept all these sayings, pondering them in her heart.' It is the slow, thoughtful chewing of Scripture until it saturates the mind and heart.",
+        verses: ["Psalm 119:15", "Psalm 1:2", "Luke 2:19"],
+      },
+      {
+        heading: "It is delight, not mere duty",
+        body:
+          "Meditation grows out of love. The psalmist cries, 'How I love your law! It is my meditation all day,' and 'I reach out my hands for your commandments, which I love. I will meditate on your statutes.' The blessed man's delight in the law is the soil in which his pondering grows, 'like a tree planted by the streams of water.' We do not meditate because we must, but because we treasure the word.",
+        verses: ["Psalm 119:97", "Psalm 119:48", "Psalm 1:2", "Psalm 1:3"],
+      },
+      {
+        heading: "It is the way the word becomes a life",
+        body:
+          "Meditation carries the word from the page into the walk. God told Joshua to let the book not depart from his mouth, meditating on it day and night, 'for then you shall make your way prosperous, and then you shall have good success.' Biblical meditation is aimed at doing: the word is pondered so it can be obeyed. David even links it to life change, praying, 'Open my eyes, that I may see wondrous things out of your law.'",
+        verses: ["Joshua 1:8", "Psalm 119:18", "Psalm 119:11"],
+      },
+      {
+        heading: "It is a skill to be practiced and devoted to",
+        body:
+          "Paul tells Timothy to be devoted to the Scriptures, to 'pay attention to reading, to exhortation, and to teaching,' and to be diligent in these things, giving himself wholly to them, that his progress may be evident to all. Meditation is not a gift only for the spiritually mature; it is a practice to be learned, a discipline of pausing over the word, asking what it says, what it means, and how it changes us.",
+        verses: ["1 Timothy 4:13", "1 Timothy 4:15"],
+      },
+      {
+        heading: "It fills the heart with what is true",
+        body:
+          "A life is shaped by what it dwells on. Paul urges us to think about whatever is true, honorable, just, pure, lovely, and of good report, and then names the result: 'the God of peace will be with you.' The psalmist says the man who meditates on the word is blessed and fruitful, and David's desire to hide the word in his heart was so that he might not sin against God. What we meditate on steadily, we become.",
+        verses: ["Philippians 4:8", "Philippians 4:9", "Psalm 1:3", "Psalm 119:11"],
+      },
+    ],
+    keyVerses: ["Psalm 1:2", "Psalm 119:97", "Joshua 1:8", "Philippians 4:8", "Psalm 119:15"],
+    raises: ["daily-habit-of-reading-the-bible", "gods-voice-or-my-own-thoughts"],
+    followsFrom: ["how-should-i-read-the-bible", "daily-habit-of-reading-the-bible"],
+    related: ["how-should-i-read-the-bible", "daily-habit-of-reading-the-bible", "what-the-new-life-looks-like", "gods-voice-or-my-own-thoughts"],
+    planned: ["What is the difference between reading the Bible and studying it?"],
+    order: 40,
   },
 ];
