@@ -1501,10 +1501,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["John 14:9", "1 John 3:1", "John 3:16", "Matthew 6:9", "Ephesians 1:5"],
-    raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit", "still-my-father-when-i-fail"],
+    raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit", "still-my-father-when-i-fail", "what-does-it-mean-that-god-is-love"],
     followsFrom: ["what-is-the-trinity"],
     related: ["what-is-the-trinity", "who-is-jesus", "why-does-god-allow-suffering", "how-do-i-pray"],
-    planned: ["What does it mean that God is love?"],
+    planned: ["How does God's love differ from human love?"],
     order: 20,
   },
 
@@ -7473,5 +7473,20 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["how-do-i-fight-sin", "where-does-temptation-come-from", "why-does-god-allow-suffering", "is-it-okay-to-doubt"],
     planned: ["How do trials make us more like Christ?"],
     order: 31,
+  },
+
+  {
+    slug: "what-does-it-mean-that-god-is-love",
+    question: "What does it mean that God is love?",
+    category: "god-the-father",
+    summary: "God is love is not a sentimental claim; it is a statement about who God is in Himself. Before anything was created, God was love, for love exists eternally in the relationship of Father, Son, and Holy Spirit. And God's love is shown in action: He loved us and sent His Son as the atoning sacrifice for our sins, while we were still sinners and enemies. Because God is love, His love is holy, self-giving, steadfast, and made known to us in Christ.",
+    passages: [{ book: "1 John", chapter: 4, title: "God is love", lookFor: "He who does not love does not know God, for God is love; and His love is shown in sending His Son as the atoning sacrifice.", focus: "7-21" }, { book: "John", chapter: 3, title: "God so loved the world", lookFor: "God gave His one and only Son, that whoever believes in Him should not perish but have eternal life.", focus: "16-21" }, { book: "Romans", chapter: 5, title: "God showed His love while we were sinners", lookFor: "Christ died for the ungodly; while we were still sinners and enemies, we were reconciled by His death.", focus: "6-11" }, { book: "John", chapter: 15, title: "Abide in my love", lookFor: "As the Father has loved me, I have also loved you; abide in my love, and love one another as I have loved you.", focus: "9-17" }, { book: "Jeremiah", chapter: 31, title: "An everlasting love", lookFor: "I have loved you with an everlasting love; therefore with loving kindness I have drawn you.", focus: "1-3" }],
+    points: [{ heading: "God is love in Himself", body: "John states it twice as a fact of God's own being: God is love. This is not first about how God treats us; it is who He is. Before creation there was love, because the Father loves the Son, as Jesus prayed, 'for you loved me before the foundation of the world.' The triune God has always been a God of love, in the eternal fellowship of Father, Son, and Holy Spirit. Love is not something God fell into when we appeared; it is His nature.", verses: ["1 John 4:8", "1 John 4:16", "John 17:24"] }, { heading: "His love is shown in action", body: "John defines God's love by what it did: 'In this is love, not that we loved God, but that he loved us, and sent his Son as the atoning sacrifice for our sins.' And 'God so loved the world, that he gave his one and only Son.' Paul says it plainly: 'God commends his own love toward us, in that while we were yet sinners, Christ died for us.' God's love is not an abstraction; it gave, it sent, it sacrificed.", verses: ["1 John 4:10", "John 3:16", "Romans 5:8"] }, { heading: "It reaches the unlovely and the enemy", body: "The measure of God's love is not how lovable we are but how lost we were. Paul presses the point: 'while we were yet sinners, Christ died for us,' and 'while we were enemies, we were reconciled to God through the death of his Son.' John says plainly, 'not that we loved God, but that he loved us.' God's love did not wait for us to be good; it came to us in our sin and our enmity, and that is the gospel.", verses: ["Romans 5:8", "Romans 5:10", "1 John 4:10"] }, { heading: "It is holy, not sentimental", body: "Because God is love, and because He is holy, His love never makes light of sin. The very verse that says God is love speaks of His Son 'as the atoning sacrifice for our sins.' And the love of God shows itself in us by obedience: 'this is the love of God, that we keep his commandments,' and 'he who doesn't love his brother whom he has seen, how can he love God whom he has not seen?' God's love is a purifying, commanding love, not an indulgence.", verses: ["1 John 4:10", "1 John 5:3", "1 John 4:20"] }, { heading: "It is steadfast and never ends", body: "God's love is not fickle. Through Jeremiah He declares, 'I have loved you with an everlasting love: therefore with loving kindness have I drawn you.' Lamentations sings that His steadfast love never ceases and His mercies are new every morning. And Paul's great conclusion is that neither death nor life nor anything in all creation 'will be able to separate us from the love of God, which is in Christ Jesus our Lord.' The love that is God's very nature is forever.", verses: ["Jeremiah 31:3", "Lamentations 3:22", "Lamentations 3:23", "Romans 8:38-39"] }],
+    keyVerses: ["1 John 4:8", "1 John 4:10", "John 3:16", "Romans 5:8", "Jeremiah 31:3"],
+    raises: ["still-my-father-when-i-fail", "who-is-the-father", "does-god-use-our-failures"],
+    followsFrom: ["who-is-the-father", "what-is-the-trinity"],
+    related: ["who-is-the-father", "still-my-father-when-i-fail", "what-is-the-trinity", "can-gods-grace-really-cover-my-worst-sins"],
+    planned: ["How do I experience the love of God day to day?"],
+    order: 22,
   },
 ];
