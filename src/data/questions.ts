@@ -3285,7 +3285,7 @@ export const questions: Question[] = [
         heading: "The whole story of salvation is trinitarian",
         body:
           "The Bible does not teach the Trinity as a doctrine to memorize; it lives it. Creation and redemption move on three-fold rhythm: the Father sends the Son, the Son accomplishes the work, the Spirit applies it. We have access to the Father through the Son, in one Spirit; God's love has been poured into our hearts through the Holy Spirit; and the Spirit makes us cry, 'Abba, Father!'",
-        verses: ["John 3:16", "Ephesians 2:18", "Romans 5:5", "Galatians 4:6", "Romans 8:26"],
+        verses: ["John 3:16", "Ephesians 2:18", "Romans 5:5", "Galatians 4:6"],
       },
       {
         heading: "The right response is worship, not frustration",
