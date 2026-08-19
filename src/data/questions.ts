@@ -1656,10 +1656,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["1 Corinthians 15:3-4", "John 3:16", "Romans 3:24", "Romans 6:23"],
-    raises: ["what-is-grace", "what-is-justification", "what-is-faith", "what-is-repentance", "how-can-i-be-saved"],
+    raises: ["what-is-grace", "what-is-justification", "what-is-faith", "what-is-repentance", "how-can-i-be-saved", "what-is-the-kingdom-of-god"],
     followsFrom: [],
     related: ["who-is-jesus", "how-can-i-be-saved", "faith-or-works"],
-    planned: ["What is the kingdom of God?"],
+    planned: ["What are the parables of the kingdom about?"],
     order: 22,
   },
 
@@ -7541,5 +7541,91 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["faith-or-works", "what-is-justification", "what-the-new-life-looks-like", "how-do-i-fight-sin"],
     planned: ["What does holiness look like in daily life?"],
     order: 32,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Gospel (continued: kingdom)
+  // ------------------------------------------------------------------
+  {
+    slug: "what-is-the-kingdom-of-god",
+    question: "What is the kingdom of God?",
+    category: "gospel",
+    summary:
+      "The kingdom of God is God's reign: His rule and salvation arriving in Jesus Christ. Jesus announced it as breaking into the world, called people to enter it through repentance and faith, and taught its surprising way of growth, like a seed and leaven, belonging to the poor in spirit. The kingdom is both already present in Christ and not yet complete, and it is the good news at the center of the gospel.",
+    passages: [
+      {
+        book: "Mark",
+        chapter: 1,
+        title: "The kingdom of God is at hand",
+        lookFor: "Jesus begins His preaching with the announcement of the kingdom and the call to repent and believe.",
+        focus: "14-15",
+      },
+      {
+        book: "Matthew",
+        chapter: 5,
+        title: "Blessed are the poor in spirit, for theirs is the kingdom",
+        lookFor: "The Beatitudes name who belongs to the kingdom: the humble, the merciful, the pure, the peacemakers.",
+        focus: "3-12",
+      },
+      {
+        book: "Matthew",
+        chapter: 13,
+        title: "The parables of the kingdom",
+        lookFor: "The kingdom grows like seed and leaven, and is worth everything, like a hidden treasure and a priceless pearl.",
+        focus: "1-46",
+      },
+      {
+        book: "Luke",
+        chapter: 17,
+        title: "The kingdom is among you",
+        lookFor: "Asked when the kingdom would come, Jesus points to His own presence: it is not observed with signs, it is among you.",
+        focus: "20-21",
+      },
+      {
+        book: "Romans",
+        chapter: 14,
+        title: "Righteousness, peace, and joy in the Spirit",
+        lookFor: "The kingdom is not food and drink but the way of Christ's rule: righteousness, peace, and joy in the Holy Spirit.",
+        focus: "17-19",
+      },
+    ],
+    points: [
+      {
+        heading: "The kingdom is God's reign breaking into the world",
+        body:
+          "Jesus opened His ministry with the announcement: 'The time is fulfilled, and the Kingdom of God is at hand! Repent, and believe in the Good News.' The kingdom is not primarily a place; it is God reigning, God's rule arriving in Jesus. When He casts out demons by the finger of God, He says the kingdom of God has come upon men. In Jesus, the reign of God was breaking into history.",
+        verses: ["Mark 1:15", "Luke 11:20", "Luke 17:21"],
+      },
+      {
+        heading: "It is entered through repentance and faith",
+        body:
+          "The call to the kingdom is a call to turn: 'The time is fulfilled, and the Kingdom of God is at hand! Repent, and believe in the Good News.' Jesus taught that blessing belongs to 'the poor in spirit, for theirs is the Kingdom of Heaven.' The kingdom is not stormed by the self-sufficient but received by the humble, who repent of self and trust the King.",
+        verses: ["Mark 1:15", "Matthew 4:17", "Matthew 5:3"],
+      },
+      {
+        heading: "It grows in hidden, surprising ways",
+        body:
+          "Jesus kept comparing the kingdom to things that start small and become great: a mustard seed that grows into a tree, leaven that works through the whole loaf, seed that sprouts while the farmer sleeps. It is 'like a treasure hidden in the field... in his joy, he goes and sells all that he has, and buys that field.' The kingdom comes quietly, and it is worth everything.",
+        verses: ["Matthew 13:31", "Matthew 13:33", "Mark 4:26", "Matthew 13:44", "Matthew 13:45"],
+      },
+      {
+        heading: "It is already here, and not yet complete",
+        body:
+          "The kingdom has come in Christ and is still to come in fullness. Jesus told the disciples the kingdom of God was 'within you,' present in their midst, and He taught them to pray, 'your Kingdom come.' At the end, 'the end comes, when he will deliver up the Kingdom to God... when he will have abolished all rule and all authority and power.' We live between the kingdom's arrival and its completion, receiving it by faith now and awaiting it in glory.",
+        verses: ["Luke 17:21", "Matthew 6:10", "1 Corinthians 15:24", "Luke 12:32"],
+      },
+      {
+        heading: "It is the good news that reshapes a life",
+        body:
+          "The kingdom is not only a future hope; it is a present way of life under Christ's rule. Paul says 'the Kingdom of God is not eating and drinking, but righteousness, peace, and joy in the Holy Spirit.' Jesus calls us to seek first His kingdom and His righteousness, for it is the Father's good pleasure to give it to us. To enter the kingdom is to come under the rule of a gracious King, and to live in the world as citizens of His reign.",
+        verses: ["Romans 14:17", "Matthew 6:33", "Luke 12:32"],
+      },
+    ],
+    keyVerses: ["Mark 1:15", "Matthew 5:3", "Romans 14:17", "Matthew 6:33", "Matthew 13:44"],
+    raises: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again", "signs-before-jesus-returns"],
+    followsFrom: ["what-is-the-gospel", "who-is-jesus"],
+    related: ["what-is-the-gospel", "who-is-jesus", "signs-before-jesus-returns", "what-will-we-do-in-the-new-creation"],
+    planned: ["What does it mean to pray 'your kingdom come'?"],
+    order: 31,
   },
 ];
