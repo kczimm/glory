@@ -447,10 +447,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 1:1", "John 8:58", "Colossians 2:9", "Hebrews 1:3", "John 20:28"],
-    raises: ["why-did-jesus-have-to-die", "what-is-the-trinity"],
+    raises: ["why-did-jesus-have-to-die", "what-is-the-trinity", "does-jesus-sharing-gods-nature-mean-two-gods"],
     followsFrom: ["who-is-jesus"],
     related: ["is-the-holy-spirit-god"],
-    planned: ["Does Jesus sharing God's nature mean there are two Gods?"],
+    planned: ["Why did God become a man?"],
     order: 6,
   },
 
@@ -3383,5 +3383,91 @@ export const questions: Question[] = [
     related: ["who-is-the-holy-spirit", "how-do-i-receive-the-holy-spirit", "what-are-spiritual-gifts"],
     planned: ["How do I grow in sensitivity to the Spirit?"],
     order: 19,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Jesus Christ (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "does-jesus-sharing-gods-nature-mean-two-gods",
+    question: "Does Jesus sharing God's nature mean there are two Gods?",
+    category: "jesus-christ",
+    summary:
+      "No. The Bible never presents Jesus as a second God; it teaches one God who exists as Father, Son, and Holy Spirit. Jesus claimed to be the one God of Israel come in the flesh, and the church confessed His deity precisely because the oneness of God is non-negotiable.",
+    passages: [
+      {
+        book: "John",
+        chapter: 10,
+        title: "I and the Father are one",
+        lookFor: "Jesus claims unity with the Father, and the crowd understands it as a claim to be God.",
+        focus: "22-39",
+      },
+      {
+        book: "John",
+        chapter: 14,
+        title: "Seeing Jesus, seeing the Father",
+        lookFor: "Philip asks to see the Father, and Jesus answers that to see Him is to see the Father.",
+        focus: "1-11",
+      },
+      {
+        book: "Deuteronomy",
+        chapter: 6,
+        title: "The Lord our God, the Lord is one",
+        lookFor: "The confession Israel recited daily, and the anchor for everything else about God.",
+        focus: "4-9",
+      },
+      {
+        book: "Isaiah",
+        chapter: 44,
+        title: "Besides me there is no God",
+        lookFor: "God's own insistence on His uniqueness, again and again through Isaiah.",
+        focus: "6-8",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 8,
+        title: "One God, one Lord",
+        lookFor: "Paul's careful words to a church surrounded by many gods: one Father, one Lord.",
+        focus: "4-6",
+      },
+    ],
+    points: [
+      {
+        heading: "The oneness of God is where the Bible begins",
+        body:
+          "Israel's daily confession was single-minded: 'Hear, Israel, the Lord our God, the Lord is one.' God insists on it through Isaiah: 'I am the first, and I am the last; and besides me there is no God.' Jesus Himself answered the scribes by quoting the same confession. The oneness of God is not up for revision.",
+        verses: ["Deuteronomy 6:4", "Mark 12:29", "Isaiah 44:6", "Isaiah 45:21"],
+      },
+      {
+        heading: "Jesus claimed to be the one God, not another god",
+        body:
+          "'Before Abraham came into existence, I AM,' He said, taking the name from the burning bush. 'I and the Father are one.' The crowd heard exactly what He meant: 'You, being a man, make yourself God.' Jesus did not announce a new deity; He revealed that the one God had come in the flesh.",
+        verses: ["John 8:58", "John 10:30", "John 10:33", "John 10:38"],
+      },
+      {
+        heading: "A second god would be idolatry, and Scripture allows none",
+        body:
+          "'Before me there was no God formed, neither will there be after me.' Paul, writing in a city full of gods, holds the line: 'there is no other God but one,' and yet in the same breath he names the Lord Jesus Christ through whom all things exist. The New Testament never flinches from calling Jesus God, and never lets go of the one God. Both are true at once.",
+        verses: ["Isaiah 43:10", "1 Corinthians 8:4", "1 Corinthians 8:6", "Titus 2:13", "Romans 9:5"],
+      },
+      {
+        heading: "Distinct Persons, one divine nature",
+        body:
+          "John 1 says both at once: the Word was with God, and the Word was God. The Son prays to the Father, and yet He and the Father are one: Jesus told Philip that whoever has seen Him has seen the Father, and said, 'In him all the fullness of the Godhead dwells bodily.' Jesus is not a second god alongside the Father; He is God the Son, distinct in Person, one in nature with the Father and the Spirit.",
+        verses: ["John 1:1-2", "John 17:3", "John 10:30", "John 14:9", "Colossians 2:9"],
+      },
+      {
+        heading: "The Trinity keeps the oneness intact",
+        body:
+          "The church did not invent three gods under a new name. Facing the very question you are asking, it confessed one God in three Persons, and it did so because Scripture forces both truths: the Lord is one, and Jesus is Lord. Jesus even commanded baptism into the single name of the Father, Son, and Holy Spirit. The Trinity is not a compromise with polytheism; it is the shape of the one God's own life.",
+        verses: ["Matthew 28:19", "2 Corinthians 13:14", "John 17:1-3"],
+      },
+    ],
+    keyVerses: ["John 10:30", "John 14:9", "John 1:1", "Isaiah 44:6", "1 Corinthians 8:6"],
+    raises: [],
+    followsFrom: ["is-jesus-really-god", "what-is-the-trinity", "can-we-understand-the-trinity"],
+    related: ["is-jesus-really-god", "what-is-the-trinity", "is-the-holy-spirit-god"],
+    planned: ["What does it mean that God is one?"],
+    order: 18,
   },
 ];
