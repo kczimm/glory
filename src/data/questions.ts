@@ -2317,10 +2317,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["1 John 5:14-15", "John 16:23-24", "Hebrews 4:16", "James 4:3"],
-    raises: ["why-does-god-seem-silent"],
+    raises: ["why-does-god-seem-silent", "what-does-it-mean-to-pray-in-jesus-name"],
     followsFrom: ["how-do-i-pray"],
     related: ["who-is-the-father"],
-    planned: ["What does it mean to pray in Jesus' name?"],
+    planned: ["What does it mean to pray in faith?"],
     order: 32,
   },
 
@@ -8380,5 +8380,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["how-do-i-pray", "what-does-the-lords-prayer-teach", "who-is-the-holy-spirit", "what-is-the-fruit-of-the-spirit"],
     planned: ["What is the role of the Spirit in public worship?"],
     order: 37,
+  },
+
+  {
+    slug: "what-does-it-mean-to-pray-in-jesus-name",
+    question: "What does it mean to pray in Jesus' name?",
+    category: "prayer",
+    summary:
+      "To pray in Jesus' name is not to add a magic phrase to the end of a prayer; it is to pray in the authority and person of Christ, on the basis of what He has done, and in line with His will. Jesus promised that whatever we ask in His name, He will do, that the Father may be glorified in the Son. To pray in Jesus' name is to come to the Father through the Son, asking what honors Him and aligns with His purposes.",
+    passages: [
+      {
+        book: "John",
+        chapter: 14,
+        title: "Whatever you ask in my name",
+        lookFor: "Jesus promises that prayer in His name will be done, so that the Father may be glorified in the Son.",
+        focus: "12-14",
+      },
+      {
+        book: "John",
+        chapter: 16,
+        title: "Ask the Father in my name",
+        lookFor: "Whatever you ask of the Father in my name, He will give you, that your joy may be full.",
+        focus: "23-27",
+      },
+      {
+        book: "1 John",
+        chapter: 5,
+        title: "Ask according to his will",
+        lookFor: "We have confidence that if we ask anything according to His will, He hears us.",
+        focus: "13-15",
+      },
+      {
+        book: "Colossians",
+        chapter: 3,
+        title: "Do all in the name of the Lord Jesus",
+        lookFor: "Whatever you do, in word or deed, do all in the name of the Lord Jesus, with thanksgiving.",
+        focus: "15-17",
+      },
+      {
+        book: "Acts",
+        chapter: 4,
+        title: "No other name",
+        lookFor: "Salvation is in no other name, and the church prays to God in the name of His holy Servant Jesus for boldness.",
+        focus: "7-12",
+      },
+    ],
+    points: [
+      {
+        heading: "Praying in Jesus' name is praying on His authority",
+        body:
+          "To ask in Jesus' name is not to append His name as a spell but to come to the Father through Him, on the ground of who He is and what He has done. Jesus said, 'Whatever you will ask in my name, that will I do, that the Father may be glorified in the Son.' Paul speaks of our access to the Father through Christ in one Spirit, and the promise is that whatever we ask of the Father in Jesus' name, He will give. The name of Jesus is our access, not our incantation.",
+        verses: ["John 14:13", "John 14:14", "John 16:23", "Ephesians 2:18"],
+      },
+      {
+        heading: "It is the prayer of one who abides in Him",
+        body:
+          "The promise of answered prayer in His name is given to Jesus' disciples, to those who remain in Him. He said, 'If you remain in me, and my words remain in you, you will ask whatever you desire, and it will be done for you,' and 'You didn't choose me, but I chose you... that whatever you will ask of the Father in my name, he may give it to you.' Praying in Jesus' name grows out of a life that abides in His word and His purpose.",
+        verses: ["John 15:7", "John 15:16"],
+      },
+      {
+        heading: "It is to pray in line with His will",
+        body:
+          "Praying in Jesus' name is not asking for whatever we want and stamping His name on it; it is asking what He would ask. John gives the guard and the confidence in one clause: 'if we ask anything according to his will, he listens to us.' And Jesus said that His answer in His name is given 'that the Father may be glorified in the Son.' A prayer in Jesus' name seeks the glory of the Father and the purposes of the Son, not simply our own comfort.",
+        verses: ["1 John 5:14", "John 14:13", "John 16:23"],
+      },
+      {
+        heading: "It extends to our whole life in Him",
+        body:
+          "The name of Jesus is not only for our prayers; it governs our whole lives. Paul writes, 'Whatever you do, in word or in deed, do all in the name of the Lord Jesus, giving thanks to God the Father, through him,' and to give thanks to God in the name of our Lord Jesus Christ. Our lives are to be lived in His name, which means our prayers and our actions both are to bear His character and give Him thanks.",
+        verses: ["Colossians 3:17", "Ephesians 5:20"],
+      },
+      {
+        heading: "So we pray boldly, because of who He is",
+        body:
+          "Because Jesus has that name, we are bold to pray. 'There is salvation in none other, for neither is there any other name under heaven... by which we must be saved,' and the church, threatened and afraid, prayed to God in the name of His holy Servant Jesus for boldness, and the place was shaken and they were filled with the Holy Spirit. Praying in Jesus' name is praying to the Father through the Son, confident because He is the one name given, and certain that He hears and will do what He has promised.",
+        verses: ["Acts 4:12", "Acts 4:29", "Acts 4:31", "1 John 5:14", "John 16:23"],
+      },
+    ],
+    keyVerses: ["John 14:13-14", "John 15:16", "1 John 5:14", "Colossians 3:17", "Acts 4:12"],
+    raises: ["how-do-i-pray", "does-god-hear-my-prayers", "what-does-it-mean-to-pray-in-the-holy-spirit"],
+    followsFrom: ["does-god-hear-my-prayers", "what-does-it-mean-to-pray-in-the-holy-spirit"],
+    related: ["does-god-hear-my-prayers", "how-do-i-pray", "what-does-it-mean-to-pray-in-the-holy-spirit", "why-does-god-seem-silent"],
+    planned: ["What does it mean to approach God with boldness?"],
+    order: 38,
   },
 ];
