@@ -972,10 +972,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 John 2:1-2", "1 John 1:9", "Hebrews 4:15-16", "Romans 8:1"],
-    raises: ["how-do-i-fight-sin", "does-god-use-our-failures"],
+    raises: ["how-do-i-fight-sin", "does-god-use-our-failures", "can-gods-grace-really-cover-my-worst-sins"],
     followsFrom: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
     related: ["can-i-lose-my-salvation"],
-    planned: ["Can God's grace really cover my worst sins?"],
+    planned: ["What does it mean that God remembers our sins no more?"],
     order: 13,
   },
 
@@ -7082,5 +7082,88 @@ export const questions: Question[] = [
     related: ["can-i-lose-my-salvation", "spirits-witness-or-my-own-feelings", "what-does-it-mean-to-be-a-child-of-god", "who-is-the-holy-spirit"],
     planned: ["What does it mean to grieve the Holy Spirit?"],
     order: 28,
+  },
+
+  {
+    slug: "can-gods-grace-really-cover-my-worst-sins",
+    question: "Can God's grace really cover my worst sins?",
+    category: "our-walk",
+    summary:
+      "Yes. The gospel is made for the worst of us. Scripture's own story includes David, Peter, and Paul the self-called chief of sinners, all met by grace. Where sin abounded, grace abounded much more; God promises that sins as scarlet become white as snow and that our transgressions are removed as far as the east from the west. Christ is able to save to the uttermost, and there is no sin His blood cannot cleanse and no repentant sinner beyond His reach.",
+    passages: [
+      {
+        book: "1 Timothy",
+        chapter: 1,
+        title: "Christ came to save sinners, of whom I am chief",
+        lookFor: "Paul's own confession: the worst of sinners saved by the mercy of Christ, as an example of God's great patience.",
+        focus: "12-17",
+      },
+      {
+        book: "Romans",
+        chapter: 5,
+        title: "Where sin abounded, grace abounded much more",
+        lookFor: "Paul's great contrast: the trespass brought death, but grace far overflows through the one man Jesus Christ.",
+        focus: "12-21",
+      },
+      {
+        book: "Psalm",
+        chapter: 103,
+        title: "Forgiveness as far as the east from the west",
+        lookFor: "The Lord forgives all your iniquities and removes your transgressions from you, as far as east from west.",
+        focus: "8-13",
+      },
+      {
+        book: "1 John",
+        chapter: 1,
+        title: "The blood cleanses us from all sin",
+        lookFor: "If we confess our sins, He is faithful and just to forgive and cleanse; the blood of Jesus cleanses from all sin.",
+        focus: "5-10",
+      },
+      {
+        book: "Hebrews",
+        chapter: 7,
+        title: "Able to save to the uttermost",
+        lookFor: "Christ, who lives forever, is able to save completely those who draw near to God through Him.",
+        focus: "23-28",
+      },
+    ],
+    points: [
+      {
+        heading: "Scripture's worst stories end in grace",
+        body:
+          "The Bible is honest about the depth of human failure: David, after adultery and murder, begs, 'Have mercy on me, God... Wash me thoroughly from my iniquity.' Peter, who denied the Lord three times, was forgiven and sent to strengthen his brothers. And Paul, who had persecuted the church, calls himself the chief of sinners. If grace can reach them, it can reach anyone, because it is made for sinners.",
+        verses: ["Psalm 51:1", "Psalm 51:2", "1 Timothy 1:15"],
+      },
+      {
+        heading: "Grace is greater than our sin",
+        body:
+          "Paul measures the two: 'where sin abounded, grace abounded more exceedingly.' The prophet Micah pictures God treading our iniquities underfoot and casting all our sins into the depths of the sea; the psalmist sings that God does not deal with us according to our sins, but removes our transgressions from us 'as far as the east is from the west.' Your worst sin is not bigger than His grace.",
+        verses: ["Romans 5:20", "Micah 7:19", "Psalm 103:10", "Psalm 103:12"],
+      },
+      {
+        heading: "Christ can save to the uttermost",
+        body:
+          "Hebrews gives the widest promise in the New Testament: Christ, who lives forever to intercede, 'is also able to save to the uttermost those who draw near to God through him.' John adds the sweeping clause: the blood of Jesus 'cleanses us from all sin,' and 'if we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.' No sin is left off the list that His blood cannot handle.",
+        verses: ["Hebrews 7:25", "1 John 1:7", "1 John 1:9"],
+      },
+      {
+        heading: "Because the penalty was truly paid",
+        body:
+          "God's grace is not a waving aside of sin; it is a payment that satisfies. Paul declares there is 'no condemnation to those who are in Christ Jesus,' and John shows us why: 'we have a Counselor with the Father, Jesus Christ, the righteous, and he is the atoning sacrifice for our sins.' God made Him who knew no sin to be sin for us. The sin is covered because it was carried, and the grace is real because it cost everything.",
+        verses: ["Romans 8:1", "1 John 2:1", "1 John 2:2", "2 Corinthians 5:21"],
+      },
+      {
+        heading: "Grace that covers also transforms",
+        body:
+          "Mercy is never a license to keep sinning. The same grace that forgives is the grace that changes: the chief of sinners became the apostle who preached Christ with his life, and David's prayer for a clean heart was a prayer for a renewed life. When we are forgiven much, we love much, and we confess our sins because we belong to the light, not because we fear losing the forgiveness. Grace covers the repentant, and it sets them walking toward Jesus.",
+        verses: ["1 Timothy 1:15", "1 Timothy 1:16", "1 John 1:7", "Romans 8:1"],
+      },
+    ],
+    keyVerses: ["1 Timothy 1:15", "Romans 5:20", "Hebrews 7:25", "1 John 1:9", "Psalm 103:12"],
+    raises: ["spirits-witness-or-my-own-feelings", "what-is-justification", "does-god-use-our-failures"],
+    followsFrom: ["what-happens-when-i-sin", "spirits-witness-or-my-own-feelings"],
+    related: ["what-happens-when-i-sin", "can-i-lose-my-salvation", "what-is-justification", "does-god-use-our-failures"],
+    planned: ["What if I don't feel forgiven?"],
+    order: 29,
   },
 ];
