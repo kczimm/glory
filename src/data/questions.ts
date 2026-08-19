@@ -1194,10 +1194,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Daniel 7:13-14", "Mark 2:10", "Mark 10:45", "Hebrews 2:17"],
-    raises: [],
+    raises: ["is-the-son-of-man-title-judgment-or-mercy"],
     followsFrom: ["who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god"],
     related: ["what-does-it-mean-that-jesus-is-the-son-of-god"],
-    planned: ["Is the Son of Man title about judgment or mercy?"],
+    planned: ["Why did Jesus often tell people not to reveal who He was?"],
     order: 16,
   },
 
@@ -3635,5 +3635,88 @@ export const questions: Question[] = [
     related: ["why-did-jesus-call-himself-son-of-man", "what-does-it-mean-that-jesus-is-the-son-of-god", "is-jesus-really-god", "does-jesus-sharing-gods-nature-mean-two-gods"],
     planned: ["How can one Person be fully God and fully man at once?"],
     order: 20,
+  },
+
+  {
+    slug: "is-the-son-of-man-title-judgment-or-mercy",
+    question: "Is the Son of Man title about judgment or mercy?",
+    category: "jesus-christ",
+    summary:
+      "Both, and neither is half of the truth: the Son of Man is the Judge appointed by the Father, and He is the One who came to seek and save the lost. Judgment is real, and it is His; mercy is His first movement, and it is real. The two meet at the cross, where the Judge took our condemnation so that those who trust Him need not fear the day of judgment.",
+    passages: [
+      {
+        book: "Daniel",
+        chapter: 7,
+        title: "The judgment is set, and one like a son of man draws near",
+        lookFor: "The ancient scene behind everything: the court is seated, the books are opened, and the Son of Man receives the everlasting kingdom.",
+        focus: "9-14",
+      },
+      {
+        book: "Matthew",
+        chapter: 25,
+        title: "The Son of Man gathers the nations",
+        lookFor: "Jesus spells out the judgment: the Son of Man on his throne separates the sheep from the goats.",
+        focus: "31-46",
+      },
+      {
+        book: "Luke",
+        chapter: 19,
+        title: "Zacchaeus meets the seeking Son of Man",
+        lookFor: "The same Jesus who is the Judge stops at the tree, invites Himself to dinner, and says He came to seek and save.",
+        focus: "1-10",
+      },
+      {
+        book: "John",
+        chapter: 5,
+        title: "The Son judges; the believer has already passed from death to life",
+        lookFor: "Judgment is given to the Son; and hearing His word with faith brings eternal life now.",
+        focus: "19-30",
+      },
+      {
+        book: "John",
+        chapter: 3,
+        title: "Lifted up, like the serpent in the wilderness",
+        lookFor: "The Son of Man is lifted up so that whoever believes in Him should not perish: the judgment and the mercy in one act.",
+        focus: "14-18",
+      },
+    ],
+    points: [
+      {
+        heading: "The title carries both notes from the start",
+        body:
+          "In Daniel's vision, the Son of Man approaches the Ancient of Days as the court is seated and the books are opened, and to Him is given an everlasting kingdom: the figure of Daniel 7 is a judge receiving a crown. And in the Gospels the same Jesus says the Son of Man came to seek and to save the lost. Judgment and rescue are not two different characters; they are two works of the same Lord.",
+        verses: ["Daniel 7:10", "Daniel 7:13-14", "Luke 19:10", "Matthew 18:11"],
+      },
+      {
+        heading: "Judgment is real, and it belongs to Him",
+        body:
+          "John is blunt: 'The Father judges no one, but he has given all judgment to the Son... because he is a son of man.' Paul preached that God has appointed this man to judge the world in righteousness, and Jesus described that day: the Son of Man on his throne, the nations gathered, the sheep and the goats separated, and the eternal outcome declared. No one will face that judgment but through Him, and no one will miss it.",
+        verses: ["John 5:22", "John 5:27", "Acts 10:42", "Acts 17:31", "Matthew 25:31-32", "Matthew 25:34", "Matthew 25:41", "Matthew 25:46"],
+      },
+      {
+        heading: "Mercy is His first movement",
+        body:
+          "Before He ever speaks of the judgment seat, Jesus speaks of being lifted up so that whoever believes in Him will not perish. 'God didn't send his Son into the world to judge the world, but that the world should be saved through him.' To the woman caught in sin He said, 'Neither do I condemn you. Go your way. From now on, sin no more.' The mercy is not a door He opens reluctantly; it is why He came.",
+        verses: ["John 3:16-17", "John 12:47", "John 8:11", "Luke 19:10"],
+      },
+      {
+        heading: "The two meet at the cross",
+        body:
+          "In John 3, the mercy and the judgment are one act: the Son of Man is lifted up on the cross, and whoever believes in Him is not condemned, while whoever does not believe stands already condemned. Paul says the record that stood against us was nailed to the cross, taken out of the way. The Judge bore the judgment. The mercy cost Him everything, and the judgment is finished for everyone who trusts Him.",
+        verses: ["John 3:14-15", "John 3:17-18", "Colossians 2:14", "Romans 8:1"],
+      },
+      {
+        heading: "So how do we face the Judge?",
+        body:
+          "The answer Scripture gives is not fear or presumption; it is faith. Jesus said whoever hears His word and believes the Father has eternal life and does not come into judgment, but has passed out of death into life. John adds that love gives us boldness in the day of judgment, because we are in Christ. The same Judge who will one day separate the nations is the Brother who was tempted as we are. Draw near to His throne of grace now, and you will find mercy.",
+        verses: ["John 5:24", "1 John 4:17", "Hebrews 4:15-16", "Romans 8:1"],
+      },
+    ],
+    keyVerses: ["John 5:22", "Luke 19:10", "John 3:17", "Romans 8:1", "1 John 4:17"],
+    raises: [],
+    followsFrom: ["why-did-jesus-call-himself-son-of-man", "why-is-jesus-both-son-of-god-and-son-of-man"],
+    related: ["why-did-jesus-call-himself-son-of-man", "what-happens-when-i-die", "is-god-in-control"],
+    planned: ["What is the final judgment, and who will be there?"],
+    order: 21,
   },
 ];
