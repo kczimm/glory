@@ -292,10 +292,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 2:38-39", "Ephesians 1:13-14", "Romans 8:15-16", "Galatians 3:2"],
-    raises: ["what-are-spiritual-gifts", "how-do-i-know-the-spirit-is-leading-me"],
+    raises: ["what-are-spiritual-gifts", "how-do-i-know-the-spirit-is-leading-me", "what-does-it-mean-to-be-baptized-with-the-holy-spirit"],
     followsFrom: ["who-is-the-holy-spirit"],
     related: ["who-is-the-holy-spirit", "how-can-i-be-saved"],
-    planned: ["What does it mean to be baptized with the Holy Spirit?"],
+    planned: ["What is the difference between the Spirit's baptism and His filling?"],
     order: 4,
   },
 
@@ -6493,5 +6493,88 @@ export const questions: Question[] = [
     related: ["who-is-the-holy-spirit", "is-the-holy-spirit-god", "what-the-new-life-looks-like", "what-is-the-flesh-versus-the-spirit"],
     planned: ["How are the fruit of the Spirit and the gifts of the Spirit different?"],
     order: 23,
+  },
+
+  {
+    slug: "what-does-it-mean-to-be-baptized-with-the-holy-spirit",
+    question: "What does it mean to be baptized with the Holy Spirit?",
+    category: "holy-spirit",
+    summary:
+      "'Baptized with the Holy Spirit' is Jesus' own phrase for the Spirit coming upon His people in power. It came at Pentecost, when the church was filled with the Spirit and empowered to be Christ's witnesses, and it is how every believer is joined by the Spirit into the one body of Christ. Believers receive this gift at the beginning of the Christian life, and they are filled again and again as they walk with God.",
+    passages: [
+      {
+        book: "Mark",
+        chapter: 1,
+        title: "He will baptize you in the Holy Spirit",
+        lookFor: "John sets his water baptism over against the one to come: Jesus would baptize in the Holy Spirit.",
+        focus: "1-11",
+      },
+      {
+        book: "Acts",
+        chapter: 1,
+        title: "You will receive power",
+        lookFor: "Jesus tells the disciples to wait in Jerusalem for the promise: they will be baptized in the Holy Spirit, and receive power to be His witnesses.",
+        focus: "1-11",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "The promise comes at Pentecost",
+        lookFor: "The Spirit comes in power on the gathered church, and Peter declares that the promise is for you, your children, and all who are far off.",
+        focus: "1-21",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 12,
+        title: "Baptized into one body by one Spirit",
+        lookFor: "Paul's explanation of what the Spirit's baptism does: in one Spirit we were all baptized into one body, Jews and Greeks, bond and free.",
+        focus: "12-13",
+      },
+      {
+        book: "Acts",
+        chapter: 19,
+        title: "The disciples at Ephesus receive the Spirit",
+        lookFor: "Believers who had known only John's baptism hear of Jesus, believe, and receive the Holy Spirit.",
+        focus: "1-7",
+      },
+    ],
+    points: [
+      {
+        heading: "It is Jesus' own promise, set over against John's water",
+        body:
+          "John the Baptist drew the contrast: 'I baptized you in water, but he will baptize you in the Holy Spirit.' Jesus repeated it to His disciples before His ascension: 'you will be baptized in the Holy Spirit not many days from now.' The phrase is not a modern slogan; it is Jesus' own description of what was about to happen, and what He had come to give.",
+        verses: ["Mark 1:8", "Acts 1:5", "Luke 3:16"],
+      },
+      {
+        heading: "It came at Pentecost, in power",
+        body:
+          "The promise was fulfilled at Pentecost: 'They were all filled with the Holy Spirit, and began to speak with other languages, as the Spirit gave them the ability to speak.' And Jesus had told them what the power was for: 'You will receive power when the Holy Spirit has come upon you. You will be witnesses to me in Jerusalem, in all Judea and Samaria, and to the uttermost parts of the earth.' The baptism of the Spirit is not power for display but power for mission.",
+        verses: ["Acts 2:4", "Acts 1:8", "Acts 2:38-39"],
+      },
+      {
+        heading: "It unites believers into the one body of Christ",
+        body:
+          "Paul explains what the Spirit's baptism does: 'For in one Spirit we were all baptized into one body, whether Jews or Greeks, whether bond or free; and were all given to drink into one Spirit.' The baptism of the Spirit is how God joins every believer, regardless of background, into the single body of Christ. It is not an experience some have and others miss; it is the Spirit's own work at the heart of belonging to Christ.",
+        verses: ["1 Corinthians 12:13", "1 Corinthians 12:12"],
+      },
+      {
+        heading: "It comes to believers as they receive the word",
+        body:
+          "The gift belongs to the household of faith. Peter promised the Spirit to every one who repents and is baptized, 'for the promise is to you, and to your children, and to all who are far off.' The Samaritans who believed were baptized, and later received the Holy Spirit. And at Ephesus, disciples who knew only John's baptism heard of Jesus, believed, and the Holy Spirit came on them. The way to the Spirit's baptism is through faith in Christ.",
+        verses: ["Acts 2:38", "Acts 2:39", "Acts 8:14-17", "Acts 19:4", "Acts 19:6"],
+      },
+      {
+        heading: "And believers are filled again and again",
+        body:
+          "Pentecost was once; the filling is ongoing. The same believers who were filled at Pentecost, after prayer, 'were all filled with the Holy Spirit, and they spoke the word of God with boldness.' Paul commands us to keep being filled with the Spirit. The Spirit's baptism places us in Christ once and for all; the Spirit's filling renews and empowers us for each new day, and both are gifts of the same gracious God.",
+        verses: ["Acts 2:4", "Acts 4:31", "Ephesians 5:18", "Acts 1:8"],
+      },
+    ],
+    keyVerses: ["Acts 1:5", "1 Corinthians 12:13", "Acts 2:38-39", "Mark 1:8", "Acts 1:8"],
+    raises: ["what-are-spiritual-gifts", "who-is-the-holy-spirit", "how-do-i-know-the-spirit-is-leading-me"],
+    followsFrom: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
+    related: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit", "holy-spirit-in-the-old-testament", "what-are-spiritual-gifts"],
+    planned: ["What is speaking in tongues, and is it for today?"],
+    order: 24,
   },
 ];
