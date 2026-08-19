@@ -1802,10 +1802,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Romans 3:28", "Romans 4:5", "2 Corinthians 5:21", "Romans 5:1"],
-    raises: ["what-is-faith", "faith-or-works", "what-is-imputation"],
+    raises: ["what-is-faith", "faith-or-works", "what-is-imputation", "how-are-justification-and-sanctification-related"],
     followsFrom: ["faith-or-works", "what-is-grace"],
     related: ["faith-or-works", "how-can-i-be-saved"],
-    planned: ["How are justification and sanctification related?"],
+    planned: ["What does the Bible mean by being 'holy'?"],
     order: 24,
   },
 
@@ -7710,5 +7710,88 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["what-is-grace", "what-is-justification", "does-grace-mean-live-how-i-want", "can-gods-grace-really-cover-my-worst-sins"],
     planned: ["How do God's mercy and justice work together?"],
     order: 32,
+  },
+
+  {
+    slug: "how-are-justification-and-sanctification-related",
+    question: "How are justification and sanctification related?",
+    category: "gospel",
+    summary:
+      "Justification and sanctification are two distinct works of God's grace that belong inseparably together. Justification is God declaring us righteous through Christ, a finished verdict received once by faith. Sanctification is God making us holy, a lifelong work of the Spirit. Both come from union with Christ and both are gifts of grace, and they are to be distinguished without being separated: we are justified in order to be sanctified, and sanctification is the fruit of justification.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 5,
+        title: "Justified by faith, at peace with God",
+        lookFor: "Through the one act of Christ's obedience, many are made righteous; through Him we have peace with God.",
+        focus: "1-2",
+      },
+      {
+        book: "Romans",
+        chapter: 6,
+        title: "Free from condemnation, now servants of righteousness",
+        lookFor: "Because we are united to Christ, we are not to continue in sin but are to present ourselves as servants of righteousness.",
+        focus: "1-19",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 6,
+        title: "Washed, sanctified, justified",
+        lookFor: "Paul names what God did for believers: they were washed, sanctified, and justified in the name of Jesus Christ.",
+        focus: "9-11",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 1,
+        title: "Christ is our righteousness and sanctification",
+        lookFor: "Christ 'was made to us wisdom from God, and righteousness and sanctification, and redemption': both flow from Him.",
+        focus: "26-31",
+      },
+      {
+        book: "Hebrews",
+        chapter: 10,
+        title: "Perfected, and being sanctified",
+        lookFor: "By one offering He has perfected forever those who are being sanctified: the finished work and the ongoing work held together.",
+        focus: "10-14",
+      },
+    ],
+    points: [
+      {
+        heading: "Justification is a verdict; sanctification is a work in us",
+        body:
+          "Justification is God's declaration: through Christ's one act of righteousness, many are made righteous, and being justified by faith, we have peace with God. It is a verdict pronounced over us, once received by faith and complete in Christ. Sanctification is different in kind: it is the Spirit's gradual work within us, transforming us from glory to glory, a growth that is begun and carried on, not a single finished moment.",
+        verses: ["Romans 5:18", "Romans 5:19", "Romans 5:1", "2 Corinthians 3:18", "Philippians 1:6"],
+      },
+      {
+        heading: "Both flow from union with Christ",
+        body:
+          "Neither is a separate achievement; both are ours by being in Christ. Paul says Christ 'was made to us wisdom from God, and righteousness and sanctification, and redemption.' And for the Corinthians who had been forgiven of much, he says, 'you were washed. But you were sanctified. But you were justified in the name of the Lord Jesus, and in the Spirit of our God.' Justification and sanctification spring from the same fountain: our union with Jesus.",
+        verses: ["1 Corinthians 1:30", "1 Corinthians 6:11", "Romans 6:3", "Romans 6:4"],
+      },
+      {
+        heading: "They must be distinguished, not separated",
+        body:
+          "The two belong to different kinds of grace, and confusing them damages both. Justification is the once-for-all gift that gives us a standing before God; sanctification is the lifelong growth by which we become like Him. Paul connects them without blurring them: 'by one offering he has perfected forever those who are being sanctified.' Those who are perfected in Christ are being sanctified in Him, and those who are being sanctified rest on the perfection Christ has already secured.",
+        verses: ["Hebrews 10:14", "Romans 5:1", "Romans 8:1"],
+      },
+      {
+        heading: "Justification produces holiness, never license",
+        body:
+          "A right grasp of justification makes us holy, not careless. Paul asks the question everyone fears: 'What shall we say then? Shall we continue in sin, that grace may abound?' and answers flatly, by no means, because we who died to sin are united to Christ and no longer servants of sin. He urges us, freed from the law's condemnation, to present our members as servants of righteousness for sanctification. Grace received properly always bears the fruit of growing holiness.",
+        verses: ["Romans 6:1", "Romans 6:2", "Romans 6:14", "Romans 6:19", "Titus 2:11-12"],
+      },
+      {
+        heading: "Why it matters: we stand on one and walk in the other",
+        body:
+          "The distinction gives both security and growth. We do not earn our standing by our progress; we are justified by faith, at peace with God through Christ, with no condemnation for those in Him. And because that standing is secure, we are free to pursue holiness without fear: to grow in grace, to become like Him, knowing He who began a good work will complete it. Justification is the ground beneath our feet; sanctification is the path we walk, and both have been given to us by the same gracious Lord.",
+        verses: ["Romans 5:1", "Romans 8:1", "Philippians 1:6", "2 Corinthians 5:21", "Romans 8:30"],
+      },
+    ],
+    keyVerses: ["Romans 5:1", "1 Corinthians 6:11", "Hebrews 10:14", "1 Corinthians 1:30", "Romans 8:30"],
+    raises: ["what-is-sanctification-and-how-does-it-happen", "what-is-justification", "faith-or-works"],
+    followsFrom: ["what-is-justification", "what-is-grace"],
+    related: ["what-is-justification", "what-is-sanctification-and-how-does-it-happen", "faith-or-works", "does-grace-mean-live-how-i-want"],
+    planned: ["What does it mean to be a new creation in Christ?"],
+    order: 33,
   },
 ];
