@@ -22,8 +22,9 @@ the knowledge of God.
 ## Tech
 
 - Next.js (App Router) + TypeScript + Tailwind CSS v4
-- Scripture text: [World English Bible](https://ebible.org/web/) (public domain)
-  via [bible-api.com](https://bible-api.com), bundled statically
+- Scripture text: the full [World English Bible](https://ebible.org/web/)
+  (public domain), vendored offline (~31k verses) and bundled statically — no
+  runtime network calls
 - Content lives in `src/data/` as typed data files
 
 ## Adding a question
@@ -33,16 +34,18 @@ the knowledge of God.
    key verses, and `raises` (the questions it naturally leads to).
 2. Tell the "as you read" engine where it leads: put question slugs in
    `raises`, and future ones in `planned`.
-3. Fetch the scripture text for any new references:
+3. Scripture is vendored as the **full World English Bible** (~31k verses) —
+   regenerate it with:
 
    ```bash
-   node scripts/fetch-scripture.mjs
+   node scripts/fetch-bible.mjs
    ```
 
-The fetch script scans every file in `src/` for verse references
-(e.g. `"John 14:16-17"`) and chapter references in passage objects, fetches the
-exact WEB text, validates that everything resolves, and regenerates
-`src/data/scripture.ts`.
+The fetch script pulls all 66 books from getbible.net once, validates that
+every verse reference used in `src/` resolves, and rewrites
+`src/data/scripture.ts`. Because the whole Bible is vendored, the app is fully
+offline and can look up *any* verse or chapter — which is what powers the
+cross-reference knowledge graph.
 
 ## Development
 

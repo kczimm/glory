@@ -26,7 +26,7 @@ npm run build        # production build
 npm run start        # production serve
 npm run start:lan    # production serve on LAN, port 3100
 npm run lint         # eslint
-node scripts/fetch-scripture.mjs   # regenerates src/data/scripture.ts
+node scripts/fetch-bible.mjs   # re-vendor the full WEB into src/data/scripture.ts
 ```
 
 ## Architecture
@@ -36,7 +36,7 @@ Next.js 16 (App Router) + TypeScript + Tailwind CSS v4.
 - `src/app/` — pages: `/` (home), `/questions`, `/questions/[slug]` (study page)
 - `src/components/` — UI: `Nav`, `Footer`, `VerseCard`, `ChapterReader`, `QuestionCard`, `SearchBox`
 - `src/data/` — the content layer (typed, the heart of the app)
-- `scripts/fetch-scripture.mjs` — fetches WEB Bible text
+- `scripts/fetch-bible.mjs` — vendors the full WEB Bible offline
 
 In Next 16, route `params` is a **Promise** — `await params` before reading it.
 
@@ -63,11 +63,13 @@ and wire `raises`/`followsFrom` so journeys continue organically.
 
 - Use canonical refs: `"John 14:16-17"`, `"John 3:16"`.
 - Scripture text lives in `src/data/scripture.ts` (World English Bible, public
-domain) — **generated**, do not hand-edit. Edit content/UI, then run
-`node scripts/fetch-scripture.mjs`; it scans every file under `src/` for refs
-and chapter references, fetches exact text, validates that everything resolves,
-and rewrites the file.
-- Lookups in `src/data/index.ts`: `getVerseText`, `getPassageText`, `getChapter`.
+domain) — **generated**, do not hand-edit. The **full Bible** is vendored
+offline (~31k verses); every reference anywhere in the app resolves with no
+network call. To refresh/repair it, run `node scripts/fetch-bible.mjs`
+(66 books from getbible.net), which also validates that every ref used in
+`src/` resolves.
+- Lookups in `src/data/index.ts`: `getVerseText`, `getPassageText`, `getChapter`,
+  `getChapterFocus`.
 - Book alias: `Psalm` → `Psalms` (handled in `canonicalBook`).
 
 ## Design system
