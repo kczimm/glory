@@ -899,8 +899,8 @@ export const questions: Question[] = [
     keyVerses: ["John 10:27-29", "Romans 8:38-39", "Philippians 1:6", "John 6:37-39"],
     raises: [],
     followsFrom: ["how-can-i-be-saved"],
-    related: ["what-happens-when-i-sin", "who-is-the-holy-spirit"],
-    planned: ["What is faith, exactly?", "How do I know the Spirit's witness from my own feelings?"],
+    related: ["what-happens-when-i-sin", "who-is-the-holy-spirit", "what-is-faith"],
+    planned: ["How do I know the Spirit's witness from my own feelings?"],
     order: 12,
   },
 
@@ -1503,7 +1503,7 @@ export const questions: Question[] = [
     keyVerses: ["John 14:9", "1 John 3:1", "John 3:16", "Matthew 6:9", "Ephesians 1:5"],
     raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit"],
     followsFrom: ["what-is-the-trinity"],
-    related: ["what-is-the-trinity", "who-is-jesus"],
+    related: ["what-is-the-trinity", "who-is-jesus", "why-does-god-allow-suffering"],
     planned: ["How do I pray to the Father?", "Why does He still call me son/daughter when I fail?"],
     order: 20,
   },
@@ -1577,10 +1577,618 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 2:8-10", "Romans 4:5", "James 2:17", "James 2:26", "Galatians 5:6"],
-    raises: [],
+    raises: ["what-is-justification"],
     followsFrom: ["how-can-i-be-saved"],
-    related: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again", "what-should-i-do-now-that-im-saved"],
-    planned: ["What does it mean to be justified?"],
+    related: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again", "what-should-i-do-now-that-im-saved", "what-is-the-gospel"],
+    planned: [],
     order: 21,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Gospel
+  // ------------------------------------------------------------------
+  {
+    slug: "what-is-the-gospel",
+    question: "What is the gospel?",
+    category: "gospel",
+    summary:
+      "The gospel (the word means 'good news') is the announcement that God, in love, became man in Jesus Christ, died for our sins, was raised for our justification, and freely saves all who repent and believe. It is news to be believed, not a task to be performed.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 15,
+        title: "The good news, defined",
+        lookFor: "Paul's summary: Christ died for our sins, was buried, and rose the third day.",
+        focus: "1-8",
+      },
+      {
+        book: "Romans",
+        chapter: 3,
+        title: "Righteousness apart from the law",
+        lookFor: "The heart of the gospel: a righteousness from God through faith in Christ Jesus.",
+        focus: "21-26",
+      },
+      {
+        book: "John",
+        chapter: 3,
+        title: "God so loved",
+        lookFor: "Why the Son was sent — not to condemn but to save.",
+        focus: "16-18",
+      },
+      {
+        book: "Acts",
+        chapter: 16,
+        title: "The jailer's question",
+        lookFor: "'What must I do to be saved?' — and the one-sentence answer.",
+        focus: "25-34",
+      },
+    ],
+    points: [
+      {
+        heading: "It is good news, not good advice",
+        body:
+          "The gospel is not a list of instructions to improve yourself — it is an announcement of what God has done. Paul delivers what he received: 'that Christ died for our sins according to the Scriptures, that he was buried, and that he was raised on the third day.' It is something to believe, not something to achieve.",
+        verses: ["1 Corinthians 15:1-4", "Romans 1:16"],
+      },
+      {
+        heading: "The message: a Person and His finished work",
+        body:
+          "The gospel centers on Jesus — not on our efforts. 'God so loved the world that he gave his only born Son, that whoever believes in him should not perish, but have eternal life.' The good news is who He is and what He did for us.",
+        verses: ["John 3:16", "1 Corinthians 15:3-4", "2 Corinthians 5:19"],
+      },
+      {
+        heading: "What it gives: righteousness and eternal life",
+        body:
+          "By the gospel we are 'justified freely by his grace through the redemption that is in Christ Jesus.' The wages of sin is death, but 'the gift of God is eternal life in Christ Jesus our Lord.' The gospel turns a verdict of death into a gift of life.",
+        verses: ["Romans 3:24", "Romans 6:23", "John 5:24"],
+      },
+      {
+        heading: "What it asks: repentance and faith",
+        body:
+          "The jailer asked what he must do, and the answer was: 'Believe in the Lord Jesus Christ, and you will be saved.' Jesus began His ministry, 'Repent, and believe in the gospel.' It is received, never earned.",
+        verses: ["Acts 16:30-31", "Mark 1:15", "Ephesians 2:8-9"],
+      },
+      {
+        heading: "It is for everyone",
+        body:
+          "The gospel is 'the power of God for salvation for everyone who believes.' God did not send the Son into the world to condemn the world, but that the world through Him might be saved. It is good news for all — the worst and the best alike.",
+        verses: ["Romans 1:16", "John 3:17", "1 Timothy 2:4"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 15:3-4", "John 3:16", "Romans 3:24", "Romans 6:23"],
+    raises: ["what-is-grace", "what-is-justification", "what-is-faith", "what-is-repentance", "how-can-i-be-saved"],
+    followsFrom: [],
+    related: ["who-is-jesus", "how-can-i-be-saved", "faith-or-works"],
+    planned: [],
+    order: 22,
+  },
+
+  {
+    slug: "what-is-grace",
+    question: "What is grace?",
+    category: "gospel",
+    summary:
+      "Grace is God's unearned, undeserved favor. Because we could not save ourselves, God freely gave us in Christ what we did not deserve: forgiveness, righteousness, and adoption. Grace is why the gospel is a gift.",
+    passages: [
+      {
+        book: "Ephesians",
+        chapter: 2,
+        title: "Saved by grace",
+        lookFor: "By grace through faith — not of works.",
+        focus: "1-10",
+      },
+      {
+        book: "Titus",
+        chapter: 3,
+        title: "The kindness and love of God",
+        lookFor: "He saved us by mercy, not by deeds in righteousness.",
+        focus: "3-7",
+      },
+      {
+        book: "Romans",
+        chapter: 5,
+        title: "Grace abounded more",
+        lookFor: "Where sin increased, grace abounded all the more.",
+        focus: "15-21",
+      },
+      {
+        book: "Luke",
+        chapter: 15,
+        title: "The grace of the Father",
+        lookFor: "A gift to the utterly undeserving — the prodigal received more than he deserved.",
+        focus: "11-32",
+      },
+    ],
+    points: [
+      {
+        heading: "Grace is unearned favor",
+        body:
+          "'By grace you have been saved through faith, and that not of yourselves; it is the gift of God, not of works, that no one would boast.' Paul adds: if it is by grace, it is no longer of works — otherwise grace would no longer be grace. A gift that can be earned is not a gift.",
+        verses: ["Ephesians 2:8-9", "Romans 11:6", "Romans 4:4"],
+      },
+      {
+        heading: "God gives what we do not deserve",
+        body:
+          "We had all sinned and fallen short — yet we are 'justified freely by his grace through the redemption that is in Christ Jesus.' Grace runs to the undeserving, almost shockingly: the prodigal's father runs and embraces him while he is still a long way off.",
+        verses: ["Romans 3:23-24", "Luke 15:20", "Ephesians 1:7"],
+      },
+      {
+        heading: "Grace is a Person and a power, not just a feeling",
+        body:
+          "'The grace of God has appeared, bringing salvation to all.' Grace is embodied in Jesus, who came full of grace and truth — and it is the power that sustains us: 'My grace is sufficient for you, for my power is made perfect in weakness.' It saves, and it keeps.",
+        verses: ["Titus 2:11", "2 Corinthians 12:9", "John 1:16"],
+      },
+      {
+        heading: "Where sin abounded, grace abounded more",
+        body:
+          "'Where sin increased, grace abounded all the more: that as sin reigned in death, even so grace might reign through righteousness to eternal life.' Grace is not the license to sin — it is the power that frees us from sin's reign.",
+        verses: ["Romans 5:20-21", "Romans 6:1-2", "Titus 2:12"],
+      },
+    ],
+    keyVerses: ["Ephesians 2:8-9", "Romans 3:24", "2 Corinthians 12:9", "Titus 2:11"],
+    raises: ["what-is-justification"],
+    followsFrom: ["what-is-the-gospel"],
+    related: ["what-is-the-gospel", "how-can-i-be-saved"],
+    planned: ["Does grace mean I can live however I want?"],
+    order: 23,
+  },
+
+  {
+    slug: "what-is-justification",
+    question: "What does it mean to be justified?",
+    category: "gospel",
+    summary:
+      "Justification is God's declaration that a person is righteous — not on the basis of who they are or what they have done, but on the basis of Christ. In it, the Judge accepts the sinner for Jesus' sake, pardoning their sins and crediting Christ's righteousness to them.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 3,
+        title: "Justified freely by grace",
+        lookFor: "God has set forth Jesus as a propitiation — that He might be just and the justifier.",
+        focus: "21-26",
+      },
+      {
+        book: "Romans",
+        chapter: 4,
+        title: "Abraham justified by faith",
+        lookFor: "To him who does not work but believes, faith is counted as righteousness.",
+        focus: "1-8",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 5,
+        title: "The great exchange",
+        lookFor: "He became sin for us, that we might become the righteousness of God in Him.",
+        focus: "17-21",
+      },
+      {
+        book: "Romans",
+        chapter: 5,
+        title: "Peace with God",
+        lookFor: "Justified by faith — we have peace with God through our Lord Jesus Christ.",
+        focus: "1-11",
+      },
+    ],
+    points: [
+      {
+        heading: "It is a legal declaration, not a moral change",
+        body:
+          "Justification is a courtroom word — the verdict of the Judge: 'righteous.' Paul says we are 'justified by faith apart from the works of the law,' and asks, 'Who is he who condemns? It is Christ who died… who is at the right hand of God.' God is the one who justifies; the verdict is His, and it is final.",
+        verses: ["Romans 3:28", "Romans 8:33-34"],
+      },
+      {
+        heading: "Its ground is Christ, not our record",
+        body:
+          "We are 'justified freely by his grace through the redemption that is in Christ Jesus.' God set Him forth as a propitiation, and 'being now justified by his blood, we will be saved from God's wrath through him.' The basis is the blood and righteousness of Christ, not anything in us.",
+        verses: ["Romans 3:24-25", "Romans 5:9", "2 Corinthians 5:21"],
+      },
+      {
+        heading: "Its instrument is faith — counted, not achieved",
+        body:
+          "'To him who does not work, but believes in him who justifies the ungodly, his faith is credited for righteousness.' Blessed is the one 'whose sin the Lord will not count against them.' Faith is not the merit; it is the hand that receives what is freely given.",
+        verses: ["Romans 4:5", "Romans 4:8", "Galatians 2:16"],
+      },
+      {
+        heading: "It is the great exchange",
+        body:
+          "'God made him who knew no sin to be sin for us, that we might become the righteousness of God in him.' On the cross Christ bore our sin; through faith we receive His righteousness. Our condemnation is transferred to Him; His righteousness is credited to us.",
+        verses: ["2 Corinthians 5:21", "Isaiah 53:6", "1 Peter 2:24"],
+      },
+      {
+        heading: "Its fruit is peace and salvation",
+        body:
+          "'Being justified by faith, we have peace with God through our Lord Jesus Christ.' Those He justifies, He glorifies — and we stand 'heirs according to the hope of eternal life.' Justification is not the end of the story; it is the peaceful foundation of everything that follows.",
+        verses: ["Romans 5:1", "Romans 8:30", "Titus 3:7"],
+      },
+    ],
+    keyVerses: ["Romans 3:28", "Romans 4:5", "2 Corinthians 5:21", "Romans 5:1"],
+    raises: ["what-is-faith", "faith-or-works"],
+    followsFrom: ["faith-or-works", "what-is-grace"],
+    related: ["faith-or-works", "how-can-i-be-saved"],
+    planned: ["What does it mean that Christ's righteousness is 'imputed' to us?"],
+    order: 24,
+  },
+
+  {
+    slug: "what-is-faith",
+    question: "What is faith, exactly?",
+    category: "gospel",
+    summary:
+      "Faith is not blind wishing — it is trust that rests on the character and promises of God. It believes God's testimony about Christ and entrusts the whole life to Him. Faith has a content (the gospel) and a confidence (God's faithfulness).",
+    passages: [
+      {
+        book: "Hebrews",
+        chapter: 11,
+        title: "The great cloud of witnesses",
+        lookFor: "What faith is, and what the people of faith actually did with it.",
+        focus: "1-12",
+      },
+      {
+        book: "Romans",
+        chapter: 10,
+        title: "Faith comes by hearing",
+        lookFor: "Faith is anchored to the word — to hearing about Christ.",
+        focus: "14-17",
+      },
+      {
+        book: "John",
+        chapter: 6,
+        title: "The work of God is to believe",
+        lookFor: "Belief is not a human achievement but the response God calls for.",
+        focus: "28-29",
+      },
+      {
+        book: "Romans",
+        chapter: 4,
+        title: "Abraham's faith",
+        lookFor: "A faith that grew strong, fully convinced God could do what He promised.",
+        focus: "18-25",
+      },
+    ],
+    points: [
+      {
+        heading: "Faith is confidence grounded in something real",
+        body:
+          "'Faith is the assurance of things hoped for, the conviction of things not seen' — and 'without faith it is impossible to be well pleasing to him, for he who comes to God must believe that he exists, and that he is a rewarder of those who seek him.' Faith trusts a God who has spoken.",
+        verses: ["Hebrews 11:1", "Hebrews 11:6", "2 Corinthians 5:7"],
+      },
+      {
+        heading: "Faith rests on its object — the gospel of Christ",
+        body:
+          "'Faith comes by hearing, and hearing by the word of Christ.' Saving faith is not generic optimism; it is trust in a Person — 'if you will confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.' The object is Jesus.",
+        verses: ["Romans 10:17", "Romans 10:9-10", "John 20:31"],
+      },
+      {
+        heading: "Faith is not a work we offer — it receives",
+        body:
+          "When they asked what they must do to do the works of God, Jesus answered: 'This is the work of God, that you believe in him whom he has sent.' Faith saves 'through faith… not of works,' as a gift. Faith is the empty hand stretched out to receive.",
+        verses: ["John 6:28-29", "Ephesians 2:8-9", "Romans 4:4-5"],
+      },
+      {
+        heading: "Faith entrusts the whole life",
+        body:
+          "Abraham 'did not waver through unbelief but was strengthened in faith… being fully persuaded that God had power to do what he had promised.' This is personal trust: 'I know whom I have believed, and am persuaded that he is able to guard that which I have committed to him.' Faith commits everything to Him.",
+        verses: ["Romans 4:20-21", "2 Timothy 1:12", "Hebrews 11:8"],
+      },
+      {
+        heading: "Faith produces a life of following",
+        body:
+          "Faith is not mere agreement with facts — it is reliance that reshapes a life. 'Faith working through love,' and 'faith without works is dead.' To live by faith is to say with Paul, 'I have been crucified with Christ… I live by faith in the Son of God.'",
+        verses: ["Galatians 2:20", "James 2:17", "Galatians 5:6"],
+      },
+    ],
+    keyVerses: ["Hebrews 11:1", "Romans 10:17", "John 6:29", "2 Timothy 1:12"],
+    raises: ["faith-or-works", "what-does-it-mean-to-be-born-again"],
+    followsFrom: ["can-i-lose-my-salvation", "what-is-justification"],
+    related: ["faith-or-works", "how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
+    planned: ["Is it okay to have doubts sometimes?"],
+    order: 25,
+  },
+
+  {
+    slug: "what-is-repentance",
+    question: "What is repentance?",
+    category: "gospel",
+    summary:
+      "Repentance is a change of mind that leads to a change of direction — turning from sin and turning to God. It is the necessary companion of faith: to believe the gospel is to turn from the sins it forgives. Repentance is God's gift and the doorway to a new life.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 13,
+        title: "Unless you repent",
+        lookFor: "Jesus: everyone is under judgment apart from repentance — no one is exempt.",
+        focus: "1-9",
+      },
+      {
+        book: "Acts",
+        chapter: 3,
+        title: "Repent, turn again",
+        lookFor: "Repentance brings times of refreshing from the Lord.",
+        focus: "17-21",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 7,
+        title: "Godly sorrow",
+        lookFor: "The sorrow that leads to repentance — and what it actually produces.",
+        focus: "8-11",
+      },
+      {
+        book: "Mark",
+        chapter: 1,
+        title: "Repent and believe",
+        lookFor: "Jesus pairs repentance and faith as the two sides of one response.",
+        focus: "14-15",
+      },
+    ],
+    points: [
+      {
+        heading: "Repentance is a turn toward God",
+        body:
+          "Jesus' first word was 'repent, and believe in the gospel.' Paul declared that people should 'repent and turn to God, performing deeds consistent with repentance.' It is not just feeling sorry — it is changing direction, from sin and toward God.",
+        verses: ["Mark 1:15", "Acts 26:20", "1 Thessalonians 1:9"],
+      },
+      {
+        heading: "It is a gift, not a self-made resolution",
+        body:
+          "God exalted Jesus 'to give repentance to Israel and forgiveness of sins,' and the church rejoiced that 'God has also granted the Gentiles repentance to life.' Repentance is not something we must produce by force of will; it is something God works in us.",
+        verses: ["Acts 5:31", "Acts 11:18", "2 Timothy 2:25"],
+      },
+      {
+        heading: "Godly sorrow fuels it",
+        body:
+          "'Godly sorrow produces a repentance leading to salvation, bringing no regret' — unlike worldly sorrow that only grieved over being caught. It is sorrow over sin, toward God — the broken and contrite heart He will not despise.",
+        verses: ["2 Corinthians 7:10", "Psalm 51:17", "Joel 2:13"],
+      },
+      {
+        heading: "It is about turning, not just feeling",
+        body:
+          "'Repent, and turn again, that your sins may be blotted out.' Ezekiel calls Israel to 'return and turn from all your transgressions, and make yourself a new heart and a new spirit.' Repentance that stops at emotion is not yet repentance; it must turn.",
+        verses: ["Acts 3:19", "Ezekiel 18:30-31", "Proverbs 28:13"],
+      },
+      {
+        heading: "Repentance and faith are two sides of one turn",
+        body:
+          "Paul preached 'repentance toward God, and faith toward our Lord Jesus Christ.' Luke sums up the mission as 'repentance and remission of sins' proclaimed in His name. You cannot turn to Jesus while refusing to turn from what grieves Him.",
+        verses: ["Acts 20:21", "Luke 24:47", "James 4:8-10"],
+      },
+    ],
+    keyVerses: ["Acts 3:19", "2 Corinthians 7:10", "Mark 1:15", "Ezekiel 18:31"],
+    raises: ["what-happens-when-i-sin", "how-do-i-fight-sin"],
+    followsFrom: ["what-is-the-gospel"],
+    related: ["what-is-the-gospel", "what-happens-when-i-sin", "how-can-i-be-saved"],
+    planned: ["Is repentance a one-time decision or a lifelong posture?"],
+    order: 26,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Suffering & God's Will
+  // ------------------------------------------------------------------
+  {
+    slug: "why-does-god-allow-suffering",
+    question: "Why does God allow suffering and evil?",
+    category: "suffering-will",
+    summary:
+      "Scripture does not explain every instance, but it shows that evil entered the world through human rebellion, that God is so sovereign He can work even through evil for good, that He shares our suffering in Christ, and that one day He will wipe away every tear. Suffering is not meaningless to God.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 3,
+        title: "How evil entered the world",
+        lookFor: "Creation was good; sin and its curse came through human rebellion.",
+        focus: "1-19",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "Creation groans; God works all things for good",
+        lookFor: "Hope in the middle of suffering — and the promise that all things work together for good.",
+        focus: "18-28",
+      },
+      {
+        book: "John",
+        chapter: 9,
+        title: "Not always from personal sin",
+        lookFor: "Jesus rejects the easy answer — the man was born blind 'that the works of God might be displayed.'",
+        focus: "1-7",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 1,
+        title: "The God of all comfort",
+        lookFor: "Suffering is not detached from God — He comforts us in all our affliction.",
+        focus: "3-7",
+      },
+    ],
+    points: [
+      {
+        heading: "Evil entered through human rebellion, not from God",
+        body:
+          "The world God made was good — 'God saw everything that he had made, and indeed it was very good.' Sin and its curse entered through Adam's disobedience, and 'through one man sin entered into the world, and death through sin.' Suffering is an intruder into a good creation, not God's original design.",
+        verses: ["Genesis 1:31", "Genesis 3:17-19", "Romans 5:12"],
+      },
+      {
+        heading: "Much suffering is not punishment for personal sin",
+        body:
+          "When asked about a man born blind, Jesus said plainly: 'Neither did this man sin, nor his parents, but that the works of God might be revealed in him.' The world is broken, and 'time and chance happen to all.' Not every pain is a verdict.",
+        verses: ["John 9:2-3", "Ecclesiastes 9:11", "Matthew 5:45"],
+      },
+      {
+        heading: "God works even through evil for good",
+        body:
+          "Joseph, betrayed and imprisoned, said of his brothers: 'As for you, you meant evil against me, but God meant it for good.' Paul assures us that 'all things work together for good for those who love God.' Suffering, to the believer, is never outside God's redeeming hand.",
+        verses: ["Genesis 50:20", "Romans 8:28", "Romans 5:3-5"],
+      },
+      {
+        heading: "God shares our suffering in Christ",
+        body:
+          "We do not serve a distant God. He was 'a man of sorrows, acquainted with grief'; He 'wept' at Lazarus's tomb; He 'can be touched with the feeling of our infirmities,' having been tempted as we are. He is 'the God of all comfort, who comforts us in all our affliction.'",
+        verses: ["Isaiah 53:3", "John 11:35", "Hebrews 4:15", "2 Corinthians 1:3-4"],
+      },
+      {
+        heading: "Suffering is not forever — and not meaningless",
+        body:
+          "One day God 'will wipe away every tear from their eyes, and death will be no more, nor mourning, nor crying, nor pain.' Our present suffering works for us 'an eternal weight of glory' far beyond all comparison. The story does not end in the valley.",
+        verses: ["Revelation 21:4", "2 Corinthians 4:17", "1 Peter 5:10", "Romans 8:18"],
+      },
+    ],
+    keyVerses: ["Romans 8:28", "Genesis 50:20", "2 Corinthians 1:3-4", "Revelation 21:4"],
+    raises: ["is-god-in-control"],
+    followsFrom: [],
+    related: ["who-is-the-father", "where-is-jesus-now"],
+    planned: ["Where is God in my specific pain?", "Why does He seem silent when I suffer?"],
+    order: 27,
+  },
+
+  {
+    slug: "is-god-in-control",
+    question: "Is God really in control?",
+    category: "suffering-will",
+    summary:
+      "Yes. God rules over all things as sovereign Lord, working all things after the counsel of His will. Nothing happens outside His knowledge or permission, and even rebellion and evil are pressed into the service of His good purposes.",
+    passages: [
+      {
+        book: "Daniel",
+        chapter: 4,
+        title: "The Most High rules",
+        lookFor: "Nebuchadnezzar's confession: He does according to His will; none can stay His hand.",
+        focus: "34-35",
+      },
+      {
+        book: "Ephesians",
+        chapter: 1,
+        title: "The counsel of His will",
+        lookFor: "God works all things according to the purpose of His will.",
+        focus: "3-14",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "The cross, planned",
+        lookFor: "Even the crucifixion was 'by the predetermined plan and foreknowledge of God.'",
+        focus: "22-24",
+      },
+      {
+        book: "Matthew",
+        chapter: 10,
+        title: "The Father's care",
+        lookFor: "Not a sparrow falls apart from your Father — and you are of more value.",
+        focus: "28-31",
+      },
+    ],
+    points: [
+      {
+        heading: "God rules over all",
+        body:
+          "'He does according to his will among the host of heaven and among the inhabitants of the earth; no one can stay his hand or say to him, What have you done?' The final word in the universe is not chance or fate — it is God's sovereign rule.",
+        verses: ["Daniel 4:34-35", "Psalm 115:3", "Isaiah 46:9-10"],
+      },
+      {
+        heading: "He works all things according to His will",
+        body:
+          "We were 'predestined according to the purpose of him who works all things after the counsel of his will.' From Him and through Him and to Him are all things — the whole course of history answers to His purpose.",
+        verses: ["Ephesians 1:11", "Romans 11:36", "Proverbs 21:1"],
+      },
+      {
+        heading: "He is sovereign even over evil and the cross",
+        body:
+          "The worst event in history was also the most planned: Jesus was 'delivered up by the predetermined plan and foreknowledge of God,' and 'whatever your hand and your plan predestined to take place' — that took place. Evil is real, but it is never outside God's control and is always within His purpose.",
+        verses: ["Acts 2:23", "Acts 4:27-28", "Genesis 50:20"],
+      },
+      {
+        heading: "He is not a distant tyrant — He is a Father who cares",
+        body:
+          "Jesus grounds God's sovereignty in love: 'Even the hairs of your head are all numbered. So do not be afraid.' Not a sparrow falls apart from your Father — and 'you are of more value than many sparrows.' His control over the universe is exercised with a Father's heart for you.",
+        verses: ["Matthew 10:29-31", "Psalm 139:16", "Romans 8:28"],
+      },
+      {
+        heading: "His control is our anchor",
+        body:
+          "'All things work together for good for those who love God, who are called according to his purpose.' The sovereignty that can seem frightening becomes our deepest comfort: nothing can finally touch us that is not first passed through the loving, purposeful hand of our Father.",
+        verses: ["Romans 8:28", "Lamentations 3:37-38", "Ephesians 1:12"],
+      },
+    ],
+    keyVerses: ["Ephesians 1:11", "Daniel 4:35", "Romans 8:28", "Matthew 10:29-31"],
+    raises: ["how-do-i-know-gods-will"],
+    followsFrom: ["why-does-god-allow-suffering"],
+    related: ["who-is-the-father", "why-does-god-allow-suffering"],
+    planned: ["If God controls everything, do my choices matter?"],
+    order: 28,
+  },
+
+  {
+    slug: "how-do-i-know-gods-will",
+    question: "How do I know God's will?",
+    category: "suffering-will",
+    summary:
+      "God's will is first and foremost revealed — in Scripture, in Christ, and through the Spirit. For daily decisions He guides through His Word, wisdom, godly counsel, prayer, and open doors — and He promises to make the path plain to those who trust and acknowledge Him.",
+    passages: [
+      {
+        book: "Psalm",
+        chapter: 119,
+        title: "A lamp to my feet",
+        lookFor: "God's word is the sure light on the path — start with what He has already said.",
+        focus: "105-112",
+      },
+      {
+        book: "Romans",
+        chapter: 12,
+        title: "Discerning God's will",
+        lookFor: "Be transformed by the renewing of your mind — that you may prove the will of God.",
+        focus: "1-2",
+      },
+      {
+        book: "Proverbs",
+        chapter: 3,
+        title: "Trust, and He will direct",
+        lookFor: "In all your ways acknowledge Him, and He will make your paths straight.",
+        focus: "5-8",
+      },
+      {
+        book: "James",
+        chapter: 1,
+        title: "Ask for wisdom",
+        lookFor: "If any lacks wisdom, let him ask of God — who gives generously and without reproach.",
+        focus: "5-8",
+      },
+    ],
+    points: [
+      {
+        heading: "God's moral will is already revealed — in the Word",
+        body:
+          "Your word is 'a lamp to my feet and a light for my path.' The Scriptures 'are able to make you wise for salvation' and 'equip us for every good work.' What God has already said is the sure foundation for knowing what He wants; 'the secret things belong to God, but the things revealed belong to us.'",
+        verses: ["Psalm 119:105", "2 Timothy 3:16-17", "Deuteronomy 29:29"],
+      },
+      {
+        heading: "His will for your character is clear",
+        body:
+          "'This is the will of God: your sanctification.' Rejoice always, pray without ceasing, give thanks in all circumstances — 'for this is the will of God in Christ Jesus for you.' Much of what we call guidance is simply obedience to what God has already plainly commanded.",
+        verses: ["1 Thessalonians 4:3", "1 Thessalonians 5:16-18", "1 Peter 2:15"],
+      },
+      {
+        heading: "Be transformed, and you will discern it",
+        body:
+          "Don't be conformed to this world, but be transformed by the renewing of your mind, 'that you may prove what is the good, well-pleasing, and perfect will of God.' The mind renewed by the Spirit and the Word is the mind that learns to sense God's direction.",
+        verses: ["Romans 12:2", "Psalm 25:12", "Colossians 1:9"],
+      },
+      {
+        heading: "Ask for wisdom — He gives it generously",
+        body:
+          "'If any of you lacks wisdom, let him ask of God, who gives to all generously and without reproach, and it will be given to him.' Trust in the Lord with all your heart, lean not on your own understanding; in all your ways acknowledge Him, and He will make your paths straight.",
+        verses: ["James 1:5", "Proverbs 3:5-6", "Proverbs 16:3"],
+      },
+      {
+        heading: "Trust and walk — not fear and freeze",
+        body:
+          "God leads those who are walking, not those paralyzed by the fear of choosing wrong: 'Your ears will hear a word behind you, saying, This is the way, walk in it.' He guides with His eye upon us — step by step, as we follow Him. If the Lord wills, you will do this or that.",
+        verses: ["Isaiah 30:21", "Psalm 32:8", "James 4:15", "Galatians 5:25"],
+      },
+    ],
+    keyVerses: ["Psalm 119:105", "Romans 12:2", "James 1:5", "Proverbs 3:5-6"],
+    raises: [],
+    followsFrom: ["is-god-in-control"],
+    related: ["what-should-i-do-now-that-im-saved", "who-is-the-holy-spirit"],
+    planned: ["What if I make the wrong decision?", "Does God have one specific plan for who I marry?"],
+    order: 29,
   },
 ];

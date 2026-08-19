@@ -37,6 +37,22 @@ export const categories: Category[] = [
     order: 4,
     entry: ["what-does-it-mean-to-be-born-again"],
   },
+  {
+    slug: "gospel",
+    title: "The Gospel",
+    tagline:
+      "The good news from first to last: the gospel itself, and the grace, justification, faith, and repentance that make it up.",
+    order: 5,
+    entry: ["what-is-the-gospel"],
+  },
+  {
+    slug: "suffering-will",
+    title: "Suffering & God's Will",
+    tagline:
+      "The hardest questions and the comfort of Scripture: why there is evil, whether God is in control, and how we know His will.",
+    order: 6,
+    entry: ["why-does-god-allow-suffering"],
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {
