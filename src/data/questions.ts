@@ -2275,10 +2275,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 6:9-13", "Luke 11:2-4"],
-    raises: [],
+    raises: ["why-pray-your-will-be-done"],
     followsFrom: ["how-do-i-pray"],
     related: ["how-do-i-pray"],
-    planned: ["Why pray 'your will be done' if God already has a will?"],
+    planned: ["What does it mean to pray in the Holy Spirit?"],
     order: 31,
   },
 
@@ -4891,5 +4891,91 @@ export const questions: Question[] = [
     related: ["how-do-i-know-gods-will", "who-is-the-father", "what-the-new-life-looks-like"],
     planned: ["What makes a marriage glorify God?"],
     order: 33,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Prayer (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "why-pray-your-will-be-done",
+    question: "Why pray 'your will be done' if God already has a will?",
+    category: "prayer",
+    summary:
+      "Praying 'your will be done' is not an attempt to bend the future around God's hesitation; it is the shape of trust itself. God's will stands regardless, but the prayer changes us, aligning our hearts with His, inviting us to ask within His will, and freeing us from the fear of outcomes.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 6,
+        title: "Jesus teaches us to pray it",
+        lookFor: "The prayer Christ gave has 'let your will be done' at its center; it is not an appendix but the heart of the prayer.",
+        focus: "5-15",
+      },
+      {
+        book: "Matthew",
+        chapter: 26,
+        title: "Jesus prays it in Gethsemane",
+        lookFor: "The Son pours out His honest desire and then submits: 'not what I desire, but what you desire.'",
+        focus: "36-46",
+      },
+      {
+        book: "1 John",
+        chapter: 5,
+        title: "Asking according to his will",
+        lookFor: "We have boldness to ask God anything according to His will, and He listens.",
+        focus: "13-21",
+      },
+      {
+        book: "Acts",
+        chapter: 21,
+        title: "The Lord's will be done",
+        lookFor: "When His people see that His will may mean hard things, they trust it anyway: 'The Lord's will be done.'",
+        focus: "1-14",
+      },
+      {
+        book: "Isaiah",
+        chapter: 55,
+        title: "My word will accomplish what I please",
+        lookFor: "God's purposes are not fragile; His word goes out and accomplishes what He sends it to do.",
+        focus: "10-11",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus taught us to pray it, and then He lived it",
+        body:
+          "This phrase is not a footnote to the Lord's Prayer; it is its hinge: 'Let your Kingdom come. Let your will be done, as in heaven, so on earth.' And in Gethsemane Jesus prayed the very same thing in the agonies of His own soul: 'let this cup pass away from me; nevertheless, not what I desire, but what you desire.' He did not pray it reluctantly; He taught us to pray it expectantly.",
+        verses: ["Matthew 6:10", "Matthew 26:39", "Luke 22:42"],
+      },
+      {
+        heading: "God's will is not at risk; it stands",
+        body:
+          "The prayer assumes nothing about God being undecided. Proverbs says there are many plans in a man's heart, but Yahweh's counsel will prevail. Isaiah pictures God's word going out and accomplishing what He pleases, never returning empty. Daniel declares that God does according to His will in heaven and on earth, and no one can stay His hand. His will is not waiting on our approval; James even tells us to plan no further than 'if the Lord wills.'",
+        verses: ["Proverbs 19:21", "Isaiah 55:11", "Daniel 4:35", "James 4:15"],
+      },
+      {
+        heading: "Praying it aligns us to Him",
+        body:
+          "Honest prayer includes our real desires, exactly as Jesus voiced His. But it also hands them over: 'not my will, but yours, be done.' The prayer does not create God's will; it creates in us a heart that wants what He wants. Every time we pray it, we are saying, in effect, that His way is better than ours, and we lean our whole weight onto His wisdom.",
+        verses: ["Luke 22:42", "Matthew 26:39", "Matthew 26:42"],
+      },
+      {
+        heading: "He invites us to ask within His will",
+        body:
+          "Far from making prayer pointless, God makes it meaningful: 'if we ask anything according to his will, he listens to us.' The Spirit Himself helps us pray when we do not know how, making intercession for the saints according to God. Asking is not resistance to His rule; it is the way His will works through His people. He commands us to bring our requests, and He welcomes them.",
+        verses: ["1 John 5:14", "1 John 5:15", "Romans 8:26-27", "Philippians 4:6"],
+      },
+      {
+        heading: "It frees us to trust the outcome",
+        body:
+          "When the believers saw that God's will for Paul meant chains, they stopped trying to control the future and said, 'The Lord's will be done.' That was not resignation without hope; it was peace that had found a center. To pray 'your will be done' is to hand the outcome to the One who is both sovereign and good, and it is the prayer that turns our anxiety into resting in Him.",
+        verses: ["Acts 21:13-14", "Philippians 4:6-7"],
+      },
+    ],
+    keyVerses: ["Matthew 6:10", "Luke 22:42", "1 John 5:14", "Romans 8:27", "Proverbs 19:21"],
+    raises: ["does-god-hear-my-prayers"],
+    followsFrom: ["what-does-the-lords-prayer-teach"],
+    related: ["what-does-the-lords-prayer-teach", "how-do-i-pray", "does-god-hear-my-prayers", "how-do-i-know-gods-will"],
+    planned: ["Does prayer change God's mind?"],
+    order: 34,
   },
 ];
