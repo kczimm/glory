@@ -2230,10 +2230,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Matthew 6:9-13", "Philippians 4:6-7", "Romans 8:26-27", "Luke 11:9"],
-    raises: ["what-does-the-lords-prayer-teach", "does-god-hear-my-prayers"],
+    raises: ["what-does-the-lords-prayer-teach", "does-god-hear-my-prayers", "what-is-fasting"],
     followsFrom: [],
     related: ["who-is-the-father", "what-should-i-do-now-that-im-saved"],
-    planned: ["What is fasting, and does it belong with prayer?"],
+    planned: ["What is the relationship between prayer and giving?"],
     order: 30,
   },
 
@@ -8210,6 +8210,92 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     followsFrom: ["how-do-i-know-gods-will", "does-god-change-his-mind"],
     related: ["how-do-i-know-gods-will", "does-god-change-his-mind", "what-if-i-make-the-wrong-decision", "do-my-choices-matter"],
     planned: ["What if my plans keep failing?"],
+    order: 36,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Prayer (continued: fasting)
+  // ------------------------------------------------------------------
+  {
+    slug: "what-is-fasting",
+    question: "What is fasting, and does it belong with prayer?",
+    category: "prayer",
+    summary:
+      "Fasting is the deliberate giving up of food, usually for a season, in order to devote ourselves to God. Scripture shows it joined to prayer, humility, and seeking the Lord, and Jesus assumed His followers would fast even as He assumed they would pray and give. Fasting is not a way to earn favor or twist God's arm; it is a discipline of dependence, an expression of hunger for God Himself, that belongs naturally with prayer.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 6,
+        title: "When you fast",
+        lookFor: "Jesus speaks of fasting as a normal practice, to be done before God in secret, not for show.",
+        focus: "16-18",
+      },
+      {
+        book: "Luke",
+        chapter: 5,
+        title: "The days will come when they will fast",
+        lookFor: "Jesus says His disciples will fast after He is taken away: fasting belongs to life in this age.",
+        focus: "33-35",
+      },
+      {
+        book: "Acts",
+        chapter: 13,
+        title: "Fasting and prayer in Antioch",
+        lookFor: "As the church served the Lord and fasted, the Spirit spoke; they fasted, prayed, and sent out missionaries.",
+        focus: "1-3",
+      },
+      {
+        book: "Isaiah",
+        chapter: 58,
+        title: "The fast God chooses",
+        lookFor: "God's word on fasting: it must be more than afflicting the soul, reaching outward to the hungry and the poor.",
+        focus: "3-7",
+      },
+      {
+        book: "Joel",
+        chapter: 2,
+        title: "Return to me with fasting",
+        lookFor: "The prophet calls God's people, with fasting, weeping, and mourning, to turn to the LORD with all their heart.",
+        focus: "12-13",
+      },
+    ],
+    points: [
+      {
+        heading: "Fasting is giving up food to give ourselves to God",
+        body:
+          "Fasting is not dieting or penance; it is the deliberate setting aside of food for a time to seek God. Jesus spoke of it as a normal part of devotion, 'when you fast,' alongside when you pray and when you give, and He taught it to be done before the Father in secret, not to impress people. Paul and the earliest church fasted while they worshiped and prayed. It is a way of turning our natural hunger toward God.",
+        verses: ["Matthew 6:16", "Matthew 6:18", "Acts 13:2", "Acts 13:3"],
+      },
+      {
+        heading: "It belongs with prayer and seeking the Lord",
+        body:
+          "In Scripture, fasting is rarely alone; it is joined to prayer, humility, and seeking. The church in Antioch 'served the Lord and fasted' when the Spirit spoke, and 'had fasted and prayed' when they sent out Barnabas and Saul. Elders were appointed 'with prayer and fasting.' Moses and Elijah fasted on the mountain as they drew near to God. Fasting empties us of distraction that we might be full of God, and so it pairs naturally with prayer.",
+        verses: ["Acts 13:2", "Acts 13:3", "Acts 14:23", "Matthew 4:2"],
+      },
+      {
+        heading: "It is a sign of our dependence and hunger for God",
+        body:
+          "When we fast, we are saying with our bodies what we believe with our hearts: that we need God more than we need bread. Moses said of Israel in the wilderness, God humbled you and let you hunger 'that he might make you know that man does not live by bread alone, but by every word that proceeds out of the mouth of the LORD.' Jesus, fasting in the wilderness, answered the tempter with exactly these words. Fasting is the discipline of living by every word of God.",
+        verses: ["Deuteronomy 8:3", "Matthew 4:4", "Matthew 4:2"],
+      },
+      {
+        heading: "It must be more than outward abstaining",
+        body:
+          "God's word through Isaiah rebukes a fasting that is merely a ritual of self-denial while hearts remain hard: the people ask why God does not notice their fasting, yet in it they still oppress and quarrel. The fast God chooses is one that loosens the bonds of wickedness, feeds the hungry, shelters the poor, and covers the naked. Fasting that does not lead to love is hollow; the discipline of self-denial is meant to make us more like the self-giving God.",
+        verses: ["Isaiah 58:3", "Isaiah 58:6", "Isaiah 58:7", "Joel 2:12"],
+      },
+      {
+        heading: "It is for emphatic seasons and for the ordinary walk",
+        body:
+          "Jesus said that His disciples would fast 'in those days' after the Bridegroom was taken away, marking life in this present age as a time for such dependence. Fasting may be for special seasons of seeking, for confession, for major decisions, or for the church's united prayer, and it is joined to humility of heart. Like all disciplines, it is not a way to earn God's favor but a way to receive more of Him, and it is never a substitute for love.",
+        verses: ["Luke 5:35", "Joel 2:12", "Matthew 6:18", "Isaiah 58:7"],
+      },
+    ],
+    keyVerses: ["Matthew 6:16-18", "Acts 13:2-3", "Isaiah 58:6-7", "Matthew 4:4", "Luke 5:35"],
+    raises: ["how-do-i-pray", "does-god-hear-my-prayers"],
+    followsFrom: ["how-do-i-pray", "what-does-the-lords-prayer-teach"],
+    related: ["how-do-i-pray", "what-does-the-lords-prayer-teach", "who-is-the-father", "what-the-new-life-looks-like"],
+    planned: ["How do I pray when I am desperate?"],
     order: 36,
   },
 ];
