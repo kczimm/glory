@@ -2359,10 +2359,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Psalm 27:14", "Luke 18:1-8", "2 Corinthians 12:9", "Habakkuk 2:3"],
-    raises: [],
+    raises: ["gods-voice-or-my-own-thoughts"],
     followsFrom: ["does-god-hear-my-prayers"],
     related: ["why-does-god-allow-suffering", "is-god-in-control"],
-    planned: ["How do I know God's voice from my own thoughts?"],
+    planned: ["Does God still speak today?"],
     order: 33,
   },
 
@@ -4977,5 +4977,88 @@ export const questions: Question[] = [
     related: ["what-does-the-lords-prayer-teach", "how-do-i-pray", "does-god-hear-my-prayers", "how-do-i-know-gods-will"],
     planned: ["Does prayer change God's mind?"],
     order: 34,
+  },
+
+  {
+    slug: "gods-voice-or-my-own-thoughts",
+    question: "How do I know God's voice from my own thoughts?",
+    category: "prayer",
+    summary:
+      "God's voice comes to us today chiefly through His word, illumined by His Spirit, and confirmed by wisdom and the Body of Christ. His voice never contradicts Scripture, always points to Christ, and produces humility, holiness, and peace. Test every inner impression by the Word and by the fruit it bears, the way the Bereans tested even the teaching of the apostles.",
+    passages: [
+      {
+        book: "John",
+        chapter: 10,
+        title: "The Shepherd's voice",
+        lookFor: "Jesus pictures His people as sheep who recognize the Shepherd's voice and follow it.",
+        focus: "1-30",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 2,
+        title: "Spiritually discerned",
+        lookFor: "The things of God are spiritually discerned: the Spirit searches the deep things of God and gives the mind of Christ.",
+        focus: "6-16",
+      },
+      {
+        book: "1 Thessalonians",
+        chapter: 5,
+        title: "Do not quench the Spirit; test all things",
+        lookFor: "Paul joins the two: do not quench the Spirit, and test all things, holding firmly to what is good.",
+        focus: "16-24",
+      },
+      {
+        book: "2 Timothy",
+        chapter: 3,
+        title: "All Scripture is God-breathed",
+        lookFor: "The place where God has most certainly spoken: every Scripture is breathed out by God and profitable for teaching.",
+        focus: "10-17",
+      },
+      {
+        book: "1 John",
+        chapter: 4,
+        title: "Test the spirits",
+        lookFor: "We are told not to believe every spirit, but to test the spirits, because not every voice is from God.",
+        focus: "1-6",
+      },
+    ],
+    points: [
+      {
+        heading: "God's clearest voice is His word",
+        body:
+          "If you want to know God's voice, begin where He has certainly spoken. Paul says all Scripture is God-breathed and useful for teaching, reproof, correction, and training in righteousness. The psalmist calls it a lamp to the feet and a light to the path. And Jesus describes His people as sheep who hear His voice and follow: the Shepherd speaks, God spoke through the prophets, and in these last days He has spoken through His Son.",
+        verses: ["2 Timothy 3:16-17", "Psalm 119:105", "John 10:27", "Hebrews 1:1-2"],
+      },
+      {
+        heading: "His voice never contradicts His word",
+        body:
+          "John warns us plainly: 'don't believe every spirit, but test the spirits.' Even in the Old Testament, a prophet who turned the people from God was to be refused regardless of signs and wonders. The Bereans examined the Scriptures daily to check even the apostles' teaching, and Paul said that even an angel preaching a different gospel was to be rejected. Any impression that fights the Bible is not His voice.",
+        verses: ["1 John 4:1", "Deuteronomy 13:1-3", "Acts 17:11", "Galatians 1:8"],
+      },
+      {
+        heading: "The Spirit illumines the word in our hearts",
+        body:
+          "The natural person does not receive the things of the Spirit, for they are spiritually discerned; but the Spirit searches the deep things of God and gives us the mind of Christ. Jesus promised the Spirit would guide His people into all truth and glorify Him. The same Spirit who inspired the word also opens it to us, so that what is read becomes heard.",
+        verses: ["1 Corinthians 2:10", "1 Corinthians 2:14", "1 Corinthians 2:16", "John 16:13", "John 16:14"],
+      },
+      {
+        heading: "He confirms through wisdom, counsel, and peace",
+        body:
+          "God's leading is not usually a lone, unverifiable impression. James says if you lack wisdom, ask. Paul tells us not to quench the Spirit, yet also to test all things and hold firmly to what is good. Plan to weigh an impression against the wisdom of mature believers, and notice the fruit: what is true, honorable, and pure, letting the peace of Christ rule in your heart.",
+        verses: ["James 1:5", "1 Thessalonians 5:19-21", "Philippians 4:8-9", "Colossians 3:15"],
+      },
+      {
+        heading: "The test is what it produces",
+        body:
+          "The Spirit's voice glorifies Christ, and it produces His fruit: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control. God's voice never whispers you into pride, fear, or sin; it leads to humble obedience. We know that we know Him, John says, if we keep His commandments. The voice that tells you to walk as Christ walked, toward love and holiness, is the voice worth following.",
+        verses: ["John 16:14", "Galatians 5:22-23", "1 John 2:3", "1 John 2:6"],
+      },
+    ],
+    keyVerses: ["John 10:27", "2 Timothy 3:16-17", "1 Corinthians 2:14", "1 Thessalonians 5:19-21", "1 John 4:1"],
+    raises: ["how-do-i-know-the-spirit-is-leading-me"],
+    followsFrom: ["why-does-god-seem-silent", "how-do-i-pray"],
+    related: ["why-does-god-seem-silent", "how-do-i-know-the-spirit-is-leading-me", "can-i-trust-the-bible", "is-it-okay-to-doubt"],
+    planned: ["What should I do when God's voice is quiet?"],
+    order: 35,
   },
 ];
