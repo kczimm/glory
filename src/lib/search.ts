@@ -1,4 +1,4 @@
-import { verses, questions, type Question } from "@/data";
+import { verses, questions, getCategory, type Question } from "@/data";
 
 /**
  * Search over the vendored World English Bible and over the study questions.
@@ -43,22 +43,57 @@ export function searchScripture(term: string, limit = 8): VerseHit[] {
   return out;
 }
 
-/** Search questions by title, summary, study points, and key verses. */
+/**
+ * Broad text surface searched for a question: the question itself, summary,
+ * study points, key verses, every passage title + lookFor (the topic wording
+ * learners type), and the category title.
+ */
+function questionHaystack(q: Question): string {
+  return [
+    q.question,
+    q.summary,
+    getCategory(q.category)?.title ?? q.category,
+    ...q.keyVerses,
+    ...q.points.flatMap((p) => [p.heading, p.body]),
+    ...q.passages.flatMap((p) => [p.title, p.lookFor]),
+  ]
+    .join(" ")
+    .toLowerCase();
+}
+
+/** Reduce a word to a common root so singular/plural and verb forms match. */
+function stem(w: string): string {
+  const s = w.toLowerCase().replace(/['']s$/, "");
+  if (s.endsWith("ies") && s.length > 4) return s.slice(0, -3) + "y";
+  if (s.endsWith("es") && s.length > 3) return s.slice(0, -2);
+  if (s.endsWith("s") && s.length > 3) return s.slice(0, -1);
+  return s;
+}
+
+/**
+ * Match a term against haystack: substring, or (word-form tolerant) token
+ * match. Multi-word terms require every word to appear, tolerating plu-/sing.
+ */
+function matchesTerm(term: string, haystack: string): boolean {
+  const t = term.trim().toLowerCase().replace(/\s+/g, " ");
+  if (!t) return false;
+  const hay = haystack.toLowerCase();
+  const words = t.split(" ");
+  if (words.length === 1) {
+    if (hay.includes(t)) return true;
+    return hay.split(/\W+/).some((tok) => tok && stem(tok) === stem(t));
+  }
+  if (hay.includes(t)) return true;
+  const tokens = new Set(hay.split(/\W+/).map(stem));
+  return words.every((w) => (w.length < 2 ? true : tokens.has(stem(w))));
+}
+
+/** Search questions by title, summary, topics, study points, and key verses. */
 export function searchQuestions(term: string, limit = 6): Question[] {
   const t = term.trim().toLowerCase();
   if (!t) return [];
   return questions
-    .filter((q) => {
-      const hay = [
-        q.question,
-        q.summary,
-        ...q.keyVerses,
-        ...q.points.flatMap((p) => [p.heading, p.body]),
-      ]
-        .join(" ")
-        .toLowerCase();
-      return hay.includes(t);
-    })
+    .filter((q) => matchesTerm(t, questionHaystack(q)))
     .slice(0, limit);
 }
 
