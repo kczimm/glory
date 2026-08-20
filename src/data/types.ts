@@ -61,7 +61,9 @@ export interface Question {
   followsFrom: string[];
   /** sibling questions worth visiting */
   related: string[];
-  /** future questions this study raises that we haven't written yet */
+  /** future questions this study raises that we haven't written yet. Rendered as
+   * an invitation to take the question to a church or small group; if we write it
+   * later it becomes a `raises` link. */
   planned: string[];
   order: number;
 }

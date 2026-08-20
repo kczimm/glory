@@ -62,7 +62,7 @@ In Next 16, route `params` is a **Promise** — `await params` before reading it
   This is the engine of the app — the Scripture-raises-next-question flow
   rendered in the gold "As you read, you may wonder…" panel.
 - `followsFrom` → the inverse (what led here).
-- `planned` → future questions (shown as "Coming soon" so a trail never dead-ends).
+- `planned` → future questions this study raises that we haven't written yet. Rendered as an invitation to take the question to a church or small group (never "Coming soon"); write it later and it becomes a `raises` link.
 
 When adding content, keep every study point **grounded in specific verses**,
 and wire `raises`/`followsFrom` so journeys continue organically.

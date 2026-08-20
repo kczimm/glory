@@ -185,14 +185,16 @@ export default async function QuestionPage({ params }: Props) {
               {question.planned.map((p, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-between gap-3 rounded-2xl border border-dashed border-ink-faint/40 px-6 py-4"
+                  className="flex flex-col gap-2 rounded-2xl border border-dashed border-ink-faint/40 px-6 py-5"
                 >
                   <span className="font-display text-[16px] italic text-ink-soft">
                     {p}
                   </span>
-                  <span className="shrink-0 rounded-full bg-cream px-3 py-1 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-ink-faint">
-                    Coming soon
-                  </span>
+                  <p className="text-[13px] leading-relaxed text-ink-faint">
+                    We haven&apos;t written this one yet. Take it to your church or
+                    small group: the Word answers it wherever it is asked. If we
+                    study it here later, all the better.
+                  </p>
                 </div>
               ))}
             </div>
