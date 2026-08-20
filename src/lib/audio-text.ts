@@ -32,6 +32,21 @@ export interface AudioTextStudy {
   question: string;
   summary: string;
   points: AudioTextPoint[];
+  /** question slugs this study raises; spoken in the outro */
+  raises?: string[];
+  /** future questions not yet written; the outro invites them to church */
+  planned?: string[];
+}
+
+export interface StudyItemsOptions {
+  /** spoken line before the points, e.g. when chaining in from the chapters */
+  cue?: string;
+  /** page element id the outro scrolls to (the "you may wonder" panel) */
+  outroTargetId?: string;
+  /** resolves a raises slug to its question title for the outro */
+  resolveTitle?: (slug: string) => string | null;
+  /** up to 3 question titles for the hands-free "keep going" menu */
+  menu?: string[];
 }
 
 // ---- normalization and chunking -------------------------------------------
@@ -101,6 +116,11 @@ function findClauseCut(text: string, max: number): number {
   for (let i = 0; i < window.length; i++) {
     const ch = window[i];
     if (ch === "," || ch === ";" || ch === ":") idx = i + 1;
+  }
+  // Absorb any quote marks right after the separator ("…them,\" says"): the
+  // next chunk starts cleanly and the pieces reassemble the source exactly.
+  if (idx > -1) {
+    while (idx < text.length && (text[idx] === '"' || text[idx] === "'")) idx += 1;
   }
   return idx;
 }
@@ -183,18 +203,23 @@ export function chapterItems(
 }
 
 /**
- * The study listening queue: each point with its body and grounding verses
- * (spoken as "John chapter 3, verse 16. ..."). Starts at the first point,
- * not the question/summary at the top of the page. Every item carries a
- * targetId pointing at the region of the page being read, so the reader can
+ * The study listening queue: optionally a cue, then each point with its body
+ * and grounding verses (spoken as "John chapter 3, verse 16. ..."), then the
+ * outro, which poses the questions the study raises. Starts at the first
+ * point, not the question/summary at the top of the page. Every item carries
+ * a targetId pointing at the region of the page being read, so the reader can
  * scroll/highlight it as it goes. `verseText` resolves a ref like
- * getPassageText. Mirrors StudyListen.
+ * getPassageText. Mirrors StudyListen (and VisitChain's chain entry).
  */
 export function studyItems(
   question: AudioTextStudy,
-  verseText: (ref: string) => string | null
+  verseText: (ref: string) => string | null,
+  opts?: StudyItemsOptions
 ): AudioChunk[] {
   const out: AudioChunk[] = [];
+  if (opts?.cue) {
+    out.push({ id: "cue", targetId: "sp-0", label: "The study", text: opts.cue });
+  }
   question.points.forEach((p, i) => {
     const prefix = `p${i}`;
     out.push({ id: `${prefix}h`, targetId: `sp-${i}`, label: p.heading, text: p.heading });
@@ -220,6 +245,61 @@ export function studyItems(
       });
     });
   });
+
+  // The outro: pose the questions Scripture just raised, so the listener is
+  // handed the next step instead of silence. Planned questions are read as
+  // wonders, then the whole question is invited to church / small group.
+  const titles = (question.raises ?? [])
+    .map((slug) => opts?.resolveTitle?.(slug) ?? null)
+    .filter((t): t is string => Boolean(t));
+  const planned = question.planned ?? [];
+  if (titles.length > 0 || planned.length > 0) {
+    const targetId = opts?.outroTargetId;
+    out.push({
+      id: "outro",
+      targetId,
+      label: "You may wonder…",
+      text:
+        titles.length > 0
+          ? "That completes this study. As you read it, you may now wonder:"
+          : "That completes this study.",
+    });
+    titles.forEach((title, i) => {
+      out.push({ id: `outro-${i}`, targetId, label: title, text: title });
+    });
+    planned.forEach((title, i) => {
+      out.push({
+        id: `outro-p-${i}`,
+        targetId,
+        label: title,
+        text: `You may also wonder: ${title}.`,
+      });
+    });
+    if (planned.length > 0) {
+      out.push({
+        id: "outro-closing",
+        targetId,
+        label: "Take it to church",
+        text: "We haven't written these yet. Take your question to your church or small group: the Word answers it wherever it is asked.",
+      });
+    }
+  }
+
+  // The hands-free menu: name the listening options so a busy listener can
+  // answer "keep going / one / two / three / stop" without touching the
+  // phone. Only included when the app decides to support it (see reply.ts);
+  // browsers without recognition simply omit this chunk and end gracefully.
+  const menu = opts?.menu ?? [];
+  if (menu.length > 0) {
+    const targetId = opts?.outroTargetId;
+    const text =
+      menu.length === 1
+        ? "To keep going, say continue. If we don't hear you, this ends here."
+        : menu.length === 2
+          ? `To keep going, say one for ${menu[0]}, or two for ${menu[1]}. If we don't hear you, this ends here.`
+          : `To keep going, say one for ${menu[0]}, two for ${menu[1]}, or three for ${menu[2]}. If we don't hear you, this ends here.`;
+    out.push({ id: "outro-menu", targetId, label: "Keep going?", text });
+  }
   return out;
 }
 

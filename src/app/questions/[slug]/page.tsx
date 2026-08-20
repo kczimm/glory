@@ -13,6 +13,7 @@ import VerseCard from "@/components/VerseCard";
 import ChapterReader from "@/components/ChapterReader";
 import JourneyBreadcrumb from "@/components/JourneyBreadcrumb";
 import StudyListen from "@/components/StudyListen";
+import VisitChain from "@/components/VisitChain";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -45,6 +46,8 @@ export default async function QuestionPage({ params }: Props) {
 
   return (
     <article>
+      {/* Registers chapter -> chapter -> study audio continuation (renders nothing). */}
+      <VisitChain question={question} />
       <JourneyBreadcrumb key={slug} slug={slug} />
       {/* Header */}
       <header className="border-b border-line bg-gradient-to-b from-cream/70 to-parchment">
@@ -147,7 +150,7 @@ export default async function QuestionPage({ params }: Props) {
         </section>
 
         {/* The engine: what the Word raises */}
-        <section className="rounded-3xl border border-gold/30 bg-gold-wash/60 px-6 py-10 sm:px-10">
+        <section id="raises" className="rounded-3xl border border-gold/30 bg-gold-wash/60 px-6 py-10 sm:px-10">
           <p className="text-[12px] font-semibold uppercase tracking-[0.24em] text-gold-deep">
             As you read, you may wonder…
           </p>

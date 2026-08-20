@@ -15,6 +15,11 @@
  *  - makes pause/resume reliable: iOS cannot resume a paused utterance, so
  *    pause cancels and resume re-speaks the same chunk.
  *
+ * Continuations: a source may register a forward continuation; when its
+ * queue ends, the next queue plays after a short beat of silence (visit
+ * chaining: chapter 2 -> chapter 3 -> study). Stopping, pausing, or seeking
+ * during the beat cancels the handoff.
+ *
  * Exposed as a tiny external store for React `useSyncExternalStore`,
  * mirroring the journey store: components call the actions below, then
  * subscribe to snapshot state. The SSR snapshot is the inert initial state,
@@ -244,14 +249,47 @@ function voiceFor(uri: string | null): SpeechSynthesisVoice | null {
   return s.getVoices().find((v) => v.voiceURI === uri) ?? null;
 }
 
+/**
+ * Registered forward continuations, keyed by the source whose queue end
+ * triggers them. Pages register these (e.g. VisitChain) and unregister on
+ * unmount, so a chain lives exactly as long as the page that owns it.
+ */
+const continuations = new Map<string, () => void>();
+
+/**
+ * When the queue for `sourceId` reaches its end, call `forward` instead of
+ * stopping. Returns an unsubscribe; components must call it on unmount so
+ * chaining never outlives the page that registered it.
+ */
+export function registerContinuation(sourceId: string, forward: () => void): () => void {
+  continuations.set(sourceId, forward);
+  return () => {
+    if (continuations.get(sourceId) === forward) continuations.delete(sourceId);
+  };
+}
+
 function advance(sess: number) {
   if (sess !== session) return;
   const next = state.index + 1;
   if (next < state.queue.length) {
     playChunkAt(next, sess);
-  } else {
-    stopInternal();
+    return;
   }
+  // A registered continuation keeps the visit going (e.g. chapter 2 -> 3 ->
+  // study). Leave a short beat of silence so the boundary reads as a
+  // transition, not a glitch; any control action during the beat bumps
+  // `session` and cancels the handoff. Look the continuation up at fire
+  // time so an unregister/re-register between now and then wins.
+  const sourceId = state.sourceId;
+  const forward = sourceId ? continuations.get(sourceId) : undefined;
+  if (forward) {
+    window.setTimeout(() => {
+      if (sess !== session) return;
+      forward();
+    }, 800);
+    return;
+  }
+  stopInternal();
 }
 
 /**
