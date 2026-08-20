@@ -223,10 +223,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 28:19", "John 14:16-17", "2 Corinthians 13:14", "Hebrews 1:3"],
-    raises: ["is-jesus-really-god", "who-is-the-father", "can-we-understand-the-trinity"],
+    raises: ["is-jesus-really-god", "who-is-the-father", "can-we-understand-the-trinity", "how-do-the-persons-of-the-trinity-relate"],
     followsFrom: ["is-the-holy-spirit-god", "is-jesus-really-god"],
     related: ["who-is-the-holy-spirit", "who-is-the-father"],
-    planned: ["How do the Persons of the Trinity relate to one another?"],
+    planned: [],
     order: 3,
   },
 
@@ -371,10 +371,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 1:1", "John 1:14", "Philippians 2:9-11", "Hebrews 1:3", "Mark 10:45"],
-    raises: ["is-jesus-really-god", "why-did-jesus-have-to-die", "what-does-it-mean-that-jesus-is-the-son-of-god", "why-did-jesus-call-himself-son-of-man"],
+    raises: ["is-jesus-really-god", "why-did-jesus-have-to-die", "what-does-it-mean-that-jesus-is-the-son-of-god", "why-did-jesus-call-himself-son-of-man", "what-did-jesus-teach-about-the-kingdom-of-god"],
     followsFrom: ["who-is-the-father"],
     related: ["who-is-the-holy-spirit"],
-    planned: ["What did Jesus teach about the kingdom of God?"],
+    planned: [],
     order: 5,
   },
 
@@ -529,10 +529,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 3:23", "Romans 5:8", "Isaiah 53:5-6", "2 Corinthians 5:21", "Mark 10:45"],
-    raises: ["how-can-i-be-saved", "did-jesus-rise-from-the-dead", "between-the-cross-and-the-resurrection"],
+    raises: ["how-can-i-be-saved", "did-jesus-rise-from-the-dead", "between-the-cross-and-the-resurrection", "what-does-the-creed-mean-by-he-descended-into-hell"],
     followsFrom: ["who-is-jesus", "is-jesus-really-god"],
     related: [],
-    planned: ["What does the creed mean by 'he descended into hell'?"],
+    planned: [],
     order: 7,
   },
 
@@ -605,10 +605,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 2:8-9", "Romans 10:9-10", "John 14:6", "Romans 8:38-39", "1 John 5:11-13"],
-    raises: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-happens-when-i-sin", "what-should-i-do-now-that-im-saved", "faith-or-works", "what-is-the-new-heart-that-god-promised"],
+    raises: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-happens-when-i-sin", "what-should-i-do-now-that-im-saved", "faith-or-works", "what-is-the-new-heart-that-god-promised", "how-is-the-new-covenant-different-from-the-old-one"],
     followsFrom: ["why-did-jesus-have-to-die", "did-jesus-rise-from-the-dead"],
     related: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
-    planned: ["How is the new covenant different from the old one?"],
+    planned: [],
     order: 8,
   },
 
@@ -897,10 +897,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 10:27-29", "Romans 8:38-39", "Philippians 1:6", "John 6:37-39"],
-    raises: ["spirits-witness-or-my-own-feelings", "what-does-it-mean-to-be-sealed-with-the-holy-spirit"],
+    raises: ["spirits-witness-or-my-own-feelings", "what-does-it-mean-to-be-sealed-with-the-holy-spirit", "what-is-the-difference-between-assurance-and-presumption"],
     followsFrom: ["how-can-i-be-saved"],
     related: ["what-happens-when-i-sin", "who-is-the-holy-spirit", "what-is-faith"],
-    planned: ["What is the difference between assurance and presumption?"],
+    planned: [],
     order: 12,
   },
 
@@ -1501,10 +1501,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["John 14:9", "1 John 3:1", "John 3:16", "Matthew 6:9", "Ephesians 1:5"],
-    raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit", "still-my-father-when-i-fail", "what-does-it-mean-that-god-is-love"],
+    raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit", "still-my-father-when-i-fail", "what-does-it-mean-that-god-is-love", "how-does-gods-love-differ-from-human-love"],
     followsFrom: ["what-is-the-trinity"],
     related: ["what-is-the-trinity", "who-is-jesus", "why-does-god-allow-suffering", "how-do-i-pray"],
-    planned: ["How does God's love differ from human love?"],
+    planned: [],
     order: 20,
   },
 
@@ -2033,10 +2033,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Romans 8:28", "Genesis 50:20", "2 Corinthians 1:3-4", "Revelation 21:4"],
-    raises: ["is-god-in-control", "where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well"],
+    raises: ["is-god-in-control", "where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "how-do-i-help-a-friend-who-is-suffering"],
     followsFrom: ["what-does-it-mean-that-the-world-hates-jesus"],
     related: ["who-is-the-father", "where-is-jesus-now", "why-does-god-seem-silent"],
-    planned: ["How do I help a friend who is suffering?"],
+    planned: [],
     order: 27,
   },
 
@@ -2404,10 +2404,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["2 Timothy 3:16-17", "Matthew 24:35", "2 Peter 1:21", "Psalm 19:7"],
-    raises: ["how-should-i-read-the-bible", "is-the-whole-bible-about-jesus", "why-do-bible-translations-differ", "how-was-the-bible-written-down"],
+    raises: ["how-should-i-read-the-bible", "is-the-whole-bible-about-jesus", "why-do-bible-translations-differ", "how-was-the-bible-written-down", "how-do-we-know-which-books-belong-in-the-bible"],
     followsFrom: [],
     related: [],
-    planned: ["How do we know which books belong in the Bible?"],
+    planned: [],
     order: 34,
   },
 
@@ -2538,10 +2538,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Hebrews 10:24-25", "Ephesians 4:15-16", "Acts 2:42", "1 Corinthians 12:27"],
-    raises: ["what-is-baptism", "what-is-the-lords-supper", "what-is-a-healthy-church"],
+    raises: ["what-is-baptism", "what-is-the-lords-supper", "what-is-a-healthy-church", "what-is-church-discipline"],
     followsFrom: ["made-for-relationship"],
     related: ["what-should-i-do-now-that-im-saved"],
-    planned: ["What is church discipline?"],
+    planned: [],
     order: 37,
   },
 
@@ -2708,10 +2708,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Acts 1:11", "1 Thessalonians 4:16-17", "Revelation 1:7", "2 Peter 3:12"],
-    raises: ["signs-before-jesus-returns"],
+    raises: ["signs-before-jesus-returns", "what-is-the-rapture"],
     followsFrom: ["what-happens-when-i-die", "where-is-jesus-now"],
     related: ["where-is-jesus-now", "what-is-the-resurrection"],
-    planned: ["What is the rapture?"],
+    planned: [],
     order: 41,
   },
 
@@ -2879,10 +2879,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Romans 3:23", "Romans 5:12", "Romans 6:23", "1 John 3:4"],
-    raises: ["does-everyone-deserve-gods-judgment"],
+    raises: ["does-everyone-deserve-gods-judgment", "how-does-god-judge-people-who-never-heard-of-jesus"],
     followsFrom: ["what-does-it-mean-to-be-made-in-gods-image"],
     related: ["why-did-jesus-have-to-die", "what-is-repentance", "what-happens-when-i-sin"],
-    planned: ["How does God judge people who never heard of Jesus?"],
+    planned: [],
     order: 45,
   },
 
@@ -3129,10 +3129,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["John 14:16-17", "John 14:18", "John 16:7", "John 15:26", "Acts 2:38-39"],
-    raises: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit", "how-do-i-know-the-spirit-is-leading-me"],
+    raises: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit", "how-do-i-know-the-spirit-is-leading-me", "what-is-the-unpardonable-sin"],
     followsFrom: ["who-is-the-holy-spirit"],
     related: ["who-is-the-holy-spirit", "is-the-holy-spirit-god", "what-are-spiritual-gifts"],
-    planned: ["What is the unpardonable sin?"],
+    planned: [],
     order: 16,
   },
 
@@ -3630,10 +3630,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Mark 14:61-62", "John 5:22-23", "Hebrews 1:3", "Hebrews 2:9", "1 Timothy 2:5"],
-    raises: [],
+    raises: ["how-can-one-person-be-fully-god-and-fully-man"],
     followsFrom: ["what-does-it-mean-that-jesus-is-the-son-of-god", "who-is-jesus"],
     related: ["why-did-jesus-call-himself-son-of-man", "what-does-it-mean-that-jesus-is-the-son-of-god", "is-jesus-really-god", "does-jesus-sharing-gods-nature-mean-two-gods"],
-    planned: ["How can one Person be fully God and fully man at once?"],
+    planned: [],
     order: 20,
   },
 
@@ -3713,10 +3713,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["John 5:22", "Luke 19:10", "John 3:17", "Romans 8:1", "1 John 4:17"],
-    raises: [],
+    raises: ["what-is-the-final-judgment-and-who-will-be-there"],
     followsFrom: ["why-did-jesus-call-himself-son-of-man", "why-is-jesus-both-son-of-god-and-son-of-man"],
     related: ["why-did-jesus-call-himself-son-of-man", "what-happens-when-i-die", "is-god-in-control"],
-    planned: ["What is the final judgment, and who will be there?"],
+    planned: [],
     order: 21,
   },
 
@@ -4972,10 +4972,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Matthew 6:10", "Luke 22:42", "1 John 5:14", "Romans 8:27", "Proverbs 19:21"],
-    raises: ["does-god-hear-my-prayers"],
+    raises: ["does-god-hear-my-prayers", "does-prayer-change-gods-mind"],
     followsFrom: ["what-does-the-lords-prayer-teach"],
     related: ["what-does-the-lords-prayer-teach", "how-do-i-pray", "does-god-hear-my-prayers", "how-do-i-know-gods-will"],
-    planned: ["Does prayer change God's mind?"],
+    planned: [],
     order: 34,
   },
 
@@ -5908,10 +5908,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Romans 3:23", "Romans 6:23", "Romans 3:19", "Psalm 51:4", "Romans 8:1"],
-    raises: ["why-did-jesus-have-to-die", "how-can-i-be-saved", "what-is-justification"],
+    raises: ["why-did-jesus-have-to-die", "how-can-i-be-saved", "what-is-justification", "what-is-hell"],
     followsFrom: ["what-is-sin", "what-does-it-mean-to-be-made-in-gods-image"],
     related: ["what-is-sin", "why-did-jesus-have-to-die", "what-happens-when-i-die", "is-god-in-control"],
-    planned: ["What is hell?"],
+    planned: [],
     order: 48,
   },
 
@@ -6077,10 +6077,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Mark 5:9", "Luke 10:17", "Ephesians 6:12", "James 2:19", "1 John 3:8"],
-    raises: ["what-is-spiritual-warfare"],
+    raises: ["what-is-spiritual-warfare", "can-a-christian-be-tormented-by-demons"],
     followsFrom: ["who-is-satan"],
     related: ["who-is-satan", "what-is-spiritual-warfare", "how-do-i-fight-sin", "gods-voice-or-my-own-thoughts"],
-    planned: ["Can a Christian be tormented by demons?"],
+    planned: [],
     order: 50,
   },
 
@@ -6667,10 +6667,10 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
       },
     ],
     keyVerses: ["Acts 1:5", "1 Corinthians 12:13", "Acts 2:38-39", "Mark 1:8", "Acts 1:8"],
-    raises: ["what-are-spiritual-gifts", "who-is-the-holy-spirit", "how-do-i-know-the-spirit-is-leading-me"],
+    raises: ["what-are-spiritual-gifts", "who-is-the-holy-spirit", "how-do-i-know-the-spirit-is-leading-me", "what-is-speaking-in-tongues-and-is-it-for-today"],
     followsFrom: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
     related: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit", "holy-spirit-in-the-old-testament", "what-are-spiritual-gifts"],
-    planned: ["What is speaking in tongues, and is it for today?"],
+    planned: [],
     order: 24,
   },
 
@@ -8894,5 +8894,1370 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     related: ["is-the-whole-bible-about-jesus", "who-is-jesus", "what-is-the-gospel", "how-should-i-read-the-bible"],
     planned: ["How should I read the Psalms?"],
     order: 41,
+  },
+
+  // ------------------------------------------------------------------
+  // NEW: theological load-bearers and the biggest gap in each trail
+  // ------------------------------------------------------------------
+  {
+    slug: "how-do-the-persons-of-the-trinity-relate",
+    question: "How do the Persons of the Trinity relate to one another?",
+    category: "holy-spirit",
+    summary:
+      "The Father, the Son, and the Holy Spirit are one God in three Persons, and the Bible shows them relating to one another in love and in distinct roles. They are not three gods and not three parts of one being: they are one God, and each Person is fully God. Their relationship is not an abstract theory; it is the shape of our salvation, because the Father sends, the Son redeems, and the Spirit applies.",
+    passages: [
+      {
+        book: "John",
+        chapter: 14,
+        title: "The Father, the Son, and the Spirit at work",
+        lookFor: "Jesus promises the Helper whom the Father will send in His name: watch how all three Persons are named and how they relate to one another.",
+        focus: "15-31",
+      },
+      {
+        book: "John",
+        chapter: 17,
+        title: "Jesus prays to the Father",
+        lookFor: "The whole prayer is full of the Father's relationship with the Son: glory given and received, and love shared before the world existed.",
+      },
+      {
+        book: "Matthew",
+        chapter: 3,
+        title: "All three Persons at Jesus' baptism",
+        lookFor: "The Son is baptized, the Spirit descends like a dove, and the Father speaks from heaven: all three present at once.",
+        focus: "13-17",
+      },
+      {
+        book: "Galatians",
+        chapter: 4,
+        title: "The sending God",
+        lookFor: "Paul compresses the whole plan into a few lines: the Father sends the Son, and the Spirit cries 'Abba, Father.'",
+        focus: "4-7",
+      },
+    ],
+    points: [
+      {
+        heading: "One God in three Persons, with one name",
+        body:
+          "Baptism is into 'the name of the Father and of the Son and of the Holy Spirit': one name, and yet the Father, Son, and Spirit are each named. Paul's benediction commends 'the grace of the Lord Jesus Christ, the love of God, and the fellowship of the Holy Spirit,' and Israel's oldest confession declares that 'Yahweh is one.' The Persons are distinct, but the God is one: three Persons sharing one divine being and one name.",
+        verses: ["Matthew 28:19", "2 Corinthians 13:14", "Deuteronomy 6:4", "1 Corinthians 8:6"],
+      },
+      {
+        heading: "The Father sends; the Son comes; the Spirit brings us in",
+        body:
+          "When the fullness of time came, 'God sent out his Son,' and because we are children, 'God sent out the Spirit of his Son into your hearts, crying, Abba, Father.' Jesus promised that the Father would send the Helper 'in my name,' and that the Spirit of truth 'proceeds from the Father' and testifies about Him. The roles differ because the Persons differ, yet each is fully God at work in our salvation.",
+        verses: ["Galatians 4:4-6", "John 14:26", "John 15:26", "John 14:16"],
+      },
+      {
+        heading: "They know, love, and glorify one another",
+        body:
+          "At the Jordan the Father said, 'This is my beloved Son, with whom I am well pleased,' and Jesus prayed that His disciples would see His glory, 'for you loved me before the foundation of the world.' The Father loves the Son and has given all things into His hand; the Son loves the Father and does what He commands; the Spirit takes what belongs to Christ and declares it to us. The life of God is not lonely; it is a relationship of eternal love.",
+        verses: ["Matthew 3:17", "John 17:24", "John 3:35", "John 14:31", "John 16:14"],
+      },
+      {
+        heading: "They work together in our salvation",
+        body:
+          "Paul blesses the church with 'the grace of the Lord Jesus Christ, the love of God, and the fellowship of the Holy Spirit,' and Peter describes believers chosen by the foreknowledge of God the Father, sanctified by the Spirit, and sprinkled with the blood of Jesus Christ. Titus says we were saved by mercy through 'the washing of regeneration and renewing by the Holy Spirit, whom he poured out on us richly, through Jesus Christ our Savior,' and Paul adds that we were sealed with 'the Holy Spirit of promise,' the pledge of our inheritance. Every Person is at work in every stage of our salvation.",
+        verses: ["2 Corinthians 13:14", "1 Peter 1:2", "Titus 3:4-6", "Ephesians 1:13-14", "2 Corinthians 1:21-22"],
+      },
+      {
+        heading: "Different roles do not mean unequal worth",
+        body:
+          "When Jesus told the disciples, 'the Father is greater than I,' He was not denying His deity; He was speaking of His sending and His incarnate obedience. Paul can say that the head of Christ is God, and yet also that all the fullness of God dwells in Christ bodily. The ordering is the pattern of love: the Son submits to the Father and the Spirit serves both, not because they are less, but because love has a shape. The truest greatness in God is the loving order of three Persons who are one.",
+        verses: ["John 14:28", "1 Corinthians 11:3", "Colossians 2:9", "Philippians 2:6-7"],
+      },
+    ],
+    keyVerses: ["Matthew 28:19", "2 Corinthians 13:14", "Galatians 4:4-6", "John 17:24", "Ephesians 1:13-14"],
+    raises: ["can-we-understand-the-trinity", "who-is-the-father", "who-is-the-holy-spirit"],
+    followsFrom: ["what-is-the-trinity", "can-we-understand-the-trinity"],
+    related: ["what-is-the-trinity", "can-we-understand-the-trinity", "is-the-holy-spirit-god", "is-jesus-really-god", "does-jesus-sharing-gods-nature-mean-two-gods"],
+    planned: ["How does the Trinity shape the way we worship and pray?"],
+    order: 25,
+  },
+
+  {
+    slug: "how-can-one-person-be-fully-god-and-fully-man",
+    question: "How can one Person be fully God and fully man at once?",
+    category: "jesus-christ",
+    summary:
+      "The Bible never explains the incarnation by thinning either side: Jesus Christ is fully God and fully man in one Person. He did not stop being God when He became man, and He was a real man, not God wearing a costume. This is the mystery to which Scripture constantly points, and it is the foundation of our redemption and our hope.",
+    passages: [
+      {
+        book: "Philippians",
+        chapter: 2,
+        title: "The mind of Christ",
+        lookFor: "Paul puts the incarnation before us: existing in the form of God, He emptied Himself and took the form of a servant.",
+        focus: "5-11",
+      },
+      {
+        book: "Hebrews",
+        chapter: 2,
+        title: "The Son made like His brothers",
+        lookFor: "Why the eternal Son had to share flesh and blood: to destroy death and to become a merciful and faithful high priest.",
+      },
+      {
+        book: "John",
+        chapter: 1,
+        title: "The Word became flesh",
+        lookFor: "John's prologue holds both truths together: the Word was God, and the Word became flesh and lived among us.",
+        focus: "1-18",
+      },
+      {
+        book: "Matthew",
+        chapter: 4,
+        title: "Tempted as a man",
+        lookFor: "Jesus is truly human: He is hungry after fasting and is tempted, yet He answers the tempter with Scripture.",
+        focus: "1-11",
+      },
+    ],
+    points: [
+      {
+        heading: "He is fully God",
+        body:
+          "John opens with two truths side by side: 'In the beginning was the Word, and the Word was with God, and the Word was God,' and Paul says that 'in him all the fullness of the Godhead dwells bodily.' He is 'the image of the invisible God,' the one through whom all things were created, 'the radiance of his glory' and 'the very image of his substance.' To Abraham He said, 'before Abraham came into existence, I AM,' taking the divine name for Himself.",
+        verses: ["John 1:1", "Colossians 2:9", "Colossians 1:15-16", "Hebrews 1:3", "John 8:58"],
+      },
+      {
+        heading: "He is fully man",
+        body:
+          "'The Word became flesh, and lived among us,' and the child grew, increasing in wisdom and stature and in favor with God and men. Hebrews says He shared in flesh and blood and was made like His brothers, so that He could become a merciful and faithful high priest. He was hungry after fasting, wept at a grave, and was 'in all points tempted like we are, yet without sin.' He is not a ghost in human clothing; He is a man.",
+        verses: ["John 1:14", "Luke 2:52", "Hebrews 2:14", "Hebrews 2:17", "Hebrews 4:15"],
+      },
+      {
+        heading: "He emptied Himself without ceasing to be God",
+        body:
+          "Paul describes the miracle: being 'in the form of God,' Christ 'didn't consider equality with God a thing to be grasped, but emptied himself, taking the form of a servant... he humbled himself, becoming obedient to death, yes, the death of the cross.' When He washed the disciples' feet, John notes that Jesus knew 'that the Father had given all things into his hands,' and He laid aside His garments and served. The humiliation was real, but it was the act of the One who remained God: He poured Himself out, and He showed what God is like.",
+        verses: ["Philippians 2:6-8", "John 13:3-4", "2 Corinthians 8:9", "John 20:28"],
+      },
+      {
+        heading: "Both natures, one Person",
+        body:
+          "The New Testament never sets the two truths side by side reluctantly; it assumes them at once. 'The Word was God' and 'the Word became flesh' are two clauses of one confession, and there is 'one mediator between God and men, the man Christ Jesus,' who is also 'God revealed in the flesh.' Thomas fell before the risen man and cried, 'My Lord and my God!' The church has always confessed one Person, Jesus Christ, with two natures: truly God and truly man, without confusion and without division.",
+        verses: ["John 1:1", "John 1:14", "1 Timothy 2:5", "1 Timothy 3:16", "John 20:28"],
+      },
+      {
+        heading: "Why it matters: our salvation and our hope",
+        body:
+          "Only God could bear the weight of sin and save us; only a man could stand in our place and die our death. Paul says that by the trespass of one man death reigned, 'so much more will those who receive the abundance of grace and of the gift of righteousness reign in life through the one, Jesus Christ.' Because He is our brother, He is a merciful high priest who helps the tempted; because He is God, His one offering avails for all. 'Though he was rich, yet for your sakes he became poor, that you through his poverty might become rich': the whole gospel stands on this one Person, fully God and fully man.",
+        verses: ["Romans 5:15-17", "Hebrews 4:15-16", "Hebrews 2:17-18", "Galatians 4:4-5", "2 Corinthians 8:9"],
+      },
+    ],
+    keyVerses: ["John 1:14", "Philippians 2:6-7", "Colossians 2:9", "Hebrews 4:15", "1 Timothy 2:5"],
+    raises: ["why-did-god-become-a-man", "who-is-jesus", "is-jesus-really-god"],
+    followsFrom: ["why-is-jesus-both-son-of-god-and-son-of-man", "who-is-jesus"],
+    related: ["is-jesus-really-god", "why-did-god-become-a-man", "does-jesus-sharing-gods-nature-mean-two-gods", "can-we-understand-the-trinity"],
+    planned: ["What does it mean that Jesus is both our brother and our Lord?"],
+    order: 27,
+  },
+
+  {
+    slug: "what-does-the-creed-mean-by-he-descended-into-hell",
+    question: "What does the creed mean by 'he descended into hell'?",
+    category: "jesus-christ",
+    summary:
+      "The Apostles' Creed says Jesus 'descended into hell,' but the word behind it is Hades, the realm of the dead, not the final lake of fire. Scripture's emphasis is that Christ really died, really entered the place of the dead, and was not abandoned there: He rose victorious. The line confesses the completeness of His death and the depth of His victory.",
+    passages: [
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Peter preaches the resurrection",
+        lookFor: "Peter quotes David: God would not leave His Holy One in Hades, and he says this was fulfilled when God raised Jesus up.",
+        focus: "22-36",
+      },
+      {
+        book: "Ephesians",
+        chapter: 4,
+        title: "He who descended also ascended",
+        lookFor: "Paul ties the giving of gifts to a descent and an ascent. What does the descent mean, and where did it reach?",
+        focus: "7-10",
+      },
+      {
+        book: "1 Peter",
+        chapter: 3,
+        title: "Preaching to the spirits in prison",
+        lookFor: "The most debated lines on this subject: what did Christ do between His death and resurrection?",
+        focus: "18-22",
+      },
+      {
+        book: "Luke",
+        chapter: 23,
+        title: "The crucifixion",
+        lookFor: "Watch the final hours: 'today you will be with me in Paradise' and 'Father, into your hands I commit my spirit.'",
+        focus: "32-46",
+      },
+    ],
+    points: [
+      {
+        heading: "What the creed says: He went to Hades, the realm of the dead",
+        body:
+          "The creed's 'descended into hell' translates the earlier 'descended into Hades,' the realm of the dead, what the Old Testament calls Sheol. Paul says that the Christ who ascended 'first descended into the lower parts of the earth,' and Jesus compared His own death to Jonah's three days and nights 'in the heart of the earth.' The confession testifies that His death was real: He did not merely appear to die; He went where the dead go.",
+        verses: ["Ephesians 4:9-10", "Matthew 12:40", "Acts 2:31"],
+      },
+      {
+        heading: "Hades is the grave and the realm of the dead, not the final hell",
+        body:
+          "Peter's Pentecost sermon quotes David: 'You will not leave my soul in Hades,' and he applies it to Christ. Like Sheol, Hades in the New Testament is the place of the dead, sometimes pictured with the ungodly in torment and the righteous in comfort; it is not the lake of fire at the final judgment. Jesus Himself told the dying thief, 'Today you will be with me in Paradise,' and in the same hour committed His spirit into His Father's hands. Death was not heaven for Him then; it was the doorway through which He trusted His Father.",
+        verses: ["Acts 2:27", "Acts 2:31", "Psalm 16:10", "Luke 23:43", "Luke 23:46"],
+      },
+      {
+        heading: "He was not held there; He rose holding the keys",
+        body:
+          "Peter says God raised Him up, 'having freed him from the agony of death, because it was not possible that he should be held by it.' Death did its worst and could not contain Him. The risen Christ announces, 'I was dead, and behold, I am alive forever more... I have the keys of Death and of Hades.' The descent is not a defeat; it is the moment in the heart of the earth before the grave gave way.",
+        verses: ["Acts 2:24", "Acts 2:27", "Revelation 1:18", "Acts 2:31"],
+      },
+      {
+        heading: "What about 'the spirits in prison'?",
+        body:
+          "First Peter says the Spirit-anointed Christ 'went and preached to the spirits in prison,' the disobedient of the days of Noah, and 1 Peter 4 adds that the gospel 'was preached even to the dead.' Interpreters differ: some hear a proclamation of victory to fallen spirits, others an offer of grace to the dead, and the church has never made one reading a test of faith. What is certain from the whole passage is that after His death Christ was active, triumphant, and 'at the right hand of God, angels and authorities and powers being made subject to him.'",
+        verses: ["1 Peter 3:18-22", "1 Peter 4:6", "Colossians 2:15"],
+      },
+      {
+        heading: "The point is the completeness of His victory",
+        body:
+          "Hebrews says He shared our flesh and blood 'so that through death he might bring to nothing him who had the power of death, that is, the devil.' Paul pictures the cross itself as the triumph: Christ 'stripped the principalities and the powers, he made a show of them openly, triumphing over them in it.' The descent into Hades tells us how low love went to save us, and the resurrection tells us how complete the victory is. That is why the creed does not end in the tomb; it moves from 'descended into hell' straight to the third day and the resurrection.",
+        verses: ["Hebrews 2:14-15", "Colossians 2:15", "Revelation 1:18", "Romans 10:6-7"],
+      },
+    ],
+    keyVerses: ["Acts 2:27", "Acts 2:31", "Ephesians 4:9-10", "Hebrews 2:14-15", "Revelation 1:18"],
+    raises: ["between-the-cross-and-the-resurrection", "did-jesus-rise-from-the-dead"],
+    followsFrom: ["why-did-jesus-have-to-die", "between-the-cross-and-the-resurrection"],
+    related: ["between-the-cross-and-the-resurrection", "did-jesus-rise-from-the-dead", "where-is-jesus-now", "what-happens-when-i-die"],
+    planned: ["Why does the Bible call death a sleep?"],
+    order: 28,
+  },
+
+  {
+    slug: "what-is-hell",
+    question: "What is hell?",
+    category: "who-we-are",
+    summary:
+      "Hell is the place God has appointed for the devil, his angels, and all who are not written in the book of life: eternal punishment described in Scripture as fire, darkness, destruction, and the second death. Jesus spoke of it more than anyone, so we cannot treat it as an embarrassment or an exaggeration. Its reality is terrible, and that is exactly why the gospel is such good news.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 25,
+        title: "The King separates the sheep and the goats",
+        lookFor: "The King's sentence to those on the left: 'the eternal fire which is prepared for the devil and his angels.'",
+        focus: "31-46",
+      },
+      {
+        book: "Mark",
+        chapter: 9,
+        title: "The cost of sin",
+        lookFor: "The strongest language in all the Gospels: Gehenna, the unquenchable fire, the worm that does not die.",
+        focus: "43-48",
+      },
+      {
+        book: "Luke",
+        chapter: 16,
+        title: "The rich man and Lazarus",
+        lookFor: "A window into the afterlife: comfort and torment, and a great gulf fixed between them.",
+        focus: "19-31",
+      },
+      {
+        book: "Revelation",
+        chapter: 20,
+        title: "The great white throne",
+        lookFor: "The lake of fire, the second death, and who is written in the book of life.",
+        focus: "11-15",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus spoke of it more than anyone",
+        body:
+          "The word Jesus used most was Gehenna, the valley outside Jerusalem whose history of judgment made it a picture of God's final wrath. He said it is better to enter life maimed than to be cast 'into Gehenna, into the unquenchable fire, where their worm doesn't die and the fire is not quenched,' and He warned against anger and lust in the same terms. He spoke this way because He loved people enough to tell them the truth about where sin leads.",
+        verses: ["Mark 9:43-48", "Matthew 5:22", "Matthew 5:29-30"],
+      },
+      {
+        heading: "The Bible's pictures: fire, darkness, destruction",
+        body:
+          "Scripture piles image upon image to make us feel the weight: the 'eternal fire' prepared for the devil and his angels, the 'outer darkness' where there is 'weeping and gnashing of teeth,' and 'eternal destruction from the face of the Lord.' Each picture is a different angle on the same reality: separation from God's presence and blessing, experienced by a person who was made to know Him.",
+        verses: ["Matthew 25:41", "Matthew 8:12", "2 Thessalonians 1:9"],
+      },
+      {
+        heading: "It is for the devil and his angels, and for the unrighteous",
+        body:
+          "Hell was not made for people; Jesus calls it the fire 'prepared for the devil and his angels.' But those who love unrighteousness share the destination: everyone 'not found written in the book of life' is cast into the lake of fire. In the story of the rich man, there is torment, thirst, memory, and a 'great gulf fixed' that no one can cross. It is a place of conscious separation, of anguish, and of regret.",
+        verses: ["Matthew 25:41", "Revelation 20:15", "Luke 16:23-26", "Revelation 21:8"],
+      },
+      {
+        heading: "It is eternal: the second death",
+        body:
+          "Revelation calls the lake of fire 'the second death,' and Jesus says the condemned 'will go away into eternal punishment' just as the righteous enter 'eternal life': the same word modifies both destinies. Daniel saw those who awake 'to shame and everlasting contempt.' Scripture means an endless ruin, not a quick end; judgment carries the weight of the infinite One who is rejected.",
+        verses: ["Revelation 20:14-15", "Matthew 25:46", "Daniel 12:2", "Revelation 21:8"],
+      },
+      {
+        heading: "God does not delight in it; that is why the gospel is urgent",
+        body:
+          "God declares, 'I have no pleasure in the death of the wicked,' and Peter says He is patient, 'not wishing that any should perish, but that all should come to repentance.' He 'desires all people to be saved.' Hell is real, and its reality is the measure of the rescue: the cross is where Jesus bore what our sins deserved, so that whoever believes in Him 'should not perish, but have eternal life.' We flee from the wrath to come by running to the One who was judged in our place.",
+        verses: ["Ezekiel 33:11", "2 Peter 3:9", "1 Timothy 2:4", "John 3:16"],
+      },
+    ],
+    keyVerses: ["Matthew 25:41", "Mark 9:47-48", "Revelation 20:15", "Luke 16:24", "2 Thessalonians 1:9"],
+    raises: ["what-is-the-final-judgment-and-who-will-be-there", "how-does-god-judge-people-who-never-heard-of-jesus", "what-happens-when-i-die"],
+    followsFrom: ["does-everyone-deserve-gods-judgment", "what-is-sin"],
+    related: ["what-is-the-final-judgment-and-who-will-be-there", "does-everyone-deserve-gods-judgment", "why-did-jesus-have-to-die", "what-is-the-new-heaven-and-new-earth"],
+    planned: ["Is hell eternal punishment or annihilation?"],
+    order: 50,
+  },
+
+  {
+    slug: "what-is-the-final-judgment-and-who-will-be-there",
+    question: "What is the final judgment, and who will be there?",
+    category: "jesus-christ",
+    summary:
+      "On the last day every person will stand before the judgment seat of Christ, and the Judge on the throne is Jesus. The books are opened: what each person has done, and whether that name is written in the book of life. For those in Christ, judgment is not condemnation but the revealing of redeemed lives and their reward; for the rest, it is the just sentence of the King. Everyone will be there, and everyone will be fully known.",
+    passages: [
+      {
+        book: "Revelation",
+        chapter: 20,
+        title: "The great white throne",
+        lookFor: "The dead, great and small, stand before the throne; books are opened, and the book of life is opened too.",
+        focus: "11-15",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 5,
+        title: "Judgment by the Lord",
+        lookFor: "We must all appear before the judgment seat of Christ, to receive what is due for what was done in the body.",
+        focus: "1-10",
+      },
+      {
+        book: "Matthew",
+        chapter: 25,
+        title: "The Son of Man in glory",
+        lookFor: "The same Jesus who was judged in our place now sits as Judge, separating the nations as a shepherd separates the sheep from the goats.",
+        focus: "31-46",
+      },
+      {
+        book: "Romans",
+        chapter: 2,
+        title: "The righteous judgment of God",
+        lookFor: "Paul insists God judges by truth and without partiality, and that the day comes by Christ Jesus.",
+        focus: "1-16",
+      },
+    ],
+    points: [
+      {
+        heading: "Everyone will stand before the Judge",
+        body:
+          "Paul writes that 'we must all be revealed before the judgment seat of Christ,' and to the Romans: 'we will all stand before the judgment seat of Christ... each one of us will give account of himself to God.' Revelation sees 'the dead, the great and the small, standing before the throne,' with the sea, Death, and Hades giving up their dead. No one is exempt, no one is forgotten, and no one can change the record.",
+        verses: ["2 Corinthians 5:10", "Romans 14:10-12", "Revelation 20:12-13", "Hebrews 9:27"],
+      },
+      {
+        heading: "The Judge is Jesus Christ",
+        body:
+          "The Father 'has given all judgment to the Son,' and gave Him authority 'to execute judgment, because he is a son of man.' Paul told Athens that God 'has appointed a day in which he will judge the world in righteousness by the man whom he has ordained.' The One who was judged for sinners is the One who judges: the Shepherd-King of Matthew 25 sits on the throne of His glory with all the nations gathered before Him.",
+        verses: ["John 5:22-27", "Acts 17:31", "2 Timothy 4:1", "Matthew 25:31-32"],
+      },
+      {
+        heading: "The books are opened",
+        body:
+          "Daniel saw 'the judgment was set, and the books were opened,' and John sees the same: 'they opened books. Another book was opened, which is the book of life. The dead were judged out of the things which were written in the books, according to their works.' The works are read because deeds reveal what a life actually was; the book of life is read because salvation is a gift, not a wage. Both books are open, and God misses nothing.",
+        verses: ["Daniel 7:10", "Revelation 20:12-13", "Romans 2:5-6"],
+      },
+      {
+        heading: "For those in Christ: judgment without condemnation",
+        body:
+          "Jesus said plainly that whoever hears His word and believes the Father 'has eternal life, and doesn't come into judgment, but has passed out of death into life.' For believers the judgment seat is still real: Paul says each man's work will be tested by fire, and though it may be burned up, 'he himself will be saved, but as through fire.' There is no condemnation for those in Christ Jesus; the question at the judgment seat is not whether we are His, but how His grace was spent.",
+        verses: ["John 5:24", "Romans 8:1", "1 Corinthians 3:10-15", "2 Corinthians 5:10"],
+      },
+      {
+        heading: "The sentence is just, and it reveals the heart",
+        body:
+          "The King separates the sheep from the goats by what was done 'to one of the least of these my brothers': the love that faith produced. Paul says God will pay back everyone according to their works, and James insists that faith without works is dead. Judgment is not a surprise test; it is the exposure of what was truly loved. That is why the summons is urgent: now God 'commands that all people everywhere should repent,' because He has fixed the day and has given the assurance of it in the resurrection of Christ.",
+        verses: ["Matthew 25:34-46", "Romans 2:5-6", "James 2:14-17", "Acts 17:30-31"],
+      },
+    ],
+    keyVerses: ["2 Corinthians 5:10", "John 5:22", "Revelation 20:12", "Romans 14:12", "Matthew 25:32"],
+    raises: ["what-is-hell", "what-is-the-resurrection", "what-happens-when-i-die"],
+    followsFrom: ["is-the-son-of-man-title-judgment-or-mercy", "what-is-hell"],
+    related: ["is-the-son-of-man-title-judgment-or-mercy", "what-is-hell", "does-everyone-deserve-gods-judgment", "what-is-justification"],
+    planned: ["What will believers be rewarded for, if salvation is by grace alone?"],
+    order: 29,
+  },
+
+  {
+    slug: "what-is-the-unpardonable-sin",
+    question: "What is the unpardonable sin?",
+    category: "holy-spirit",
+    summary:
+      "Blasphemy against the Holy Spirit is what Jesus called the sin that will not be forgiven: seeing the Spirit's clear witness to Christ and calling it the work of the devil. It is not a careless word; it is a settled, final rejection of the only One who can forgive. The very fear that you have committed it is itself strong evidence that you have not.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 12,
+        title: "Jesus accused of casting out demons by Beelzebul",
+        lookFor: "The context of the warning: the Spirit's power is called satanic to Jesus' face.",
+        focus: "22-37",
+      },
+      {
+        book: "Mark",
+        chapter: 3,
+        title: "The unforgivable sin",
+        lookFor: "Mark gives the saying in its rawest form, with the reason attached: they said He had an unclean spirit.",
+        focus: "20-30",
+      },
+      {
+        book: "Hebrews",
+        chapter: 6,
+        title: "The danger of falling away",
+        lookFor: "Those once enlightened who fall away: why renewal is impossible, and what that means for us.",
+        focus: "4-12",
+      },
+      {
+        book: "1 John",
+        chapter: 5,
+        title: "A sin leading to death",
+        lookFor: "John distinguishes a sin that leads to death from a sin that does not.",
+        focus: "14-21",
+      },
+    ],
+    points: [
+      {
+        heading: "The scene: the Spirit's work called evil",
+        body:
+          "Jesus healed a demon-possessed man by the Spirit of God, and the Pharisees said, 'This man does not cast out demons, except by Beelzebul, the prince of the demons.' Jesus answered that if He cast out demons by the Spirit, 'the Kingdom of God has come upon you.' The religious leaders were not confused; they could see the Spirit's fingerprint on Jesus, and they named it as the devil.",
+        verses: ["Matthew 12:24-28", "Mark 3:22-23", "Matthew 12:28"],
+      },
+      {
+        heading: "The warning: the Spirit's witness rejected is unforgivable",
+        body:
+          "Jesus said, 'every sin and blasphemy will be forgiven men, but the blasphemy against the Spirit will not be forgiven men.' Speaking against the Son of Man can be forgiven, 'but whoever speaks against the Holy Spirit, it will not be forgiven him, neither in this age, nor in that which is to come.' Mark's version adds the bitter reason: 'because they said, he has an unclean spirit.' The sin is not any insult; it is the determined refusal of the Spirit's testimony that Jesus is Lord.",
+        verses: ["Matthew 12:31-32", "Mark 3:28-30"],
+      },
+      {
+        heading: "Why it cannot be forgiven: it rejects the only way",
+        body:
+          "Hebrews describes people who were once enlightened and tasted the good word of God, then fell away: 'it is impossible to renew them again to repentance; seeing they crucify the Son of God for themselves again, and put him to open shame.' A person can only be forgiven through the Christ the Spirit reveals; to blaspheme the Spirit is to insist the witness is a lie, and so to cut oneself off from the only source of cleansing. There remains 'no more a sacrifice for sins,' because the only sacrifice stands rejected.",
+        verses: ["Hebrews 6:4-6", "Hebrews 10:26-29"],
+      },
+      {
+        heading: "It is final rejection, not a random mistake or a struggle",
+        body:
+          "John writes that there is 'a sin leading to death' and 'a sin not leading to death,' and Stephen's accusers were stiff-necked, always resisting the Holy Spirit. The Spirit's own work is to 'convict the world about sin, about righteousness, and about judgment'; to resist Him again and again is to close the door to the only light. A passing doubt, a bitter word, an angry heart: none of these is the unpardonable sin, because none of them is a settled sentence against the Spirit's testimony.",
+        verses: ["1 John 5:16-17", "Acts 7:51", "John 16:8-11"],
+      },
+      {
+        heading: "If you fear you have committed it, you probably have not",
+        body:
+          "Those who have finally rejected the Spirit do not agonize over His work; they have stopped caring. The person who fears they have blasphemed the Spirit is, in that very moment, being convicted by the Spirit about sin and righteousness. Hebrews is written to reassure its readers: 'we are persuaded of better things for you, and things that accompany salvation,' and it urges them to press on to the end. The Spirit is still working in you; receive His witness to Christ, and the door is not shut.",
+        verses: ["Hebrews 6:9-12", "1 John 5:13", "John 16:8", "1 John 5:16"],
+      },
+    ],
+    keyVerses: ["Matthew 12:31-32", "Mark 3:29", "Hebrews 6:4-6", "1 John 5:16", "John 16:8"],
+    raises: ["can-i-lose-my-salvation", "how-does-the-spirit-convict-the-world", "can-gods-grace-really-cover-my-worst-sins"],
+    followsFrom: ["why-jesus-calls-the-spirit-another-helper", "who-is-the-holy-spirit"],
+    related: ["why-jesus-calls-the-spirit-another-helper", "can-i-lose-my-salvation", "how-does-the-spirit-convict-the-world", "can-gods-grace-really-cover-my-worst-sins"],
+    planned: ["What is the difference between resisting the Spirit and grieving the Spirit?"],
+    order: 26,
+  },
+
+  {
+    slug: "how-does-gods-love-differ-from-human-love",
+    question: "How does God's love differ from human love?",
+    category: "god-the-father",
+    summary:
+      "Human love is often conditional, fickle, and spent on what is already lovable. God's love is the opposite: it chose us when we were unlovely, it never fails, and it disciplines for our good. John's whole point is that God does not merely love in the way we do; He is the source of love, and our loving is a faint reflection of His.",
+    passages: [
+      {
+        book: "Hosea",
+        chapter: 11,
+        title: "The Father's heart for His wayward child",
+        lookFor: "God's love for Israel that will not give up: 'How can I give you up, Ephraim?'",
+        focus: "1-11",
+      },
+      {
+        book: "1 John",
+        chapter: 4,
+        title: "God is love",
+        lookFor: "John's great chapter on love's origin: we love because He first loved us.",
+        focus: "7-21",
+      },
+      {
+        book: "Romans",
+        chapter: 5,
+        title: "Love while we were enemies",
+        lookFor: "The demonstration of love: Christ died for the ungodly, while we were still sinners.",
+        focus: "1-11",
+      },
+      {
+        book: "Luke",
+        chapter: 15,
+        title: "The waiting father",
+        lookFor: "The father who runs to his son: the very picture of God's love for the undeserving.",
+        focus: "11-32",
+      },
+    ],
+    points: [
+      {
+        heading: "God's love is unconditional; it does not wait to be earned",
+        body:
+          "Moses told Israel that God did not choose them because they were great, 'but because Yahweh loves you.' Jeremiah heard the same heart: 'I have loved you with an everlasting love.' In the parable, the father loves the younger son before the son has said a word of repentance; he saw him 'while he was still far off' and ran to meet him. God's love is not a reward; it is a choice He made in Himself.",
+        verses: ["Deuteronomy 7:7-8", "Jeremiah 31:3", "Luke 15:20", "Luke 15:22"],
+      },
+      {
+        heading: "It initiates while we are still sinners and enemies",
+        body:
+          "Paul writes that Christ died for the ungodly, and 'God commends his own love toward us, in that while we were yet sinners, Christ died for us.' John says, 'In this is love, not that we loved God, but that he loved us, and sent his Son as the atoning sacrifice for our sins,' and that we were dead through our trespasses when He made us alive. Human love is usually a response to something attractive; God's love is the cause, not the effect, of our being loved.",
+        verses: ["Romans 5:6-8", "1 John 4:10", "Ephesians 2:4-5", "1 John 4:19"],
+      },
+      {
+        heading: "It is faithful; it does not fail or fade",
+        body:
+          "Lamentations says, 'It is because of Yahweh's loving kindnesses that we are not consumed... They are new every morning; great is your faithfulness.' Paul is persuaded that nothing, neither death nor life nor anything in all creation, 'will be able to separate us from the love of God, which is in Christ Jesus our Lord.' Hosea's God cannot give up Ephraim: 'How can I give you up? ... my compassion is aroused.' Human love can grow cold or run out; God's love is the one thing that never will.",
+        verses: ["Lamentations 3:22-23", "Romans 8:38-39", "Hosea 11:8-9", "Psalm 103:13"],
+      },
+      {
+        heading: "It disciplines for our good, which love must do",
+        body:
+          "Hebrews quotes the Father's words: 'My son, don't take lightly the chastening of the Lord... For whom the Lord loves, he chastens, and scourges every son whom he receives,' and it warns that to be without discipline is to be treated as an intruder, not as a child. Human love that never corrects is indulgence, not love; God's love cares enough about who we become to train us in holiness. The same hand that holds us is the hand that shapes us.",
+        verses: ["Hebrews 12:5-6", "Hebrews 12:8", "Proverbs 3:11-12"],
+      },
+      {
+        heading: "God is the source; our love is the reflection",
+        body:
+          "John's logic runs one way: 'God is love,' and everyone who loves 'has been born of God, and knows God,' while 'we love him, because he first loved us.' The Father's love is the very ground of our identity: 'See how great a love the Father has bestowed on us, that we should be called children of God!' We do not climb up to a god who barely tolerated us; we are welcomed into a family whose Father runs to meet us, and whose love gave His one and only Son so that whoever believes 'should not perish, but have eternal life.'",
+        verses: ["1 John 4:7-8", "1 John 4:19", "1 John 3:1", "John 3:16"],
+      },
+    ],
+    keyVerses: ["Romans 5:8", "1 John 4:10", "Jeremiah 31:3", "Romans 8:39", "Hebrews 12:6"],
+    raises: ["what-does-it-mean-that-god-is-love", "who-is-the-father", "made-for-relationship"],
+    followsFrom: ["who-is-the-father", "what-does-it-mean-that-god-is-love"],
+    related: ["who-is-the-father", "what-does-it-mean-that-god-is-love", "made-for-relationship", "how-can-i-be-saved"],
+    planned: ["How can I know God's affection for me is real and not just a doctrine?"],
+    order: 23,
+  },
+
+  {
+    slug: "what-is-speaking-in-tongues-and-is-it-for-today",
+    question: "What is speaking in tongues, and is it for today?",
+    category: "holy-spirit",
+    summary:
+      "At Pentecost, tongues were Spirit-given speech in languages the speakers had not learned, so that everyone heard 'the mighty works of God' in his own language. Paul treats tongues as one gift among many, to be used for building the church, ordered and interpreted in the assembly. Whether the sign gifts continue today is a question on which faithful Christians differ, but the Bible's priorities are clear: love is greater, and everything is for edification.",
+    passages: [
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Pentecost",
+        lookFor: "The first tongues: ordinary Galileans praised God in the languages of every nation present.",
+        focus: "1-21",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 12,
+        title: "Gifts of the Spirit",
+        lookFor: "Tongues and their interpretation listed among the gifts, all distributed by the one Spirit as He wills.",
+        focus: "4-11",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 14,
+        title: "Prophecy and tongues in the church",
+        lookFor: "Paul's priorities: edification for all, order in worship, and love as the goal.",
+        focus: "1-25",
+      },
+      {
+        book: "Acts",
+        chapter: 10,
+        title: "The Spirit falls on Gentiles",
+        lookFor: "The same gift marks the Gentiles: evidence that they had received the Spirit just as the Jews had.",
+        focus: "44-48",
+      },
+    ],
+    points: [
+      {
+        heading: "At Pentecost, tongues were real languages",
+        body:
+          "The disciples 'began to speak with other languages, as the Spirit gave them the ability to speak,' and the pilgrims from every nation were bewildered, 'because everyone heard them speaking in his own language.' They heard the speakers declare 'the mighty works of God' in the languages of Parthians, Medes, Egyptians, Romans, and Cretans. These were not ecstatic noises; they were known human languages, given by the Spirit so the gospel could be heard.",
+        verses: ["Acts 2:4-11", "Acts 2:6", "Acts 2:8"],
+      },
+      {
+        heading: "Tongues is one gift among many, from the same Spirit",
+        body:
+          "Paul lists 'different kinds of languages' and 'the interpretation of languages' alongside prophecy and healings: 'the one and the same Spirit works all of these, distributing to each one separately as he desires.' His rhetorical questions make the point: 'Do all speak with various languages? Do all interpret?' No gift is mandatory for every believer, and none is proof of the Spirit's arrival: the same Spirit gives, and He gives 'as he desires', to whomever He wills.",
+        verses: ["1 Corinthians 12:8-11", "1 Corinthians 12:29-30", "1 Corinthians 12:11"],
+      },
+      {
+        heading: "Its purposes: a sign to unbelievers and prayer to God",
+        body:
+          "Paul says the one who speaks in a tongue 'speaks not to men, but to God... in the Spirit he speaks mysteries,' and that tongues are 'a sign, not to those who believe, but to the unbelieving,' fulfilling Isaiah's word about speaking to this people 'with stammering lips and in another language.' He prays and sings 'with the spirit' and 'with the understanding also,' insisting that the mind not be left unfruitful. The gift is real, and it is also bounded: it serves faith, and it is not its own end.",
+        verses: ["1 Corinthians 14:2-4", "1 Corinthians 14:22", "Isaiah 28:11", "1 Corinthians 14:14-15"],
+      },
+      {
+        heading: "In the assembly: ordered, limited, interpreted",
+        body:
+          "Paul's rule is stark: 'Let all things be done to build each other up,' with at most two or three speaking and one interpreting, and 'if there is no interpreter, let him keep silent in the assembly.' God is 'not a God of confusion, but of peace.' Whatever place tongues has in private prayer, the public worship of the church is the arena of the understandable word, so that even outsiders can hear and say that God is really among you.",
+        verses: ["1 Corinthians 14:26-28", "1 Corinthians 14:33", "1 Corinthians 14:23-25"],
+      },
+      {
+        heading: "Is it for today? The text's priorities endure",
+        body:
+          "Paul says love never fails and that tongues 'will cease' when that which is complete has come. Whether that fullness has arrived now or awaits Christ's return is debated among faithful believers who read the same chapters. What is not debated is the text's priority: the gift must be tested, love must govern, and everything must build the church. So the practical answer is the biblical one: pursue love, desire the greater gifts, and let the Spirit's own order rule the church.",
+        verses: ["1 Corinthians 13:8-10", "1 Corinthians 12:11", "1 Corinthians 13:1", "Hebrews 2:4"],
+      },
+    ],
+    keyVerses: ["Acts 2:4-8", "1 Corinthians 14:2-4", "1 Corinthians 13:8-9", "1 Corinthians 12:11", "1 Corinthians 14:26"],
+    raises: ["are-sign-gifts-active", "what-does-it-mean-to-pray-in-the-holy-spirit", "discovering-my-gift"],
+    followsFrom: ["what-does-it-mean-to-be-baptized-with-the-holy-spirit", "who-is-the-holy-spirit"],
+    related: ["are-sign-gifts-active", "what-does-it-mean-to-be-baptized-with-the-holy-spirit", "what-are-spiritual-gifts", "what-does-it-mean-to-pray-in-the-holy-spirit"],
+    planned: ["How should a church decide which gifts to pursue in worship?"],
+    order: 27,
+  },
+
+  {
+    slug: "what-did-jesus-teach-about-the-kingdom-of-god",
+    question: "What did Jesus teach about the kingdom of God?",
+    category: "jesus-christ",
+    summary:
+      "Jesus' first message was a single announcement: 'Repent! For the Kingdom of Heaven is at hand.' He taught that the kingdom is God's reign breaking into the world in Him, arriving in word and deed, growing secretly like seed, and coming fully only at the end of the age. Entering it requires repentance and childlike faith, and everything He said about it orbits one center: the King is among us.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 13,
+        title: "The kingdom parables",
+        lookFor: "Jesus teaches in parables: the sower, the weeds, the mustard seed, the hidden treasure, and the net.",
+      },
+      {
+        book: "Mark",
+        chapter: 4,
+        title: "More kingdom parables",
+        lookFor: "The seed growing secretly: the kingdom's quiet, unstoppable growth toward harvest.",
+      },
+      {
+        book: "Luke",
+        chapter: 17,
+        title: "When the kingdom comes",
+        lookFor: "'The Kingdom of God is within you,' and the day when it is revealed like lightning from one end of heaven to the other.",
+        focus: "20-37",
+      },
+      {
+        book: "Luke",
+        chapter: 19,
+        title: "The nobleman who went to receive a kingdom",
+        lookFor: "The king goes away and returns: the kingdom is present now, but it will come in full.",
+        focus: "11-27",
+      },
+    ],
+    points: [
+      {
+        heading: "The kingdom is God's reign, present in Jesus",
+        body:
+          "Jesus came preaching, 'Repent! For the Kingdom of Heaven is at hand,' and He told the Pharisees, 'The Kingdom of God doesn't come with observation... for behold, the Kingdom of God is within you.' When He cast out demons 'by the Spirit of God,' He drew the conclusion: 'the Kingdom of God has come upon you.' The kingdom is not a territory or a program; it is the reign of God arriving wherever the King is at work.",
+        verses: ["Matthew 4:17", "Luke 17:20-21", "Matthew 12:28"],
+      },
+      {
+        heading: "It arrives in word and deed",
+        body:
+          "Jesus answered John's messengers with the kingdom's evidence: 'the blind receive their sight, the lame walk, the lepers are cleansed, the deaf hear, the dead are raised up, and the poor have good news preached to them.' Matthew sums up His rounds: teaching in the synagogues, 'preaching the Good News of the Kingdom, and healing every disease and every sickness.' The kingdom speaks and it acts; it forgives sin and it bends creation back toward its Maker.",
+        verses: ["Luke 7:22", "Matthew 9:35", "Matthew 4:23"],
+      },
+      {
+        heading: "It grows like seed: small, hidden, certain",
+        body:
+          "The kingdom 'is like a grain of mustard seed,' the smallest of seeds that grows into a tree where birds lodge; it is like yeast that leavens the whole lump; it is a treasure hidden in a field and a pearl of great price for which a man sells all he has. Jesus tells this so His followers will not despise small beginnings: the seed springs up and grows while the farmer sleeps, 'he doesn't know how,' until the harvest comes. The weeds grow with the wheat until the end; the harvest is the King's, and it cannot fail.",
+        verses: ["Matthew 13:31-33", "Matthew 13:44-46", "Mark 4:26-29", "Matthew 13:24-30"],
+      },
+      {
+        heading: "It has come, and it is still coming",
+        body:
+          "Jesus taught His disciples to pray, 'Let your Kingdom come,' even as He told the Pharisees it had already come upon them. He told the parable of the nobleman who went 'to receive for himself a kingdom, and to return' because His disciples supposed the kingdom would appear immediately. The kingdom is present in the King's works and in His church now, and it will be revealed in glory at His return, when the King separates the sheep from the goats.",
+        verses: ["Matthew 6:10", "Matthew 12:28", "Luke 19:11-12", "Matthew 25:31-34"],
+      },
+      {
+        heading: "Entrance is by repentance and childlike faith",
+        body:
+          "Jesus told Nicodemus, 'unless one is born anew, he can't see the Kingdom of God,' and His disciples, 'unless you turn, and become as little children, you will in no way enter into the Kingdom of Heaven.' He blessed the poor in spirit, 'for theirs is the Kingdom of Heaven,' and received the children with the words, 'whoever doesn't receive the Kingdom of God like a little child, he will in no way enter into it.' The kingdom's door is not raised for the accomplished; it is opened for the humble.",
+        verses: ["John 3:3", "John 3:5", "Matthew 18:3", "Matthew 5:3", "Luke 18:16-17"],
+      },
+    ],
+    keyVerses: ["Matthew 4:17", "Luke 17:20-21", "Matthew 13:31-33", "Matthew 18:3", "John 3:3"],
+    raises: ["what-is-the-kingdom-of-god", "will-jesus-return-literally", "what-is-the-final-judgment-and-who-will-be-there"],
+    followsFrom: ["who-is-jesus", "what-is-the-kingdom-of-god"],
+    related: ["what-is-the-kingdom-of-god", "who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-david", "is-the-son-of-man-title-judgment-or-mercy"],
+    planned: ["How does the kingdom grow in a human heart?"],
+    order: 30,
+  },
+
+  {
+    slug: "how-is-the-new-covenant-different-from-the-old-one",
+    question: "How is the new covenant different from the old one?",
+    category: "jesus-christ",
+    summary:
+      "The old covenant was written on stone, conditional on obedience, and broken by its people. The promised new covenant is written on hearts by the Spirit, sealed with the blood of Christ, and founded on the forgiveness of sins that God remembers no more. Its promises are better because its Mediator is better: not a book to keep, but a Savior who keeps us.",
+    passages: [
+      {
+        book: "Jeremiah",
+        chapter: 31,
+        title: "The promise of a new covenant",
+        lookFor: "The Old Testament promise God makes to Israel: a covenant not like the one made at Sinai.",
+        focus: "27-34",
+      },
+      {
+        book: "Hebrews",
+        chapter: 8,
+        title: "The superior covenant",
+        lookFor: "Hebrews quotes Jeremiah at length and argues the new covenant is better than the old.",
+      },
+      {
+        book: "Hebrews",
+        chapter: 9,
+        title: "The blood of the covenant",
+        lookFor: "Why a death was needed to inaugurate the new covenant, and how Christ fulfills every shadow.",
+        focus: "15-28",
+      },
+      {
+        book: "Luke",
+        chapter: 22,
+        title: "The institution of the Lord's Supper",
+        lookFor: "Jesus takes the cup and calls it 'the new covenant in my blood.'",
+        focus: "14-20",
+      },
+    ],
+    points: [
+      {
+        heading: "The old covenant: law on stone, broken by the people",
+        body:
+          "Moses read the book of the covenant and sprinkled the people with blood, saying, 'Look, this is the blood of the covenant, which Yahweh has made with you,' and the people answered, 'All that Yahweh has spoken will we do, and be obedient.' But Jeremiah records God's verdict over that history: 'my covenant they broke.' Paul calls that ministry one 'written engraved on stones,' the letter that kills because flesh cannot keep it. The old covenant showed what God requires; it did not give the power to do it.",
+        verses: ["Exodus 24:7-8", "Jeremiah 31:32", "2 Corinthians 3:6-7", "2 Corinthians 3:3"],
+      },
+      {
+        heading: "The promise: the law written on hearts",
+        body:
+          "Jeremiah's new covenant is inward: 'I will put my law in their inward parts, and in their heart will I write it; and I will be their God, and they shall be my people.' Everyone will know the Lord, 'from their least to their greatest,' because the knowledge will no longer depend on teachers alone. Hebrews quotes these very verses as the shape of the covenant Christ inaugurated: a people whose God is with them, written from the inside out.",
+        verses: ["Jeremiah 31:33-34", "Hebrews 8:10-12", "2 Corinthians 3:3"],
+      },
+      {
+        heading: "Better promises, better Mediator, better sacrifice",
+        body:
+          "Christ is 'the mediator of a better covenant, which on better promises has been given as law,' and His ministry is more excellent than the Levitical one. The old sacrifices purified copies of heavenly things, but the heavenly things themselves needed better sacrifices, which Christ offered once, 'to put away sin by the sacrifice of himself.' Where the high priest entered year by year with blood not his own, Christ entered once into heaven itself, 'now to appear in the presence of God for us.'",
+        verses: ["Hebrews 8:6", "Hebrews 9:23-26", "Hebrews 9:24", "Hebrews 9:28"],
+      },
+      {
+        heading: "Sealed by blood: His blood, at the cross",
+        body:
+          "At the Supper Jesus took the cup and said, 'This cup is the new covenant in my blood, which is poured out for you,' and Paul repeats the words by the Lord's own authority. Hebrews explains the necessity: 'a death has occurred for the redemption of the transgressions that were under the first covenant,' for the law warns that 'apart from shedding of blood there is no remission.' The old covenant was sealed with the blood of animals; the new is sealed with the blood of the Son, and so its forgiveness is final: 'there is no more offering for sin.'",
+        verses: ["Luke 22:20", "1 Corinthians 11:25", "Hebrews 9:15", "Hebrews 9:22", "Hebrews 10:17-18"],
+      },
+      {
+        heading: "What it gives us: a changed heart, boldness, and assurance",
+        body:
+          "Because the covenant is inward, Paul says we are letters of Christ, 'written not with ink, but with the Spirit of the living God,' being transformed 'from glory to glory' into His image. Because the veil is torn, we have 'boldness to enter into the holy place by the blood of Jesus,' drawing near with a true heart. And because God says 'I will remember their sins and their iniquities no more,' we are no longer defined by our record but by His mercy. The new covenant is not a better list of rules; it is a new heart, a new standing, and a new certainty.",
+        verses: ["2 Corinthians 3:3", "2 Corinthians 3:18", "Hebrews 10:19-22", "Hebrews 10:16-17", "Hebrews 8:12"],
+      },
+    ],
+    keyVerses: ["Jeremiah 31:33-34", "Hebrews 8:10-12", "Luke 22:20", "Hebrews 9:15", "2 Corinthians 3:6"],
+    raises: ["what-is-grace", "what-happens-when-i-sin", "can-i-lose-my-salvation"],
+    followsFrom: ["how-can-i-be-saved", "why-did-jesus-have-to-die"],
+    related: ["how-can-i-be-saved", "what-is-imputation", "what-is-justification", "what-is-grace"],
+    planned: ["How does Christ fulfill the law without abolishing it?"],
+    order: 31,
+  },
+
+  {
+    slug: "what-is-the-difference-between-assurance-and-presumption",
+    question: "What is the difference between assurance and presumption?",
+    category: "our-walk",
+    summary:
+      "Assurance is the confidence the Spirit gives through God's promise and the fruit He produces in a life that trusts Christ. Presumption is confidence with nothing behind it: a claim to belong to Jesus that a look at the life does not support. The difference is not in the strength of the feeling but in its basis: one rests on the testimony of God, the other on a wish.",
+    passages: [
+      {
+        book: "1 John",
+        chapter: 5,
+        title: "The testimony of God",
+        lookFor: "John explains why we can know: God's testimony about His Son, and the life that testimony gives.",
+        focus: "9-21",
+      },
+      {
+        book: "2 Peter",
+        chapter: 1,
+        title: "Confirming your calling",
+        lookFor: "Peter's ladder of growth, and why diligence makes calling and election sure.",
+        focus: "3-11",
+      },
+      {
+        book: "Hebrews",
+        chapter: 6,
+        title: "Confidence in the promise",
+        lookFor: "God's unchangeable promise gives strong encouragement to those who have fled for refuge.",
+        focus: "9-20",
+      },
+      {
+        book: "James",
+        chapter: 2,
+        title: "Faith that works",
+        lookFor: "James on the faith that saves versus the faith that is no more than a claim.",
+        focus: "14-26",
+      },
+    ],
+    points: [
+      {
+        heading: "Assurance rests on God's testimony, not on our feelings",
+        body:
+          "John states his purpose plainly: 'These things I have written to you who believe in the name of the Son of God, that you may know that you have eternal life.' The ground is the testimony of God concerning His Son, which the Spirit confirms: 'The Spirit himself testifies with our spirit that we are children of God.' Assurance is not a mood; it is faith leaning on a promise that cannot be broken.",
+        verses: ["1 John 5:13", "1 John 5:10-11", "Romans 8:15-16"],
+      },
+      {
+        heading: "Presumption claims what it has not been given",
+        body:
+          "Jesus warns of people on the last day who say, 'Lord, Lord, didn't we prophesy in your name... do many mighty works?' and He answers, 'I never knew you. Depart from me, you who work iniquity.' A claim to Christ without the will of the Father is presumption, however confident or impressive it sounds. The Pharisee who thanked God he was not like other men went home unjustified; the tax collector who begged for mercy went home forgiven.",
+        verses: ["Matthew 7:21-23", "Luke 18:9-14"],
+      },
+      {
+        heading: "Assurance obeys; presumption excuses",
+        body:
+          "John ties knowing to doing: 'This is how we know that we know him: if we keep his commandments,' and 'whoever says, I know him, and doesn't keep his commandments, is a liar.' James adds that faith without works is dead, and Paul names people who 'profess that they know God, but by their works they deny him.' Assurance produces likeness to the one trusted; presumption produces a slogan. You can tell the difference, over time, by the direction of a life.",
+        verses: ["1 John 2:3-4", "1 John 2:6", "James 2:17", "Titus 1:16"],
+      },
+      {
+        heading: "Assurance perseveres; presumption is caught unprepared",
+        body:
+          "Peter urges us to make our 'calling and election sure' by adding the virtues to faith, promising that when these are yours and abound 'you will never stumble.' The ten virgins are separated by what they actually brought; the foolish find the door shut and hear, 'I don't know you.' Paul's caution cuts both ways: 'let him who thinks he stands be careful that he doesn't fall.' Assurance lives in the present tense of trust; presumption banks on the past.",
+        verses: ["2 Peter 1:10-11", "2 Peter 1:5-8", "Matthew 25:1-13", "1 Corinthians 10:12"],
+      },
+      {
+        heading: "The test: believe the promise, examine the fruit",
+        body:
+          "John gives a threefold test: we know He remains in us 'by the Spirit which he gave us,' we know we have passed out of death into life 'because we love the brothers,' and when our heart condemns us, 'God is greater than our heart.' The anchor is the promise: by two unchangeable things, in which it is impossible for God to lie, we have 'strong encouragement' and 'the anchor of the soul.' If your confidence is built on Christ's finished work and is producing love, it is assurance; if it is built on a wish, repentance is the door to the real thing.",
+        verses: ["1 John 3:24", "1 John 3:14", "1 John 3:19-20", "Hebrews 6:18-19"],
+      },
+    ],
+    keyVerses: ["1 John 5:13", "Romans 8:16", "Matthew 7:21-23", "2 Peter 1:10", "1 John 2:3-4"],
+    raises: ["spirits-witness-or-my-own-feelings", "how-do-i-know-my-repentance-is-genuine", "can-i-lose-my-salvation"],
+    followsFrom: ["can-i-lose-my-salvation", "spirits-witness-or-my-own-feelings"],
+    related: ["can-i-lose-my-salvation", "spirits-witness-or-my-own-feelings", "what-is-justification", "is-it-okay-to-doubt"],
+    planned: ["How do I test whether my confidence comes from faith or from pride?"],
+    order: 33,
+  },
+
+  {
+    slug: "how-do-i-help-a-friend-who-is-suffering",
+    question: "How do I help a friend who is suffering?",
+    category: "suffering-will",
+    summary:
+      "The best help begins with presence, not explanation: Job's friends were right to sit with him in silence, and Jesus wept before He raised Lazarus. Scripture calls us to weep with those who weep, to bear one another's burdens, and to point to the God of all comfort rather than to our theories. Love that stays, listens, serves, and prays is the shape of help God Himself uses.",
+    passages: [
+      {
+        book: "Job",
+        chapter: 2,
+        title: "The friends who came to comfort",
+        lookFor: "Why the seven days of silence were the right beginning, and what they did that was truly kind.",
+        focus: "11-13",
+      },
+      {
+        book: "John",
+        chapter: 11,
+        title: "Jesus at Bethany",
+        lookFor: "Jesus at the tomb of a friend: He groans, He weeps, and then He acts.",
+        focus: "1-44",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 1,
+        title: "The God of all comfort",
+        lookFor: "How God's comfort in our own affliction equips us to comfort others in theirs.",
+        focus: "3-11",
+      },
+      {
+        book: "Galatians",
+        chapter: 6,
+        title: "Bearing burdens",
+        lookFor: "Restoring the fallen, carrying one another's loads, and doing good without growing weary.",
+        focus: "1-10",
+      },
+    ],
+    points: [
+      {
+        heading: "Presence first: sit with them, like Job's friends at first",
+        body:
+          "When Job's friends heard of his calamity they came from their own places, and when they saw him they wept aloud, and then 'they sat down with him on the ground seven days and seven nights, and no one spoke a word to him, for they saw that his grief was very great.' That is the model: to show up, to stay, to mourn with the mourner. Paul commands it directly: 'Rejoice with those who rejoice. Weep with those who weep.'",
+        verses: ["Job 2:11-13", "Romans 12:15"],
+      },
+      {
+        heading: "Listen before you counsel; resist the rush to explain",
+        body:
+          "Jesus' comfort at Bethany began with groaning and tears: 'Jesus wept,' and the bystanders read it rightly: 'See how much affection he had for him.' The failure of Job's friends came later, when they traded silence for theories and were told, 'You are all physicians of no value' who had proved that silence would have been wiser. Proverbs warns against answering before hearing, and James says to be 'swift to hear, slow to speak.' Suffering people need to be known before they need to be fixed.",
+        verses: ["John 11:33-35", "John 11:36", "Job 13:4-5", "Proverbs 18:13", "James 1:19"],
+      },
+      {
+        heading: "Point to the God of all comfort, not to clichés",
+        body:
+          "Paul blesses 'the Father of mercies and God of all comfort, who comforts us in all our affliction, that we may be able to comfort those who are in any affliction.' The psalmist sings that the Lord is near to those who have a broken heart, and Peter tells sufferers to cast 'all your worries on him, because he cares for you.' We cannot explain every pain, but we can hand the person to the One who is near and who cares, gently, in our own words, with our own tears mixed in.",
+        verses: ["2 Corinthians 1:3-4", "Psalm 34:18", "1 Peter 5:7", "2 Corinthians 1:5"],
+      },
+      {
+        heading: "Serve them practically; carry real burdens",
+        body:
+          "Galatians commands, 'Bear one another's burdens, and so fulfill the law of Christ,' and James exposes the hollow word: telling the naked and hungry brother 'Go in peace, be warmed and filled' while giving nothing is no love at all. John says our help must be 'in deed and truth,' not in word and tongue. A meal, a ride, a task handled, a visit repeated: these are the words the grieving hear best, because they are spoken with hands.",
+        verses: ["Galatians 6:2", "James 2:15-16", "1 John 3:17-18", "Galatians 6:9-10"],
+      },
+      {
+        heading: "Pray with them and keep company over time",
+        body:
+          "James says, 'Is any among you suffering? Let him pray,' and calls us to pray for one another 'that you may be healed,' because 'the insistent prayer of a righteous person is powerfully effective.' Paul's pattern was to pray without ceasing for those he loved, rejoicing in hope, enduring in troubles, 'continuing steadfastly in prayer.' Suffering is a road, not an event; the friend who stays for the whole road is the friend God uses.",
+        verses: ["James 5:13-16", "Romans 12:12", "Colossians 1:9-12", "John 11:33"],
+      },
+    ],
+    keyVerses: ["Job 2:13", "Romans 12:15", "2 Corinthians 1:3-4", "Galatians 6:2", "James 5:16"],
+    raises: ["where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "why-does-god-allow-suffering"],
+    followsFrom: ["why-does-god-allow-suffering", "where-is-god-in-my-pain"],
+    related: ["why-does-god-allow-suffering", "where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "made-for-relationship"],
+    planned: ["What should I say to someone who is grieving?"],
+    order: 37,
+  },
+
+  {
+    slug: "does-prayer-change-gods-mind",
+    question: "Does prayer change God's mind?",
+    category: "prayer",
+    summary:
+      "God does not change, but He does relate to us in real time, and Scripture repeatedly shows prayer changing what happens. Several prayers in the Bible are answered by an evident turn in God's announced course, and Jeremiah teaches that God's word of warning or promise is conditioned on how people respond. Prayer does not move an unmoved God; it is the appointed means by which a loving God does His moving work.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 32,
+        title: "Moses pleads for Israel",
+        lookFor: "God threatens to consume Israel; Moses intercedes, and 'Yahweh repented of the evil which he said he would do.'",
+        focus: "7-14",
+      },
+      {
+        book: "Jeremiah",
+        chapter: 18,
+        title: "The potter and the clay",
+        lookFor: "God's explicit rule: He declares judgment or good, and both can be turned by repentance.",
+        focus: "1-12",
+      },
+      {
+        book: "Numbers",
+        chapter: 14,
+        title: "Moses again intercedes",
+        lookFor: "The same pattern at the edge of the promised land: judgment announced, intercession, mercy.",
+        focus: "11-25",
+      },
+      {
+        book: "Luke",
+        chapter: 18,
+        title: "The persistent widow",
+        lookFor: "Jesus teaches that we must always pray and not give up, and that God will avenge His elect who cry to Him day and night.",
+        focus: "1-8",
+      },
+    ],
+    points: [
+      {
+        heading: "God is unchangeable in His character",
+        body:
+          "Malachi records the ground of all hope: 'I, Yahweh, don't change; therefore you, sons of Jacob, are not consumed,' and Balaam confesses that God 'is not a man, that he should lie... Has he spoken, and will he not make it good?' James adds that with the Father of lights there is 'no variation, nor turning shadow.' God's nature, His promises, and His love do not fluctuate like moods. That is why prayer is possible at all: we plead with a Person who keeps His word.",
+        verses: ["Malachi 3:6", "Numbers 23:19", "James 1:17"],
+      },
+      {
+        heading: "Yet Scripture shows prayer changing what was announced",
+        body:
+          "After the golden calf, God told Moses He would consume Israel, but Moses pleaded, and 'Yahweh repented of the evil which he said he would do to his people.' Hezekiah was told, 'You will die, and not live,' and after his prayer God answered, 'I have heard your prayer. I have seen your tears. Behold, I will add fifteen years to your life.' Jeremiah's rule explains it: when a nation I spoke to destroy turns from its evil, then 'I will repent of the evil that I thought to do to them.' The announced sentence and the promised blessing are both real, and both are conditioned on the response.",
+        verses: ["Exodus 32:10-14", "Isaiah 38:1-5", "Jeremiah 18:7-10", "Ezekiel 33:11"],
+      },
+      {
+        heading: "God has appointed prayer as a real means, not a formality",
+        body:
+          "James points to Elijah, 'a man with a nature like ours,' who prayed and no rain fell for three years and six months, and prayed again and the sky gave rain; he concludes that 'the insistent prayer of a righteous person is powerfully effective.' Jesus tells the parable of the persistent widow so that His disciples should always pray and not give up, promising that God will avenge His chosen ones 'who are crying out to him day and night.' If prayer were a theater, these texts would be a cruel joke; they are the Father's invitation to be part of His work.",
+        verses: ["James 5:16-18", "Luke 18:1-8", "Luke 22:42"],
+      },
+      {
+        heading: "Prayer also changes us",
+        body:
+          "When we pray, we step into the presence of the One who is sovereign and good, and the shape of our wanting is re-formed. Jesus prayed in Gethsemane, 'Father, if you are willing, remove this cup from me. Nevertheless, not my will, but yours, be done,' and He walked to the cross. Paul prayed three times for the removal of his thorn and received grace sufficient to bear it, discovering that weakness is where Christ's power rests. Prayer rarely leaves us where it found us, because it first turns us toward the One who is the answer.",
+        verses: ["Luke 22:42", "2 Corinthians 12:7-10", "Philippians 4:6-7", "James 4:6"],
+      },
+      {
+        heading: "Both are true: His will is wise, and our asking matters",
+        body:
+          "There is no contradiction, because God's will is not a rigid list but a wise plan that includes our prayers. Jesus says, 'Keep asking, and it will be given you,' for the Father gives good gifts to those who ask, and the Spirit Himself helps our weakness, making intercession for us with groanings that cannot be uttered. So pray with confidence: the God who does not change has chosen to answer the cries of His children, and He has never failed anyone who cast their cares on Him.",
+        verses: ["Luke 11:9", "Luke 11:13", "Romans 8:26-27", "1 Peter 5:7", "Isaiah 45:11"],
+      },
+    ],
+    keyVerses: ["Exodus 32:14", "Jeremiah 18:7-8", "Malachi 3:6", "James 5:16", "Luke 22:42"],
+    raises: ["does-god-change-his-mind", "why-pray-your-will-be-done", "how-do-i-pray"],
+    followsFrom: ["why-pray-your-will-be-done", "does-god-change-his-mind"],
+    related: ["why-pray-your-will-be-done", "does-god-change-his-mind", "does-god-hear-my-prayers", "how-do-i-know-gods-will"],
+    planned: ["If God knows what I need, why ask at all?"],
+    order: 40,
+  },
+
+  {
+    slug: "how-do-we-know-which-books-belong-in-the-bible",
+    question: "How do we know which books belong in the Bible?",
+    category: "word-of-god",
+    summary:
+      "The church did not invent the Bible's contents by vote; it recognized the books God had already given and the apostles had already used. The Old Testament Jesus quoted was settled in its shape, and the New Testament books were written and circulated by apostles and their close associates, read aloud in the churches from the first. The canon is a matter of testimony: books the Spirit-breathed witness of the apostles stamped with authority before any council ever met.",
+    passages: [
+      {
+        book: "2 Timothy",
+        chapter: 3,
+        title: "The sacred writings",
+        lookFor: "Paul's own statement about Scripture: what it is, what it is for, and what it makes possible.",
+        focus: "14-17",
+      },
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "Jesus' Bible",
+        lookFor: "Jesus sums up the whole Old Testament He received and read: the law of Moses, the prophets, and the psalms.",
+        focus: "44-49",
+      },
+      {
+        book: "Colossians",
+        chapter: 4,
+        title: "Letters that circulate and are read",
+        lookFor: "How apostolic letters came to the churches: read aloud, exchanged, and collected.",
+        focus: "15-16",
+      },
+      {
+        book: "2 Peter",
+        chapter: 3,
+        title: "Paul's letters classed with Scripture",
+        lookFor: "Peter places the letters of 'our beloved brother Paul' alongside 'the other Scriptures.'",
+        focus: "14-18",
+      },
+    ],
+    points: [
+      {
+        heading: "The Old Testament: the Bible Jesus received",
+        body:
+          "Jesus spoke of 'the law of Moses, the prophets, and the psalms,' the threefold shape of the Hebrew Scriptures, and said the things written there concerning Him must be fulfilled. He could say, 'Don't think that I came to destroy the law or the prophets. I didn't come to destroy, but to fulfill,' for not one pen stroke passes from the law until all is accomplished. The books Israel treasured as Scripture were settled before Jesus came, and He never once questioned their authority; He quoted them as the living word of God.",
+        verses: ["Luke 24:44", "Luke 24:46", "Matthew 5:17-18", "2 Timothy 3:15"],
+      },
+      {
+        heading: "The New Testament books came from the apostles themselves",
+        body:
+          "The Gospels and letters carry apostolic authority from the start: Paul wrote as an apostle by the command of God and solemnly charged that his letters 'be read to all the holy brothers,' and he had churches exchange them so the word was gathered and shared. Paul could quote the Gospel of Luke as Scripture ('the laborer is worthy of his wages'), and Peter already classed all of Paul's letters with 'the other Scriptures.' The books came bearing the apostles' own stamp; the church simply received what it had been given.",
+        verses: ["1 Thessalonians 5:27", "1 Timothy 1:1", "Colossians 4:16", "1 Timothy 5:18", "2 Peter 3:15-16", "1 Thessalonians 2:13"],
+      },
+      {
+        heading: "The church recognized what the Spirit had already given",
+        body:
+          "As letters and gospels circulated, the churches recognized books with apostolic origin, universal acceptance, and doctrine consistent with the faith delivered once for all. Paul's test was blunt: even if an angel from heaven should preach a different gospel, 'let him be cursed.' Luke wrote 'so that you might know the certainty concerning the things in which you were instructed,' and John blessed the one who reads and hears the words of the prophecy. Books without apostolic authority, however edifying, were not received as canon; the rule was simple, the Spirit wrote through the apostles, and the church could recognize His voice.",
+        verses: ["Galatians 1:8-9", "Luke 1:1-4", "Revelation 1:3", "2 Thessalonians 2:15"],
+      },
+      {
+        heading: "The canon was recognized, then confirmed",
+        body:
+          "The core of the New Testament, four Gospels, Acts, the letters of Paul, and the works of his associates, was in use across the churches long before any council. Later lists and councils, from Athanasius onward, did not add or subtract by vote; they confirmed what the churches had already been reading from the beginning. History does not show a council choosing the books of the Bible; it shows churches everywhere recognizing the books that had always carried the apostles' voice, and rejecting the rest.",
+        verses: ["2 Peter 3:15-16", "Colossians 4:16", "1 Thessalonians 1:5"],
+      },
+      {
+        heading: "We can trust that God has given His people His book",
+        body:
+          "Paul says every Scripture is 'God-breathed,' profitable for teaching, reproof, correction, and instruction in righteousness, so that the man of God may be complete and thoroughly equipped for every good work. Peter says prophecy never came by the will of man, but men spoke 'being moved by the Holy Spirit.' If God could breathe His word through prophets and apostles, He could also preserve and gather the books that carry it, and He has: the Bible in your hands is the book the church has always received, able to make you 'wise for salvation through faith in Christ Jesus' and living and active by the Spirit who wrote it.",
+        verses: ["2 Timothy 3:16-17", "2 Peter 1:20-21", "2 Timothy 3:15", "Hebrews 4:12", "Isaiah 40:8"],
+      },
+    ],
+    keyVerses: ["2 Timothy 3:16-17", "2 Peter 1:20-21", "Luke 24:44", "2 Peter 3:15-16", "Hebrews 4:12"],
+    raises: ["can-i-trust-the-bible", "how-was-the-bible-written-down", "why-do-bible-translations-differ"],
+    followsFrom: ["can-i-trust-the-bible", "is-the-whole-bible-about-jesus"],
+    related: ["can-i-trust-the-bible", "how-was-the-bible-written-down", "why-do-bible-translations-differ", "is-the-whole-bible-about-jesus"],
+    planned: ["What is the Apocrypha, and why isn't it Scripture?"],
+    order: 42,
+  },
+
+  {
+    slug: "what-is-church-discipline",
+    question: "What is church discipline?",
+    category: "church",
+    summary:
+      "Church discipline is the loving, orderly way the church helps its members turn from sin and stay in the way of Christ: private appeal first, then witnesses, then the church, and for the unrepentant, the last step of removal from fellowship. Its goal is never punishment; it is restoration, the purity of the church, and the saving of souls. Jesus commanded it, and the New Testament expects it.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 18,
+        title: "The steps Jesus gave",
+        lookFor: "Jesus' own procedure for a brother who sins: one-on-one, then witnesses, then the assembly.",
+        focus: "15-20",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 5,
+        title: "Purge the yeast",
+        lookFor: "Paul's actual case: unrepentant sin in the church, and what the whole assembly must do.",
+      },
+      {
+        book: "Galatians",
+        chapter: 6,
+        title: "Restore the fallen",
+        lookFor: "The spirit in which discipline is done: gentleness, self-watch, and burden-bearing.",
+        focus: "1-5",
+      },
+      {
+        book: "2 Thessalonians",
+        chapter: 3,
+        title: "Withdrawing from the disorderly",
+        lookFor: "The kindest discipline of all: not treating the erring as an enemy, but admonishing them as a brother.",
+        focus: "6-15",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus commanded a specific order",
+        body:
+          "Jesus gave the steps: 'If your brother sins against you, go, show him his fault between you and him alone. If he listens to you, you have gained back your brother.' If he refuses, take one or two witnesses, 'that at the mouth of two or three witnesses every word may be established,' and if he still refuses, 'tell it to the assembly.' The order matters: private before public, gentle before severe, one person seeking one soul before the whole church is ever involved.",
+        verses: ["Matthew 18:15-17", "Matthew 18:16", "1 Timothy 5:19"],
+      },
+      {
+        heading: "Its goal is restoration, not punishment",
+        body:
+          "Galatians says, 'Brothers, even if a man is caught in some fault, you who are spiritual must restore such a one in a spirit of gentleness, looking to yourself so that you also aren't tempted.' Paul's sharpest case was aimed at salvation: deliver the sinning man to Satan 'for the destruction of the flesh, that the spirit may be saved in the day of the Lord Jesus.' James cheers the one who turns a wanderer back, for he will 'save a soul from death and will cover a multitude of sins.' Even the severest step is a rescue.",
+        verses: ["Galatians 6:1", "1 Corinthians 5:5", "James 5:19-20"],
+      },
+      {
+        heading: "It protects the church's holiness",
+        body:
+          "Paul warns that 'a little yeast leavens the whole lump,' so the church must purge out the old yeast that it may be a new lump; he commands the Corinthians to put away the wicked man from among themselves and to have no company with a brother living unrepentantly in sin. Discipline keeps the gospel visible: the world watches how the church treats sin in its own house. The purity of the assembly is not coldness; it is truthfulness about the holiness of the God we serve.",
+        verses: ["1 Corinthians 5:6-8", "1 Corinthians 5:11-13", "1 Corinthians 5:5"],
+      },
+      {
+        heading: "It is done in love, humility, and hope of return",
+        body:
+          "When the Corinthians acted, the next command was to forgive and comfort the penitent, 'lest such a one should be swallowed up with his excessive sorrow,' and to confirm love toward him. Paul tells Timothy to reprove those who sin in public 'that the rest also may be in fear,' and to avoid a factious man after a first and second warning. Even the withdrawal of 2 Thessalonians carries the aim: 'Don't count him as an enemy, but admonish him as a brother.' Discipline is the church taking its brother as seriously as Jesus takes him.",
+        verses: ["2 Corinthians 2:6-8", "1 Timothy 5:20", "Titus 3:10-11", "2 Thessalonians 3:14-15"],
+      },
+      {
+        heading: "It rests on Jesus' authority and presence",
+        body:
+          "Jesus binds His church's discipline to heaven itself: 'whatever things you bind on earth will have been bound in heaven,' and He anchors it in His presence: 'where two or three are gathered together in my name, there I am in their midst.' The church's authority is not its own opinion but the word of its King, applied in His name and in the power of 'our Lord Jesus Christ' when the assembly is gathered. When the church acts in that name, it acts with the confidence of a family doing business in the presence of its Head.",
+        verses: ["Matthew 18:18-20", "1 Corinthians 5:4", "Matthew 18:20"],
+      },
+    ],
+    keyVerses: ["Matthew 18:15-17", "1 Corinthians 5:5", "Galatians 6:1", "2 Corinthians 2:7", "Titus 3:10"],
+    raises: ["what-is-a-healthy-church", "what-is-the-church", "why-do-i-need-the-church"],
+    followsFrom: ["why-do-i-need-the-church", "what-is-a-healthy-church"],
+    related: ["why-do-i-need-the-church", "what-is-a-healthy-church", "what-is-the-church", "what-is-baptism"],
+    planned: ["How do I forgive someone who has hurt me in the church?"],
+    order: 44,
+  },
+
+  {
+    slug: "what-is-the-rapture",
+    question: "What is the rapture?",
+    category: "our-hope",
+    summary:
+      "The word 'rapture' comes from the Latin for 'caught up' in 1 Thessalonians 4: the Lord descends, the dead in Christ rise, and believers who are alive are caught up together with them to meet Him in the air. The Bible's emphasis is not the timing but the certainty and the comfort: we will be with the Lord forever, and we are not appointed to wrath. Whatever the precise schedule, the point of the promise is hope, readiness, and an unmovable union with Christ.",
+    passages: [
+      {
+        book: "1 Thessalonians",
+        chapter: 4,
+        title: "The coming of the Lord",
+        lookFor: "The classic text: the shout, the archangel, the trumpet, the dead rising first, and the living caught up.",
+        focus: "13-18",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 15,
+        title: "The last trumpet",
+        lookFor: "The transformation: in a moment, at the last trumpet, the perishable puts on the imperishable.",
+        focus: "50-58",
+      },
+      {
+        book: "Matthew",
+        chapter: 24,
+        title: "No one knows the day",
+        lookFor: "Jesus' answer to the question of when: preparation, not speculation, is the point.",
+        focus: "36-44",
+      },
+      {
+        book: "2 Thessalonians",
+        chapter: 2,
+        title: "Do not be shaken",
+        lookFor: "Paul warns against false claims that the day has already come, and anchors the church in the truth already delivered.",
+        focus: "1-12",
+      },
+    ],
+    points: [
+      {
+        heading: "The word and the text",
+        body:
+          "Paul writes that 'the Lord himself will descend from heaven with a shout, with the voice of the archangel, and with God's trumpet,' then 'the dead in Christ will rise first,' and 'we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air.' 'Rapture' is simply the Latin translation of that phrase, 'caught up.' The promise is one event with two parts: resurrection for the dead in Christ, transformation for the living, and together we meet Him.",
+        verses: ["1 Thessalonians 4:16-17", "1 Thessalonians 4:15"],
+      },
+      {
+        heading: "The transformation: in a moment",
+        body:
+          "At the last trumpet, 'we will all be changed, in a moment, in the twinkling of an eye... the dead will be raised incorruptible, and we will be changed,' for 'this perishable body must become imperishable, and this mortal must put on immortality.' Paul echoes it in Philippians: the Savior 'will change the body of our humiliation to be conformed to the body of his glory.' The meeting is not a trip to the air; it is the moment our humanity is remade to match His.",
+        verses: ["1 Corinthians 15:51-53", "Philippians 3:20-21", "1 Corinthians 15:54"],
+      },
+      {
+        heading: "The promise is comfort, not a schedule",
+        body:
+          "Paul gives the whole passage its purpose: 'Therefore comfort one another with these words,' and urges that we not grieve like those who have no hope. The Thessalonians were grieving Christians who had died; the answer was not a calendar but a certainty, that God 'will bring with him those who have fallen asleep in Jesus.' Jesus Himself refused the schedule: 'no one knows of that day and hour,' so watch, 'for you don't know in what hour your Lord comes.'",
+        verses: ["1 Thessalonians 4:13-14", "1 Thessalonians 4:18", "Matthew 24:36-42", "Matthew 24:44"],
+      },
+      {
+        heading: "We are not appointed to wrath",
+        body:
+          "Paul's assurance runs to the end: 'God didn't appoint us to wrath, but to the obtaining of salvation through our Lord Jesus Christ,' and the Thessalonians are always waiting for His Son from heaven, 'Jesus, who delivers us from the wrath to come.' Whatever tribulation the world must pass through, the believer's destiny is joined to Christ, who has already taken the judgment of our sins. The coming is a rescue, not a threat, to His own, and Jesus Himself promised, 'I will come again, and will receive you to myself; that where I am, you may be there also.'",
+        verses: ["1 Thessalonians 5:9-10", "1 Thessalonians 1:10", "John 14:2-3", "Matthew 24:42"],
+      },
+      {
+        heading: "Honest differences about timing; unity about the truths",
+        body:
+          "Christians differ over when the gathering happens in relation to tribulation, and 2 Thessalonians 2 exists because some had even claimed the day had already come; Paul answers, 'Let no one deceive you in any way,' and anchors the church in the truth it had already received. What the text makes certain, whatever the timetable: the Lord will return, the dead in Christ will rise, we will be with Him forever, and we are to live ready. The practical response is the same for every view: watch, pray, work, and comfort one another.",
+        verses: ["2 Thessalonians 2:1-3", "2 Thessalonians 2:15", "Acts 1:7", "1 Thessalonians 4:18", "1 Corinthians 15:58"],
+      },
+    ],
+    keyVerses: ["1 Thessalonians 4:16-17", "1 Corinthians 15:51-52", "Philippians 3:20-21", "1 Thessalonians 5:9", "Matthew 24:42-44"],
+    raises: ["signs-before-jesus-returns", "will-jesus-return-literally", "what-is-the-resurrection"],
+    followsFrom: ["will-jesus-return-literally", "signs-before-jesus-returns"],
+    related: ["will-jesus-return-literally", "signs-before-jesus-returns", "what-is-the-resurrection", "what-happens-when-i-die"],
+    planned: ["How should the promise of His return change my daily life?"],
+    order: 47,
+  },
+
+  {
+    slug: "how-does-god-judge-people-who-never-heard-of-jesus",
+    question: "How does God judge people who never heard of Jesus?",
+    category: "who-we-are",
+    summary:
+      "God judges by truth, without partiality, and everyone has already been given real revelation: creation speaks, conscience testifies, and no one is neutral before God. Scripture insists that no one is saved except through Christ, and that faith comes by hearing, so the gospel must be carried. We can trust the Judge to be perfectly just, and we can let His justice drive us to the one work He has given: making the name that saves heard.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 1,
+        title: "What everyone knows",
+        lookFor: "God's visible revelation in creation, and the human response that leaves no one without excuse.",
+        focus: "18-32",
+      },
+      {
+        book: "Romans",
+        chapter: 2,
+        title: "Judged by truth",
+        lookFor: "God's impartial judgment, and the law written on hearts, with conscience accusing or excusing.",
+        focus: "11-16",
+      },
+      {
+        book: "Acts",
+        chapter: 17,
+        title: "Paul in Athens",
+        lookFor: "A nation that did not know God: its poets, its altar, and the call to repent because a day of judgment is fixed.",
+        focus: "22-31",
+      },
+      {
+        book: "Psalms",
+        chapter: 19,
+        title: "The heavens declare",
+        lookFor: "The speech that has gone out through all the earth, before any missionary ever arrives.",
+        focus: "1-6",
+      },
+    ],
+    points: [
+      {
+        heading: "God judges by truth and without partiality",
+        body:
+          "Paul states the judge's character first: 'there is no partiality with God,' and He will judge the secrets of men 'according to my Good News, by Jesus Christ.' Abraham's question stands over every version of this worry: 'Shouldn't the Judge of all the earth do right?' We can ask how God judges because we already know who He is: perfectly just, perfectly merciful, and incapable of wronging anyone.",
+        verses: ["Romans 2:11", "Romans 2:16", "Romans 2:6", "Genesis 18:25"],
+      },
+      {
+        heading: "General revelation leaves no one without excuse",
+        body:
+          "Paul's answer to the question begins with what everyone has heard: 'the invisible things of him since the creation of the world are clearly seen, being perceived through the things that are made... that they may be without excuse.' The heavens 'pour out speech' with a voice that has gone out 'through all the earth,' and God did not leave Himself without witness, giving rains and fruitful seasons and filling hearts with food and gladness. No one starts from zero; every person has stood under the open sky of the Creator's glory and chosen what to do with it.",
+        verses: ["Romans 1:19-20", "Psalm 19:1-4", "Acts 14:16-17"],
+      },
+      {
+        heading: "The law on the heart: conscience accuses or excuses",
+        body:
+          "Paul adds the inner witness: when Gentiles who do not have the law do by nature the things of the law, 'they show the work of the law written in their hearts, their conscience testifying with them, and their thoughts among themselves accusing or else excusing them.' God judges the secrets of men by Christ on that day. Conscience is not salvation, but it is real knowledge, and it prepares the verdict that every human heart already knows about God's right.",
+        verses: ["Romans 2:12-16", "Romans 2:15", "Romans 2:16"],
+      },
+      {
+        heading: "Yet no one is saved except through Christ",
+        body:
+          "Revelation does not provide a second way for the unevangelized; it names one: 'There is salvation in none other, for neither is there any other name under heaven, that is given among men, by which we must be saved.' Jesus said, 'No one comes to the Father, except through me,' and John adds that whoever does not believe in the name of the only Son 'has been judged already.' The wonder of Scripture is not that God found a back door; it is that the only door was flung open for the whole world, and that 'whoever will call on the name of the Lord will be saved.'",
+        verses: ["Acts 4:12", "John 14:6", "John 3:18", "Romans 10:13"],
+      },
+      {
+        heading: "The response: confidence in the Judge and urgency in the mission",
+        body:
+          "Paul's logic runs from God's justice to the gospel's necessity: 'How will they call on him in whom they have not believed? How will they believe in him whom they have not heard? How will they hear without a preacher? ... So faith comes by hearing, and hearing by the word of God.' God has appointed a day and a Judge and 'commands that all people everywhere should repent,' as Paul declared to people who genuinely had never heard. We cannot calculate the verdicts of the final day, and we do not need to: we can trust the Judge, and we can obey the mission, because the answer to the question is the same as the answer to the world's need: proclaim Christ.",
+        verses: ["Romans 10:14-15", "Romans 10:17", "Acts 17:30-31", "1 Timothy 2:4"],
+      },
+    ],
+    keyVerses: ["Romans 1:20", "Romans 2:15", "Acts 17:30-31", "Romans 10:14-15", "Acts 4:12"],
+    raises: ["what-is-hell", "how-do-i-share-my-faith-with-others", "what-is-sin"],
+    followsFrom: ["what-is-sin", "does-everyone-deserve-gods-judgment"],
+    related: ["what-is-sin", "does-everyone-deserve-gods-judgment", "what-is-hell", "how-do-i-share-my-faith-with-others"],
+    planned: ["How should the doctrine of judgment motivate our witness?"],
+    order: 51,
+  },
+
+  {
+    slug: "can-a-christian-be-tormented-by-demons",
+    question: "Can a Christian be tormented by demons?",
+    category: "unseen-realm",
+    summary:
+      "Scripture never says a demon can dwell in someone the Spirit of God indwells, but it is clear that believers can be attacked from outside: tempted, accused, harassed, and hindered. The difference is the one Jesus drew: possession is being seized by a power that rules you, while the Christian is ruled by the Spirit and stands against the enemy with armor and the name of Christ. The battle is real; the victory is already decisive.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 8,
+        title: "The man with the legion",
+        lookFor: "What possession looks like at its worst, and what Jesus' word alone does to an army of demons.",
+        focus: "26-39",
+      },
+      {
+        book: "Acts",
+        chapter: 19,
+        title: "The sons of Sceva",
+        lookFor: "The limits of spiritual authority: demons yield to Jesus and Paul, and mock everyone else.",
+        focus: "11-20",
+      },
+      {
+        book: "Ephesians",
+        chapter: 6,
+        title: "The believer's battle",
+        lookFor: "Paul's description of the fight: not against flesh and blood, and the armor for standing.",
+        focus: "10-20",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 12,
+        title: "The thorn in the flesh",
+        lookFor: "A messenger of Satan allowed to torment a faithful apostle, and the grace that sustains him.",
+        focus: "7-10",
+      },
+    ],
+    points: [
+      {
+        heading: "Scripture's possessed are outside Christ; His word frees them",
+        body:
+          "The demonized man of the Gadarenes lived among the tombs, wore no clothes, and was driven by demons into the desert; at Jesus' word, 'Legion' left him, and the city found him 'sitting at Jesus' feet, clothed and in his right mind.' They saw the power of the demons in his bondage and the greater power of the Son of God in his freedom. Where Jesus is Lord, demons do not own the house.",
+        verses: ["Luke 8:27-29", "Luke 8:35", "Luke 8:39"],
+      },
+      {
+        heading: "Believers are the temple of the Spirit, and greater is He in us",
+        body:
+          "Paul makes the boundary a matter of residence: 'You are not in the flesh but in the Spirit, if it is so that the Spirit of God dwells in you,' and he asks, 'Don't you know that your body is a temple of the Holy Spirit... which you have from God?' John's word for the whole church is decisive: 'You are of God, little children, and have overcome them; because greater is he who is in you than he who is in the world.' A spirit of darkness cannot share the temple the Spirit of God has claimed; that is not a promise of comfort but a fact of ownership.",
+        verses: ["Romans 8:9", "1 Corinthians 6:19", "1 John 4:4", "1 Corinthians 3:16"],
+      },
+      {
+        heading: "But they can attack from outside: tempt, accuse, hinder",
+        body:
+          "The same New Testament that promises the Spirit's residence warns that 'our wrestling is not against flesh and blood, but against the principalities, against the powers... against the spiritual forces of wickedness in the heavenly places,' and Peter pictures the devil as a roaring lion walking about, 'seeking whom he may devour.' Even Paul had 'a thorn in the flesh, a messenger of Satan to torment me.' The believer's battle is real; the question is not whether the enemy attacks, but whether he rules.",
+        verses: ["Ephesians 6:12", "1 Peter 5:8-9", "2 Corinthians 12:7", "Ephesians 6:11"],
+      },
+      {
+        heading: "The response: resist in faith, with the armor, not in raw power",
+        body:
+          "James gives the two-part move: submit to God, and 'resist the devil, and he will flee from you.' Peter links resistance to faith: 'Withstand him steadfast in your faith,' knowing the same sufferings are shared across the world. Paul's armor is the counter-terror: truth, righteousness, the gospel of peace, faith, salvation, and the word of God, with all prayer. Jude adds the humility of Michael the archangel, who dared not bring an abusive condemnation against the devil but said, 'May the Lord rebuke you!' We do not fight the enemy in our own authority; we fight in the name and word of the One who has already defeated him.",
+        verses: ["James 4:7", "1 Peter 5:9", "Ephesians 6:13-17", "Jude 9", "Ephesians 6:18"],
+      },
+      {
+        heading: "The victory is Christ's, and it is finished",
+        body:
+          "The cross was the defeat: through death He brought to nothing 'him who had the power of death, that is, the devil,' and having stripped the principalities and the powers, He 'made a show of them openly, triumphing over them in it.' John's reason for the incarnation is blunt: 'To this end the Son of God was revealed, that he might destroy the works of the devil.' So the believer's posture is not foreboding but perseverance: stand, pray, resist, and rest in the One whose resurrection is the final word. The devils had their hour; it ended at the cross and the empty tomb.",
+        verses: ["Hebrews 2:14-15", "Colossians 2:15", "1 John 3:8", "2 Timothy 4:18"],
+      },
+    ],
+    keyVerses: ["1 John 4:4", "Ephesians 6:12", "James 4:7", "2 Corinthians 12:9", "Colossians 2:15"],
+    raises: ["what-is-spiritual-warfare", "praying-against-the-enemy", "who-is-satan"],
+    followsFrom: ["are-demons-real", "who-is-satan"],
+    related: ["are-demons-real", "what-is-spiritual-warfare", "praying-against-the-enemy", "body-soul-and-spirit"],
+    planned: ["What should I do if I am afraid of demonic attack?"],
+    order: 53,
   },
 ];
