@@ -10244,7 +10244,7 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
         heading: "The response: resist in faith, with the armor, not in raw power",
         body:
           "James gives the two-part move: submit to God, and 'resist the devil, and he will flee from you.' Peter links resistance to faith: 'Withstand him steadfast in your faith,' knowing the same sufferings are shared across the world. Paul's armor is the counter-terror: truth, righteousness, the gospel of peace, faith, salvation, and the word of God, with all prayer. Jude adds the humility of Michael the archangel, who dared not bring an abusive condemnation against the devil but said, 'May the Lord rebuke you!' We do not fight the enemy in our own authority; we fight in the name and word of the One who has already defeated him.",
-        verses: ["James 4:7", "1 Peter 5:9", "Ephesians 6:13-17", "Jude 9", "Ephesians 6:18"],
+        verses: ["James 4:7", "1 Peter 5:9", "Ephesians 6:13-17", "Jude 1:9", "Ephesians 6:18"],
       },
       {
         heading: "The victory is Christ's, and it is finished",
