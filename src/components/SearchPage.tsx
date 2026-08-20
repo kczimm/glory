@@ -47,9 +47,9 @@ function SearchView() {
 
       {term && (
         <p className="mt-4 text-[13px] text-ink-faint">
+          {questions.length} {questions.length === 1 ? "study" : "studies"} ·{" "}
           {verseGroups.length} {verseGroups.length === 1 ? "chapter" : "chapters"}{" "}
-          ({verses.length} {verses.length === 1 ? "verse" : "verses"}) ·{" "}
-          {questions.length} {questions.length === 1 ? "study" : "studies"} for
+          ({verses.length} {verses.length === 1 ? "verse" : "verses"}) for
           “{term}”
         </p>
       )}
@@ -62,33 +62,6 @@ function SearchView() {
       )}
 
       <div className="mt-8 space-y-10">
-        {verseGroups.length > 0 && (
-          <section>
-            <h2 className="font-display text-xl font-medium text-ink">
-              Scripture
-            </h2>
-            <div className="mt-4 space-y-2">
-              {verseGroups.map((g) => (
-                <div key={g.ref}>
-                  <p className="mb-2 font-display text-[15px] font-semibold text-gold-deep">
-                    {g.ref}
-                  </p>
-                  <div className="space-y-2">
-                    {g.verses.map((v) => (
-                      <ScalableVerseRow
-                        key={v.ref}
-                        verse={v.ref}
-                        text={v.text}
-                        term={term}
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
         {questions.length > 0 && (
           <section>
             <h2 className="font-display text-xl font-medium text-ink">
@@ -111,6 +84,33 @@ function SearchView() {
                     →
                   </span>
                 </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {verseGroups.length > 0 && (
+          <section>
+            <h2 className="font-display text-xl font-medium text-ink">
+              Scripture
+            </h2>
+            <div className="mt-4 space-y-2">
+              {verseGroups.map((g) => (
+                <div key={g.ref}>
+                  <p className="mb-2 font-display text-[15px] font-semibold text-gold-deep">
+                    {g.ref}
+                  </p>
+                  <div className="space-y-2">
+                    {g.verses.map((v) => (
+                      <ScalableVerseRow
+                        key={v.ref}
+                        verse={v.ref}
+                        text={v.text}
+                        term={term}
+                      />
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </section>

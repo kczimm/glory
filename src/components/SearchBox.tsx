@@ -52,8 +52,30 @@ export default function SearchBox() {
             </p>
           )}
 
+          {questions.length > 0 && (
+            <div className="border-b border-line px-5 py-3">
+              <p className="mb-1 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                Questions · {questions.length}
+              </p>
+              {questions.map((question) => (
+                <Link
+                  key={question.slug}
+                  href={`/questions/${question.slug}`}
+                  className="-mx-5 block border-b border-line/70 px-5 py-2.5 transition-colors last:border-b-0 hover:bg-gold-wash/50"
+                >
+                  <p className="font-display text-[14.5px] font-medium text-ink">
+                    {question.question}
+                  </p>
+                  <p className="mt-0.5 line-clamp-1 text-[12.5px] text-ink-faint">
+                    {question.summary}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          )}
+
           {verseGroups.length > 0 && (
-            <div className="border-b border-line px-5 pb-1 pt-3">
+            <div className="px-5 pb-1 pt-3">
               <p className="mb-1 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
                 Scripture · {verses.length} verses in{" "}
                 {verseGroups.length} {verseGroups.length === 1 ? "chapter" : "chapters"}
@@ -85,28 +107,6 @@ export default function SearchBox() {
                     );
                   })}
                 </div>
-              ))}
-            </div>
-          )}
-
-          {questions.length > 0 && (
-            <div className="px-5 py-3">
-              <p className="mb-1 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
-                Questions · {questions.length}
-              </p>
-              {questions.map((question) => (
-                <Link
-                  key={question.slug}
-                  href={`/questions/${question.slug}`}
-                  className="-mx-5 block border-b border-line/70 px-5 py-2.5 transition-colors last:border-b-0 hover:bg-gold-wash/50"
-                >
-                  <p className="font-display text-[14.5px] font-medium text-ink">
-                    {question.question}
-                  </p>
-                  <p className="mt-0.5 line-clamp-1 text-[12.5px] text-ink-faint">
-                    {question.summary}
-                  </p>
-                </Link>
               ))}
             </div>
           )}
