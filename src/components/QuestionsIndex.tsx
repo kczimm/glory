@@ -84,7 +84,7 @@ export default function QuestionsIndex() {
       {/* Filter + category jump */}
       <div className="sticky top-14 z-30 -mx-5 border-b border-line/60 bg-parchment/95 px-5 py-3 backdrop-blur-sm sm:top-16">
         <div className="flex items-center gap-3 rounded-xl border border-line bg-white px-4 py-2.5 focus-within:border-gold/60">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#98917f" strokeWidth="2" className="shrink-0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink-faint)" strokeWidth="2" className="shrink-0">
             <circle cx="11" cy="11" r="7" />
             <path d="m20 20-3.5-3.5" strokeLinecap="round" />
           </svg>

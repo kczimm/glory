@@ -10,7 +10,8 @@
   --color-cream-deep: #eadfc8;
   --color-ink: #26241d;
   --color-ink-soft: #625e51;
-  --color-ink-faint: #98917f;
+  /* ~5:1 on parchment and 4.5:1 on cream: AA for small text */
+  --color-ink-faint: #6f6856;
   --color-gold: #a07c2e;
   --color-gold-deep: #7d5f21;
   --color-gold-soft: #cdb77e;

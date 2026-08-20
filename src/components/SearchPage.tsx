@@ -29,7 +29,7 @@ function SearchView() {
       </p>
 
       <div className="mt-7 flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 focus-within:border-gold/60">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#98917f" strokeWidth="2" className="shrink-0">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink-faint)" strokeWidth="2" className="shrink-0">
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-3.5-3.5" strokeLinecap="round" />
         </svg>

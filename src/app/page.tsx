@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { categories, questions, resolveQuestions } from "@/data";
+import { categories, questions, resolveQuestions, questionsByCategory } from "@/data";
 import SearchBox from "@/components/SearchBox";
 import QuestionCard from "@/components/QuestionCard";
 import VerseCard from "@/components/VerseCard";
@@ -9,8 +9,19 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="border-b border-line bg-gradient-to-b from-cream/80 to-parchment">
-        <div className="mx-auto max-w-5xl px-5 pb-16 pt-12 text-center sm:pb-20 sm:pt-24">
+      <section className="relative overflow-hidden border-b border-line bg-gradient-to-b from-cream/80 to-parchment">
+        {/* paper-grain noise + warm vignette (pure CSS, no assets) */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-10 mix-blend-multiply"
+          style={{
+            backgroundImage: [
+              `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/></svg>")`,
+              "radial-gradient(ellipse 130% 100% at 50% -20%, transparent 55%, rgba(214, 194, 148, 0.5))",
+            ].join(", "),
+          }}
+        />
+        <div className="relative mx-auto max-w-5xl px-5 pb-16 pt-12 text-center sm:pb-20 sm:pt-24">
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-deep sm:text-[12px] sm:tracking-[0.3em]">
             A question-driven study of the Word
           </p>
@@ -96,6 +107,7 @@ export default function Home() {
         <div className="grid gap-5 md:grid-cols-2">
           {categories.map((c) => {
             const qs = resolveQuestions(c.entry);
+            const count = questionsByCategory(c.slug).length;
             return (
               <div
                 key={c.slug}
@@ -126,6 +138,13 @@ export default function Home() {
                     </Link>
                   ))}
                 </div>
+                <Link
+                  href="/questions"
+                  className="mt-auto flex items-center gap-1.5 pt-4 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-ink-faint transition-colors hover:text-gold-deep"
+                >
+                  {count} {count === 1 ? "question" : "questions"} in this trail
+                  <span className="text-gold">→</span>
+                </Link>
               </div>
             );
           })}
