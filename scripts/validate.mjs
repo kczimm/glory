@@ -24,6 +24,11 @@ const verseKeys = new Set(
 const chapterKeys = new Set(
   [...scriptureSrc.matchAll(/^\s{2}"([^"]+)": \[/gm)].map((m) => m[1])
 );
+const chapterLens = new Map();
+for (const m of scriptureSrc.matchAll(/^\s{2}"([^"]+)": \[([\s\S]*?)\n\s*\],/gm)) {
+  const nums = [...m[2].matchAll(/\{ n: (\d+),/g)].map((x) => +x[1]);
+  if (nums.length) chapterLens.set(m[1], Math.max(...nums));
+}
 const BOOK_ALIASES = { Psalm: "Psalms" };
 const canonicalBook = (b) => BOOK_ALIASES[b] ?? b;
 
@@ -40,9 +45,15 @@ for (const b of blocks) {
     const m = b.match(re);
     return m && m[1].trim() ? [...m[1].matchAll(/"([^"]+)"/g)].map((s) => s[1]) : [];
   };
-  const refs = (re) => {
-    const m = b.match(re);
-    return m && m[1].trim() ? [...m[1].matchAll(/"(?:[^"\\]|\\.)*"/g)].map((s) => s[0].slice(1, -1)) : [];
+  // All `verses: [...]` arrays in the block, across EVERY study point (and any
+  // other spot that cites verses). `.match()` only returns the first array per
+  // block, which is how a broken ref in a later point used to slip through.
+  const allRefs = (arrName) => {
+    const out = [];
+    for (const m of b.matchAll(new RegExp(`${arrName}: \\[([^\\]]*)\\]`, "g"))) {
+      out.push(...(m[1].trim() ? [...m[1].matchAll(/"(?:[^"\\]|\\.)*"/g)].map((s) => s[0].slice(1, -1)) : []));
+    }
+    return out;
   };
   questions.push({
     slug,
@@ -53,13 +64,15 @@ for (const b of blocks) {
     passages: (() => {
       const pm = b.match(/passages: \[([\s\S]*?)\n\s*\],/);
       if (!pm) return [];
-      return [...pm[1].matchAll(/book: "([^"]+)",\s*\n\s*chapter: (\d+)/g)].map((m) => ({
-        book: m[1],
-        chapter: +m[2],
+      // Each block is one passage object's fields; fields are scalar strings, so
+      // splitting on "{" is safe and lets us read each passage's OWN focus.
+      return pm[1].split("{").filter((blk) => blk.includes("book:")).map((blk) => ({
+        book: blk.match(/book: "([^"]+)"/)?.[1],
+        chapter: +blk.match(/chapter: (\d+)/)?.[1],
+        focus: blk.match(/focus: "([^"]+)"/)?.[1],
       }));
     })(),
-    verses: refs(/verses: \[([^\]]*)\]/),
-    keyVerses: refs(/keyVerses: \[([^\]]*)\]/),
+    verses: [...new Set([...allRefs("verses"), ...allRefs("keyVerses")])],
     raises: arr(/raises: \[([^\]]*)\]/),
     followsFrom: arr(/followsFrom: \[([^\]]*)\]/),
     related: arr(/related: \[([^\]]*)\]/),
@@ -76,7 +89,7 @@ const ok = (cond, msg) => {
 // ---- 1 & 2: verse refs and passages resolve ------------------------------------
 const REF_RE = /^(.*?)\s(\d+):(\d+)(?:-(\d+))?$/;
 for (const q of questions) {
-  for (const ref of [...q.verses, ...q.keyVerses]) {
+  for (const ref of q.verses) {
     const m = ref.match(REF_RE);
     if (!m) {
       ok(false, `${q.slug}: unparseable ref "${ref}"`);
@@ -89,7 +102,17 @@ for (const q of questions) {
     }
   }
   for (const p of q.passages) {
-    ok(chapterKeys.has(`${canonicalBook(p.book)} ${p.chapter}`), `${q.slug}: missing chapter ${p.book} ${p.chapter}`);
+    const ckey = `${canonicalBook(p.book)} ${p.chapter}`;
+    ok(chapterKeys.has(ckey), `${q.slug}: missing chapter ${p.book} ${p.chapter}`);
+    if (!p.focus) continue;
+    const fm = p.focus.match(/^(\d+)(?:-(\d+))?$/);
+    ok(fm, `${q.slug}: unparseable focus "${p.focus}" in ${p.book} ${p.chapter}`);
+    if (fm) {
+      const start = +fm[1];
+      const end = fm[2] === undefined ? start : +fm[2];
+      const len = chapterLens.get(ckey) ?? 0;
+      ok(start >= 1 && end <= len, `${q.slug}: focus ${p.focus} out of bounds for ${p.book} ${p.chapter} (chapter has ${len ? len : "unknown"} verses)`);
+    }
   }
 }
 
