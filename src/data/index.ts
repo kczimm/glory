@@ -94,6 +94,18 @@ export function categoryOf(q: Question): Category | undefined {
   return getCategory(q.category);
 }
 
+/**
+ * Up to three questions for the hands-free "keep going" menu at the end of
+ * a study listen: the study's own raises first (the journey continues here);
+ * falling back to the next in its trail when nothing is raised in writing.
+ */
+export function voiceMenu(q: Question): Question[] {
+  const raised = resolveQuestions(q.raises).slice(0, 3);
+  if (raised.length) return raised;
+  const next = trailOf(q).next;
+  return next ? [next] : [];
+}
+
 export function trailOf(q: Question): { prev?: Question; next?: Question } {
   const siblings = questionsByCategory(q.category);
   const i = siblings.findIndex((s) => s.slug === q.slug);
