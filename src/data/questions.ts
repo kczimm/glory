@@ -5651,6 +5651,102 @@ raises: ["what-is-the-flesh-versus-the-spirit", "where-does-temptation-come-from
     order: 45,
   },
 
+  {
+    slug: "what-does-the-bible-say-about-animals-and-heaven",
+    question: "What does the Bible say about animals and heaven?",
+    category: "our-hope",
+    summary:
+      "The Bible never promises that a specific animal is raised or restored in heaven, and it is honest about that silence. What it does say is clear: God made the animals and called them good, He cares for them and keeps covenant with them, the animal world shares in the groaning of a fallen creation and will be set free with it, and the healed new creation ends the violence of the animal kingdom, so that every creature can praise God together.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 1,
+        title: "God makes the animals and calls them good",
+        lookFor: "God creates the living creatures, blesses them, and declares everything He made 'very good.'",
+        focus: "20-31",
+      },
+      {
+        book: "Genesis",
+        chapter: 9,
+        title: "God's covenant with every living creature",
+        lookFor: "God's promise after the flood is made not only with Noah but with the birds, the livestock, and every animal of the earth.",
+        focus: "8-17",
+      },
+      {
+        book: "Psalms",
+        chapter: 104,
+        title: "God feeds and renews all creatures",
+        lookFor: "God gives the animals their food, renews the face of the ground, and takes away and gives back their breath.",
+        focus: "24-30",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "Creation set free",
+        lookFor: "Paul says the creation itself was subjected to vanity and will be delivered from its bondage to decay.",
+        focus: "18-25",
+      },
+      {
+        book: "Isaiah",
+        chapter: 65,
+        title: "The joy of the new creation",
+        lookFor: "In God's new heavens and new earth, the wolf and the lamb feed together and nothing hurts or destroys.",
+        focus: "17-25",
+      },
+      {
+        book: "Revelation",
+        chapter: 5,
+        title: "Every creature praises God and the Lamb",
+        lookFor: "Every created thing in heaven and on earth and under the earth joins in blessing God and the Lamb.",
+        focus: "11-14",
+      },
+    ],
+    points: [
+      {
+        heading: "God made the animals and called them good",
+        body:
+          "God called the living creatures into being out of the ground and the sea, blessed them, and when He finished, 'God saw everything that he had made, and behold, it was very good.' Animals are not an accident or an afterthought; they are God's deliberate, good creation, made before sin entered the world.",
+        verses: ["Genesis 1:24", "Genesis 1:25", "Genesis 1:31"],
+      },
+      {
+        heading: "God cares for animals and keeps covenant with them",
+        body:
+          "After the flood, God's covenant, His bound promise, was made not only with Noah but 'with every living creature that is with you: the birds, the livestock, and every animal of the earth.' Jesus says the heavenly Father feeds the birds, and the righteous are marked by respect for the life of their animal. God's care for animals runs through all of Scripture.",
+        verses: ["Genesis 9:10", "Genesis 9:12", "Matthew 6:26", "Proverbs 12:10"],
+      },
+      {
+        heading: "The animal world shares in the groaning of a fallen creation",
+        body:
+          "Paul says the creation was subjected to vanity and 'groans and travails in pain together until now,' waiting to be set free from its bondage to decay. Animals suffer in our fallen world, and they are not written out of the story of redemption; the creation itself waits for the revealing of the children of God.",
+        verses: ["Romans 8:20", "Romans 8:22", "Romans 8:21"],
+      },
+      {
+        heading: "The new creation heals the animal world",
+        body:
+          "The prophets picture the healed creation in unmistakably animal terms: 'The wolf will live with the lamb, and the leopard will lie down with the young goat,' and 'the wolf and the lamb shall feed together... They shall not hurt nor destroy in all my holy mountain.' The violence of the animal kingdom is undone. God does not scrap His creation; He renews it, and animals are part of that renewal.",
+        verses: ["Isaiah 11:6", "Isaiah 65:25", "2 Peter 3:13", "Revelation 21:1"],
+      },
+      {
+        heading: "Every creature will praise God",
+        body:
+          "John heard 'every created thing which is in heaven, on the earth, under the earth, on the sea, and everything in them' saying blessing, honor, glory, and dominion to God and to the Lamb. The psalmists call the wild animals, livestock, and creeping things to praise the Lord. The animal creation is part of the music of the new heavens and new earth.",
+        verses: ["Revelation 5:13", "Psalm 148:7", "Psalm 148:10"],
+      },
+      {
+        heading: "And here is what the Bible does not say",
+        body:
+          "The Bible never promises that a specific, individual animal is raised or restored in heaven. The clear promises of resurrection and eternal life belong to people made in God's image, to those who believe in Christ. This silence is not denial; it is honesty. We can trust a God who cares for animals and who heals creation, even for the part of the story He does not spell out for us.",
+        verses: ["John 11:25-26", "1 Corinthians 15:42-44", "Genesis 9:10"],
+      },
+    ],
+    keyVerses: ["Genesis 1:31", "Genesis 9:10", "Romans 8:21", "Isaiah 11:6", "Revelation 5:13"],
+    raises: ["why-does-god-allow-suffering", "what-does-it-mean-to-be-made-in-gods-image"],
+    followsFrom: ["what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation"],
+    related: ["what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation", "why-does-god-allow-suffering"],
+    planned: ["Will we recognize our beloved animals in the new creation?"],
+    order: 46,
+  },
+
   // ------------------------------------------------------------------
   // TRAIL: Who We Are (continued)
   // ------------------------------------------------------------------
