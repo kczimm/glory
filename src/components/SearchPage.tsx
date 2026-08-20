@@ -4,7 +4,7 @@ import { Suspense, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { verseSlug, getCategory } from "@/data";
-import { searchAll, snippet, groupVersesByChapter } from "@/lib/search";
+import { searchAll, snippet } from "@/lib/search";
 
 function SearchView() {
   const sp = useSearchParams();
@@ -12,7 +12,6 @@ function SearchView() {
 
   const term = q.trim();
   const { verses, questions } = useMemo(() => searchAll(term, 40, 40), [term]);
-  const verseGroups = useMemo(() => groupVersesByChapter(verses), [verses]);
   const empty = term.length > 0 && verses.length === 0 && questions.length === 0;
 
   return (
@@ -48,8 +47,7 @@ function SearchView() {
       {term && (
         <p className="mt-4 text-[13px] text-ink-faint">
           {questions.length} {questions.length === 1 ? "study" : "studies"} ·{" "}
-          {verseGroups.length} {verseGroups.length === 1 ? "chapter" : "chapters"}{" "}
-          ({verses.length} {verses.length === 1 ? "verse" : "verses"}) for
+          {verses.length} {verses.length === 1 ? "verse" : "verses"} for
           “{term}”
         </p>
       )}
@@ -89,28 +87,19 @@ function SearchView() {
           </section>
         )}
 
-        {verseGroups.length > 0 && (
+        {verses.length > 0 && (
           <section>
             <h2 className="font-display text-xl font-medium text-ink">
               Scripture
             </h2>
             <div className="mt-4 space-y-2">
-              {verseGroups.map((g) => (
-                <div key={g.ref}>
-                  <p className="mb-2 font-display text-[15px] font-semibold text-gold-deep">
-                    {g.ref}
-                  </p>
-                  <div className="space-y-2">
-                    {g.verses.map((v) => (
-                      <ScalableVerseRow
-                        key={v.ref}
-                        verse={v.ref}
-                        text={v.text}
-                        term={term}
-                      />
-                    ))}
-                  </div>
-                </div>
+              {verses.map((v) => (
+                <ScalableVerseRow
+                  key={v.ref}
+                  verse={v.ref}
+                  text={v.text}
+                  term={term}
+                />
               ))}
             </div>
           </section>

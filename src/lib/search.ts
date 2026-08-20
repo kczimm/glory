@@ -28,33 +28,6 @@ export interface VerseHit {
   text: string;
 }
 
-export interface ChapterGroup {
-  /** Chapter ref, e.g. "John 3". */
-  ref: string;
-  /** Matching verses inside this chapter, in canonical order. */
-  verses: VerseHit[];
-}
-
-/**
- * Fold verse hits into whole-chapter groups, preserving encounter order.
- * Glory reads whole chapters, so we surface the chapter before its verses.
- */
-export function groupVersesByChapter(hits: VerseHit[]): ChapterGroup[] {
-  const groups: ChapterGroup[] = [];
-  const byRef = new Map<string, ChapterGroup>();
-  for (const v of hits) {
-    const ref = v.ref.replace(/:\d+(-\d+)?$/, "");
-    let g = byRef.get(ref);
-    if (!g) {
-      g = { ref, verses: [] };
-      byRef.set(ref, g);
-      groups.push(g);
-    }
-    g.verses.push(v);
-  }
-  return groups;
-}
-
 /** Case-insensitive substring search of the whole Bible. */
 export function searchScripture(term: string, limit = 8): VerseHit[] {
   const t = term.trim().toLowerCase().replace(/\s+/g, " ");
