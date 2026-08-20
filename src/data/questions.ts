@@ -2580,10 +2580,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 28:19", "Romans 6:3-5", "Acts 2:38", "1 Peter 3:21"],
-    raises: ["who-should-be-baptized"],
+    raises: ["who-should-be-baptized", "what-is-the-difference-between-baptism-and-the-lords-supper"],
     followsFrom: ["why-do-i-need-the-church"],
     related: ["what-does-it-mean-to-be-born-again", "how-do-i-receive-the-holy-spirit"],
-    planned: ["What is the difference between baptism and the Lord's Supper?"],
+    planned: [],
     order: 38,
   },
 
@@ -2621,10 +2621,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 11:23-26", "Luke 22:19-20", "1 Corinthians 11:28"],
-    raises: ["how-often-the-lords-supper"],
+    raises: ["how-often-the-lords-supper", "who-may-take-the-lords-supper"],
     followsFrom: ["why-do-i-need-the-church"],
     related: ["why-do-i-need-the-church", "what-is-the-gospel"],
-    planned: ["Who may take the Lord's Supper?"],
+    planned: [],
     order: 39,
   },
 
@@ -2837,10 +2837,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 1:26-27", "Psalm 8:5-6", "Colossians 3:10", "2 Corinthians 3:18"],
-    raises: ["what-is-sin", "made-for-relationship"],
+    raises: ["what-is-sin", "made-for-relationship", "why-does-every-human-life-have-dignity-and-worth"],
     followsFrom: [],
     related: ["who-is-the-father"],
-    planned: ["Why does every human life have dignity and worth?"],
+    planned: [],
     order: 44,
   },
 
@@ -2921,10 +2921,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Galatians 5:16-17", "Galatians 5:22-23", "Romans 8:6", "Romans 8:13"],
-    raises: ["body-soul-and-spirit"],
+    raises: ["body-soul-and-spirit", "what-is-the-difference-between-the-heart-soul-and-mind"],
     followsFrom: ["how-do-i-fight-sin"],
     related: ["how-do-i-fight-sin", "who-is-the-holy-spirit"],
-    planned: ["What is the difference between the heart, soul, and mind?"],
+    planned: [],
     order: 46,
   },
 
@@ -5309,10 +5309,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 2:42", "1 Corinthians 12:27", "John 13:35", "Hebrews 10:24-25", "Ephesians 4:15-16"],
-    raises: ["what-is-baptism", "what-is-the-lords-supper"],
+    raises: ["what-is-baptism", "what-is-the-lords-supper", "what-does-a-church-need-from-its-leaders"],
     followsFrom: ["why-do-i-need-the-church"],
     related: ["why-do-i-need-the-church", "what-should-i-do-now-that-im-saved", "what-the-new-life-looks-like"],
-    planned: ["What does a church need from its leaders?"],
+    planned: [],
     order: 40,
   },
 
@@ -5475,10 +5475,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 11:24-26", "Luke 22:19", "Acts 20:7", "1 Corinthians 11:27-28", "Acts 2:42"],
-    raises: ["what-is-the-lords-supper"],
+    raises: ["what-is-the-lords-supper", "how-is-christ-present-in-the-lords-supper"],
     followsFrom: ["what-is-the-lords-supper", "why-do-i-need-the-church"],
     related: ["what-is-the-lords-supper", "what-is-the-gospel", "what-is-a-healthy-church"],
-    planned: ["How is Christ present in the Lord's Supper?"],
+    planned: [],
     order: 42,
   },
 
@@ -5826,10 +5826,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 1:27", "Genesis 2:18", "John 15:15", "1 John 1:3", "Ephesians 2:19"],
-    raises: ["why-do-i-need-the-church", "who-is-the-father", "what-is-the-lords-supper"],
+    raises: ["why-do-i-need-the-church", "who-is-the-father", "what-is-the-lords-supper", "why-do-i-still-feel-lonely"],
     followsFrom: ["what-does-it-mean-to-be-made-in-gods-image", "who-is-jesus"],
     related: ["what-does-it-mean-to-be-made-in-gods-image", "who-is-the-father", "why-do-i-need-the-church", "what-is-the-new-heaven-and-new-earth"],
-    planned: ["Why do I still feel lonely?"],
+    planned: [],
     order: 47,
   },
 
@@ -8136,10 +8136,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Peter 2:23", "1 Peter 4:12-13", "2 Corinthians 4:17-18", "1 Peter 5:7", "1 Peter 5:10"],
-    raises: ["where-is-god-in-my-pain", "does-god-use-our-failures", "why-does-god-seem-silent"],
+    raises: ["where-is-god-in-my-pain", "does-god-use-our-failures", "why-does-god-seem-silent", "what-does-god-promise-those-who-suffer-for-him"],
     followsFrom: ["why-does-god-allow-suffering", "what-does-it-mean-that-the-world-hates-jesus"],
     related: ["why-does-god-allow-suffering", "where-is-god-in-my-pain", "does-god-use-our-failures", "is-it-okay-to-doubt"],
-    planned: ["What does God promise those who suffer for Him?"],
+    planned: [],
     order: 34,
   },
 
@@ -8723,10 +8723,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Peter 1:20-21", "2 Timothy 3:16", "Hebrews 1:1-2", "1 Corinthians 14:37", "John 20:31"],
-    raises: ["can-i-trust-the-bible", "why-do-bible-translations-differ", "how-should-i-read-the-bible"],
+    raises: ["can-i-trust-the-bible", "why-do-bible-translations-differ", "how-should-i-read-the-bible", "what-does-it-mean-that-the-bible-is-both-human-and-divine"],
     followsFrom: ["can-i-trust-the-bible"],
     related: ["can-i-trust-the-bible", "why-do-bible-translations-differ", "is-the-whole-bible-about-jesus", "how-should-i-read-the-bible"],
-    planned: ["What does it mean that the Bible is both human and divine?"],
+    planned: [],
     order: 39,
   },
 
@@ -11239,10 +11239,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Hebrews 12:6-7", "Proverbs 3:12", "Hebrews 12:10-11", "Psalm 32:3-5", "Revelation 3:19"],
-    raises: ["does-god-use-our-failures", "what-happens-when-i-sin", "can-i-lose-my-salvation"],
+    raises: ["does-god-use-our-failures", "what-happens-when-i-sin", "can-i-lose-my-salvation", "what-is-the-difference-between-gods-discipline-and-the-devils-accusation"],
     followsFrom: ["still-my-father-when-i-fail", "does-god-use-our-failures"],
     related: ["still-my-father-when-i-fail", "does-god-use-our-failures", "what-happens-when-i-sin", "who-is-the-father"],
-    planned: ["What is the difference between God's discipline and the devil's accusation?"],
+    planned: [],
     order: 24,
   },
 
@@ -11314,10 +11314,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 5:5", "Zephaniah 3:17", "Psalm 23:1", "Ephesians 3:18-19", "1 John 4:19"],
-    raises: ["made-for-relationship", "who-is-the-father", "what-does-it-mean-that-god-is-love"],
+    raises: ["made-for-relationship", "who-is-the-father", "what-does-it-mean-that-god-is-love", "what-does-it-mean-to-abide-in-christs-love"],
     followsFrom: ["what-does-it-mean-that-god-is-love", "who-is-the-father"],
     related: ["what-does-it-mean-that-god-is-love", "who-is-the-father", "made-for-relationship", "how-does-gods-love-differ-from-human-love"],
-    planned: ["What does it mean to abide in Christ's love?"],
+    planned: [],
     order: 25,
   },
 
@@ -11390,10 +11390,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 8:32", "Romans 8:38-39", "1 John 3:1", "Zephaniah 3:17", "John 14:9"],
-    raises: ["what-does-it-mean-that-god-is-love", "made-for-relationship", "how-do-i-experience-the-love-of-god-day-to-day"],
+    raises: ["what-does-it-mean-that-god-is-love", "made-for-relationship", "how-do-i-experience-the-love-of-god-day-to-day", "how-do-i-receive-love-when-i-dont-feel-lovable"],
     followsFrom: ["how-does-gods-love-differ-from-human-love", "what-does-it-mean-that-god-is-love"],
     related: ["how-does-gods-love-differ-from-human-love", "what-does-it-mean-that-god-is-love", "who-is-the-father", "made-for-relationship"],
-    planned: ["How do I receive love when I don't feel lovable?"],
+    planned: [],
     order: 26,
   },
 
@@ -11823,6 +11823,921 @@ export const questions: Question[] = [
     related: ["what-is-the-great-tribulation", "signs-before-jesus-returns", "what-is-the-rapture", "what-is-the-final-judgment-and-who-will-be-there"],
     planned: ["What is the image of the beast?"],
     order: 51,
+  },
+
+
+  // ------------------------------------------------------------------
+  // Batch: finish the thinnest trails (God the Father, church, who we are)
+  // ------------------------------------------------------------------
+  {
+    slug: "what-is-the-difference-between-gods-discipline-and-the-devils-accusation",
+    question: "What is the difference between God's discipline and the devil's accusation?",
+    category: "god-the-father",
+    summary:
+      "God's discipline comes from the heart of a Father who loves His child and aims at repentance and restoration; the devil's accusation comes from an enemy who wants to destroy and drive to despair. One says 'turn and live,' the other says 'you're finished.' The distinguishing mark is what each does with our sin: discipline calls us to confess and return, accusation tries to convince us there is no return. The Father's voice restores; the accuser's voice condemns, and in Christ the accuser is silenced.",
+    passages: [
+      {
+        book: "Zechariah",
+        chapter: 3,
+        title: "Joshua the high priest accused",
+        lookFor: "Satan stands at Joshua's right hand to accuse him, and the Lord rebukes the accuser and clothes Joshua.",
+        focus: "1-7",
+      },
+      {
+        book: "Revelation",
+        chapter: 12,
+        title: "The accuser is thrown down",
+        lookFor: "The accuser of the brothers, who accuses them day and night, is cast out and overcome by the Lamb's blood.",
+        focus: "7-12",
+      },
+      {
+        book: "Hebrews",
+        chapter: 12,
+        title: "The Lord's discipline",
+        lookFor: "Whom the Lord loves He chastens, and it yields the peaceful fruit of righteousness.",
+        focus: "1-11",
+      },
+      {
+        book: "Psalms",
+        chapter: 32,
+        title: "Confession and forgiveness",
+        lookFor: "Unconfessed sin weighs heavy; confession brings forgiveness and a hiding place.",
+        focus: "1-7",
+      },
+    ],
+    points: [
+      {
+        heading: "The accuser's voice names, shames, and condemns",
+        body:
+          "Revelation names his work: 'the accuser of our brothers has been thrown down, who accuses them before our God day and night.' In Zechariah, 'Satan standing at his right hand to be his adversary' accuses Joshua the high priest. Jesus calls him 'a murderer from the beginning' and 'a liar, and its father.' His goal is not to make you holy but to make you hopeless: he takes true sins and uses them to convince you that God could never want you.",
+        verses: ["Revelation 12:10", "Zechariah 3:1", "John 8:44", "Zechariah 3:3"],
+      },
+      {
+        heading: "God's discipline calls you to repent and return",
+        body:
+          "God's correction never leaves you without a way back. 'For whom the Lord loves, he chastens, and scourges every son whom he receives,' and the risen Christ says, 'As many as I love, I reprove and chasten. Be zealous therefore, and repent.' The discipline of Psalm 32 is bounded: 'I acknowledged my sin to you... and you forgave the iniquity of my sin.' The Father's word is always, turn and live, because discipline is for restoration, not destruction.",
+        verses: ["Hebrews 12:6", "Revelation 3:19", "Psalm 32:5", "Proverbs 3:12"],
+      },
+      {
+        heading: "Look at what each does with your sin",
+        body:
+          "The difference is in the direction of the voice. Godly sorrow 'works repentance to salvation, which brings no regret,' and it moves you toward confession and change; the sorrow of the world 'works death,' and it moves you toward despair and giving up. God's discipline exposes sin to fix it; the accuser exposes sin to trap you in it. One produces brokenness that repents; the other produces shame that hides. The true test is which of the two is driving you.",
+        verses: ["2 Corinthians 7:10", "Psalm 32:3-4", "Psalm 32:5", "Zechariah 3:4"],
+      },
+      {
+        heading: "In Christ the accuser is silenced",
+        body:
+          "Paul closes the door on the accuser with a question: 'Who could bring a charge against God's chosen ones? It is God who justifies. Who is he who condemns? It is Christ who died, yes rather, who was raised from the dead, who is at the right hand of God, who also makes intercession for us.' Revelation says the saints 'overcame him because of the Lamb's blood, and because of the word of their testimony.' Whatever the accuser says is answered by the blood of Christ and the One who pleads for us.",
+        verses: ["Romans 8:33-34", "Revelation 12:11", "Zechariah 3:2", "1 John 2:1"],
+      },
+      {
+        heading: "How to tell them apart and respond",
+        body:
+          "God's discipline leads you to say, 'I have sinned; forgive me and restore me,' as David did, and it ends in the Father cleansing and re-clothing you, as Joshua was given 'rich clothing.' The accuser's voice leads you to say, 'God could never forgive someone like me,' and it ends in hiding. So respond to the convicting of the Holy Spirit, take your sin to the Father and confess it, and greet the accuser's lies with the word: 'there is therefore now no condemnation to those who are in Christ Jesus.' The Father disciplines to restore; the enemy accuses to destroy; you know a Father's voice from an enemy's.",
+        verses: ["Psalm 51:1", "Psalms 51:12", "Zechariah 3:4", "Romans 8:1"],
+      },
+    ],
+    keyVerses: ["Revelation 12:10", "Romans 8:33-34", "Hebrews 12:6", "Zechariah 3:4", "Romans 8:1"],
+    raises: ["does-god-use-our-failures", "what-happens-when-i-sin", "how-do-i-know-my-repentance-is-genuine"],
+    followsFrom: ["how-does-god-discipline-his-children", "does-god-use-our-failures"],
+    related: ["how-does-god-discipline-his-children", "does-god-use-our-failures", "what-happens-when-i-sin", "can-gods-grace-really-cover-my-worst-sins"],
+    planned: ["What does it mean that we have an advocate with the Father?"],
+    order: 27,
+  },
+
+  {
+    slug: "what-does-it-mean-to-abide-in-christs-love",
+    question: "What does it mean to abide in Christ's love?",
+    category: "god-the-father",
+    summary:
+      "To abide in Christ's love is not to climb toward it but to remain in it: to stay connected to Jesus as a branch stays in the vine, to live out of the love He already gives rather than trying to earn it. Jesus abided in the Father's love by keeping His commandments, and He calls us to do the same. The fruit of abiding is not a feeling but a life: joy, fruit, and love for others that flow from remaining in Him.",
+    passages: [
+      {
+        book: "John",
+        chapter: 15,
+        title: "The vine and the branches",
+        lookFor: "Abide in me, and I in you; the branch bears fruit only as it remains in the vine.",
+        focus: "1-17",
+      },
+      {
+        book: "1 John",
+        chapter: 4,
+        title: "God is love",
+        lookFor: "We have known and believed the love God has for us, and love is the proof we abide in Him.",
+        focus: "7-21",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "Nothing can separate us",
+        lookFor: "Neither height nor depth nor anything in creation can separate us from God's love in Christ.",
+        focus: "31-39",
+      },
+      {
+        book: "Psalms",
+        chapter: 36,
+        title: "Your loving kindness",
+        lookFor: "How precious is God's loving kindness; men take refuge under the shadow of His wings.",
+        focus: "5-10",
+      },
+    ],
+    points: [
+      {
+        heading: "Abiding means remaining, not achieving",
+        body:
+          "Jesus commands a rest, not a struggle: 'Remain in me, and I in you. As the branch can't bear fruit by itself, unless it remains in the vine, so neither can you, unless you remain in me.' He says, 'I am the vine. You are the branches. He who remains in me, and I in him, the same bears much fruit, for apart from me you can do nothing.' To abide is to stay connected to the source, to live from the life He gives rather than producing it ourselves.",
+        verses: ["John 15:4", "John 15:5", "John 15:9"],
+      },
+      {
+        heading: "It begins with the love you are given",
+        body:
+          "The command is built on a gift already given: 'Even as the Father has loved me, I also have loved you. Remain in my love.' John makes the same point: 'We know and have believed the love which God has for us,' and 'he who remains in love remains in God, and God remains in him.' Abiding is not earning His love by staying good; it is remaining in the love He has already poured out on us in Christ, the love nothing can separate us from.",
+        verses: ["John 15:9", "1 John 4:16", "Romans 8:38-39", "Psalm 36:7"],
+      },
+      {
+        heading: "We abide by keeping His commandments and His word",
+        body:
+          "Jesus grounds abiding in obedience: 'If you keep my commandments, you will remain in my love; even as I have kept my Father's commandments, and remain in his love.' He also says, 'If you remain in me, and my words remain in you,' you will ask and receive. Abiding is sustained by the word dwelling in us and by walking in obedience, not as a way to be loved but as the staying place of the already-loved.",
+        verses: ["John 15:10", "John 15:7", "John 15:12", "1 John 4:12"],
+      },
+      {
+        heading: "Its fruit is joy, fruitfulness, and love",
+        body:
+          "Jesus names the harvest of abiding: 'I have spoken these things to you, that my joy may remain in you, and that your joy may be made full,' and 'in this is my Father glorified, that you bear much fruit; and so you will be my disciples.' The first fruit of remaining in the Vine is love for the brothers: 'This is my commandment, that you love one another, even as I have loved you.' Abiding is not a private feeling; it is a life that bears the fruit of love.",
+        verses: ["John 15:11", "John 15:8", "John 15:12", "John 15:5"],
+      },
+      {
+        heading: "It is the environment of the whole Christian life",
+        body:
+          "Paul describes our standing as 'rooted and grounded in love,' able to 'comprehend with all the saints what is the breadth and length and height and depth' of Christ's love, and John insists that 'God is love, and he who remains in love remains in God.' To abide in Christ's love is to live consciously in the truth that you are loved, held, and welcomed by the Father through the Son, and to let that love shape every obedience, every word, and every relationship. It is the air the Christian breathes.",
+        verses: ["Ephesians 3:17-18", "1 John 4:16", "Psalm 36:7", "Romans 8:39"],
+      },
+    ],
+    keyVerses: ["John 15:9-10", "John 15:4-5", "1 John 4:16", "John 15:11", "Romans 8:38-39"],
+    raises: ["how-do-i-experience-the-love-of-god-day-to-day", "what-does-it-mean-that-god-is-love", "made-for-relationship"],
+    followsFrom: ["how-do-i-experience-the-love-of-god-day-to-day", "how-can-i-know-gods-affection-for-me-is-real"],
+    related: ["how-do-i-experience-the-love-of-god-day-to-day", "how-can-i-know-gods-affection-for-me-is-real", "what-does-it-mean-that-god-is-love", "who-is-the-father"],
+    planned: ["How do I know when I am abiding in Christ?"],
+    order: 28,
+  },
+
+  {
+    slug: "how-do-i-receive-love-when-i-dont-feel-lovable",
+    question: "How do I receive love when I don't feel lovable?",
+    category: "god-the-father",
+    summary:
+      "God's love for you is grounded in Christ, not in your loveliness. He loved you while you were still a sinner, He gave His Son for you, and nothing you have done can make Him love you less. When you feel unlovable, the answer is not to become more worthy but to receive the love that is already yours by faith, and to remember that the Father runs to meet even the child who has wandered far.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "Nothing separates us from His love",
+        lookFor: "He did not spare His own Son; and no created thing can separate you from His love.",
+        focus: "31-39",
+      },
+      {
+        book: "Luke",
+        chapter: 15,
+        title: "The loving father",
+        lookFor: "The father who runs to the son who has wasted everything, and celebrates his return.",
+        focus: "11-32",
+      },
+      {
+        book: "Psalms",
+        chapter: 51,
+        title: "David after his great sin",
+        lookFor: "The man whose sin was public and terrible, pleading for mercy and restoration.",
+        focus: "1-12",
+      },
+      {
+        book: "1 John",
+        chapter: 4,
+        title: "He loved us first",
+        lookFor: "Not that we loved God, but that He loved us and sent His Son.",
+        focus: "9-19",
+      },
+    ],
+    points: [
+      {
+        heading: "God loves you because of Christ, not because you are lovable",
+        body:
+          "Paul states the order so we can't miss it: 'God commends his own love toward us, in that while we were yet sinners, Christ died for us.' John agrees: 'In this is love, not that we loved God, but that he loved us, and sent his Son as the atoning sacrifice for our sins.' Your lovableness was never the basis. The basis is God's character and Christ's finished work, both of which are settled whether or not you feel worthy.",
+        verses: ["Romans 5:8", "1 John 4:10", "John 3:16", "Galatians 2:20"],
+      },
+      {
+        heading: "The cross is the measure, not your worthiness",
+        body:
+          "Look at what His love has already cost: 'He who didn't spare his own Son, but delivered him up for us all, how would he not also with him freely give us all things?' Paul's own confidence was personal: 'I live by faith in the Son of God, who loved me, and gave himself up for me.' If God loved you enough to give His Son, then no assessment of your current worthiness can subtract from a love that was given while you were at your worst.",
+        verses: ["Romans 8:32", "Galatians 2:20", "1 John 4:9", "Romans 5:8"],
+      },
+      {
+        heading: "Even after failure, the Father still runs",
+        body:
+          "In the parable, the son has squandered everything and deserves nothing, yet 'while he was still far off, his father saw him, and was moved with compassion, and ran.' David, after the greatest moral collapse in his story, prays 'Have mercy on me, God, according to your loving kindness,' and is forgiven and restored. John assures us that 'if we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.' Your worst moment is not beyond His love; it is exactly where His love runs to find you.",
+        verses: ["Luke 15:20", "Psalm 51:1", "1 John 1:9", "Luke 15:22-24"],
+      },
+      {
+        heading: "Receive it by faith as a fact, not as a feeling",
+        body:
+          "Feeling unlovable is a feeling; it is not the truth. Scripture commands us to believe what is true, and what is true is Paul's settled persuasion that nothing 'will be able to separate us from the love of God, which is in Christ Jesus our Lord,' and God's promise, 'I will in no way leave you, neither will I in any way forsake you.' Zephaniah pictures God rejoicing over His people and calming them 'in his love.' Let the promise anchor you when the feeling says otherwise.",
+        verses: ["Romans 8:38-39", "Hebrews 13:5", "Zephaniah 3:17", "1 John 4:16"],
+      },
+      {
+        heading: "His love is what makes you His beloved child",
+        body:
+          "The deepest cure for feeling unlovable is your new identity: 'See how great a love the Father has bestowed on us, that we should be called children of God!' You are not asking a stranger to like you; you are a son or daughter, chosen 'for adoption as children through Jesus Christ... according to the good pleasure of his desire.' The Spirit in your heart cries 'Abba, Father,' testifying that you belong. Receive the love you were given as a child, not the approval you could never earn as a stranger.",
+        verses: ["1 John 3:1", "Ephesians 1:5", "Romans 8:15-16", "John 15:9"],
+      },
+    ],
+    keyVerses: ["Romans 5:8", "Luke 15:20", "1 John 1:9", "Zephaniah 3:17", "1 John 3:1"],
+    raises: ["how-do-i-experience-the-love-of-god-day-to-day", "what-does-it-mean-to-be-a-child-of-god", "made-for-relationship"],
+    followsFrom: ["how-can-i-know-gods-affection-for-me-is-real", "how-do-i-experience-the-love-of-god-day-to-day"],
+    related: ["how-can-i-know-gods-affection-for-me-is-real", "what-does-it-mean-to-be-a-child-of-god", "made-for-relationship", "can-gods-grace-really-cover-my-worst-sins"],
+    planned: ["How do I stop measuring God's love by my performance?"],
+    order: 29,
+  },
+
+  {
+    slug: "what-is-the-difference-between-baptism-and-the-lords-supper",
+    question: "What is the difference between baptism and the Lord's Supper?",
+    category: "church",
+    summary:
+      "Baptism and the Lord's Supper are the two ordinances Jesus gave His church, and each is rooted in His command. Baptism happens once, at the beginning, and pictures entering into union with Christ in His death and resurrection. The Lord's Supper is repeated, and keeps the church returning to remember the body and blood of Christ until He comes. One marks the start of the Christian walk; the other sustains it along the way.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 28,
+        title: "Go, make disciples, and baptize",
+        lookFor: "Jesus commissions the church and joins baptism to making disciples.",
+        focus: "16-20",
+      },
+      {
+        book: "Luke",
+        chapter: 22,
+        title: "The institution of the Supper",
+        lookFor: "Jesus takes bread and cup and gives them to the disciples to remember Him.",
+        focus: "14-20",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Baptized, then breaking bread",
+        lookFor: "The response on Pentecost: those who received the word were baptized, then continued in the breaking of bread.",
+        focus: "38-47",
+      },
+      {
+        book: "Romans",
+        chapter: 6,
+        title: "What baptism pictures",
+        lookFor: "Baptized into Christ, buried with Him, raised to walk in newness of life.",
+        focus: "1-11",
+      },
+    ],
+    points: [
+      {
+        heading: "Both are commandments of Jesus",
+        body:
+          "Jesus commanded baptism as part of making disciples: 'Go, and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.' He commanded the Supper in the same way: 'Do this in memory of me,' and 'as often as you drink, in memory of me.' Neither is an optional decoration of the church; both come from the Lord's own word and have been kept by the church from the beginning.",
+        verses: ["Matthew 28:19", "Luke 22:19", "1 Corinthians 11:24-25", "Matthew 28:20"],
+      },
+      {
+        heading: "Baptism happens once; the Supper is repeated",
+        body:
+          "Baptism is a one-time act of initiation, showing our once-for-all union with Christ: 'all we who were baptized into Christ Jesus were baptized into his death.' The Supper, by contrast, is for a lifetime: Jesus says, 'as often as you eat this bread and drink this cup, you proclaim the Lord's death until he comes.' Baptism points to the doorway into the Christian life; the Supper is the repeated meal that sustains us on the way.",
+        verses: ["Romans 6:3", "1 Corinthians 11:25-26", "Matthew 28:19", "1 Corinthians 11:26"],
+      },
+      {
+        heading: "Each pictures something different",
+        body:
+          "Baptism pictures death and resurrection with Christ: 'We were buried therefore with him through baptism to death... so we also might walk in newness of life,' and Paul says we were 'buried with him in baptism, in which you were also raised with him through faith.' The Supper pictures our sharing, or communion, in Christ: 'The cup of blessing which we bless, isn't it a sharing of the blood of Christ? The bread which we break, isn't it a sharing of the body of Christ?' Entry into the risen life, and ongoing fellowship with the crucified Lord.",
+        verses: ["Romans 6:4", "Colossians 2:12", "1 Corinthians 10:16", "1 Corinthians 10:17"],
+      },
+      {
+        heading: "They have different moments and meanings",
+        body:
+          "In Scripture the order is clear: those who received the word 'were baptized,' and then 'they continued steadfastly in the apostles' teaching and fellowship, in the breaking of bread, and prayer.' Baptism is the public beginning of following Christ; the Supper is the regular remembrance of Christ by the gathered church. The one is administered to the new believer once, in the presence of the church; the other is shared repeatedly, as the church is built up and remembers together.",
+        verses: ["Acts 2:41", "Acts 2:42", "Acts 2:41-42", "Matthew 26:26-28"],
+      },
+      {
+        heading: "Neither saves; both point to the One who does",
+        body:
+          "Both ordinances are visible words that point beyond themselves to Christ. Peter is careful about baptism, that it saves 'not the putting away of the filth of the flesh, but the answer of a good conscience toward God' through the resurrection of Jesus. And Paul warns that the Supper must be taken with self-examination 'if he doesn't discern the Lord's body.' Whether we are baptized once or take the bread repeatedly, the power is never in the rite but in the Christ they proclaim, and in the faith that lays hold of Him.",
+        verses: ["1 Peter 3:21", "1 Corinthians 11:27-29", "Romans 6:4", "1 Corinthians 11:28"],
+      },
+    ],
+    keyVerses: ["Matthew 28:19", "Luke 22:19-20", "Romans 6:3-4", "1 Corinthians 11:25-26", "1 Corinthians 10:16"],
+    raises: ["what-is-baptism", "who-may-take-the-lords-supper", "how-often-the-lords-supper"],
+    followsFrom: ["what-is-baptism", "what-is-the-lords-supper"],
+    related: ["what-is-baptism", "what-is-the-lords-supper", "does-baptism-save-a-person", "who-may-take-the-lords-supper"],
+    planned: ["Why does the church practice these two and not more?"],
+    order: 46,
+  },
+
+  {
+    slug: "who-may-take-the-lords-supper",
+    question: "Who may take the Lord's Supper?",
+    category: "church",
+    summary:
+      "The Lord's Supper is for those who belong to Jesus and come in faith: believers who examine themselves and discern the Lord's body. It does not require perfection, but it does require confession, since Paul warns against taking it in an unworthy manner. The table is for the church, the body of Christ, and its participants are called to come with humility, repentance, and love for the brothers.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 11,
+        title: "Take it worthily",
+        lookFor: "Examine yourself, discern the body, and the warning about taking it unworthily.",
+        focus: "17-34",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 10,
+        title: "The table of the Lord",
+        lookFor: "The cup and bread are a sharing in Christ's body; you cannot share the Lord's table and the table of demons.",
+        focus: "14-22",
+      },
+      {
+        book: "Matthew",
+        chapter: 26,
+        title: "The first Supper",
+        lookFor: "Jesus gives the bread and cup to His disciples, the community of those who followed Him.",
+        focus: "26-30",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "The church at the table",
+        lookFor: "Those who received the word were baptized and continued in the breaking of bread.",
+        focus: "42-47",
+      },
+    ],
+    points: [
+      {
+        heading: "It is for believers, not the world",
+        body:
+          "The Supper belongs to those who are in Christ. Jesus gave it to His disciples, and in Acts it is those who 'gladly received his word' and were baptized who 'continued in the breaking of bread.' Paul's warnings assume those at the table are part of the Christian community, and he calls on them to 'discern the Lord's body.' The table is not a general meal for anyone present; it is the communion of the church with its Lord.",
+        verses: ["Matthew 26:26", "Acts 2:41-42", "1 Corinthians 11:29", "Acts 2:46"],
+      },
+      {
+        heading: "It does not require perfection, but it requires examination",
+        body:
+          "Paul's instruction is not that only the sinless come but that each one come examining: 'Let a man examine himself, and so let him eat of the bread, and drink of the cup.' He adds, 'For if we discerned ourselves, we wouldn't be judged.' The table is for repentant sinners, not the self-righteous, and the examination is the honest bringing of ourselves, confessing our sin and trusting the body broken for us. It calls for preparation of heart, not manufactured sinlessness.",
+        verses: ["1 Corinthians 11:28", "1 Corinthians 11:31", "1 Corinthians 11:27-28"],
+      },
+      {
+        heading: "Taking it unworthily is a warning, not a bar",
+        body:
+          "Paul warns: 'whoever eats this bread or drinks the Lord's cup in a way unworthy of the Lord will be guilty of the body and the blood of the Lord,' and that those who eat and drink in an unworthy way 'eat and drink judgment to themselves.' He even says some among them were weak and sick because of it. The warning is real, and it points to the answer: come examining, discerning the body, turning from sin. It is a call to worthy participation, not an excuse to stay away because you are imperfect.",
+        verses: ["1 Corinthians 11:27", "1 Corinthians 11:29", "1 Corinthians 11:30", "1 Corinthians 11:28"],
+      },
+      {
+        heading: "It is for the body of Christ, in unity and love",
+        body:
+          "The Supper is shared by the one body: 'Because there is one loaf of bread, we, who are many, are one body; for we all partake of the one loaf of bread.' Paul rebukes the Corinthians for dividing at the table, which is not to 'discern the Lord's body.' And he warns against mixing the table with idolatry: 'You can't both drink the cup of the Lord and the cup of demons.' Those who come are those who belong to the one Lord and, for His sake, to one another.",
+        verses: ["1 Corinthians 10:17", "1 Corinthians 11:18", "1 Corinthians 10:21", "1 Corinthians 11:33"],
+      },
+      {
+        heading: "Who then should come",
+        body:
+          "Come if you are trusting in Christ and belong to His church: examine yourself, confess any sin, receive the bread and cup in faith, 'proclaiming the Lord's death until he comes.' Come in love for the brothers, in forgiveness toward any who have wronged you, and in dependence on the One whose body was broken and blood poured out for you. Paul's closing word for the assembly is grace: the table is the place where forgiven sinners meet their Lord and are strengthened for the road ahead.",
+        verses: ["1 Corinthians 11:26", "1 Corinthians 11:28", "1 Corinthians 11:33-34", "Matthew 26:26-28"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 11:27-29", "1 Corinthians 11:28", "1 Corinthians 10:16-17", "Matthew 26:26", "1 Corinthians 11:26"],
+    raises: ["what-is-the-lords-supper", "how-often-the-lords-supper", "how-is-christ-present-in-the-lords-supper"],
+    followsFrom: ["what-is-the-lords-supper", "what-is-the-difference-between-baptism-and-the-lords-supper"],
+    related: ["what-is-the-lords-supper", "what-is-the-difference-between-baptism-and-the-lords-supper", "how-is-christ-present-in-the-lords-supper", "what-is-the-church"],
+    planned: ["Why do some churches close the table and others open it to all?"],
+    order: 47,
+  },
+
+  {
+    slug: "how-is-christ-present-in-the-lords-supper",
+    question: "How is Christ present in the Lord's Supper?",
+    category: "church",
+    summary:
+      "At the Supper Jesus said, 'This is my body' and 'This is my blood,' and the church has always recognized a real presence of Christ at His table, while describing it differently. The historic views range from the bread and wine becoming His body and blood to a spiritual presence received by faith to a memorial of His once-for-all sacrifice. All agree on what matters: Christ is the host and the gift, the Supper is communion with Him, and His sacrifice is not repeated but proclaimed.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 11,
+        title: "The words of institution",
+        lookFor: "This is my body; this cup is the new covenant in my blood; you proclaim the Lord's death until he comes.",
+        focus: "23-29",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 10,
+        title: "A participation in Christ",
+        lookFor: "The cup is a sharing in Christ's blood and the bread a sharing in His body.",
+        focus: "14-22",
+      },
+      {
+        book: "Luke",
+        chapter: 22,
+        title: "The institution in the upper room",
+        lookFor: "The body given and the blood poured out, and the command to do it in memory of Him.",
+        focus: "14-20",
+      },
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "He was known in the breaking of bread",
+        lookFor: "The risen Jesus is recognized by His disciples in the breaking of the bread.",
+        focus: "28-35",
+      },
+    ],
+    points: [
+      {
+        heading: "The words Jesus spoke",
+        body:
+          "At the table Jesus took bread and said, 'This is my body, which is broken for you. Do this in memory of me,' and the cup, 'This cup is the new covenant in my blood, which is poured out for you.' Matthew records, 'this is my blood of the new covenant, which is poured out for many for the remission of sins.' These are the anchor words, and every view of the Supper is an attempt to take them seriously.",
+        verses: ["Luke 22:19-20", "1 Corinthians 11:24-25", "Matthew 26:26-28", "1 Corinthians 11:23"],
+      },
+      {
+        heading: "The historic readings of the presence",
+        body:
+          "The church has described Christ's presence in four main ways. The Catholic view holds that the bread and wine become His body and blood (transubstantiation). Luther held Christ is truly present 'in, with, and under' the elements (consubstantiation). The Reformed view holds a spiritual presence received by faith, not in the physical elements. And the memorialist view sees the Supper chiefly as a remembrance of a Christ who is present in His church by His Spirit. Each has honored the text and sought to guard the reality of Christ's presence and the once-for-allness of His sacrifice.",
+        verses: ["Luke 22:19-20", "Matthew 26:26-28", "1 Corinthians 11:24", "Luke 22:19"],
+      },
+      {
+        heading: "What is beyond dispute: it is a communion with Christ",
+        body:
+          "Whatever the precise mode, Paul is clear about the meaning: 'The cup of blessing which we bless, isn't it a sharing of the blood of Christ? The bread which we break, isn't it a sharing of the body of Christ?' The word means participation and fellowship. At the Supper the believer genuinely communes with the crucified and risen Christ, receiving Him by faith. And because 'we, who are many, are one body,' the table is also communion with the whole church, the body of Christ.",
+        verses: ["1 Corinthians 10:16", "1 Corinthians 10:17", "1 Corinthians 11:29", "Acts 2:42"],
+      },
+      {
+        heading: "It is not a re-sacrifice of Christ",
+        body:
+          "The Supper proclaims a sacrifice that is already finished, not one that is repeated. Christ 'did this once for all, when he offered up himself,' and 'he, when he had offered one sacrifice for sins forever, sat down on the right hand of God.' Paul says that 'as often as you eat this bread and drink this cup, you proclaim the Lord's death until he comes': the Supper announces the once-offered sacrifice and brings us into its benefit; it does not reoffer Christ.",
+        verses: ["Hebrews 7:27", "Hebrews 10:12", "1 Corinthians 11:26", "Hebrews 9:26"],
+      },
+      {
+        heading: "A real presence, received by faith, held in humility",
+        body:
+          "The safest and most biblical summary is reverence before a mystery. Paul says those who take the bread 'discern the Lord's body,' which is why he warns against coming carelessly. In the breaking of bread on the Emmaus road, the risen Lord made Himself known to His own; it is the table where the church meets its risen and present Lord. We may describe the mode differently, but we agree that Christ Himself is the host and the gift, that He is truly present to His people by faith, and that we approach His table with love, faith, and a thankful heart.",
+        verses: ["1 Corinthians 11:29", "Luke 24:30-31", "1 Corinthians 11:27-28", "1 Corinthians 11:26"],
+      },
+    ],
+    keyVerses: ["Luke 22:19-20", "1 Corinthians 10:16-17", "1 Corinthians 11:26", "Hebrews 7:27", "1 Corinthians 11:29"],
+    raises: ["who-may-take-the-lords-supper", "what-is-the-lords-supper", "how-often-the-lords-supper"],
+    followsFrom: ["how-often-the-lords-supper", "what-is-the-lords-supper"],
+    related: ["who-may-take-the-lords-supper", "what-is-the-lords-supper", "what-is-the-difference-between-baptism-and-the-lords-supper", "what-is-the-church"],
+    planned: ["How does the Lord's Supper strengthen us?"],
+    order: 48,
+  },
+  {
+    slug: "what-does-a-church-need-from-its-leaders",
+    question: "What does a church need from its leaders?",
+    category: "church",
+    summary:
+      "A church needs leaders whose character is fit for the calling, who shepherd the flock like the Chief Shepherd rather than lording over it, who teach the word and guard the flock from error. Scripture puts far more weight on character and on shepherding than on worldly ability, and it measures leaders by Christ's pattern of humble service. Such leaders are a gift of God to His church.",
+    passages: [
+      {
+        book: "1 Timothy",
+        chapter: 3,
+        title: "The qualifications of an overseer",
+        lookFor: "The list is about character: above reproach, sober, gentle, able to teach, managing his house well.",
+        focus: "1-7",
+      },
+      {
+        book: "Acts",
+        chapter: 20,
+        title: "Paul's farewell to the elders",
+        lookFor: "Shepherd the church of God, and watch because wolves are coming.",
+        focus: "17-38",
+      },
+      {
+        book: "1 Peter",
+        chapter: 5,
+        title: "Shepherd the flock of God",
+        lookFor: "Not under compulsion but willingly, not for gain, not lording it over, but as examples.",
+        focus: "1-5",
+      },
+      {
+        book: "Titus",
+        chapter: 1,
+        title: "Elders who hold to the word",
+        lookFor: "Leaders must hold the faithful word, to exhort and to convict those who contradict.",
+        focus: "5-9",
+      },
+    ],
+    points: [
+      {
+        heading: "Qualified character above any gift",
+        body:
+          "Scripture's lists for leaders are lists of character, not of ability. An overseer 'must be without reproach, the husband of one wife, temperate, sensible, modest, hospitable, good at teaching... not greedy for money, but gentle, not quarrelsome,' and 'not a new convert.' Titus adds 'blameless, as God's steward; not self-pleasing, not easily angered... given to hospitality, sober minded, fair, holy, self-controlled.' The church needs leaders you can trust to be what they claim: people whose lives match the gospel they teach.",
+        verses: ["1 Timothy 3:2-3", "1 Timothy 3:6", "Titus 1:7-8", "1 Timothy 3:4-5"],
+      },
+      {
+        heading: "Shepherds who lead by feeding and example",
+        body:
+          "The calls to church leadership are calls to shepherd. Paul tells the elders, 'Take heed, therefore, to yourselves, and to all the flock, in which the Holy Spirit has made you overseers, to shepherd the assembly of the Lord and God which he purchased with his own blood.' Peter says, 'Shepherd the flock of God which is among you, exercising the oversight, not under compulsion, but voluntarily,' and 'making yourselves examples to the flock.' A shepherd feeds, guards, leads, and goes before the sheep by his own life.",
+        verses: ["Acts 20:28", "1 Peter 5:2", "1 Peter 5:3", "Acts 20:31"],
+      },
+      {
+        heading: "Teachers who hold and guard the word",
+        body:
+          "The church needs leaders who can teach. An overseer must be 'good at teaching,' and Titus says an elder must hold 'the faithful word which is according to the teaching, that he may be able to exhort in the sound doctrine, and to convict those who contradict him.' Paul warns the elders that 'vicious wolves will enter in among you, not sparing the flock,' and men will arise 'speaking perverse things' to draw disciples away; therefore leaders must be watchful, guarding the church by the word.",
+        verses: ["1 Timothy 3:2", "Titus 1:9", "Acts 20:29-30", "Acts 20:31"],
+      },
+      {
+        heading: "Servants who do not lord it over the flock",
+        body:
+          "Jesus set the pattern against worldly leadership: 'whoever desires to become great among you shall be your servant... even as the Son of Man came not to be served, but to serve, and to give his life as a ransom for many.' And He said, 'I am in your midst as one who serves.' Peter applies it directly to pastors: 'neither as lording it over those entrusted to you, but making yourselves examples to the flock.' The greatest in the church is the one who serves, and the church needs leaders who lead as Christ did, by laying themselves down.",
+        verses: ["Matthew 20:25-28", "Luke 22:26-27", "1 Peter 5:3", "Luke 22:27"],
+      },
+      {
+        heading: "A gift of God, and a responsibility of the church",
+        body:
+          "Good leaders are a gift to be recognized and received, not a crown to be grasped: 'if a man seeks the office of an overseer, he desires a good work.' The church is told to honor its leaders and test them carefully, for they watch over souls 'as those who will give account.' And the promise for faithful shepherds is great: 'When the chief Shepherd is revealed, you will receive the crown of glory that doesn't fade away.' The measure of a church's leadership is whether it holds to the Chief Shepherd, values the flock He bought, and serves like the One who gave Himself for it.",
+        verses: ["1 Timothy 3:1", "Hebrews 13:17", "1 Peter 5:4", "Acts 20:28"],
+      },
+    ],
+    keyVerses: ["1 Timothy 3:2", "Acts 20:28", "1 Peter 5:2-3", "Titus 1:9", "Matthew 20:26-28"],
+    raises: ["what-is-a-healthy-church", "what-is-the-church", "what-is-church-discipline"],
+    followsFrom: ["what-is-a-healthy-church", "why-do-i-need-the-church"],
+    related: ["what-is-a-healthy-church", "what-is-the-church", "why-do-i-need-the-church", "what-is-church-discipline"],
+    planned: ["How do we choose and recognize good church leaders?"],
+    order: 49,
+  },
+
+  {
+    slug: "why-does-every-human-life-have-dignity-and-worth",
+    question: "Why does every human life have dignity and worth?",
+    category: "who-we-are",
+    summary:
+      "Every human life has dignity and worth because every person is made in the image of God. This standing does not depend on ability, age, usefulness, or performance; it is a gift given at creation. From the unborn to the elderly, from every nation and condition, each person bears God's image, and the life Jesus gave Himself for confirms its value.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 1,
+        title: "Made in the image of God",
+        lookFor: "Let us make man in our image; male and female He created them, the crown of creation.",
+        focus: "26-31",
+      },
+      {
+        book: "Psalms",
+        chapter: 8,
+        title: "Crowned with glory and honor",
+        lookFor: "What is man that you care for him? You have made him a little lower than God and crowned him with glory.",
+        focus: "1-9",
+      },
+      {
+        book: "Genesis",
+        chapter: 9,
+        title: "The sacredness of life after the fall",
+        lookFor: "Whoever sheds man's blood, for God made man in his own image.",
+        focus: "1-7",
+      },
+      {
+        book: "Psalms",
+        chapter: 139,
+        title: "Fearfully and wonderfully made",
+        lookFor: "You formed my inmost being and knit me together in my mother's womb.",
+        focus: "13-16",
+      },
+    ],
+    points: [
+      {
+        heading: "We bear the image of God",
+        body:
+          "The ground of human dignity is settled in the first pages of the Bible: 'God created man in his own image. In God's image he created him; male and female he created them.' David marvels at the same truth: 'For you have made him a little lower than God, and crowned him with glory and honor.' This is what makes a person a person: not usefulness or ability, but the image of the Creator stamped on every human being.",
+        verses: ["Genesis 1:27", "Psalm 8:5", "Genesis 1:26", "Psalm 8:4"],
+      },
+      {
+        heading: "The image carries a steward's calling",
+        body:
+          "God made us in His image to bear His likeness in the world: 'Let them have dominion over the fish of the sea... and over all the earth,' and He blessed them, 'Be fruitful, multiply, fill the earth, and subdue it.' Psalm 8 echoes it: 'You make him ruler over the works of your hands. You have put all things under his feet.' Human worth is bound up with human vocation: we are the image-bearers placed in creation to reflect God's rule as His representatives.",
+        verses: ["Genesis 1:26", "Genesis 1:28", "Psalm 8:6", "Psalm 8:5"],
+      },
+      {
+        heading: "The image and the sacredness of life survive the fall",
+        body:
+          "After the fall, with all its wickedness, God upholds the sanctity of life on the same ground: 'Whoever sheds man's blood, his blood will be shed by man, for God made man in his own image.' The image is not erased by sin; it remains the reason human life is sacred, and James still appeals to it: we are not to curse 'men, who are made in the image of God.' Sin spoils the likeness but does not strip the dignity.",
+        verses: ["Genesis 9:6", "James 3:9", "Genesis 9:6", "Psalm 139:14"],
+      },
+      {
+        heading: "It covers every human being",
+        body:
+          "Because the image is given at creation, dignity is universal. Psalm 139 celebrates the person 'in my mother's womb,' 'fearfully and wonderfully made,' and 'woven together' by God, so even the unborn bear His handiwork and worth. James refuses to bless God while cursing any man 'who are made in the image of God,' and Revelation pictures the redeemed as 'a great multitude... out of every nation and of all tribes, peoples, and languages.' From the womb to every people and condition, the image holds.",
+        verses: ["Psalm 139:13-14", "Psalm 139:15", "Psalm 139:16", "James 3:9", "Revelation 7:9"],
+      },
+      {
+        heading: "Its ultimate weight: Christ died for each person",
+        body:
+          "The deepest proof of human worth is the price God paid to redeem it. Paul says Christ 'died for all, that those who live should no longer live to themselves, but to him who for their sakes died and rose again,' and God 'didn't spare his own Son, but delivered him up for us all.' Jesus asked, 'What will it profit a man, if he gains the whole world, and forfeits his life? Or what will a man give in exchange for his life?' A soul is worth more than the world, because the Son of God died to save it.",
+        verses: ["2 Corinthians 5:15", "Romans 8:32", "Matthew 16:26", "Matthew 10:31"],
+      },
+    ],
+    keyVerses: ["Genesis 1:27", "Psalm 8:4-5", "Genesis 9:6", "Psalm 139:13-14", "Matthew 16:26"],
+    raises: ["what-is-sin", "what-does-it-mean-to-be-made-in-gods-image", "made-for-relationship"],
+    followsFrom: ["what-does-it-mean-to-be-made-in-gods-image", "what-is-sin"],
+    related: ["what-does-it-mean-to-be-made-in-gods-image", "what-is-sin", "made-for-relationship", "what-is-the-resurrection"],
+    planned: ["How should the image of God shape how I treat the poor and the unborn?"],
+    order: 53,
+  },
+
+  {
+    slug: "what-is-the-difference-between-the-heart-soul-and-mind",
+    question: "What is the difference between the heart, soul, and mind?",
+    category: "who-we-are",
+    summary:
+      "The Bible uses heart, soul, and mind not as separable compartments of a person but as ways of describing the whole person in our various aspects. The heart is the inner center of a person, the seat of will and affection; the soul is the whole self, the living person; the mind is our understanding and thought life. Scripture calls us to love God with all of them, not as parts but as the whole self given wholly to Him.",
+    passages: [
+      {
+        book: "Deuteronomy",
+        chapter: 6,
+        title: "Love the Lord with all you are",
+        lookFor: "With all your heart, with all your soul, and with all your might: the whole person in love.",
+        focus: "4-9",
+      },
+      {
+        book: "Matthew",
+        chapter: 22,
+        title: "The greatest commandment",
+        lookFor: "Jesus joins heart, soul, and mind in the one command to love God.",
+        focus: "34-40",
+      },
+      {
+        book: "1 Thessalonians",
+        chapter: 5,
+        title: "Whole spirit, soul, and body",
+        lookFor: "Paul prays the whole person, spirit, soul, and body, be preserved blameless.",
+        focus: "16-24",
+      },
+      {
+        book: "Mark",
+        chapter: 7,
+        title: "Out of the heart",
+        lookFor: "Jesus traces the defilement of the whole person to what comes out of the heart.",
+        focus: "14-23",
+      },
+    ],
+    points: [
+      {
+        heading: "The Bible describes one person from several angles",
+        body:
+          "When Scripture lists heart, soul, and mind, it is not teaching that we are made of three detachable parts; it is describing the whole person in our depths, our life, and our thinking. The command is single: 'You shall love Yahweh your God with all your heart, with all your soul, and with all your might,' and Jesus repeats it with heart, soul, and mind. Paul prays that 'your whole spirit, soul, and body be preserved blameless.' These are windows into the same self, calling us to love God with everything we are.",
+        verses: ["Deuteronomy 6:5", "Matthew 22:37", "1 Thessalonians 5:23", "Mark 12:30"],
+      },
+      {
+        heading: "The heart: the center of the person",
+        body:
+          "In Scripture the heart is the inner wellspring of the person, where will, desire, and character meet. Proverbs says, 'Keep your heart with all diligence, for out of it is the wellspring of life,' and Jesus teaches that 'out of the heart come evil thoughts, murders, adulteries... false testimony.' Jeremiah warns that 'the heart is deceitful above all things,' and God's new-covenant promise is to write His law on the heart. The heart is who we truly are before God, and He looks on it.",
+        verses: ["Proverbs 4:23", "Matthew 15:18-19", "Jeremiah 17:9", "Matthew 15:19"],
+      },
+      {
+        heading: "The soul: the whole self, the living person",
+        body:
+          "The word for soul often means the whole person, one's very life. At creation 'man became a living soul,' and Jesus asks, 'What will it profit a man, if he gains the whole world, and forfeits his life?' He says those who lose their soul for His sake will save it, and He lays down His life a ransom for many. When the soul is at stake, the whole person is at stake, and God's care reaches to the whole person He made.",
+        verses: ["Genesis 2:7", "Matthew 16:26", "1 Thessalonians 5:23", "Mark 8:36"],
+      },
+      {
+        heading: "The mind: the understanding and the thought life",
+        body:
+          "The mind is the theatre of our thoughts and understanding, and Scripture calls for its renewal and surrender. Paul commands, 'Don't be conformed to this world, but be transformed by the renewing of your mind,' and he urges us to think on 'whatever things are true... whatever things are honorable' and to bring 'every thought into captivity to the obedience of Christ.' Loving God with the mind means letting our thinking be formed by truth and our reason bow to Christ.",
+        verses: ["Romans 12:2", "Philippians 4:8", "2 Corinthians 10:5", "Matthew 22:37"],
+      },
+      {
+        heading: "One person, given wholly to God",
+        body:
+          "These words are not rival parts to be balanced but the whole self to be given. The heart without the mind can drift into superstition, and the mind without the heart into coldness; so Jesus commands love with all of both, and Paul's prayer is for 'your whole spirit, soul, and body' to be kept blameless. To love God with the heart is to love with the whole center of our being; with the soul, with our very life; with the mind, with our best thinking, and with the body, with our actual obedience. It is one consecration of one person to one God.",
+        verses: ["Matthew 22:37", "1 Thessalonians 5:23", "Deuteronomy 6:5", "Romans 12:1"],
+      },
+    ],
+    keyVerses: ["Matthew 22:37", "Proverbs 4:23", "1 Thessalonians 5:23", "Romans 12:2", "Matthew 16:26"],
+    raises: ["what-is-the-flesh-versus-the-spirit", "how-do-i-fight-sin", "what-is-the-resurrection"],
+    followsFrom: ["what-is-the-flesh-versus-the-spirit", "body-soul-and-spirit"],
+    related: ["what-is-the-flesh-versus-the-spirit", "body-soul-and-spirit", "what-does-it-mean-to-be-made-in-gods-image", "what-the-new-life-looks-like"],
+    planned: ["How do emotions fit into being made in God's image?"],
+    order: 54,
+  },
+
+  {
+    slug: "why-do-i-still-feel-lonely",
+    question: "Why do I still feel lonely?",
+    category: "who-we-are",
+    summary:
+      "Loneliness is not a failure of faith; it is a real and human ache, felt by the psalmist and even by Jesus. We were made for relationship with God and with one another, so isolation stings by design. God has not left you alone: He promises to be near, He gave His Son to be with us and His Spirit to indwell us, and He gathers His people as a family. Loneliness is real, but it is not the final word.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 42,
+        title: "The longing soul",
+        lookFor: "My soul thirsts for God; my tears have been my food day and night.",
+        focus: "1-11",
+      },
+      {
+        book: "Isaiah",
+        chapter: 43,
+        title: "I am with you",
+        lookFor: "When you pass through the waters, I will be with you; you are mine.",
+        focus: "1-7",
+      },
+      {
+        book: "John",
+        chapter: 14,
+        title: "I will not leave you as orphans",
+        lookFor: "Jesus promises to be with us and to send the Spirit so we are never left alone.",
+        focus: "1-18",
+      },
+      {
+        book: "Matthew",
+        chapter: 11,
+        title: "Come to me and find rest",
+        lookFor: "Come, all who labor and are heavy laden, and I will give you rest.",
+        focus: "25-30",
+      },
+    ],
+    points: [
+      {
+        heading: "Loneliness is real, and it is not a failure",
+        body:
+          "The psalmist knows it: 'My tears have been my food day and night,' and 'Why have you forgotten me? Why do I go mourning?' The prophet Elijah felt utterly alone: 'I alone am left.' Even Jesus, in His most human hour, cried out in desolation and said to His disciples, 'you will leave me alone,' and yet, 'I am not alone, because the Father is with me.' Feeling lonely is part of living as a person in a fallen world; it does not mean God has abandoned you or that your faith is weak.",
+        verses: ["Psalm 42:3", "Psalm 42:9", "1 Kings 19:10", "John 16:32"],
+      },
+      {
+        heading: "We were made for relationship, so isolation aches",
+        body:
+          "The ache is built into us because we were made for communion. In the garden God said, 'It is not good for the man to be alone,' and Ecclesiastes observes that 'two are better than one,' for if one falls, 'the one will lift up his fellow' and a threefold cord is not quickly broken. We were made in the image of a relational God, made for Him and for one another, so a life cut off from intimacy runs against the grain of our design. The loneliness is the echo of that design, not a mistake.",
+        verses: ["Genesis 2:18", "Ecclesiastes 4:9-10", "Ecclesiastes 4:12", "Genesis 1:27"],
+      },
+      {
+        heading: "God promises to be with you",
+        body:
+          "Over and over, Scripture meets loneliness with presence. God says, 'When you pass through the waters, I will be with you; and through the rivers, they will not overflow you.' He is 'near to those who have a broken heart,' and He says, 'I will in no way leave you, neither will I in any way forsake you.' When you feel alone, you are not actually alone: the Father has promised His nearness to His children, and He has never once broken that promise.",
+        verses: ["Isaiah 43:2", "Psalm 34:18", "Hebrews 13:5", "Matthew 28:20"],
+      },
+      {
+        heading: "Jesus is with us, and His Spirit dwells in us",
+        body:
+          "God's answer to our aloneness is ultimate: He came to be with us. Jesus said, 'I am with you always, even to the end of the age,' and He promised, 'I will not leave you orphans. I will come to you.' He asked the Father to give us 'another Counselor... that he may be with you forever,' the Spirit who lives in us. And He said that He and the Father 'will come to him, and make our home with him.' The God of the universe has made His home with the lonely believer.",
+        verses: ["Matthew 28:20", "John 14:18", "John 14:16-17", "John 14:23"],
+      },
+      {
+        heading: "He also gathers us into a family",
+        body:
+          "God intended to meet our loneliness through His people as well as His own presence. The church from the beginning 'continued steadfastly in the apostles' teaching and fellowship,' breaking bread together with gladness, so that 'the Lord added to the assembly day by day.' We are to 'bear one another's burdens,' 'weep with those who weep,' and not forsake 'assembling together.' When loneliness presses in, God's remedy is both a Person to trust and a people to join, and He invites you into both.",
+        verses: ["Acts 2:42-47", "Galatians 6:2", "Romans 12:15", "Hebrews 10:24-25"],
+      },
+    ],
+    keyVerses: ["Isaiah 43:2", "Psalm 34:18", "John 14:16-18", "Hebrews 13:5", "Matthew 28:20"],
+    raises: ["made-for-relationship", "why-do-i-need-the-church", "who-is-the-father"],
+    followsFrom: ["made-for-relationship", "what-does-it-mean-to-be-made-in-gods-image"],
+    related: ["made-for-relationship", "what-does-it-mean-to-be-made-in-gods-image", "why-do-i-need-the-church", "what-is-the-church"],
+    planned: ["How do I find real friendship and community in the church?"],
+    order: 55,
+  },
+
+  {
+    slug: "what-does-it-mean-that-the-bible-is-both-human-and-divine",
+    question: "What does it mean that the Bible is both human and divine?",
+    category: "word-of-god",
+    summary:
+      "Scripture is divine: it is God-breathed, the very word of God, living and active. And it is human: it came through real authors, real languages, real circumstances, and real writing. Like Christ Himself, who is fully God and fully man, the Bible is one book with two natures, so that to read these human words is to hear God speaking, and to trust God's word is to trust the words He breathed through His messengers.",
+    passages: [
+      {
+        book: "2 Timothy",
+        chapter: 3,
+        title: "Every Scripture is God-breathed",
+        lookFor: "The word that comes from God's own breath, profitable for teaching, reproof, correction, and training.",
+        focus: "14-17",
+      },
+      {
+        book: "2 Peter",
+        chapter: 1,
+        title: "Men spoke from God",
+        lookFor: "No prophecy came by human will, but men spoke from God as they were moved by the Holy Spirit.",
+        focus: "16-21",
+      },
+      {
+        book: "Hebrews",
+        chapter: 1,
+        title: "God has spoken",
+        lookFor: "God spoke through the prophets in the past, and at the end of the days by His Son.",
+        focus: "1-4",
+      },
+      {
+        book: "1 Thessalonians",
+        chapter: 2,
+        title: "The word of God",
+        lookFor: "You received it not as the word of men, but as it is in truth, the word of God, which works in you.",
+        focus: "9-13",
+      },
+    ],
+    points: [
+      {
+        heading: "It is divine: the very word of God",
+        body:
+          "Scripture claims a divine origin Paul puts plainly: 'Every Scripture is God-breathed and profitable for teaching.' The Thessalonians received the apostolic message 'not as the word of men, but, as it is in truth, the word of God, which also works in you who believe.' Hebrews tells us that God 'has in the past spoken to the fathers through the prophets,' and Jesus could say of the written text, 'the Scripture can't be broken.' When the Bible speaks, God speaks.",
+        verses: ["2 Timothy 3:16", "1 Thessalonians 2:13", "Hebrews 1:1", "John 10:35"],
+      },
+      {
+        heading: "It is human: written by real people in real ways",
+        body:
+          "The divine authorship never erased the human. Peter says, 'no prophecy ever came by the will of man,' yet it came as 'men spoke from God, being moved by the Holy Spirit,' and the same verse insists holy men were the speakers. Luke writes as a careful historian who 'traced the course of all things accurately,' and David could say, 'The Spirit of Yahweh spoke by me. His word was on my tongue.' Paul distinguishes his own counsel, 'not the Lord,' from the Lord's command, showing the writers' real human voices. The Bible is fully human and fully the word of God at once.",
+        verses: ["2 Peter 1:21", "Luke 1:1-3", "2 Samuel 23:2", "1 Corinthians 7:12"],
+      },
+      {
+        heading: "Two natures, one book, like the Word made flesh",
+        body:
+          "The church has long seen a likeness between Christ and Scripture: in both, the divine and the human meet without confusion. As the Word became flesh and was truly both God and man, so the God-breathed Scriptures came to us through human authors and are truly both divine and human. We do not have to choose between trusting the words as God's and honoring them as human; Scripture is one word with a divine breath and a human voice, and both are real.",
+        verses: ["2 Timothy 3:16", "2 Peter 1:21", "Hebrews 1:1-2", "1 Thessalonians 2:13"],
+      },
+      {
+        heading: "So the Bible is living, trustworthy, and authoritative",
+        body:
+          "Because it is God-breathed, it is living: 'the word of God is living, and active, and sharper than any two-edged sword,' able to discern the thoughts and intentions of the heart. Because it is the word of God, it is our authority: 'Man shall not live by bread alone, but by every word that proceeds out of the mouth of God,' and Peter calls it 'a lamp shining in a dark place.' We can trust the Bible and submit to it precisely because it is God's own word to us, however human the pens that wrote it.",
+        verses: ["Hebrews 4:12", "Matthew 4:4", "2 Peter 1:19", "2 Timothy 3:16-17"],
+      },
+      {
+        heading: "We read it as God speaking to us",
+        body:
+          "The practical meaning is simple and profound: when we open the Bible, we are not reading merely ancient human opinion but the enduring word of the living God. Peter quotes the promise, 'the Lord's word endures forever,' and says 'this is the word of Good News which was preached to you,' and Isaiah declares, 'the word of our God stands forever.' Because it is both human and divine, it is both a book we can study as literature and history and a word we must obey as the voice of God. Read it as such: hear the human authors, and through them, the God who breathes.",
+        verses: ["1 Peter 1:24-25", "Isaiah 40:8", "Hebrews 4:12", "2 Timothy 3:16"],
+      },
+    ],
+    keyVerses: ["2 Timothy 3:16", "2 Peter 1:20-21", "1 Thessalonians 2:13", "Hebrews 4:12", "Hebrews 1:1-2"],
+    raises: ["can-i-trust-the-bible", "how-was-the-bible-written-down", "why-do-bible-translations-differ"],
+    followsFrom: ["how-was-the-bible-written-down", "can-i-trust-the-bible"],
+    related: ["how-was-the-bible-written-down", "can-i-trust-the-bible", "why-do-bible-translations-differ", "how-should-i-read-the-bible"],
+    planned: ["What does it mean that Scripture is infallible?"],
+    order: 44,
+  },
+
+  {
+    slug: "what-does-god-promise-those-who-suffer-for-him",
+    question: "What does God promise those who suffer for Him?",
+    category: "suffering-will",
+    summary:
+      "To suffer for Christ is, in Scripture, a blessing and a privilege, because it is suffering for His sake and in union with Him. God's promises to those who suffer for Him are sure: He is with them, He will never leave them, He will work it for their good and glory, He gives present grace and endurance, and He has stored up a reward and a future where every tear is wiped away.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 5,
+        title: "Blessed are the persecuted",
+        lookFor: "Blessed are those persecuted for righteousness, for great is their reward in heaven.",
+        focus: "1-12",
+      },
+      {
+        book: "1 Peter",
+        chapter: 4,
+        title: "Suffering as a Christian",
+        lookFor: "Do not be surprised at the fiery trial; rejoice and share in Christ's suffering, and the Spirit of glory rests on you.",
+        focus: "12-19",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "Heirs with Christ in suffering and glory",
+        lookFor: "If we suffer with him, we may be glorified with him; present suffering is not worth comparing with that glory.",
+        focus: "17-30",
+      },
+      {
+        book: "2 Timothy",
+        chapter: 4,
+        title: "The course finished",
+        lookFor: "I have fought the good fight; there is stored up for me the crown of righteousness.",
+        focus: "6-8",
+      },
+    ],
+    points: [
+      {
+        heading: "Suffering for Christ is a blessing, not a curse",
+        body:
+          "Jesus flips our instinct: 'Blessed are those who have been persecuted for righteousness' sake, for theirs is the Kingdom of Heaven,' and 'Blessed are you when people reproach you, persecute you... for my sake... for great is your reward in heaven.' Paul calls it a gift: 'it has been granted to you on behalf of Christ, not only to believe in him, but also to suffer on his behalf.' The earliest church 'rejoiced that they were counted worthy to suffer dishonor for Jesus' name.' To suffer for Him is to share His lot and to be honored by Him.",
+        verses: ["Matthew 5:10-12", "Philippians 1:29", "Acts 5:41", "Matthew 5:12"],
+      },
+      {
+        heading: "He is with you and will not abandon you",
+        body:
+          "The promise at the heart of suffering is presence. 'When you pass through the waters, I will be with you; and through the rivers, they will not overflow you.' For the sake of Christ we may be 'pressed on every side, yet not crushed; perplexed, yet not to despair; pursued, yet not forsaken; struck down, yet not destroyed.' Peter writes, 'Cast all your worries on him, because he cares for you,' and God has said, 'I will in no way leave you.' The deepest comfort is not that the suffering is removed but that He is with you in it.",
+        verses: ["Isaiah 43:2", "2 Corinthians 4:8-9", "1 Peter 5:7", "Hebrews 13:5"],
+      },
+      {
+        heading: "He works it for glory, beyond all comparison",
+        body:
+          "Paul weighs present suffering against the future and finds it light: 'I consider that the sufferings of this present time are not worthy to be compared with the glory which will be revealed toward us.' And suffering for Christ is union with Him: 'if indeed we suffer with him, that we may also be glorified with him,' and our light affliction 'works for us more and more exceedingly an eternal weight of glory.' To suffer for Him is not wasted; it is joined to His story and turned into glory by His hand.",
+        verses: ["Romans 8:18", "Romans 8:17", "2 Corinthians 4:17", "Romans 8:28"],
+      },
+      {
+        heading: "He gives grace to endure and a crown to receive",
+        body:
+          "God does not only promise a future; He gives strength for the present. When Paul cried out under his thorn, the Lord answered, 'My grace is sufficient for you, for my power is made perfect in weakness.' And He promises a reward: 'Blessed is the man who endures temptation, for when he has been approved, he will receive the crown of life.' Paul's testimony near the end is full of it: 'I have fought the good fight... there is stored up for me the crown of righteousness,' which the Lord will give to all who love His appearing. Grace now, crown then.",
+        verses: ["2 Corinthians 12:9", "James 1:12", "2 Timothy 4:7-8", "2 Timothy 4:8"],
+      },
+      {
+        heading: "The final promise: every tear wiped away",
+        body:
+          "God's promise to those who suffer for Him ends not in endurance alone but in resurrection joy. 'May the God of all grace, who called you to his eternal glory by Christ Jesus, after you have suffered a little while, perfect, establish, strengthen, and settle you.' And the saints who come 'out of the great tribulation' stand before the throne, where 'God will wipe away every tear from their eyes,' and where 'death will be no more; neither will there be mourning, nor crying, nor pain, any more.' The suffering is for a little while; the glory is forever.",
+        verses: ["1 Peter 5:10", "Revelation 7:14-17", "Revelation 21:4", "Matthew 5:12"],
+      },
+    ],
+    keyVerses: ["Romans 8:17-18", "Matthew 5:10-12", "2 Timothy 4:7-8", "1 Peter 5:10", "Revelation 21:4"],
+    raises: ["where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "what-is-heaven-like"],
+    followsFrom: ["what-does-it-look-like-to-suffer-well", "where-is-god-in-my-pain"],
+    related: ["what-does-it-look-like-to-suffer-well", "where-is-god-in-my-pain", "how-do-trials-make-us-more-like-christ", "why-does-god-allow-suffering"],
+    planned: ["What is the difference between suffering for Christ and suffering for my own mistakes?"],
+    order: 39,
   },
 
 ];
