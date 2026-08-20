@@ -11,7 +11,8 @@
     "start:lan": "next start -H 0.0.0.0 -p 3100",
     "lint": "eslint",
     "audio:manifest": "node scripts/audio-manifest.mjs",
-    "audio:generate": "node scripts/generate-audio.mjs"
+    "audio:generate": "node scripts/generate-audio.mjs",
+    "test:search": "node --experimental-loader ./scripts/search-check-loader.mjs scripts/search-check.mjs"
   },
   "dependencies": {
     "next": "16.3.1",

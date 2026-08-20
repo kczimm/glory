@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { verseSlug } from "@/data";
+import { verseSlug, getCategory } from "@/data";
 import { searchScripture, searchQuestions, snippet } from "@/lib/search";
 
 /**
@@ -62,8 +62,11 @@ export default function SearchBox() {
                   href={`/questions/${question.slug}`}
                   className="-mx-5 block border-b border-line/70 px-5 py-2.5 transition-colors last:border-b-0 hover:bg-gold-wash/50"
                 >
-                  <p className="font-display text-[14.5px] font-medium text-ink">
-                    {question.question}
+                  <p className="flex items-baseline gap-2 font-display text-[14.5px] font-medium text-ink">
+                    <span>{question.question}</span>
+                    <span className="ml-auto shrink-0 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-deep">
+                      {getCategory(question.category)?.title}
+                    </span>
                   </p>
                   <p className="mt-0.5 line-clamp-1 text-[12.5px] text-ink-faint">
                     {question.summary}
