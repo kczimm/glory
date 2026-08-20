@@ -43,7 +43,7 @@ export function groupVersesByChapter(hits: VerseHit[]): ChapterGroup[] {
   const groups: ChapterGroup[] = [];
   const byRef = new Map<string, ChapterGroup>();
   for (const v of hits) {
-    const ref = v.ref.replace(/\s\d+:.*$/, "");
+    const ref = v.ref.replace(/:\d+(-\d+)?$/, "");
     let g = byRef.get(ref);
     if (!g) {
       g = { ref, verses: [] };
