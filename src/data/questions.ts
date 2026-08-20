@@ -10389,7 +10389,7 @@ export const questions: Question[] = [
       {
         heading: "He turned their fear into joy and their unbelief into worship",
         body:
-          "The disciples in the locked room were afraid, and when Jesus appeared they 'didn't believe for joy, and wondered' at the wonder of it. When He showed them His hands and His side, 'the disciples therefore were glad when they saw the Lord.' And Thomas, who had refused to believe, fell before the risen Jesus and cried, 'My Lord and my God!' Seeing the risen Christ did not leave anyone cold; it remade sorrow into joy and doubt into confession.",
+          "The disciples in the locked room were afraid, and when Jesus appeared they 'didn't believe for joy, and wondered' at the wonder of it. When He showed them His hands and His side, 'the disciples therefore were glad when they saw the Lord.' And Thomas, who had refused to believe, answered the risen Jesus and cried, 'My Lord and my God!' Seeing the risen Christ did not leave anyone cold; it remade sorrow into joy and doubt into confession.",
         verses: ["Luke 24:41", "John 20:20", "John 20:28", "Luke 24:52"],
       },
       {
@@ -10402,7 +10402,7 @@ export const questions: Question[] = [
         heading: "He appeared to chosen witnesses, and the testimony endures",
         body:
           "Paul hands down the earliest summary: 'that he was raised on the third day according to the Scriptures, and that he appeared to Cephas, then to the twelve,' then to over five hundred at once, then to James, and 'last of all... he appeared to me also.' To the men who saw Him, He 'showed himself alive after he suffered, by many proofs... over a period of forty days.' These witnesses became the church's foundation, and their testimony is why we too can say, 'The Lord is risen indeed.'",
-        verses: ["1 Corinthians 15:4-8", "Acts 1:3", "John 20:30-31", "1 John 1:1-3"],
+        verses: ["1 Corinthians 15:4-8", "Acts 1:3", "John 20:30-31", "1 John 1:1-3", "Luke 24:34"],
       },
     ],
     keyVerses: ["Luke 24:39", "John 20:27-28", "1 Corinthians 15:5-6", "Luke 24:16", "John 20:29"],
@@ -10541,7 +10541,7 @@ export const questions: Question[] = [
       {
         heading: "What Christ's preaching was, one of two ways",
         body:
-          "If the 'spirits' are fallen angels, Christ's 'preaching' to them is a declaration of His victory, the pronouncement of judgment to the imprisoned rebels. If they are the dead of Noah's generation, the preaching is the news of salvation brought to them, and 1 Peter 4:6, 'the Good News was preached even to the dead,' is cited in support. The church has never settled this into a single required reading, and the text does not command one. What it does command is humility before a mystery we see in part.",
+          "If the 'spirits' are fallen angels, Christ's 'preaching' to them is a declaration of His victory, the pronouncement of judgment to the imprisoned rebels. If they are the dead of Noah's generation, the preaching is Christ's proclamation to them, and 1 Peter 4:6, 'the Good News was preached even to the dead,' is cited in support; as the next point makes clear, this is never read as an offer of a second chance after death. The church has never settled this into a single required reading, and the text does not command one. What it does command is humility before a mystery we see in part.",
         verses: ["1 Peter 3:19", "1 Peter 4:6", "Colossians 2:15", "1 Peter 3:22"],
       },
       {
@@ -10691,7 +10691,7 @@ export const questions: Question[] = [
       {
         heading: "Quenching the Spirit is smothering His work",
         body:
-          "Paul adds a third image in one short command: 'Don't quench the Spirit.' To quench is to put out a flame, to stifle and suppress. In the same breath Paul links it to the life of the gathered church: 'Don't despise prophecies. Test all things, and hold firmly that which is good.' Quenching happens when we smother the Spirit's gifts and His word among us out of fear, disorder, or lovelessness, when we put out the fire instead of fanning it.",
+          "Paul adds a third image in one short command: 'Don't quench the Spirit.' To quench is to put out a flame, to stifle and suppress. In the same breath Paul links it to the life of the gathered church: 'Don't despise prophesies. Test all things, and hold firmly that which is good.' Quenching happens when we smother the Spirit's gifts and His word among us out of fear, disorder, or lovelessness, when we put out the fire instead of fanning it.",
         verses: ["1 Thessalonians 5:19", "1 Thessalonians 5:20-21", "1 Thessalonians 5:22"],
       },
       {
@@ -10855,7 +10855,7 @@ export const questions: Question[] = [
       {
         heading: "Both belong together in a healthy habit",
         body:
-          "Reading gives studying its breadth, and studying gives reading its depth; the same Scripture is 'profitable for teaching, for reproof, for correction, and for instruction in righteousness' whether we read it widely or mine it closely. A steady daily reading keeps the whole story in view, while a focused study lets one truth take root deeply. 'Oh how I love your law!' the psalmist sings, 'It is my meditation all day,' and the same love can fill both our wide reading and our deep study.",
+          "Reading gives studying its breadth, and studying gives reading its depth; the same Scripture is 'profitable for teaching, for reproof, for correction, and for instruction in righteousness' whether we read it widely or mine it closely. A steady daily reading keeps the whole story in view, while a focused study lets one truth take root deeply. 'How I love your law!' the psalmist sings, 'It is my meditation all day,' and the same love can fill both our wide reading and our deep study.",
         verses: ["2 Timothy 3:16-17", "Psalm 119:97", "Psalm 19:7", "Joshua 1:8"],
       },
     ],
@@ -10919,7 +10919,7 @@ export const questions: Question[] = [
       {
         heading: "The one God is triune: this does not divide Him",
         body:
-          "The confession that God is one is not undone by the appearing of the Father, Son, and Holy Spirit, because these are not three gods but one God revealed in three Persons. Paul, right in the middle of guarding God's oneness, writes: 'to us there is one God, the Father... and one Lord, Jesus Christ,' and in the same breath he calls Jesus divine, the one 'through whom are all things.' Jesus and the Father are one, John hears Him say, and yet He is the only true God's Son; the 'one' describes the being, not a loneliness.",
+          "The confession that God is one is not undone by the appearing of the Father, Son, and Holy Spirit, because these are not three gods but one God revealed in three Persons. Paul, right in the middle of guarding God's oneness, writes: 'to us there is one God, the Father... and one Lord, Jesus Christ,' and in the same breath he calls Jesus divine, the one 'through whom are all things.' Jesus and the Father are one, John hears Him say, and yet He is the Son of the only true God; the 'one' describes the being, not a loneliness.",
         verses: ["1 Corinthians 8:6", "John 17:3", "John 10:30", "Matthew 28:19"],
       },
       {
@@ -10984,7 +10984,7 @@ export const questions: Question[] = [
         heading: "God is King over all things",
         body:
           "The psalmist confesses, 'Yahweh has established his throne in the heavens. His kingdom rules over all,' and Paul blesses 'the God and Father of our Lord Jesus Christ' through whom we were chosen and were 'assigned an inheritance... having been foreordained according to the purpose of him who works all things after the counsel of his will.' From the throne of the universe to the details of our salvation, God rules. There is no corner of existence outside His kingship.",
-        verses: ["Psalm 103:19", "Ephesians 1:11", "1 Chronicles 29:11-12", "Psalm 115:3"],
+        verses: ["Psalm 103:19", "Ephesians 1:3", "Ephesians 1:11", "1 Chronicles 29:11-12", "Psalm 115:3"],
       },
       {
         heading: "He does as He pleases, and none can stay His hand",
@@ -11071,7 +11071,7 @@ export const questions: Question[] = [
         heading: "God rewards faithful stewardship of what He gave",
         body:
           "In Jesus' parable, the servants are not judged for how much they started with but for how faithfully they used it: 'Well done, good and faithful servant. You have been faithful over a few things, I will set you over many things. Enter into the joy of your lord.' Paul tells slaves, 'from the Lord you will receive the reward of the inheritance; for you serve the Lord Christ.' God measures faithfulness, not raw output, and He never forgets the cup of cold water given in His name.",
-        verses: ["Matthew 25:21", "Colossians 3:23-24", "Matthew 25:23", "1 Corinthians 4:5"],
+        verses: ["Matthew 25:21", "Matthew 10:42", "Colossians 3:23-24", "Matthew 25:23", "1 Corinthians 4:5"],
       },
       {
         heading: "The crowns belong to grace and are cast before the throne",
@@ -11152,13 +11152,13 @@ export const questions: Question[] = [
       {
         heading: "Faith, not the rite, is the instrument of grace",
         body:
-          "Paul's order is unmistakable: 'you are all children of God, through faith in Christ Jesus,' and then, 'for as many of you as were baptized into Christ have put on Christ.' Faith first, baptism as its expression, and where the order is reversed Scripture never places the rite before the heart. At Cornelius' house the Holy Spirit fell on the Gentiles 'as they believed' before they were baptized, and Peter asked, 'Can anyone forbid these people from being baptized... They have received the Holy Spirit just like us.' The Spirit's coming and the believers' faith preceded the water.",
+          "Paul's order is unmistakable: 'you are all children of God, through faith in Christ Jesus,' and then, 'for as many of you as were baptized into Christ have put on Christ.' Faith first, baptism as its expression, and where the order is reversed Scripture never places the rite before the heart. At Cornelius' house the Holy Spirit fell on the Gentiles as they heard the word, before they were baptized, and Peter asked, 'Can anyone forbid these people from being baptized... They have received the Holy Spirit just like us.' The Spirit's coming and the believers' faith preceded the water.",
         verses: ["Galatians 3:26-27", "Acts 10:44-48", "Acts 10:47", "Acts 2:41"],
       },
       {
         heading: "So baptism is obedience, not a magical act",
         body:
-          "Baptism is not to be despised or neglected: it is the Lord's own command, the visible pledge of our union with Him, and a public confession of faith. But it does not confer grace on the unrepentant, and it does not save apart from trust in Christ. The thief on the cross was never baptized and was promised paradise the same day, while millions who were baptized in water stand condemned if they did not know the Savior. The water is real and meaningful; the gospel is the power of God unto salvation.",
+          "Baptism is not to be despised or neglected: it is the Lord's own command, the visible pledge of our union with Him, and a public confession of faith. But it does not confer grace on the unrepentant, and it does not save apart from trust in Christ. The thief on the cross was promised paradise the same day, never having been baptized, while millions who were baptized in water stand condemned if they did not know the Savior. The water is real and meaningful; the gospel is the power of God unto salvation.",
         verses: ["Luke 23:42-43", "Romans 10:13", "Mark 16:16", "Acts 2:38"],
       },
     ],
@@ -11367,13 +11367,13 @@ export const questions: Question[] = [
       {
         heading: "Jesus is the picture of the Father's heart",
         body:
-          "When Philip asked to see the Father, Jesus answered, 'He who has seen me has seen the Father.' The tenderness Jesus showed to sinners is the Father's own tenderness: in the parable, the father sees his son 'while he was still far off,' runs to him, and throws his arms around him; and Jesus said that even evil parents know how to give good gifts, 'how much more will your heavenly Father.' Whatever you fear about God, check it against the face of Jesus, who is the mirror of the Father's love.",
+          "When Philip asked to see the Father, Jesus answered, 'He who has seen me has seen the Father.' The tenderness Jesus showed to sinners is the Father's own tenderness: in the parable, the father sees his son 'while he was still far off,' runs to him, and throws his arms around him; and Jesus said that even evil parents know how to give good gifts, 'how much more will your Father who is in heaven give good things to those who ask him!' Whatever you fear about God, check it against the face of Jesus, who is the mirror of the Father's love.",
         verses: ["John 14:9", "Luke 15:20", "Matthew 7:11", "Luke 15:22"],
       },
       {
         heading: "Nothing can pry you out of His love",
         body:
-          "Paul's confidence is total: 'I am persuaded, that neither death, nor life, nor angels, nor principalities, nor things present, nor things to come... will be able to separate us from the love of God, which is in Christ Jesus our Lord.' Jesus says of His sheep that no one 'will snatch them out of my hand,' and 'neither will anyone snatch them out of my Father's hand.' Your sin, your failure, your weakness, your darkest day: none of them can separate you. The love is held by God, not by your grip.",
+          "Paul's confidence is total: 'I am persuaded, that neither death, nor life, nor angels, nor principalities, nor things present, nor things to come... will be able to separate us from the love of God, which is in Christ Jesus our Lord.' Jesus says of His sheep that no one 'will snatch them out of my hand,' and 'No one is able to snatch them out of my Father's hand.' Your sin, your failure, your weakness, your darkest day: none of them can separate you. The love is held by God, not by your grip.",
         verses: ["Romans 8:38-39", "John 10:27-29", "Romans 8:35", "John 10:28-29"],
       },
       {
