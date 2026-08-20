@@ -31,9 +31,10 @@ export default function Home() {
             <span className="italic text-gold-deep">Leave with Scripture.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-ink-soft sm:mt-6 sm:text-[16px]">
-            Ask what you genuinely want to know: who Jesus is, how we come to
-            know Him, what the Holy Spirit does. Then read the passages that
-            answer it, and let the Word itself raise the next question.
+            Ask what you genuinely want to know: who Jesus is, and how we
+            come to know and have a relationship with Him. Then read the
+            passages that answer it, and let the Word itself raise the next
+            question.
           </p>
           <div className="mt-8 sm:mt-10">
             <SearchBox />
