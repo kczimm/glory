@@ -897,7 +897,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 10:27-29", "Romans 8:38-39", "Philippians 1:6", "John 6:37-39"],
-    raises: ["spirits-witness-or-my-own-feelings", "what-does-it-mean-to-be-sealed-with-the-holy-spirit", "what-is-the-difference-between-assurance-and-presumption"],
+    raises: ["spirits-witness-or-my-own-feelings", "what-does-it-mean-to-be-sealed-with-the-holy-spirit", "what-is-the-difference-between-assurance-and-presumption", "why-endure-if-i-cant-lose-my-salvation"],
     followsFrom: ["how-can-i-be-saved"],
     related: ["what-happens-when-i-sin", "who-is-the-holy-spirit", "what-is-faith"],
     planned: [],
@@ -12738,6 +12738,422 @@ export const questions: Question[] = [
     related: ["what-does-it-look-like-to-suffer-well", "where-is-god-in-my-pain", "how-do-trials-make-us-more-like-christ", "why-does-god-allow-suffering"],
     planned: ["What is the difference between suffering for Christ and suffering for my own mistakes?"],
     order: 39,
+  },
+
+  // ------------------------------------------------------------------
+  // SECTION: The five points of the doctrine of grace
+  // ------------------------------------------------------------------
+  {
+    slug: "can-i-seek-god-on-my-own",
+    question: "Can I seek God on my own?",
+    category: "who-we-are",
+    summary:
+      "Scripture's answer is humbling: left to ourselves, no one truly seeks God. Sin has touched every part of us: the heart is corrupt, the mind is hostile to God, and we are dead in trespasses. This is why salvation must begin with God's grace acting on us, not with our own goodness reaching up to Him.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 3,
+        title: "No one seeks God",
+        lookFor: "Paul's verdict against the whole world: no one is righteous, no one understands, no one seeks after God.",
+        focus: "9-20",
+      },
+      {
+        book: "Psalm",
+        chapter: 14,
+        title: "The search from heaven",
+        lookFor: "God looks down to see if anyone seeks Him, and finds none: they have all turned aside, and no one does good.",
+      },
+      {
+        book: "Ephesians",
+        chapter: 2,
+        title: "Dead in trespasses",
+        lookFor: "Paul's diagnosis: we were dead in sins and by nature children of wrath, and grace alone made us alive.",
+        focus: "1-10",
+      },
+      {
+        book: "Genesis",
+        chapter: 6,
+        title: "The verdict before the flood",
+        lookFor: "God sees that every imagination of man's heart is only evil continually: the corruption is deep and early.",
+        focus: "5-13",
+      },
+      {
+        book: "Jeremiah",
+        chapter: 17,
+        title: "The heart beyond our fixing",
+        lookFor: "The heart is deceitful above all things and exceedingly corrupt; only God can search and heal it.",
+        focus: "5-10",
+      },
+    ],
+    points: [
+      {
+        heading: "No one seeks God",
+        body:
+          "Paul quotes the Psalms as a worldwide verdict: 'There is no one righteous; no, not one. There is no one who understands. There is no one who seeks after God.' The psalmist has God look down from heaven to see if anyone seeks Him, and the search finds no one. Left to our own momentum, our movement is away from God, not toward Him.",
+        verses: ["Romans 3:10-12", "Psalm 14:2-3"],
+      },
+      {
+        heading: "The corruption reaches every part",
+        body:
+          "Sin is not a stain we picked up on the surface; it reaches the heart where everything else comes from. Jeremiah: 'The heart is deceitful above all things, and it is exceedingly corrupt: who can know it?' Isaiah adds that even our best is tainted: 'all our righteousness is as a polluted garment.' And before the flood, God saw that 'every imagination of the thoughts of man's heart was continually only evil.' This is not that everyone is as bad as they could be, but that sin touches every part: the mind, the will, and the affections.",
+        verses: ["Jeremiah 17:9", "Isaiah 64:6", "Genesis 6:5"],
+      },
+      {
+        heading: "The mind is hostile, not merely mistaken",
+        body:
+          "Paul is blunt about the depth: 'the mind of the flesh is hostile towards God; for it is not subject to God's law, neither indeed can it be. Those who are in the flesh can't please God.' And the natural man 'doesn't receive the things of God's Spirit, for they are foolishness to him, and he can't know them, because they are spiritually discerned.' The problem is not information but direction: our natural selves are pointed against God, and we cannot reverse the direction by deciding harder.",
+        verses: ["Romans 8:7-8", "1 Corinthians 2:14"],
+      },
+      {
+        heading: "Dead, not merely sick",
+        body:
+          "Paul chooses the strongest word available: 'You were made alive when you were dead in transgressions and sins.' Not weakened, not slowed down: dead. And he makes the condition shared and inborn: 'we were by nature children of wrath, even as the rest.' Death is what Scripture uses when the power to respond is gone, which is exactly the point: the dead cannot reach out, so the life must come from outside.",
+        verses: ["Ephesians 2:1-3", "Ephesians 2:5", "Colossians 2:13"],
+      },
+      {
+        heading: "It is why grace is grace",
+        body:
+          "The diagnosis humbles us, and it also points to rescue. Because we could not seek Him, God sought us: 'But God, being rich in mercy, for his great love with which he loved us, even when we were dead through our trespasses, made us alive together with Christ (by grace you have been saved).' John says the new birth comes 'not of blood, nor of the will of the flesh, nor of the will of man, but of God.' Where sin abounded, grace abounded more exceedingly. The point of knowing our inability is not despair; it is emptying our hands to receive what we could never reach for.",
+        verses: ["Ephesians 2:4-5", "Ephesians 2:8-9", "John 1:12-13", "Romans 5:20"],
+      },
+    ],
+    keyVerses: ["Romans 3:10-12", "Romans 8:7", "Ephesians 2:1", "Isaiah 64:6", "John 1:13"],
+    raises: ["why-did-jesus-have-to-die", "did-god-choose-me", "can-anyone-resist-gods-grace"],
+    followsFrom: ["what-is-sin", "does-everyone-deserve-gods-judgment"],
+    related: ["what-is-sin", "does-everyone-deserve-gods-judgment", "what-is-the-flesh-versus-the-spirit"],
+    planned: ["Why does God still hold us responsible if we cannot seek Him alone?"],
+    order: 56,
+  },
+
+  {
+    slug: "did-god-choose-me",
+    question: "Did God choose me to be saved before I chose Him?",
+    category: "gospel",
+    summary:
+      "Yes. Scripture says God chose His people in Christ before the foundation of the world, and it never bases that choice on foreseen merit. Election is unconditional: it rests on God's mercy and the good pleasure of His will, not on anything in us. Far from being cold, it is the deepest ground of our assurance and our praise.",
+    passages: [
+      {
+        book: "Ephesians",
+        chapter: 1,
+        title: "Chosen before the foundation of the world",
+        lookFor: "Paul's doxology: we were chosen in Christ, predestined for adoption, according to the good pleasure of his will.",
+        focus: "3-14",
+      },
+      {
+        book: "Romans",
+        chapter: 9,
+        title: "Jacob and Esau",
+        lookFor: "Paul faces the hard question head-on: God chose Jacob over Esau before they were born, that the purpose of God according to election might stand.",
+        focus: "6-24",
+      },
+      {
+        book: "John",
+        chapter: 15,
+        title: "You did not choose me",
+        lookFor: "Jesus' own words to His disciples: I chose you and appointed you; the choosing began with Him.",
+        focus: "1-16",
+      },
+      {
+        book: "Acts",
+        chapter: 13,
+        title: "Appointed to eternal life",
+        lookFor: "The preaching at Pisidian Antioch: as many as were appointed to eternal life believed; election and the preached word work together.",
+        focus: "44-52",
+      },
+      {
+        book: "1 Peter",
+        chapter: 1,
+        title: "Elect according to the foreknowledge of God",
+        lookFor: "Peter greets believers as God's elect: chosen by the Father, sanctified by the Spirit, for obedience to Jesus Christ.",
+        focus: "1-12",
+      },
+    ],
+    points: [
+      {
+        heading: "The choice is real, and it came first",
+        body:
+          "Paul blesses God for our salvation in a single sweep: 'he chose us in him before the foundation of the world, that we would be holy and without defect before him in love, having predestined us for adoption as children through Jesus Christ to himself, according to the good pleasure of his desire.' Jesus says it as plainly: 'You didn't choose me, but I chose you.' The initiative in salvation does not begin with us climbing up to God; it begins with God reaching down.",
+        verses: ["Ephesians 1:4-5", "Ephesians 1:11", "John 15:16"],
+      },
+      {
+        heading: "It is not based on anything in us",
+        body:
+          "Paul makes the point with the twins: before Jacob and Esau were born or had done anything good or bad, 'that the purpose of God according to election might stand, not of works, but of him who calls.' He draws the conclusion plainly: 'So then it is not of him who wills, nor of him who runs, but of God who has mercy.' God does not look down the corridor of time and choose the promising ones, because there are none promising enough; He chooses as mercy chooses, freely.",
+        verses: ["Romans 9:11-12", "Romans 9:16", "2 Timothy 1:9"],
+      },
+      {
+        heading: "Is God unjust to choose?",
+        body:
+          "Paul asks the objection himself: 'What shall we say then? Is there unrighteousness with God? May it never be!' Mercy is God's to give: 'I will have mercy on whom I have mercy,' and He is the potter with power over the clay. He even shows that His patience with vessels of wrath and His glory shown to vessels of mercy are both woven into one purpose, 'that he might make known the riches of his glory on vessels of mercy, which he prepared beforehand for glory.' The choice is not cruel; it is how a God who is owed nothing shows grace to anyone at all.",
+        verses: ["Romans 9:14", "Romans 9:15", "Romans 9:21-23"],
+      },
+      {
+        heading: "Election works through the preached gospel",
+        body:
+          "The election Scripture describes is never a whisper outside history; it works through the word that is preached. At Antioch, 'as many as were appointed to eternal life believed': no one is appointed apart from believing, and believing is the response election produces through the message. Peter greets the scattered churches as 'elect... in sanctification of the Spirit, that you may obey Jesus Christ'; the chosen are known by the obedience of faith. Paul can say he knows the Thessalonians are chosen, because the gospel came to them 'not in word only, but also in power, and in the Holy Spirit.'",
+        verses: ["Acts 13:48", "1 Peter 1:2", "1 Thessalonians 1:4-5"],
+      },
+      {
+        heading: "No one is told, 'You are not elect'",
+        body:
+          "Nowhere does the Bible say to any seeker, 'You are not chosen.' The secret things belong to the Lord; what is revealed is the open call: 'whoever believes in him should not perish, but have eternal life,' and 'he who comes to me I will in no way throw out.' Peter's instruction is the one that concerns us: 'be more diligent to make your calling and election sure' by faith, obedience, and growth. We do not begin with the hidden decree; we begin with Christ, and in Him election becomes our security, not our speculation.",
+        verses: ["Deuteronomy 29:29", "John 3:16", "John 6:37", "2 Peter 1:10"],
+      },
+    ],
+    keyVerses: ["Ephesians 1:4", "Romans 9:16", "John 15:16", "Acts 13:48", "2 Peter 1:10"],
+    raises: ["for-whom-did-christ-die", "can-anyone-resist-gods-grace", "what-is-the-difference-between-assurance-and-presumption"],
+    followsFrom: ["what-does-it-mean-that-god-is-sovereign", "do-my-choices-matter", "can-i-seek-god-on-my-own"],
+    related: ["what-does-it-mean-that-god-is-sovereign", "is-god-in-control", "do-my-choices-matter", "how-can-i-be-saved"],
+    planned: ["What does it mean that God hardened Pharaoh's heart?"],
+    order: 57,
+  },
+
+  {
+    slug: "for-whom-did-christ-die",
+    question: "For whom did Christ die?",
+    category: "jesus-christ",
+    summary:
+      "The Bible answers by showing what His death actually accomplishes: the Good Shepherd lays down His life for His sheep, and the sheep are kept. Christ's death cannot fail to save those it was given to save, because He paid for sins, not merely for a possibility. At the same time the gospel offer goes out freely to all, and the worth of the sacrifice is more than enough for the whole world.",
+    passages: [
+      {
+        book: "John",
+        chapter: 10,
+        title: "The Good Shepherd and His sheep",
+        lookFor: "Jesus lays down His life for the sheep, and no one can snatch them from His hand.",
+        focus: "11-30",
+      },
+      {
+        book: "John",
+        chapter: 17,
+        title: "The prayer of the night before",
+        lookFor: "On the night before He died, Jesus prays for those the Father gave Him, and He does not pray for the world.",
+        focus: "6-26",
+      },
+      {
+        book: "Isaiah",
+        chapter: 53,
+        title: "The Servant bears the sin of many",
+        lookFor: "The portrait written centuries before: He will justify many and bear their iniquities.",
+      },
+      {
+        book: "Hebrews",
+        chapter: 9,
+        title: "Offered once to bear sins",
+        lookFor: "Christ entered heaven itself with His own blood, offered once to bear the sins of many.",
+        focus: "11-28",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 5,
+        title: "One died for all",
+        lookFor: "The love of Christ compels us: one died for all, and God was in Christ reconciling the world to Himself.",
+        focus: "14-21",
+      },
+    ],
+    points: [
+      {
+        heading: "The Shepherd dies for the sheep",
+        body:
+          "Jesus defines the circle of His death from the inside: 'I am the good shepherd. The good shepherd lays down his life for the sheep.' He knows His sheep, He calls them, He gives them eternal life, and 'they will never perish, and no one will snatch them out of my hand.' The Shepherd's death is not a wish expressed generally; it is the price paid for the sheep, and because it was paid, they are kept. The same chapter adds, 'I also have other sheep, which are not of this fold': the flock is not yet complete, but it is known to Him.",
+        verses: ["John 10:11", "John 10:15", "John 10:27-28", "John 10:16"],
+      },
+      {
+        heading: "He died to save His people from their sins",
+        body:
+          "The angel's announcement at the very beginning is definite, not conditional: 'it is he who shall save his people from their sins.' Hebrews adds what the offering accomplishes: 'Christ also, having been offered once to bear the sins of many, will appear a second time, without sin, to those who are eagerly waiting for him for salvation.' If He bore their sins, those sins are truly carried away, and Paul can ask the triumphant question: 'Who could bring a charge against God's chosen ones?' and answer with the death itself.",
+        verses: ["Matthew 1:21", "Hebrews 9:28", "Romans 8:33-34"],
+      },
+      {
+        heading: "His prayer and His death belong to the same circle",
+        body:
+          "The night before He died, Jesus prayed: 'I pray for them. I don't pray for the world, but for those whom you have given me, for they are yours.' The same boundary appears in the prayer as in the death: He gives eternal life 'to all whom you have given him,' and He prays for and keeps the ones He also dies for. The One who died for them is the One who intercedes for them, so His death and His prayers do not point at different people.",
+        verses: ["John 17:2", "John 17:9", "Romans 8:34"],
+      },
+      {
+        heading: "Yet the offer and the worth are for the whole world",
+        body:
+          "None of this narrows the gospel. The call is preached through the whole world, and 'whoever believes in him should not perish, but have eternal life.' John says Jesus 'is the atoning sacrifice for our sins, and not for ours only, but also for the whole world.' Scripture holds both together: the sacrifice is sufficient for all and freely offered to all, while its saving possession belongs to those who believe. That is why Paul can say 'one died for all, therefore all died... that those who live should no longer live to themselves' as the ground of the mission, not the sign of a ledger of names.",
+        verses: ["1 John 2:2", "John 3:16", "Mark 16:15", "2 Corinthians 5:14-15", "2 Corinthians 5:19"],
+      },
+      {
+        heading: "Answered by coming, not by speculating",
+        body:
+          "The question 'Did He die for me?' is never answered by guesswork about a hidden list; it is answered by coming. To believers Paul writes that God who 'didn't spare his own Son, but delivered him up for us all' will 'freely give us all things': the cross is the proof of God's love for His own. To everyone who hears, Jesus says, 'He who comes to me I will in no way throw out,' and the Bible's last chapter adds the open invitation: 'He who is thirsty, let him come.' If you come, you are not outside His death, because the One who died for the sheep is the One who welcomes every comer.",
+        verses: ["Romans 8:32", "John 6:37", "John 6:35", "Revelation 22:17"],
+      },
+    ],
+    keyVerses: ["John 10:11", "John 10:28", "Hebrews 9:28", "1 John 2:2", "Romans 8:32"],
+    raises: ["how-can-i-be-saved", "can-anyone-resist-gods-grace", "can-i-lose-my-salvation"],
+    followsFrom: ["why-did-jesus-have-to-die", "did-god-choose-me"],
+    related: ["why-did-jesus-have-to-die", "how-can-i-be-saved", "can-gods-grace-really-cover-my-worst-sins"],
+    planned: ["What does it mean that Christ is the atoning sacrifice for the whole world?"],
+    order: 58,
+  },
+
+  {
+    slug: "can-anyone-resist-gods-grace",
+    question: "Can anyone resist God's grace?",
+    category: "gospel",
+    summary:
+      "People can and do resist the outward call of the gospel: Jesus wept over Jerusalem because they would not come. But the saving work of God's grace is another matter. The Spirit opens closed hearts, raises the dead, and gives the new heart that loves God. In that deeper sense Scripture speaks of a call that cannot fail, because it is the work of God Himself.",
+    passages: [
+      {
+        book: "John",
+        chapter: 6,
+        title: "No one can come unless the Father draws",
+        lookFor: "Jesus twice states our inability and the Father's drawing: no one can come unless it is given by the Father, and all the Father gives Him will come.",
+        focus: "35-65",
+      },
+      {
+        book: "Ephesians",
+        chapter: 2,
+        title: "Made alive together with Christ",
+        lookFor: "Paul's diagnosis and cure: dead in sins, made alive by grace through faith, which is itself the gift of God.",
+        focus: "1-10",
+      },
+      {
+        book: "Acts",
+        chapter: 16,
+        title: "The Lord opened her heart",
+        lookFor: "Paul in Philippi: Lydia worships, hears, and the Lord opens her heart to receive the word; the jailer is saved in the same visit.",
+        focus: "6-15",
+      },
+      {
+        book: "Ezekiel",
+        chapter: 36,
+        title: "A new heart and a new spirit",
+        lookFor: "God's promise to His people: I will give you a new heart, put My Spirit within you, and cause you to walk in My statutes.",
+        focus: "22-32",
+      },
+      {
+        book: "Acts",
+        chapter: 7,
+        title: "You always resist the Spirit",
+        lookFor: "Stephen's hard word to the council: you stiff-necked people always resist the Holy Spirit; the resistance is real, and so is the tragedy.",
+        focus: "51-60",
+      },
+    ],
+    points: [
+      {
+        heading: "No one comes unless the Father draws",
+        body:
+          "Jesus states our position without softening it: 'No one can come to me unless the Father who sent me draws him, and I will raise him up in the last day.' He repeats it for emphasis: 'no one can come to me, unless it is given to him by my Father.' And yet the same chapter is full of welcome: 'All those whom the Father gives me will come to me. He who comes to me I will in no way throw out.' The drawing is decisive and the coming is certain, and the welcome is completely open.",
+        verses: ["John 6:44", "John 6:65", "John 6:37", "John 6:29"],
+      },
+      {
+        heading: "It is resurrection, not persuasion",
+        body:
+          "Paul describes our condition as death: we were 'dead in transgressions and sins,' and God 'made us alive together with Christ.' A corpse cannot be argued into breathing; only the God who raises the dead can. Jesus says the new birth is the Spirit's own work: 'The wind blows where it wants to... so is everyone who is born of the Spirit,' and John adds that we are born 'not of blood, nor of the will of the flesh, nor of the will of man, but of God.' Grace does not wait politely for our cooperation; it creates the heart that cooperates.",
+        verses: ["Ephesians 2:1", "Ephesians 2:4-5", "John 3:8", "John 1:13"],
+      },
+      {
+        heading: "The Lord opens the heart",
+        body:
+          "Luke tells the story of Lydia in one clause: 'whose heart the Lord opened to listen to the things which were spoken by Paul.' The word is preached, and the listening is given. Luke notes the same pattern elsewhere: 'as many as were appointed to eternal life believed,' and 'the Lord added to the assembly day by day those who were being saved.' The church later named this effectual grace: not that God drags anyone, but that He makes the dead heart willing.",
+        verses: ["Acts 16:14", "Acts 13:48", "Acts 2:47"],
+      },
+      {
+        heading: "The new heart God gives",
+        body:
+          "Ezekiel's promise shows the shape of the saving work: 'I will take away the stony heart out of your flesh, and I will give you a heart of flesh. I will put my Spirit within you, and cause you to walk in my statutes.' God does not only invite; He changes what we want. Paul puts our effort and God's enabling in one sentence: 'Work out your own salvation with fear and trembling. For it is God who works in you both to will and to work, for his good pleasure.'",
+        verses: ["Ezekiel 36:26-27", "Philippians 2:12-13"],
+      },
+      {
+        heading: "Resistance is real; the saving call prevails",
+        body:
+          "Scripture never pretends that everyone who hears comes. Stephen says to the council, 'You stiff-necked and uncircumcised in heart and ears, you always resist the Holy Spirit!' and Jesus wept over Jerusalem: 'How often I would have gathered your children together... and you would not!' So the outward call can be refused. What Scripture also shows is a call that creates what it summons, like the voice that said, 'Lazarus, come out!', and the dead man came out. Paul's chain has no missing links: 'Whom he predestined, those he also called. Whom he called, those he also justified. Whom he justified, those he also glorified.' When God calls a dead heart to life, the dead heart lives.",
+        verses: ["Acts 7:51", "Matthew 23:37", "John 11:43-44", "Romans 8:30"],
+      },
+    ],
+    keyVerses: ["John 6:44", "John 6:37", "Ephesians 2:8-9", "Acts 16:14", "Romans 8:30"],
+    raises: ["what-does-it-mean-to-be-born-again", "how-does-the-spirit-convict-the-world", "can-i-lose-my-salvation"],
+    followsFrom: ["what-is-grace", "did-god-choose-me", "how-does-the-spirit-convict-the-world"],
+    related: ["what-is-grace", "did-god-choose-me", "what-does-it-mean-to-be-born-again", "how-does-the-spirit-convict-the-world"],
+    planned: ["Why does the gospel soften some hearts and harden others?"],
+    order: 59,
+  },
+
+  {
+    slug: "why-endure-if-i-cant-lose-my-salvation",
+    question: "Why should I keep enduring, if I can't lose my salvation?",
+    category: "our-walk",
+    summary:
+      "Because God keeps His people through their perseverance, not apart from it. The same Bible that says no one can snatch us from His hand also calls us to endure to the end. The warnings are not the contradiction of the promise; they are how He keeps us. Perseverance is not the price of salvation but the shape of it.",
+    passages: [
+      {
+        book: "John",
+        chapter: 15,
+        title: "Remain in me",
+        lookFor: "Jesus tells the branches to remain in the vine; the fruit, the pruning, and the warning are all addressed to real believers.",
+        focus: "1-16",
+      },
+      {
+        book: "Hebrews",
+        chapter: 3,
+        title: "Take care, brothers",
+        lookFor: "The warning against an evil heart of unbelief, and the promise: we are partakers of Christ if we hold firm to the end.",
+        focus: "7-19",
+      },
+      {
+        book: "Philippians",
+        chapter: 2,
+        title: "Work out what God works in",
+        lookFor: "Paul joins our effort and God's enabling in one sentence: work out your salvation, for God works in you.",
+        focus: "12-18",
+      },
+      {
+        book: "2 Timothy",
+        chapter: 4,
+        title: "I have kept the faith",
+        lookFor: "Paul at the end of the race: fight, finish, keep the faith, receive the crown.",
+        focus: "1-8",
+      },
+      {
+        book: "Revelation",
+        chapter: 3,
+        title: "Hold firmly what you have",
+        lookFor: "Sardis is told to wake up and strengthen what remains; Philadelphia is told to hold fast so no one takes its crown.",
+        focus: "1-13",
+      },
+    ],
+    points: [
+      {
+        heading: "God's keeping is the ground under everything",
+        body:
+          "The security is not our achievement; it is His: 'I give eternal life to them. They will never perish, and no one will snatch them out of my hand,' and no one can snatch them out of the Father's hand either. Paul is certain that 'he who began a good work in you will complete it until the day of Jesus Christ,' and his chain of salvation has no gaps: 'Whom he called, those he also justified. Whom he justified, those he also glorified.' Our endurance rests on His finishing, not on ours.",
+        verses: ["John 10:28-29", "Philippians 1:6", "Romans 8:30"],
+      },
+      {
+        heading: "That is exactly why we persevere",
+        body:
+          "The warnings are not the opposite of the promise; they are the means God uses to keep us: 'Beware, brothers, lest perhaps there be in any one of you an evil heart of unbelief, in falling away from the living God... for we have become partakers of Christ, if we hold fast the beginning of our confidence firm to the end.' Paul warns the one who thinks he stands to take heed, and Jesus makes endurance the mark: 'he who endures to the end, the same will be saved.' The Shepherd keeps the sheep who hear His voice and follow Him; the warnings are His voice calling us to stay close.",
+        verses: ["Hebrews 3:12-14", "1 Corinthians 10:12", "Matthew 24:13", "Revelation 3:11"],
+      },
+      {
+        heading: "Perseverance is what real faith looks like",
+        body:
+          "John describes the difference between belonging and passing through: 'They went out from us, but they didn't belong to us; for if they had belonged to us, they would have continued with us.' Faith that is real continues; faith that evaporates shows itself to have been something else. The seed on the rock springs up and withers, while the good soil holds the word and 'produces fruit with patience.' So endurance does not earn assurance; it is assurance's shape, the visible life of the promise.",
+        verses: ["1 John 2:19", "Luke 8:15", "Hebrews 10:39"],
+      },
+      {
+        heading: "Our effort and His working are not rivals",
+        body:
+          "Paul commands what God performs: 'Work out your own salvation with fear and trembling. For it is God who works in you both to will and to work, for his good pleasure.' The same man who promises that God will complete the work runs as though everything depended on him: 'I press on toward the goal for the prize of the high calling of God in Christ Jesus,' and finishes with 'I have fought the good fight. I have finished the course. I have kept the faith.' God's working does not make our working unnecessary; it is what makes our working real.",
+        verses: ["Philippians 2:12-13", "Philippians 3:13-14", "2 Timothy 4:7"],
+      },
+      {
+        heading: "It is running, not gripping",
+        body:
+          "Perseverance is not anxious white-knuckling; it is following the One who already finished the race: 'Let us run with patience the race that is set before us, looking to Jesus, the author and perfecter of faith, who for the joy that was set before him endured the cross.' And it ends in a crown, not a cliff: 'Be faithful to death, and I will give you the crown of life.' Because He keeps us, we can run; because He is faithful, the finish is certain: 'He who calls you is faithful, who will also do it.'",
+        verses: ["Hebrews 12:1-2", "Revelation 2:10", "1 Thessalonians 5:24"],
+      },
+    ],
+    keyVerses: ["John 10:28", "Philippians 1:6", "Hebrews 3:14", "Matthew 24:13", "Philippians 2:13"],
+    raises: ["what-is-the-difference-between-assurance-and-presumption", "how-do-trials-make-us-more-like-christ", "how-do-i-fight-sin"],
+    followsFrom: ["can-i-lose-my-salvation"],
+    related: ["can-i-lose-my-salvation", "what-is-the-difference-between-assurance-and-presumption", "how-do-trials-make-us-more-like-christ", "faith-or-works"],
+    planned: ["What should the church do for someone who has stopped following Christ?"],
+    order: 60,
   },
 
 ];
