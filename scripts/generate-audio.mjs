@@ -391,5 +391,21 @@ console.log(
     "  aws s3 sync " +
     OUT_DIR +
     "/v1 s3://<bucket>/v1 \\\n" +
-    "    --endpoint-url https://<accountid>.r2.cloudflarestorage.com"
+    "    --endpoint-url https://<accountid>.r2.cloudflarestorage.com \\\n" +
+    '    --cache-control "public, max-age=2592000"\n' +
+    "\n" +
+    "The --cache-control header makes each object explicitly cacheable, so\n" +
+    "Cloudflare (when the bucket is served from a proxied custom domain such\n" +
+    "as audio.glorystudy.com) caches it at the edge on first request. Without\n" +
+    "it, R2 returns no Cache-Control and Cloudflare leaves the response\n" +
+    "DYNAMIC (never cached). Zone Cache Rules are NOT reliably applied to R2\n" +
+    "custom-domain traffic, so the object header is the authoritative fix.\n" +
+    "\n" +
+    "To retroactively stamp cache-control on objects already uploaded (sync\n" +
+    "only copies new files, it will not touch existing ones):\n" +
+    "  aws s3 cp s3://<bucket>/v1 s3://<bucket>/v1 \\\n" +
+    "    --recursive \\\n" +
+    "    --endpoint-url https://<accountid>.r2.cloudflarestorage.com \\\n" +
+    '    --cache-control "public, max-age=2592000" \\\n' +
+    "    --metadata-directive REPLACE"
 );

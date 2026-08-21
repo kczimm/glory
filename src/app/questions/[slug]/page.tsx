@@ -14,6 +14,8 @@ import ChapterReader from "@/components/ChapterReader";
 import JourneyBreadcrumb from "@/components/JourneyBreadcrumb";
 import StudyListen from "@/components/StudyListen";
 import VisitChain from "@/components/VisitChain";
+import ShareButton from "@/components/ShareButton";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -30,6 +32,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: question.question,
     description: question.summary,
+    alternates: { canonical: `${SITE_URL}/questions/${slug}` },
+    openGraph: {
+      type: "article",
+      title: question.question,
+      description: question.summary,
+      url: `${SITE_URL}/questions/${slug}`,
+      siteName: SITE_NAME,
+    },
   };
 }
 
@@ -62,6 +72,13 @@ export default async function QuestionPage({ params }: Props) {
             <span className="text-gold">/</span>
             <span className="font-medium text-ink-soft">
               Trail: {category?.title}
+            </span>
+            <span className="ml-auto">
+              <ShareButton
+                url={`${SITE_URL}/questions/${question.slug}`}
+                title={question.question}
+                text={question.keyVerses[0] ? getPassageText(question.keyVerses[0]) ?? question.summary : question.summary}
+              />
             </span>
           </div>
           <h1 className="mt-5 font-display text-3xl font-medium leading-tight tracking-tight text-ink sm:mt-6 sm:text-5xl">

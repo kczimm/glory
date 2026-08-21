@@ -11,6 +11,8 @@ import {
   refFromSlug,
   verseSlug,
 } from "@/data";
+import ShareButton from "@/components/ShareButton";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 interface Props {
   params: Promise<{ ref: string }>;
@@ -29,6 +31,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: verse,
     description: `${verse}: read in the World English Bible, with the study questions and cross-references that connect to it.`,
+    alternates: { canonical: `${SITE_URL}/verses/${ref}` },
+    openGraph: {
+      type: "article",
+      title: verse,
+      description: `${verse}: read in the World English Bible, with the study questions and cross-references that connect to it.`,
+      url: `${SITE_URL}/verses/${ref}`,
+      siteName: SITE_NAME,
+    },
   };
 }
 
@@ -47,12 +57,21 @@ export default async function VersePage({ params }: Props) {
     <article>
       <header className="border-b border-line bg-gradient-to-b from-cream/70 to-parchment">
         <div className="mx-auto max-w-3xl px-5 pb-10 pt-8 sm:pb-12 sm:pt-12">
-          <Link
-            href="/verses"
-            className="text-[12px] font-semibold uppercase tracking-[0.2em] text-gold-deep hover:underline"
-          >
-            ✦ The Word connected
-          </Link>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <Link
+              href="/verses"
+              className="text-[12px] font-semibold uppercase tracking-[0.2em] text-gold-deep hover:underline"
+            >
+              ✦ The Word connected
+            </Link>
+            <span className="ml-auto">
+              <ShareButton
+                url={`${SITE_URL}/verses/${ref}`}
+                title={verse}
+                text={text ?? undefined}
+              />
+            </span>
+          </div>
           <p className="mt-6 font-display text-[22px] italic leading-relaxed text-ink sm:text-[28px]">
             {text}
           </p>
