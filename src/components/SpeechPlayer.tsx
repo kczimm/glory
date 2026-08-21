@@ -56,7 +56,17 @@ export default function SpeechPlayer() {
     "flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-cream hover:text-gold-deep";
 
   return (
-    <div className="sticky bottom-0 z-40 border-t border-line bg-parchment/95 backdrop-blur-sm">
+    <>
+      {/* The bar is fixed, so it leaves the flow; this spacer keeps the
+          footer content from hiding behind it while a queue is active. */}
+      <div
+        aria-hidden
+        className="h-[calc(8rem+env(safe-area-inset-bottom))]"
+      />
+      <div
+        className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-parchment/95 backdrop-blur-sm"
+        style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      >
       <div className="h-[3px] w-full bg-line">
         <div
           className="h-full bg-gold transition-all duration-300"
@@ -132,6 +142,7 @@ export default function SpeechPlayer() {
           </button>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
