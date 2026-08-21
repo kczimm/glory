@@ -89,7 +89,7 @@ export default async function Image({ params }: { params: Promise<{ ref: string 
           }}
         >
           <span style={{ fontSize: "20px", color: C.inkFaint }}>World English Bible, public domain</span>
-          <span style={{ fontSize: "20px", color: C.inkFaint }}>glory-six.vercel.app</span>
+          <span style={{ fontSize: "20px", color: C.inkFaint }}>glorystudy.com</span>
         </div>
       </div>
     ),

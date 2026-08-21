@@ -95,7 +95,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           }}
         >
           <span style={{ fontSize: "20px", color: C.inkFaint }}>Read the passages. Let the Word lead.</span>
-          <span style={{ fontSize: "20px", color: C.inkFaint }}>glory-six.vercel.app</span>
+          <span style={{ fontSize: "20px", color: C.inkFaint }}>glorystudy.com</span>
         </div>
       </div>
     ),

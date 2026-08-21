@@ -1,2 +1,2 @@
-export const SITE_URL = "https://glory-six.vercel.app";
+export const SITE_URL = "https://glorystudy.com";
 export const SITE_NAME = "Glory";
