@@ -35,6 +35,15 @@ export default function VerseConnections({ verse }: { verse: string }) {
           ))}
         </ul>
       )}
+      {open && (
+        <Link
+          href={`/connections/${verseSlug(verse)}`}
+          className="mt-3 inline-flex items-center gap-1 text-[12px] font-semibold text-gold-deep underline-offset-2 hover:underline"
+        >
+          See this verse&apos;s connection map
+          <span aria-hidden>→</span>
+        </Link>
+      )}
     </div>
   );
 }
