@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useMemo, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import type { ConnectionKind } from "@/data/types";
 import { getVerseText, questions, questionsUsing, verseSlug } from "@/data";
@@ -54,8 +54,32 @@ function radius(degree: number): number {
   return Math.min(9 + degree * 1.6, 22);
 }
 
+// Deterministic pseudo-jitter in [-0.5, 0.5]: avoids Math.random inside the
+// component (render purity) while still spreading overlapping nodes apart.
+let jitterSeed = 42;
+function jitter(): number {
+  jitterSeed = (jitterSeed * 9301 + 49297) % 233280;
+  return jitterSeed / 233280 - 0.5;
+}
+
 export default function ConnectionGraph({ startRef }: { startRef: string }) {
-  const nodesRef = useRef<Map<string, SimNode>>(new Map());
+  // The node map is created once (seeded with the start verse) and then
+  // mutated in place by the simulation; a tick counter drives re-renders.
+  const [nodesMap] = useState<Map<string, SimNode>>(() => {
+    return new Map([
+      [
+        startRef,
+        {
+          ref: startRef,
+          x: W / 2,
+          y: H / 2,
+          vx: 0,
+          vy: 0,
+          degree: edgesOf(startRef).length,
+        },
+      ],
+    ]);
+  });
   const [, setTick] = useState(0);
   const [selected, setSelected] = useState<string | null>(startRef);
   const [kinds, setKinds] = useState<Set<ConnectionKind>>(new Set(ALL_KINDS));
@@ -72,79 +96,78 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
     return visited;
   }, [journey]);
 
-  // Place the start node at the center before first paint.
-  const initializedRef = useRef(false);
-  if (!initializedRef.current) {
-    initializedRef.current = true;
-    nodesRef.current.set(startRef, {
-      ref: startRef,
-      x: W / 2,
-      y: H / 2,
-      vx: 0,
-      vy: 0,
-      degree: edgesOf(startRef).length,
-    });
+  // The force simulation: a cooling rAF loop that runs until the layout
+  // settles, then stops entirely. Cheap O(n^2) repulsion is fine for the
+  // dozens of nodes a hand-expanded local map holds. Any mutation (expand,
+  // filter) re-heats it via heat().
+  const alphaRef = useRef(1);
+  const runningRef = useRef(false);
+  function heat(amount = 1) {
+    alphaRef.current = Math.max(alphaRef.current, amount);
+    if (!runningRef.current) {
+      runningRef.current = true;
+      requestAnimationFrame(step);
+    }
   }
-
-  // The force simulation: continuous rAF loop, cheap O(n^2) repulsion which
-  // is fine for the dozens of nodes a hand-expanded local map holds.
-  useEffect(() => {
-    let raf = 0;
-    const step = () => {
-      const nodes = [...nodesRef.current.values()];
-      const edges = visibleEdges();
-      for (let i = 0; i < nodes.length; i++) {
-        const a = nodes[i];
-        for (let j = i + 1; j < nodes.length; j++) {
-          const b = nodes[j];
-          let dx = b.x - a.x;
-          let dy = b.y - a.y;
-          let d2 = dx * dx + dy * dy;
-          if (d2 < 1) { dx = Math.random() - 0.5; dy = Math.random() - 0.5; d2 = 1; }
-          const repulse = 2600 / d2;
-          const d = Math.sqrt(d2);
-          a.vx -= (dx / d) * repulse;
-          a.vy -= (dy / d) * repulse;
-          b.vx += (dx / d) * repulse;
-          b.vy += (dy / d) * repulse;
-        }
-        // gentle pull to canvas center
-        a.vx += (W / 2 - a.x) * 0.0015;
-        a.vy += (H / 2 - a.y) * 0.0015;
+  function step() {
+    const alpha = alphaRef.current;
+    const nodes = [...nodesMap.values()];
+    const edges = visibleEdges();
+    for (let i = 0; i < nodes.length; i++) {
+      const a = nodes[i];
+      for (let j = i + 1; j < nodes.length; j++) {
+        const b = nodes[j];
+        let dx = b.x - a.x;
+        let dy = b.y - a.y;
+        let d2 = dx * dx + dy * dy;
+        if (d2 < 1) { dx = jitter(); dy = jitter(); d2 = 1; }
+        const repulse = ((2600 / d2) * alpha);
+        const d = Math.sqrt(d2);
+        a.vx -= (dx / d) * repulse;
+        a.vy -= (dy / d) * repulse;
+        b.vx += (dx / d) * repulse;
+        b.vy += (dy / d) * repulse;
       }
-      for (const e of edges) {
-        const a = nodesRef.current.get(e.source);
-        const b = nodesRef.current.get(e.target);
-        if (!a || !b) continue;
-        const ideal = 170;
-        const dx = b.x - a.x;
-        const dy = b.y - a.y;
-        const d = Math.max(Math.sqrt(dx * dx + dy * dy), 1);
-        const f = (d - ideal) * 0.008;
-        const fx = (dx / d) * f * d;
-        const fy = (dy / d) * f * d;
-        a.vx += fx; a.vy += fy;
-        b.vx -= fx; b.vy -= fy;
-      }
-      for (const n of nodes) {
-        n.vx *= 0.85; n.vy *= 0.85;
-        n.x = Math.min(Math.max(n.x + n.vx, 40), W - 40);
-        n.y = Math.min(Math.max(n.y + n.vy, 36), H - 36);
-      }
-      setTick((t) => t + 1);
-      raf = requestAnimationFrame(step);
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [kinds]);
+      // gentle pull to canvas center
+      a.vx += (W / 2 - a.x) * 0.002 * alpha;
+      a.vy += (H / 2 - a.y) * 0.002 * alpha;
+    }
+    for (const e of edges) {
+      const a = nodesMap.get(e.source);
+      const b = nodesMap.get(e.target);
+      if (!a || !b) continue;
+      const ideal = 170;
+      const dx = b.x - a.x;
+      const dy = b.y - a.y;
+      const d = Math.max(Math.sqrt(dx * dx + dy * dy), 1);
+      const f = (d - ideal) * 0.02 * alpha;
+      const fx = (dx / d) * f;
+      const fy = (dy / d) * f;
+      a.vx += fx; a.vy += fy;
+      b.vx -= fx; b.vy -= fy;
+    }
+    let energy = 0;
+    for (const n of nodes) {
+      n.vx *= 0.6; n.vy *= 0.6;
+      n.x = Math.min(Math.max(n.x + n.vx, 40), W - 40);
+      n.y = Math.min(Math.max(n.y + n.vy, 36), H - 36);
+      energy += Math.abs(n.vx) + Math.abs(n.vy);
+    }
+    setTick((t) => t + 1);
+    alphaRef.current = alpha * 0.97;
+    if (alpha > 0.02 && energy > 0.5) {
+      requestAnimationFrame(step);
+    } else {
+      runningRef.current = false;
+    }
+  }
 
   function visibleEdges(): GraphEdge[] {
     const seen = new Set<string>();
     const out: GraphEdge[] = [];
-    for (const ref of nodesRef.current.keys()) {
+    for (const ref of nodesMap.keys()) {
       for (const e of edgesOf(ref)) {
-        if (!nodesRef.current.has(e.source) || !nodesRef.current.has(e.target)) continue;
+        if (!nodesMap.has(e.source) || !nodesMap.has(e.target)) continue;
         if (!kinds.has(e.kind)) continue;
         const key = e.source < e.target ? `${e.source}|${e.target}|${e.kind}` : `${e.target}|${e.source}|${e.kind}`;
         if (seen.has(key)) continue;
@@ -156,9 +179,9 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
   }
 
   function expand(ref: string) {
-    const map = nodesRef.current;
+    const map = nodesMap;
     const src = map.get(ref);
-    const baseAngle = Math.random() * Math.PI * 2;
+    const baseAngle = jitter() * Math.PI * 2 + 3.14;
     let i = 0;
     for (const e of edgesOf(ref)) {
       if (!kinds.has(e.kind)) continue;
@@ -167,8 +190,8 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
       const angle = baseAngle + (i * 2 * Math.PI) / 7;
       map.set(other, {
         ref: other,
-        x: (src?.x ?? W / 2) + Math.cos(angle) * 120 + (Math.random() - 0.5) * 30,
-        y: (src?.y ?? H / 2) + Math.sin(angle) * 120 + (Math.random() - 0.5) * 30,
+        x: (src?.x ?? W / 2) + Math.cos(angle) * 120 + (jitter()) * 30,
+        y: (src?.y ?? H / 2) + Math.sin(angle) * 120 + (jitter()) * 30,
         vx: 0,
         vy: 0,
         degree: edgesOf(other).length,
@@ -176,9 +199,10 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
       i++;
     }
     setSelected(ref);
+    heat(1);
   }
 
-  const nodes = [...nodesRef.current.values()];
+  const nodes = [...nodesMap.values()];
   const edges = useMemo(
     () => visibleEdges(),
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -196,13 +220,14 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
             <button
               key={k}
               type="button"
-              onClick={() =>
+              onClick={() => {
                 setKinds((prev) => {
                   const next = new Set(prev);
                   if (next.has(k)) next.delete(k); else next.add(k);
                   return next;
-                })
-              }
+                });
+                heat(0.8);
+              }}
               className={`flex items-center gap-1.5 text-[12px] transition-opacity ${
                 kinds.has(k) ? "opacity-100" : "opacity-35"
               }`}
@@ -225,8 +250,8 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
         <svg viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full select-none">
           {/* edges */}
           {edges.map((e) => {
-            const a = nodesRef.current.get(e.source)!;
-            const b = nodesRef.current.get(e.target)!;
+            const a = nodesMap.get(e.source)!;
+            const b = nodesMap.get(e.target)!;
             const hot = selected === e.source || selected === e.target;
             const style = KIND_STYLE[e.kind];
             return (
@@ -322,7 +347,7 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
                     key={`${e.source}|${e.target}|${e.kind}`}
                     type="button"
                     onClick={() => {
-                      if (!nodesRef.current.has(other)) expand(other);
+                      if (!nodesMap.has(other)) expand(other);
                       setSelected(other);
                     }}
                     className="block w-full text-left"
