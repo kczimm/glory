@@ -2,13 +2,17 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
-  getQuestion,
   questions,
+  getQuestion,
   resolveQuestions,
   trailOf,
   categoryOf,
   getPassageText,
-} from "@/data";
+  getChapter,
+  questionTitles,
+  studyListenData,
+  visitChainData,
+} from "@/data/server";
 import VerseCard from "@/components/VerseCard";
 import ChapterReader from "@/components/ChapterReader";
 import JourneyBreadcrumb from "@/components/JourneyBreadcrumb";
@@ -53,12 +57,17 @@ export default async function QuestionPage({ params }: Props) {
   const parents = resolveQuestions(question.followsFrom);
   const related = resolveQuestions(question.related);
   const { prev, next } = trailOf(question);
+  const chain = visitChainData(question);
 
   return (
     <article>
       {/* Registers chapter -> chapter -> study audio continuation (renders nothing). */}
-      <VisitChain question={question} />
-      <JourneyBreadcrumb key={slug} slug={slug} />
+      <VisitChain
+        slug={chain.slug}
+        segments={chain.segments}
+        options={chain.options}
+      />
+      <JourneyBreadcrumb key={slug} slug={slug} titles={questionTitles()} />
       {/* Header */}
       <header className="border-b border-line bg-gradient-to-b from-cream/70 to-parchment">
         <div className="mx-auto max-w-3xl px-5 pb-10 pt-8 sm:pb-12 sm:pt-16">
@@ -143,7 +152,7 @@ export default async function QuestionPage({ params }: Props) {
           </p>
           <div className="mt-6 space-y-3">
             {question.passages.map((p) => (
-              <ChapterReader key={`${p.book}-${p.chapter}`} passage={p} />
+              <ChapterReader key={`${p.book}-${p.chapter}`} passage={p} verses={getChapter(p.book, p.chapter)} />
             ))}
           </div>
         </section>
@@ -159,7 +168,7 @@ export default async function QuestionPage({ params }: Props) {
                 What the Scripture says
               </h2>
             </div>
-            <StudyListen question={question} />
+            <StudyListen {...studyListenData(question)} />
           </div>
           <div className="mt-8 space-y-10">
             {question.points.map((point, i) => (

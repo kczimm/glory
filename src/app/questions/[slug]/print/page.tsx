@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getQuestion, questions, categoryOf, getPassageText, getChapterFocus, verseSlug } from "@/data";
+import { verseSlug } from "@/data";
+import { questions, getQuestion, categoryOf, getPassageText, getChapterFocus } from "@/data/server";
 import AutoPrint from "@/components/AutoPrint";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 

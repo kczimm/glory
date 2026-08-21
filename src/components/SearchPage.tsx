@@ -1,17 +1,16 @@
 "use client";
 
-import { Suspense, useMemo, useState } from "react";
+import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { verseSlug, getCategory } from "@/data";
-import { searchAll, snippet } from "@/lib/search";
+import { useSearch } from "@/lib/useSearch";
 
 function SearchView() {
   const sp = useSearchParams();
   const [q, setQ] = useState(sp.get("q") ?? "");
 
   const term = q.trim();
-  const { verses, questions } = useMemo(() => searchAll(term, 40, 40), [term]);
+  const { verses, questions } = useSearch(term, 40, 40);
   const empty = term.length > 0 && verses.length === 0 && questions.length === 0;
 
   return (
@@ -76,7 +75,7 @@ function SearchView() {
                     {question.question}
                   </span>
                   <span className="ml-auto font-display text-[13px] italic text-ink-faint">
-                    {getCategory(question.category)?.title ?? ""}
+                    {question.categoryTitle}
                   </span>
                   <span className="text-gold opacity-0 transition-opacity group-hover:opacity-100">
                     →
@@ -94,41 +93,30 @@ function SearchView() {
             </h2>
             <div className="mt-4 space-y-2">
               {verses.map((v) => (
-                <ScalableVerseRow
+                <Link
                   key={v.ref}
-                  verse={v.ref}
-                  text={v.text}
-                  term={term}
-                />
+                  href={v.href}
+                  className="block rounded-xl border border-line bg-surface/60 px-4 py-3 transition-colors hover:border-gold/50 hover:bg-surface"
+                >
+                  <div className="flex items-baseline gap-2">
+                    <span className="shrink-0 rounded-full bg-gold-wash px-2.5 py-0.5 text-[12px] font-semibold text-gold-deep">
+                      {v.ref}
+                    </span>
+                    <p className="font-display text-[15.5px] leading-relaxed text-ink">
+                      {v.before}
+                      <em className="rounded bg-gold-wash px-0.5 not-italic text-gold-deep">
+                        {v.match}
+                      </em>
+                      {v.after}
+                    </p>
+                  </div>
+                </Link>
               ))}
             </div>
           </section>
         )}
       </div>
     </div>
-  );
-}
-
-function ScalableVerseRow({ verse, text, term }: { verse: string; text: string; term: string }) {
-  const sn = snippet(text, term);
-  return (
-    <Link
-      href={`/verses/${verseSlug(verse)}`}
-      className="block rounded-xl border border-line bg-surface/60 px-4 py-3 transition-colors hover:border-gold/50 hover:bg-surface"
-    >
-      <div className="flex items-baseline gap-2">
-        <span className="shrink-0 rounded-full bg-gold-wash px-2.5 py-0.5 text-[12px] font-semibold text-gold-deep">
-          {verse}
-        </span>
-        <p className="font-display text-[15.5px] leading-relaxed text-ink">
-          {sn.before}
-          <em className="rounded bg-gold-wash px-0.5 not-italic text-gold-deep">
-            {sn.match}
-          </em>
-          {sn.after}
-        </p>
-      </div>
-    </Link>
   );
 }
 

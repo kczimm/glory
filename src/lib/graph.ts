@@ -1,6 +1,6 @@
 import { connections, getConnections } from "@/data/connections";
 import type { ConnectionKind } from "@/data/types";
-import { parseRef } from "../data/verseIndex";
+import { parseRef } from "../data/ref";
 
 /**
  * Graph helpers for the connection explorer: the adjacency of the knowledge

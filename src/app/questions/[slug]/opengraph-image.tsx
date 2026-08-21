@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getQuestion, getPassageText } from "@/data";
+import { getQuestion, getPassageText } from "@/data/server";
 import { SITE_NAME } from "@/lib/site";
 
 export const alt = "Glory study";

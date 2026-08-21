@@ -1,4 +1,4 @@
-import { questions, getPassageText } from "@/data";
+import { questions, getPassageText } from "@/data/server";
 import type { Question } from "@/data/types";
 
 /**

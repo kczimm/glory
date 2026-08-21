@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { questions, refFromSlug, verseSlug } from "@/data";
+import { verseSlug } from "@/data";
+import { questions, refFromSlug, graphVerseTexts, graphUsages, citedVersesBySlug } from "@/data/server";
 import ConnectionGraph from "@/components/ConnectionGraph";
 
 interface Props {
@@ -45,7 +46,14 @@ export default async function ConnectionsPage({ params }: Props) {
         walking the map.
       </p>
       <div className="mt-8">
-        <ConnectionGraph startRef={ref} />
+        <ConnectionGraph
+          startRef={ref}
+          graph={{
+            texts: graphVerseTexts(),
+            usages: graphUsages(),
+            cited: citedVersesBySlug(),
+          }}
+        />
       </div>
       <p className="mt-8 text-[13px] text-ink-faint">
         Prefer to read?{" "}

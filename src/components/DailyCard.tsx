@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { dailyPick } from "@/lib/daily";
-import { categoryOf, verseSlug } from "@/data";
+import { verseSlug } from "@/data";
+import { categoryOf } from "@/data/server";
 
 /**
  * The "Today" card on the home page: one question and its key verse,

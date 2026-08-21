@@ -1,12 +1,12 @@
 import Link from "next/link";
-import type { Question } from "@/data/types";
-import { categoryOf } from "@/data";
+import type { QuestionTeaser } from "@/data/types";
 
 /**
  * A question card: shows the question, short answer, and its key verses.
+ * Takes the slim teaser shape so it can render inside client components
+ * without the full study corpus.
  */
-export default function QuestionCard({ question }: { question: Question }) {
-  const category = categoryOf(question);
+export default function QuestionCard({ question }: { question: QuestionTeaser }) {
   const verses = question.keyVerses.slice(0, 3);
 
   return (
@@ -15,7 +15,7 @@ export default function QuestionCard({ question }: { question: Question }) {
       className="group flex flex-col gap-3 rounded-2xl border border-line bg-surface/50 p-6 transition-all hover:-translate-y-0.5 hover:border-gold/50 hover:bg-surface hover:shadow-[0_8px_30px_-12px_rgba(125,95,33,0.25)]"
     >
       <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
-        {category?.title}
+        {question.categoryTitle}
       </p>
       <h3 className="font-display text-xl font-medium leading-snug text-ink transition-colors group-hover:text-gold-deep">
         {question.question}

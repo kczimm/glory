@@ -1,116 +1,16 @@
-import { verses, chapters } from "./scripture";
-import { canonicalBook, filterFocus } from "../lib/audio-text";
 import { categories, getCategory } from "./categories";
-import { questions } from "./questions";
 import { connections, getConnections, connectionKindLabel } from "./connections";
-import { parseRef, questionsUsing, incomingConnections, graphVerseRefs, verseSlug, refFromSlug } from "./verseIndex";
+import { parseRef, verseSlug } from "./ref";
 import type { Category, Question, Connection, ConnectionKind } from "./types";
 
-export { categories, questions, verses, chapters, getCategory };
-export { canonicalBook, filterFocus };
-export { connections, getConnections, connectionKindLabel };
-export { parseRef, questionsUsing, incomingConnections, graphVerseRefs, verseSlug, refFromSlug };
-export type { Category, Question, Connection, ConnectionKind };
-
-export interface ParsedRef {
-  book: string;
-  chapter: number;
-  verseStart: number;
-  verseEnd: number;
-}
-
-/** Parse "John 3:16", "John 14:16-17" into parts. */
-export function parseVerseRef(ref: string): ParsedRef | null {
-  const m = ref.match(/^(.+?)\s(\d+):(\d+)(?:-(\d+))?$/);
-  if (!m) return null;
-  return {
-    book: canonicalBook(m[1]),
-    chapter: Number(m[2]),
-    verseStart: Number(m[3]),
-    verseEnd: Number(m[4] ?? m[3]),
-  };
-}
-
-/** Full text of a single verse, or null if we don't have it. */
-export function getVerseText(ref: string): string | null {
-  const p = parseVerseRef(ref);
-  if (!p) return null;
-  return verses[`${p.book} ${p.chapter}:${p.verseStart}`] ?? null;
-}
-
-/** Text of a verse or range ("John 14:16-17"), joined with spaces. */
-export function getPassageText(ref: string): string | null {
-  const p = parseVerseRef(ref);
-  if (!p) return null;
-  const parts: string[] = [];
-  for (let v = p.verseStart; v <= p.verseEnd; v++) {
-    const t = verses[`${p.book} ${p.chapter}:${v}`];
-    if (!t) return null;
-    parts.push(t.replace(/\n+/g, " "));
-  }
-  return parts.join(" ");
-}
-
-/** Whole chapter as verse list, or null. */
-export function getChapter(book: string, chapter: number): { n: number; text: string }[] | null {
-  return chapters[`${canonicalBook(book)} ${chapter}`] ?? null;
-}
-
-/** Verses from a chapter within an optional focus range. */
-export function getChapterFocus(
-  book: string,
-  chapter: number,
-  focus?: string
-): { n: number; text: string }[] | null {
-  const ch = getChapter(book, chapter);
-  if (!ch) return null;
-  return filterFocus(ch, focus);
-}
-
-// ---- questions ------------------------------------------------------------
-
-export function getQuestion(slug: string): Question | undefined {
-  return questions.find((q) => q.slug === slug);
-}
-
-export function questionsByCategory(categorySlug: string): Question[] {
-  return questions
-    .filter((q) => q.category === categorySlug)
-    .sort((a, b) => a.order - b.order);
-}
-
-export function resolveQuestions(slugs: string[]): Question[] {
-  const seen = new Set<string>();
-  return slugs
-    .map((s) => getQuestion(s))
-    .filter((q): q is Question => {
-      if (!q || seen.has(q.slug)) return false;
-      seen.add(q.slug);
-      return true;
-    });
-}
-
-export function categoryOf(q: Question): Category | undefined {
-  return getCategory(q.category);
-}
-
 /**
- * Up to three questions for the hands-free "keep going" menu at the end of
- * a study listen: the study's own raises first (the journey continues here);
- * falling back to the next in its trail when nothing is raised in writing.
+ * The client-safe data barrel: only small, static, dependency-light modules.
+ * Scripture text and study lookups live in `@/data/server` (server-only), so
+ * importing this barrel from a client component never ships the vendored
+ * Bible or the study corpus to the browser.
  */
-export function voiceMenu(q: Question): Question[] {
-  const raised = resolveQuestions(q.raises).slice(0, 3);
-  if (raised.length) return raised;
-  const next = trailOf(q).next;
-  return next ? [next] : [];
-}
 
-export function trailOf(q: Question): { prev?: Question; next?: Question } {
-  const siblings = questionsByCategory(q.category);
-  const i = siblings.findIndex((s) => s.slug === q.slug);
-  return {
-    prev: i > 0 ? siblings[i - 1] : undefined,
-    next: i >= 0 && i < siblings.length - 1 ? siblings[i + 1] : undefined,
-  };
-}
+export { categories, getCategory };
+export { connections, getConnections, connectionKindLabel };
+export { parseRef, verseSlug };
+export type { Category, Question, Connection, ConnectionKind };

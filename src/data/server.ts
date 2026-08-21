@@ -1,0 +1,274 @@
+import "server-only";
+import { verses, chapters } from "./scripture";
+import { canonicalBook, chapterItems, filterFocus, speechMenuItem, studyItems } from "../lib/audio-text";
+import type { AudioChunk } from "../lib/audio-text";
+import { questions } from "./questions";
+import { connections } from "./connections";
+import { parseRef, questionsUsing, incomingConnections, graphVerseRefs, refFromSlug } from "./verseIndex";
+import { getCategory as categoryLookup } from "./categories";
+import type { Category, Question, QuestionTeaser } from "./types";
+
+/**
+ * Server-side data access: everything that touches the vendored Bible or
+ * the full study corpus. Marked server-only so a stray client import fails
+ * the build instead of silently shipping megabytes of Scripture to the
+ * browser. Client-safe helpers live in `@/data` (the barrel).
+ */
+
+export { verses, chapters, questions };
+export { canonicalBook, filterFocus };
+export { parseRef, questionsUsing, incomingConnections, graphVerseRefs, refFromSlug };
+
+export interface ParsedVerseRef {
+  book: string;
+  chapter: number;
+  verseStart: number;
+  verseEnd: number;
+}
+
+/** Parse "John 3:16", "John 14:16-17" into parts. */
+export function parseVerseRef(ref: string): ParsedVerseRef | null {
+  const m = ref.match(/^(.+?)\s(\d+):(\d+)(?:-(\d+))?$/);
+  if (!m) return null;
+  return {
+    book: canonicalBook(m[1]),
+    chapter: Number(m[2]),
+    verseStart: Number(m[3]),
+    verseEnd: Number(m[4] ?? m[3]),
+  };
+}
+
+/** Full text of a single verse, or null if we don't have it. */
+export function getVerseText(ref: string): string | null {
+  const p = parseVerseRef(ref);
+  if (!p) return null;
+  return verses[`${p.book} ${p.chapter}:${p.verseStart}`] ?? null;
+}
+
+/** Text of a verse or range ("John 14:16-17"), joined with spaces. */
+export function getPassageText(ref: string): string | null {
+  const p = parseVerseRef(ref);
+  if (!p) return null;
+  const parts: string[] = [];
+  for (let v = p.verseStart; v <= p.verseEnd; v++) {
+    const t = verses[`${p.book} ${p.chapter}:${v}`];
+    if (!t) return null;
+    parts.push(t.replace(/\n+/g, " "));
+  }
+  return parts.join(" ");
+}
+
+/** Whole chapter as verse list, or null. */
+export function getChapter(book: string, chapter: number): { n: number; text: string }[] | null {
+  return chapters[`${canonicalBook(book)} ${chapter}`] ?? null;
+}
+
+/** Verses from a chapter within an optional focus range. */
+export function getChapterFocus(
+  book: string,
+  chapter: number,
+  focus?: string
+): { n: number; text: string }[] | null {
+  const ch = getChapter(book, chapter);
+  if (!ch) return null;
+  return filterFocus(ch, focus);
+}
+
+// ---- questions ------------------------------------------------------------
+
+const questionBySlug = new Map(questions.map((q) => [q.slug, q]));
+
+const byCategory = new Map<string, Question[]>();
+for (const q of questions) {
+  const list = byCategory.get(q.category) ?? [];
+  list.push(q);
+  byCategory.set(q.category, list);
+}
+for (const list of byCategory.values()) list.sort((a, b) => a.order - b.order);
+
+export function getQuestion(slug: string): Question | undefined {
+  return questionBySlug.get(slug);
+}
+
+export function questionsByCategory(categorySlug: string): Question[] {
+  return byCategory.get(categorySlug) ?? [];
+}
+
+export function resolveQuestions(slugs: string[]): Question[] {
+  const seen = new Set<string>();
+  return slugs
+    .map((s) => getQuestion(s))
+    .filter((q): q is Question => {
+      if (!q || seen.has(q.slug)) return false;
+      seen.add(q.slug);
+      return true;
+    });
+}
+
+export function categoryOf(q: Question): Category | undefined {
+  return categoryLookup(q.category);
+}
+
+
+/**
+ * Up to three questions for the hands-free "keep going" menu at the end of
+ * a study listen: the study's own raises first (the journey continues here);
+ * falling back to the next in its trail when nothing is raised in writing.
+ */
+export function voiceMenu(q: Question): Question[] {
+  const raised = resolveQuestions(q.raises).slice(0, 3);
+  if (raised.length) return raised;
+  const next = trailOf(q).next;
+  return next ? [next] : [];
+}
+
+export function trailOf(q: Question): { prev?: Question; next?: Question } {
+  const siblings = questionsByCategory(q.category);
+  const i = siblings.findIndex((s) => s.slug === q.slug);
+  return {
+    prev: i > 0 ? siblings[i - 1] : undefined,
+    next: i >= 0 && i < siblings.length - 1 ? siblings[i + 1] : undefined,
+  };
+}
+
+// ---- serializable projections for client components ------------------------
+
+/** slug -> question title, for journey UIs that resolve localStorage entries. */
+export function questionTitles(): Record<string, string> {
+  return Object.fromEntries(questions.map((q) => [q.slug, q.question]));
+}
+
+/** The slim question shape safe to serialize into client components. */
+export type { QuestionTeaser };
+
+export function toTeaser(q: Question): QuestionTeaser {
+  return {
+    slug: q.slug,
+    question: q.question,
+    summary: q.summary,
+    category: q.category,
+    categoryTitle: categoryOf(q)?.title ?? "",
+    keyVerses: q.keyVerses,
+  };
+}
+
+export function teasers(): QuestionTeaser[] {
+  return [...questions].sort((a, b) => a.order - b.order).map(toTeaser);
+}
+
+/** Verse text for every connection endpoint, for the client graph explorer. */
+export function graphVerseTexts(): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const edges of Object.values(connections)) {
+    for (const e of edges) {
+      for (const ref of [e.target]) {
+        if (!(ref in out)) out[ref] = getPassageText(ref) ?? "";
+      }
+    }
+  }
+  for (const ref of Object.keys(connections)) {
+    if (!(ref in out)) out[ref] = getPassageText(ref) ?? "";
+  }
+  return out;
+}
+
+/** Which studies cite each connection endpoint (slug -> title pairs). */
+export function graphUsages(): Record<string, { slug: string; question: string }[]> {
+  const refs = new Set<string>(Object.keys(connections));
+  for (const edges of Object.values(connections)) for (const e of edges) refs.add(e.target);
+  const out: Record<string, { slug: string; question: string }[]> = {};
+  for (const ref of refs) {
+    const used = questionsUsing(ref);
+    if (used.length) out[ref] = used;
+  }
+  return out;
+}
+
+/** slug -> every verse ref that study cites (for the visited-nodes ring). */
+export function citedVersesBySlug(): Record<string, string[]> {
+  const out: Record<string, string[]> = {};
+  for (const q of questions) {
+    out[q.slug] = [...q.keyVerses, ...q.points.flatMap((p) => p.verses)];
+  }
+  return out;
+}
+
+// ---- prebuilt speech queues -------------------------------------------------
+// The TTS queues need verse text, so they are assembled here and handed to
+// the client components as serializable props (see VisitChain/StudyListen).
+
+export interface ChainQueue {
+  sourceId: string;
+  items: AudioChunk[];
+  /**
+   * The optional hands-free "keep going" chunk. The client appends it only
+   * when speech recognition is available, so browsers without it end the
+   * visit gracefully after the outro.
+   */
+  menuChunk: AudioChunk | null;
+}
+
+function chapterQueue(book: string, chapter: number, focus?: string): ChainQueue {
+  return {
+    sourceId: `chapter:${book} ${chapter}`,
+    items: chapterItems(book, chapter, getChapterFocus(book, chapter, focus) ?? []),
+    menuChunk: null,
+  };
+}
+
+/** Study queue WITHOUT the menu chunk embedded; it travels separately. */
+function studyQueue(q: Question, opts: { cue?: string } = {}): ChainQueue {
+  const items = studyItems(q, getPassageText, {
+    cue: opts.cue,
+    outroTargetId: "raises",
+    resolveTitle: (slug) => getQuestion(slug)?.question ?? null,
+  });
+  return {
+    sourceId: `study:${q.slug}`,
+    items,
+    menuChunk: speechMenuItem(voiceMenu(q).map((m) => m.question), "raises"),
+  };
+}
+
+/** Props for StudyListen: the study queue plus the optional menu chunk. */
+export function studyListenData(
+  q: Question
+): { slug: string; items: AudioChunk[]; menuChunk: AudioChunk | null } {
+  const queue = studyQueue(q);
+  return { slug: q.slug, items: queue.items, menuChunk: queue.menuChunk };
+}
+
+/** Props for VisitChain: every queue the visit may play, fully prebuilt. */
+export function visitChainData(q: Question): {
+  slug: string;
+  segments: ChainQueue[];
+  menuChunk: AudioChunk | null;
+  options: {
+    slug: string;
+    label: string;
+    firstChapter: ChainQueue | null;
+    study: ChainQueue;
+  }[];
+} {
+  const segments: ChainQueue[] = q.passages.map((p) =>
+    chapterQueue(p.book, p.chapter, p.focus)
+  );
+  // The chained study entry keeps its original "And now, the study." cue.
+  segments.push(studyQueue(q, { cue: "And now, the study." }));
+  return {
+    slug: q.slug,
+    segments,
+    menuChunk: speechMenuItem(voiceMenu(q).map((m) => m.question), "raises"),
+    options: voiceMenu(q).map((o) => {
+      const first = o.passages[0];
+      return {
+        slug: o.slug,
+        label: o.question,
+        firstChapter: first
+          ? chapterQueue(first.book, first.chapter, first.focus)
+          : null,
+        study: studyQueue(o, { cue: "And now, the study." }),
+      };
+    }),
+  };
+}

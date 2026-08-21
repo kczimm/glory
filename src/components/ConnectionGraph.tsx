@@ -3,10 +3,18 @@
 import { useMemo, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import type { ConnectionKind } from "@/data/types";
-import { getVerseText, questions, questionsUsing, verseSlug } from "@/data";
-import { connectionKindLabel } from "@/data/connections";
+import { verseSlug, connectionKindLabel } from "@/data";
 import { edgesOf, shortRef, type GraphEdge } from "@/lib/graph";
 import { subscribe as journeySubscribe, getSnapshot as journeySnapshot, getServerSnapshot as journeyServerSnapshot } from "@/lib/journey";
+
+export interface GraphData {
+  /** verse text for every reachable node (connection endpoints) */
+  texts: Record<string, string>;
+  /** studies citing each node */
+  usages: Record<string, { slug: string; question: string }[]>;
+  /** verses cited by each study (slug -> refs), for the visited ring */
+  cited: Record<string, string[]>;
+}
 
 /**
  * The connection explorer: a local, interactive map of the knowledge graph.
@@ -62,7 +70,7 @@ function jitter(): number {
   return jitterSeed / 233280 - 0.5;
 }
 
-export default function ConnectionGraph({ startRef }: { startRef: string }) {
+export default function ConnectionGraph({ startRef, graph }: { startRef: string; graph: GraphData }) {
   // The node map is created once (seeded with the start verse) and then
   // mutated in place by the simulation; a tick counter drives re-renders.
   const [nodesMap] = useState<Map<string, SimNode>>(() => {
@@ -89,12 +97,10 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
   const visitedVerses = useMemo(() => {
     const visited = new Set<string>();
     for (const entry of journey) {
-      const q = questions.find((x) => x.slug === entry.slug);
-      if (!q) continue;
-      for (const r of [...q.keyVerses, ...q.points.flatMap((p) => p.verses)]) visited.add(r);
+      for (const r of graph.cited[entry.slug] ?? []) visited.add(r);
     }
     return visited;
-  }, [journey]);
+  }, [journey, graph.cited]);
 
   // The force simulation: a cooling rAF loop that runs until the layout
   // settles, then stops entirely. Cheap O(n^2) repulsion is fine for the
@@ -209,7 +215,7 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
     [nodes.length, kinds]
   );
   const selEdges = selected ? edges.filter((e) => e.source === selected || e.target === selected) : [];
-  const selQuestions = selected ? questionsUsing(selected) : [];
+  const selQuestions = selected ? (graph.usages[selected] ?? []) : [];
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
@@ -347,9 +353,9 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
             <h2 className="font-display text-xl font-medium leading-snug text-ink">
               {selected}
             </h2>
-            {getVerseText(selected) && (
+            {graph.texts[selected] && (
               <blockquote className="mt-3 border-l-2 border-gold/60 pl-3 font-display text-[15px] italic leading-relaxed text-ink">
-                {getVerseText(selected)}
+                {graph.texts[selected]}
               </blockquote>
             )}
             <Link

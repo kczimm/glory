@@ -1,27 +1,19 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { verseSlug, getCategory } from "@/data";
-import { searchScripture, searchQuestions, snippet } from "@/lib/search";
+import { useSearch } from "@/lib/useSearch";
 
 /**
  * Search the Word: matches both Scripture text (the vendored WEB) and the
- * study questions. Live, grouped, offline.
+ * study questions. Live, grouped; the index lives server-side, so this
+ * component ships no Bible.
  */
 export default function SearchBox() {
   const [q, setQ] = useState("");
 
   const term = q.trim();
-
-  const verses = useMemo(
-    () => (term ? searchScripture(term, 5) : []),
-    [term]
-  );
-  const questions = useMemo(
-    () => (term ? searchQuestions(term, 4) : []),
-    [term]
-  );
+  const { verses, questions } = useSearch(term, 5, 4);
 
   const empty = term.length > 0 && verses.length === 0 && questions.length === 0;
 
@@ -65,7 +57,7 @@ export default function SearchBox() {
                   <p className="flex items-baseline gap-2 font-display text-[14.5px] font-medium text-ink">
                     <span>{question.question}</span>
                     <span className="ml-auto shrink-0 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-deep">
-                      {getCategory(question.category)?.title}
+                      {question.categoryTitle}
                     </span>
                   </p>
                   <p className="mt-0.5 line-clamp-1 text-[12.5px] text-ink-faint">
@@ -81,27 +73,24 @@ export default function SearchBox() {
               <p className="mb-1 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
                 Scripture · {verses.length}
               </p>
-              {verses.map((v) => {
-                const sn = snippet(v.text, term, 60);
-                return (
-                  <Link
-                    key={v.ref}
-                    href={`/verses/${verseSlug(v.ref)}`}
-                    className="-mx-5 block border-b border-line/70 px-5 py-2.5 transition-colors last:border-b-0 hover:bg-gold-wash/50"
-                  >
-                    <span className="text-[12px] font-semibold text-gold-deep">
-                      {v.ref}
-                    </span>{" "}
-                    <span className="text-[13px] leading-snug text-ink">
-                      {sn.before}
-                      <em className="rounded bg-gold-wash px-0.5 not-italic text-gold-deep">
-                        {sn.match}
-                      </em>
-                      {sn.after}
-                    </span>
-                  </Link>
-                );
-              })}
+              {verses.map((v) => (
+                <Link
+                  key={v.ref}
+                  href={v.href}
+                  className="-mx-5 block border-b border-line/70 px-5 py-2.5 transition-colors last:border-b-0 hover:bg-gold-wash/50"
+                >
+                  <span className="text-[12px] font-semibold text-gold-deep">
+                    {v.ref}
+                  </span>{" "}
+                  <span className="text-[13px] leading-snug text-ink">
+                    {v.before}
+                    <em className="rounded bg-gold-wash px-0.5 not-italic text-gold-deep">
+                      {v.match}
+                    </em>
+                    {v.after}
+                  </span>
+                </Link>
+              ))}
             </div>
           )}
 

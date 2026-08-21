@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useSyncExternalStore } from "react";
 import type { Passage } from "@/data/types";
-import { getChapter, getChapterFocus } from "@/data";
 import {
   chapterItems,
   getServerSnapshot,
@@ -18,20 +17,21 @@ import ListenButton from "@/components/ListenButton";
  * An expandable full-chapter reader. This is where the learner actually
  * goes "through relevant verses and chapters of the Bible". The Listen
  * control reads the chapter aloud (or just the focus range); the verse
- * being read is highlighted and kept in view.
+ * being read is highlighted and kept in view. The chapter text is passed
+ * in from the server so the vendored Bible never enters the client bundle.
  */
-export default function ChapterReader({ passage }: { passage: Passage }) {
+export default function ChapterReader({
+  passage,
+  verses,
+}: {
+  passage: Passage;
+  verses: { n: number; text: string }[] | null;
+}) {
   const [opened, setOpened] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
   const speech = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const sourceId = `chapter:${passage.book} ${passage.chapter}`;
-  const chapter = getChapter(passage.book, passage.chapter);
-
-  const verses = useMemo(
-    () => (chapter ? getChapterFocus(passage.book, passage.chapter, passage.focus) : null),
-    [chapter, passage.book, passage.chapter, passage.focus]
-  );
 
   const items = useMemo<SpeechItem[]>(() => {
     if (!verses) return [];
@@ -70,7 +70,7 @@ export default function ChapterReader({ passage }: { passage: Passage }) {
     }
   }, [speech, open, sourceId]);
 
-  if (!chapter) return null;
+  if (!verses) return null;
 
   const focusStart = passage.focus ? Number(passage.focus.split("-")[0]) : -1;
   const focusEnd = passage.focus
@@ -116,7 +116,7 @@ export default function ChapterReader({ passage }: { passage: Passage }) {
           ref={listRef}
           className="reader-scroll max-h-[420px] overflow-y-auto border-t border-line px-6 py-5"
         >
-          {chapter.map((v) => {
+          {verses.map((v) => {
             const vId = `${passage.book} ${passage.chapter}:${v.n}`;
             const focused = v.n >= focusStart && v.n <= focusEnd;
             const speaking = matchesVerse(activeId, vId);

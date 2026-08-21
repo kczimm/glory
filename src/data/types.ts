@@ -89,3 +89,17 @@ export interface Connection {
   /** one sentence explaining the relationship: the pedagogy */
   note: string;
 }
+
+/**
+ * The slim question shape safe to pass into client components: card and
+ * index UIs need the title, summary, trail, and key verses, not the full
+ * study body.
+ */
+export interface QuestionTeaser {
+  slug: string;
+  category: string;
+  question: string;
+  summary: string;
+  categoryTitle: string;
+  keyVerses: string[];
+}

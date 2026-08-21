@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { categories, questions, questionsByCategory } from "@/data";
+import type { Category, QuestionTeaser } from "@/data/types";
 import QuestionCard from "@/components/QuestionCard";
 
 const ALL = "all";
@@ -13,31 +13,32 @@ function queryTerms(term: string): string[] {
 /**
  * Every question, filterable: type to narrow, tap a category chip to jump to
  * one trail. With 120 questions across a dozen trails, filtering beats
- * scrolling.
+ * scrolling. The teasers and counts are passed in from the server so the
+ * full study corpus never reaches the browser.
  */
-export default function QuestionsIndex() {
+export default function QuestionsIndex({
+  categories,
+  teasers,
+  counts,
+}: {
+  categories: Category[];
+  teasers: QuestionTeaser[];
+  counts: Record<string, number>;
+}) {
   const [cat, setCat] = useState<string>(ALL);
   const [q, setQ] = useState("");
 
   const terms = useMemo(() => queryTerms(q), [q]);
 
-  const counts = useMemo(() => {
-    const m = new Map<string, number>();
-    for (const c of categories) m.set(c.slug, questionsByCategory(c.slug).length);
-    return m;
-  }, []);
-
   const haystack = useMemo(() => {
     const m = new Map<string, string>();
-    for (const question of questions) {
-      const title =
-        categories.find((c) => c.slug === question.category)?.title ?? "";
+    for (const question of teasers) {
       m.set(
         question.slug,
         [
           question.question,
           question.summary,
-          title,
+          question.categoryTitle,
           question.keyVerses.join(" "),
         ]
           .join(" ")
@@ -45,24 +46,24 @@ export default function QuestionsIndex() {
       );
     }
     return m;
-  }, []);
+  }, [teasers]);
 
   const matches = useMemo(() => {
     if (!terms.length) return null;
-    const filtered = questions.filter(
+    const filtered = teasers.filter(
       (question) =>
         (cat === ALL || question.category === cat) &&
         terms.every((t) => haystack.get(question.slug)!.includes(t))
     );
     return filtered.length ? filtered : [];
-  }, [terms, cat, haystack]);
+  }, [terms, cat, haystack, teasers]);
 
   const visibleCategories = useMemo(
-    () => categories.filter((c) => (cat === ALL || c.slug === cat) && (counts.get(c.slug) ?? 0) > 0),
-    [cat, counts]
+    () => categories.filter((c) => (cat === ALL || c.slug === cat) && (counts[c.slug] ?? 0) > 0),
+    [cat, counts, categories]
   );
 
-  const total = questions.length;
+  const total = teasers.length;
 
   return (
     <div className="mx-auto max-w-5xl px-5 py-16">
@@ -115,7 +116,7 @@ export default function QuestionsIndex() {
               active={cat === c.slug}
               onClick={() => setCat(c.slug)}
             >
-              {c.title} · {counts.get(c.slug) ?? 0}
+              {c.title} · {counts[c.slug] ?? 0}
             </Chip>
           ))}
         </div>
@@ -154,7 +155,7 @@ export default function QuestionsIndex() {
         // Grouped by category
         <div className="mt-10 space-y-14">
           {visibleCategories.map((c, ci) => {
-            const qs = questionsByCategory(c.slug);
+            const qs = teasers.filter((t) => t.category === c.slug);
             return (
               <section key={c.slug}>
                 <div className="mb-6 flex items-center gap-4">

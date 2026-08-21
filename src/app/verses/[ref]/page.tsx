@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { getConnections, connectionKindLabel, verseSlug } from "@/data";
 import {
   getPassageText,
-  getConnections,
-  connectionKindLabel,
   questionsUsing,
   incomingConnections,
   graphVerseRefs,
   refFromSlug,
-  verseSlug,
-} from "@/data";
+} from "@/data/server";
 import ShareButton from "@/components/ShareButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 

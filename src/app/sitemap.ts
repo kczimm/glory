@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
-import { questions, graphVerseRefs, verseSlug } from "@/data";
+import { verseSlug } from "@/data";
+import { questions, graphVerseRefs } from "@/data/server";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

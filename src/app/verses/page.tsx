@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { graphVerseRefs, getConnections, incomingConnections, verseSlug } from "@/data";
+import { getConnections, verseSlug } from "@/data";
+import { graphVerseRefs, incomingConnections } from "@/data/server";
 
 export const metadata: Metadata = {
   title: "The Word, connected",

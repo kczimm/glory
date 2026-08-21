@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { categories, questions, resolveQuestions, questionsByCategory } from "@/data";
+import { categories } from "@/data";
+import { questionsByCategory, questionTitles, resolveQuestions, teasers } from "@/data/server";
 import SearchBox from "@/components/SearchBox";
 import QuestionCard from "@/components/QuestionCard";
 import VerseCard from "@/components/VerseCard";
@@ -88,7 +89,7 @@ export default function Home() {
       <DailyCard />
 
       {/* Continue the journey */}
-      <JourneyHomeCard />
+      <JourneyHomeCard titles={questionTitles()} />
 
       {/* Trails */}
       <section className="mx-auto max-w-5xl px-5 pb-16">
@@ -176,8 +177,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {questions.map((q) => (
-              <QuestionCard key={q.slug} question={q} />
+            {teasers().map((t) => (
+              <QuestionCard key={t.slug} question={t} />
             ))}
           </div>
         </div>

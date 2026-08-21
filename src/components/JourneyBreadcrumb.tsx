@@ -2,15 +2,21 @@
 
 import { useEffect, useSyncExternalStore } from "react";
 import Link from "next/link";
-import { getQuestion } from "@/data";
 import { subscribe, getSnapshot, getServerSnapshot, recordVisit, clearJourney } from "@/lib/journey";
 
 /**
  * "You started here, came through here, now here."
  * A persistent breadcrumb of the questions in this reader's journey.
  * Keyed by slug in the parent so it remounts (and records) on each stop.
+ * Question titles come from the server via the `titles` map.
  */
-export default function JourneyBreadcrumb({ slug }: { slug: string }) {
+export default function JourneyBreadcrumb({
+  slug,
+  titles,
+}: {
+  slug: string;
+  titles: Record<string, string>;
+}) {
   const entries = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   // Record this stop after mount. No setState here; the store notifies React.
@@ -19,12 +25,11 @@ export default function JourneyBreadcrumb({ slug }: { slug: string }) {
   }, [slug]);
 
   const items = entries
-    .map((e) => {
-      const q = getQuestion(e.slug);
-      return q
-        ? { slug: q.slug, question: q.question, current: q.slug === slug }
-        : null;
-    })
+    .map((e) =>
+      titles[e.slug]
+        ? { slug: e.slug, question: titles[e.slug], current: e.slug === slug }
+        : null
+    )
     .filter((x): x is NonNullable<typeof x> => x !== null);
 
   if (items.length === 0) return null;

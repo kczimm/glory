@@ -1,11 +1,8 @@
 "use client";
 
 import { useMemo } from "react";
-import type { Question } from "@/data/types";
-import { getPassageText, getQuestion, voiceMenu } from "@/data";
-import { studyItems } from "@/lib/speech";
-import { replySupported } from "@/lib/reply";
 import type { SpeechItem } from "@/lib/speech";
+import { replySupported } from "@/lib/reply";
 import ListenButton from "@/components/ListenButton";
 import StudyFollowAlong from "@/components/StudyFollowAlong";
 
@@ -16,28 +13,29 @@ import StudyFollowAlong from "@/components/StudyFollowAlong";
  * the study raises and scrolls the page to the "you may wonder" panel. Pairs
  * with the per-chapter Listen controls: chapters are read from the chapter
  * cards, and VisitChain chains them forward into this study's queue.
+ *
+ * The queue is prebuilt on the server (it needs verse text); only the
+ * optional hands-free menu chunk is appended here, since recognition support
+ * is a client capability.
  */
-export default function StudyListen({ question }: { question: Question }) {
-  const items = useMemo<SpeechItem[]>(
-    () =>
-      studyItems(question, getPassageText, {
-        outroTargetId: "raises",
-        resolveTitle: (slug) => getQuestion(slug)?.question ?? null,
-        menu: replySupported()
-          ? voiceMenu(question).map((q) => q.question)
-          : [],
-      }),
-    [question]
+export default function StudyListen({
+  slug,
+  items,
+  menuChunk,
+}: {
+  slug: string;
+  items: SpeechItem[];
+  menuChunk: SpeechItem | null;
+}) {
+  const queue = useMemo<SpeechItem[]>(
+    () => (replySupported() && menuChunk ? [...items, menuChunk] : items),
+    [items, menuChunk]
   );
 
   return (
     <>
-      <ListenButton
-        sourceId={`study:${question.slug}`}
-        items={items}
-        label="Listen to this study"
-      />
-      <StudyFollowAlong sourceId={`study:${question.slug}`} />
+      <ListenButton sourceId={`study:${slug}`} items={queue} label="Listen to this study" />
+      <StudyFollowAlong sourceId={`study:${slug}`} />
     </>
   );
 }

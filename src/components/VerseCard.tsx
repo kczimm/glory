@@ -1,14 +1,22 @@
-import { getPassageText, verseSlug } from "@/data";
+import { getPassageText } from "@/data/server";
+import { verseSlug, getConnections } from "@/data";
 import Link from "next/link";
-import VerseConnections from "./VerseConnections";
+import VerseConnections, { type ConnectionRowData } from "./VerseConnections";
 
 /**
  * A scripture callout: the reference, the exact text (WEB), and any
- * cross-reference connections from the knowledge graph.
+ * cross-reference connections from the knowledge graph. Verse text and
+ * connection rows are resolved here on the server.
  */
 export default function VerseCard({ verse }: { verse: string }) {
   const text = getPassageText(verse);
   if (!text) return null;
+  const rows: ConnectionRowData[] = getConnections(verse).map((edge) => ({
+    target: edge.target,
+    kind: edge.kind,
+    note: edge.note,
+    text: getPassageText(edge.target),
+  }));
   return (
     <figure className="border-l-2 border-gold/60 bg-cream/50 py-3 pl-4 pr-5">
       <blockquote className="font-display text-[17px] italic leading-relaxed text-ink">
@@ -31,7 +39,7 @@ export default function VerseCard({ verse }: { verse: string }) {
           </Link>
         </span>
       </figcaption>
-      <VerseConnections verse={verse} />
+      <VerseConnections verse={verse} rows={rows} />
     </figure>
   );
 }

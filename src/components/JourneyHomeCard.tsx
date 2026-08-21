@@ -2,21 +2,19 @@
 
 import { useSyncExternalStore } from "react";
 import Link from "next/link";
-import { getQuestion } from "@/data";
 import { subscribe, getSnapshot, getServerSnapshot } from "@/lib/journey";
 
 /**
  * "Continue your journey": appears on the home page when the reader has
- * been walking a trail. Picks up where they left off.
+ * been walking a trail. Picks up where they left off. Question titles are
+ * passed in from the server (a slug -> title map) so this component never
+ * imports the study corpus.
  */
-export default function JourneyHomeCard() {
+export default function JourneyHomeCard({ titles }: { titles: Record<string, string> }) {
   const entries = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const stops = entries
-    .map((e) => {
-      const q = getQuestion(e.slug);
-      return q ? { slug: q.slug, question: q.question } : null;
-    })
+    .map((e) => (titles[e.slug] ? { slug: e.slug, question: titles[e.slug] } : null))
     .filter((x): x is NonNullable<typeof x> => x !== null)
     .slice(-4);
 

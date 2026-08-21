@@ -1,23 +1,14 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
-import type { Question } from "@/data/types";
+import type { SpeechItem } from "@/lib/speech";
 import {
-  getChapterFocus,
-  getPassageText,
-  getQuestion,
-  voiceMenu,
-} from "@/data";
-import {
-  chapterItems,
   playPassage,
   registerContinuation,
   stop,
-  studyItems,
 } from "@/lib/speech";
 import { listenForReply, replySupported } from "@/lib/reply";
-import type { SpeechItem } from "@/lib/speech";
 
 /**
  * Forward chaining for the question page: whichever entry point the listener
@@ -25,6 +16,9 @@ import type { SpeechItem } from "@/lib/speech";
  * Each passage's queue registers a continuation into the next passage, and
  * the last passage continues into the study, which closes the visit with an
  * outro + a hands-free "keep going" menu.
+ *
+ * Every queue is prebuilt on the server (it needs verse text) and arrives as
+ * serializable props: this component only wires the playback graph together.
  *
  * On browsers with speech recognition (Chrome/Android), the study's own
  * continuation is not a fixed next queue but the reply listener: when the
@@ -40,46 +34,51 @@ import type { SpeechItem } from "@/lib/speech";
  * unregisters every link and cancels any in-flight reply listen.
  */
 
-interface Segment {
+export interface ChainQueue {
   sourceId: string;
-  build: () => SpeechItem[];
+  items: SpeechItem[];
+  /**
+   * The optional hands-free "keep going" chunk, appended by the client only
+   * when speech recognition is available.
+   */
+  menuChunk: SpeechItem | null;
 }
 
-/** The study queue shared by direct-tap and chained entry points. */
-function buildStudy(question: Question, menu: string[]): SpeechItem[] {
-  return studyItems(question, getPassageText, {
-    cue: "And now, the study.",
-    outroTargetId: "raises",
-    resolveTitle: (slug) => getQuestion(slug)?.question ?? null,
-    menu,
-  });
+export interface ChainOption {
+  slug: string;
+  /** the spoken label for the hands-free menu ("say one for …") */
+  label: string;
+  /** prebuilt queue for the option's first chapter, if it has passages */
+  firstChapter: ChainQueue | null;
+  /** prebuilt study queue (with its own hands-free menu chunk) */
+  study: ChainQueue | null;
 }
 
-export default function VisitChain({ question }: { question: Question }) {
+export default function VisitChain({
+  slug,
+  segments,
+  options,
+}: {
+  slug: string;
+  /** chapter queues followed by the study queue, in play order */
+  segments: ChainQueue[];
+  options: ChainOption[];
+}) {
   const router = useRouter();
   const handsfree = replySupported();
-  const options = useMemo<Question[]>(() => voiceMenu(question), [question]);
-  const menu = useMemo(
-    () => (handsfree ? options.map((q) => q.question) : []),
-    [handsfree, options]
+
+  // Append each queue's hands-free "keep going" chunk only when speech
+  // recognition exists; browsers without it end gracefully after the outro.
+  const withMenu = useCallback(
+    (q: ChainQueue): SpeechItem[] =>
+      handsfree && q.menuChunk ? [...q.items, q.menuChunk] : q.items,
+    [handsfree]
   );
 
-  const segments = useMemo<Segment[]>(() => {
-    const segs: Segment[] = question.passages.map((p) => ({
-      sourceId: `chapter:${p.book} ${p.chapter}`,
-      build: () =>
-        chapterItems(
-          p.book,
-          p.chapter,
-          getChapterFocus(p.book, p.chapter, p.focus) ?? []
-        ),
-    }));
-    segs.push({
-      sourceId: `study:${question.slug}`,
-      build: () => buildStudy(question, menu),
-    });
-    return segs;
-  }, [question, menu]);
+  const effectiveSegments = useMemo<ChainQueue[]>(
+    () => segments.map((s) => ({ ...s, items: withMenu(s) })),
+    [segments, withMenu]
+  );
 
   useEffect(() => {
     const unsub: Array<() => void> = [];
@@ -87,11 +86,12 @@ export default function VisitChain({ question }: { question: Question }) {
     let cancelReply: (() => void) | null = null;
 
     // Chapter -> next chapter -> study progression.
-    for (let i = 0; i < segments.length - 1; i++) {
-      const next = segments[i + 1];
+    const segs = effectiveSegments;
+    for (let i = 0; i < segs.length - 1; i++) {
+      const next = segs[i + 1];
       unsub.push(
-        registerContinuation(segments[i].sourceId, () =>
-          playPassage(next.sourceId, next.build())
+        registerContinuation(segs[i].sourceId, () =>
+          playPassage(next.sourceId, next.items)
         )
       );
     }
@@ -100,7 +100,7 @@ export default function VisitChain({ question }: { question: Question }) {
     // there is at least one next question to offer).
     if (handsfree && options.length > 0) {
       unsub.push(
-        registerContinuation(`study:${question.slug}`, () => {
+        registerContinuation(`study:${slug}`, () => {
           if (disposed) return;
           cancelReply = listenForReply({
             count: options.length,
@@ -120,22 +120,8 @@ export default function VisitChain({ question }: { question: Question }) {
               // start its first queue. From here the new visit chains forward
               // under the destination page's own VisitChain.
               router.push(`/questions/${next.slug}`);
-              const first = next.passages[0];
-              if (first) {
-                playPassage(
-                  `chapter:${first.book} ${first.chapter}`,
-                  chapterItems(
-                    first.book,
-                    first.chapter,
-                    getChapterFocus(first.book, first.chapter, first.focus) ?? []
-                  )
-                );
-              } else {
-                playPassage(
-                  `study:${next.slug}`,
-                  buildStudy(next, voiceMenu(next).map((q) => q.question))
-                );
-              }
+              const queue = next.firstChapter ?? next.study;
+              if (queue) playPassage(queue.sourceId, withMenu(queue));
             },
           });
         })
@@ -147,7 +133,7 @@ export default function VisitChain({ question }: { question: Question }) {
       cancelReply?.();
       unsub.forEach((u) => u());
     };
-  }, [segments, options, handsfree, router, question]);
+  }, [effectiveSegments, options, handsfree, router, slug, withMenu]);
 
   return null;
 }

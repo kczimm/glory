@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import QuestionsIndex from "@/components/QuestionsIndex";
+import { categories } from "@/data";
+import { teasers, questionsByCategory } from "@/data/server";
 
 export const metadata: Metadata = {
   title: "All Questions",
@@ -8,5 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default function QuestionsIndexPage() {
-  return <QuestionsIndex />;
+  const counts = Object.fromEntries(
+    categories.map((c) => [c.slug, questionsByCategory(c.slug).length])
+  );
+  return <QuestionsIndex categories={categories} teasers={teasers()} counts={counts} />;
 }
