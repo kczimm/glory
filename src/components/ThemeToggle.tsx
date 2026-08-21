@@ -4,7 +4,38 @@ import { useSyncExternalStore } from "react";
 
 const listeners = new Set<() => void>();
 
+function notify() {
+  listeners.forEach((l) => l());
+}
+
+// Keep the toggle in sync with other tabs and with OS theme changes
+// (only when the user has not picked a theme explicitly).
+let wired = false;
+
+function wireExternalSync() {
+  if (wired || typeof window === "undefined") return;
+  wired = true;
+  try {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    media.addEventListener("change", (e) => {
+      try {
+        if (!localStorage.getItem("glory:theme")) {
+          apply(e.matches ? "dark" : "light");
+          notify();
+        }
+      } catch {}
+    });
+  } catch {}
+  window.addEventListener("storage", (e) => {
+    if (e.key === "glory:theme") {
+      apply(e.newValue === "dark" ? "dark" : "light");
+      notify();
+    }
+  });
+}
+
 function subscribe(listener: () => void) {
+  wireExternalSync();
   listeners.add(listener);
   return () => listeners.delete(listener);
 }
@@ -17,6 +48,8 @@ function getServerSnapshot(): "light" | "dark" {
   return "light";
 }
 
+// Keep in sync with the no-flash script in src/app/layout.tsx:
+// light is the absence of data-theme, dark sets it to "dark".
 function apply(theme: "light" | "dark") {
   if (theme === "dark") {
     document.documentElement.dataset.theme = "dark";
@@ -43,7 +76,7 @@ export default function ThemeToggle() {
       onClick={toggle}
       aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
       title={theme === "dark" ? "Light mode" : "Dark mode"}
-      className="text-ink-soft transition-colors hover:text-gold"
+      className="p-1.5 text-ink-soft transition-colors hover:text-gold"
     >
       {theme === "dark" ? (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>

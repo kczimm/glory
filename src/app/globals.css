@@ -69,7 +69,8 @@ body {
 
 ::selection {
   background: var(--color-gold-soft);
-  color: var(--color-parchment);
+  /* dark gold-soft is muted; use ink for AA contrast in both themes */
+  color: var(--color-ink);
 }
 
 /* subtle scrollbar for the chapter reader */
