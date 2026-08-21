@@ -25,10 +25,10 @@ export default function Nav() {
             a study of the Word
           </span>
         </Link>
-        <nav className="flex items-center gap-4 text-sm sm:gap-6">
+        <nav className="flex items-center gap-3 text-sm sm:gap-6">
           <Link
             href="/verses"
-            className="text-ink-soft transition-colors hover:text-gold"
+            className="hidden text-ink-soft transition-colors hover:text-gold sm:inline"
           >
             Verses
           </Link>
