@@ -33,6 +33,12 @@ export default function Nav() {
             Verses
           </Link>
           <Link
+            href="/connections/john-3.16"
+            className="text-ink-soft transition-colors hover:text-gold"
+          >
+            Connections
+          </Link>
+          <Link
             href="/search"
             className="text-ink-soft transition-colors hover:text-gold"
           >
