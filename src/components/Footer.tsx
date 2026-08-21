@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line bg-cream/60">
+    <footer className="border-t border-line bg-cream/60 print:hidden">
       <div className="mx-auto flex max-w-5xl flex-col gap-2 px-5 py-10 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
         <p className="font-display text-lg text-ink">
           Glory <span className="text-gold">✦</span>

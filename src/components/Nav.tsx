@@ -3,7 +3,7 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Nav() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-parchment/90 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 border-b border-line bg-parchment/90 backdrop-blur-sm print:hidden">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-3 px-4 sm:h-16 sm:px-5">
         <Link href="/" className="flex shrink-0 items-baseline gap-2">
           <svg

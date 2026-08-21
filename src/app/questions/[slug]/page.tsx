@@ -73,7 +73,28 @@ export default async function QuestionPage({ params }: Props) {
             <span className="font-medium text-ink-soft">
               Trail: {category?.title}
             </span>
-            <span className="ml-auto">
+            <span className="ml-auto flex items-center gap-2">
+              <Link
+                href={`/questions/${question.slug}/print`}
+                className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9V3h12v6" />
+                  <rect x="4" y="9" width="16" height="8" rx="1" />
+                  <path d="M8 14h8v7H8z" />
+                </svg>
+                Print
+              </Link>
               <ShareButton
                 url={`${SITE_URL}/questions/${question.slug}`}
                 title={question.question}
