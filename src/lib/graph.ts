@@ -14,8 +14,14 @@ export interface GraphEdge {
   note: string;
 }
 
+// Adjacency memoized once at module load: the connections data is static,
+// and the explorer calls edgesOf in hot loops (per frame, per node).
+const edgeCache = new Map<string, GraphEdge[]>();
+
 /** All edges touching a verse, either direction. */
 export function edgesOf(ref: string): GraphEdge[] {
+  const cached = edgeCache.get(ref);
+  if (cached) return cached;
   const out: GraphEdge[] = [];
   for (const e of getConnections(ref)) {
     out.push({ source: ref, target: e.target, kind: e.kind, note: e.note });
@@ -25,6 +31,7 @@ export function edgesOf(ref: string): GraphEdge[] {
       if (e.target === ref) out.push({ source: from, target: ref, kind: e.kind, note: e.note });
     }
   }
+  edgeCache.set(ref, out);
   return out;
 }
 

@@ -246,8 +246,32 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
               </span>
             </button>
           ))}
+          <button
+            type="button"
+            onClick={() => {
+              nodesMap.clear();
+              nodesMap.set(startRef, {
+                ref: startRef,
+                x: W / 2,
+                y: H / 2,
+                vx: 0,
+                vy: 0,
+                degree: edgesOf(startRef).length,
+              });
+              setSelected(startRef);
+              heat(1);
+            }}
+            className="ml-auto text-[12px] font-medium text-ink-faint transition-colors hover:text-gold-deep"
+          >
+            Reset map
+          </button>
         </div>
-        <svg viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full select-none">
+        <div className="overflow-x-auto">
+          <svg
+            viewBox={`0 0 ${W} ${H}`}
+            className="block h-auto select-none"
+            style={{ minWidth: 640, width: "100%", maxWidth: "none" }}
+          >
           {/* edges */}
           {edges.map((e) => {
             const a = nodesMap.get(e.source)!;
@@ -274,13 +298,14 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
                 key={n.ref}
                 transform={`translate(${n.x},${n.y})`}
                 onClick={() => expand(n.ref)}
-                className="cursor-pointer"
+                className="cursor-pointer group/node"
               >
                 <circle
                   r={r + 4}
                   fill="transparent"
                   stroke={isSel ? "var(--color-gold)" : "transparent"}
                   strokeWidth="2"
+                  className="transition-all group-hover/node:stroke-gold"
                 />
                 <circle
                   r={r}
@@ -294,7 +319,7 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
                 <text
                   y={r + 13}
                   textAnchor="middle"
-                  fontSize="11.5"
+                  fontSize="12.5"
                   fill={isSel ? "var(--color-gold-deep)" : "var(--color-ink-soft)"}
                   fontWeight={isSel ? 600 : 400}
                 >
@@ -303,7 +328,8 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
               </g>
             );
           })}
-        </svg>
+          </svg>
+        </div>
         <p className="border-t border-line px-4 py-3 text-[12.5px] text-ink-faint">
           Click any verse to expand its connections and open it in the panel.
           Larger circles hold more connections.
