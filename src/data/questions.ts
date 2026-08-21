@@ -1194,10 +1194,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Daniel 7:13-14", "Mark 2:10", "Mark 10:45", "Hebrews 2:17"],
-    raises: ["is-the-son-of-man-title-judgment-or-mercy", "why-did-jesus-tell-people-not-to-reveal-who-he-was"],
+    raises: ["is-the-son-of-man-title-judgment-or-mercy", "why-did-jesus-tell-people-not-to-reveal-who-he-was", "what-does-the-title-christ-mean"],
     followsFrom: ["who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god"],
     related: ["what-does-it-mean-that-jesus-is-the-son-of-god"],
-    planned: ["What does the title 'Christ' mean?"],
+    planned: [],
     order: 16,
   },
 
@@ -13154,6 +13154,87 @@ export const questions: Question[] = [
     related: ["can-i-lose-my-salvation", "what-is-the-difference-between-assurance-and-presumption", "how-do-trials-make-us-more-like-christ", "faith-or-works"],
     planned: ["What should the church do for someone who has stopped following Christ?"],
     order: 60,
+  },
+
+  {
+    slug: "what-does-the-title-christ-mean",
+    question: "What does the title 'Christ' mean?",
+    category: "jesus-christ",
+    summary:
+      "'Christ' is not Jesus' last name: it is His title, the Greek word for Messiah, the Anointed One. Prophets, priests, and kings were anointed for their office; Jesus is the One anointed with the Spirit beyond measure to be Prophet, Priest, and King forever, and the resurrection is God's public declaration of it.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 2,
+        title: "The LORD's Anointed on Zion",
+        lookFor: "The nations rage against 'the LORD's Anointed,' yet God installs His King on the holy hill.",
+      },
+      {
+        book: "Luke",
+        chapter: 4,
+        title: "Today this Scripture has been fulfilled",
+        lookFor: "Jesus reads Isaiah's words about the One anointed by the Spirit, then says they are fulfilled in their hearing.",
+        focus: "16-30",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "God has made him both Lord and Christ",
+        lookFor: "Peter's Pentecost sermon: the resurrection is how God publicly declared Jesus to be the Christ.",
+        focus: "22-41",
+      },
+      {
+        book: "John",
+        chapter: 20,
+        title: "That you may believe he is the Christ",
+        lookFor: "John tells you exactly why he wrote: that believing Jesus is the Christ, you may have life in His name.",
+        focus: "24-31",
+      },
+    ],
+    points: [
+      {
+        heading: "Christ is a title, not a surname",
+        body:
+          "'Christ' (Greek christos) translates the Hebrew word for Messiah: 'anointed one.' In Israel, anointing with oil marked someone out for office: Saul and David were anointed king, Aaron and his sons were anointed priest, Elisha was anointed prophet. To call Jesus the Christ is to say He is the Anointed One, set apart and empowered by God's Spirit for His saving office.",
+        verses: ["1 Samuel 16:13", "Exodus 29:7", "1 Kings 19:16"],
+      },
+      {
+        heading: "The Old Testament promised one final Anointed King",
+        body:
+          "The psalmist pictures the nations raging 'against the LORD, and against his Anointed,' while God answers: 'I have installed my king on my holy hill of Zion.' Daniel was told the Messiah, the Anointed One, would come at an appointed time. By the first century, Israel was waiting expectantly for this promised deliverer.",
+        verses: ["Psalm 2:2", "Psalm 2:6", "Daniel 9:25-26", "Luke 3:15"],
+      },
+      {
+        heading: "Jesus claimed the anointing for Himself",
+        body:
+          "In Nazareth Jesus read Isaiah's prophecy of the Spirit-anointed servant: 'The Lord has anointed me to preach good news to the poor,' and then said, 'Today, this Scripture has been fulfilled in your hearing.' To the Samaritan woman, who spoke of the Messiah to come, He answered plainly: 'I who speak to you am he.'",
+        verses: ["Luke 4:18-21", "Isaiah 61:1", "John 4:25-26"],
+      },
+      {
+        heading: "Anointed as Prophet, Priest, and King",
+        body:
+          "The three anointed offices of the Old Testament converge on Jesus. As Prophet He reveals God perfectly, greater than Moses. As Priest He offered not an animal but Himself, entering not an earthly sanctuary but heaven itself. As King He reigns now at God's right hand, and 'of the increase of his government and of peace there will be no end.' He is anointed not with oil but 'with the Holy Spirit and with power.'",
+        verses: ["Acts 3:22", "Hebrews 9:11-14", "Hebrews 7:25-26", "Isaiah 9:7", "Acts 10:38"],
+      },
+      {
+        heading: "The resurrection is God's declaration",
+        body:
+          "At Pentecost Peter preached that God raised Jesus up and exalted Him to His right hand, and concluded: 'Let all the house of Israel therefore know certainly that God has made him both Lord and Christ, this Jesus whom you crucified.' Paul says Jesus was 'declared to be the Son of God with power... by the resurrection from the dead.' The empty tomb is the public coronation announcement.",
+        verses: ["Acts 2:36", "Romans 1:4", "Acts 17:31"],
+      },
+      {
+        heading: "Believing He is the Christ brings life",
+        body:
+          "John wrote his Gospel 'that you may believe that Jesus is the Christ, the Son of God, and that believing you may have life in his name.' Peter confessed it at Caesarea Philippi: 'You are the Christ, the Son of the living God,' and John says everyone who believes that Jesus is the Christ is born of God. The title is not trivia: it is the confession on which life hangs.",
+        verses: ["John 20:31", "Matthew 16:16", "1 John 5:1"],
+      },
+    ],
+    keyVerses: ["Psalm 2:2", "Luke 4:18-21", "Acts 2:36", "John 20:31"],
+    raises: ["is-jesus-really-god", "will-jesus-return-literally", "what-does-it-mean-that-jesus-is-the-son-of-god"],
+    followsFrom: ["who-is-jesus", "why-did-jesus-call-himself-son-of-man"],
+    related: ["who-is-jesus", "why-is-jesus-both-son-of-god-and-son-of-man"],
+    planned: [],
+    order: 61,
   },
 
 ];
