@@ -51,7 +51,7 @@ export default function ShareButton({
       aria-label={`Share ${title}`}
       className={
         className ??
-        "inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
+        "inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
       }
     >
       <svg

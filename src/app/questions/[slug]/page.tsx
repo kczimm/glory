@@ -186,7 +186,7 @@ export default async function QuestionPage({ params }: Props) {
                   <Link
                     key={q.slug}
                     href={`/questions/${q.slug}`}
-                    className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-white/80 px-6 py-5 transition-all hover:border-gold/60 hover:bg-white hover:shadow-sm"
+                    className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-surface/80 px-6 py-5 transition-all hover:border-gold/60 hover:bg-surface hover:shadow-sm"
                   >
                     <span className="flex items-center gap-2 font-display text-lg font-medium text-ink transition-colors group-hover:text-gold-deep">
                       {q.question}
@@ -247,7 +247,7 @@ export default async function QuestionPage({ params }: Props) {
                 <Link
                   key={q.slug}
                   href={`/questions/${q.slug}`}
-                  className="rounded-full border border-line bg-white px-5 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
+                  className="rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
                 >
                   {q.question}
                 </Link>
@@ -262,7 +262,7 @@ export default async function QuestionPage({ params }: Props) {
             {prev ? (
               <Link
                 href={`/questions/${prev.slug}`}
-                className="group rounded-2xl border border-line bg-white/50 p-5 transition-colors hover:bg-white"
+                className="group rounded-2xl border border-line bg-surface/50 p-5 transition-colors hover:bg-surface"
               >
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-faint">
                   ← Earlier in this trail
@@ -277,7 +277,7 @@ export default async function QuestionPage({ params }: Props) {
             {next ? (
               <Link
                 href={`/questions/${next.slug}`}
-                className="group rounded-2xl border border-line bg-white/50 p-5 text-right transition-colors hover:bg-white"
+                className="group rounded-2xl border border-line bg-surface/50 p-5 text-right transition-colors hover:bg-surface"
               >
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-faint">
                   Next in this trail →

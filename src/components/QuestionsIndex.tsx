@@ -83,7 +83,7 @@ export default function QuestionsIndex() {
 
       {/* Filter + category jump */}
       <div className="sticky top-14 z-30 -mx-5 border-b border-line/60 bg-parchment/95 px-5 py-3 backdrop-blur-sm sm:top-16">
-        <div className="flex items-center gap-3 rounded-xl border border-line bg-white px-4 py-2.5 focus-within:border-gold/60">
+        <div className="flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-2.5 focus-within:border-gold/60">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink-faint)" strokeWidth="2" className="shrink-0">
             <circle cx="11" cy="11" r="7" />
             <path d="m20 20-3.5-3.5" strokeLinecap="round" />
@@ -167,7 +167,7 @@ export default function QuestionsIndex() {
                     </h2>
                     <p className="text-[13.5px] text-ink-soft">{c.tagline}</p>
                   </div>
-                  <span className="ml-auto inline-flex shrink-0 items-center rounded-full border border-line bg-white px-3 py-1 text-[12px] font-semibold text-ink-faint">
+                  <span className="ml-auto inline-flex shrink-0 items-center rounded-full border border-line bg-surface px-3 py-1 text-[12px] font-semibold text-ink-faint">
                     {qs.length} {qs.length === 1 ? "question" : "questions"}
                   </span>
                 </div>
@@ -206,7 +206,7 @@ function Chip({
       className={`shrink-0 whitespace-nowrap rounded-full border px-3.5 py-1.5 text-[12.5px] font-medium transition-colors ${
         active
           ? "border-gold bg-gold-wash text-gold-deep"
-          : "border-line bg-white text-ink-soft hover:border-gold/40 hover:text-gold-deep"
+          : "border-line bg-surface text-ink-soft hover:border-gold/40 hover:text-gold-deep"
       }`}
     >
       {children}

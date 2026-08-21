@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-@theme {
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
-
-  /* parchment & ink: a contemplative study palette */
+/* parchment & ink: a contemplative study palette.
+   Values live on :root/[data-theme] so dark mode is a variable swap;
+   @theme inline points the Tailwind utilities at the live variables. */
+:root {
   --color-parchment: #fbf7ee;
   --color-cream: #f4ecdc;
   --color-cream-deep: #eadfc8;
+  --color-surface: #ffffff;
   --color-ink: #26241d;
   --color-ink-soft: #625e51;
   /* ~5:1 on parchment and 4.5:1 on cream: AA for small text */
@@ -17,6 +17,40 @@
   --color-gold-soft: #cdb77e;
   --color-gold-wash: #f3e9d2;
   --color-line: #e6ddc9;
+}
+
+[data-theme="dark"] {
+  --color-parchment: #1b1913;
+  --color-cream: #242118;
+  --color-cream-deep: #332d1f;
+  --color-surface: #262218;
+  --color-ink: #ece4cf;
+  --color-ink-soft: #b5ac93;
+  --color-ink-faint: #a29878;
+  --color-gold: #d0a94f;
+  /* "deep" is the emphasis color: lighter in dark mode for contrast */
+  --color-gold-deep: #e3c274;
+  --color-gold-soft: #8a6f33;
+  --color-gold-wash: #2e2817;
+  --color-line: #3a3425;
+}
+
+@theme inline {
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-parchment: var(--color-parchment);
+  --color-cream: var(--color-cream);
+  --color-cream-deep: var(--color-cream-deep);
+  --color-surface: var(--color-surface);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-ink-faint: var(--color-ink-faint);
+  --color-gold: var(--color-gold);
+  --color-gold-deep: var(--color-gold-deep);
+  --color-gold-soft: var(--color-gold-soft);
+  --color-gold-wash: var(--color-gold-wash);
+  --color-line: var(--color-line);
 }
 
 html {
@@ -35,7 +69,7 @@ body {
 
 ::selection {
   background: var(--color-gold-soft);
-  color: var(--color-ink);
+  color: var(--color-parchment);
 }
 
 /* subtle scrollbar for the chapter reader */

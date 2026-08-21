@@ -71,7 +71,7 @@ export default function ListenButton({
         playPassage(sourceId, items);
         onStart?.();
       }}
-      className="flex shrink-0 items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1.5 text-xs font-semibold text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
+      className="flex shrink-0 items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
     >
       <PlayIcon size={11} />
       {label}

@@ -61,7 +61,7 @@ export default function VersesIndex() {
                 <Link
                   key={ref}
                   href={`/verses/${verseSlug(ref)}`}
-                  className="rounded-full border border-line bg-white/60 px-3 py-1 text-[13px] text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
+                  className="rounded-full border border-line bg-surface/60 px-3 py-1 text-[13px] text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
                 >
                   {ref}
                   {degreeCache.get(ref)! > 0 && (

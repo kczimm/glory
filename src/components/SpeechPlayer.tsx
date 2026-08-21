@@ -112,7 +112,7 @@ export default function SpeechPlayer() {
               <select
                 value={speech.voiceURI ?? ""}
                 onChange={(e) => setVoice(e.target.value)}
-                className="min-w-0 flex-1 rounded-full border border-line bg-white px-3 py-1.5 text-[12px] text-ink-soft sm:max-w-xs"
+                className="min-w-0 flex-1 rounded-full border border-line bg-surface px-3 py-1.5 text-[12px] text-ink-soft sm:max-w-xs"
               >
                 {englishVoices.map((v) => (
                   <option key={v.uri} value={v.uri}>
@@ -126,7 +126,7 @@ export default function SpeechPlayer() {
             type="button"
             onClick={cycleRate}
             aria-label="Reading speed"
-            className="ml-auto shrink-0 rounded-full border border-line bg-white px-2.5 py-1 text-[11px] font-semibold text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
+            className="ml-auto shrink-0 rounded-full border border-line bg-surface px-2.5 py-1 text-[11px] font-semibold text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
           >
             {rateLabel}
           </button>

@@ -78,7 +78,7 @@ export default function ChapterReader({ passage }: { passage: Passage }) {
     : -1;
 
   return (
-    <div className="rounded-xl border border-line bg-white/50">
+    <div className="rounded-xl border border-line bg-surface/50">
       <div className="flex items-center gap-2 px-4 py-4 sm:px-5">
         <button
           type="button"

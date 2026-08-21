@@ -28,7 +28,7 @@ function SearchView() {
         (John 5:39).
       </p>
 
-      <div className="mt-7 flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 focus-within:border-gold/60">
+      <div className="mt-7 flex items-center gap-3 rounded-2xl border border-line bg-surface px-5 py-4 focus-within:border-gold/60">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink-faint)" strokeWidth="2" className="shrink-0">
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-3.5-3.5" strokeLinecap="round" />
@@ -70,7 +70,7 @@ function SearchView() {
                 <Link
                   key={question.slug}
                   href={`/questions/${question.slug}`}
-                  className="group flex items-center gap-3 rounded-xl border border-line bg-white/60 px-4 py-3 transition-colors hover:border-gold/50 hover:bg-white"
+                  className="group flex items-center gap-3 rounded-xl border border-line bg-surface/60 px-4 py-3 transition-colors hover:border-gold/50 hover:bg-surface"
                 >
                   <span className="font-display text-[15px] font-medium text-ink group-hover:text-gold-deep">
                     {question.question}
@@ -114,7 +114,7 @@ function ScalableVerseRow({ verse, text, term }: { verse: string; text: string; 
   return (
     <Link
       href={`/verses/${verseSlug(verse)}`}
-      className="block rounded-xl border border-line bg-white/60 px-4 py-3 transition-colors hover:border-gold/50 hover:bg-white"
+      className="block rounded-xl border border-line bg-surface/60 px-4 py-3 transition-colors hover:border-gold/50 hover:bg-surface"
     >
       <div className="flex items-baseline gap-2">
         <span className="shrink-0 rounded-full bg-gold-wash px-2.5 py-0.5 text-[12px] font-semibold text-gold-deep">

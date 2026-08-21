@@ -45,7 +45,7 @@ export default function JourneyBreadcrumb({ slug }: { slug: string }) {
             ) : (
               <Link
                 href={`/questions/${it.slug}`}
-                className="rounded-full border border-line bg-white px-3 py-1 text-[13px] text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
+                className="rounded-full border border-line bg-surface px-3 py-1 text-[13px] text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
               >
                 {it.question}
               </Link>

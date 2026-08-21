@@ -27,7 +27,7 @@ export default function SearchBox() {
 
   return (
     <div className="relative mx-auto w-full max-w-xl">
-      <div className="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-[0_2px_20px_-8px_rgba(125,95,33,0.3)] focus-within:border-gold/60">
+      <div className="flex items-center gap-3 rounded-2xl border border-line bg-surface px-5 py-4 shadow-[0_2px_20px_-8px_rgba(125,95,33,0.3)] focus-within:border-gold/60">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink-faint)" strokeWidth="2" className="shrink-0">
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-3.5-3.5" strokeLinecap="round" />
@@ -43,7 +43,7 @@ export default function SearchBox() {
       </div>
 
       {term && (
-        <div className="absolute inset-x-0 top-full z-30 mt-2 max-h-[70vh] overflow-y-auto rounded-2xl border border-line bg-white shadow-xl">
+        <div className="absolute inset-x-0 top-full z-30 mt-2 max-h-[70vh] overflow-y-auto rounded-2xl border border-line bg-surface shadow-xl">
           {empty && (
             <p className="px-5 py-4 text-sm text-ink-faint">
               No match for “{term}” yet. Try “grace”, “born again”, or “Who is

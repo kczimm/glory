@@ -67,7 +67,7 @@ export default function Home() {
           ].map((s) => (
             <div
               key={s.n}
-              className="rounded-2xl border border-line bg-white/50 p-6"
+              className="rounded-2xl border border-line bg-surface/50 p-6"
             >
               <span className="font-display text-2xl italic text-gold">
                 {s.n}.
@@ -128,7 +128,7 @@ export default function Home() {
                     <Link
                       key={q.slug}
                       href={`/questions/${q.slug}`}
-                      className="group flex items-center gap-3 rounded-xl border border-line bg-white px-4 py-3 transition-all hover:border-gold/50 hover:shadow-sm"
+                      className="group flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-3 transition-all hover:border-gold/50 hover:shadow-sm"
                     >
                       <span className="font-display text-[15.5px] font-medium leading-snug text-ink group-hover:text-gold-deep">
                         {q.question}

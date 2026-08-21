@@ -93,7 +93,7 @@ export default async function VersePage({ params }: Props) {
                 <Link
                   key={u.slug}
                   href={`/questions/${u.slug}`}
-                  className="group flex items-center gap-3 rounded-xl border border-line bg-white/60 px-4 py-3 transition-colors hover:border-gold/50 hover:bg-white"
+                  className="group flex items-center gap-3 rounded-xl border border-line bg-surface/60 px-4 py-3 transition-colors hover:border-gold/50 hover:bg-surface"
                 >
                   <span className="font-display text-[15px] font-medium text-ink group-hover:text-gold-deep">
                     {u.question}
@@ -159,7 +159,7 @@ function VerseConnectionRow({
 }) {
   const text = getPassageText(target);
   return (
-    <div className="rounded-xl border border-line bg-white/60 px-4 py-3">
+    <div className="rounded-xl border border-line bg-surface/60 px-4 py-3">
       <p className="flex items-baseline gap-2">
         <span className="shrink-0 rounded-full border border-gold/40 px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-gold-deep">
           {kindLabel}

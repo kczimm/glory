@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Nav() {
   return (
@@ -43,6 +44,7 @@ export default function Nav() {
           >
             Questions
           </Link>
+          <ThemeToggle />
           <Link
             href="/"
             className="hidden rounded-full border border-gold/40 px-4 py-1.5 text-[13px] font-medium text-gold-deep transition-colors hover:bg-gold-wash sm:inline-block"

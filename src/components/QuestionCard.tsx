@@ -12,7 +12,7 @@ export default function QuestionCard({ question }: { question: Question }) {
   return (
     <Link
       href={`/questions/${question.slug}`}
-      className="group flex flex-col gap-3 rounded-2xl border border-line bg-white/50 p-6 transition-all hover:-translate-y-0.5 hover:border-gold/50 hover:bg-white hover:shadow-[0_8px_30px_-12px_rgba(125,95,33,0.25)]"
+      className="group flex flex-col gap-3 rounded-2xl border border-line bg-surface/50 p-6 transition-all hover:-translate-y-0.5 hover:border-gold/50 hover:bg-surface hover:shadow-[0_8px_30px_-12px_rgba(125,95,33,0.25)]"
     >
       <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
         {category?.title}
