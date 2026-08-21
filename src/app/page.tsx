@@ -4,6 +4,7 @@ import SearchBox from "@/components/SearchBox";
 import QuestionCard from "@/components/QuestionCard";
 import VerseCard from "@/components/VerseCard";
 import JourneyHomeCard from "@/components/JourneyHomeCard";
+import DailyCard from "@/components/DailyCard";
 
 export default function Home() {
   return (
@@ -44,6 +45,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Today */}
+      <DailyCard />
 
       {/* How it works */}
       <section className="mx-auto max-w-5xl px-5 py-16">
