@@ -1,4 +1,5 @@
 import { translation, translationNote } from "@/data/scripture";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -8,9 +9,12 @@ export default function Footer() {
           Glory <span className="text-gold">✦</span>
         </p>
         <p className="max-w-md text-[13px] leading-relaxed text-ink-faint">
-          Scripture quotations are from the {translation} ({translationNote}).
-          Study with the Bereans in mind: “searching the Scriptures daily to
-          see whether these things were so” (Acts 17:11).
+          Scripture quotations are from the{" "}
+          <Link href="/about-translation" className="underline-offset-2 hover:underline">
+            {translation}
+          </Link>{" "}
+          ({translationNote}). Study with the Bereans in mind: “searching the
+          Scriptures daily to see whether these things were so” (Acts 17:11).
         </p>
       </div>
     </footer>

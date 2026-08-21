@@ -21,6 +21,15 @@ export default function VerseCard({ verse }: { verse: string }) {
         >
           {verse}
         </Link>
+        <span className="text-ink-faint">
+          {" · "}
+          <Link
+            href="/about-translation"
+            className="underline-offset-2 hover:underline"
+          >
+            WEB
+          </Link>
+        </span>
       </figcaption>
       <VerseConnections verse={verse} />
     </figure>
