@@ -447,9 +447,9 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 1:1", "John 8:58", "Colossians 2:9", "Hebrews 1:3", "John 20:28"],
-    raises: ["why-did-jesus-have-to-die", "what-is-the-trinity", "does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man"],
+    raises: ["why-did-jesus-have-to-die", "what-is-the-trinity", "does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man", "what-does-firstborn-mean"],
     followsFrom: ["who-is-jesus"],
-    related: ["is-the-holy-spirit-god"],
+    related: ["is-the-holy-spirit-god", "are-there-other-gods", "who-are-the-gods-of-psalm-82"],
     planned: ["How does Jesus' becoming man show us the Father's love?"],
     order: 6,
   },
@@ -3464,7 +3464,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 10:30", "John 14:9", "John 1:1", "Isaiah 44:6", "1 Corinthians 8:6"],
-    raises: ["what-does-it-mean-that-god-is-one"],
+    raises: ["what-does-it-mean-that-god-is-one", "are-there-other-gods"],
     followsFrom: ["is-jesus-really-god", "what-is-the-trinity", "can-we-understand-the-trinity"],
     related: ["is-jesus-really-god", "what-is-the-trinity", "is-the-holy-spirit-god"],
     planned: [],
@@ -10936,9 +10936,9 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Deuteronomy 6:4", "Mark 12:29", "1 Corinthians 8:6", "Isaiah 44:6", "Matthew 28:19"],
-    raises: ["how-do-the-persons-of-the-trinity-relate", "can-we-understand-the-trinity", "is-jesus-really-god"],
+    raises: ["how-do-the-persons-of-the-trinity-relate", "can-we-understand-the-trinity", "is-jesus-really-god", "are-there-other-gods"],
     followsFrom: ["does-jesus-sharing-gods-nature-mean-two-gods", "what-is-the-trinity"],
-    related: ["does-jesus-sharing-gods-nature-mean-two-gods", "what-is-the-trinity", "how-do-the-persons-of-the-trinity-relate", "can-we-understand-the-trinity"],
+    related: ["does-jesus-sharing-gods-nature-mean-two-gods", "what-is-the-trinity", "how-do-the-persons-of-the-trinity-relate", "can-we-understand-the-trinity", "are-there-other-gods"],
     planned: ["Why does the Bible so fiercely forbid idols and images of God?"],
     order: 35,
   },
@@ -13235,6 +13235,232 @@ export const questions: Question[] = [
     related: ["who-is-jesus", "why-is-jesus-both-son-of-god-and-son-of-man"],
     planned: [],
     order: 61,
+  },
+
+  {
+    slug: "are-there-other-gods",
+    question: "Does the Bible teach there are other gods?",
+    category: "jesus-christ",
+    summary:
+      "No. The Bible is frank that other beings are called elohim (gods) in Scripture, but it never presents any of them as rivals to Yahweh: they are creatures or representatives, never creators, never almighty, and never to be worshipped. Worship belongs to Yahweh alone, because there is no one else.",
+    passages: [
+      {
+        book: "Deuteronomy",
+        chapter: 4,
+        title: "There is no one else besides him",
+        lookFor: "Moses drives the lesson of Sinai home: Yahweh is God in heaven and on earth; there is no other.",
+        focus: "32-40",
+      },
+      {
+        book: "Isaiah",
+        chapter: 45,
+        title: "I am Yahweh, and there is no one else",
+        lookFor: "God speaks in the first person about His uniqueness, over and over, leaving no room for rivals.",
+        focus: "5-12",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 8,
+        title: "Many so-called gods, one God",
+        lookFor: "Paul names the 'gods' of the pagan world and still confesses one God and one Lord.",
+        focus: "4-13",
+      },
+      {
+        book: "Psalms",
+        chapter: 82,
+        title: "God judges among the gods",
+        lookFor: "A psalm where other 'gods' appear on stage, and God presides over them and sentences them.",
+      },
+    ],
+    points: [
+      {
+        heading: "God's own claim leaves no room for rivals",
+        body:
+          "The Bible's strongest statements come from God Himself: 'Yahweh himself is God in heaven above and on the earth beneath. There is no one else.' He says it through Isaiah again and again: 'I am Yahweh, and there is no one else. Besides me, there is no God,' and 'Is there a God besides me? Indeed, there is not. I don't know any other Rock.' Whatever else Scripture may call elohim, it insists none of them is God in this sense.",
+        verses: ["Deuteronomy 4:35", "Deuteronomy 4:39", "Isaiah 45:5", "Isaiah 44:6", "Isaiah 44:8"],
+      },
+      {
+        heading: "Elohim is a title of office, not only a name",
+        body:
+          "The Hebrew word elohim describes power and office as much as identity. God tells Moses, 'I have made you as God to Pharaoh': Moses bears divine authority without being divine. The same word appears for Israel's judges at the gates, who represented God's own judgment when theft cases came before them. Being called elohim means standing in God's seat of authority, not sharing God's nature.",
+        verses: ["Exodus 7:1", "Exodus 21:6", "Exodus 22:8"],
+      },
+      {
+        heading: "The 'gods' of Psalm 82 are judged, not worshipped",
+        body:
+          "'God presides in the great assembly. He judges among the gods.' However we read these figures, human rulers or spiritual powers, the psalm's plot line is decisive: they judge unjustly, God stands up in their midst, and He sentences them: 'you shall die like men.' They are creatures under judgment. No one worships them; no one prays to them; their end is death.",
+        verses: ["Psalms 82:1", "Psalms 82:2", "Psalms 82:6-7"],
+      },
+      {
+        heading: "So-called gods are nothing to fear and nothing to worship",
+        body:
+          "Paul, writing to a city full of cults, says there are 'many \"gods\" and many \"lords\"', and then immediately adds: 'no idol is anything in the world, and that there is no other God but one.' Jesus quotes the Shema's command with approval: worship the Lord your God, and serve Him only. The Bible can name the powers people worshipped precisely in order to strip them of worship.",
+        verses: ["1 Corinthians 8:4-6", "Matthew 4:10", "Deuteronomy 10:20"],
+      },
+      {
+        heading: "One Almighty, and His Son shares His nature",
+        body:
+          "The picture Scripture gives is not a committee of gods with one chairman. It is one Creator, without equal or competitor, who has revealed Himself as Father, Son, and Holy Spirit. That is why the New Testament can heap divine titles on Jesus without ever counting a second god: the Son creates all things and is worshipped by angels, because He is the one God's own Word made flesh.",
+        verses: ["Isaiah 46:9", "Hebrews 1:2", "John 1:1", "Colossians 2:9"],
+      },
+    ],
+    keyVerses: ["Deuteronomy 4:35", "Isaiah 45:5", "Psalms 82:1", "1 Corinthians 8:4-6", "Isaiah 44:8"],
+    raises: ["who-are-the-gods-of-psalm-82", "what-does-firstborn-mean"],
+    followsFrom: ["what-does-it-mean-that-god-is-one"],
+    related: ["does-jesus-sharing-gods-nature-mean-two-gods", "who-is-satan"],
+    planned: ["Why did Israel keep drifting into idolatry if there are no other gods?"],
+    order: 62,
+  },
+
+  {
+    slug: "who-are-the-gods-of-psalm-82",
+    question: "Who are the 'gods' (elohim) of Psalm 82?",
+    category: "jesus-christ",
+    summary:
+      "Psalm 82 shows God presiding over 'gods' who judge unjustly and are sentenced to die like men. Most readers have seen Israel's judges and rulers here, men who bore God's office and title; others see spiritual powers behind them. Either way the psalm's point stands: these elohim are under God's authority, and Jesus used exactly this psalm to prove He is far more than one of them.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 82,
+        title: "God stands up among the gods",
+        lookFor: "The whole drama in eight verses: an assembly, an indictment, a sentence, and a prayer that God Himself would judge the earth.",
+      },
+      {
+        book: "John",
+        chapter: 10,
+        title: "Jesus quotes Psalm 82",
+        lookFor: "When accused of blasphemy, Jesus cites 'I said, you are gods,' and turns it into proof of who He is.",
+        focus: "22-42",
+      },
+      {
+        book: "Exodus",
+        chapter: 22,
+        title: "Judges who stand in God's place",
+        lookFor: "Cases brought 'to God,' meaning to the judges, who carry His authority in ordinary disputes.",
+        focus: "5-15",
+      },
+      {
+        book: "Deuteronomy",
+        chapter: 17,
+        title: "The court of the priests and the judge",
+        lookFor: "Hard cases go to the place Yahweh chooses; the priestly court's ruling carries divine weight.",
+        focus: "8-13",
+      },
+    ],
+    points: [
+      {
+        heading: "The scene: God presides over an assembly",
+        body:
+          "'God presides in the great assembly. He judges among the gods.' The Hebrew word is elohim both for the presiding God and for those He judges. The psalm does not open with a rival throne but with one throne: Elohim stands, the elohim are arraigned before Him. From the first line, these 'gods' answer to Someone greater.",
+        verses: ["Psalms 82:1"],
+      },
+      {
+        heading: "Reading one: the judges and rulers of Israel",
+        body:
+          "Scripture applies elohim to humans who hold God's office. Moses is 'as God to Pharaoh'; theft cases are brought 'to God', that is, to the judge at the gate; hard cases go up to priests and the judge who act in God's name. On this reading the 'gods' are corrupt judges and rulers, and the sentence fits perfectly: 'you shall die like men.' They claimed godlike authority, yet they were only men.",
+        verses: ["Exodus 7:1", "Exodus 22:8", "Deuteronomy 17:8-13", "Psalms 82:7"],
+      },
+      {
+        heading: "Reading two: the powers behind the thrones",
+        body:
+          "Other passages suggest spiritual rulers stand behind human injustice, and some readers take Psalm 82's assembly to include them. Note that Deuteronomy 32:8 says God fixed the nations' boundaries 'according to the number of the children of Israel,' while some ancient manuscripts read 'according to the number of the sons of God.' Even if unseen powers are in view, nothing changes: they rebel, they fail the poor, and God sentences them to die. They are never objects of worship and never creators.",
+        verses: ["Deuteronomy 32:8", "Psalms 82:6-7", "Psalms 82:8"],
+      },
+      {
+        heading: "Jesus' argument: from lesser to greater",
+        body:
+          "When the leaders accused Jesus of blasphemy for calling Himself God's Son, He answered: 'Isn't it written in your law, I said, you are gods?' If Scripture can give the title gods to those who merely carried God's word, then it cannot be blasphemy for the one 'whom the Father sanctified and sent into the world' to be called God's Son. Notice what Jesus is doing: He accepts the psalm's premise that its gods are small, and steps forward as Someone in a different category entirely.",
+        verses: ["John 10:34-36", "John 10:33"],
+      },
+      {
+        heading: "And then Jesus claims what no elohim of Psalm 82 could",
+        body:
+          "Seconds after quoting Psalm 82, Jesus says, 'I and the Father are one,' and the crowd picks up stones: 'because you, being a man, make yourself God.' Psalm 82 ends with a prayer: 'Arise, God, judge the earth.' In John 10 the answer to that prayer walks into the temple courts. The Father is in the Son and the Son in the Father: this is not one more elohim among the judged, but the one God Himself come to judge.",
+        verses: ["John 10:30", "John 10:38", "John 10:33", "Psalms 82:8"],
+      },
+    ],
+    keyVerses: ["Psalms 82:1", "Psalms 82:6-7", "John 10:34-36", "John 10:30"],
+    raises: ["is-jesus-really-god", "what-does-firstborn-mean"],
+    followsFrom: ["are-there-other-gods"],
+    related: ["does-jesus-sharing-gods-nature-mean-two-gods", "why-jesus-calls-the-spirit-another-helper"],
+    planned: ["Who are the sons of God in Genesis 6?"],
+    order: 63,
+  },
+
+  {
+    slug: "what-does-firstborn-mean",
+    question: "If Jesus is the 'firstborn of all creation,' was He created?",
+    category: "jesus-christ",
+    summary:
+      "No. 'Firstborn' (Greek prototokos) is a title of rank and heirship, not a birth certificate. David was appointed firstborn over his older brothers, Israel and Ephraim are called God's firstborn, and Colossians itself says all things were created through Jesus and for Him. The firstborn of all creation is the One to whom creation belongs, not its earliest creature.",
+    passages: [
+      {
+        book: "Colossians",
+        chapter: 1,
+        title: "The firstborn of all creation",
+        lookFor: "Read the whole hymn carefully: what does Paul say the firstborn does, and what does he say creation's relationship to Him is?",
+        focus: "13-23",
+      },
+      {
+        book: "Psalms",
+        chapter: 89,
+        title: "David appointed firstborn",
+        lookFor: "God calls David His firstborn and highest king. Check David's place in his family, and notice what firstborn means here.",
+        focus: "19-37",
+      },
+      {
+        book: "Hebrews",
+        chapter: 1,
+        title: "The Son above every name",
+        lookFor: "The Son as heir of all things, the maker of the worlds, the firstborn brought into the world and worshipped by angels.",
+        focus: "1-14",
+      },
+      {
+        book: "Genesis",
+        chapter: 48,
+        title: "Ephraim placed before Manasseh",
+        lookFor: "Jacob crosses his hands and gives the younger son the firstborn blessing. Firstborn status moves; it is not a fact of biology.",
+        focus: "8-20",
+      },
+    ],
+    points: [
+      {
+        heading: "Firstborn is about rank and inheritance, not chronology",
+        body:
+          "In Scripture the firstborn is the heir, the one given preeminence, whatever his actual birth order. God says of David: 'I will also appoint him my firstborn, the highest of the kings of the earth.' But David was Jesse's youngest, left in the field with the sheep. When the Greek Old Testament calls David prototokos here, no one imagines it means he was born first. It means he was raised to the highest rank.",
+        verses: ["Psalms 89:27", "1 Samuel 16:11", "1 Chronicles 5:1"],
+      },
+      {
+        heading: "Nations and tribes are called firstborn too",
+        body:
+          "God tells Pharaoh, 'Israel is my son, my firstborn,' though Israel was hardly the oldest nation on earth. Through Jeremiah He says, 'Ephraim is my firstborn,' though Ephraim was Joseph's younger son. And Jacob deliberately transfers the firstborn blessing from Manasseh to Ephraim. The word simply cannot mean 'the first one born' wherever Scripture uses it, so it need not mean that in Colossians either.",
+        verses: ["Exodus 4:22", "Jeremiah 31:9", "Genesis 48:5", "Genesis 48:13-14"],
+      },
+      {
+        heading: "Paul's own context rules out a created Jesus",
+        body:
+          "Whatever prototokos means, Paul tells us himself in the next verse: 'by him all things were created... all things have been created through him, and for him,' and 'he is before all things, and in him all things are held together.' A creature cannot be the agent, goal, and sustainer of all creation including himself. If Jesus were part of creation, 'all things' would have to exclude Him, which is exactly what Paul refuses to do.",
+        verses: ["Colossians 1:16", "Colossians 1:17", "Colossians 1:15"],
+      },
+      {
+        heading: "Firstborn from the dead: the pattern of the title",
+        body:
+          "Two verses later Paul calls Jesus 'the beginning, the firstborn from the dead, that in all things he might have the preeminence.' There the meaning is unmistakable: not the first person ever to rise, but the One whose resurrection ranks above all others and opens the way for ours. The title consistently marks supremacy: 'firstborn among many brothers,' 'firstborn of the dead,' 'firstborn of all creation.'",
+        verses: ["Colossians 1:18", "Romans 8:29", "Revelation 1:5"],
+      },
+      {
+        heading: "God commands worship of the firstborn",
+        body:
+          "Hebrews applies Psalm 89's firstborn title to Jesus and draws the obvious conclusion: 'When he again brings in the firstborn into the world he says, Let all the angels of God worship him,' and then quotes the Father speaking to the Son: 'Your throne, O God, is forever and ever.' Scripture forbids worshipping any creature, even a glorious one, yet commands worship of the firstborn. Only one conclusion fits: the firstborn of all creation is God the Son, uncreated and eternal.",
+        verses: ["Hebrews 1:6", "Hebrews 1:8", "Matthew 4:10", "John 20:28"],
+      },
+    ],
+    keyVerses: ["Colossians 1:15-17", "Psalms 89:27", "Exodus 4:22", "Colossians 1:18", "Hebrews 1:6"],
+    raises: ["is-jesus-really-god", "how-can-one-person-be-fully-god-and-fully-man"],
+    followsFrom: ["are-there-other-gods", "who-are-the-gods-of-psalm-82"],
+    related: ["does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man", "what-is-the-trinity"],
+    planned: ["Why does Revelation call Jesus 'the beginning of God's creation'?"],
+    order: 64,
   },
 
 ];
