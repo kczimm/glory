@@ -46,9 +46,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Today */}
-      <DailyCard />
-
       {/* How it works */}
       <section className="mx-auto max-w-5xl px-5 py-16">
         <div className="grid gap-4 sm:grid-cols-3">
@@ -86,6 +83,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Today */}
+      <DailyCard />
 
       {/* Continue the journey */}
       <JourneyHomeCard />
