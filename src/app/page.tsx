@@ -69,10 +69,10 @@ export default function Home() {
               key={s.n}
               className="rounded-2xl border border-line bg-surface/50 p-6"
             >
-              <span className="font-display text-2xl italic text-gold">
-                {s.n}.
-              </span>
-            <h2 className="mt-1 font-display text-lg font-medium text-ink">
+              <h2 className="flex items-baseline gap-1.5 font-display text-lg font-medium text-ink">
+                <span className="font-display text-2xl italic text-gold">
+                  {s.n}.
+                </span>
                 {s.t}
               </h2>
               <p className="mt-2 text-[13.5px] leading-relaxed text-ink-soft sm:text-[14px]">
