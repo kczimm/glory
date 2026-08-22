@@ -27,6 +27,8 @@ npm run start        # production serve
 npm run start:lan    # production serve on LAN, port 3100
 npm run lint         # eslint
 node scripts/fetch-bible.mjs   # re-vendor the full WEB into src/data/scripture.ts
+npm run verify:bible           # re-fetch WEB and diff against the vendored copy (also checks refs)
+npm run verify:quotes          # verify every hand-written scripture quotation against the WEB (fails on misquote)
 node scripts/generate-icons.mjs  # regenerate brand icons (iOS home screen, PWA manifest, favicon)
 ```
 
@@ -102,6 +104,27 @@ network call. To refresh/repair it, run `node scripts/fetch-bible.mjs`
 - Lookups in `src/data/index.ts`: `getVerseText`, `getPassageText`, `getChapter`,
   `getChapterFocus`.
 - Book alias: `Psalm` → `Psalms` (handled in `canonicalBook`).
+
+### Quoting scripture (absolute rule)
+
+Any string presented inside quotation marks in `questions.ts` or
+`connections.ts` that is meant as scripture MUST match the WEB word-for-word.
+This is enforced mechanically:
+
+- `npm run verify:quotes` (`scripts/verify-quotes.mjs`) extracts every quoted
+  span from both files, splits it on ellipses, and requires each fragment to
+  appear verbatim in a single WEB verse or a run of consecutive verses. Spans
+  that nearly match but not exactly are reported with a word-level diff.
+- It runs as part of `npm run build`, so a misquote cannot ship.
+- Intentional non-scripture quoted phrases (our own rhetorical questions,
+  creed lines, labels, extraction artifacts) go in
+  `scripts/quote-allowlist.json`, keyed by the normalized span with a reason.
+  Keep that list small and honest; never allowlist an actual misquote.
+- When writing new content, do NOT quote from memory: paste from the vendored
+  WEB, then adjust capitalization at the edges if needed (normalization is
+  case-insensitive). If you must omit words mid-quote, use an ellipsis (…).
+- A few getbible.net upstream verses contain glued words ("Hadeswill",
+  "windblows"); quotes of those verses are allowlisted rather than altered.
 
 ### The journey record
 

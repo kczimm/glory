@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:lan": "next dev -H 0.0.0.0 -p 3100",
-    "build": "npm run audio:check && next build",
+    "build": "npm run verify:quotes && npm run audio:check && next build",
     "start": "next start",
     "start:lan": "next start -H 0.0.0.0 -p 3100",
     "lint": "eslint",
@@ -18,6 +18,8 @@
     "audio:check": "node scripts/audio-manifest.mjs --out /tmp/audio-manifest-check.json >/dev/null && node scripts/audio-check.mjs --manifest /tmp/audio-manifest-check.json",
     "audio:generate:qwen": ".venv/bin/python scripts/generate-audio-qwen.py",
     "test:search": "node --experimental-loader ./scripts/search-check-loader.mjs scripts/search-check.mjs",
+    "verify:bible": "node scripts/verify-bible.mjs",
+    "verify:quotes": "node scripts/verify-quotes.mjs",
     "test": "vitest run"
   },
   "dependencies": {

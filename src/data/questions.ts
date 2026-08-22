@@ -125,7 +125,7 @@ export const questions: Question[] = [
       {
         heading: "Scripture calls Him God directly",
         body:
-          "When Ananias lied about the price of the land, Peter said: 'You have lied to the Holy Spirit… you have not lied to men, but to God.' The equation is explicit and unmistakable: to deceive the Holy Spirit is to deceive God.",
+          "When Ananias lied about the price of the land, Peter said: 'Why has Satan filled your heart to lie to the Holy Spirit… You haven't lied to men, but to God.' The equation is explicit and unmistakable: to deceive the Holy Spirit is to deceive God.",
         verses: ["Acts 5:3-4"],
       },
       {
@@ -194,13 +194,13 @@ export const questions: Question[] = [
       {
         heading: "There is one God",
         body:
-          "Scripture is emphatic: 'Hear, Israel: Yahweh our God, Yahweh is one.' God declares, 'I am Yahweh, and there is no one else.' The Bible is fiercely monotheistic: there is one God, and nothing else is to be worshipped.",
+          "Scripture is emphatic: 'Hear, Israel: Yahweh is our God. Yahweh is one.' God declares, 'I am Yahweh, and there is no one else.' The Bible is fiercely monotheistic: there is one God, and nothing else is to be worshipped.",
         verses: ["Deuteronomy 6:4", "Isaiah 45:5", "Mark 12:29"],
       },
       {
         heading: "The Father, Son, and Spirit are each called God",
         body:
-          "The Father is God; the Son is called God: 'In the beginning was the Word, and the Word was God,' and Thomas confesses Jesus as 'My Lord and my God'; and the Spirit is God, as Peter made plain to Ananias. Three Persons, each fully divine.",
+          "The Father is God; the Son is called God: 'In the beginning was the Word, and the Word was with God, and the Word was God,' and Thomas confesses Jesus as 'My Lord and my God'; and the Spirit is God, as Peter made plain to Ananias. Three Persons, each fully divine.",
         verses: ["John 1:1", "John 20:28", "Acts 5:3-4", "Hebrews 1:8"],
       },
       {
@@ -241,7 +241,7 @@ export const questions: Question[] = [
         book: "Acts",
         chapter: 2,
         title: "Repent, be baptized, receive the gift",
-        lookFor: "Peter's answer to the crowd, and the promise that it is 'for you and your children.'",
+        lookFor: "Peter's answer to the crowd, and the promise that is 'to you, and to your children.'",
         focus: "37-41",
       },
       {
@@ -342,13 +342,13 @@ export const questions: Question[] = [
       {
         heading: "He is the Word made flesh",
         body:
-          "John begins where Genesis begins: 'In the beginning was the Word, and the Word was with God, and the Word was God… And the Word became flesh and dwelt among us.' The eternal Word, God Himself, took on humanity. We beheld His glory.",
+          "John begins where Genesis begins: 'In the beginning was the Word, and the Word was with God, and the Word was God… The Word became flesh, and lived among us.' The eternal Word, God Himself, took on humanity. We beheld His glory.",
         verses: ["John 1:1", "John 1:14"],
       },
       {
         heading: "He is the Messiah the Scriptures promised",
         body:
-          "The very first thing Andrew did was tell Peter, 'We have found the Messiah.' Philip said, 'We have found him of whom Moses and the prophets wrote.' The whole Old Testament, the Law, the Prophets, the Psalms, points to Him.",
+          "The very first thing Andrew did was tell Peter, 'We have found the Messiah.' Philip said, 'We have found him, of whom Moses in the law, and the prophets, wrote.' The whole Old Testament, the Law, the Prophets, the Psalms, points to Him.",
         verses: ["John 1:41", "John 1:45"],
       },
       {
@@ -388,7 +388,7 @@ export const questions: Question[] = [
       {
         book: "John",
         chapter: 8,
-        title: "\"Before Abraham was, I AM\"",
+        title: "\"Before Abraham came into existence, I AM\"",
         lookFor: "Jesus takes the covenant name of Exodus 3:14 as His own, and the crowd reaches for stones.",
         focus: "48-59",
       },
@@ -424,7 +424,7 @@ export const questions: Question[] = [
       {
         heading: "He claimed the divine name: 'I AM'",
         body:
-          "'Before Abraham was, I AM.' Not 'I was' but 'I AM,' the name God spoke from the burning bush in Exodus 3:14. The crowd understood perfectly; they picked up stones to kill Him for blasphemy. Jesus also said that unless you believe that He is, you will die in your sins.",
+          "'Before Abraham came into existence, I AM.' Not 'I was' but 'I AM,' the name God spoke from the burning bush in Exodus 3:14. The crowd understood perfectly; they picked up stones to kill Him for blasphemy. Jesus also said that unless you believe that He is, you will die in your sins.",
         verses: ["John 8:58", "John 8:24"],
       },
       {
@@ -442,7 +442,7 @@ export const questions: Question[] = [
       {
         heading: "The fullness of deity dwells in Him",
         body:
-          "Paul puts it beyond ambiguity: 'In him dwells all the fullness of the Godhead bodily.' And He is the radiance of God's glory and the exact imprint of God's nature. To see Jesus is to see God.",
+          "Paul puts it beyond ambiguity: 'In him all the fullness of the Godhead dwells bodily.' And He is the radiance of God's glory and the exact imprint of God's nature. To see Jesus is to see God.",
         verses: ["Colossians 2:9", "Hebrews 1:3", "John 14:9"],
       },
     ],
@@ -524,7 +524,7 @@ export const questions: Question[] = [
       {
         heading: "The result: God is just, and the justifier",
         body:
-          "On the cross, God set forth Christ as an atoning sacrifice: 'so that he might himself be righteous, and the righteousness of him who has faith in Jesus.' Justice is not suspended; it is satisfied. The penalty is paid, the righteousness is given, and the love is proven.",
+          "On the cross, God set forth Christ as an atoning sacrifice: 'that he might himself be just, and the justifier of him who has faith in Jesus.' Justice is not suspended; it is satisfied. The penalty is paid, the righteousness is given, and the love is proven.",
         verses: ["Romans 3:24-26", "Romans 5:9", "Hebrews 9:27-28"],
       },
     ],
@@ -576,13 +576,13 @@ export const questions: Question[] = [
       {
         heading: "It is a gift, not wages",
         body:
-          "By grace you have been saved through faith, and this is not of yourselves; it is the gift of God, not of works, so that no one can boast. Eternal life is 'the gift of God in Christ Jesus our Lord.' If it could be earned, it would be a wage; the gospel says it is a gift.",
+          "By grace you have been saved through faith, and this is not of yourselves; it is the gift of God, not of works, so that no one can boast. Eternal life is 'the free gift of God… eternal life in Christ Jesus our Lord.' If it could be earned, it would be a wage; the gospel says it is a gift.",
         verses: ["Ephesians 2:8-9", "Romans 6:23", "Titus 3:5"],
       },
       {
         heading: "It is through faith in Christ alone",
         body:
-          "Salvation is not found in a system or a church or a set of works; it is a Person. 'I am the way, the truth, and the life. No one comes to the Father except through me.' 'There is no other name under heaven given among men by which we must be saved.'",
+          "Salvation is not found in a system or a church or a set of works; it is a Person. 'I am the way, the truth, and the life. No one comes to the Father except through me.' 'Neither is there any other name under heaven… by which we must be saved.'",
         verses: ["John 14:6", "Acts 4:12", "1 Timothy 2:5"],
       },
       {
@@ -594,7 +594,7 @@ export const questions: Question[] = [
       {
         heading: "It begins with repentance: turning to God",
         body:
-          "The gospel call is to repent and believe. 'Repent therefore, and turn again, that your sins may be blotted out.' Repentance is not earning forgiveness; it is turning from sin to the Savior who forgives. Jesus began His preaching the same way: 'Repent, and believe in the gospel.'",
+          "The gospel call is to repent and believe. 'Repent therefore, and turn again, that your sins may be blotted out.' Repentance is not earning forgiveness; it is turning from sin to the Savior who forgives. Jesus began His preaching the same way: 'Repent, and believe in the Good News.'",
         verses: ["Acts 3:19", "Mark 1:15", "Acts 20:21"],
       },
       {
@@ -640,7 +640,7 @@ export const questions: Question[] = [
         book: "Acts",
         chapter: 2,
         title: "Peter's first sermon",
-        lookFor: "The resurrection is the proof: 'God raised him up, having freed him from the agony of death.'",
+        lookFor: "The resurrection is the proof: Jesus is the one 'God raised up, having freed him from the agony of death.'",
         focus: "22-36",
       },
       {
@@ -667,7 +667,7 @@ export const questions: Question[] = [
       {
         heading: "He appeared bodily, not as a ghost",
         body:
-          "Jesus insisted He was not a spirit: 'See my hands and my feet, that it is truly me. Touch me and see, for a spirit does not have flesh and bones, as you see that I have.' He even ate in their presence and invited Thomas to touch His wounds. The resurrection was a bodily, physical event.",
+          "Jesus insisted He was not a spirit: 'See my hands and my feet, that it is truly me. Touch me and see, for a spirit doesn't have flesh and bones, as you see that I have.' He even ate in their presence and invited Thomas to touch His wounds. The resurrection was a bodily, physical event.",
         verses: ["Luke 24:39-43", "John 20:27"],
       },
       {
@@ -747,7 +747,7 @@ export const questions: Question[] = [
       {
         heading: "Why it matters for salvation",
         body:
-          "Our life is in the Son: 'He who has the Son has life.' And because the Son is God, He is fully able to save. The Father's love is measured by this: He 'did not spare his own Son, but delivered him up for us all.' A lesser Christ could not bear a whole world's sin; the Son of God can.",
+          "Our life is in the Son: 'He who has the Son has the life.' And because the Son is God, He is fully able to save. The Father's love is measured by this: He who 'didn't spare his own Son, but delivered him up for us all.' A lesser Christ could not bear a whole world's sin; the Son of God can.",
         verses: ["1 John 5:11-12", "Romans 8:32", "John 3:16"],
       },
     ],
@@ -770,7 +770,7 @@ export const questions: Question[] = [
         book: "John",
         chapter: 3,
         title: "Nicodemus comes by night",
-        lookFor: "Jesus' great teaching: 'Unless one is born again, he cannot see the kingdom of God.'",
+        lookFor: "Jesus' great teaching: 'Unless one is born anew, he can't see the Kingdom of God.'",
         focus: "1-16",
       },
       {
@@ -805,7 +805,7 @@ export const questions: Question[] = [
       {
         heading: "It is God's work, not ours",
         body:
-          "We become children of God 'not of blood, nor of the will of the flesh, nor of the will of man, but of God.' It is God who saves us 'by his mercy, through the washing of regeneration and renewing of the Holy Spirit.' We cannot birth ourselves; we receive the birth He gives.",
+          "We become children of God 'not of blood, nor of the will of the flesh, nor of the will of man, but of God.' It is God who saves us according to his mercy, 'through the washing of regeneration and renewing by the Holy Spirit.' We cannot birth ourselves; we receive the birth He gives.",
         verses: ["John 1:12-13", "Titus 3:5", "Ephesians 2:8-9"],
       },
       {
@@ -817,7 +817,7 @@ export const questions: Question[] = [
       {
         heading: "It gives a living hope",
         body:
-          "We are 'born again to a living hope through the resurrection of Jesus Christ from the dead,' and 'born again, not of corruptible seed, but of incorruptible, through the living and abiding word of God.' The life you are born to can't die.",
+          "We are born again 'to a living hope through the resurrection of Jesus Christ from the dead,' and 'born again, not of corruptible seed, but of incorruptible, through the word of God, which lives and remains forever.' The life you are born to can't die.",
         verses: ["1 Peter 1:3", "1 Peter 1:23"],
       },
       {
@@ -868,7 +868,7 @@ export const questions: Question[] = [
       {
         heading: "The Shepherd holds His sheep",
         body:
-          "Jesus said His sheep hear His voice, He knows them, they follow Him, and He gives them eternal life: 'and they will never perish, and no one will snatch them out of my hand.' The Father who gave them is greater than all, and no one can snatch them out of the Father's hand either.",
+          "Jesus said His sheep hear His voice, He knows them, they follow Him, and He gives them eternal life: 'They will never perish, and no one will snatch them out of my hand.' The Father who gave them is greater than all, and no one can snatch them out of the Father's hand either.",
         verses: ["John 10:27-29"],
       },
       {
@@ -880,13 +880,13 @@ export const questions: Question[] = [
       {
         heading: "He who began the work will finish it",
         body:
-          "'He who began a good work in you will complete it until the day of Jesus Christ.' Jesus said of those the Father gives Him: 'I will lose none of them, but raise them up at the last day,' and 'whoever comes to me I will in no way throw out.' Your keeping rests on His faithfulness, not your grip.",
+          "'He who began a good work in you will complete it until the day of Jesus Christ.' Jesus said of those the Father gives Him: 'I should lose nothing, but should raise him up at the last day,' and 'He who comes to me I will in no way throw out.' Your keeping rests on His faithfulness, not your grip.",
         verses: ["Philippians 1:6", "John 6:37-39"],
       },
       {
         heading: "The warnings are real, and they call us to abide",
         body:
-          "Scripture warns solemnly against falling away (Hebrews 6:4-6), and those warnings are meant to keep us clinging to Christ; genuine faith perseveres. John explains that those who left 'were not of us; for if they had been of us, they would have continued with us.' Real children keep abiding.",
+          "Scripture warns solemnly against falling away (Hebrews 6:4-6), and those warnings are meant to keep us clinging to Christ; genuine faith perseveres. John explains that those who left 'didn't belong to us; for if they had belonged to us, they would have continued with us.' Real children keep abiding.",
         verses: ["Hebrews 6:4-6", "1 John 2:19", "John 15:4-5"],
       },
       {
@@ -949,7 +949,7 @@ export const questions: Question[] = [
       {
         heading: "But you have an advocate",
         body:
-          "The gospel does not leave you stranded in guilt. 'If anyone sins, we have an advocate with the Father, Jesus Christ the righteous. He is the propitiation for our sins.' Your standing before God rests on His finished work, not on your performance, and He is right now pleading for you.",
+          "The gospel does not leave you stranded in guilt. 'If anyone sins, we have a Counselor with the Father, Jesus Christ, the righteous, and he is the atoning sacrifice for our sins.' Your standing before God rests on His finished work, not on your performance, and He is right now pleading for you.",
         verses: ["1 John 2:1-2", "Hebrews 7:25"],
       },
       {
@@ -961,13 +961,13 @@ export const questions: Question[] = [
       {
         heading: "Come boldly, not cowering",
         body:
-          "We do not approach God on the strength of our clean record but on the faithfulness of our High Priest, who was tempted in every way as we are, yet without sin. Because of Him we can 'draw near with boldness to the throne of grace, that we may receive mercy and find grace to help in time of need.'",
+          "We do not approach God on the strength of our clean record but on the faithfulness of our High Priest, who was tempted in every way as we are, yet without sin. Because of Him we can 'draw near with boldness to the throne of grace, that we may receive mercy, and may find grace for help in time of need.'",
         verses: ["Hebrews 4:15-16"],
       },
       {
         heading: "No condemnation for those in Christ",
         body:
-          "'There is therefore now no condemnation for those who are in Christ Jesus.' The Spirit, not the accuser, is the one who convicts, and He convicts to restore, not to destroy. God even works our failures for our good, making His grace sufficient in our weakness.",
+          "'There is therefore now no condemnation to those who are in Christ Jesus.' The Spirit, not the accuser, is the one who convicts, and He convicts to restore, not to destroy. God even works our failures for our good, making His grace sufficient in our weakness.",
         verses: ["Romans 8:1", "Romans 8:26-27", "2 Corinthians 12:9"],
       },
     ],
@@ -987,7 +987,7 @@ export const questions: Question[] = [
     question: "How does the Spirit convict the world of sin?",
     category: "holy-spirit",
     summary:
-      "Jesus said the Spirit would 'convict the world concerning sin, righteousness, and judgment.' Conviction is not mere guilt: it is God persuading the conscience of the truth, so that people see their sin, their need of Christ's righteousness, and the judgment to come, and turn to the Savior.",
+      "Jesus said the Spirit would 'convict the world about sin, about righteousness, and about judgment.' Conviction is not mere guilt: it is God persuading the conscience of the truth, so that people see their sin, their need of Christ's righteousness, and the judgment to come, and turn to the Savior.",
     passages: [
       {
         book: "John",
@@ -1015,13 +1015,13 @@ export const questions: Question[] = [
       {
         heading: "Conviction is convincing, not just feeling bad",
         body:
-          "Jesus said the Spirit 'will convict the world concerning sin, righteousness, and judgment.' To convict is to bring proof and persuade: the Spirit doesn't merely make people uncomfortable, He opens their eyes to the truth about God, themselves, and the gospel.",
+          "Jesus said the Spirit 'will convict the world about sin, about righteousness, and about judgment.' To convict is to bring proof and persuade: the Spirit doesn't merely make people uncomfortable, He opens their eyes to the truth about God, themselves, and the gospel.",
         verses: ["John 16:8"],
       },
       {
         heading: "Concerning sin: because they do not believe in Jesus",
         body:
-          "The sin the Spirit exposes first is not a list of behaviors but the root: 'because they do not believe in me.' Weeping over a broken marriage is one thing; being convinced that refusing Christ is the deepest wrong is the Spirit's work. He uses the gospel to name that sin.",
+          "The sin the Spirit exposes first is not a list of behaviors but the root: 'because they don't believe in me.' Weeping over a broken marriage is one thing; being convinced that refusing Christ is the deepest wrong is the Spirit's work. He uses the gospel to name that sin.",
         verses: ["John 16:9", "John 3:19-20"],
       },
       {
@@ -1089,19 +1089,19 @@ export const questions: Question[] = [
       {
         heading: "Every believer has been given at least one",
         body:
-          "'To each one is given the manifestation of the Spirit for the common good.' The Spirit apportions gifts 'to each one individually just as he wills.' No Christian is giftless; gifts are not for a spiritual elite, but for the whole body.",
+          "'To each one is given the manifestation of the Spirit for the profit of all.' The Spirit apportions gifts 'to each one separately, as he desires.' No Christian is giftless; gifts are not for a spiritual elite, but for the whole body.",
         verses: ["1 Corinthians 12:7", "1 Corinthians 12:11", "1 Peter 4:10"],
       },
       {
         heading: "They are diverse, but there is one Spirit",
         body:
-          "Paul lists 'varieties of gifts, but the same Spirit; and varieties of service, but the same Lord; and varieties of workings, but the same God who works all things in all.' The diversity is not a flaw to envy or despise; it is the beauty of a body made to need every member.",
+          "Paul lists 'various kinds of gifts, but the same Spirit… various kinds of service, and the same Lord… various kinds of workings, but the same God, who works all things in all.' The diversity is not a flaw to envy or despise; it is the beauty of a body made to need every member.",
         verses: ["1 Corinthians 12:4-11"],
       },
       {
         heading: "They build the church; they don't show off the church",
         body:
-          "The purpose of every gift is edification: 'let all things be done for building up.' Gifts are given 'to equip the saints for the work of ministry, to build up the body of Christ.' A gift used for applause is a gift misused; a gift used for the good of others is a gift well used.",
+          "The purpose of every gift is edification: 'Let all things be done to build each other up.' Gifts are given 'for the perfecting of the saints, to the work of serving, to the building up of the body of Christ.' A gift used for applause is a gift misused; a gift used for the good of others is a gift well used.",
         verses: ["1 Corinthians 12:25-26", "1 Corinthians 14:26", "Ephesians 4:12"],
       },
       {
@@ -1113,7 +1113,7 @@ export const questions: Question[] = [
       {
         heading: "The fruit is the goal of the gifts",
         body:
-          "The Spirit's gifts build the church, and the Spirit's fruit in your character, love, joy, peace, patience, kindness, goodness, faith, gentleness, self-control, shows Christ. 'Eagerly desire the greater gifts,' Paul says, and then shows the way that is still more excellent: love.",
+          "The Spirit's gifts build the church, and the Spirit's fruit in your character, love, joy, peace, patience, kindness, goodness, faith, gentleness, self-control, shows Christ. 'Earnestly desire the best gifts,' Paul says, and then shows the way that is still more excellent: love.",
         verses: ["Galatians 5:22-23", "1 Corinthians 12:31", "Romans 12:6-8"],
       },
     ],
@@ -1177,7 +1177,7 @@ export const questions: Question[] = [
       {
         heading: "It owns His full humanity",
         body:
-          "The Son of God did not merely appear human; He became human. He 'shared in flesh and blood' so that He could be 'made like his brothers in every way' and become a merciful High Priest. Calling Himself the Son of Man declares He is the true Man, our representative.",
+          "The Son of God did not merely appear human; He became human. He 'shared in flesh and blood' so that He could be 'made like his brothers' in every way, and become a merciful High Priest. Calling Himself the Son of Man declares He is the true Man, our representative.",
         verses: ["Hebrews 2:14-17", "Philippians 2:7-8"],
       },
       {
@@ -1241,19 +1241,19 @@ export const questions: Question[] = [
       {
         heading: "He ascended and is seated at God's right hand",
         body:
-          "After His resurrection, Jesus was taken up into heaven, and Scripture places Him 'at the right hand of the Majesty on high.' The right hand is the place of honor, authority, and rule. He did not vanish into retirement; He was exalted to the throne.",
+          "After His resurrection, Jesus was taken up into heaven, and Scripture says He 'sat down on the right hand of the Majesty on high.' The right hand is the place of honor, authority, and rule. He did not vanish into retirement; He was exalted to the throne.",
         verses: ["Acts 1:9-11", "Hebrews 1:3", "Mark 16:19"],
       },
       {
         heading: "He reigns as Lord now",
         body:
-          "'He must reign until he has put all his enemies under his feet,' Peter preaching: 'God exalted him at his right hand… and made him both Lord and Christ.' Raised 'far above all rule and authority,' He is head over all things, for the benefit of His church.",
+          "'He must reign until he has put all his enemies under his feet,' Peter preaching: 'God exalted him with his right hand… God has made him both Lord and Christ.' Raised 'far above all rule and authority,' He is head over all things, for the benefit of His church.",
         verses: ["1 Corinthians 15:25", "Acts 2:33", "Ephesians 1:20-23"],
       },
       {
         heading: "He intercedes for His people",
         body:
-          "'He is able to save to the uttermost those who draw near to God through him, since he always lives to make intercession for them.' The risen Christ is at the Father's right hand pleading for you, and He is our advocate when we sin.",
+          "'He is also able to save to the uttermost those who draw near to God through him, seeing that he lives forever to make intercession for them.' The risen Christ is at the Father's right hand pleading for you, and He is our advocate when we sin.",
         verses: ["Hebrews 7:25", "Romans 8:34", "1 John 2:1"],
       },
       {
@@ -1265,7 +1265,7 @@ export const questions: Question[] = [
       {
         heading: "He will return for His own",
         body:
-          "The angels at the ascension promised: 'This Jesus, who was taken up from you into heaven, will come in like manner as you saw him going into heaven.' At His return the dead in Christ will rise and he will gather His people, and so we wait for Him with hope.",
+          "The angels at the ascension promised: 'This Jesus, who was received up from you into the sky will come back in the same way as you saw him going into the sky.' At His return the dead in Christ will rise and he will gather His people, and so we wait for Him with hope.",
         verses: ["Acts 1:11", "1 Thessalonians 4:16-17", "Revelation 22:20"],
       },
     ],
@@ -1317,7 +1317,7 @@ export const questions: Question[] = [
       {
         heading: "Follow Jesus daily",
         body:
-          "Following is not a one-time decision but the shape of a whole life: 'If anyone wants to come after me, let him deny himself, take up his cross, and follow me.' His sheep 'hear his voice… and they follow him.' It is a walk, not a moment.",
+          "Following is not a one-time decision but the shape of a whole life: 'If anyone desires to come after me, let him deny himself, take up his cross, and follow me.' His sheep 'hear his voice… and the sheep follow him.' It is a walk, not a moment.",
         verses: ["Luke 9:23", "John 10:27", "Matthew 16:24"],
       },
       {
@@ -1335,7 +1335,7 @@ export const questions: Question[] = [
       {
         heading: "Love His people",
         body:
-          "Jesus gave us a new command: 'love one another, just as I have loved you,' and said that by this, everyone will know we are His disciples. We are not meant to walk alone. We gather, we encourage, we carry one another's burdens, and we do not forsake the assembly.",
+          "Jesus gave us a new command: 'love one another, just like I have loved you,' and said that by this, everyone will know we are His disciples. We are not meant to walk alone. We gather, we encourage, we carry one another's burdens, and we do not forsake the assembly.",
         verses: ["John 13:34-35", "Hebrews 10:24-25", "Galatians 6:2"],
       },
       {
@@ -1393,13 +1393,13 @@ export const questions: Question[] = [
       {
         heading: "Fight from the identity Christ gave you",
         body:
-          "Our 'old self' was crucified with Christ so that we would no longer be slaves to sin. Paul tells us to 'reckon yourselves to be dead to sin, but alive to God in Christ Jesus' and not to let sin reign. The battle begins with who He has made you: a freed person, not a slave.",
+          "Our 'old self' was crucified with Christ so that we would no longer be slaves to sin. Paul tells us to 'consider yourselves also to be dead to sin, but alive to God in Christ Jesus our Lord' and not to let sin reign. The battle begins with who He has made you: a freed person, not a slave.",
         verses: ["Romans 6:6", "Romans 6:11-14"],
       },
       {
         heading: "Walk in the Spirit, don't grind in the flesh",
         body:
-          "'Walk by the Spirit, and you will not fulfill the lust of the flesh.' By the Spirit we 'put to death the deeds of the body.' The battle is not sheer willpower but dependence: the Spirit produces love, joy, peace, and self-control as we stay in step with Him.",
+          "'Walk by the Spirit, and you won't fulfill the lust of the flesh.' By the Spirit we 'put to death the deeds of the body.' The battle is not sheer willpower but dependence: the Spirit produces love, joy, peace, and self-control as we stay in step with Him.",
         verses: ["Galatians 5:16-17", "Romans 8:13", "Galatians 5:22-23"],
       },
       {
@@ -1411,7 +1411,7 @@ export const questions: Question[] = [
       {
         heading: "It's grace-driven, not a self-help project",
         body:
-          "We come 'boldly to the throne of grace, that we may receive mercy and find grace to help in time of need.' Where we are weak, His grace is sufficient, and He provides a way of escape in every temptation. The fight is fought in His strength, not ours.",
+          "We come to God as we 'draw near with boldness to the throne of grace, that we may receive mercy, and may find grace for help in time of need.' Where we are weak, His grace is sufficient, and He provides a way of escape in every temptation. The fight is fought in His strength, not ours.",
         verses: ["Hebrews 4:16", "2 Corinthians 12:9", "1 Corinthians 10:13"],
       },
       {
@@ -1490,7 +1490,7 @@ export const questions: Question[] = [
       {
         heading: "He has adopted us as His children",
         body:
-          "In love He predestined us for adoption as sons through Jesus Christ. We are no longer slaves or strangers; through the Spirit we cry, 'Abba, Father.' 'See what kind of love the Father has given to us, that we should be called children of God! And that is what we are.'",
+          "In love He predestined us for adoption as sons through Jesus Christ. We are no longer slaves or strangers; through the Spirit we cry, 'Abba, Father.' 'See how great a love the Father has bestowed on us, that we should be called children of God!' And that is what we are.",
         verses: ["Galatians 4:4-7", "Ephesians 1:5", "1 John 3:1-2", "Matthew 6:9"],
       },
       {
@@ -1554,25 +1554,25 @@ export const questions: Question[] = [
       {
         heading: "Paul: justification is by faith, apart from works",
         body:
-          "'By grace you have been saved through faith… not of works, so that no one can boast.' To the one who does not work but believes, 'faith is counted as righteousness.' A person is not justified by works of the law but 'through faith in Christ Jesus.' This is the ground of salvation.",
+          "'By grace you have been saved through faith… not of works, that no one would boast.' To the one who does not work but believes, 'his faith is accounted for righteousness.' A person is not justified by works of the law but 'through faith in Jesus Christ.' This is the ground of salvation.",
         verses: ["Ephesians 2:8-9", "Romans 4:4-5", "Galatians 2:16", "Titus 3:5"],
       },
       {
         heading: "James: real faith cannot be a dead faith",
         body:
-          "'What good is it if someone says he has faith, but he doesn't have works? Can that faith save him?' Faith by itself, if it has no works, is dead: 'as the body without the spirit is dead, so also faith without works is dead.' James is not teaching that works save; he is exposing a bare 'faith' that never produces fruit.",
+          "'What good is it if someone says he has faith, but he doesn't have works? Can that faith save him?' Faith by itself, if it has no works, is dead: 'as the body apart from the spirit is dead, even so faith apart from works is dead.' James is not teaching that works save; he is exposing a bare 'faith' that never produces fruit.",
         verses: ["James 2:14", "James 2:17", "James 2:26"],
       },
       {
         heading: "They both use Abraham: two sides of the same faith",
         body:
-          "Paul points to Abraham 'believed God, and it was counted to him as righteousness.' James points to the same man when he offered Isaac: 'faith worked with his works, and by the works his faith was made complete.' One shows the ground (faith received); the other shows the fruit (faith perfected through obedience).",
+          "Paul points to Abraham 'believed God, and it was counted to him for righteousness.' James points to the same man when he offered Isaac: 'faith worked with his works, and by works faith was perfected;' One shows the ground (faith received); the other shows the fruit (faith perfected through obedience).",
         verses: ["Romans 4:1-3", "James 2:21-24"],
       },
       {
         heading: "They agree: grace creates good works",
         body:
-          "Paul himself says we are 'created in Christ Jesus for good works, which God prepared before that we should walk in them,' and that what matters is 'faith working through love.' So the resolution is not 'faith or works' but 'faith alone, and authentic faith never remains alone.' The faith that saves is the faith that works.",
+          "Paul himself says we are 'created in Christ Jesus for good works, which God prepared before that we would walk in them,' and that what matters is 'faith working through love.' So the resolution is not 'faith or works' but 'faith alone, and authentic faith never remains alone.' The faith that saves is the faith that works.",
         verses: ["Ephesians 2:10", "Galatians 5:6", "Titus 2:14"],
       },
     ],
@@ -1627,7 +1627,7 @@ export const questions: Question[] = [
       {
         heading: "It is good news, not good advice",
         body:
-          "The gospel is not a list of instructions to improve yourself: it is an announcement of what God has done. Paul delivers what he received: 'that Christ died for our sins according to the Scriptures, that he was buried, and that he was raised on the third day.' It is something to believe, not something to achieve.",
+          "The gospel is not a list of instructions to improve yourself: it is an announcement of what God has done. Paul delivers what he received: 'that Christ died for our sins according to the Scriptures, that he was buried, that he was raised on the third day.' It is something to believe, not something to achieve.",
         verses: ["1 Corinthians 15:1-4", "Romans 1:16"],
       },
       {
@@ -1639,13 +1639,13 @@ export const questions: Question[] = [
       {
         heading: "What it gives: righteousness and eternal life",
         body:
-          "By the gospel we are 'justified freely by his grace through the redemption that is in Christ Jesus.' The wages of sin is death, but 'the gift of God is eternal life in Christ Jesus our Lord.' The gospel turns a verdict of death into a gift of life.",
+          "By the gospel we are 'justified freely by his grace through the redemption that is in Christ Jesus.' The wages of sin is death, but 'the free gift of God is eternal life in Christ Jesus our Lord.' The gospel turns a verdict of death into a gift of life.",
         verses: ["Romans 3:24", "Romans 6:23", "John 5:24"],
       },
       {
         heading: "What it asks: repentance and faith",
         body:
-          "The jailer asked what he must do, and the answer was: 'Believe in the Lord Jesus Christ, and you will be saved.' Jesus began His ministry, 'Repent, and believe in the gospel.' It is received, never earned.",
+          "The jailer asked what he must do, and the answer was: 'Believe in the Lord Jesus Christ, and you will be saved.' Jesus began His ministry, 'Repent, and believe in the Good News.' It is received, never earned.",
         verses: ["Acts 16:30-31", "Mark 1:15", "Ephesians 2:8-9"],
       },
       {
@@ -1721,7 +1721,7 @@ export const questions: Question[] = [
       {
         heading: "Where sin abounded, grace abounded more",
         body:
-          "'Where sin increased, grace abounded all the more: that as sin reigned in death, even so grace might reign through righteousness to eternal life.' Grace is not the license to sin; it is the power that frees us from sin's reign.",
+          "'Where sin abounded, grace abounded more exceedingly: that as sin reigned in death, even so grace might reign through righteousness to eternal life.' Grace is not the license to sin; it is the power that frees us from sin's reign.",
         verses: ["Romans 5:20-21", "Romans 6:1-2", "Titus 2:12"],
       },
     ],
@@ -1785,19 +1785,19 @@ export const questions: Question[] = [
       {
         heading: "Its instrument is faith: counted, not achieved",
         body:
-          "'To him who does not work, but believes in him who justifies the ungodly, his faith is credited for righteousness.' Blessed is the one 'whose sin the Lord will not count against them.' Faith is not the merit; it is the hand that receives what is freely given.",
+          "'To him who doesn't work, but believes in him who justifies the ungodly, his faith is accounted for righteousness.' Blessed is the one 'whom the Lord will by no means charge with sin.' Faith is not the merit; it is the hand that receives what is freely given.",
         verses: ["Romans 4:5", "Romans 4:8", "Galatians 2:16"],
       },
       {
         heading: "It is the great exchange",
         body:
-          "'God made him who knew no sin to be sin for us, that we might become the righteousness of God in him.' On the cross Christ bore our sin; through faith we receive His righteousness. Our condemnation is transferred to Him; His righteousness is credited to us.",
+          "For 'him who knew no sin he made to be sin on our behalf; so that in him we might become the righteousness of God.' On the cross Christ bore our sin; through faith we receive His righteousness. Our condemnation is transferred to Him; His righteousness is credited to us.",
         verses: ["2 Corinthians 5:21", "Isaiah 53:6", "1 Peter 2:24"],
       },
       {
         heading: "Its fruit is peace and salvation",
         body:
-          "'Being justified by faith, we have peace with God through our Lord Jesus Christ.' Those He justifies, He glorifies, and we stand 'heirs according to the hope of eternal life.' Justification is not the end of the story; it is the peaceful foundation of everything that follows.",
+          "'Being therefore justified by faith, we have peace with God through our Lord Jesus Christ.' Those He justifies, He glorifies, and we stand 'heirs according to the hope of eternal life.' Justification is not the end of the story; it is the peaceful foundation of everything that follows.",
         verses: ["Romans 5:1", "Romans 8:30", "Titus 3:7"],
       },
     ],
@@ -1849,13 +1849,13 @@ export const questions: Question[] = [
       {
         heading: "Faith is confidence grounded in something real",
         body:
-          "'Faith is the assurance of things hoped for, the conviction of things not seen,' and 'without faith it is impossible to be well pleasing to him, for he who comes to God must believe that he exists, and that he is a rewarder of those who seek him.' Faith trusts a God who has spoken.",
+          "'Faith is assurance of things hoped for, proof of things not seen,' and 'without faith it is impossible to be well pleasing to him, for he who comes to God must believe that he exists, and that he is a rewarder of those who seek him.' Faith trusts a God who has spoken.",
         verses: ["Hebrews 11:1", "Hebrews 11:6", "2 Corinthians 5:7"],
       },
       {
         heading: "Faith rests on its object: the gospel of Christ",
         body:
-          "'Faith comes by hearing, and hearing by the word of Christ.' Saving faith is not generic optimism; it is trust in a Person: 'if you will confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.' The object is Jesus.",
+          "'Faith comes by hearing, and hearing by the word of God.' Saving faith is not generic optimism; it is trust in a Person: 'if you will confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.' The object is Jesus.",
         verses: ["Romans 10:17", "Romans 10:9-10", "John 20:31"],
       },
       {
@@ -1867,13 +1867,13 @@ export const questions: Question[] = [
       {
         heading: "Faith entrusts the whole life",
         body:
-          "Abraham 'did not waver through unbelief but was strengthened in faith… being fully persuaded that God had power to do what he had promised.' This is personal trust: 'I know whom I have believed, and am persuaded that he is able to guard that which I have committed to him.' Faith commits everything to Him.",
+          "Abraham 'didn't waver through unbelief, but grew strong through faith… being fully assured that what he had promised, he was also able to perform.' This is personal trust: 'I know him whom I have believed, and I am persuaded that he is able to guard that which I have committed to him against that day.' Faith commits everything to Him.",
         verses: ["Romans 4:20-21", "2 Timothy 1:12", "Hebrews 11:8"],
       },
       {
         heading: "Faith produces a life of following",
         body:
-          "Faith is not mere agreement with facts; it is reliance that reshapes a life. 'Faith working through love,' and 'faith without works is dead.' To live by faith is to say with Paul, 'I have been crucified with Christ… I live by faith in the Son of God.'",
+          "Faith is not mere agreement with facts; it is reliance that reshapes a life. 'Faith working through love,' and 'faith apart from works is dead.' To live by faith is to say with Paul, 'I have been crucified with Christ… I live by faith in the Son of God.'",
         verses: ["Galatians 2:20", "James 2:17", "Galatians 5:6"],
       },
     ],
@@ -1925,31 +1925,31 @@ export const questions: Question[] = [
       {
         heading: "Repentance is a turn toward God",
         body:
-          "Jesus' first word was 'repent, and believe in the gospel.' Paul declared that people should 'repent and turn to God, performing deeds consistent with repentance.' It is not just feeling sorry; it is changing direction, from sin and toward God.",
+          "Jesus' first word was 'repent, and believe in the Good News.' Paul declared that people should 'repent and turn to God, doing works worthy of repentance.' It is not just feeling sorry; it is changing direction, from sin and toward God.",
         verses: ["Mark 1:15", "Acts 26:20", "1 Thessalonians 1:9"],
       },
       {
         heading: "It is a gift, not a self-made resolution",
         body:
-          "God exalted Jesus 'to give repentance to Israel and forgiveness of sins,' and the church rejoiced that 'God has also granted the Gentiles repentance to life.' Repentance is not something we must produce by force of will; it is something God works in us.",
+          "God exalted Jesus 'to give repentance to Israel, and remission of sins,' and the church rejoiced that 'God has also granted to the Gentiles repentance to life.' Repentance is not something we must produce by force of will; it is something God works in us.",
         verses: ["Acts 5:31", "Acts 11:18", "2 Timothy 2:25"],
       },
       {
         heading: "Godly sorrow fuels it",
         body:
-          "'Godly sorrow produces a repentance leading to salvation, bringing no regret,' unlike worldly sorrow that only grieved over being caught. It is sorrow over sin, toward God: the broken and contrite heart He will not despise.",
+          "'godly sorrow works repentance to salvation, which brings no regret,' unlike worldly sorrow that only grieved over being caught. It is sorrow over sin, toward God: the broken and contrite heart He will not despise.",
         verses: ["2 Corinthians 7:10", "Psalm 51:17", "Joel 2:13"],
       },
       {
         heading: "It is about turning, not just feeling",
         body:
-          "'Repent, and turn again, that your sins may be blotted out.' Ezekiel calls Israel to 'return and turn from all your transgressions, and make yourself a new heart and a new spirit.' Repentance that stops at emotion is not yet repentance; it must turn.",
+          "'Repent therefore, and turn again, that your sins may be blotted out.' Ezekiel calls Israel to 'cast away from you all your transgressions… and make yourself a new heart and a new spirit.' Repentance that stops at emotion is not yet repentance; it must turn.",
         verses: ["Acts 3:19", "Ezekiel 18:30-31", "Proverbs 28:13"],
       },
       {
         heading: "Repentance and faith are two sides of one turn",
         body:
-          "Paul preached 'repentance toward God, and faith toward our Lord Jesus Christ.' Luke sums up the mission as 'repentance and remission of sins' proclaimed in His name. You cannot turn to Jesus while refusing to turn from what grieves Him.",
+          "Paul preached 'repentance toward God, and faith toward our Lord Jesus.' Luke sums up the mission as 'repentance and remission of sins' proclaimed in His name. You cannot turn to Jesus while refusing to turn from what grieves Him.",
         verses: ["Acts 20:21", "Luke 24:47", "James 4:8-10"],
       },
     ],
@@ -1989,7 +1989,7 @@ export const questions: Question[] = [
         book: "John",
         chapter: 9,
         title: "Not always from personal sin",
-        lookFor: "Jesus rejects the easy answer: the man was born blind 'that the works of God might be displayed.'",
+        lookFor: "Jesus rejects the easy answer: the man was born blind 'that the works of God might be revealed in him.'",
         focus: "1-7",
       },
       {
@@ -2004,13 +2004,13 @@ export const questions: Question[] = [
       {
         heading: "Evil entered through human rebellion, not from God",
         body:
-          "The world God made was good: 'God saw everything that he had made, and indeed it was very good.' Sin and its curse entered through Adam's disobedience, and 'through one man sin entered into the world, and death through sin.' Suffering is an intruder into a good creation, not God's original design.",
+          "The world God made was good: 'God saw everything that he had made, and, behold, it was very good.' Sin and its curse entered through Adam's disobedience, and 'sin entered into the world through one man, and death through sin.' Suffering is an intruder into a good creation, not God's original design.",
         verses: ["Genesis 1:31", "Genesis 3:17-19", "Romans 5:12"],
       },
       {
         heading: "Much suffering is not punishment for personal sin",
         body:
-          "When asked about a man born blind, Jesus said plainly: 'Neither did this man sin, nor his parents, but that the works of God might be revealed in him.' The world is broken, and 'time and chance happen to all.' Not every pain is a verdict.",
+          "When asked about a man born blind, Jesus said plainly: 'Neither did this man sin, nor his parents, but that the works of God might be revealed in him.' The world is broken, and 'time and chance happen to them all.' Not every pain is a verdict.",
         verses: ["John 9:2-3", "Ecclesiastes 9:11", "Matthew 5:45"],
       },
       {
@@ -2022,13 +2022,13 @@ export const questions: Question[] = [
       {
         heading: "God shares our suffering in Christ",
         body:
-          "We do not serve a distant God. He was 'a man of sorrows, acquainted with grief'; He 'wept' at Lazarus's tomb; He 'can be touched with the feeling of our infirmities,' having been tempted as we are. He is 'the God of all comfort, who comforts us in all our affliction.'",
+          "We do not serve a distant God. He was 'a man of suffering, and acquainted with disease'; He 'wept' at Lazarus's tomb; He is not a High Priest who 'can't be touched with the feeling of our infirmities,' having been tempted as we are. He is 'God of all comfort, who comforts us in all our affliction.'",
         verses: ["Isaiah 53:3", "John 11:35", "Hebrews 4:15", "2 Corinthians 1:3-4"],
       },
       {
         heading: "Suffering is not forever, and it is not meaningless",
         body:
-          "One day God 'will wipe away every tear from their eyes, and death will be no more, nor mourning, nor crying, nor pain.' Our present suffering works for us 'an eternal weight of glory' far beyond all comparison. The story does not end in the valley.",
+          "One day God 'will wipe away from them every tear… Death will be no more; neither will there be mourning, nor crying, nor pain, any more.' Our present suffering works for us 'an eternal weight of glory' far beyond all comparison. The story does not end in the valley.",
         verses: ["Revelation 21:4", "2 Corinthians 4:17", "1 Peter 5:10", "Romans 8:18"],
       },
     ],
@@ -2065,7 +2065,7 @@ export const questions: Question[] = [
         book: "Acts",
         chapter: 2,
         title: "The cross, planned",
-        lookFor: "Even the crucifixion was 'by the predetermined plan and foreknowledge of God.'",
+        lookFor: "Even the crucifixion was 'by the determined counsel and foreknowledge of God.'",
         focus: "22-24",
       },
       {
@@ -2080,31 +2080,31 @@ export const questions: Question[] = [
       {
         heading: "God rules over all",
         body:
-          "'He does according to his will among the host of heaven and among the inhabitants of the earth; no one can stay his hand or say to him, What have you done?' The final word in the universe is not chance or fate; it is God's sovereign rule.",
+          "'He does according to his will in the army of heaven and among the inhabitants of the earth; and no one can stay his hand, or ask him, What are you doing?' The final word in the universe is not chance or fate; it is God's sovereign rule.",
         verses: ["Daniel 4:34-35", "Psalm 115:3", "Isaiah 46:9-10"],
       },
       {
         heading: "He works all things according to His will",
         body:
-          "We were 'predestined according to the purpose of him who works all things after the counsel of his will.' From Him and through Him and to Him are all things; the whole course of history answers to His purpose.",
+          "We were 'foreordained according to the purpose of him who works all things after the counsel of his will.' From Him and through Him and to Him are all things; the whole course of history answers to His purpose.",
         verses: ["Ephesians 1:11", "Romans 11:36", "Proverbs 21:1"],
       },
       {
         heading: "He is sovereign even over evil and the cross",
         body:
-          "The worst event in history was also the most planned: Jesus was 'delivered up by the predetermined plan and foreknowledge of God,' and 'whatever your hand and your plan predestined to take place'; that took place. Evil is real, but it is never outside God's control and is always within His purpose.",
+          "The worst event in history was also the most planned: Jesus was 'delivered up by the determined counsel and foreknowledge of God,' and 'whatever your hand and your council foreordained to happen'; that took place. Evil is real, but it is never outside God's control and is always within His purpose.",
         verses: ["Acts 2:23", "Acts 4:27-28", "Genesis 50:20"],
       },
       {
         heading: "He is not a distant tyrant; He is a Father who cares",
         body:
-          "Jesus grounds God's sovereignty in love: 'Even the hairs of your head are all numbered. So do not be afraid.' Not a sparrow falls apart from your Father, and 'you are of more value than many sparrows.' His control over the universe is exercised with a Father's heart for you.",
+          "Jesus grounds God's sovereignty in love: 'The very hairs of your head are all numbered. Therefore don't be afraid.' Not a sparrow falls apart from your Father, and 'you are of more value than many sparrows.' His control over the universe is exercised with a Father's heart for you.",
         verses: ["Matthew 10:29-31", "Psalm 139:16", "Romans 8:28"],
       },
       {
         heading: "His control is our anchor",
         body:
-          "'All things work together for good for those who love God, who are called according to his purpose.' The sovereignty that can seem frightening becomes our deepest comfort: nothing can finally touch us that is not first passed through the loving, purposeful hand of our Father.",
+          "'All things work together for good for those who love God, to those who are called according to his purpose.' The sovereignty that can seem frightening becomes our deepest comfort: nothing can finally touch us that is not first passed through the loving, purposeful hand of our Father.",
         verses: ["Romans 8:28", "Lamentations 3:37-38", "Ephesians 1:12"],
       },
     ],
@@ -2156,13 +2156,13 @@ export const questions: Question[] = [
       {
         heading: "God's moral will is already revealed: in the Word",
         body:
-          "Your word is 'a lamp to my feet and a light for my path.' The Scriptures 'are able to make you wise for salvation' and 'equip us for every good work.' What God has already said is the sure foundation for knowing what He wants; 'the secret things belong to God, but the things revealed belong to us.'",
+          "Your word is 'a lamp to my feet and a light for my path.' The Scriptures 'are able to make you wise for salvation' and make us 'thoroughly equipped for every good work.' What God has already said is the sure foundation for knowing what He wants; 'the secret things belong to Yahweh our God, but the things that are revealed belong to us.'",
         verses: ["Psalm 119:105", "2 Timothy 3:16-17", "Deuteronomy 29:29"],
       },
       {
         heading: "His will for your character is clear",
         body:
-          "'This is the will of God: your sanctification.' Rejoice always, pray without ceasing, give thanks in all circumstances: 'for this is the will of God in Christ Jesus for you.' Much of what we call guidance is simply obedience to what God has already plainly commanded.",
+          "'This is the will of God: your sanctification.' Rejoice always, pray without ceasing, give thanks in all circumstances: 'for this is the will of God in Christ Jesus toward you.' Much of what we call guidance is simply obedience to what God has already plainly commanded.",
         verses: ["1 Thessalonians 4:3", "1 Thessalonians 5:16-18", "1 Peter 2:15"],
       },
       {
@@ -2174,13 +2174,13 @@ export const questions: Question[] = [
       {
         heading: "Ask for wisdom: He gives it generously",
         body:
-          "'If any of you lacks wisdom, let him ask of God, who gives to all generously and without reproach, and it will be given to him.' Trust in the Lord with all your heart, lean not on your own understanding; in all your ways acknowledge Him, and He will make your paths straight.",
+          "'If any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach, and it will be given to him.' Trust in the Lord with all your heart, lean not on your own understanding; in all your ways acknowledge Him, and He will make your paths straight.",
         verses: ["James 1:5", "Proverbs 3:5-6", "Proverbs 16:3"],
       },
       {
         heading: "Trust and walk, not fear and freeze",
         body:
-          "God leads those who are walking, not those paralyzed by the fear of choosing wrong: 'Your ears will hear a word behind you, saying, This is the way, walk in it.' He guides with His eye upon us, step by step, as we follow Him. If the Lord wills, you will do this or that.",
+          "God leads those who are walking, not those paralyzed by the fear of choosing wrong: 'Your ears will hear a voice behind you, saying, This is the way, walk in it.' He guides with His eye upon us, step by step, as we follow Him. If the Lord wills, you will do this or that.",
         verses: ["Isaiah 30:21", "Psalm 32:8", "James 4:15", "Galatians 5:25"],
       },
     ],
@@ -3982,7 +3982,7 @@ export const questions: Question[] = [
       {
         book: "Genesis",
         chapter: 50,
-        title: "Joseph: 'You meant evil, but God meant it for good'",
+        title: "Joseph: 'You meant evil against me, but God meant it for good'",
         lookFor: "Joseph looks back over years of betrayal and prison and sees God's hand: evil meant against him, worked for good.",
         focus: "14-21",
       },
@@ -4188,7 +4188,7 @@ export const questions: Question[] = [
       {
         heading: "Sonship is a gift of adoption, not a wage",
         body:
-          "You were not adopted because you were good enough; you were adopted because God chose to. Paul says God sent His Son and poured out His Spirit so that we might receive adoption as children. The invitation is not 'prove yourself, and then I will call you son.' It is the opposite: 'you are a child, therefore cry Abba, Father.'",
+          "You were not adopted because you were good enough; you were adopted because God chose to. Paul says God sent His Son and poured out His Spirit so that we might receive adoption as children. The invitation is not 'prove yourself, and then I will call you son.' It is the opposite: because we are children of God, the Spirit cries out, 'Abba, Father!'",
         verses: ["Galatians 4:4-6", "Romans 8:15", "1 John 3:1", "Ephesians 1:5"],
       },
       {
@@ -4709,7 +4709,7 @@ export const questions: Question[] = [
       {
         heading: "Our choices have real consequences",
         body:
-          "The farmer who sows to his flesh will reap corruption; the one who sows to the Spirit will reap eternal life. Jesus wept over Jerusalem, crying that He had longed to gather her children 'and you would not!' Ezekiel pleads with the wicked to turn and live, for God takes no pleasure in their death. Judgment and blessing treat our decisions as significant rather than as theater.",
+          "The farmer who sows to his flesh will reap corruption; the one who sows to the Spirit will reap eternal life. Jesus wept over Jerusalem, crying that He had longed to gather her children 'and you would not!' Ezekiel pleads with the wicked: 'turn yourselves, and live,' for God takes no pleasure in their death. Judgment and blessing treat our decisions as significant rather than as theater.",
         verses: ["Galatians 6:7-8", "Matthew 23:37", "Ezekiel 18:30-32", "2 Corinthians 5:10"],
       },
       {
@@ -5532,7 +5532,7 @@ export const questions: Question[] = [
       {
         heading: "The age is marked by 'birth pains'",
         body:
-          "Jesus did not hide the shape of the age: 'You will hear of wars and rumors of wars... For nation will rise against nation... famines, plagues, and earthquakes in various places. But all these things are the beginning of birth pains.' He calls them birth pains, not the end itself: the world's troubles are the groaning of an age about to give way, and the end is not yet.",
+          "Jesus did not hide the shape of the age: 'You will hear of wars and rumors of wars… nation will rise against nation, and kingdom against kingdom… famines and troubles. These things are the beginning of birth pains.' He calls them birth pains, not the end itself: the world's troubles are the groaning of an age about to give way, and the end is not yet.",
         verses: ["Matthew 24:6-8", "Mark 13:7-8"],
       },
       {
@@ -5755,7 +5755,7 @@ export const questions: Question[] = [
     question: "What does it mean that we were made for relationship?",
     category: "who-we-are",
     summary:
-      "We were not made to be alone. We bear the image of a God who is love and who lives in relationship, and He made us for relationship: with Himself and with one another. Scripture moves from 'it is not good for man to be alone' to the gospel, in which we are brought into the very fellowship of God and called to love one another. Our deepest loneliness is healed in belonging to God through Christ and to His people.",
+      "We were not made to be alone. We bear the image of a God who is love and who lives in relationship, and He made us for relationship: with Himself and with one another. Scripture moves from 'it is not good for the man to be alone' to the gospel, in which we are brought into the very fellowship of God and called to love one another. Our deepest loneliness is healed in belonging to God through Christ and to His people.",
     passages: [
       {
         book: "Genesis",
@@ -5801,7 +5801,7 @@ export const questions: Question[] = [
         verses: ["Genesis 1:26", "Genesis 1:27", "1 John 4:8", "John 17:24"],
       },
       {
-        heading: "'It is not good for man to be alone'",
+        heading: "'It is not good for the man to be alone'",
         body:
           "The first thing God pronounced 'not good' in all of creation was solitude: 'It is not good for the man to be alone. I will make him a helper comparable to him.' And so woman was made, and the two, leaving father and mother, become one flesh. The wise man agreed that two are better than one, and that a threefold cord is not quickly broken. From the very beginning, we are created for companionship, first in marriage and by extension in the family of humanity and the family of God.",
         verses: ["Genesis 2:18", "Genesis 2:24", "Ecclesiastes 4:9", "Ecclesiastes 4:12"],
@@ -6596,7 +6596,7 @@ export const questions: Question[] = [
     question: "What does it mean to be baptized with the Holy Spirit?",
     category: "holy-spirit",
     summary:
-      "'Baptized with the Holy Spirit' is Jesus' own phrase for the Spirit coming upon His people in power. It came at Pentecost, when the church was filled with the Spirit and empowered to be Christ's witnesses, and it is how every believer is joined by the Spirit into the one body of Christ. Believers receive this gift at the beginning of the Christian life, and they are filled again and again as they walk with God.",
+      "'Baptized in the Holy Spirit' is Jesus' own phrase for the Spirit coming upon His people in power. It came at Pentecost, when the church was filled with the Spirit and empowered to be Christ's witnesses, and it is how every believer is joined by the Spirit into the one body of Christ. Believers receive this gift at the beginning of the Christian life, and they are filled again and again as they walk with God.",
     passages: [
       {
         book: "Mark",
@@ -6975,7 +6975,7 @@ export const questions: Question[] = [
       {
         heading: "God promised David a King whose throne would never end",
         body:
-          "Through Nathan, God promised David: 'I will set up your seed after you... and I will establish his kingdom,' and 'I will establish the throne of his kingdom forever.' The angel told Mary that the child would be given 'the throne of his father David' and that 'of his kingdom there will be no end,' and Jeremiah looked for the day when God would raise to David a righteous Branch who would reign as king. This is the promise Jesus came to fulfill.",
+          "Through Nathan, God promised David: 'I will set up your seed after you... and I will establish his kingdom,' and 'I will establish the throne of his kingdom forever.' The angel told Mary that the child would be given 'the throne of his father David' and that of His Kingdom, 'There will be no end to his Kingdom.' and Jeremiah looked for the day when God would raise to David a righteous Branch who would reign as king. This is the promise Jesus came to fulfill.",
         verses: ["2 Samuel 7:12", "2 Samuel 7:13", "2 Samuel 7:16", "Luke 1:32", "Luke 1:33", "Jeremiah 23:5"],
       },
       {
@@ -6993,13 +6993,13 @@ export const questions: Question[] = [
       {
         heading: "Yet David's son is also David's Lord",
         body:
-          "Jesus pressed the deeper mystery: 'What do you think of the Christ? Whose son is he?' They said, 'Of David.' Then He asked how David, in the Spirit, calls Him Lord, quoting the psalm: 'The LORD says to my Lord, sit at my right hand.' If the Messiah were only David's son, David would not call Him Lord. Jesus is the son of David by birth and the Son of God by nature, the root and the offspring of David, David's son and David's Lord.",
+          "Jesus pressed the deeper mystery: 'What do you think of the Christ? Whose son is he?' They said, 'Of David.' Then He asked how David, in the Spirit, calls Him Lord, quoting the psalm: 'The Lord said to my Lord, Sit at my right hand.' If the Messiah were only David's son, David would not call Him Lord. Jesus is the son of David by birth and the Son of God by nature, the root and the offspring of David, David's son and David's Lord.",
         verses: ["Matthew 22:42", "Matthew 22:43", "Matthew 22:45", "Psalm 110:1", "Acts 2:34", "Revelation 22:16"],
       },
       {
         heading: "So we greet Him as our everlasting King",
         body:
-          "Peter's Pentecost sermon brings the promise home: David's throne is fulfilled in the risen Jesus, whom 'God has made both Lord and Christ,' 'this Jesus whom you crucified.' Jesus, the Son of David, is the King who was raised from the dead and declared the Son of God in power. His is a kingdom that will not pass away, and to follow Him is to belong to a King whose throne lasts forever.",
+          "Peter's Pentecost sermon brings the promise home: David's throne is fulfilled in the risen Jesus, whom 'God has made him both Lord and Christ,' 'this Jesus whom you crucified.' Jesus, the Son of David, is the King who was raised from the dead and declared the Son of God in power. His is a kingdom that will not pass away, and to follow Him is to belong to a King whose throne lasts forever.",
         verses: ["Acts 2:34", "Acts 2:36", "2 Samuel 7:16", "Romans 1:3-4", "Luke 1:33"],
       },
     ],
@@ -7313,7 +7313,7 @@ export const questions: Question[] = [
       {
         heading: "Jesus repeatedly silenced talk about who He was",
         body:
-          "The pattern is unmistakable. Jesus did not allow the demons to speak 'because they knew him.' When the unclean spirits cried that He was the Son of God, 'he sternly warned them that they should not make him known.' He told the healed leper, 'See you say nothing to anybody.' And after Peter confessed Him as the Christ, Jesus 'commanded the disciples that they should tell no one about him.'",
+          "The pattern is unmistakable. Jesus did not allow the demons to speak 'because they knew him.' When the unclean spirits cried that He was the Son of God, 'he sternly warned them that they should not make him known.' He told the healed leper, 'See you say nothing to anybody.' And after Peter confessed Him as the Christ, Jesus 'commanded them that they should tell no one about him.'",
         verses: ["Mark 1:34", "Mark 3:12", "Mark 1:44", "Mark 8:30"],
       },
       {
@@ -7423,7 +7423,7 @@ export const questions: Question[] = [
       {
         heading: "It is a present reality and a future hope",
         body:
-          "The church is lived out today in local gatherings, devoted to word, fellowship, the Table, and prayer, as in Acts. And it is headed toward a consummation: the writer of Hebrews speaks of our having come to 'the assembly of the firstborn who are enrolled in heaven,' and Revelation shows the holy city, New Jerusalem, 'prepared like a bride adorned for her husband,' where God dwells with His people forever. The church on earth is the beginning of that city, and its end is glorious.",
+          "The church is lived out today in local gatherings, devoted to word, fellowship, the Table, and prayer, as in Acts. And it is headed toward a consummation: the writer of Hebrews speaks of our having come to 'the general assembly and assembly of the firstborn who are enrolled in heaven,' and Revelation shows the holy city, New Jerusalem, 'prepared like a bride adorned for her husband,' where God dwells with His people forever. The church on earth is the beginning of that city, and its end is glorious.",
         verses: ["Acts 2:42", "Acts 2:46", "Hebrews 12:23", "Revelation 21:2", "Revelation 21:3"],
       },
     ],
@@ -7778,7 +7778,7 @@ export const questions: Question[] = [
       {
         heading: "Grace gives what we do not deserve",
         body:
-          "If mercy holds back the punishment we earned, grace goes further: it gives us the blessing we could never earn. Paul writes, 'by grace you have been saved through faith, and that not of yourselves; it is the gift of God,' not of works. The same chapter contrasts the wages of sin, death, with 'the free gift of God, eternal life in Christ Jesus.' Grace is undeserved favor, lavished on sinners who merit nothing.",
+          "If mercy holds back the punishment we earned, grace goes further: it gives us the blessing we could never earn. Paul writes, 'by grace you have been saved through faith, and that not of yourselves; it is the gift of God,' not of works. The same chapter contrasts the wages of sin, death, with 'the free gift of God… eternal life in Christ Jesus our Lord.' Grace is undeserved favor, lavished on sinners who merit nothing.",
         verses: ["Ephesians 2:8", "Ephesians 2:9", "Romans 6:23"],
       },
       {
@@ -8148,7 +8148,7 @@ export const questions: Question[] = [
     question: "Does God change His mind?",
     category: "suffering-will",
     summary:
-      "Scripture says both, without contradiction: God is unchanging in His character and purposes, 'I, the LORD, do not change,' and yet He responds to people, relenting from threatened judgment when they repent and turning in mercy. The Bible uses the language of God 'repenting' to describe His faithful, gracious response to human change, while insisting that His nature, His faithfulness, and His eternal purposes stand firm. God may be trusted never to change.",
+      "Scripture says both, without contradiction: God is unchanging in His character and purposes, 'I, Yahweh, don't change,' and yet He responds to people, relenting from threatened judgment when they repent and turning in mercy. The Bible uses the language of God 'repenting' to describe His faithful, gracious response to human change, while insisting that His nature, His faithfulness, and His eternal purposes stand firm. God may be trusted never to change.",
     passages: [
       {
         book: "Malachi",
@@ -8365,13 +8365,13 @@ export const questions: Question[] = [
       {
         heading: "It belongs with prayer and seeking the Lord",
         body:
-          "In Scripture, fasting is rarely alone; it is joined to prayer, humility, and seeking. The church in Antioch 'served the Lord and fasted' when the Spirit spoke, and 'had fasted and prayed' when they sent out Barnabas and Saul. Elders were appointed 'with prayer and fasting.' Moses and Elijah fasted on the mountain as they drew near to God. Fasting empties us of distraction that we might be full of God, and so it pairs naturally with prayer.",
+          "In Scripture, fasting is rarely alone; it is joined to prayer, humility, and seeking. The church in Antioch 'served the Lord and fasted' when the Spirit spoke, and 'had fasted and prayed' when they sent out Barnabas and Saul. Elders were appointed after they 'had prayed with fasting.' Moses and Elijah fasted on the mountain as they drew near to God. Fasting empties us of distraction that we might be full of God, and so it pairs naturally with prayer.",
         verses: ["Acts 13:2", "Acts 13:3", "Acts 14:23", "Matthew 4:2"],
       },
       {
         heading: "It is a sign of our dependence and hunger for God",
         body:
-          "When we fast, we are saying with our bodies what we believe with our hearts: that we need God more than we need bread. Moses said of Israel in the wilderness, God humbled you and let you hunger 'that he might make you know that man does not live by bread alone, but by every word that proceeds out of the mouth of the LORD.' Jesus, fasting in the wilderness, answered the tempter with exactly these words. Fasting is the discipline of living by every word of God.",
+          "When we fast, we are saying with our bodies what we believe with our hearts: that we need God more than we need bread. Moses said of Israel in the wilderness, God humbled you and let you hunger 'that he might teach you that man does not live by bread only, but man lives by every word that proceeds out of Yahweh's mouth.' Jesus, fasting in the wilderness, answered the tempter with exactly these words. Fasting is the discipline of living by every word of God.",
         verses: ["Deuteronomy 8:3", "Matthew 4:4", "Matthew 4:2"],
       },
       {
@@ -9031,7 +9031,7 @@ export const questions: Question[] = [
       {
         heading: "Both natures, one Person",
         body:
-          "The New Testament never sets the two truths side by side reluctantly; it assumes them at once. 'The Word was God' and 'the Word became flesh' are two clauses of one confession, and there is 'one mediator between God and men, the man Christ Jesus,' who is also 'God revealed in the flesh.' Thomas fell before the risen man and cried, 'My Lord and my God!' The church has always confessed one Person, Jesus Christ, with two natures: truly God and truly man, without confusion and without division.",
+          "The New Testament never sets the two truths side by side reluctantly; it assumes them at once. 'The Word was God' and 'the Word became flesh' are two clauses of one confession, and there is 'one mediator between God and men, the man Christ Jesus,' who is also 'God was revealed in the flesh.' Thomas fell before the risen man and cried, 'My Lord and my God!' The church has always confessed one Person, Jesus Christ, with two natures: truly God and truly man, without confusion and without division.",
         verses: ["John 1:1", "John 1:14", "1 Timothy 2:5", "1 Timothy 3:16", "John 20:28"],
       },
       {
@@ -9107,13 +9107,13 @@ export const questions: Question[] = [
       {
         heading: "What about 'the spirits in prison'?",
         body:
-          "First Peter says the Spirit-anointed Christ 'went and preached to the spirits in prison,' the disobedient of the days of Noah, and 1 Peter 4 adds that the gospel 'was preached even to the dead.' Interpreters differ: some hear a proclamation of victory to fallen spirits, others an offer of grace to the dead, and the church has never made one reading a test of faith. What is certain from the whole passage is that after His death Christ was active, triumphant, and 'at the right hand of God, angels and authorities and powers being made subject to him.'",
+          "First Peter says the Spirit-anointed Christ 'went and preached to the spirits in prison,' the disobedient of the days of Noah, and 1 Peter 4 adds that the gospel 'was preached even to the dead.' Interpreters differ: some hear a proclamation of victory to fallen spirits, others an offer of grace to the dead, and the church has never made one reading a test of faith. What is certain from the whole passage is that after His death Christ was active, triumphant, and 'at the right hand of God… angels and authorities and powers being made subject to him.'",
         verses: ["1 Peter 3:18-22", "1 Peter 4:6"],
       },
       {
         heading: "The point is the completeness of His victory",
         body:
-          "Hebrews says He shared our flesh and blood 'so that through death he might bring to nothing him who had the power of death, that is, the devil.' Paul pictures the cross itself as the triumph: Christ 'stripped the principalities and the powers, he made a show of them openly, triumphing over them in it.' The descent into Hades tells us how low love went to save us, and the resurrection tells us how complete the victory is. That is why the creed does not end in the tomb; it moves from 'descended into hell' straight to the third day and the resurrection.",
+          "Hebrews says He shared our flesh and blood 'that through death he might bring to nothing him who had the power of death, that is, the devil.' Paul pictures the cross itself as the triumph: Christ 'stripped the principalities and the powers, he made a show of them openly, triumphing over them in it.' The descent into Hades tells us how low love went to save us, and the resurrection tells us how complete the victory is. That is why the creed does not end in the tomb; it moves from 'descended into hell' straight to the third day and the resurrection.",
         verses: ["Hebrews 2:14-15", "Colossians 2:15", "Romans 10:6-7"],
       },
     ],
@@ -9718,7 +9718,7 @@ export const questions: Question[] = [
       {
         heading: "The test: believe the promise, examine the fruit",
         body:
-          "John gives a threefold test: we know He remains in us 'by the Spirit which he gave us,' we know we have passed out of death into life 'because we love the brothers,' and when our heart condemns us, 'God is greater than our heart.' The anchor is the promise: by two unchangeable things, in which it is impossible for God to lie, we have 'strong encouragement' and 'the anchor of the soul.' If your confidence is built on Christ's finished work and is producing love, it is assurance; if it is built on a wish, repentance is the door to the real thing.",
+          "John gives a threefold test: we know He remains in us 'by the Spirit which he gave us,' we know we have passed out of death into life 'because we love the brothers,' and when our heart condemns us, 'God is greater than our heart.' The anchor is the promise: by two unchangeable things, in which it is impossible for God to lie, we have 'strong encouragement' and 'an anchor of the soul.' If your confidence is built on Christ's finished work and is producing love, it is assurance; if it is built on a wish, repentance is the door to the real thing.",
         verses: ["1 John 3:24", "1 John 3:14", "1 John 3:19-20", "Hebrews 6:18-19"],
       },
     ],
@@ -9934,7 +9934,7 @@ export const questions: Question[] = [
       {
         heading: "The church recognized what the Spirit had already given",
         body:
-          "As letters and gospels circulated, the churches recognized books with apostolic origin, universal acceptance, and doctrine consistent with the faith delivered once for all. Paul's test was blunt: even if an angel from heaven should preach a different gospel, 'let him be cursed.' Luke wrote 'so that you might know the certainty concerning the things in which you were instructed,' and John blessed the one who reads and hears the words of the prophecy. Books without apostolic authority, however edifying, were not received as canon; the rule was simple, the Spirit wrote through the apostles, and the church could recognize His voice.",
+          "As letters and gospels circulated, the churches recognized books with apostolic origin, universal acceptance, and doctrine consistent with the faith delivered once for all. Paul's test was blunt: even if an angel from heaven should preach a different gospel, 'let him be cursed.' Luke wrote 'that you might know the certainty concerning the things in which you were instructed,' and John blessed the one who reads and hears the words of the prophecy. Books without apostolic authority, however edifying, were not received as canon; the rule was simple, the Spirit wrote through the apostles, and the church could recognize His voice.",
         verses: ["Galatians 1:8-9", "Luke 1:1-4", "Revelation 1:3", "2 Thessalonians 2:15"],
       },
       {
@@ -9946,7 +9946,7 @@ export const questions: Question[] = [
       {
         heading: "We can trust that God has given His people His book",
         body:
-          "Paul says every Scripture is 'God-breathed,' profitable for teaching, reproof, correction, and instruction in righteousness, so that the man of God may be complete and thoroughly equipped for every good work. Peter says prophecy never came by the will of man, but men spoke 'being moved by the Holy Spirit.' If God could breathe His word through prophets and apostles, He could also preserve and gather the books that carry it, and He has: the Bible in your hands is the book the church has always received, able to make you 'wise for salvation through faith in Christ Jesus' and living and active by the Spirit who wrote it.",
+          "Paul says every Scripture is 'God-breathed,' profitable for teaching, reproof, correction, and instruction in righteousness, so that the man of God may be complete and thoroughly equipped for every good work. Peter says prophecy never came by the will of man, but men spoke 'being moved by the Holy Spirit.' If God could breathe His word through prophets and apostles, He could also preserve and gather the books that carry it, and He has: the Bible in your hands is the book the church has always received, able to make you 'wise for salvation through faith, which is in Christ Jesus' and living and active by the Spirit who wrote it.",
         verses: ["2 Timothy 3:16-17", "2 Peter 1:20-21", "2 Timothy 3:15", "Hebrews 4:12", "Isaiah 40:8"],
       },
     ],
@@ -10015,7 +10015,7 @@ export const questions: Question[] = [
       {
         heading: "It is done in love, humility, and hope of return",
         body:
-          "When the Corinthians acted, the next command was to forgive and comfort the penitent, 'lest such a one should be swallowed up with his excessive sorrow,' and to confirm love toward him. Paul tells Timothy to reprove those who sin in public 'that the rest also may be in fear,' and to avoid a factious man after a first and second warning. Even the withdrawal of 2 Thessalonians carries the aim: 'Don't count him as an enemy, but admonish him as a brother.' Discipline is the church taking its brother as seriously as Jesus takes him.",
+          "When the Corinthians acted, the next command was to forgive and comfort the penitent, 'lest by any means such a one should be swallowed up with his excessive sorrow,' and to confirm love toward him. Paul tells Timothy to reprove those who sin in public 'that the rest also may be in fear,' and to avoid a factious man after a first and second warning. Even the withdrawal of 2 Thessalonians carries the aim: 'Don't count him as an enemy, but admonish him as a brother.' Discipline is the church taking its brother as seriously as Jesus takes him.",
         verses: ["2 Corinthians 2:6-8", "1 Timothy 5:20", "Titus 3:10-11", "2 Thessalonians 3:14-15"],
       },
       {
@@ -10173,7 +10173,7 @@ export const questions: Question[] = [
       {
         heading: "The response: confidence in the Judge and urgency in the mission",
         body:
-          "Paul's logic runs from God's justice to the gospel's necessity: 'How will they call on him in whom they have not believed? How will they believe in him whom they have not heard? How will they hear without a preacher? ... So faith comes by hearing, and hearing by the word of God.' God has appointed a day and a Judge and 'commands that all people everywhere should repent,' as Paul declared to people who genuinely had never heard. We cannot calculate the verdicts of the final day, and we do not need to: we can trust the Judge, and we can obey the mission, because the answer to the question is the same as the answer to the world's need: proclaim Christ.",
+          "Paul's logic runs from God's justice to the gospel's necessity: 'How then will they call on him in whom they have not believed? How will they believe in him whom they have not heard? How will they hear without a preacher? ... So faith comes by hearing, and hearing by the word of God.' God has appointed a day and a Judge and 'commands that all people everywhere should repent,' as Paul declared to people who genuinely had never heard. We cannot calculate the verdicts of the final day, and we do not need to: we can trust the Judge, and we can obey the mission, because the answer to the question is the same as the answer to the world's need: proclaim Christ.",
         verses: ["Romans 10:14-15", "Romans 10:17", "Acts 17:30-31", "1 Timothy 2:4"],
       },
     ],
@@ -10316,7 +10316,7 @@ export const questions: Question[] = [
       {
         heading: "The 'destruction' language points to an end",
         body:
-          "Other texts stress the finality of ruin: the lost 'will pay the penalty: eternal destruction from the face of the Lord,' and Jesus warns us to fear the One 'who is able to destroy both soul and body in Gehenna.' Paul names those 'whose end is destruction,' and John the Baptist pictures the chaff 'burned up with unquenchable fire.' Those who hold annihilation read these as describing the complete ceasing of the lost, not endless torment.",
+          "Other texts stress the finality of ruin: the lost 'will pay the penalty: eternal destruction from the face of the Lord,' and Jesus warns us to fear the One 'who is able to destroy both soul and body in Gehenna.' Paul names those 'whose end is destruction,' and John the Baptist pictures the chaff he 'will burn up with unquenchable fire.' Those who hold annihilation read these as describing the complete ceasing of the lost, not endless torment.",
         verses: ["2 Thessalonians 1:9", "Matthew 10:28", "Philippians 3:19", "Matthew 3:12"],
       },
       {
@@ -10453,13 +10453,13 @@ export const questions: Question[] = [
       {
         heading: "He appeared to chosen witnesses for a purpose",
         body:
-          "Peter tells Cornelius that God 'raised him up the third day, and gave him to be revealed, not to all the people, but to witnesses who were chosen before by God.' The appearances were not random displays; they were given to specific people whose testimony would carry the gospel. Luke says Jesus 'showed himself alive... by many proofs, appearing to them over a period of forty days, and speaking about God's Kingdom,' teaching these witnesses what they would then proclaim.",
+          "Peter tells Cornelius that God 'raised him up the third day' and that God 'gave him to be revealed, not to all the people, but to witnesses who were chosen before by God.' The appearances were not random displays; they were given to specific people whose testimony would carry the gospel. Luke says Jesus 'showed himself alive... by many proofs, appearing to them over a period of forty days, and speaking about God's Kingdom,' teaching these witnesses what they would then proclaim.",
         verses: ["Acts 10:40-41", "Acts 1:3", "1 Corinthians 15:5-8", "John 20:30-31"],
       },
       {
         heading: "The witnesses were sent to testify",
         body:
-          "Jesus told the eleven, 'You will be witnesses to me in Jerusalem, in all Judea and Samaria, and to the uttermost parts of the earth,' and Peter's first sermon stakes everything on it: 'This Jesus God raised up, to which we all are witnesses.' Paul says the risen Christ appeared to the twelve, to over five hundred, to James, and to himself, 'and so we preach, and so you believed.' To see the risen Jesus was to be entrusted with a message and a mission.",
+          "Jesus told the eleven, 'You will be witnesses to me in Jerusalem, in all Judea and Samaria, and to the uttermost parts of the earth,' and Peter's first sermon stakes everything on it: 'This Jesus God raised up, to which we all are witnesses.' Paul says the risen Christ appeared to the twelve, to over five hundred, to James, and to himself, 'so we preach, and so you believed.' To see the risen Jesus was to be entrusted with a message and a mission.",
         verses: ["Acts 1:8", "Acts 2:32", "1 Corinthians 15:5-8", "1 Corinthians 15:11"],
       },
       {
@@ -10796,7 +10796,7 @@ export const questions: Question[] = [
     question: "What is the difference between reading the Bible and studying it?",
     category: "word-of-god",
     summary:
-      "Reading the Bible feeds the soul; studying it digs into the riches beneath the surface. Reading takes in the word broadly and habitually; studying concentrates on a passage, asks questions of it, and compares Scripture with Scripture. The Bereans model the difference: they received the word eagerly and 'examined the Scriptures daily,' and Ezra set his heart to seek the law of God, to do it, and to teach it.",
+      "Reading the Bible feeds the soul; studying it digs into the riches beneath the surface. Reading takes in the word broadly and habitually; studying concentrates on a passage, asks questions of it, and compares Scripture with Scripture. The Bereans model the difference: they received the word eagerly and were 'examining the Scriptures daily,' and Ezra set his heart to seek the law of God, to do it, and to teach it.",
     passages: [
       {
         book: "Acts",
@@ -11007,7 +11007,7 @@ export const questions: Question[] = [
       {
         heading: "Its comfort: nothing is out of His control",
         body:
-          "Jesus grounds our fearlessness in the Father's sovereign care: 'even the very hairs of your head are all numbered,' and not even a sparrow falls to the ground apart from the Father's will. If God rules the sparrows and numbers our hairs, then every circumstance of our lives is held by Him. Paul's confidence is the last word: nothing, 'neither death, nor life... nor anything else in creation, will be able to separate us from the love of God, which is in Christ Jesus our Lord.' The One who rules all things loves us.",
+          "Jesus grounds our fearlessness in the Father's sovereign care: 'the very hairs of your head are all numbered,' and not even a sparrow falls to the ground apart from the Father's will. If God rules the sparrows and numbers our hairs, then every circumstance of our lives is held by Him. Paul's confidence is the last word: nothing, 'neither death, nor life… nor any other created thing, will be able to separate us from the love of God, which is in Christ Jesus our Lord.' The One who rules all things loves us.",
         verses: ["Matthew 10:29-31", "Romans 8:38-39", "Acts 17:26-27", "1 Peter 5:7"],
       },
     ],
@@ -11126,7 +11126,7 @@ export const questions: Question[] = [
         book: "1 Peter",
         chapter: 3,
         title: "The answer of a good conscience",
-        lookFor: "Peter's careful words: baptism saves 'not the removal of dirt from the flesh, but the answer of a good conscience toward God.'",
+        lookFor: "Peter's careful words: baptism saves 'not the putting away of the filth of the flesh, but the answer of a good conscience toward God.'",
         focus: "18-22",
       },
     ],
@@ -11834,7 +11834,7 @@ export const questions: Question[] = [
     question: "What is the difference between God's discipline and the devil's accusation?",
     category: "god-the-father",
     summary:
-      "God's discipline comes from the heart of a Father who loves His child and aims at repentance and restoration; the devil's accusation comes from an enemy who wants to destroy and drive to despair. One says 'turn and live,' the other says 'you're finished.' The distinguishing mark is what each does with our sin: discipline calls us to confess and return, accusation tries to convince us there is no return. The Father's voice restores; the accuser's voice condemns, and in Christ the accuser is silenced.",
+      "God's discipline comes from the heart of a Father who loves His child and aims at repentance and restoration; the devil's accusation comes from an enemy who wants to destroy and drive to despair. One says 'turn, turn from your evil ways,' the other says 'you're finished.' The distinguishing mark is what each does with our sin: discipline calls us to confess and return, accusation tries to convince us there is no return. The Father's voice restores; the accuser's voice condemns, and in Christ the accuser is silenced.",
     passages: [
       {
         book: "Zechariah",
@@ -12173,7 +12173,7 @@ export const questions: Question[] = [
       {
         heading: "It is for believers, not the world",
         body:
-          "The Supper belongs to those who are in Christ. Jesus gave it to His disciples, and in Acts it is those who 'gladly received his word' and were baptized who 'continued in the breaking of bread.' Paul's warnings assume those at the table are part of the Christian community, and he calls on them to 'discern the Lord's body.' The table is not a general meal for anyone present; it is the communion of the church with its Lord.",
+          "The Supper belongs to those who are in Christ. Jesus gave it to His disciples, and in Acts it is those who 'gladly received his word' and were baptized who 'continued steadfastly… in the breaking of bread.' Paul's warnings assume those at the table are part of the Christian community, and he calls on them to 'discern the Lord's body.' The table is not a general meal for anyone present; it is the communion of the church with its Lord.",
         verses: ["Matthew 26:26", "Acts 2:41-42", "1 Corinthians 11:29", "Acts 2:46"],
       },
       {
@@ -12185,7 +12185,7 @@ export const questions: Question[] = [
       {
         heading: "Taking it unworthily is a warning, not a bar",
         body:
-          "Paul warns: 'whoever eats this bread or drinks the Lord's cup in a way unworthy of the Lord will be guilty of the body and the blood of the Lord,' and that those who eat and drink in an unworthy way 'eat and drink judgment to themselves.' He even says some among them were weak and sick because of it. The warning is real, and it points to the answer: come examining, discerning the body, turning from sin. It is a call to worthy participation, not an excuse to stay away because you are imperfect.",
+          "Paul warns: 'whoever eats this bread or drinks the Lord's cup in a way unworthy of the Lord will be guilty of the body and the blood of the Lord,' and that he who eats and drinks in an unworthy way 'eats and drinks judgment to himself.' He even says some among them were weak and sick because of it. The warning is real, and it points to the answer: come examining, discerning the body, turning from sin. It is a call to worthy participation, not an excuse to stay away because you are imperfect.",
         verses: ["1 Corinthians 11:27", "1 Corinthians 11:29", "1 Corinthians 11:30", "1 Corinthians 11:28"],
       },
       {
@@ -12342,7 +12342,7 @@ export const questions: Question[] = [
       {
         heading: "Servants who do not lord it over the flock",
         body:
-          "Jesus set the pattern against worldly leadership: 'whoever desires to become great among you shall be your servant... even as the Son of Man came not to be served, but to serve, and to give his life as a ransom for many.' And He said, 'I am in your midst as one who serves.' Peter applies it directly to pastors: 'neither as lording it over those entrusted to you, but making yourselves examples to the flock.' The greatest in the church is the one who serves, and the church needs leaders who lead as Christ did, by laying themselves down.",
+          "Jesus set the pattern against worldly leadership: 'whoever wants to become great among you shall be your servant… The Son of Man also came not to be served, but to serve, and to give his life as a ransom for many.' And He said, 'I am in your midst as one who serves.' Peter applies it directly to pastors: 'neither as lording it over those entrusted to you, but making yourselves examples to the flock.' The greatest in the church is the one who serves, and the church needs leaders who lead as Christ did, by laying themselves down.",
         verses: ["Matthew 20:25-28", "Luke 22:26-27", "1 Peter 5:3", "Luke 22:27"],
       },
       {
@@ -12552,7 +12552,7 @@ export const questions: Question[] = [
       {
         heading: "Loneliness is real, and it is not a failure",
         body:
-          "The psalmist knows it: 'My tears have been my food day and night,' and 'Why have you forgotten me? Why do I go mourning?' The prophet Elijah felt utterly alone: 'I alone am left.' Even Jesus, in His most human hour, cried out in desolation and said to His disciples, 'you will leave me alone,' and yet, 'I am not alone, because the Father is with me.' Feeling lonely is part of living as a person in a fallen world; it does not mean God has abandoned you or that your faith is weak.",
+          "The psalmist knows it: 'My tears have been my food day and night,' and 'Why have you forgotten me? Why do I go mourning?' The prophet Elijah felt utterly alone: 'I, even I only, am left.' Even Jesus, in His most human hour, cried out in desolation and said to His disciples, 'you will leave me alone,' and yet, 'I am not alone, because the Father is with me.' Feeling lonely is part of living as a person in a fallen world; it does not mean God has abandoned you or that your faith is weak.",
         verses: ["Psalm 42:3", "Psalm 42:9", "1 Kings 19:10", "John 16:32"],
       },
       {
@@ -12628,13 +12628,13 @@ export const questions: Question[] = [
       {
         heading: "It is divine: the very word of God",
         body:
-          "Scripture claims a divine origin Paul puts plainly: 'Every Scripture is God-breathed and profitable for teaching.' The Thessalonians received the apostolic message 'not as the word of men, but, as it is in truth, the word of God, which also works in you who believe.' Hebrews tells us that God 'has in the past spoken to the fathers through the prophets,' and Jesus could say of the written text, 'the Scripture can't be broken.' When the Bible speaks, God speaks.",
+          "Scripture claims a divine origin Paul puts plainly: 'Every Scripture is God-breathed and profitable for teaching.' The Thessalonians received the apostolic message 'not as the word of men, but, as it is in truth, the word of God, which also works in you who believe.' Hebrews tells us of God 'having in the past spoken to the fathers through the prophets,' and Jesus could say of the written text, 'the Scripture can't be broken.' When the Bible speaks, God speaks.",
         verses: ["2 Timothy 3:16", "1 Thessalonians 2:13", "Hebrews 1:1", "John 10:35"],
       },
       {
         heading: "It is human: written by real people in real ways",
         body:
-          "The divine authorship never erased the human. Peter says, 'no prophecy ever came by the will of man,' yet it came as 'men spoke from God, being moved by the Holy Spirit,' and the same verse insists holy men were the speakers. Luke writes as a careful historian who 'traced the course of all things accurately,' and David could say, 'The Spirit of Yahweh spoke by me. His word was on my tongue.' Paul distinguishes his own counsel, 'not the Lord,' from the Lord's command, showing the writers' real human voices. The Bible is fully human and fully the word of God at once.",
+          "The divine authorship never erased the human. Peter says, 'no prophecy ever came by the will of man,' yet it came as 'holy men of God spoke, being moved by the Holy Spirit,' and the same verse insists holy men were the speakers. Luke writes as a careful historian who 'traced the course of all things accurately,' and David could say, 'The Spirit of Yahweh spoke by me. His word was on my tongue.' Paul distinguishes his own counsel, 'not the Lord,' from the Lord's command, showing the writers' real human voices. The Bible is fully human and fully the word of God at once.",
         verses: ["2 Peter 1:21", "Luke 1:1-3", "2 Samuel 23:2", "1 Corinthians 7:12"],
       },
       {
@@ -12704,13 +12704,13 @@ export const questions: Question[] = [
       {
         heading: "Suffering for Christ is a blessing, not a curse",
         body:
-          "Jesus flips our instinct: 'Blessed are those who have been persecuted for righteousness' sake, for theirs is the Kingdom of Heaven,' and 'Blessed are you when people reproach you, persecute you... for my sake... for great is your reward in heaven.' Paul calls it a gift: 'it has been granted to you on behalf of Christ, not only to believe in him, but also to suffer on his behalf.' The earliest church 'rejoiced that they were counted worthy to suffer dishonor for Jesus' name.' To suffer for Him is to share His lot and to be honored by Him.",
+          "Jesus flips our instinct: 'Blessed are those who have been persecuted for righteousness' sake, for theirs is the Kingdom of Heaven,' and 'Blessed are you when people reproach you, persecute you... for my sake... for great is your reward in heaven.' Paul calls it a gift: 'it has been granted to you on behalf of Christ, not only to believe in him, but also to suffer on his behalf.' The earliest church rejoiced that its members 'were counted worthy to suffer dishonor for Jesus' name.' To suffer for Him is to share His lot and to be honored by Him.",
         verses: ["Matthew 5:10-12", "Philippians 1:29", "Acts 5:41", "Matthew 5:12"],
       },
       {
         heading: "He is with you and will not abandon you",
         body:
-          "The promise at the heart of suffering is presence. 'When you pass through the waters, I will be with you; and through the rivers, they will not overflow you.' For the sake of Christ we may be 'pressed on every side, yet not crushed; perplexed, yet not to despair; pursued, yet not forsaken; struck down, yet not destroyed.' Peter writes, 'Cast all your worries on him, because he cares for you,' and God has said, 'I will in no way leave you.' The deepest comfort is not that the suffering is removed but that He is with you in it.",
+          "The promise at the heart of suffering is presence. 'When you pass through the waters, I will be with you; and through the rivers, they will not overflow you.' For the sake of Christ we may be 'pressed on every side, yet not crushed; perplexed, yet not to despair; pursued, yet not forsaken; struck down, yet not destroyed.' Peter urges, 'casting all your worries on him, because he cares for you,' and God has said, 'I will in no way leave you.' The deepest comfort is not that the suffering is removed but that He is with you in it.",
         verses: ["Isaiah 43:2", "2 Corinthians 4:8-9", "1 Peter 5:7", "Hebrews 13:5"],
       },
       {
@@ -12807,7 +12807,7 @@ export const questions: Question[] = [
       {
         heading: "Dead, not merely sick",
         body:
-          "Paul chooses the strongest word available: 'You were made alive when you were dead in transgressions and sins.' Not weakened, not slowed down: dead. And he makes the condition shared and inborn: 'we were by nature children of wrath, even as the rest.' Death is what Scripture uses when the power to respond is gone, which is exactly the point: the dead cannot reach out, so the life must come from outside.",
+          "Paul chooses the strongest word available: 'You were made alive when you were dead in transgressions and sins.' Not weakened, not slowed down: dead. And he makes the condition shared and inborn: that we 'were by nature children of wrath, even as the rest.' Death is what Scripture uses when the power to respond is gone, which is exactly the point: the dead cannot reach out, so the life must come from outside.",
         verses: ["Ephesians 2:1-3", "Ephesians 2:5", "Colossians 2:13"],
       },
       {
@@ -12954,7 +12954,7 @@ export const questions: Question[] = [
       {
         heading: "The Shepherd dies for the sheep",
         body:
-          "Jesus defines the circle of His death from the inside: 'I am the good shepherd. The good shepherd lays down his life for the sheep.' He knows His sheep, He calls them, He gives them eternal life, and 'they will never perish, and no one will snatch them out of my hand.' The Shepherd's death is not a wish expressed generally; it is the price paid for the sheep, and because it was paid, they are kept. The same chapter adds, 'I also have other sheep, which are not of this fold': the flock is not yet complete, but it is known to Him.",
+          "Jesus defines the circle of His death from the inside: 'I am the good shepherd. The good shepherd lays down his life for the sheep.' He knows His sheep, He calls them, He gives them eternal life, and 'they will never perish, and no one will snatch them out of my hand.' The Shepherd's death is not a wish expressed generally; it is the price paid for the sheep, and because it was paid, they are kept. The same chapter adds, 'I have other sheep, which are not of this fold': the flock is not yet complete, but it is known to Him.",
         verses: ["John 10:11", "John 10:15", "John 10:27-28", "John 10:16"],
       },
       {
@@ -13043,7 +13043,7 @@ export const questions: Question[] = [
       {
         heading: "It is resurrection, not persuasion",
         body:
-          "Paul describes our condition as death: we were 'dead in transgressions and sins,' and God 'made us alive together with Christ.' A corpse cannot be argued into breathing; only the God who raises the dead can. Jesus says the new birth is the Spirit's own work: 'The wind blows where it wants to... so is everyone who is born of the Spirit,' and John adds that we are born 'not of blood, nor of the will of the flesh, nor of the will of man, but of God.' Grace does not wait politely for our cooperation; it creates the heart that cooperates.",
+          "Paul describes our condition as death: we were 'dead in transgressions and sins,' and God 'made us alive together with Christ.' A corpse cannot be argued into breathing; only the God who raises the dead can. Jesus says the new birth is the Spirit's own work: it is like the wind that 'blows where it wants to,' for 'so is everyone who is born of the Spirit,' and John adds that we are born 'not of blood, nor of the will of the flesh, nor of the will of man, but of God.' Grace does not wait politely for our cooperation; it creates the heart that cooperates.",
         verses: ["Ephesians 2:1", "Ephesians 2:4-5", "John 3:8", "John 1:13"],
       },
       {
@@ -13201,19 +13201,19 @@ export const questions: Question[] = [
       {
         heading: "The Old Testament promised one final Anointed King",
         body:
-          "The psalmist pictures the nations raging 'against the LORD, and against his Anointed,' while God answers: 'I have installed my king on my holy hill of Zion.' Daniel was told the Messiah, the Anointed One, would come at an appointed time. By the first century, Israel was waiting expectantly for this promised deliverer.",
+          "The psalmist pictures the nations raging 'against Yahweh, and against his Anointed,' while God answers: 'Yet I have set my King on my holy hill of Zion.' Daniel was told the Messiah, the Anointed One, would come at an appointed time. By the first century, Israel was waiting expectantly for this promised deliverer.",
         verses: ["Psalm 2:2", "Psalm 2:6", "Daniel 9:25-26", "Luke 3:15"],
       },
       {
         heading: "Jesus claimed the anointing for Himself",
         body:
-          "In Nazareth Jesus read Isaiah's prophecy of the Spirit-anointed servant: 'The Lord has anointed me to preach good news to the poor,' and then said, 'Today, this Scripture has been fulfilled in your hearing.' To the Samaritan woman, who spoke of the Messiah to come, He answered plainly: 'I who speak to you am he.'",
+          "In Nazareth Jesus read Isaiah's prophecy of the Spirit-anointed servant: 'The Spirit of the Lord is on me, because he has anointed me to preach good news to the poor,' and then said, 'Today, this Scripture has been fulfilled in your hearing.' To the Samaritan woman, who spoke of the Messiah to come, He answered plainly: 'I am he, the one who speaks to you.'",
         verses: ["Luke 4:18-21", "Isaiah 61:1", "John 4:25-26"],
       },
       {
         heading: "Anointed as Prophet, Priest, and King",
         body:
-          "The three anointed offices of the Old Testament converge on Jesus. As Prophet He reveals God perfectly, greater than Moses. As Priest He offered not an animal but Himself, entering not an earthly sanctuary but heaven itself. As King He reigns now at God's right hand, and 'of the increase of his government and of peace there will be no end.' He is anointed not with oil but 'with the Holy Spirit and with power.'",
+          "The three anointed offices of the Old Testament converge on Jesus. As Prophet He reveals God perfectly, greater than Moses. As Priest He offered not an animal but Himself, entering not an earthly sanctuary but heaven itself. As King He reigns now at God's right hand, and 'of the increase of his government and of peace there shall be no end.' He is anointed not with oil but 'with the Holy Spirit and with power.'",
         verses: ["Acts 3:22", "Hebrews 9:11-14", "Hebrews 7:25-26", "Isaiah 9:7", "Acts 10:38"],
       },
       {
