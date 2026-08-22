@@ -1,0 +1,8 @@
+.git
+.next
+node_modules
+.venv
+audio-out
+voices
+samples
+.ruff_cache
