@@ -3,8 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useSyncExternalStore } from "react";
 import type { Passage } from "@/data/types";
+import { chapterItems, filterFocus } from "@/lib/audio-text";
 import {
-  chapterItems,
   getServerSnapshot,
   getSnapshot,
   matchesVerse,
@@ -35,8 +35,14 @@ export default function ChapterReader({
 
   const items = useMemo<SpeechItem[]>(() => {
     if (!verses) return [];
-    return chapterItems(passage.book, passage.chapter, verses);
-  }, [verses, passage.book, passage.chapter]);
+    // Only the focus range is spoken (mirroring the pre-generated catalog);
+    // the full chapter stays visible for reading.
+    return chapterItems(
+      passage.book,
+      passage.chapter,
+      filterFocus(verses, passage.focus)
+    );
+  }, [verses, passage.book, passage.chapter, passage.focus]);
 
   const active = speech.sourceId === sourceId && speech.status !== "idle";
   const activeId = active ? speech.queue[speech.index]?.id : undefined;
