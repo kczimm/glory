@@ -9,13 +9,13 @@
   "scripts": {
     "dev": "next dev",
     "dev:lan": "next dev -H 0.0.0.0 -p 3100",
-    "build": "node scripts/audio-check.mjs && next build",
+    "build": "npm run audio:check && next build",
     "start": "next start",
     "start:lan": "next start -H 0.0.0.0 -p 3100",
     "lint": "eslint",
     "audio:manifest": "node scripts/audio-manifest.mjs",
     "audio:generate": "node scripts/generate-audio.mjs",
-    "audio:check": "node scripts/audio-check.mjs",
+    "audio:check": "node scripts/audio-manifest.mjs --out /tmp/audio-manifest-check.json >/dev/null && node scripts/audio-check.mjs --manifest /tmp/audio-manifest-check.json",
     "audio:generate:qwen": ".venv/bin/python scripts/generate-audio-qwen.py",
     "test:search": "node --experimental-loader ./scripts/search-check-loader.mjs scripts/search-check.mjs"
   },
