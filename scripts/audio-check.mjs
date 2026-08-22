@@ -12,7 +12,6 @@
  *
  *   - study queues, both bare (study page) and cued "And now, the study."
  *     (visit chain), including grounding verses and outros
- *   - the hands-free menu chunk appended client-side
  *   - chapter-reader queues: whole-chapter data filtered through the same
  *     focus range the reader plays
  *
@@ -29,7 +28,6 @@ import {
   chapterItems,
   filterFocus,
   sha1Hex,
-  speechMenuItem,
   studyItems,
 } from "../src/lib/audio-text.ts";
 import { verses, chapters } from "../src/data/scripture.ts";
@@ -64,25 +62,10 @@ function getPassageText(ref) {
   return parts.join(" ");
 }
 
-// ---- voiceMenu (mirrors src/data/server.ts) ---------------------------------
+// ---- resolve question titles (mirrors src/data/server.ts) ------------------
 
 function resolveQuestion(slug) {
   return questions.find((x) => x.slug === slug) ?? null;
-}
-
-function trailNext(q) {
-  const siblings = questions
-    .filter((x) => x.category === q.category)
-    .sort((a, b) => a.order - b.order);
-  const i = siblings.findIndex((x) => x.slug === q.slug);
-  return i >= 0 && i < siblings.length - 1 ? siblings[i + 1] : null;
-}
-
-function voiceMenuTitles(q) {
-  const raised = q.raises.map((s) => resolveQuestion(s)?.question ?? null).filter(Boolean).slice(0, 3);
-  if (raised.length) return raised;
-  const next = trailNext(q);
-  return next ? [next.question] : [];
 }
 
 // ---- reconstruct every queue the app can speak ------------------------------
@@ -108,10 +91,6 @@ for (const q of questions) {
   })) {
     wanted.push({ source: `visit:${q.slug}`, id: item.id, text: item.text });
   }
-
-  // Hands-free menu chunk (StudyListen appends it when speech is available)
-  const menu = speechMenuItem(voiceMenuTitles(q), "raises");
-  if (menu) wanted.push({ source: `menu:${q.slug}`, id: menu.id, text: menu.text });
 
   // Chapter readers: full chapter filtered by the passage focus range,
   // exactly what ChapterReader.tsx plays after the fix.

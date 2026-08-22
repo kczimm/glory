@@ -68,29 +68,6 @@ function verseText(ref) {
   return parts.join(" ");
 }
 
-// ---- voice menu (mirrors voiceMenu in src/data/index.ts) ----------------
-// Up to three questions for the hands-free "keep going" prompt: the study's
-// raises first, else the next in its trail. Titles come from the questions
-// themselves, so the generated files match what the app speaks.
-
-function trailNext(q) {
-  const siblings = questions
-    .filter((x) => x.category === q.category)
-    .sort((a, b) => a.order - b.order);
-  const i = siblings.findIndex((x) => x.slug === q.slug);
-  return i >= 0 && i < siblings.length - 1 ? siblings[i + 1] : undefined;
-}
-
-function voiceMenuTitles(q) {
-  const titles = q.raises
-    .map((s) => questions.find((x) => x.slug === s)?.question)
-    .filter(Boolean)
-    .slice(0, 3);
-  if (titles.length) return titles;
-  const next = trailNext(q);
-  return next ? [next.question] : [];
-}
-
 // ---- build the manifest ----------------------------------------------------
 
 const entries = [];
@@ -113,7 +90,6 @@ for (const q of questions) {
     cue: "And now, the study.",
     outroTargetId: "raises",
     resolveTitle: (slug) => questions.find((x) => x.slug === slug)?.question ?? null,
-    menu: voiceMenuTitles(q),
   })) {
     const hash = sha1Hex(item.text);
     entries.push({ key, itemId: item.id, label: item.label, text: item.text, hash, path: `/v1/${VOICE}/${hash}.m4a` });

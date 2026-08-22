@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useSyncExternalStore } from "react";
 import {
   RATES,
+  choose,
   cycleRate,
   ensureVoices,
   getServerSnapshot,
@@ -30,7 +31,10 @@ import {
 /**
  * The global player bar, mounted in the root layout. It stays mounted across
  * client-side navigation, so reading keeps going while you move between pages.
- * Renders nothing when there is no active queue.
+ * When a study listen ends, the bar turns into the tappable "What next?"
+ * panel (status "choosing"): the guaranteed continuation on every browser,
+ * with voice replies as optional sugar where recognition exists. Renders
+ * nothing when there is no active queue.
  */
 export default function SpeechPlayer() {
   const speech = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
@@ -49,8 +53,53 @@ export default function SpeechPlayer() {
 
   const item = speech.queue[speech.index];
   const playing = speech.status === "playing";
-  const pct = ((speech.index + 1) / speech.queue.length) * 100;
+  const pct = speech.status === "choosing" ? 100 : ((speech.index + 1) / speech.queue.length) * 100;
   const rateLabel = RATES.find((r) => r.value === speech.rate)?.label ?? "Normal";
+
+  if (speech.status === "choosing") {
+    return (
+      <>
+        <div aria-hidden className="h-[calc(8rem+env(safe-area-inset-bottom))]" />
+        <div
+          className="fixed inset-x-0 bottom-0 z-40 border-t border-gold/40 bg-gold-wash/95 backdrop-blur-sm"
+          style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+        >
+          <div className="h-[3px] w-full bg-line">
+            <div className="h-full bg-gold" style={{ width: "100%" }} />
+          </div>
+          <div className="mx-auto max-w-3xl px-4 py-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-deep">
+              You may wonder…
+            </p>
+            <div className="mt-2.5 flex flex-wrap items-center gap-2">
+              {speech.choices.map((c, i) => (
+                <button
+                  key={c.slug}
+                  type="button"
+                  onClick={() => choose(i)}
+                  className="flex min-w-0 items-center gap-2 rounded-full border border-line bg-surface px-4 py-2 text-left transition-colors hover:border-gold/60 hover:text-gold-deep"
+                >
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold text-[11px] font-semibold text-parchment">
+                    {i + 1}
+                  </span>
+                  <span className="truncate font-display text-[14px] font-medium text-ink">
+                    {c.label}
+                  </span>
+                </button>
+              ))}
+              <button
+                type="button"
+                onClick={stop}
+                className="ml-auto shrink-0 rounded-full border border-line bg-surface px-4 py-2 text-[12px] font-semibold text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
+              >
+                End here
+              </button>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   const ctl =
     "flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-cream hover:text-gold-deep";

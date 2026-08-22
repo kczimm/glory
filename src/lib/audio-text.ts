@@ -45,8 +45,6 @@ export interface StudyItemsOptions {
   outroTargetId?: string;
   /** resolves a raises slug to its question title for the outro */
   resolveTitle?: (slug: string) => string | null;
-  /** up to 3 question titles for the hands-free "keep going" menu */
-  menu?: string[];
 }
 
 // ---- normalization and chunking -------------------------------------------
@@ -285,29 +283,7 @@ export function studyItems(
     }
   }
 
-  // The hands-free menu: name the listening options so a busy listener can
-  // answer "keep going / one / two / three / stop" without touching the
-  // phone. Only included when the app decides to support it (see reply.ts);
-  // browsers without recognition simply omit this chunk and end gracefully.
-  const menuChunk = speechMenuItem(opts?.menu ?? [], opts?.outroTargetId);
-  if (menuChunk) out.push(menuChunk);
   return out;
-}
-
-/**
- * The single spoken chunk that names the hands-free "keep going" options, or
- * null when the menu is empty. Shared with the server-side queue builders so
- * prebuilt and inline queues stay byte-identical.
- */
-export function speechMenuItem(menu: string[], targetId?: string): AudioChunk | null {
-  if (menu.length === 0) return null;
-  const text =
-    menu.length === 1
-      ? "To keep going, say continue. If we don't hear you, this ends here."
-      : menu.length === 2
-        ? `To keep going, say one for ${menu[0]}, or two for ${menu[1]}. If we don't hear you, this ends here.`
-        : `To keep going, say one for ${menu[0]}, two for ${menu[1]}, or three for ${menu[2]}. If we don't hear you, this ends here.`;
-  return { id: "outro-menu", targetId, label: "Keep going?", text };
 }
 
 // ---- hashing ---------------------------------------------------------------

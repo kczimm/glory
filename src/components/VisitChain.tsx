@@ -1,10 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import type { SpeechItem } from "@/lib/speech";
 import {
+  choose,
   playPassage,
+  presentChoices,
   registerContinuation,
   stop,
 } from "@/lib/speech";
@@ -14,19 +16,22 @@ import { listenForReply, replySupported } from "@/lib/reply";
  * Forward chaining for the question page: whichever entry point the listener
  * used (chapter 1, 2, 3, or the study), the visit plays forward from there.
  * Each passage's queue registers a continuation into the next passage, and
- * the last passage continues into the study, which closes the visit with an
- * outro + a hands-free "keep going" menu.
+ * the last passage continues into the study, which closes the visit with a
+ * visible "What next?" menu in the player bar.
  *
  * Every queue is prebuilt on the server (it needs verse text) and arrives as
  * serializable props: this component only wires the playback graph together.
  *
- * On browsers with speech recognition (Chrome/Android), the study's own
- * continuation is not a fixed next queue but the reply listener: when the
- * outro asks the question and the listener answers "one / two / three / keep
- * going / stop", we either route into the chosen next question's visit
- * (chapters -> study -> outro -> menu, indefinitely) or end gracefully.
- * Without recognition this listener isn't registered and the visit simply
- * ends after the outro, exactly as before.
+ * The study's continuation is always the visual menu (`presentChoices`): it
+ * needs no microphone and no user gesture, so it works on every browser,
+ * including iOS Safari where arming recognition mid-listen fails. Where
+ * speech recognition genuinely works (desktop Chrome/Android), a spoken
+ * "one / two / three / stop" rides on top as progressive enhancement;
+ * silence, errors, or timeouts simply leave the visual panel up instead of
+ * ending the visit dead. Picking an option navigates to that question (so
+ * the page matches the audio) and starts its first chapter or study queue;
+ * from there the new visit chains forward under its own VisitChain,
+ * indefinitely.
  *
  * Renders nothing. Registrations are keyed by the exact sourceIds the
  * ListenButtons use, so the player bar, chapter readers, and follow-along
@@ -37,20 +42,15 @@ import { listenForReply, replySupported } from "@/lib/reply";
 export interface ChainQueue {
   sourceId: string;
   items: SpeechItem[];
-  /**
-   * The optional hands-free "keep going" chunk, appended by the client only
-   * when speech recognition is available.
-   */
-  menuChunk: SpeechItem | null;
 }
 
 export interface ChainOption {
   slug: string;
-  /** the spoken label for the hands-free menu ("say one for …") */
+  /** the choice label shown in the player-bar "What next?" panel */
   label: string;
   /** prebuilt queue for the option's first chapter, if it has passages */
   firstChapter: ChainQueue | null;
-  /** prebuilt study queue (with its own hands-free menu chunk) */
+  /** prebuilt study queue for the option */
   study: ChainQueue | null;
 }
 
@@ -65,20 +65,6 @@ export default function VisitChain({
   options: ChainOption[];
 }) {
   const router = useRouter();
-  const handsfree = replySupported();
-
-  // Append each queue's hands-free "keep going" chunk only when speech
-  // recognition exists; browsers without it end gracefully after the outro.
-  const withMenu = useCallback(
-    (q: ChainQueue): SpeechItem[] =>
-      handsfree && q.menuChunk ? [...q.items, q.menuChunk] : q.items,
-    [handsfree]
-  );
-
-  const effectiveSegments = useMemo<ChainQueue[]>(
-    () => segments.map((s) => ({ ...s, items: withMenu(s) })),
-    [segments, withMenu]
-  );
 
   useEffect(() => {
     const unsub: Array<() => void> = [];
@@ -86,7 +72,7 @@ export default function VisitChain({
     let cancelReply: (() => void) | null = null;
 
     // Chapter -> next chapter -> study progression.
-    const segs = effectiveSegments;
+    const segs = segments;
     for (let i = 0; i < segs.length - 1; i++) {
       const next = segs[i + 1];
       unsub.push(
@@ -96,21 +82,24 @@ export default function VisitChain({
       );
     }
 
-    // Study end -> hands-free "keep going" (only when recognition exists and
-    // there is at least one next question to offer).
-    if (handsfree && options.length > 0) {
+    // Study end -> the "What next?" panel (when there is at least one next
+    // question to offer). Voice replies are layered on only where
+    // recognition exists; nothing is gated on them.
+    if (options.length > 0) {
       unsub.push(
         registerContinuation(`study:${slug}`, () => {
           if (disposed) return;
-          cancelReply = listenForReply({
-            count: options.length,
-            onResult: (r) => {
-              if (disposed) return;
-              if (r.kind !== "choose") {
-                stop();
+          presentChoices(
+            options.map((o) => ({ slug: o.slug, label: o.label })),
+            (index) => {
+              if (disposed) {
+                // The page unmounted between presenting the choices and the
+                // pick (e.g. manual navigation): choose() has already reset
+                // the panel, so just decline; do not hijack whatever is on
+                // screen now with this page's options.
                 return;
               }
-              const next = options[r.index];
+              const next = options[index];
               if (!next) {
                 stop();
                 return;
@@ -121,9 +110,21 @@ export default function VisitChain({
               // under the destination page's own VisitChain.
               router.push(`/questions/${next.slug}`);
               const queue = next.firstChapter ?? next.study;
-              if (queue) playPassage(queue.sourceId, withMenu(queue));
+              if (queue) playPassage(queue.sourceId, queue.items);
             },
-          });
+          );
+          if (replySupported()) {
+            cancelReply = listenForReply({
+              count: options.length,
+              onResult: (r) => {
+                if (disposed) return;
+                // An explicit spoken "stop" ends deliberately; silence or an
+                // error falls through to the visual panel, which stays up.
+                if (r.kind === "choose") choose(r.index);
+                else if (r.kind === "stop") stop();
+              },
+            });
+          }
         })
       );
     }
@@ -133,7 +134,7 @@ export default function VisitChain({
       cancelReply?.();
       unsub.forEach((u) => u());
     };
-  }, [effectiveSegments, options, handsfree, router, slug, withMenu]);
+  }, [segments, options, router, slug]);
 
   return null;
 }

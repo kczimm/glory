@@ -1,19 +1,17 @@
 /**
- * Tiny speech-recognition wrapper for the hands-free "keep going" prompt
- * that closes each study listen on supporting browsers.
+ * Tiny speech-recognition wrapper for the spoken replies layered on top of
+ * the end-of-study "What next?" panel (see VisitChain / presentChoices).
  *
- * Progressive enhancement: browsers without the Web Speech recognition API
- * (iOS Safari) never include the menu chunk or register the reply listener,
- * so playback ends gracefully exactly as before. Recognition also requires a
- * secure context (https or localhost), so LAN dev over plain http won't arm
- * it either.
+ * This is progressive enhancement only: nothing is gated on it. The visual
+ * panel in the player bar is the guaranteed continuation on every browser;
+ * where recognition genuinely works (desktop Chrome/Android, secure
+ * contexts), a spoken choice rides on top:
  *
- * The reply is a spoken choice from the outro menu:
  *   - "continue" / "keep going" / "1" / "one"      -> option 1
  *   - "2" / "two"                                  -> option 2
  *   - "3" / "three"                                -> option 3
  *   - "stop" / "end" / "no"                        -> stop deliberately
- *   - nothing said within the budget               -> silence (stop)
+ *   - nothing said within the budget              -> silence; the panel stays up
  */
 
 export type ReplyResult =
@@ -43,7 +41,11 @@ function recognitionCtor(): RecognitionCtor | null {
   return (ctor as RecognitionCtor | undefined) ?? null;
 }
 
-/** True when the device could understand a spoken reply. */
+/**
+ * True when this device could understand a spoken reply at all. Callers use
+ * it only to decide whether to bother arming a listener; the visual panel
+ * works either way.
+ */
 export function replySupported(): boolean {
   return recognitionCtor() !== null;
 }
@@ -86,9 +88,11 @@ export function parseReply(raw: string): number | "stop" | null {
 }
 
 /**
- * Listen for a spoken choice after the outro menu. Chrome/Android end each
- * recognition session after ~6s of silence, so the session is re-armed while
- * inside the time budget. Returns a cancel function; cancel reports silence.
+ * Listen briefly for a spoken choice while the "What next?" panel is up.
+ * Chrome/Android end each recognition session after ~6s of silence, so the
+ * session is re-armed while inside the time budget. Returns a cancel
+ * function. Silence and errors resolve to `{ kind: "silence" }`, which the
+ * caller treats as "leave the visual panel alone".
  */
 export function listenForReply(opts: {
   count: number;

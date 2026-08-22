@@ -18,7 +18,10 @@
  * Continuations: a source may register a forward continuation; when its
  * queue ends, the next queue plays after a short beat of silence (visit
  * chaining: chapter 2 -> chapter 3 -> study). Stopping, pausing, or seeking
- * during the beat cancels the handoff.
+ * during the beat cancels the handoff. A continuation may instead present
+ * choices (`presentChoices`): playback ends but the bar becomes a tappable
+ * "What next?" menu (status "choosing"), so the visit always has a visible
+ * next step even where voice replies are unavailable.
  *
  * Exposed as a tiny external store for React `useSyncExternalStore`,
  * mirroring the journey store: components call the actions below, then
@@ -51,7 +54,13 @@ export interface SpeechItem {
   targetId?: string;
 }
 
-export type SpeechStatus = "idle" | "playing" | "paused";
+export type SpeechStatus = "idle" | "playing" | "paused" | "choosing";
+
+/** One tappable "what next?" option shown when a study listen ends. */
+export interface SpeechChoice {
+  slug: string;
+  label: string;
+}
 
 export interface VoiceInfo {
   uri: string;
@@ -69,6 +78,8 @@ export interface SpeechState {
   rate: number;
   voiceURI: string | null;
   voices: VoiceInfo[];
+  /** non-empty exactly while status is "choosing" */
+  choices: SpeechChoice[];
 }
 
 export interface RateOption {
@@ -126,10 +137,13 @@ const INITIAL: SpeechState = {
   rate: 1,
   voiceURI: null,
   voices: [],
+  choices: [],
 };
 
 let state: SpeechState = INITIAL;
 let session = 0;
+/** Routes a choice tap (or an accepted spoken reply) to the page that asked. */
+let chooseHandler: ((index: number) => void) | null = null;
 let voiceLoadStarted = false;
 /** Consecutive file-sink misses; a queue gives up on files after a couple. */
 let audioMisses = 0;
@@ -442,7 +456,38 @@ function stopInternal() {
   stopEngines();
   currentWatch?.();
   currentWatch = null;
-  commit({ ...state, status: "idle", sourceId: null, queue: [], index: 0 });
+  chooseHandler = null;
+  commit({ ...state, status: "idle", sourceId: null, queue: [], index: 0, choices: [] });
+}
+
+/**
+ * End a queue by offering the listener the next questions instead of going
+ * silent. The player bar turns into a tappable "What next?" panel (this
+ * works on every browser, no microphone needed); where speech recognition
+ * exists a spoken "one / two / stop" rides on top via `choose`. `onChoose`
+ * typically navigates to the picked question and starts its queue.
+ */
+export function presentChoices(choices: SpeechChoice[], onChoose: (index: number) => void) {
+  if (!synth()) return;
+  if (!choices.length) {
+    stopInternal();
+    return;
+  }
+  session++;
+  stopEngines();
+  currentWatch?.();
+  currentWatch = null;
+  chooseHandler = onChoose;
+  commit({ ...state, status: "choosing", choices });
+}
+
+/** Pick the option at `index` (a tap on the panel, or an accepted reply). */
+export function choose(index: number) {
+  const handler = chooseHandler;
+  if (!handler) return;
+  chooseHandler = null;
+  commit({ ...state, status: "idle", sourceId: null, queue: [], index: 0, choices: [] });
+  handler(index);
 }
 
 // ---- actions --------------------------------------------------------------
@@ -457,7 +502,11 @@ export function playPassage(sourceId: string, items: SpeechItem[]) {
   audioMisses = 0;
   session++;
   if (wasActive) stopEngines();
-  commit({ ...state, status: "playing", sourceId, queue: items, index: 0 });
+  // Starting a queue is an exit from "choosing" too (the listener picked a
+  // chapter or study by hand while the panel was up): drop any pending
+  // choice handler so a late spoken reply cannot hijack this new queue.
+  chooseHandler = null;
+  commit({ ...state, status: "playing", sourceId, queue: items, index: 0, choices: [] });
   if (wasActive) speakAfterCancel(0, session);
   else playChunkAt(0, session);
 }
@@ -481,7 +530,7 @@ export function stop() {
 }
 
 export function seek(i: number) {
-  if (state.status === "idle" || !state.queue.length) return;
+  if (state.status === "idle" || state.status === "choosing" || !state.queue.length) return;
   const clamped = Math.max(0, Math.min(state.queue.length - 1, i));
   const wasPlaying = state.status === "playing";
   session++;

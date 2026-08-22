@@ -1,6 +1,6 @@
 import "server-only";
 import { verses, chapters } from "./scripture";
-import { canonicalBook, chapterItems, filterFocus, speechMenuItem, studyItems } from "../lib/audio-text";
+import { canonicalBook, chapterItems, filterFocus, studyItems } from "../lib/audio-text";
 import type { AudioChunk } from "../lib/audio-text";
 import { questions } from "./questions";
 import { connections } from "./connections";
@@ -111,9 +111,11 @@ export function categoryOf(q: Question): Category | undefined {
 
 
 /**
- * Up to three questions for the hands-free "keep going" menu at the end of
- * a study listen: the study's own raises first (the journey continues here);
- * falling back to the next in its trail when nothing is raised in writing.
+ * Up to three questions offered in the "What next?" panel when a study
+ * listen ends (visitChainData's options, and the spoken replies layered on
+ * top where recognition works): the study's own raises first (the journey
+ * continues here); falling back to the next in its trail when nothing is
+ * raised in writing.
  */
 export function voiceMenu(q: Question): Question[] {
   const raised = resolveQuestions(q.raises).slice(0, 3);
@@ -200,23 +202,16 @@ export function citedVersesBySlug(): Record<string, string[]> {
 export interface ChainQueue {
   sourceId: string;
   items: AudioChunk[];
-  /**
-   * The optional hands-free "keep going" chunk. The client appends it only
-   * when speech recognition is available, so browsers without it end the
-   * visit gracefully after the outro.
-   */
-  menuChunk: AudioChunk | null;
 }
 
 function chapterQueue(book: string, chapter: number, focus?: string): ChainQueue {
   return {
     sourceId: `chapter:${book} ${chapter}`,
     items: chapterItems(book, chapter, getChapterFocus(book, chapter, focus) ?? []),
-    menuChunk: null,
   };
 }
 
-/** Study queue WITHOUT the menu chunk embedded; it travels separately. */
+/** Study queue; the visit's continuation is the player-bar choices panel. */
 function studyQueue(q: Question, opts: { cue?: string } = {}): ChainQueue {
   const items = studyItems(q, getPassageText, {
     cue: opts.cue,
@@ -226,23 +221,19 @@ function studyQueue(q: Question, opts: { cue?: string } = {}): ChainQueue {
   return {
     sourceId: `study:${q.slug}`,
     items,
-    menuChunk: speechMenuItem(voiceMenu(q).map((m) => m.question), "raises"),
   };
 }
 
-/** Props for StudyListen: the study queue plus the optional menu chunk. */
-export function studyListenData(
-  q: Question
-): { slug: string; items: AudioChunk[]; menuChunk: AudioChunk | null } {
+/** Props for StudyListen: the study queue. */
+export function studyListenData(q: Question): { slug: string; items: AudioChunk[] } {
   const queue = studyQueue(q);
-  return { slug: q.slug, items: queue.items, menuChunk: queue.menuChunk };
+  return { slug: q.slug, items: queue.items };
 }
 
 /** Props for VisitChain: every queue the visit may play, fully prebuilt. */
 export function visitChainData(q: Question): {
   slug: string;
   segments: ChainQueue[];
-  menuChunk: AudioChunk | null;
   options: {
     slug: string;
     label: string;
@@ -258,7 +249,6 @@ export function visitChainData(q: Question): {
   return {
     slug: q.slug,
     segments,
-    menuChunk: speechMenuItem(voiceMenu(q).map((m) => m.question), "raises"),
     options: voiceMenu(q).map((o) => {
       const first = o.passages[0];
       return {
