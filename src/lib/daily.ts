@@ -14,6 +14,21 @@ export interface DailyPick {
   verseText: string | null;
 }
 
+/**
+ * A surprise pick: any question at all (minus today's daily one, so a reader
+ * who finished it lands somewhere fresh), for people who don't want to browse
+ * but just want to get into a study.
+ */
+export function randomPick(excludeSlugs: string[] = []): Question | null {
+  if (!questions.length) return null;
+  const skip = new Set(excludeSlugs);
+  const today = dailyPick();
+  if (today) skip.add(today.question.slug);
+  let pool = questions.filter((q) => !skip.has(q.slug));
+  if (!pool.length) pool = questions;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
 export function dailyPick(now: number = Date.now()): DailyPick | null {
   if (!questions.length) return null;
   const entries = questions.filter((q) => q.followsFrom.length === 0);

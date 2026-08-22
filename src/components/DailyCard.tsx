@@ -2,6 +2,7 @@ import Link from "next/link";
 import { dailyPick } from "@/lib/daily";
 import { verseSlug } from "@/data";
 import { categoryOf } from "@/data/server";
+import RandomLink from "@/components/RandomLink";
 
 /**
  * The "Today" card on the home page: one question and its key verse,
@@ -41,6 +42,9 @@ export default function DailyCard() {
           >
             Explore this question →
           </Link>
+          <RandomLink className="text-[13.5px] font-medium text-gold-deep underline-offset-4 transition-colors hover:text-ink hover:underline">
+            Already been here today? Surprise me
+          </RandomLink>
           {category && (
             <span className="text-[12.5px] uppercase tracking-[0.14em] text-ink-faint">
               From the {category.title} trail

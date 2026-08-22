@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { Category, QuestionTeaser } from "@/data/types";
 import QuestionCard from "@/components/QuestionCard";
+import RandomLink from "@/components/RandomLink";
 
 const ALL = "all";
 
@@ -78,7 +79,12 @@ export default function QuestionsIndex({
           Each question is answered by reading the Word itself: whole chapters,
           and study points grounded in specific verses. And what you read will
           raise the next question. With {total} questions now, filter to find
-          yours.
+          yours. Or don&apos;t look for anything at all:{" "}
+          <RandomLink className="font-medium text-gold-deep underline-offset-4 transition-colors hover:text-ink hover:underline">
+            take a surprise question
+          </RandomLink>
+          .
+          .
         </p>
       </header>
 
