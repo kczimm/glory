@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useSearch } from "@/lib/useSearch";
@@ -9,9 +9,21 @@ function SearchView() {
   const sp = useSearchParams();
   const [q, setQ] = useState(sp.get("q") ?? "");
 
+  const inputRef = useRef<HTMLInputElement>(null);
+
   const term = q.trim();
   const { verses, questions } = useSearch(term, 40, 40);
   const empty = term.length > 0 && verses.length === 0 && questions.length === 0;
+
+  // Pre-focus the box on pointer devices only. On phones an immediate focus
+  // opens the keyboard before the results exist, and the browser's scroll
+  // offset desyncs from the document as it grows, leaving the bottom of the
+  // results unreachable.
+  useEffect(() => {
+    if (!window.matchMedia("(pointer: coarse)").matches) {
+      inputRef.current?.focus();
+    }
+  }, []);
 
   return (
     <div className="mx-auto max-w-3xl px-5 pb-20 pt-12">
@@ -37,7 +49,7 @@ function SearchView() {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Search for any word or phrase… e.g. “born of water”"
-          autoFocus
+          ref={inputRef}
           className="w-full bg-transparent text-[15px] text-ink outline-none placeholder:text-ink-faint"
           aria-label="Search the Bible"
         />
