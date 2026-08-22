@@ -2,6 +2,7 @@ import { getPassageText } from "@/data/server";
 import { verseSlug, getConnections } from "@/data";
 import Link from "next/link";
 import VerseConnections, { type ConnectionRowData } from "./VerseConnections";
+import MemorizeButton from "./MemorizeButton";
 
 /**
  * A scripture callout: the reference, the exact text (WEB), and any
@@ -37,6 +38,9 @@ export default function VerseCard({ verse }: { verse: string }) {
           >
             WEB
           </Link>
+        </span>
+        <span className="ml-2 align-middle">
+          <MemorizeButton verse={verse} />
         </span>
       </figcaption>
       <VerseConnections verse={verse} rows={rows} />

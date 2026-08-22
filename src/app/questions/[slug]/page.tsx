@@ -19,6 +19,7 @@ import JourneyBreadcrumb from "@/components/JourneyBreadcrumb";
 import StudyListen from "@/components/StudyListen";
 import VisitChain from "@/components/VisitChain";
 import ShareButton from "@/components/ShareButton";
+import HoldAllButton from "@/components/HoldAllButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 interface Props {
@@ -259,6 +260,9 @@ export default async function QuestionPage({ params }: Props) {
           <h2 className="mt-2 font-display text-2xl font-medium text-ink sm:text-3xl">
             Verses to meditate on
           </h2>
+          <div className="mt-4">
+            <HoldAllButton verses={question.keyVerses} />
+          </div>
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             {question.keyVerses.map((ref) => (
               <VerseCard key={ref} verse={ref} />

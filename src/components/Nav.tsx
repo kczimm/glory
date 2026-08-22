@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import MemorizeNavLink from "./MemorizeNavLink";
 
 export default function Nav() {
   return (
@@ -50,6 +51,7 @@ export default function Nav() {
           >
             Questions
           </Link>
+          <MemorizeNavLink />
           <ThemeToggle />
           <Link
             href="/"
