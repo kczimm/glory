@@ -91,9 +91,10 @@ export default function MemorizePage() {
     gradeVerse(card.ref, g);
     if (g === 0 || g === 1) {
       // Needs another pass: re-queue from the store so the card carries its
-      // updated schedule, at the back of today's queue.
+      // updated schedule. "Again" retries immediately (front of queue);
+      // "Almost" goes to the back so other verses come up first.
       const updated = getSnapshot().find((c) => c.ref === card.ref) ?? { ...card };
-      setQueue([...session.slice(1), updated]);
+      setQueue(g === 0 ? [updated, ...session.slice(1)] : [...session.slice(1), updated]);
     } else {
       nextCard();
     }
