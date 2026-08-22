@@ -3,22 +3,27 @@
   "version": "0.1.0",
   "description": "Question-driven Scripture study: come with a question, read whole chapters, and let the Word raise the next one.",
   "private": true,
+  "engines": {
+    "node": ">=22.6"
+  },
   "scripts": {
     "dev": "next dev",
     "dev:lan": "next dev -H 0.0.0.0 -p 3100",
-    "build": "next build",
+    "build": "node scripts/audio-check.mjs && next build",
     "start": "next start",
     "start:lan": "next start -H 0.0.0.0 -p 3100",
     "lint": "eslint",
     "audio:manifest": "node scripts/audio-manifest.mjs",
     "audio:generate": "node scripts/generate-audio.mjs",
+    "audio:check": "node scripts/audio-check.mjs",
+    "audio:generate:qwen": ".venv/bin/python scripts/generate-audio-qwen.py",
     "test:search": "node --experimental-loader ./scripts/search-check-loader.mjs scripts/search-check.mjs"
   },
   "dependencies": {
     "next": "16.3.1",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-      "server-only": "^0.0.1"
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
