@@ -47,3 +47,14 @@ scripts/packs/
 # generated audio and catalog
 /audio-out/
 /audio-manifest.json
+
+# reference voice clips (keep the README, ignore the wavs)
+/voices/*.wav
+/voices/*.mp3
+/voices/*.m4a
+
+# python backend artifacts (Qwen TTS)
+/.venv/
+__pycache__/
+.ruff_cache/
+*.pyc

@@ -19,7 +19,14 @@ const CAP = 60;
 function read(): JourneyEntry[] {
   try {
     const raw = localStorage.getItem(KEY);
-    return raw ? (JSON.parse(raw) as JourneyEntry[]) : [];
+    if (!raw) return [];
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    // Guard against corrupted or wrong-shaped data: keep only valid entries.
+    return parsed.filter(
+      (e): e is JourneyEntry =>
+        typeof e === "object" && e !== null && typeof (e as JourneyEntry).slug === "string"
+    );
   } catch {
     return [];
   }

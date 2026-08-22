@@ -22,14 +22,22 @@ export interface ApiResults {
   questions: StudyHit[];
 }
 
+export type SearchStatus = "idle" | "loading" | "ready" | "error";
+
 const EMPTY: ApiResults = { verses: [], questions: [] };
+
+export interface SearchState extends ApiResults {
+  status: SearchStatus;
+}
 
 /**
  * Debounced, abortable search against /api/search. The Bible index lives on
- * the server; the browser only ever sees the matched slice.
+ * the server; the browser only ever sees the matched slice. `status` lets
+ * callers show pending and failure UI instead of a silently empty dropdown.
  */
-export function useSearch(term: string, verseLimit = 5, qLimit = 4): ApiResults {
+export function useSearch(term: string, verseLimit = 5, qLimit = 4): SearchState {
   const [results, setResults] = useState<ApiResults>(EMPTY);
+  const [status, setStatus] = useState<SearchStatus>("idle");
 
   useEffect(() => {
     const ctrl = new AbortController();
@@ -38,17 +46,25 @@ export function useSearch(term: string, verseLimit = 5, qLimit = 4): ApiResults 
     const timer = window.setTimeout(async () => {
       if (!term.trim()) {
         setResults(EMPTY);
+        setStatus("idle");
         return;
       }
+      setStatus("loading");
       try {
         const params = new URLSearchParams({ q: term.trim() });
         if (verseLimit !== 8) params.set("verses", String(verseLimit));
         if (qLimit !== 6) params.set("studies", String(qLimit));
         const res = await fetch(`/api/search?${params}`, { signal: ctrl.signal });
-        if (!res.ok) return;
+        if (!res.ok) {
+          setStatus("error");
+          return;
+        }
         setResults((await res.json()) as ApiResults);
-      } catch {
-        /* aborted or offline: keep previous results */
+        setStatus("ready");
+      } catch (err) {
+        // Aborted keystrokes are normal; only real failures surface as errors.
+        if ((err as Error)?.name === "AbortError") return;
+        setStatus("error");
       }
     }, term.trim() ? 140 : 0);
     return () => {
@@ -57,5 +73,5 @@ export function useSearch(term: string, verseLimit = 5, qLimit = 4): ApiResults 
     };
   }, [term, verseLimit, qLimit]);
 
-  return results;
+  return { ...results, status };
 }

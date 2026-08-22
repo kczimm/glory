@@ -24,18 +24,31 @@ export interface Usage {
   question: string;
 }
 
+/**
+ * Parsed citation ranges per study, built once: every question's key verses
+ * and study-point citations are parsed a single time instead of on every
+ * `questionsUsing` call (which the graph pages call inside loops).
+ */
+let citationIndex: { slug: string; question: string; cited: ParsedRef[] }[] | null = null;
+function citations(): { slug: string; question: string; cited: ParsedRef[] }[] {
+  if (citationIndex) return citationIndex;
+  citationIndex = questions.map((q) => ({
+    slug: q.slug,
+    question: q.question,
+    cited: [...q.keyVerses, ...q.points.flatMap((p) => p.verses)].flatMap(
+      (r) => parseRef(r) ?? []
+    ),
+  }));
+  return citationIndex;
+}
+
 /** The studies whose key verses / study points cite this verse (or a range overlapping it). */
 export function questionsUsing(ref: string): Usage[] {
   const target = parseRef(ref);
   if (!target) return [];
-  const out: Usage[] = [];
-  for (const q of questions) {
-    const cited = [...q.keyVerses, ...q.points.flatMap((p) => p.verses)];
-    if (cited.some((r) => { const p = parseRef(r); return p && overlap(p, target); })) {
-      out.push({ slug: q.slug, question: q.question });
-    }
-  }
-  return out;
+  return citations()
+    .filter(({ cited }) => cited.some((p) => overlap(p, target)))
+    .map(({ slug, question }) => ({ slug, question }));
 }
 
 /** The edges (from other verses) that point TO this verse. */

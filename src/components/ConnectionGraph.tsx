@@ -209,11 +209,7 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
   }
 
   const nodes = [...nodesMap.values()];
-  const edges = useMemo(
-    () => visibleEdges(),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [nodes.length, kinds]
-  );
+  const edges = visibleEdges();
   const selEdges = selected ? edges.filter((e) => e.source === selected || e.target === selected) : [];
   const selQuestions = selected ? (graph.usages[selected] ?? []) : [];
 

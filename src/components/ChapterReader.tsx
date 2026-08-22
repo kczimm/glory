@@ -91,6 +91,7 @@ export default function ChapterReader({
           onClick={() => setOpened((o) => !o)}
           className="flex min-w-0 flex-1 items-center justify-between gap-3 text-left"
           aria-expanded={open}
+          aria-controls={`reader-${sourceId.replace(/[^a-z0-9]+/gi, "-")}`}
         >
           <div>
             <p className="font-display text-lg font-medium text-ink">
@@ -120,6 +121,7 @@ export default function ChapterReader({
       {open && (
         <div
           ref={listRef}
+          id={`reader-${sourceId.replace(/[^a-z0-9]+/gi, "-")}`}
           className="reader-scroll max-h-[420px] overflow-y-auto border-t border-line px-6 py-5"
         >
           {verses.map((v) => {

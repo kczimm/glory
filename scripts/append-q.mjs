@@ -10,7 +10,6 @@ const head = s.slice(0, idx).replace(/,\s*$/, "\n");
 
 // Build a pretty TS object literal.
 function obj(o, indent) {
-  const pad = " ".repeat(indent);
   const pad2 = " ".repeat(indent + 2);
   const lines = [];
   for (const k of Object.keys(o)) {
