@@ -371,7 +371,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 1:1", "John 1:14", "Philippians 2:9-11", "Hebrews 1:3", "Mark 10:45"],
-    raises: ["is-jesus-really-god", "why-did-jesus-have-to-die", "what-does-it-mean-that-jesus-is-the-son-of-god", "why-did-jesus-call-himself-son-of-man", "what-did-jesus-teach-about-the-kingdom-of-god"],
+    raises: ["is-jesus-really-god", "why-did-jesus-have-to-die", "what-does-it-mean-that-jesus-is-the-son-of-god", "why-did-jesus-call-himself-son-of-man", "what-did-jesus-teach-about-the-kingdom-of-god", "what-does-scripture-show-us-about-mary"],
     followsFrom: ["who-is-the-father"],
     related: ["who-is-the-holy-spirit"],
     planned: [],
@@ -2230,7 +2230,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 6:9-13", "Philippians 4:6-7", "Romans 8:26-27", "Luke 11:9"],
-    raises: ["what-does-the-lords-prayer-teach", "does-god-hear-my-prayers", "what-is-fasting"],
+    raises: ["what-does-the-lords-prayer-teach", "does-god-hear-my-prayers", "what-is-fasting", "to-whom-do-we-direct-our-prayers"],
     followsFrom: [],
     related: ["who-is-the-father", "what-should-i-do-now-that-im-saved"],
     planned: ["What is the relationship between prayer and giving?"],
@@ -2404,7 +2404,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Timothy 3:16-17", "Matthew 24:35", "2 Peter 1:21", "Psalm 19:7"],
-    raises: ["how-should-i-read-the-bible", "is-the-whole-bible-about-jesus", "why-do-bible-translations-differ", "how-was-the-bible-written-down", "how-do-we-know-which-books-belong-in-the-bible"],
+    raises: ["how-should-i-read-the-bible", "is-the-whole-bible-about-jesus", "why-do-bible-translations-differ", "how-was-the-bible-written-down", "how-do-we-know-which-books-belong-in-the-bible", "did-jesus-treat-scripture-as-final"],
     followsFrom: [],
     related: [],
     planned: [],
@@ -2666,7 +2666,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Corinthians 5:8", "Philippians 1:21", "Luke 23:43", "Hebrews 9:27"],
-    raises: ["what-is-the-resurrection", "will-jesus-return-literally", "what-is-heaven-like"],
+    raises: ["what-is-the-resurrection", "will-jesus-return-literally", "what-is-heaven-like", "is-there-a-second-chance-after-death"],
     followsFrom: ["signs-before-jesus-returns"],
     related: ["where-is-jesus-now", "what-is-the-gospel"],
     planned: [],
@@ -4386,7 +4386,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Corinthians 5:21", "Romans 4:3", "Philippians 3:9", "Isaiah 53:6", "Romans 5:1"],
-    raises: [],
+    raises: ["what-price-can-buy-forgiveness"],
     followsFrom: ["what-is-justification", "faith-or-works", "what-is-grace"],
     related: ["what-is-justification", "faith-or-works", "how-can-i-be-saved", "what-is-grace"],
     planned: ["If I am already credited righteous, why does obedience matter?"],
@@ -12353,7 +12353,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Timothy 3:2", "Acts 20:28", "1 Peter 5:2-3", "Titus 1:9", "Matthew 20:26-28"],
-    raises: ["what-is-a-healthy-church", "what-is-the-church", "what-is-church-discipline"],
+    raises: ["what-is-a-healthy-church", "what-is-the-church", "what-is-church-discipline", "what-authority-did-jesus-give-his-leaders"],
     followsFrom: ["what-is-a-healthy-church", "why-do-i-need-the-church"],
     related: ["what-is-a-healthy-church", "what-is-the-church", "why-do-i-need-the-church", "what-is-church-discipline"],
     planned: ["How do we choose and recognize good church leaders?"],
@@ -13461,6 +13461,793 @@ export const questions: Question[] = [
     related: ["does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man", "what-is-the-trinity"],
     planned: ["Why does Revelation call Jesus 'the beginning of God's creation'?"],
     order: 64,
+  },
+
+  {
+    slug: "did-jesus-treat-scripture-as-final",
+    question: "Did Jesus treat Scripture as the final authority?",
+    category: "word-of-god",
+    summary:
+      "Yes. At every decisive moment Jesus answered with Scripture: He met temptation three times with 'It is written,' He charged religious leaders with voiding God's word by their traditions, and He settled disputes by appealing to writings that 'can't be broken.' What held final authority for Jesus holds final authority for everyone who follows Him.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 4,
+        title: "It is written",
+        lookFor: "Three times the tempter comes, and three times Jesus answers with Scripture alone.",
+        focus: "1-11",
+      },
+      {
+        book: "Mark",
+        chapter: 7,
+        title: "Tradition against the commandment",
+        lookFor: "Human tradition set up beside God's word, and Jesus' verdict on which gives way.",
+        focus: "1-13",
+      },
+      {
+        book: "John",
+        chapter: 10,
+        title: "Scripture cannot be broken",
+        lookFor: "Jesus defends His claims by quoting Scripture and calling it final and unbreakable.",
+        focus: "31-39",
+      },
+    ],
+    points: [
+      {
+        heading: "Every answer begins with 'It is written'",
+        body:
+          "In the wilderness Jesus did not answer the tempter from His own authority as God the Son, though He had it. He answered as man, from Scripture: 'Man shall not live by bread alone, but by every word that proceeds out of the mouth of God.' Three times the sword came out, and each time it was the written word of God. If Jesus settled questions that way, His people have their pattern.",
+        verses: ["Matthew 4:4", "Matthew 4:7", "Matthew 4:10", "Deuteronomy 8:3"],
+      },
+      {
+        heading: "Tradition never outranks the word of God",
+        body:
+          "The Pharisees had built a body of tradition alongside Scripture, and Jesus judged it unsparingly: 'You set aside the commandment of God, and hold tightly to the tradition of men,' making the word of God void by the tradition they handed down. Whatever honors it claims, any teaching layered over Scripture must yield to Scripture or be condemned by it.",
+        verses: ["Mark 7:8", "Mark 7:9", "Mark 7:13", "Isaiah 29:13"],
+      },
+      {
+        heading: "Scripture cannot be broken",
+        body:
+          "When His enemies disputed who He was, Jesus ended the argument by quoting a psalm and observing that 'the Scripture can't be broken': what is written stands, down to the smallest stroke. He prayed, 'Sanctify them in your truth. Your word is truth,' and said heaven and earth would sooner pass away than its least letter fail.",
+        verses: ["John 10:35", "John 17:17", "Matthew 5:18"],
+      },
+      {
+        heading: "Even apostles are measured by it",
+        body:
+          "This final authority extends over every teacher, including the apostles themselves. The Berean Jews were called more noble than others precisely because they took Paul's preaching and examined the Scriptures daily to see whether those things were so. Paul himself wished an angel from heaven accursed if he preached another gospel than the one already given.",
+        verses: ["Acts 17:11", "Galatians 1:8-9", "1 Thessalonians 5:21"],
+      },
+    ],
+    keyVerses: ["Matthew 4:4", "Mark 7:13", "John 10:35", "Acts 17:11"],
+    raises: ["should-i-test-every-teaching-by-scripture", "how-should-i-read-the-bible"],
+    followsFrom: ["can-i-trust-the-bible"],
+    related: ["can-i-trust-the-bible", "how-should-i-read-the-bible", "how-do-we-know-which-books-belong-in-the-bible"],
+    planned: [],
+    order: 65,
+  },
+
+  {
+    slug: "should-i-test-every-teaching-by-scripture",
+    question: "Should I test every teaching by Scripture?",
+    category: "word-of-god",
+    summary:
+      "Yes, always. Scripture commends hearers who verify: the Bereans searched the Scriptures daily to check even an apostle's preaching, John commands testing every spirit, and Paul tells the church to test everything and hold fast to the good. No messenger, office, or title exempts anyone from the test.",
+    passages: [
+      {
+        book: "Acts",
+        chapter: 17,
+        title: "The noble Bereans",
+        lookFor: "They received the word eagerly and then examined the Scriptures daily to see if it was so.",
+        focus: "10-15",
+      },
+      {
+        book: "1 Thessalonians",
+        chapter: 5,
+        title: "Test everything",
+        lookFor: "Do not despise prophesying, but test all things and hold fast what is good.",
+        focus: "19-22",
+      },
+      {
+        book: "1 John",
+        chapter: 4,
+        title: "Test the spirits",
+        lookFor: "Many false prophets have gone out into the world; the test is what they say about Jesus.",
+        focus: "1-6",
+      },
+      {
+        book: "2 Timothy",
+        chapter: 3,
+        title: "Continue in what you learned",
+        lookFor: "The God-breathed Scriptures are the standard that equips for every good work.",
+        focus: "14-17",
+      },
+    ],
+    points: [
+      {
+        heading: "Noble hearers verify",
+        body:
+          "Luke stops to praise the Bereans, and notice why: not eagerness alone, but eagerness joined to examination. They listened to the apostle Paul with readiness and then went to the Scriptures daily to confirm his words. Faith is not credulity; believing the right things includes checking that they are the right things.",
+        verses: ["Acts 17:11-12", "John 5:39"],
+      },
+      {
+        heading: "Test everything, hold the good",
+        body:
+          "Paul commands the church to examine all teaching and cling only to what survives. John sharpens it further: 'don't believe every spirit, but test the spirits, whether they are of God,' because false prophets have gone out into the world. Jesus warns of wolves in sheep's clothing, recognizable by their fruit, which requires looking closely.",
+        verses: ["1 Thessalonians 5:20-21", "1 John 4:1", "Matthew 7:15"],
+      },
+      {
+        heading: "The standard is the written Word",
+        body:
+          "'Turn to the law and to the testimony!' Isaiah's rule stands: if teaching does not speak according to this word, it carries no light from God. The measure of a message is not the messenger's office, sincerity, miracles, or majority, but agreement with the God-breathed Scriptures, the sum of which is truth.",
+        verses: ["Isaiah 8:20", "2 Timothy 3:16-17", "Psalm 119:160"],
+      },
+      {
+        heading: "Correction done in love",
+        body:
+          "Testing is not a taste for quarrels. When Apollos taught accurately the things about Jesus but incompletely, Priscilla and Aquila took him aside and explained the way of God more carefully, and he grew. The Lord's servant corrects opponents gently, contending earnestly for the faith without becoming contentious in spirit.",
+        verses: ["Acts 18:26", "2 Timothy 2:24-25", "Jude 1:3"],
+      },
+    ],
+    keyVerses: ["Acts 17:11", "1 Thessalonians 5:21", "1 John 4:1", "Isaiah 8:20"],
+    raises: ["can-i-seek-god-on-my-own", "did-jesus-treat-scripture-as-final"],
+    followsFrom: ["did-jesus-treat-scripture-as-final", "how-should-i-read-the-bible"],
+    related: ["how-should-i-read-the-bible", "how-do-we-know-which-books-belong-in-the-bible"],
+    planned: ["What should I do when a teacher I respect contradicts Scripture?"],
+    order: 66,
+  },
+
+  {
+    slug: "do-i-need-a-priest-to-reach-god",
+    question: "Do I need a priest to reach God?",
+    category: "jesus-christ",
+    summary:
+      "There is one Mediator between God and men, the Man Christ Jesus, and through His one offering every believer may draw near directly and boldly. The torn veil says access is open; the royal priesthood says God's people minister to Him themselves. Christ is Priest enough for all who come to God through Him.",
+    passages: [
+      {
+        book: "Hebrews",
+        chapter: 10,
+        title: "One offering, open access",
+        lookFor: "Every priest stands daily offering the same sacrifices; Christ offered one sacrifice and sat down, opening a new and living way.",
+        focus: "11-22",
+      },
+      {
+        book: "Hebrews",
+        chapter: 4,
+        title: "Draw near with boldness",
+        lookFor: "A sympathetic High Priest, and an invitation to come straight to the throne of grace.",
+        focus: "14-16",
+      },
+      {
+        book: "Matthew",
+        chapter: 27,
+        title: "The veil torn from top to bottom",
+        lookFor: "At Jesus' death the curtain barring access to God tore in two, opened from heaven's side.",
+        focus: "45-54",
+      },
+      {
+        book: "1 Peter",
+        chapter: 2,
+        title: "A holy priesthood",
+        lookFor: "Believers themselves are living stones built into a priesthood, offering spiritual sacrifices.",
+        focus: "4-10",
+      },
+    ],
+    points: [
+      {
+        heading: "One mediator between God and men",
+        body:
+          "The gospel narrows the road to one Person: 'There is one God, and one mediator between God and men, the man Christ Jesus.' Through Him 'we both have our access in one Spirit to the Father.' Any additional mediator between the soul and God, however well meant, subtracts from the sufficiency of the Son.",
+        verses: ["1 Timothy 2:5-6", "John 14:6", "Ephesians 2:18"],
+      },
+      {
+        heading: "The veil was torn from top to bottom",
+        body:
+          "When Jesus died, the temple curtain separating sinners from God's presence tore in two, and the direction matters: torn from the top, by God's hand and not man's. Hebrews reads the sign plainly: we have confidence to enter the holy place by 'a new and living way,' through the veil, that is to say, His flesh. Access to the Father is not granted at a priest's discretion; it was purchased at Calvary and thrown open.",
+        verses: ["Matthew 27:51", "Hebrews 10:19-20", "Ephesians 3:12"],
+      },
+      {
+        heading: "Every priest stands; Christ sat down",
+        body:
+          "Under the old covenant priests stood daily, offering many sacrifices that could never take away sin. This Man offered one sacrifice for sins forever and sat down: the posture of a finished work. Because the sacrifice is complete and the Priest is permanent, no further sacrificing priesthood mediates forgiveness; He ever lives to intercede for those who come to God through Him.",
+        verses: ["Hebrews 10:11-12", "Hebrews 10:14", "Hebrews 7:25"],
+      },
+      {
+        heading: "We draw near with boldness ourselves",
+        body:
+          "The invitation is addressed to the weakest believer: 'Let us therefore draw near with boldness to the throne of grace,' a mercy seat approached personally, in full assurance of faith. In Christ every sinner who trusts Him has what Israel's laity never had under the law: unhindered, unmediated approach to God.",
+        verses: ["Hebrews 4:16", "Hebrews 10:22"],
+      },
+      {
+        heading: "God's people become the priesthood",
+        body:
+          "The astonishing reversal of the gospel is that believers are not merely served by a priesthood; they are made one: 'You also, as living stones, are built up as a spiritual house, to be a holy priesthood, to offer up spiritual sacrifices.' A chosen people, a royal priesthood, God's own possession, called out of darkness to proclaim His excellencies.",
+        verses: ["1 Peter 2:5", "1 Peter 2:9", "Revelation 1:5-6"],
+      },
+    ],
+    keyVerses: ["1 Timothy 2:5", "Hebrews 10:19-20", "Hebrews 4:16", "1 Peter 2:9"],
+    raises: ["who-can-forgive-sins", "where-is-jesus-now"],
+    followsFrom: ["why-did-jesus-have-to-die", "where-is-jesus-now"],
+    related: ["why-did-jesus-have-to-die", "how-is-the-new-covenant-different-from-the-old-one"],
+    planned: [],
+    order: 67,
+  },
+
+  {
+    slug: "who-can-forgive-sins",
+    question: "Who can forgive sins?",
+    category: "our-walk",
+    summary:
+      "Only God can forgive sins, and He forgives directly and completely when we confess to Him. Jesus claimed this divine prerogative for Himself, and everyone who confesses finds a faithful and just Forgiver. Believers confess to one another as equals praying for equals, but no one stands between a sinner and God's pardon.",
+    passages: [
+      {
+        book: "Mark",
+        chapter: 2,
+        title: "Who can forgive sins but God alone?",
+        lookFor: "Jesus forgives a paralytic, reads the objectors' hearts, and proves His authority to forgive.",
+        focus: "1-12",
+      },
+      {
+        book: "1 John",
+        chapter: 1,
+        title: "Confess, and He forgives",
+        lookFor: "Confession addressed directly to God, met with faithfulness and justice, not reluctance.",
+        focus: "5-10",
+      },
+      {
+        book: "Psalm",
+        chapter: 32,
+        title: "Blessed is the forgiven man",
+        lookFor: "David hides nothing, acknowledges his sin to God alone, and finds covering.",
+        focus: "1-7",
+      },
+      {
+        book: "Luke",
+        chapter: 18,
+        title: "The tax collector goes home justified",
+        lookFor: "A man with no credentials and no intermediary, asking God for mercy.",
+        focus: "9-14",
+      },
+    ],
+    points: [
+      {
+        heading: "Forgiveness is God's prerogative",
+        body:
+          "The scribes reasoned correctly when Jesus pronounced forgiveness: 'Who can forgive sins but God alone?' David knew the same arithmetic: against You, and You only, have I sinned, so the cleansing must come from You. Pardon is not a commodity clergy dispense; it is a divine prerogative exercised where God chooses, which is why the gospel is such good news.",
+        verses: ["Mark 2:7", "Psalm 51:4", "Psalm 130:3-4", "Isaiah 43:25"],
+      },
+      {
+        heading: "Jesus claimed and exercised that prerogative",
+        body:
+          "Jesus did not merely talk about forgiveness; He bestowed it on His own authority: 'Son, your sins are forgiven you,' and to prove it to the doubters He healed the paralytic on the spot, saying 'the Son of Man has authority on earth to forgive sins.' To the woman who washed His feet with her tears He said the same: your sins are forgiven; your faith has saved you; go in peace.",
+        verses: ["Mark 2:5", "Mark 2:10-11", "Luke 7:48"],
+      },
+      {
+        heading: "Confession goes straight to Him",
+        body:
+          "'If we confess our sins, he is faithful and righteous to forgive us the sins and to cleanse us from all unrighteousness.' Notice the direction: confessed to Him, forgiven by Him. David traced the anatomy of it: while he kept silent his bones wasted away, until he acknowledged his sin and did not hide his iniquity, and then, immediately, God forgave the iniquity of it.",
+        verses: ["1 John 1:9", "Psalm 32:5", "Proverbs 28:13"],
+      },
+      {
+        heading: "Equals confessing among equals",
+        body:
+          "Scripture does call Christians to confess sins to one another and pray for one another, and that is precious: mutual, horizontal, healing honesty among fellow servants. But the tax collector beat his breast, asked God to be merciful to him, a sinner, and walked home justified with no intermediary but mercy itself. The pardon comes from above; the fellowship is beside us.",
+        verses: ["James 5:16", "Luke 18:13-14"],
+      },
+    ],
+    keyVerses: ["Mark 2:10", "1 John 1:9", "Psalm 32:5", "Luke 18:13"],
+    raises: ["what-happens-when-i-sin", "what-is-repentance", "do-i-need-a-priest-to-reach-god"],
+    followsFrom: ["do-i-need-a-priest-to-reach-god", "what-happens-when-i-sin"],
+    related: ["what-happens-when-i-sin", "do-i-need-a-priest-to-reach-god"],
+    planned: [],
+    order: 68,
+  },
+
+  {
+    slug: "what-authority-did-jesus-give-his-leaders",
+    question: "What kind of authority did Jesus give church leaders?",
+    category: "church",
+    summary:
+      "Servant authority, and nothing else. Jesus forbade His followers the thrones and honorific titles of the world: greatness in His kingdom is service, elders shepherd willingly as examples rather than lording it over the flock, and every leader remains under the authority of the one Teacher, the Christ.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 20,
+        title: "It shall not be so among you",
+        lookFor: "The rulers of the Gentiles lord it over people, and Jesus explicitly rules that model out.",
+        focus: "20-28",
+      },
+      {
+        book: "Matthew",
+        chapter: 23,
+        title: "Titles, fathers, and instructors",
+        lookFor: "Why Jesus forbids the honorifics: one Father, one Teacher, and all of you are brothers.",
+        focus: "1-12",
+      },
+      {
+        book: "John",
+        chapter: 13,
+        title: "The Lord takes the towel",
+        lookFor: "Knowing He was Lord of all, Jesus washed feet and called it the pattern.",
+        focus: "1-17",
+      },
+      {
+        book: "1 Peter",
+        chapter: 5,
+        title: "Shepherds, not lords",
+        lookFor: "Peter's charge to elders: shepherd willingly, as examples, not domineering.",
+        focus: "1-7",
+      },
+    ],
+    points: [
+      {
+        heading: "Ruling is ruled out",
+        body:
+          "Jesus named the worldly model precisely, rulers who 'lord it over them,' and then vetoed it: 'It shall not be so among you.' Greatness in His kingdom runs the opposite direction, and He gave Himself as the measure: the Son of Man came not to be served, but to serve, and to give His life a ransom for many. Church authority exists to wash, feed, and protect, never to dominate.",
+        verses: ["Matthew 20:25-28", "Mark 10:42-45", "Luke 22:25-27"],
+      },
+      {
+        heading: "Honorific titles belong elsewhere",
+        body:
+          "'Call no man on the earth your father, for one is your Father, he who is in heaven,' Jesus said, and 'neither be called masters, for one is your master, the Christ.' The point is not politeness grammar but dependence: reverence and trust route to God, while leaders stay simply brothers, knowing the greatest among them is the servant of all.",
+        verses: ["Matthew 23:8-10", "Matthew 23:11-12"],
+      },
+      {
+        heading: "The Lord of all took the towel",
+        body:
+          "John frames the foot washing with the fullest possible statement of Jesus' dignity: knowing the Father had given all things into His hands, He rose, laid aside His garments, and took a towel. Authority conscious of itself serves most freely. He told them plainly: if your Lord and Teacher washed your feet, you also ought to wash one another's feet.",
+        verses: ["John 13:3-5", "John 13:14-15", "Philippians 2:5-7"],
+      },
+      {
+        heading: "Shepherd willingly, be examples",
+        body:
+          "Peter, who watched all of this happen, passed it on: shepherd the flock of God, not by constraint but willingly, not for dishonest gain but eagerly, 'neither as lording it over those entrusted to you, but making yourselves examples to the flock.' Paul echoes it: overseers care for the church of God, and leaders keep watch as those who will give account. Oversight is stewardship under authority, not ownership of it.",
+        verses: ["1 Peter 5:2-3", "Acts 20:28", "Hebrews 13:17"],
+      },
+    ],
+    keyVerses: ["Matthew 20:26-28", "Matthew 23:10-12", "John 13:14-15", "1 Peter 5:2-3"],
+    raises: ["what-does-peter-say-about-peter", "what-does-a-church-need-from-its-leaders"],
+    followsFrom: ["what-does-a-church-need-from-its-leaders", "what-is-a-healthy-church"],
+    related: ["what-is-a-healthy-church", "what-is-church-discipline", "what-is-the-church"],
+    planned: [],
+    order: 69,
+  },
+
+  {
+    slug: "what-does-peter-say-about-peter",
+    question: "What does Peter say about Peter?",
+    category: "church",
+    summary:
+      "Peter's own letters and history show a man who consistently pointed away from himself. He confessed Jesus as the Christ, needed correction himself, refused worship at Cornelius' house, and wrote as a fellow elder telling shepherds not to domineer. Read him closely and he keeps handing the spotlight back to his Lord.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 16,
+        title: "The confession and the rebuke",
+        lookFor: "Peter's great confession that Jesus is the Christ, followed minutes later by Peter needing rebuke himself.",
+        focus: "13-23",
+      },
+      {
+        book: "Galatians",
+        chapter: 2,
+        title: "Opposed to his face",
+        lookFor: "Peter, a pillar apostle, carried astray and corrected publicly by Paul.",
+        focus: "11-16",
+      },
+      {
+        book: "Acts",
+        chapter: 10,
+        title: "Stand up; I myself am also a man",
+        lookFor: "Cornelius falls at Peter's feet, and Peter refuses the reverence outright.",
+        focus: "24-33",
+      },
+      {
+        book: "1 Peter",
+        chapter: 5,
+        title: "A fellow elder writes to elders",
+        lookFor: "How Peter names himself, and what he tells shepherds to be.",
+        focus: "1-5",
+      },
+    ],
+    points: [
+      {
+        heading: "The rock was the confession",
+        body:
+          "When Peter said, 'You are the Christ, the Son of the living God,' Jesus blessed him and said, 'on this rock I will build my assembly.' The New Testament sings that same note everywhere: no other foundation can anyone lay than Jesus Christ Himself. Peter is the first stone in a building whose cornerstone and foundation is his Lord, and he says so in his own letter: coming to the Living Stone, we are built up as living stones.",
+        verses: ["Matthew 16:15-18", "1 Corinthians 3:11", "1 Peter 2:4-5"],
+      },
+      {
+        heading: "A pillar who needed correcting",
+        body:
+          "Peter was wrong at Antioch, and Paul resisted him to his face because he stood condemned: the leading apostle compromised the truth of the gospel under social pressure. Scripture records it without embarrassment, which tells us something: no apostle, however honored, stood above correction by the truth, and Peter himself received the correction.",
+        verses: ["Galatians 2:11-14", "Matthew 16:21-23"],
+      },
+      {
+        heading: "Refusing the worship due to God alone",
+        body:
+          "Twice Scripture shows Peter declining veneration. When Cornelius fell at his feet, Peter lifted him up, saying, 'Stand up! I myself am also a man.' And after the lame man was healed he asked the marveling crowd, why do you gaze at us, as though by our own power or godliness we made him walk? Men whose eyes were fixed on Jesus could not bear to receive what belongs to Him alone.",
+        verses: ["Acts 10:25-26", "Acts 3:12-13", "Matthew 4:10"],
+      },
+      {
+        heading: "Fellow elder, clothed with humility",
+        body:
+          "Peter's parting instruction to church leadership is drawn from his own resume of failure and grace: 'I exhort the elders among you, as a fellow elder,' shepherd the flock, not lording it over those entrusted to you, and all of you bind on humility toward one another, because God resists the proud. The man some would later crown spent his letters insisting he was a brother among shepherds.",
+        verses: ["1 Peter 5:1-4", "1 Peter 5:5", "John 21:15-17"],
+      },
+    ],
+    keyVerses: ["Matthew 16:16-18", "Acts 10:26", "Galatians 2:11", "1 Peter 5:1"],
+    raises: ["does-god-use-our-failures", "what-is-the-church"],
+    followsFrom: ["what-authority-did-jesus-give-his-leaders", "who-is-jesus"],
+    related: ["does-god-use-our-failures", "still-my-father-when-i-fail", "what-is-the-church"],
+    planned: [],
+    order: 70,
+  },
+
+  {
+    slug: "what-price-can-buy-forgiveness",
+    question: "What price can buy forgiveness?",
+    category: "gospel",
+    summary:
+      "Nothing we can pay, and nothing anyone else can pay on our own merits, ransoms a soul: no man can redeem his brother or give God a ransom for him. The price was paid once, by Another, the precious blood of Christ, and forgiveness is received as a gift through faith, never accumulated through payments, penalties, or purchased merits.",
+    passages: [
+      {
+        book: "Psalm",
+        chapter: 49,
+        title: "No man can ransom his brother",
+        lookFor: "The impossibility of paying for a soul, and the folly of trusting riches at death.",
+        focus: "5-15",
+      },
+      {
+        book: "Isaiah",
+        chapter: 53,
+        title: "The price God Himself provided",
+        lookFor: "Where the impossible payment actually happened: pierced for our transgressions.",
+        focus: "",
+      },
+      {
+        book: "1 Peter",
+        chapter: 1,
+        title: "Ransomed, not with silver and gold",
+        lookFor: "What redeemed you: perishable currency versus the precious blood of Christ.",
+        focus: "13-21",
+      },
+      {
+        book: "Colossians",
+        chapter: 2,
+        title: "The record of debt, nailed to the cross",
+        lookFor: "God cancels the handwritten certificate of debt Himself; completeness is found in Christ.",
+        focus: "6-15",
+      },
+    ],
+    points: [
+      {
+        heading: "No man can redeem his brother",
+        body:
+          "Psalm 49 states the economics flatly: none of them can by any means redeem his brother, nor give God a ransom for him, for the redemption of their life is costly, no payment is ever enough. Micah felt the same weight when he imagined escalating payments: thousands of rams, ten thousand rivers of oil, even his firstborn for his transgression. The case is beyond every creature's purse, and that is the point: what salvation costs, only God can pay.",
+        verses: ["Psalm 49:7-9", "Micah 6:6-7", "Romans 3:23-24"],
+      },
+      {
+        heading: "God paid what no man could",
+        body:
+          "Into that impossibility walks Isaiah's Servant: 'He was pierced for our transgressions. He was crushed for our iniquities. The punishment that brought our peace was on him.' John announces Him at the Jordan: behold, the Lamb of God who takes away the sin of the world. The ransom for souls is not extracted from men; it was supplied by God, from God.",
+        verses: ["Isaiah 53:5-6", "John 1:29", "2 Corinthians 5:21"],
+      },
+      {
+        heading: "Not silver and gold, but blood",
+        body:
+          "Peter prices it exactly: redeemed 'not with corruptible things, with silver or gold,' but 'with precious blood, as of a faultless and pure lamb, the blood of Christ.' If silver and gold could not purchase deliverance, no treasury of accumulated wealth or merit can either; the currency of redemption is one kind, spent once, at Calvary.",
+        verses: ["1 Peter 1:18-19", "Ephesians 1:7", "Hebrews 9:12"],
+      },
+      {
+        heading: "The certificate of debt is cancelled, not installments owed",
+        body:
+          "Paul describes forgiveness as a legal cancellation God performed Himself: He wiped out 'the handwriting in ordinances which was against us,' took it out of the way, and nailed it to the cross. Who shall bring a charge against God's chosen ones? It is God who justifies. A debt God declares cancelled cannot still be collected, and a record God nailed to the cross cannot be reissued.",
+        verses: ["Colossians 2:13-14", "Romans 8:33-34", "Colossians 2:10"],
+      },
+      {
+        heading: "Received by faith, never earned",
+        body:
+          "Because the payment is complete outside of us, it can only be received, not contributed to: 'by grace you have been saved through faith, and that not of yourselves; it is the gift of God, not of works, that no one would boast.' To him who works, the reward is counted as debt; to him who does not work but believes in Him who justifies the ungodly, his faith is counted for righteousness. Salvation excludes boasting precisely because it excludes payment.",
+        verses: ["Ephesians 2:8-9", "Romans 4:4-5", "Titus 3:5"],
+      },
+    ],
+    keyVerses: ["Psalm 49:7-8", "1 Peter 1:18-19", "Colossians 2:14", "Ephesians 2:8-9"],
+    raises: ["what-will-believers-be-rewarded-for-if-salvation-is-by-grace-alone", "what-is-imputation"],
+    followsFrom: ["what-is-imputation", "what-is-justification", "why-did-jesus-have-to-die"],
+    related: ["what-is-grace", "faith-or-works", "can-gods-grace-really-cover-my-worst-sins"],
+    planned: [],
+    order: 71,
+  },
+
+  {
+    slug: "what-does-scripture-show-us-about-mary",
+    question: "What does Scripture show us about Mary?",
+    category: "jesus-christ",
+    summary:
+      "Scripture honors Mary as the blessed virgin who believed God's word and bore the Messiah, and it shows her doing what every believer does: rejoicing in God her Savior, treasuring and pondering, suffering beside her Son, praying with the church. Every scene where she appears turns the spotlight onto Jesus.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 1,
+        title: "The annunciation and the Magnificat",
+        lookFor: "Mary's faith, her blessing, and the God whom her spirit rejoices in: her Savior.",
+        focus: "26-56",
+      },
+      {
+        book: "John",
+        chapter: 2,
+        title: "Water into wine at Cana",
+        lookFor: "Mary brings a need to Jesus and tells the servants exactly where to look.",
+        focus: "1-11",
+      },
+      {
+        book: "John",
+        chapter: 19,
+        title: "At the cross",
+        lookFor: "A mother watching her Son die, and the ordinary loving provision Jesus makes for her.",
+        focus: "25-27",
+      },
+      {
+        book: "Acts",
+        chapter: 1,
+        title: "Praying with the brothers",
+        lookFor: "After the ascension, where Mary is found: among the disciples, joining in prayer.",
+        focus: "12-14",
+      },
+    ],
+    points: [
+      {
+        heading: "Blessed because she believed",
+        body:
+          "Gabriel's greeting troubled her, not inflated her. Her greatness, by her cousin's own Spirit-filled explanation, is located in her faith: 'Blessed is she who believed, for there will be a fulfillment of the things which have been spoken to her from the Lord!' Mary's response to staggering news is the model believer's response: behold, the handmaid of the Lord; be it to me according to your word.",
+        verses: ["Luke 1:38", "Luke 1:45", "Luke 1:48"],
+      },
+      {
+        heading: "She rejoiced in God her Savior",
+        body:
+          "Mary's own song settles the question of her standing: 'My soul magnifies the Lord. My spirit has rejoiced in God my Savior.' A Savior is needed by the saved, and she names herself among the lowly upon whom God has looked. She glorifies His holiness, His mercy, and His strength, exactly as every saint does who knows the grace of God.",
+        verses: ["Luke 1:46-47", "Luke 1:50"],
+      },
+      {
+        heading: "Whatever he says to you, do it",
+        body:
+          "At Cana Mary brought the wine problem to Jesus, and when He answered her, she turned to the servants with the finest direction she ever gave: 'Whatever he says to you, do it.' That is Mary's whole ministry in Scripture: pointing needy people away from herself to her Son, whose hour had come and whose glory they beheld.",
+        verses: ["John 2:5", "John 2:11"],
+      },
+      {
+        heading: "Treasuring and pondering, pierced and present",
+        body:
+          "She kept these sayings, pondering them in her heart; Simeon warned her a sword would pierce her own soul too. It did: she stood by the cross while her Son suffered, and there Jesus gave her into John's keeping, a mother cared for in the plainest human terms. Scripture treats her with tenderness, and never with titles her Son did not give.",
+        verses: ["Luke 2:19", "Luke 2:35", "John 19:26-27"],
+      },
+      {
+        heading: "Found among the praying church",
+        body:
+          "After the ascension, Luke tells us exactly where to find her: with 'the women, and Mary the mother of Jesus, and with his brothers,' all devoting themselves to prayer as they waited for the Spirit. That is her last named appearance in Scripture: one believer among many, numbered with the disciples. Jesus had redefined His family around doing the Father's will, and Mary is found inside it.",
+        verses: ["Acts 1:14", "Mark 3:34-35"],
+      }
+    ],
+    keyVerses: ["Luke 1:46-47", "Luke 1:38", "John 2:5", "Acts 1:14"],
+    raises: ["what-does-it-mean-to-be-a-child-of-god", "made-for-relationship"],
+    followsFrom: ["who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god"],
+    related: ["what-does-it-mean-to-be-a-child-of-god", "made-for-relationship"],
+    planned: ["What happened to Mary after Pentecost?"],
+    order: 72,
+  },
+
+  {
+    slug: "to-whom-do-we-direct-our-prayers",
+    question: "To whom do we direct our prayers?",
+    category: "prayer",
+    summary:
+      "Jesus taught us to pray to the Father, in His name, helped by the Spirit: prayer in Scripture runs to God through Christ, never around Him. Our one Mediator always lives to intercede at the Father's right hand, and even the angels in God's presence refuse reverence from men, saying, worship God.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 6,
+        title: "Pray to your Father",
+        lookFor: "Whom Jesus addresses: your Father who sees in secret; hallowed be His name.",
+        focus: "5-15",
+      },
+      {
+        book: "John",
+        chapter: 16,
+        title: "Ask the Father in my name",
+        lookFor: "The risen Lord routing prayer through Himself to the Father, and the Father's love for direct askers.",
+        focus: "16-28",
+      },
+      {
+        book: "Hebrews",
+        chapter: 7,
+        title: "He always lives to intercede",
+        lookFor: "The permanent priesthood of Jesus: the saving, ongoing intercession of the Son of God.",
+        focus: "20-28",
+      },
+      {
+        book: "Revelation",
+        chapter: 19,
+        title: "An angel declines worship",
+        lookFor: "John falls at a heavenly messenger's feet and is told: see you do it not; worship God.",
+        focus: "9-10",
+      },
+    ],
+    points: [
+      {
+        heading: "Addressed to your Father",
+        body:
+          "'Pray to your Father who is in secret,' Jesus said, and taught the pattern: 'Our Father in heaven, may your name be kept holy.' Prayer in the New Testament is family speech directed to the Father, through the Son, in the Spirit. The address itself is theology, and Jesus wrote it for us.",
+        verses: ["Matthew 6:6", "Matthew 6:9", "Luke 11:2"],
+      },
+      {
+        heading: "In my name, straight to the Father",
+        body:
+          "On the night He was betrayed Jesus drew the route plainly: 'whatever you may ask of the Father in my name, he will give it to you.' Ask, and you will receive, that your joy may be made full. He even calls it love: the Father Himself loves you, because you have loved me and believed that I came from God. Asking in Jesus' name is not a formula tacked onto prayers; it is the road prayers travel.",
+        verses: ["John 16:23-24", "John 16:27", "John 14:13-14"],
+      },
+      {
+        heading: "Our intercessor already lives",
+        body:
+          "Christians are never told to recruit additional intercessors, because the decisive One is on duty: 'he is also able to save to the uttermost those who draw near to God through him, seeing that he lives forever to make intercession for them.' Paul asks, who intercedes for us? And answers: Christ Jesus, at the right hand of God. The Spirit helps us pray; the Son presents us; the Father receives us.",
+        verses: ["Hebrews 7:25", "Romans 8:34", "Romans 8:26-27"],
+      },
+      {
+        heading: "Even angels decline the honor",
+        body:
+          "Twice at the climax of Revelation John falls at an angel's feet to worship, and twice the angel refuses: 'Look! Don't do it! I am a fellow bondservant with you,' he says, and then commands him plainly, worship God. If glorious beings in God's immediate presence deflect reverence, how much less may devotion, trust, or prayer be routed through any creature? Scripture reserves the hearing ear for God alone: You who hear prayer, to you all men will come.",
+        verses: ["Revelation 19:10", "Revelation 22:8-9", "Psalm 65:2", "Colossians 2:18"],
+      },
+    ],
+    keyVerses: ["Matthew 6:9", "John 16:23", "Hebrews 7:25", "Revelation 22:9"],
+    raises: ["what-does-it-mean-to-pray-in-jesus-name", "does-god-hear-my-prayers", "what-does-it-mean-to-pray-in-the-holy-spirit"],
+    followsFrom: ["how-do-i-pray", "do-i-need-a-priest-to-reach-god"],
+    related: ["does-god-hear-my-prayers", "what-does-it-mean-to-pray-in-jesus-name"],
+    planned: [],
+    order: 73,
+  },
+
+  {
+    slug: "is-there-a-second-chance-after-death",
+    question: "Is there a second chance after death?",
+    category: "our-hope",
+    summary:
+      "Scripture treats death as a fixed threshold: it is appointed for people to die once, and after that comes judgment. Believers enter Christ's presence at once, the lost face separation already fixed, and the Bible nowhere pictures a stopover where souls are purified or a door reopened afterward. Today is the day of salvation, and it ends at the grave.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 16,
+        title: "The rich man and Lazarus",
+        lookFor: "Two deaths, two destinations, and a great gulf fixed so none may cross over.",
+        focus: "19-31",
+      },
+      {
+        book: "Hebrews",
+        chapter: 9,
+        title: "Once to die, then judgment",
+        lookFor: "Death's appointment, and Christ's appearing to those who eagerly wait for Him.",
+        focus: "24-28",
+      },
+      {
+        book: "Luke",
+        chapter: 23,
+        title: "Today in paradise",
+        lookFor: "The thief's same-day entry: no stopover, no delay, paradise with Jesus.",
+        focus: "32-43",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 6,
+        title: "Today is the day of salvation",
+        lookFor: "The urgency of now: help arrives today, and the day is named today on purpose.",
+        focus: "",
+      },
+    ],
+    points: [
+      {
+        heading: "Appointed once to die, and after this, judgment",
+        body:
+          "Hebrews fixes the sequence without wiggle room: death once, judgment next. There is no third appointment between the two, no interim where the verdict is still in play. This solemnity is exactly why the writer pairs it with Christ's return: to those who eagerly wait for Him He appears a second time for salvation, complete, without reference to anything still owed.",
+        verses: ["Hebrews 9:27-28"],
+      },
+      {
+        heading: "A great gulf fixed",
+        body:
+          "In Jesus' account of the rich man and Lazarus, both die and land where their lives left them. The rich man can see, speak, remember, and regret, and Abraham tells him why nothing changes: 'Between us and you there is a great gulf fixed, that those who want to pass from here to you are not able, and that no one may cross over from there to us.' After death, the crossing runs one direction: none.",
+        verses: ["Luke 16:22-23", "Luke 16:26"],
+      },
+      {
+        heading: "Today in paradise",
+        body:
+          "The thief asked to be remembered when Jesus came in His kingdom and received far more than he asked: 'Assuredly I tell you, today you will be with me in Paradise.' Same day, same company, no intermediate station mentioned or needed. Paul agrees: to be absent from the body is to be at home with the Lord, and to depart and be with Christ is very far better.",
+        verses: ["Luke 23:42-43", "2 Corinthians 5:8", "Philippians 1:23"],
+      },
+      {
+        heading: "Nothing left to pay",
+        body:
+          "Any idea that something is still owed after death collides with Hebrews' closed ledger: by one offering He has perfected forever those who are being sanctified, and 'where remission of these is, there is no more offering for sin.' From the cross the accounting was spoken aloud: it is finished. A finished redemption leaves no purification installment for the departed to serve.",
+        verses: ["Hebrews 10:14", "Hebrews 10:18", "John 19:30"],
+      },
+      {
+        heading: "While it is called today",
+        body:
+          "The urgency of the gospel rests on this threshold: 'Behold, now is the acceptable time. Behold, now is the day of salvation.' The Spirit pleads, do not harden your hearts while it is called today. Every invitation Scripture issues is issued to the living, which is both the warning and the comfort: mercy is open wide right now, to whoever will come.",
+        verses: ["2 Corinthians 6:2", "Hebrews 3:15", "John 9:4"],
+      },
+    ],
+    keyVerses: ["Hebrews 9:27", "Luke 16:26", "Luke 23:43", "2 Corinthians 6:2"],
+    raises: ["what-is-the-final-judgment-and-who-will-be-there", "what-is-hell", "what-is-heaven-like"],
+    followsFrom: ["what-happens-when-i-die"],
+    related: ["what-happens-when-i-die", "what-does-the-creed-mean-by-he-descended-into-hell", "what-is-heaven-like"],
+    planned: [],
+    order: 74,
+  },
+
+  {
+    slug: "must-gods-servants-stay-unmarried",
+    question: "Does God require His servants to stay unmarried?",
+    category: "church",
+    summary:
+      "No. Scripture counts forbidding marriage a mark of departure from the faith, calls marriage honorable in every station, and treats married ministry as normal, with singleness a gift some receive for undivided devotion. Neither state is required, neither ranks above the other, and both are received with thanksgiving.",
+    passages: [
+      {
+        book: "1 Timothy",
+        chapter: 4,
+        title: "Forbidding marriage foretold",
+        lookFor: "The Spirit's explicit warning: teachings that forbid marriage belong to deceiving spirits.",
+        focus: "1-5",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 9,
+        title: "The right to a wife",
+        lookFor: "Paul names the other apostles' marriages as ordinary, with Peter's included.",
+        focus: "3-6",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 7,
+        title: "Two gifts, side by side",
+        lookFor: "Singleness valued for undivided devotion, marriage defended against burning: neither commanded.",
+        focus: "32-35",
+      },
+      {
+        book: "1 Timothy",
+        chapter: 3,
+        title: "Overseers with households",
+        lookFor: "Church leadership assessed partly by faithful marriage and household management.",
+        focus: "1-5",
+      },
+    ],
+    points: [
+      {
+        heading: "A rule Scripture calls demonic",
+        body:
+          "Paul warns that in later times some will fall away, giving heed to deceiving spirits, 'forbidding marriage,' among other ascetic inventions, and he adds God's verdict: everything created is good, and nothing is to be rejected if it is received with thanksgiving. Whatever else celibacy rules are, Scripture labels mandatory abstinence from marriage a doctrine contrary to the faith once delivered.",
+        verses: ["1 Timothy 4:1-3", "Genesis 2:18", "Hebrews 13:4"],
+      },
+      {
+        heading: "Married ministry was the norm",
+        body:
+          "Paul assumes the apostles traveled with their wives, 'the rest of the apostles, and the brothers of the Lord, and Cephas,' and defends his own freedom to do likewise. Peter, the married fisherman whose mother-in-law Jesus healed, led the early church from a household, and an overseer's fitness was measured partly at home: ruling well his own house first.",
+        verses: ["1 Corinthians 9:5", "Matthew 8:14-15", "1 Timothy 3:4-5"],
+      },
+      {
+        heading: "Singleness is a gift, not a rank",
+        body:
+          "Paul honors singleness honestly: each man has his own gift from God, one of this kind and another of that kind. The unmarried person cares for the things of the Lord, how to please the Lord; the married person carries two loves at once, and Scripture calls that good too. Celibacy in the Bible is charism, never credential, a calling some receive, never a class above the rest.",
+        verses: ["1 Corinthians 7:7-9", "1 Corinthians 7:32-35", "Matthew 19:11-12"],
+      },
+      {
+        heading: "Both received with thanksgiving",
+        body:
+          "Marriage is honorable in every respect, the bed undefiled, and Proverbs promises favor from the LORD to the man who finds a wife. So the church holds both callings open before its people: marry if you burn and it is good; remain single if gifted and it is devoted. What Scripture forbids is not singleness but the requirement of it.",
+        verses: ["Hebrews 13:4", "Proverbs 18:22", "1 Corinthians 7:36-38"],
+      },
+    ],
+    keyVerses: ["1 Timothy 4:3", "1 Corinthians 9:5", "1 Corinthians 7:35", "Hebrews 13:4"],
+    raises: ["does-god-have-one-plan-for-my-marriage", "what-authority-did-jesus-give-his-leaders"],
+    followsFrom: ["what-authority-did-jesus-give-his-leaders", "what-does-a-church-need-from-its-leaders"],
+    related: ["does-god-have-one-plan-for-my-marriage", "made-for-relationship", "what-is-a-healthy-church"],
+    planned: [],
+    order: 75,
   },
 
 ];
