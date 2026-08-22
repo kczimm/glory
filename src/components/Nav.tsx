@@ -41,7 +41,7 @@ export default function Nav() {
           </Link>
           <Link
             href="/search"
-            className="text-ink-soft transition-colors hover:text-gold"
+            className="hidden text-ink-soft transition-colors hover:text-gold sm:inline"
           >
             Search
           </Link>
