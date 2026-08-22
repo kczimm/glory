@@ -31,14 +31,18 @@ export default function SearchBox() {
   const moveActive = (i: number) => setActive({ q, i });
 
   const empty = term.length > 0 && verses.length === 0 && questions.length === 0;
+  // The full-search entry point renders only alongside the result sections,
+  // so keyboard navigation never points at an option that isn't on screen.
+  const showFullSearch = term.length > 0 && !dismissed && !empty && status !== "loading";
   const showResults = term.length > 0 && !dismissed;
 
   // One flat list of destinations for keyboard navigation: studies first,
   // then verses, then the full-search page.
+  const searchAll = `/search?q=${encodeURIComponent(term)}`;
   const options = [
     ...questions.map((question) => `/questions/${question.slug}`),
     ...verses.map((v) => v.href),
-    ...(showResults ? [`/search?q=${encodeURIComponent(term)}`] : []),
+    ...(showFullSearch ? [searchAll] : []),
   ];
 
   function onKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
@@ -54,7 +58,8 @@ export default function SearchBox() {
         router.push(options[activeIndex]);
         setDismissedAt(q);
       }
-      // With nothing highlighted, let Enter submit natively to /search.
+      // With nothing highlighted, fall through to the form's native submit
+      // to the full /search page below.
     } else if (e.key === "Escape") {
       setDismissedAt(q);
       moveActive(-1);
@@ -63,7 +68,14 @@ export default function SearchBox() {
 
   return (
     <div className="relative mx-auto w-full max-w-xl">
-      <div className="flex items-center gap-3 rounded-2xl border border-line bg-surface px-5 py-4 shadow-[0_2px_20px_-8px_rgba(125,95,33,0.3)] focus-within:border-gold/60">
+      {/* Enter with nothing highlighted submits to the full /search page. */}
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          router.push(`/search?q=${encodeURIComponent(term)}`);
+        }}
+        className="flex items-center gap-3 rounded-2xl border border-line bg-surface px-5 py-4 shadow-[0_2px_20px_-8px_rgba(125,95,33,0.3)] focus-within:border-gold/60"
+      >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink-faint)" strokeWidth="2" className="shrink-0">
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-3.5-3.5" strokeLinecap="round" />
@@ -83,7 +95,7 @@ export default function SearchBox() {
           aria-autocomplete="list"
           aria-activedescendant={activeIndex >= 0 ? `searchbox-opt-${activeIndex}` : undefined}
         />
-      </div>
+      </form>
 
       {showResults && (
         <div
@@ -116,7 +128,7 @@ export default function SearchBox() {
             </p>
           )}
 
-          {questions.length > 0 && (
+          {questions.length > 0 && status !== "error" && (
             <div className="border-b border-line px-5 py-3">
               <p className="mb-1 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
                 Questions · {questions.length}
@@ -148,7 +160,7 @@ export default function SearchBox() {
             </div>
           )}
 
-          {verses.length > 0 && (
+          {verses.length > 0 && status !== "error" && (
             <div className="px-5 pb-1 pt-3">
               <p className="mb-1 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
                 Scripture · {verses.length}
@@ -184,12 +196,12 @@ export default function SearchBox() {
             </div>
           )}
 
-          {!empty && status !== "loading" && (
+          {showFullSearch && (
             <Link
               id={`searchbox-opt-${options.length - 1}`}
               role="option"
               aria-selected={activeIndex === options.length - 1}
-              href={`/search?q=${encodeURIComponent(term)}`}
+              href={searchAll}
               onClick={() => setDismissedAt(q)}
               onMouseEnter={() => moveActive(options.length - 1)}
               className={`block border-t border-line px-5 py-3 text-center text-[13px] font-medium text-gold-deep transition-colors ${

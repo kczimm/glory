@@ -7,6 +7,14 @@ async function loadJourney() {
 }
 
 describe("journey store (no localStorage)", () => {
+  beforeEach(() => {
+    vi.stubGlobal("localStorage", undefined);
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
   it("starts empty and survives a missing localStorage", async () => {
     const journey = await loadJourney();
     expect(journey.getSnapshot()).toEqual([]);

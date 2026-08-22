@@ -25,7 +25,10 @@ function read(): JourneyEntry[] {
     // Guard against corrupted or wrong-shaped data: keep only valid entries.
     return parsed.filter(
       (e): e is JourneyEntry =>
-        typeof e === "object" && e !== null && typeof (e as JourneyEntry).slug === "string"
+        typeof e === "object" &&
+        e !== null &&
+        typeof (e as JourneyEntry).slug === "string" &&
+        typeof (e as JourneyEntry).at === "number"
     );
   } catch {
     return [];

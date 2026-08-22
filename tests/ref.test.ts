@@ -46,8 +46,8 @@ describe("verseSlug", () => {
     expect(verseSlug("  John   3:16  ")).toBe("john-3.16");
   });
 
-  it("round-trips with parseRef on the canonical form", () => {
-    const ref = "Isaiah 53:10-12";
-    expect(parseRef(ref) && verseSlug(ref)).toBe(verseSlug(ref));
+  it("slugs are stable and unambiguous per ref", () => {
+    expect(verseSlug("John 3:16")).toBe(verseSlug("John 3:16".trim().toLowerCase()));
+    expect(verseSlug("Isaiah 53:10-12")).not.toBe(verseSlug("Isaiah 53:1-12"));
   });
 });
