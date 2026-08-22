@@ -142,7 +142,7 @@ const INITIAL: SpeechState = {
 
 let state: SpeechState = INITIAL;
 let session = 0;
-/** Routes a choice tap (or an accepted spoken reply) to the page that asked. */
+/** Routes a choice tap on the "What next?" panel to the page that asked. */
 let chooseHandler: ((index: number) => void) | null = null;
 let voiceLoadStarted = false;
 /** Consecutive file-sink misses; a queue gives up on files after a couple. */
@@ -463,9 +463,8 @@ function stopInternal() {
 /**
  * End a queue by offering the listener the next questions instead of going
  * silent. The player bar turns into a tappable "What next?" panel (this
- * works on every browser, no microphone needed); where speech recognition
- * exists a spoken "one / two / stop" rides on top via `choose`. `onChoose`
- * typically navigates to the picked question and starts its queue.
+ * works on every browser). `onChoose` typically navigates to the picked
+ * question and starts its queue.
  */
 export function presentChoices(choices: SpeechChoice[], onChoose: (index: number) => void) {
   if (!synth()) return;
@@ -481,7 +480,7 @@ export function presentChoices(choices: SpeechChoice[], onChoose: (index: number
   commit({ ...state, status: "choosing", choices });
 }
 
-/** Pick the option at `index` (a tap on the panel, or an accepted reply). */
+/** Pick the option at `index` (a tap on the panel). */
 export function choose(index: number) {
   const handler = chooseHandler;
   if (!handler) return;
@@ -504,7 +503,7 @@ export function playPassage(sourceId: string, items: SpeechItem[]) {
   if (wasActive) stopEngines();
   // Starting a queue is an exit from "choosing" too (the listener picked a
   // chapter or study by hand while the panel was up): drop any pending
-  // choice handler so a late spoken reply cannot hijack this new queue.
+  // choice handler so a late pick cannot hijack this new queue.
   chooseHandler = null;
   commit({ ...state, status: "playing", sourceId, queue: items, index: 0, choices: [] });
   if (wasActive) speakAfterCancel(0, session);

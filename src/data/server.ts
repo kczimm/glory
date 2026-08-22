@@ -112,8 +112,7 @@ export function categoryOf(q: Question): Category | undefined {
 
 /**
  * Up to three questions offered in the "What next?" panel when a study
- * listen ends (visitChainData's options, and the spoken replies layered on
- * top where recognition works): the study's own raises first (the journey
+ * listen ends (visitChainData's options): the study's own raises first (the journey
  * continues here); falling back to the next in its trail when nothing is
  * raised in writing.
  */

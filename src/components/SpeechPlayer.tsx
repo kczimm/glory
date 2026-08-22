@@ -32,8 +32,8 @@ import {
  * The global player bar, mounted in the root layout. It stays mounted across
  * client-side navigation, so reading keeps going while you move between pages.
  * When a study listen ends, the bar turns into the tappable "What next?"
- * panel (status "choosing"): the guaranteed continuation on every browser,
- * with voice replies as optional sugar where recognition exists. Renders
+ * panel (status "choosing"): the guaranteed continuation on every browser.
+ * Renders
  * nothing when there is no active queue.
  */
 export default function SpeechPlayer() {

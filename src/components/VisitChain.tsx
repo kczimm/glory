@@ -4,13 +4,12 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import type { SpeechItem } from "@/lib/speech";
 import {
-  choose,
   playPassage,
   presentChoices,
   registerContinuation,
   stop,
 } from "@/lib/speech";
-import { listenForReply, replySupported } from "@/lib/reply";
+
 
 /**
  * Forward chaining for the question page: whichever entry point the listener
@@ -24,11 +23,8 @@ import { listenForReply, replySupported } from "@/lib/reply";
  *
  * The study's continuation is always the visual menu (`presentChoices`): it
  * needs no microphone and no user gesture, so it works on every browser,
- * including iOS Safari where arming recognition mid-listen fails. Where
- * speech recognition genuinely works (desktop Chrome/Android), a spoken
- * "one / two / three / stop" rides on top as progressive enhancement;
- * silence, errors, or timeouts simply leave the visual panel up instead of
- * ending the visit dead. Picking an option navigates to that question (so
+ * including iOS Safari where arming recognition mid-listen fails.
+ * Picking an option navigates to that question (so
  * the page matches the audio) and starts its first chapter or study queue;
  * from there the new visit chains forward under its own VisitChain,
  * indefinitely.
@@ -36,7 +32,7 @@ import { listenForReply, replySupported } from "@/lib/reply";
  * Renders nothing. Registrations are keyed by the exact sourceIds the
  * ListenButtons use, so the player bar, chapter readers, and follow-along
  * track every chained source with no coordination between them. Unmounting
- * unregisters every link and cancels any in-flight reply listen.
+ * unregisters every link.
  */
 
 export interface ChainQueue {
@@ -69,7 +65,6 @@ export default function VisitChain({
   useEffect(() => {
     const unsub: Array<() => void> = [];
     let disposed = false;
-    let cancelReply: (() => void) | null = null;
 
     // Chapter -> next chapter -> study progression.
     const segs = segments;
@@ -83,8 +78,7 @@ export default function VisitChain({
     }
 
     // Study end -> the "What next?" panel (when there is at least one next
-    // question to offer). Voice replies are layered on only where
-    // recognition exists; nothing is gated on them.
+    // question to offer).
     if (options.length > 0) {
       unsub.push(
         registerContinuation(`study:${slug}`, () => {
@@ -113,25 +107,12 @@ export default function VisitChain({
               if (queue) playPassage(queue.sourceId, queue.items);
             },
           );
-          if (replySupported()) {
-            cancelReply = listenForReply({
-              count: options.length,
-              onResult: (r) => {
-                if (disposed) return;
-                // An explicit spoken "stop" ends deliberately; silence or an
-                // error falls through to the visual panel, which stays up.
-                if (r.kind === "choose") choose(r.index);
-                else if (r.kind === "stop") stop();
-              },
-            });
-          }
         })
       );
     }
 
     return () => {
       disposed = true;
-      cancelReply?.();
       unsub.forEach((u) => u());
     };
   }, [segments, options, router, slug]);
