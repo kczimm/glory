@@ -1656,10 +1656,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 15:3-4", "John 3:16", "Romans 3:24", "Romans 6:23"],
-    raises: ["what-is-grace", "what-is-justification", "what-is-faith", "what-is-repentance", "how-can-i-be-saved", "what-is-the-kingdom-of-god"],
+    raises: ["what-is-grace", "what-is-justification", "what-is-faith", "what-is-repentance", "how-can-i-be-saved", "what-is-the-kingdom-of-god", "what-are-the-parables-of-the-kingdom-about"],
     followsFrom: [],
     related: ["who-is-jesus", "how-can-i-be-saved", "faith-or-works"],
-    planned: ["What are the parables of the kingdom about?"],
+    planned: [],
     order: 22,
   },
 
@@ -9572,7 +9572,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 4:17", "Luke 17:20-21", "Matthew 13:31-33", "Matthew 18:3", "John 3:3"],
-    raises: ["what-is-the-kingdom-of-god", "will-jesus-return-literally", "what-is-the-final-judgment-and-who-will-be-there"],
+    raises: ["what-is-the-kingdom-of-god", "will-jesus-return-literally", "what-is-the-final-judgment-and-who-will-be-there", "what-are-the-parables-of-the-kingdom-about"],
     followsFrom: ["who-is-jesus", "what-is-the-kingdom-of-god"],
     related: ["what-is-the-kingdom-of-god", "who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-david", "is-the-son-of-man-title-judgment-or-mercy"],
     planned: ["How does the kingdom grow in a human heart?"],
@@ -14662,6 +14662,67 @@ export const questions: Question[] = [
     related: ["what-is-the-gospel", "what-does-it-mean-that-the-world-hates-jesus", "why-do-i-need-the-church"],
     planned: [],
     order: 81,
+  },
+
+  {
+    slug: "what-are-the-parables-of-the-kingdom-about",
+    question: "What are the parables of the kingdom about?",
+    category: "gospel",
+    summary:
+      "Jesus' kingdom parables answer one question: how does God's reign come? His answers are deliberately small and slow: a mustard seed, hidden yeast, buried treasure, seed growing while the farmer sleeps. The kingdom arrives quietly now, grows irresistibly by God's power, is worth everything you have, and will one day be sorted and revealed in full.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 13,
+        title: "The kingdom parables",
+        lookFor: "Seven parables in a row: notice the pattern of small beginnings, hidden growth, supreme value, and final separation.",
+      },
+      {
+        book: "Mark",
+        chapter: 4,
+        title: "Seed parables",
+        lookFor: "The farmer sleeps while the seed grows: the kingdom's growth is God's work, not ours to control.",
+        focus: "26-34",
+      },
+    ],
+    points: [
+      {
+        heading: "The kingdom starts small on purpose",
+        body:
+          "'The Kingdom of Heaven is like a grain of mustard seed,' the smallest of seeds, yet it becomes a tree where birds lodge. A handful of Galileans in an upper room became a people no empire could stamp out. Jesus never promised spectacle at the start; He promised growth from tiny beginnings.",
+        verses: ["Matthew 13:31-32"],
+      },
+      {
+        heading: "It grows by God's quiet power, not human force",
+        body:
+          "Yeast hides in the dough 'until it was all leavened'; the seed grows 'first the blade, then the ear, then the full grain in the ear' while the farmer sleeps. And Jesus told Pilate, 'My Kingdom is not of this world,' which is why its servants do not fight for it with swords. The kingdom advances through the word sown and the Spirit working, not through armies or campaigns.",
+        verses: ["Matthew 13:33", "Mark 4:26-29", "John 18:36"],
+      },
+      {
+        heading: "It demands everything, and it is worth it",
+        body:
+          "Two men find treasure beyond price: one sells all he has in his joy; the merchant sells everything for 'one pearl of great price.' The parables are honest that kingdom citizenship costs everything, and more honest still that it is a trade anyone would make. Joy, not duty, drives the transaction.",
+        verses: ["Matthew 13:44", "Matthew 13:45-46", "Philippians 3:8"],
+      },
+      {
+        heading: "God's reign is present now, before it is visible everywhere",
+        body:
+          "'Behold, the Kingdom of God is within you,' Jesus said, meaning it does not arrive with signs you can point at. Paul writes that God has already 'delivered us out of the power of darkness, and translated us into the Kingdom of the Son of his love.' Believers are not waiting to enter the kingdom; they have been transferred into it, even while they wait for it to come in full.",
+        verses: ["Luke 17:21", "Colossians 1:13", "Luke 11:20"],
+      },
+      {
+        heading: "A final separation is coming",
+        body:
+          "The wheat and weeds grow together until harvest; the dragnet gathers fish of every kind before the sorting. The parables keep present patience and future judgment together: do not uproot prematurely, and do not despair at mixture in the field. The King Himself will separate at the end of the age.",
+        verses: ["Matthew 13:24-30", "Matthew 13:47-50", "Matthew 13:41-43"],
+      },
+    ],
+    keyVerses: ["Matthew 13:31-32", "Matthew 13:44", "Mark 4:26-29", "Colossians 1:13", "Matthew 13:43"],
+    raises: ["what-is-the-kingdom-of-god", "did-jesus-treat-scripture-as-final", "will-jesus-return-literally"],
+    followsFrom: ["what-is-the-gospel", "what-did-jesus-teach-about-the-kingdom-of-god"],
+    related: ["why-did-jesus-tell-people-not-to-reveal-who-he-was", "the-churchs-mission-in-the-world", "what-is-the-new-heaven-and-new-earth"],
+    planned: [],
+    order: 82,
   },
 
 ];
