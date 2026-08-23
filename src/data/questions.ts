@@ -14858,7 +14858,7 @@ export const questions: Question[] = [
       {
         heading: "So grace could have its display",
         body:
-          "Paul traces our existence to 'the good pleasure of his desire': God predestined us for adoption as children, 'to the praise of the glory of his grace.' A redeemed people are the showcase of what God is like. Even the new creation keeps this purpose: the story ends with 'God's dwelling... with people,' which is what the garden was always pointing toward.",
+          "Paul traces our redemption to 'the good pleasure of his desire': God predestined us for adoption as children, 'to the praise of the glory of his grace.' A redeemed people are the showcase of what God is like; grace is why He made the world and why He saves within it. Even the new creation keeps this purpose: the story ends with 'God's dwelling... with people,' which is what the garden was always pointing toward.",
         verses: ["Ephesians 1:5", "Ephesians 1:6", "Revelation 21:3"],
       },
       {
@@ -14917,7 +14917,7 @@ export const questions: Question[] = [
         heading: "The Bible opens by asserting, not proving",
         body:
           "'In the beginning, God created the heavens and the earth.' Genesis never pauses to argue God into existence; it announces Him, and then spends its pages showing what this God is like. Psalm 19 gives the reason: 'The heavens declare the glory of God,' a declaration poured out day after day in speech every language can hear. From the Bible's view, evidence for God is not scarce; it is everywhere and always on.",
-        verses: ["Genesis 1:1", "Psalms 19:1", "Psalms 19:2"],
+        verses: ["Genesis 1:1", "Psalms 19:1", "Psalms 19:2", "Psalms 19:3", "Psalms 19:4"],
       },
       {
         heading: "Two witnesses inside and outside of us",
