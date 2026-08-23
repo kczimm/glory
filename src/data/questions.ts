@@ -1802,10 +1802,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 3:28", "Romans 4:5", "2 Corinthians 5:21", "Romans 5:1"],
-    raises: ["what-is-faith", "faith-or-works", "what-is-imputation", "how-are-justification-and-sanctification-related"],
+    raises: ["what-is-faith", "faith-or-works", "what-is-imputation", "how-are-justification-and-sanctification-related", "what-does-the-bible-mean-by-holy"],
     followsFrom: ["faith-or-works", "what-is-grace"],
     related: ["faith-or-works", "how-can-i-be-saved"],
-    planned: ["What does the Bible mean by being 'holy'?"],
+    planned: [],
     order: 24,
   },
 
@@ -14386,6 +14386,75 @@ export const questions: Question[] = [
     related: ["what-is-imputation", "is-it-okay-to-doubt", "still-my-father-when-i-fail"],
     planned: [],
     order: 77,
+  },
+
+  {
+    slug: "what-does-the-bible-mean-by-holy",
+    question: "What does the Bible mean by being 'holy'?",
+    category: "our-walk",
+    summary:
+      "To be holy is to be set apart for God, and to become like the God you are set apart for. Holiness starts not with a rule list but with God's own character: He says, 'You shall be holy; for I, Yahweh your God, am holy,' and then sets His people apart from the world so that their lives look like Him.",
+    passages: [
+      {
+        book: "Leviticus",
+        chapter: 19,
+        title: "The holiness code",
+        lookFor: "Holiness in Leviticus is startlingly practical: honesty, mercy to the poor, fair dealing, love of neighbor.",
+        focus: "1-18",
+      },
+      {
+        book: "Isaiah",
+        chapter: 6,
+        title: "Holy, holy, holy",
+        lookFor: "Isaiah sees God's holiness and immediately sees his own uncleanness: holiness exposes and then cleanses.",
+        focus: "1-8",
+      },
+      {
+        book: "1 Peter",
+        chapter: 1,
+        title: "Be holy in all your behavior",
+        lookFor: "Peter takes the old command from Leviticus and applies it to Christians: set apart hope, conduct, and reverence.",
+        focus: "13-25",
+      },
+    ],
+    points: [
+      {
+        heading: "Holiness means set apart before it means moral perfection",
+        body:
+          "The root idea of holiness is separation for a purpose: 'have set you apart from the peoples, that you should be mine.' Israel was holy the way temple vessels were holy: reserved for God's use. That status came first by God's act, and only then demanded a corresponding life.",
+        verses: ["Leviticus 20:26", "Exodus 19:6"],
+      },
+      {
+        heading: "God's own character is the standard",
+        body:
+          "The command comes with its reason attached: 'You shall be holy; for I, Yahweh your God, am holy.' Scripture calls God 'the high and lofty One who inhabits eternity, whose name is Holy' and heaven rings with 'Holy, holy, holy.' Holiness is not one attribute among many; it is the purity and otherness of everything God is.",
+        verses: ["Leviticus 19:2", "Isaiah 57:15", "Isaiah 6:3"],
+      },
+      {
+        heading: "In the Old Testament, holiness touched ordinary life",
+        body:
+          "Leviticus 19 puts 'be holy' next to leaving harvest gleanings for the poor, paying workers on time, just measures, and loving your neighbor as yourself. Being set apart was never mainly ritual; it showed in how God's people treated people. A holy nation looked different because it did justice and mercy in a world that didn't.",
+        verses: ["Leviticus 19:2", "Leviticus 19:9-18", "Leviticus 19:35-36", "Exodus 19:6"],
+      },
+      {
+        heading: "Holiness begins with seeing God as He is",
+        body:
+          "When Isaiah saw the Lord high and lifted up, his first words were about himself: 'Woe is me! For I am undone.' That is how holiness works: God's purity exposes our uncleanness, but it does not leave us there. The burning coal touched Isaiah's mouth, his guilt was taken away, and only then did he hear the call to go.",
+        verses: ["Isaiah 6:3", "Isaiah 6:5-8"],
+      },
+      {
+        heading: "For Christians, holiness is calling, choice, and destination",
+        body:
+          "Peter quotes Leviticus to the church: 'you yourselves also be holy in all of your behavior.' Paul urges believers to present their bodies 'a living sacrifice, holy, acceptable to God.' And we were chosen in Christ 'that we would be holy and without defect before him.' Holiness is pursued now, and completed then; Hebrews calls it the sanctification 'without which no man will see the Lord.'",
+        verses: ["1 Peter 1:15-16", "Romans 12:1", "Ephesians 1:4", "Hebrews 12:14"],
+      },
+    ],
+    keyVerses: ["Leviticus 19:2", "Isaiah 6:3", "1 Peter 1:15-16", "Romans 12:1", "Ephesians 1:4"],
+    raises: ["what-is-sanctification-and-how-does-it-happen", "how-are-justification-and-sanctification-related", "what-does-it-look-like-to-suffer-well"],
+    followsFrom: ["what-is-justification", "what-does-it-mean-to-be-made-in-gods-image"],
+    related: ["faith-or-works", "what-is-the-flesh-versus-the-spirit", "how-do-i-fight-sin"],
+    planned: [],
+    order: 78,
   },
 
 ];
