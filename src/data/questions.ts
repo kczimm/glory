@@ -1270,10 +1270,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 1:9-11", "Hebrews 7:25", "John 14:2-3", "Romans 8:34"],
-    raises: ["will-jesus-return-literally", "what-is-the-church"],
+    raises: ["will-jesus-return-literally", "what-is-the-church", "the-churchs-mission-in-the-world"],
     followsFrom: ["did-jesus-rise-from-the-dead"],
     related: ["what-happens-when-i-sin", "how-can-i-be-saved"],
-    planned: ["What is the church's mission in the world?"],
+    planned: [],
     order: 17,
   },
 
@@ -14593,6 +14593,75 @@ export const questions: Question[] = [
     related: ["where-does-temptation-come-from", "still-my-father-when-i-fail", "repentance-one-time-or-lifelong"],
     planned: [],
     order: 80,
+  },
+
+  {
+    slug: "the-churchs-mission-in-the-world",
+    question: "What is the church's mission in the world?",
+    category: "church",
+    summary:
+      "The church exists to make disciples of Jesus and to be, before the watching world, the people of God: witnesses to Christ, salt of the earth, lights in a dark place. The risen Lord gave the mission Himself, and the Spirit supplies its power. We speak the gospel with words and adorn it with lives that make those words believable.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 28,
+        title: "The great commission",
+        lookFor: "The mission is not just to convert but to make disciples, teaching them to obey everything Jesus commanded.",
+        focus: "16-20",
+      },
+      {
+        book: "Acts",
+        chapter: 1,
+        title: "Witnesses to the ends of the earth",
+        lookFor: "Jesus defines the church's task and ties it to the Spirit's power, not human strategy.",
+        focus: "6-11",
+      },
+      {
+        book: "1 Peter",
+        chapter: 2,
+        title: "A holy nation with a purpose",
+        lookFor: "Peter tells scattered Christians who they are, and why: to proclaim the excellencies of the One who called them.",
+        focus: "9-17",
+      },
+    ],
+    points: [
+      {
+        heading: "The mission comes from the risen King",
+        body:
+          "After His resurrection, Jesus gathered His disciples and sent them out: to make disciples of all nations, baptizing them and 'teaching them to observe all things that I commanded you.' The church does not invent its own assignment; it receives one from its Lord, who closes it with the promise, 'Behold, I am with you always, even to the end of the age.'",
+        verses: ["Matthew 28:19-20"],
+      },
+      {
+        heading: "Its power is the Spirit, not persuasion",
+        body:
+          "'You will receive power when the Holy Spirit has come upon you. You will be witnesses.' The disciples wanted to know about restoring the kingdom; Jesus redirected them to power for witness. The church speaks about Christ everywhere, from Jerusalem to the uttermost parts of the earth, only as the Spirit empowers it.",
+        verses: ["Acts 1:8", "Luke 24:49"],
+      },
+      {
+        heading: "Every believer is an ambassador",
+        body:
+          "'We are therefore ambassadors on behalf of Christ, as though God were entreating by us.' The ministry of reconciliation is not delegated to professionals; God makes His appeal through ordinary Christians who beg others, on behalf of Christ, to be reconciled to God.",
+        verses: ["2 Corinthians 5:20", "2 Corinthians 5:18-19"],
+      },
+      {
+        heading: "Salt and light in plain sight",
+        body:
+          "Jesus calls His people 'the salt of the earth' and 'the light of the world,' a city on a hill that cannot be hidden. Good works are not the gospel, but they are its evidence and advertisement: they are seen 'that they may see your good works, and glorify your Father who is in heaven.' Peter echoes it: conduct among the nations can silence slander and bring glory to God.",
+        verses: ["Matthew 5:13-14", "Matthew 5:16", "1 Peter 2:12"],
+      },
+      {
+        heading: "A chosen people with a proclaiming purpose",
+        body:
+          "'You are a chosen race, a royal priesthood, a holy nation, a people for God's own possession,' and the next clause gives the reason: 'that you may proclaim the excellence of him who called you out of darkness into his marvelous light.' Even everyday speech carries the mission: 'Let your speech always be with grace, seasoned with salt.'",
+        verses: ["1 Peter 2:9", "Colossians 4:6"],
+      },
+    ],
+    keyVerses: ["Matthew 28:19-20", "Acts 1:8", "2 Corinthians 5:20", "Matthew 5:16", "1 Peter 2:9"],
+    raises: ["how-do-i-share-my-faith-with-others", "what-is-a-healthy-church", "how-does-god-judge-people-who-never-heard-of-jesus"],
+    followsFrom: ["where-is-jesus-now", "what-is-the-church"],
+    related: ["what-is-the-gospel", "what-does-it-mean-that-the-world-hates-jesus", "why-do-i-need-the-church"],
+    planned: [],
+    order: 81,
   },
 
 ];
