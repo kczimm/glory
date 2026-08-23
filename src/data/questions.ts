@@ -447,7 +447,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 1:1", "John 8:58", "Colossians 2:9", "Hebrews 1:3", "John 20:28"],
-    raises: ["why-did-jesus-have-to-die", "what-is-the-trinity", "does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man", "what-does-firstborn-mean"],
+    raises: ["why-did-jesus-have-to-die", "what-is-the-trinity", "does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man", "what-does-firstborn-mean", "does-it-matter-which-jesus-i-believe-in"],
     followsFrom: ["who-is-jesus"],
     related: ["is-the-holy-spirit-god", "are-there-other-gods", "who-are-the-gods-of-psalm-82"],
     planned: ["How does Jesus' becoming man show us the Father's love?"],
@@ -1656,7 +1656,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 15:3-4", "John 3:16", "Romans 3:24", "Romans 6:23"],
-    raises: ["what-is-grace", "what-is-justification", "what-is-faith", "what-is-repentance", "how-can-i-be-saved", "what-is-the-kingdom-of-god", "what-are-the-parables-of-the-kingdom-about"],
+    raises: ["what-is-grace", "what-is-justification", "what-is-faith", "what-is-repentance", "how-can-i-be-saved", "what-is-the-kingdom-of-god", "what-are-the-parables-of-the-kingdom-about", "does-it-matter-which-jesus-i-believe-in"],
     followsFrom: [],
     related: ["who-is-jesus", "how-can-i-be-saved", "faith-or-works"],
     planned: [],
@@ -14723,6 +14723,82 @@ export const questions: Question[] = [
     related: ["why-did-jesus-tell-people-not-to-reveal-who-he-was", "the-churchs-mission-in-the-world", "what-is-the-new-heaven-and-new-earth"],
     planned: [],
     order: 82,
+  },
+
+  {
+    slug: "does-it-matter-which-jesus-i-believe-in",
+    question: "Does it matter which Jesus I believe in?",
+    category: "jesus-christ",
+    summary:
+      "Yes. Paul feared churches would receive 'another Jesus' and 'a different good news,' and pronounced a double curse on anyone who preached one, even an angel from heaven. on anyone who preached one, even an angel from heaven. Salvation rests not on sincerity about any Jesus but on the real One: the Christ of Scripture, true God and risen Lord. A diminished Jesus leaves you exactly where a false god would: still in your sins.",
+    passages: [
+      {
+        book: "Galatians",
+        chapter: 1,
+        title: "No other gospel",
+        lookFor: "Paul doubles the curse on anyone, even an angel from heaven, who preaches a gospel different from the one already given.",
+        focus: "6-12",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 11,
+        title: "Another Jesus",
+        lookFor: "Paul's fear that the serpent's old trick will corrupt minds from the simplicity in Christ, while preachers offer another Jesus and are welcomed.",
+        focus: "3-15",
+      },
+      {
+        book: "Matthew",
+        chapter: 7,
+        title: "Lord, Lord",
+        lookFor: "People doing mighty works in Jesus' name who hear 'I never knew you.' Sincerity is not the same as knowing Him.",
+        focus: "21-23",
+      },
+      {
+        book: "Colossians",
+        chapter: 2,
+        title: "Christ plus nothing",
+        lookFor: "A church being tempted to add to Jesus; Paul's answer is that they hold everything by holding fast to the Head.",
+        focus: "16-19",
+      },
+    ],
+    points: [
+      {
+        heading: "Paul feared a counterfeit",
+        body:
+          "His worry was not weak faith but substituted faith: 'as the serpent deceived Eve in his craftiness,' so minds might be corrupted from the simplicity that is in Christ. And the counterfeit was already arriving: 'if he who comes preaches another Jesus, whom we did not preach... you put up with that well enough.' The danger was not persecution of the truth but patience with a substitute.",
+        verses: ["2 Corinthians 11:3", "2 Corinthians 11:4"],
+      },
+      {
+        heading: "A different gospel is no gospel at all",
+        body:
+          "When the Galatians turned to a Jesus-plus-law message, the very error Paul spends the letter tearing down, Paul did not call it a variant view: he called it desertion. 'There isn't another good news,' he wrote, only people who want to pervert the Good News of Christ, and twice over he pronounced God's curse on anyone preaching otherwise, 'even though we, or an angel from heaven.' A message with a different Jesus is not a lesser version of salvation; it is no version of it.",
+        verses: ["Galatians 1:6", "Galatians 1:7", "Galatians 1:8", "Galatians 1:9"],
+      },
+      {
+        heading: "A diminished Jesus cannot save",
+        body:
+          "The reason is arithmetic: salvation requires exactly who He is and what He did. 'If Christ has not been raised, your faith is vain; you are still in your sins.' If righteousness could come by the law, 'then Christ died for nothing.' A Jesus who is merely a teacher or moral example offers no cross that saves and no resurrection that justifies. There is 'salvation in none other,' for there is no other name under heaven by which we must be saved.",
+        verses: ["1 Corinthians 15:17", "Galatians 2:21", "Acts 4:12"],
+      },
+      {
+        heading: "Sincerity about the wrong Jesus does not save either",
+        body:
+          "Jesus' own warning cuts hardest: many will say 'Lord, Lord' and even prophesy and do mighty works in His name, yet hear, 'I never knew you.' The saving thing is not enthusiasm in His name but actually knowing Him as He is: confessing Him as Lord and believing that God raised Him from the dead. John states the stakes plainly: whoever does not remain in the teaching of Christ does not have God.",
+        verses: ["Matthew 7:22", "Matthew 7:23", "Romans 10:9", "2 John 1:9"],
+      },
+      {
+        heading: "Weak faith is not the same as a false object",
+        body:
+          "The Bible never demands perfect theology before it will let Jesus receive anyone. The desperate father cried, 'I believe. Help my unbelief!' and got his son delivered; the man born blind began with almost nothing and grew: 'One thing I do know: that though I was blind, now I see.' The real Jesus receives honest ignorance and grows it. What He does not do is swap Himself for a counterfeit and still call it salvation. The test of any portrait of Jesus is simply this: is it the Son as the apostles saw Him, 'the image of the invisible God,' holding all things together?",
+        verses: ["Mark 9:24", "John 9:25", "Colossians 1:15", "John 20:31"],
+      },
+    ],
+    keyVerses: ["Galatians 1:8", "2 Corinthians 11:4", "Acts 4:12", "Matthew 7:23", "2 John 1:9"],
+    raises: ["is-jesus-really-god", "what-is-the-gospel", "should-i-test-every-teaching-by-scripture", "how-can-i-be-saved"],
+    followsFrom: ["who-is-jesus", "what-is-the-gospel"],
+    related: ["can-i-trust-the-bible", "why-did-jesus-have-to-die", "should-i-test-every-teaching-by-scripture"],
+    planned: ["Which modern portraits of Jesus preach another Jesus?", "Can someone be saved while still confused about some things concerning Jesus?"],
+    order: 83,
   },
 
 ];
