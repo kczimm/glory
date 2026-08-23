@@ -2230,10 +2230,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 6:9-13", "Philippians 4:6-7", "Romans 8:26-27", "Luke 11:9"],
-    raises: ["what-does-the-lords-prayer-teach", "does-god-hear-my-prayers", "what-is-fasting", "to-whom-do-we-direct-our-prayers"],
+    raises: ["what-does-the-lords-prayer-teach", "does-god-hear-my-prayers", "what-is-fasting", "to-whom-do-we-direct-our-prayers", "relationship-between-prayer-and-giving"],
     followsFrom: [],
     related: ["who-is-the-father", "what-should-i-do-now-that-im-saved"],
-    planned: ["What is the relationship between prayer and giving?"],
+    planned: [],
     order: 30,
   },
 
@@ -14455,6 +14455,75 @@ export const questions: Question[] = [
     related: ["faith-or-works", "what-is-the-flesh-versus-the-spirit", "how-do-i-fight-sin"],
     planned: [],
     order: 78,
+  },
+
+  {
+    slug: "relationship-between-prayer-and-giving",
+    question: "What is the relationship between prayer and giving?",
+    category: "prayer",
+    summary:
+      "Prayer and giving are the two hands of dependence on God: prayer receives from Him, giving returns to Him and passes His gifts to others. Jesus teaches them side by side in the Sermon on the Mount with the same warnings, the same secrecy, and the same reward from the Father who sees in secret. Both begin with God's generosity; both guard against performing for people.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 6,
+        title: "Piety before your Father",
+        lookFor: "Giving, praying, and fasting come in a row: same warning about hypocrites, same counsel to do it in secret, same Father who sees.",
+        focus: "1-18",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 8,
+        title: "The grace of giving",
+        lookFor: "The Macedonian churches gave out of poverty because they first gave themselves to the Lord.",
+        focus: "1-15",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 9,
+        title: "Thanks flows from giving",
+        lookFor: "Paul traces what a gift accomplishes: relief for saints, but also thanksgiving and glory to God.",
+        focus: "6-15",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus teaches them together",
+        body:
+          "In the Sermon on the Mount, merciful deeds and prayer sit in the same paragraph with identical structure: 'don't sound a trumpet before yourself' when you give; don't pray 'that they may be seen by men.' Both done secretly meet 'your Father who sees in secret' who rewards openly. Whatever prayer is before God, giving is meant to be the same thing.",
+        verses: ["Matthew 6:2", "Matthew 6:4", "Matthew 6:5", "Matthew 6:6"],
+      },
+      {
+        heading: "Both start with receiving from the Father",
+        body:
+          "The Lord's Prayer holds them together: it asks 'Give us today our daily bread' and then pledges 'Forgive us our debts, as we also forgive our debtors.' We give because we have first received; we forgive because we were forgiven. Generosity is not a substitute for prayer, it is prayer's answer put into action.",
+        verses: ["Matthew 6:9", "Matthew 6:11", "Matthew 6:12"],
+      },
+      {
+        heading: "Giving is worship that ascends like sacrifice",
+        body:
+          "Paul calls the Philippians' financial gift 'a sweet-smelling fragrance, an acceptable and well-pleasing sacrifice to God.' Their money never reached Paul's hands without passing through heaven's first. That is why he says the Macedonians gave themselves 'first... to the Lord': giving is directed at God, which makes it kin to prayer rather than mere logistics.",
+        verses: ["Philippians 4:18", "2 Corinthians 8:5"],
+      },
+      {
+        heading: "Giving turns answered prayer into thanksgiving",
+        body:
+          "'This service of giving that you perform not only makes up for lack among the saints, but abounds also through many givings of thanks to God.' A gift multiplies prayer: needs met become thanks returned, and the recipients bless the givers' Father. Prayer asks for the supply; giving distributes it; gratitude completes the circle back to God.",
+        verses: ["2 Corinthians 9:12"],
+      },
+      {
+        heading: "Scripture keeps pairing them in practice",
+        body:
+          "Paul exhorts that 'petitions, prayers, intercessions, and givings of thanks, be made for all men,' pairing intercession with its practical cousin. The Jerusalem church 'continued steadfastly in the apostles' teaching and fellowship, in the breaking of bread, and prayer' while selling possessions to share with any who had need. And the great intercessors prayed with their bodies engaged: Nehemiah fasted and wept, Daniel set his face to seek God 'with fasting and sackcloth and ashes.'",
+        verses: ["1 Timothy 2:1", "Acts 2:42", "Acts 2:44-45", "Nehemiah 1:4", "Daniel 9:3"],
+      },
+    ],
+    keyVerses: ["Matthew 6:3-4", "Matthew 6:6", "Matthew 6:11", "Philippians 4:18", "2 Corinthians 9:12"],
+    raises: ["what-is-fasting", "does-prayer-change-gods-mind", "how-do-i-balance-planning-with-trusting-god"],
+    followsFrom: ["how-do-i-pray", "what-does-the-lords-prayer-teach"],
+    related: ["does-god-hear-my-prayers", "what-is-fasting"],
+    planned: [],
+    order: 79,
   },
 
 ];
