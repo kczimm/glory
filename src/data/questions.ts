@@ -972,10 +972,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 John 2:1-2", "1 John 1:9", "Hebrews 4:15-16", "Romans 8:1"],
-    raises: ["how-do-i-fight-sin", "does-god-use-our-failures", "can-gods-grace-really-cover-my-worst-sins"],
+    raises: ["how-do-i-fight-sin", "does-god-use-our-failures", "can-gods-grace-really-cover-my-worst-sins", "god-remembers-our-sins-no-more"],
     followsFrom: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
     related: ["can-i-lose-my-salvation"],
-    planned: ["What does it mean that God remembers our sins no more?"],
+    planned: [],
     order: 13,
   },
 
@@ -14317,6 +14317,75 @@ export const questions: Question[] = [
     related: ["holy-spirit-in-the-old-testament", "what-does-it-mean-to-be-baptized-with-the-holy-spirit"],
     planned: [],
     order: 76,
+  },
+
+  {
+    slug: "god-remembers-our-sins-no-more",
+    question: "What does it mean that God remembers our sins no more?",
+    category: "gospel",
+    summary:
+      "When God says He will remember our sins no more, He is not forgetting the way we forget: He is promising never to call them to mind again, never to treat us according to them, and never to bring them up in judgment. The new covenant rests on that promise, and the cross is its price.",
+    passages: [
+      {
+        book: "Jeremiah",
+        chapter: 31,
+        title: "The promise of the new covenant",
+        lookFor: "God promises a covenant different from the one broken: sins forgiven and remembered no more.",
+        focus: "31-34",
+      },
+      {
+        book: "Hebrews",
+        chapter: 10,
+        title: "The once-for-all sacrifice",
+        lookFor: "See how Hebrews quotes Jeremiah's promise and then argues it means no more offering for sin is needed.",
+        focus: "11-25",
+      },
+      {
+        book: "Psalms",
+        chapter: 103,
+        title: "A father's compassion",
+        lookFor: "David piles up pictures of forgiveness: healed diseases, removed transgressions, a father's pity.",
+        focus: "1-18",
+      },
+    ],
+    points: [
+      {
+        heading: "'Not remember' is covenant language, not amnesia",
+        body:
+          "The all-knowing God cannot forget facts. When He says 'their sin will I remember no more,' He means He will never again hold our sins against us or let them stand between us. To 'remember' sin in Scripture is to act on it in judgment; to not remember is to covenant never to act on it again.",
+        verses: ["Jeremiah 31:34", "Isaiah 43:25"],
+      },
+      {
+        heading: "It is God's own oath about His own memory",
+        body:
+          "Notice who makes this pledge: 'I, even I, am he who blots out your transgressions for my own sake.' The promise does not depend on how well we have repented or how clean our record has run since. It depends on God's character, which is why Micah can picture Him treading our iniquities underfoot and casting them into the depths of the sea.",
+        verses: ["Isaiah 43:25", "Micah 7:19"],
+      },
+      {
+        heading: "Hebrews reads it as final settlement",
+        body:
+          "Hebrews quotes Jeremiah's promise twice and draws the conclusion: 'where remission of these is, there is no more offering for sin.' If God remembers sins no more, the ledger is closed; by one offering 'he has perfected forever those who are being sanctified.' Forgiveness without recall is what the cross purchased.",
+        verses: ["Hebrews 8:12", "Hebrews 10:17-18", "Hebrews 10:14"],
+      },
+      {
+        heading: "Removed as far as east from west",
+        body:
+          "The psalmists reach for images of distance that cannot be crossed back: transgressions removed 'as far as the east is from the west,' sins cast behind God's back. East and west never meet on a traveler's map; that is the point. The debt is not filed away where we might dig it up again; it is gone from the account entirely, so that God charges with sin no more.",
+        verses: ["Psalms 103:12", "Isaiah 38:17", "Romans 4:8"],
+      },
+      {
+        heading: "Reconciliation changes the conversation, not just the record",
+        body:
+          "'God was in Christ reconciling the world to himself, not reckoning to them their trespasses.' Because God does not reckon our trespasses, He deals with us as children rather than defendants: 'Like a father has compassion on his children, so Yahweh has compassion on those who fear him.' Discipline may still come, but prosecution never will.",
+        verses: ["2 Corinthians 5:19", "Psalms 103:13"],
+      },
+    ],
+    keyVerses: ["Jeremiah 31:34", "Hebrews 8:12", "Hebrews 10:17-18", "Isaiah 43:25", "Psalms 103:12"],
+    raises: ["can-i-lose-my-salvation", "how-do-i-experience-the-love-of-god-day-to-day", "what-is-the-new-heart-that-god-promised"],
+    followsFrom: ["what-happens-when-i-sin", "why-did-jesus-have-to-die"],
+    related: ["what-is-imputation", "is-it-okay-to-doubt", "still-my-father-when-i-fail"],
+    planned: [],
+    order: 77,
   },
 
 ];
