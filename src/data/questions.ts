@@ -78,10 +78,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 14:16-17", "John 16:13-14", "Romans 8:9", "1 Corinthians 6:19", "Galatians 5:22-23"],
-    raises: ["is-the-holy-spirit-god", "how-do-i-receive-the-holy-spirit", "why-jesus-calls-the-spirit-another-helper"],
+    raises: ["is-the-holy-spirit-god", "how-do-i-receive-the-holy-spirit", "why-jesus-calls-the-spirit-another-helper", "why-did-the-spirit-wait-until-pentecost"],
     followsFrom: ["who-is-the-father", "why-jesus-calls-the-spirit-another-helper"],
     related: ["who-is-jesus"],
-    planned: ["Why did the Spirit wait until Pentecost?"],
+    planned: [],
     order: 1,
   },
 
@@ -14248,6 +14248,75 @@ export const questions: Question[] = [
     related: ["does-god-have-one-plan-for-my-marriage", "made-for-relationship", "what-is-a-healthy-church"],
     planned: [],
     order: 75,
+  },
+
+  {
+    slug: "why-did-the-spirit-wait-until-pentecost",
+    question: "Why did the Spirit wait until Pentecost?",
+    category: "holy-spirit",
+    summary:
+      "The Spirit came at Pentecost because the gift was tied to Jesus' exaltation: only after He was crucified, risen, and enthroned did the Father pour out the promised Spirit through Him. And Pentecost itself was no accident of timing; it was one of God's appointed feasts, the day Israel celebrated the firstfruits of wheat harvest, now marking the first harvest of a new age.",
+    passages: [
+      {
+        book: "Acts",
+        chapter: 1,
+        title: "The command to wait",
+        lookFor: "Jesus does not tell the disciples to try harder. He tells them to wait for a promise, and links that promise to power for witness.",
+        focus: "4-14",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "The day arrives",
+        lookFor: "Notice Peter's explanation: what looks like chaos is prophecy fulfilled, and it happened because Jesus was exalted.",
+        focus: "1-41",
+      },
+      {
+        book: "Leviticus",
+        chapter: 23,
+        title: "The feast of weeks",
+        lookFor: "Fifty days after Passover came Pentecost, the feast of firstfruits of the wheat harvest, appointed centuries in advance.",
+        focus: "15-21",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus commanded the wait, so the timing was His",
+        body:
+          "The disciples were not left to guess. The risen Jesus ordered them not to leave Jerusalem but to 'wait for the promise of the Father,' and Luke records Him saying, 'wait in the city of Jerusalem until you are clothed with power from on high.' The wait was obedience, not absence: the Spirit's coming had a set hour on God's calendar, just as the cross did.",
+        verses: ["Acts 1:4", "Luke 24:49"],
+      },
+      {
+        heading: "Pentecost was an appointed feast, not a random date",
+        body:
+          "'When the day of Pentecost had come' means the day arrived by God's own schedule. Pentecost (the feast of weeks) fell fifty days after Passover, when Israel brought 'a new meal offering' and loaves baked with yeast as 'first fruits to Yahweh.' On exactly that day, God offered something new indeed: His own Spirit poured out on all flesh, and a first harvest of three thousand souls in a single day.",
+        verses: ["Acts 2:1", "Leviticus 23:16-17", "Acts 2:41"],
+      },
+      {
+        heading: "The Spirit could not come until Jesus was glorified",
+        body:
+          "John explains it directly: 'the Holy Spirit was not yet given, because Jesus wasn't yet glorified.' Jesus Himself said, 'if I don't go away, the Counselor won't come to you.' Peter preaches the same order at Pentecost: 'Being therefore exalted by the right hand of God, and having received from the Father the promise of the Holy Spirit, he has poured out this.' The gift waited on the throne; Pentecost is proof the crucified Jesus is now Lord.",
+        verses: ["John 7:39", "John 16:7", "Acts 2:33"],
+      },
+      {
+        heading: "The wait trained a people of prayer and unity",
+        body:
+          "What did they do while waiting? 'All these with one accord continued steadfastly in prayer and supplication.' Ten days of waiting bound a frightened band of Galileans into a praying, unified church before a single sermon was preached. The Spirit came upon a people already gathered in one accord, which is why the church was born in prayer and never outgrew its need for it.",
+        verses: ["Acts 1:14", "Acts 2:1"],
+      },
+      {
+        heading: "Pentecost launched the mission, not just an experience",
+        body:
+          "Jesus framed the promise as power: 'you will receive power when the Holy Spirit has come upon you. You will be witnesses.' Within minutes of receiving the Spirit, the disciples were declaring 'the mighty works of God' in languages they had never learned, Peter was preaching Christ crucified and risen, and three thousand were added. The wait ended when waiting would have become disobedience: the mission needed the Spirit, so the Spirit came.",
+        verses: ["Acts 1:8", "Acts 2:4", "Acts 2:11", "Acts 2:36-39"],
+      },
+    ],
+    keyVerses: ["Acts 1:4", "Acts 2:33", "John 7:39", "Acts 1:8", "Leviticus 23:16-17"],
+    raises: ["how-do-i-receive-the-holy-spirit", "what-is-the-kingdom-of-god", "does-god-still-speak-today"],
+    followsFrom: ["who-is-the-holy-spirit", "where-is-jesus-now"],
+    related: ["holy-spirit-in-the-old-testament", "what-does-it-mean-to-be-baptized-with-the-holy-spirit"],
+    planned: [],
+    order: 76,
   },
 
 ];
