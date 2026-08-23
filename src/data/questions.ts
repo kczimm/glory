@@ -4048,10 +4048,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 50:20", "Romans 8:28", "Romans 8:29", "2 Corinthians 12:9", "Luke 22:32"],
-    raises: [],
+    raises: ["what-if-i-keep-repeating-the-same-sin"],
     followsFrom: ["what-happens-when-i-sin", "why-does-god-allow-suffering"],
     related: ["what-happens-when-i-sin", "can-i-lose-my-salvation", "why-does-god-allow-suffering"],
-    planned: ["What if I keep repeating the same sin?"],
+    planned: [],
     order: 24,
   },
 
@@ -14524,6 +14524,75 @@ export const questions: Question[] = [
     related: ["does-god-hear-my-prayers", "what-is-fasting"],
     planned: [],
     order: 79,
+  },
+
+  {
+    slug: "what-if-i-keep-repeating-the-same-sin",
+    question: "What if I keep repeating the same sin?",
+    category: "our-walk",
+    summary:
+      "Repeated sin does not mean God has run out of patience: 'If we confess our sins, he is faithful and righteous to forgive us.' But it should be taken seriously, not shrugged at. Scripture holds both together honestly: the righteous may fall seven times and rise again, and the Lord chastens every son He loves, because His goal is not just pardoning you but changing you.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 7,
+        title: "The war within",
+        lookFor: "Paul describes wanting good and doing evil anyway, then cries out for deliverance: this is the honest inside view of a believer's struggle.",
+        focus: "14-25",
+      },
+      {
+        book: "Psalms",
+        chapter: 51,
+        title: "David after his fall",
+        lookFor: "David asks not merely for pardon but for a clean heart: real repentance goes deeper than sorrow.",
+        focus: "1-17",
+      },
+      {
+        book: "Galatians",
+        chapter: 6,
+        title: "Restoring the caught",
+        lookFor: "How the church treats a brother overtaken in fault: gently, watchfully, burden-bearing.",
+        focus: "1-10",
+      },
+    ],
+    points: [
+      {
+        heading: "The struggle itself is evidence of new life",
+        body:
+          "'The good which I desire, I don't do; but the evil which I don't desire, that I practice.' Desiring what is good while failing at it is the signature of a divided heart being renewed, not a dead one. Paul resolves the misery with a Person, not a technique: 'I thank God through Jesus Christ, our Lord!'",
+        verses: ["Romans 7:19", "Romans 7:24-25"],
+      },
+      {
+        heading: "Confession never wears out",
+        body:
+          "God's forgiveness is not a limited-use coupon: 'If we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.' Jesus told Peter to forgive seventy times seven precisely because the Father's own patience overflows. If your brother may return seven times in one day saying 'I repent,' how much more will your Father receive you?",
+        verses: ["1 John 1:9", "Matthew 18:21-22", "Luke 17:4"],
+      },
+      {
+        heading: "But repetition deserves examination, not excuses",
+        body:
+          "Grace covers repeated failure; grace never calls failure success. David's prayer shows the difference between regret and repentance: 'Create in me a clean heart, O God. Renew a right spirit within me.' Ask whether you are fighting the sin or negotiating with it: hiding it, scheduling around it, and dulling conviction are warning lights that confession has become routine.",
+        verses: ["Psalms 51:10", "Proverbs 28:13"],
+      },
+      {
+        heading: "Rising again is the mark of the righteous",
+        body:
+          "'A righteous man falls seven times, and rises up again; but the wicked are overthrown by calamity.' The distinction is not between those who fall and those who don't, but between those who get up and those who give up. Paul models it: forgetting what is behind, stretching forward to what is ahead.",
+        verses: ["Proverbs 24:16", "Philippians 3:13"],
+      },
+      {
+        heading: "Bring in help, and expect loving discipline",
+        body:
+          "You were not meant to fight alone: 'you who are spiritual must restore such a one in a spirit of gentleness.' And take comfort even in the sting: 'whom the Lord loves, he chastens.' Discipline means sonship, not rejection; He knows our frame, 'He remembers that we are dust,' and He disciplines to make us share His holiness, not to pay us back.",
+        verses: ["Galatians 6:1", "Hebrews 12:6", "Psalms 103:14"],
+      },
+    ],
+    keyVerses: ["1 John 1:9", "Romans 7:24-25", "Psalms 51:10", "Proverbs 24:16", "Galatians 6:1"],
+    raises: ["what-is-church-discipline", "how-do-i-know-my-repentance-is-genuine", "how-does-god-discipline-his-children"],
+    followsFrom: ["does-god-use-our-failures", "what-happens-when-i-sin"],
+    related: ["where-does-temptation-come-from", "still-my-father-when-i-fail", "repentance-one-time-or-lifelong"],
+    planned: [],
+    order: 80,
   },
 
 ];
