@@ -1501,7 +1501,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 14:9", "1 John 3:1", "John 3:16", "Matthew 6:9", "Ephesians 1:5"],
-    raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit", "still-my-father-when-i-fail", "what-does-it-mean-that-god-is-love", "how-does-gods-love-differ-from-human-love"],
+    raises: ["what-is-the-trinity", "who-is-jesus", "who-is-the-holy-spirit", "still-my-father-when-i-fail", "what-does-it-mean-that-god-is-love", "how-does-gods-love-differ-from-human-love", "why-did-god-create-us", "can-you-prove-god-exists"],
     followsFrom: ["what-is-the-trinity"],
     related: ["what-is-the-trinity", "who-is-jesus", "why-does-god-allow-suffering", "how-do-i-pray"],
     planned: [],
@@ -2837,7 +2837,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 1:26-27", "Psalm 8:5-6", "Colossians 3:10", "2 Corinthians 3:18"],
-    raises: ["what-is-sin", "made-for-relationship", "why-does-every-human-life-have-dignity-and-worth"],
+    raises: ["what-is-sin", "made-for-relationship", "why-does-every-human-life-have-dignity-and-worth", "why-did-god-create-us"],
     followsFrom: [],
     related: ["who-is-the-father"],
     planned: [],
@@ -14730,7 +14730,7 @@ export const questions: Question[] = [
     question: "Does it matter which Jesus I believe in?",
     category: "jesus-christ",
     summary:
-      "Yes. Paul feared churches would receive 'another Jesus' and 'a different good news,' and pronounced a double curse on anyone who preached one, even an angel from heaven. on anyone who preached one, even an angel from heaven. Salvation rests not on sincerity about any Jesus but on the real One: the Christ of Scripture, true God and risen Lord. A diminished Jesus leaves you exactly where a false god would: still in your sins.",
+      "Yes. Paul feared churches would receive 'another Jesus' and 'a different good news,' and pronounced a double curse on anyone who preached one, even an angel from heaven. Salvation rests not on sincerity about any Jesus but on the real One: the Christ of Scripture, true God and risen Lord. A diminished Jesus leaves you exactly where a false god would: still in your sins.",
     passages: [
       {
         book: "Galatians",
@@ -14799,6 +14799,157 @@ export const questions: Question[] = [
     related: ["can-i-trust-the-bible", "why-did-jesus-have-to-die", "should-i-test-every-teaching-by-scripture"],
     planned: ["Which modern portraits of Jesus preach another Jesus?", "Can someone be saved while still confused about some things concerning Jesus?"],
     order: 83,
+  },
+
+  {
+    slug: "why-did-god-create-us",
+    question: "Why did God create us?",
+    category: "god-the-father",
+    summary:
+      "Not because He needed us. The God who made everything is not served by human hands 'as though he needed anything.' Creation overflows from who He is: He made us for His glory, out of love, for relationship, and so that His grace could be displayed. The story ends where creation aimed: God dwelling with His people.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 1,
+        title: "The crown of creation",
+        lookFor: "Everything is pronounced good, then humanity is made in God's own image, and the whole work is called very good.",
+        focus: "26-31",
+      },
+      {
+        book: "Isaiah",
+        chapter: 43,
+        title: "Created for my glory",
+        lookFor: "God names His motive Himself: a people He formed for Himself, that they might declare His praise.",
+      },
+      {
+        book: "Acts",
+        chapter: 17,
+        title: "Paul at Athens",
+        lookFor: "Paul tells the philosophers why God made the nations and set their times and places: that they should seek Him, and find Him.",
+        focus: "22-31",
+      },
+      {
+        book: "Revelation",
+        chapter: 21,
+        title: "Where it was all headed",
+        lookFor: "The end of the story: God's dwelling is with people. Creation's purpose arrives in fellowship.",
+        focus: "1-5",
+      },
+    ],
+    points: [
+      {
+        heading: "Not because God needed anything",
+        body:
+          "Paul says it plainly to the Athenian philosophers: God 'is not served by men's hands, as though he needed anything, seeing he himself gives to all life and breath, and all things.' A God of complete fullness does not create from lack or loneliness. If we were made to meet some deficit in Him, we would be necessary; Scripture never lets us think that. Instead, everything begins from His giving.",
+        verses: ["Acts 17:24", "Acts 17:25", "Romans 11:36", "1 Corinthians 8:6"],
+      },
+      {
+        heading: "For His glory",
+        body:
+          "God gives His own motive in Isaiah: everyone called by His name was 'created for my glory.' The elders around the throne sing the same: 'you created all things, and because of your desire they existed, and were created.' This is not God fishing for compliments; it is the truth that reality has a center, and it is not us. Of Him, through Him, and to Him are all things.",
+        verses: ["Isaiah 43:7", "Revelation 4:11", "Romans 11:36", "Colossians 1:16"],
+      },
+      {
+        heading: "Out of love, for relationship",
+        body:
+          "Glory and love are not rival motives; they are one. God made man 'in his own image,' capable of knowing and loving Him, and then came walking in the garden to be with the people He had made, calling, 'Where are you?' even after they fell. John gives the direction of love: 'We love him, because he first loved us.' We were not manufactured; we were wanted.",
+        verses: ["Genesis 1:27", "Genesis 3:9", "Genesis 3:8", "1 John 4:19"],
+      },
+      {
+        heading: "So grace could have its display",
+        body:
+          "Paul traces our existence to 'the good pleasure of his desire': God predestined us for adoption as children, 'to the praise of the glory of his grace.' A redeemed people are the showcase of what God is like. Even the new creation keeps this purpose: the story ends with 'God's dwelling... with people,' which is what the garden was always pointing toward.",
+        verses: ["Ephesians 1:5", "Ephesians 1:6", "Revelation 21:3"],
+      },
+      {
+        heading: "And that means your life has an aim now",
+        body:
+          "Because creation has a purpose, so do you. Isaiah's people were formed 'that they might declare my praise,' and Paul says we are God's workmanship, 'created in Christ Jesus for good works, which God prepared before that we would walk in them.' You do not invent your meaning from scratch; you discover it: glorify the God who made you, enjoy Him, love what He loves, and join the work He prepared ahead of time.",
+        verses: ["Isaiah 43:21", "Ephesians 2:10", "Psalms 139:14"],
+      },
+    ],
+    keyVerses: ["Acts 17:25", "Revelation 4:11", "Isaiah 43:7", "Genesis 1:27", "Revelation 21:3"],
+    raises: ["what-does-it-mean-to-be-made-in-gods-image", "made-for-relationship", "why-did-god-become-a-man", "what-is-the-new-heaven-and-new-earth", "how-do-i-know-gods-will"],
+    followsFrom: ["who-is-the-father", "can-you-prove-god-exists"],
+    related: ["what-does-it-mean-to-be-made-in-gods-image", "made-for-relationship", "what-is-the-new-heaven-and-new-earth", "why-does-god-allow-suffering"],
+    planned: ["Why did God allow evil into a world He called very good?", "What is my personal part in God's purpose for creation?"],
+    order: 84,
+  },
+
+  {
+    slug: "can-you-prove-god-exists",
+    question: "Can you prove God exists?",
+    category: "god-the-father",
+    summary:
+      "It depends on what kind of proof you want. Scripture offers witness rather than a laboratory demonstration: creation displays His power and divinity, conscience echoes His law, and above all God answered the question with a Person, His Son, whose signs and resurrection are recorded 'that you may believe.' The Bible treats unbelief less like missing data and more like a heart that will not have Him.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 19,
+        title: "The heavens declare",
+        lookFor: "Creation as constant, wordless testimony to God's glory, reaching every language on earth.",
+        focus: "1-6",
+      },
+      {
+        book: "Romans",
+        chapter: 1,
+        title: "Without excuse",
+        lookFor: "Paul says God's invisible attributes are clearly seen in what has been made; the problem is suppression, not evidence.",
+        focus: "18-23",
+      },
+      {
+        book: "John",
+        chapter: 20,
+        title: "Evidence and blessing",
+        lookFor: "Jesus gives Thomas the proof he demands, then blesses those who believe without seeing. John states exactly why the signs were written down.",
+        focus: "24-31",
+      },
+      {
+        book: "Acts",
+        chapter: 17,
+        title: "Reasoning at the Areopagus",
+        lookFor: "How Paul argues for God with philosophers: creation, providence, nearness, and the risen Man appointed to judge.",
+        focus: "16-34",
+      },
+    ],
+    points: [
+      {
+        heading: "The Bible opens by asserting, not proving",
+        body:
+          "'In the beginning, God created the heavens and the earth.' Genesis never pauses to argue God into existence; it announces Him, and then spends its pages showing what this God is like. Psalm 19 gives the reason: 'The heavens declare the glory of God,' a declaration poured out day after day in speech every language can hear. From the Bible's view, evidence for God is not scarce; it is everywhere and always on.",
+        verses: ["Genesis 1:1", "Psalms 19:1", "Psalms 19:2"],
+      },
+      {
+        heading: "Two witnesses inside and outside of us",
+        body:
+          "Paul names two witnesses. Outside: the things that are made clearly display God's 'everlasting power and divinity, that they may be without excuse.' Inside: 'that which is known of God is revealed in them,' and conscience, the work of the law written on the heart, testifies with it. Peter puts it simply: God 'didn't leave himself without witness,' filling hearts with food and gladness.",
+        verses: ["Romans 1:20", "Romans 1:19", "Romans 2:15", "Acts 14:17"],
+      },
+      {
+        heading: "Why then do people deny what seems obvious?",
+        body:
+          "Paul is unsentimental about this: people 'suppress the truth in unrighteousness,' exchanging the glory of God for images. The fool who says in his heart there is no God is described by conduct, not just creed. This does not mean skeptics are stupid; it means the question runs deeper than information. The heart can hold the door shut against evidence it does not want to welcome, and only God can open hearts, as He did Lydia's.",
+        verses: ["Romans 1:18", "Psalms 14:1", "Acts 16:14"],
+      },
+      {
+        heading: "God's answer was not an argument but a Person",
+        body:
+          "When John the Baptist wondered whether Jesus really was the One, Jesus did not send a syllogism: 'Go and tell John the things which you hear and see: the blind receive their sight...' And when Thomas demanded physical proof of the resurrection, Jesus gave it, hands and side, and Thomas answered, 'My Lord and my God!' Then came the blessing for everyone else in history: 'Blessed are those who have not seen, and have believed.' These signs were written 'that you may believe... and that believing you may have life in his name.'",
+        verses: ["Matthew 11:4", "Matthew 11:5", "John 20:27", "John 20:28", "John 20:29", "John 20:31"],
+      },
+      {
+        heading: "Faith is trust built on testimony, not a leap in the dark",
+        body:
+          "'Without faith it is impossible to be well pleasing to him, for he who comes to God must believe that he exists, and that he is a rewarder of those who seek him.' But notice what kind of belief: trust that acts. Job moved from hearsay to sight: 'I had heard of you by the hearing of the ear, but now my eye sees you.' Christianity asks for reasonable confidence in real testimony, and then promises that the One trusted proves Himself personally to those who come.",
+        verses: ["Hebrews 11:6", "Job 42:5", "Acts 17:27"],
+      },
+    ],
+    keyVerses: ["Psalms 19:1", "Romans 1:20", "Hebrews 11:6", "John 20:31"],
+    raises: ["who-is-jesus", "can-i-trust-the-bible", "is-god-in-control", "why-does-god-allow-suffering", "does-it-matter-which-jesus-i-believe-in"],
+    followsFrom: [],
+    related: ["who-is-the-father", "why-does-god-allow-suffering", "should-i-test-every-teaching-by-scripture", "why-did-god-create-us"],
+    planned: ["If God's existence cannot be proven scientifically, is faith irrational?", "Why doesn't God make Himself more obvious to sincere seekers?"],
+    order: 85,
   },
 
 ];
