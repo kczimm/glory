@@ -442,7 +442,7 @@ export const questions: Question[] = [
       {
         heading: "The fullness of deity dwells in Him",
         body:
-          "Paul puts it beyond ambiguity: 'In him all the fullness of the Godhead dwells bodily.' And He is the radiance of God's glory and the exact imprint of God's nature. To see Jesus is to see God.",
+          "Paul puts it beyond ambiguity: 'In him all the fullness of the Godhead dwells bodily.' And He is 'the radiance of his glory, the very image of his substance.' To see Jesus is to see God.",
         verses: ["Colossians 2:9", "Hebrews 1:3", "John 14:9"],
       },
     ],
@@ -723,7 +723,7 @@ export const questions: Question[] = [
       {
         heading: "'Son' speaks of nature, not of being made",
         body:
-          "In Scripture, sonship describes likeness of nature and relationship. The Son is 'the radiance of God's glory and the exact imprint of his nature.' The word speaks of who He eternally is in relation to the Father, not of a point when He began to exist.",
+          "In Scripture, sonship describes likeness of nature and relationship. The Son is 'the radiance of his glory, the very image of his substance.' The word speaks of who He eternally is in relation to the Father, not of a point when He began to exist.",
         verses: ["Hebrews 1:3", "Hebrews 1:5"],
       },
       {
@@ -874,7 +874,7 @@ export const questions: Question[] = [
       {
         heading: "Nothing can separate us from His love",
         body:
-          "Paul lists the worst that could be named: tribulation, distress, persecution, famine, nakedness, peril, sword, even death itself, and asks: 'Who will separate us from Christ's love?' His answer is a trumpet: neither death nor life, nor anything in all creation, can separate us from the love of God in Christ Jesus our Lord.",
+          "Paul lists the worst that could be named: tribulation, distress, persecution, famine, nakedness, peril, sword, even death itself, and asks: 'Who shall separate us from the love of Christ?' His answer is a trumpet: neither death nor life, nor anything in all creation, can separate us from the love of God in Christ Jesus our Lord.",
         verses: ["Romans 8:35-39"],
       },
       {
@@ -943,7 +943,7 @@ export const questions: Question[] = [
       {
         heading: "Honesty: believers still struggle",
         body:
-          "'If we say that we have no sin, we deceive ourselves, and the truth is not in us.' Even Paul cried out over a war within: 'The good that I desire, I don't do; but the evil that I don't desire, that I practice.' A believer is not someone who never fails, but someone who refuses to make peace with failure.",
+          "'If we say that we have no sin, we deceive ourselves, and the truth is not in us.' Even Paul cried out over a war within: 'For the good which I desire, I don't do; but the evil which I don't desire, that I practice.' A believer is not someone who never fails, but someone who refuses to make peace with failure.",
         verses: ["1 John 1:8", "Romans 7:19-24"],
       },
       {
@@ -1259,7 +1259,7 @@ export const questions: Question[] = [
       {
         heading: "He is preparing a place",
         body:
-          "Jesus told His disciples not to be troubled: 'In my Father's house are many rooms. If it were not so, I would have told you. I go to prepare a place for you.' His absence from our sight is not His absence from our story; He is making ready for us.",
+          "Jesus told His disciples not to be troubled: 'In my Father's house are many homes. If it weren't so, I would have told you. I am going to prepare a place for you.' His absence from our sight is not His absence from our story; He is making ready for us.",
         verses: ["John 14:2-3"],
       },
       {
@@ -1560,7 +1560,7 @@ export const questions: Question[] = [
       {
         heading: "James: real faith cannot be a dead faith",
         body:
-          "'What good is it if someone says he has faith, but he doesn't have works? Can that faith save him?' Faith by itself, if it has no works, is dead: 'as the body apart from the spirit is dead, even so faith apart from works is dead.' James is not teaching that works save; he is exposing a bare 'faith' that never produces fruit.",
+          "'What good is it, my brothers, if a man says he has faith, but has no works? Can faith save him?' Faith by itself, if it has no works, is dead: 'as the body apart from the spirit is dead, even so faith apart from works is dead.' James is not teaching that works save; he is exposing a bare 'faith' that never produces fruit.",
         verses: ["James 2:14", "James 2:17", "James 2:26"],
       },
       {
@@ -5410,7 +5410,7 @@ export const questions: Question[] = [
         book: "1 Corinthians",
         chapter: 11,
         title: "The Supper and the self-examination",
-        lookFor: "Paul hands down what he received from the Lord: 'do this in memory of me... for as often as you eat and drink, you proclaim the Lord's death.'",
+        lookFor: "Paul hands down what he received from the Lord: 'do this in memory of me... as often as you eat this bread and drink this cup, you proclaim the Lord's death.'",
         focus: "23-34",
       },
       {
@@ -7150,7 +7150,7 @@ export const questions: Question[] = [
       {
         heading: "It is God's mark of ownership and His guarantee",
         body:
-          "A seal marks a thing as belonging to its owner, and the Spirit is exactly that. God establishes us in Christ and anoints us, and He 'also sealed us, and gave us the down payment of the Spirit in our hearts.' Paul calls the Spirit 'the pledge of our inheritance, to the redemption of God's own possession.' God has marked us as His, and the Spirit is the first installment of everything He has promised, a guarantee that the rest is coming.",
+          "A seal marks a thing as belonging to its owner, and the Spirit is exactly that. God establishes us in Christ and anoints us, and He 'also sealed us, and gave us the down payment of the Spirit in our hearts.' Paul calls the Spirit 'a pledge of our inheritance, to the redemption of God's own possession.' God has marked us as His, and the Spirit is the first installment of everything He has promised, a guarantee that the rest is coming.",
         verses: ["2 Corinthians 1:21", "2 Corinthians 1:22", "Ephesians 1:14"],
       },
       {
@@ -8273,7 +8273,7 @@ export const questions: Question[] = [
       {
         heading: "Plan as a faithful steward, with open hands",
         body:
-          "James does not forbid planning; he forbids the spirit that plans as though the future were guaranteed and self-made. He warns those who say, 'today or tomorrow we'll go into this city... trade, and make a profit,' because 'you don't know what your life will be like tomorrow.' The right way is to say, 'If the Lord wills, we will both live, and do this or that.' Plan well, and hold the plan in an open hand before God.",
+          "James does not forbid planning; he forbids the spirit that plans as though the future were guaranteed and self-made. He warns those who say, 'today or tomorrow let's go into this city... trade, and make a profit,' because 'you don't know what your life will be like tomorrow.' The right way is to say, 'If the Lord wills, we will both live, and do this or that.' Plan well, and hold the plan in an open hand before God.",
         verses: ["James 4:13", "James 4:14", "James 4:15"],
       },
       {
@@ -9706,7 +9706,7 @@ export const questions: Question[] = [
       {
         heading: "Assurance obeys; presumption excuses",
         body:
-          "John ties knowing to doing: 'This is how we know that we know him: if we keep his commandments,' and 'whoever says, I know him, and doesn't keep his commandments, is a liar.' James adds that faith without works is dead, and Paul names people who 'profess that they know God, but by their works they deny him.' Assurance produces likeness to the one trusted; presumption produces a slogan. You can tell the difference, over time, by the direction of a life.",
+          "John ties knowing to doing: 'This is how we know that we know him: if we keep his commandments,' and 'one who says, I know him, and doesn't keep his commandments, is a liar.' James adds that faith without works is dead, and Paul names people who 'profess that they know God, but by their works they deny him.' Assurance produces likeness to the one trusted; presumption produces a slogan. You can tell the difference, over time, by the direction of a life.",
         verses: ["1 John 2:3-4", "1 John 2:6", "James 2:17", "Titus 1:16"],
       },
       {
@@ -11064,7 +11064,7 @@ export const questions: Question[] = [
       {
         heading: "The judgment seat tests our work, not our standing",
         body:
-          "Paul says plainly, 'we must all be revealed before the judgment seat of Christ, that each one may receive the things in the body, according to what he has done, whether good or bad.' He means the same for believers: 'The fire itself will test what sort of work each man's work is. If any man's work is burned, he will suffer loss, but he himself will be saved, but as through fire.' The foundation, Christ, never moves; it is the quality of our building that the fire reveals.",
+          "Paul says plainly, 'we must all be revealed before the judgment seat of Christ, that each one may receive the things in the body, according to what he has done, whether good or bad.' He means the same for believers: 'The fire itself will test what sort of work each man's work is. ... If any man's work is burned, he will suffer loss, but he himself will be saved, but as through fire.' The foundation, Christ, never moves; it is the quality of our building that the fire reveals.",
         verses: ["2 Corinthians 5:10", "1 Corinthians 3:13-15", "1 Corinthians 3:11"],
       },
       {
@@ -12197,7 +12197,7 @@ export const questions: Question[] = [
       {
         heading: "Who then should come",
         body:
-          "Come if you are trusting in Christ and belong to His church: examine yourself, confess any sin, receive the bread and cup in faith, 'proclaiming the Lord's death until he comes.' Come in love for the brothers, in forgiveness toward any who have wronged you, and in dependence on the One whose body was broken and blood poured out for you. Paul's closing word for the assembly is grace: the table is the place where forgiven sinners meet their Lord and are strengthened for the road ahead.",
+          "Come if you are trusting in Christ and belong to His church: examine yourself, confess any sin, receive the bread and cup in faith; at the table we 'proclaim the Lord's death until he comes.' Come in love for the brothers, in forgiveness toward any who have wronged you, and in dependence on the One whose body was broken and blood poured out for you. Paul's closing word for the assembly is grace: the table is the place where forgiven sinners meet their Lord and are strengthened for the road ahead.",
         verses: ["1 Corinthians 11:26", "1 Corinthians 11:28", "1 Corinthians 11:33-34", "Matthew 26:26-28"],
       },
     ],
@@ -13166,8 +13166,8 @@ export const questions: Question[] = [
       {
         book: "Psalms",
         chapter: 2,
-        title: "The LORD's Anointed on Zion",
-        lookFor: "The nations rage against 'the LORD's Anointed,' yet God installs His King on the holy hill.",
+        title: "The Anointed One on Zion",
+        lookFor: "The nations rage against Yahweh and His Anointed, yet God installs His King on the holy hill.",
       },
       {
         book: "Luke",
@@ -13459,7 +13459,7 @@ export const questions: Question[] = [
     raises: ["is-jesus-really-god", "how-can-one-person-be-fully-god-and-fully-man"],
     followsFrom: ["are-there-other-gods", "who-are-the-gods-of-psalm-82"],
     related: ["does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man", "what-is-the-trinity"],
-    planned: ["Why does Revelation call Jesus 'the beginning of God's creation'?"],
+    planned: ["Why does Revelation call Jesus 'the Head of God's creation'?"],
     order: 64,
   },
 
@@ -14922,7 +14922,7 @@ export const questions: Question[] = [
       {
         heading: "Not because God needed anything",
         body:
-          "Paul says it plainly to the Athenian philosophers: God 'is not served by men's hands, as though he needed anything, seeing he himself gives to all life and breath, and all things.' A God of complete fullness does not create from lack or loneliness. If we were made to meet some deficit in Him, we would be necessary; Scripture never lets us think that. Instead, everything begins from His giving.",
+          "Paul says it plainly to the Athenian philosophers: 'neither is he served by men's hands, as though he needed anything, seeing he himself gives to all life and breath, and all things.' A God of complete fullness does not create from lack or loneliness. If we were made to meet some deficit in Him, we would be necessary; Scripture never lets us think that. Instead, everything begins from His giving.",
         verses: ["Acts 17:24", "Acts 17:25", "Romans 11:36", "1 Corinthians 8:6"],
       },
       {

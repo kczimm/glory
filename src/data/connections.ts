@@ -35,7 +35,7 @@ export const connections: Record<string, Connection[]> = {
   "John 20:28": [
     c("Isaiah 45:22-23", "quotes", "God swears that every knee will bow and every tongue swear to Him alone, and Thomas bows to Jesus."),
     c("Philippians 2:10-11", "fulfilled", "Paul applies Isaiah's 'every knee… every tongue' to Jesus Christ as Lord."),
-    c("Psalm 22:28", "theme", "'The kingdom is the LORD's, and he rules over the nations,' and Thomas calls Jesus his Lord and his God."),
+    c("Psalm 22:28", "theme", "'The kingdom is Yahweh’s. He is the ruler over the nations,' and Thomas calls Jesus his Lord and his God."),
   ],
   "Philippians 2:9-11": [
     c("Isaiah 45:23", "quotes", "The name above every name: God's own words, now given to Jesus."),
