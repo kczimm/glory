@@ -16052,4 +16052,72 @@ export const questions: Question[] = [
     planned: ["What does it mean that God gives grace to the humble?"],
     order: 98,
   },
+
+  {
+    slug: "why-does-god-keep-saying-fear-not",
+    question: "Why does God keep saying 'fear not'?",
+    category: "anxiety-peace",
+    summary:
+      "The phrase echoes through the whole Bible, from Abram under the night sky to John collapsed before the risen Christ, and when God Himself speaks it, a reason is always attached. God never says 'fear not' because the danger is small; He says it because of who He is ('I am with you,' 'I am your God,' 'I will help you'), which turns the command into a relationship rather than a pep talk.",
+    passages: [
+      {
+        book: "Isaiah",
+        chapter: 41,
+        title: "Fear not, worm Jacob: the pattern in one chapter",
+        lookFor: "How each 'don't be afraid' (10, 13, 14) is followed by a reason grounded in who God is and what He will do.",
+      },
+      {
+        book: "Genesis",
+        chapter: 15,
+        title: "The first recorded 'fear not'",
+        lookFor: "God's answer to a fearful Abram is not information but Himself: 'I am your shield.'",
+        focus: "1-6",
+      },
+      {
+        book: "Revelation",
+        chapter: 1,
+        title: "The last 'fear not' comes from Jesus",
+        lookFor: "John falls like a dead man; the glorified Christ lays His right hand on him and speaks the words Yahweh spoke through Isaiah.",
+        focus: "12-18",
+      },
+    ],
+    points: [
+      {
+        heading: "Every 'fear not' carries its reason with it",
+        body:
+          "Watch how Isaiah 41 works: 'Don't you be afraid, for I am with you. Don't be dismayed, for I am your God. I will strengthen you. Yes, I will help you.' The command never floats free; it is moored to identity ('I am with you'), relationship ('I am your God'), and action ('I will uphold you'). Scripture's fear-nots are not wishful thinking; they are arguments.",
+        verses: ["Isaiah 41:10", "Genesis 15:1", "Revelation 1:17"],
+      },
+      {
+        heading: "The reason is always who God is, not that things are fine",
+        body:
+          "When God says 'Don't be afraid' to Abram, the night around him has not changed; the promise has: 'I am your shield, your exceedingly great reward.' In Isaiah 41 the enemies are real and coming, yet they 'will be as nothing.' The Bible never denies danger to make courage easier; it insists that the danger is outmatched by the One speaking.",
+        verses: ["Genesis 15:1", "Isaiah 41:11-12"],
+      },
+      {
+        heading: "God says it most often to the weak, not the strong",
+        body:
+          "Notice whom Isaiah 41 addresses: 'Don't be afraid, you worm Jacob, and you men of Israel.' Not heroes; a worm, and then the poor and needy searching for water. And still: 'I will help you, says Yahweh, and your Redeemer is the Holy One of Israel.' If the fear-nots belonged only to the fearless, most of us could never pick one up; they are addressed precisely to people who feel small.",
+        verses: ["Isaiah 41:14", "Isaiah 41:17"],
+      },
+      {
+        heading: "Fear not comes with work to do and water to drink",
+        body:
+          "After the fear-nots, God hands Jacob a job description (a threshing instrument that levels mountains) and a supply promise (rivers on bare heights, pools in the wilderness), so that all can see 'that the hand of Yahweh has done this.' Courage in Scripture is rarely an end in itself; it exists so fearful people can keep serving while God makes the desert bloom behind them.",
+        verses: ["Isaiah 41:15-16", "Isaiah 41:18-20"],
+      },
+      {
+        heading: "Jesus takes the divine fear-not on His own lips",
+        body:
+          "The same words cross from the Old Testament into the mouth of Christ: to his terrified disciples on the water, 'Cheer up! It is I! Don't be afraid'; to Jairus mid-crisis, 'Don't be afraid, only believe'; and in Revelation the glorified Jesus lays His right hand on the fallen John and says what Yahweh said through Isaiah, 'Don't be afraid. I am the first and the last.' The voice that commands the fear not is the reason for it.",
+        verses: ["Matthew 14:27", "Mark 5:36", "Revelation 1:17-18", "Isaiah 44:6"],
+      },
+    ],
+    keyVerses: ["Isaiah 41:10", "Isaiah 41:13", "Revelation 1:17"],
+    raises: ["is-god-in-control", "what-does-it-mean-that-god-is-sovereign", "who-is-jesus"],
+    followsFrom: ["why-am-i-so-anxious", "what-does-it-mean-that-god-is-one"],
+    related: ["does-god-change-his-mind", "what-is-the-bibles-big-story", "can-i-be-anxious-and-still-trust-god"],
+    planned: ["Why does seeing God's glory sometimes come with a command not to fear instead of comfort?"],
+    order: 99,
+  },
 ];
