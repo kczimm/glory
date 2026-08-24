@@ -7,6 +7,7 @@ import {
   resolveQuestions,
   trailOf,
   categoryOf,
+  questionsByCategory,
   getPassageText,
   getChapter,
   questionTitles,
@@ -57,9 +58,13 @@ export default async function QuestionPage({ params }: Props) {
 
   const category = categoryOf(question);
   const raisedAll = resolveQuestions(question.raises);
+  const raisedSlugs = new Set(raisedAll.map((q) => q.slug));
   const sameTrail = raisedAll
     .filter((q) => q.category === question.category)
     .sort((a, b) => a.order - b.order);
+  const trailRest = questionsByCategory(question.category)
+    .filter((q) => q.order > question.order && !raisedSlugs.has(q.slug));
+  const sameTrailAll = [...sameTrail, ...trailRest].sort((a, b) => a.order - b.order);
   const crossTrail = raisedAll
     .filter((q) => q.category !== question.category)
     .sort((a, b) => a.order - b.order);
@@ -225,14 +230,14 @@ export default async function QuestionPage({ params }: Props) {
             Studying the Word naturally opens more of it. Follow what you just
             read: it leads somewhere.
           </p>
-          {(sameTrail.length > 0 || crossTrail.length > 0 || question.planned.length > 0) && (
+          {(sameTrailAll.length > 0 || crossTrail.length > 0 || question.planned.length > 0) && (
             <div className="mt-7 space-y-3">
               {sameTrail.length > 0 && (
                 <>
                   <p className="pt-2 text-[13px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
                     Continue this trail
                   </p>
-                  {sameTrail.map((q) => {
+                  {sameTrailAll.map((q) => {
                     const text = getPassageText(q.keyVerses[0]);
                     return (
                       <Link
