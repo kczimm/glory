@@ -46,9 +46,12 @@ export default function DailyCard() {
             Already been here today? Surprise me
           </RandomLink>
           {category && (
-            <span className="text-[12.5px] uppercase tracking-[0.14em] text-ink-faint">
+            <Link
+              href={`/trails/${category.slug}`}
+              className="text-[12.5px] uppercase tracking-[0.14em] text-ink-faint transition-colors hover:text-gold-deep"
+            >
               From the {category.title} trail
-            </span>
+            </Link>
           )}
         </div>
       </div>

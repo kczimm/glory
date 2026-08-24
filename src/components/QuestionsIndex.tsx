@@ -144,7 +144,8 @@ export default function QuestionsIndex({
             <p className="mt-4 rounded-2xl border border-line bg-cream/50 p-6 text-center text-[14px] leading-relaxed text-ink-soft">
               Try a different word or two: “grace”, “pray”, “rapture”, “who is
               Jesus”. Or{" "}
-              <button onClick={() => { setQ(""); setCat(ALL); }} className="font-medium text-gold-deep hover:underline">
+              <button
+                onClick={() => { setQ(""); setCat(ALL); }} className="font-medium text-gold-deep hover:underline">
                 clear the filter
               </button>{" "}
               and browse.

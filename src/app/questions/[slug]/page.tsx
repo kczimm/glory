@@ -80,9 +80,12 @@ export default async function QuestionPage({ params }: Props) {
               The questions
             </Link>
             <span className="text-gold">/</span>
-            <span className="font-medium text-ink-soft">
+            <Link
+              href={`/trails/${question.category}`}
+              className="font-medium text-ink-soft hover:text-gold-deep hover:underline"
+            >
               Trail: {category?.title}
-            </span>
+            </Link>
             <span className="ml-auto flex items-center gap-2">
               <Link
                 href={`/questions/${question.slug}/print`}

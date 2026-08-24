@@ -145,7 +145,7 @@ export default function Home() {
                   ))}
                 </div>
                 <Link
-                  href="/questions"
+                  href={`/trails/${c.slug}`}
                   className="mt-auto flex items-center gap-1.5 pt-4 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-ink-faint transition-colors hover:text-gold-deep"
                 >
                   {count} {count === 1 ? "question" : "questions"} in this trail
