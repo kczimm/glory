@@ -56,7 +56,13 @@ export default async function QuestionPage({ params }: Props) {
   if (!question) notFound();
 
   const category = categoryOf(question);
-  const raised = resolveQuestions(question.raises);
+  const raisedAll = resolveQuestions(question.raises);
+  const sameTrail = raisedAll
+    .filter((q) => q.category === question.category)
+    .sort((a, b) => a.order - b.order);
+  const crossTrail = raisedAll
+    .filter((q) => q.category !== question.category)
+    .sort((a, b) => a.order - b.order);
   const parents = resolveQuestions(question.followsFrom);
   const related = resolveQuestions(question.related);
   const { prev, next } = trailOf(question);
@@ -219,30 +225,70 @@ export default async function QuestionPage({ params }: Props) {
             Studying the Word naturally opens more of it. Follow what you just
             read: it leads somewhere.
           </p>
-          {(raised.length > 0 || question.planned.length > 0) && (
+          {(sameTrail.length > 0 || crossTrail.length > 0 || question.planned.length > 0) && (
             <div className="mt-7 space-y-3">
-              {raised.map((q) => {
-                const text = getPassageText(q.keyVerses[0]);
-                return (
-                  <Link
-                    key={q.slug}
-                    href={`/questions/${q.slug}`}
-                    className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-surface/80 px-6 py-5 transition-all hover:border-gold/60 hover:bg-surface hover:shadow-sm"
-                  >
-                    <span className="flex items-center gap-2 font-display text-lg font-medium text-ink transition-colors group-hover:text-gold-deep">
-                      {q.question}
-                      <span className="text-gold transition-transform group-hover:translate-x-1">
-                        →
-                      </span>
-                    </span>
-                    {text && (
-                      <span className="line-clamp-1 text-[13px] italic text-ink-faint">
-                        “{text}”
-                      </span>
-                    )}
-                  </Link>
-                );
-              })}
+              {sameTrail.length > 0 && (
+                <>
+                  <p className="pt-2 text-[13px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                    Continue this trail
+                  </p>
+                  {sameTrail.map((q) => {
+                    const text = getPassageText(q.keyVerses[0]);
+                    return (
+                      <Link
+                        key={q.slug}
+                        href={`/questions/${q.slug}`}
+                        className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-surface/80 px-6 py-5 transition-all hover:border-gold/60 hover:bg-surface hover:shadow-sm"
+                      >
+                        <span className="flex items-center gap-2 font-display text-lg font-medium text-ink transition-colors group-hover:text-gold-deep">
+                          {q.question}
+                          <span className="text-gold transition-transform group-hover:translate-x-1">
+                            →
+                          </span>
+                        </span>
+                        {text && (
+                          <span className="line-clamp-1 text-[13px] italic text-ink-faint">
+                            “{text}”
+                          </span>
+                        )}
+                      </Link>
+                    );
+                  })}
+                </>
+              )}
+              {crossTrail.length > 0 && (
+                <>
+                  <p className="pt-2 text-[13px] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                    Explore further
+                  </p>
+                  {crossTrail.map((q) => {
+                    const text = getPassageText(q.keyVerses[0]);
+                    const trail = categoryOf(q);
+                    return (
+                      <Link
+                        key={q.slug}
+                        href={`/questions/${q.slug}`}
+                        className="group flex flex-col gap-1.5 rounded-2xl border border-line bg-surface/80 px-6 py-5 transition-all hover:border-gold/60 hover:bg-surface hover:shadow-sm"
+                      >
+                        <span className="flex items-center gap-2 font-display text-lg font-medium text-ink transition-colors group-hover:text-gold-deep">
+                          {q.question}
+                          <span className="text-gold transition-transform group-hover:translate-x-1">
+                            →
+                          </span>
+                        </span>
+                        <span className="text-[12px] font-medium text-ink-faint">
+                          {trail?.title ?? q.category} trail
+                        </span>
+                        {text && (
+                          <span className="line-clamp-1 text-[13px] italic text-ink-faint">
+                            “{text}”
+                          </span>
+                        )}
+                      </Link>
+                    );
+                  })}
+                </>
+              )}
               {question.planned.map((p, i) => (
                 <div
                   key={i}
