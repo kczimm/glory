@@ -69,6 +69,32 @@ export default function QuestionsIndex({
 
   const total = teasers.length;
 
+  // One trail selected: offer its page (and share) wherever the reader has
+  // filtered down to it, search term or not.
+  const trailActions =
+    cat !== ALL
+      ? (() => {
+          const trail = categories.find((c) => c.slug === cat);
+          if (!trail) return null;
+          return (
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+              <Link
+                href={`/trails/${trail.slug}`}
+                className="text-[13.5px] font-medium text-gold-deep underline-offset-4 hover:underline"
+              >
+                Open the {trail.title} trail →
+              </Link>
+              <ShareButton
+                url={`${SITE_URL}/trails/${trail.slug}`}
+                title={trail.title}
+                text={trail.tagline}
+                label="Share this trail"
+              />
+            </div>
+          );
+        })()
+      : null;
+
   return (
     <div className="mx-auto max-w-5xl px-5 py-16">
       <header className="mb-8 max-w-2xl">
@@ -141,29 +167,7 @@ export default function QuestionsIndex({
                     : ""
                 }`}
           </p>
-          {/* One trail selected: offer its page (and share) without losing
-              the filter state built up here. */}
-          {cat !== ALL &&
-            (() => {
-              const trail = categories.find((c) => c.slug === cat);
-              if (!trail) return null;
-              return (
-                <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
-                  <Link
-                    href={`/trails/${trail.slug}`}
-                    className="text-[13.5px] font-medium text-gold-deep underline-offset-4 hover:underline"
-                  >
-                    Open the {trail.title} trail →
-                  </Link>
-                  <ShareButton
-                    url={`${SITE_URL}/trails/${trail.slug}`}
-                    title={trail.title}
-                    text={trail.tagline}
-                    label="Share this trail"
-                  />
-                </div>
-              );
-            })()}
+          {trailActions && <div className="mt-3">{trailActions}</div>}
           {matches.length === 0 ? (
             <p className="mt-4 rounded-2xl border border-line bg-cream/50 p-6 text-center text-[14px] leading-relaxed text-ink-soft">
               Try a different word or two: “grace”, “pray”, “rapture”, “who is
@@ -185,6 +189,9 @@ export default function QuestionsIndex({
       ) : (
         // Grouped by category
         <div className="mt-10 space-y-14">
+          {cat !== ALL && trailActions && (
+            <div className="-mt-6 flex justify-center">{trailActions}</div>
+          )}
           {visibleCategories.map((c, ci) => {
             const qs = teasers.filter((t) => t.category === c.slug);
             return (
