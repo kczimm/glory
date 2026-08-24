@@ -1,10 +1,11 @@
 import "server-only";
 import { verses, chapters } from "./scripture";
-import { canonicalBook, chapterItems, filterFocus, studyItems } from "../lib/audio-text";
+import { chapterItems, filterFocus, studyItems } from "../lib/audio-text";
 import type { AudioChunk } from "../lib/audio-text";
+import { canonicalBook, joinPassage, parseRef } from "./ref";
 import { questions } from "./questions";
 import { connections } from "./connections";
-import { parseRef, questionsUsing, incomingConnections, graphVerseRefs, refFromSlug } from "./verseIndex";
+import { questionsUsing, incomingConnections, graphVerseRefs, refFromSlug } from "./verseIndex";
 import { getCategory as categoryLookup } from "./categories";
 import type { Category, Question, QuestionTeaser } from "./types";
 
@@ -19,43 +20,18 @@ export { verses, chapters, questions };
 export { canonicalBook, filterFocus };
 export { parseRef, questionsUsing, incomingConnections, graphVerseRefs, refFromSlug };
 
-export interface ParsedVerseRef {
-  book: string;
-  chapter: number;
-  verseStart: number;
-  verseEnd: number;
-}
-
-/** Parse "John 3:16", "John 14:16-17" into parts. */
-export function parseVerseRef(ref: string): ParsedVerseRef | null {
-  const m = ref.match(/^(.+?)\s(\d+):(\d+)(?:-(\d+))?$/);
-  if (!m) return null;
-  return {
-    book: canonicalBook(m[1]),
-    chapter: Number(m[2]),
-    verseStart: Number(m[3]),
-    verseEnd: Number(m[4] ?? m[3]),
-  };
-}
-
 /** Full text of a single verse, or null if we don't have it. */
 export function getVerseText(ref: string): string | null {
-  const p = parseVerseRef(ref);
+  const p = parseRef(ref);
   if (!p) return null;
-  return verses[`${p.book} ${p.chapter}:${p.verseStart}`] ?? null;
+  return verses[`${p.book} ${p.chapter}:${p.from}`] ?? null;
 }
 
 /** Text of a verse or range ("John 14:16-17"), joined with spaces. */
 export function getPassageText(ref: string): string | null {
-  const p = parseVerseRef(ref);
+  const p = parseRef(ref);
   if (!p) return null;
-  const parts: string[] = [];
-  for (let v = p.verseStart; v <= p.verseEnd; v++) {
-    const t = verses[`${p.book} ${p.chapter}:${v}`];
-    if (!t) return null;
-    parts.push(t.replace(/\n+/g, " "));
-  }
-  return parts.join(" ");
+  return joinPassage((key) => verses[key], p);
 }
 
 /** Whole chapter as verse list, or null. */

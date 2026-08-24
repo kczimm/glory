@@ -140,29 +140,21 @@ function hardSplit(text: string): string[] {
   return out;
 }
 
+// Ref parsing and canonicalization live in data/ref (the single home for ref
+// syntax); parseRefRaw keeps the book as written so spoken text is stable.
+import { parseRefRaw } from "../data/ref.ts";
+export { canonicalBook } from "../data/ref.ts";
+
 /** Format a verse ref for the ear: "John chapter 3, verse 16". */
 export function speechRef(ref: string): string {
-  const m = ref.match(/^(.+?)\s(\d+):(\d+)(?:-(\d+))?$/);
-  if (!m) return ref;
-  const book = m[1];
-  const chapter = Number(m[2]);
-  const start = Number(m[3]);
-  const end = Number(m[4] ?? m[3]);
-  return start === end
-    ? `${book} chapter ${chapter}, verse ${start}`
-    : `${book} chapter ${chapter}, verses ${start} through ${end}`;
+  const p = parseRefRaw(ref);
+  if (!p) return ref;
+  return p.from === p.to
+    ? `${p.book} chapter ${p.chapter}, verse ${p.from}`
+    : `${p.book} chapter ${p.chapter}, verses ${p.from} through ${p.to}`;
 }
 
 // ---- verse slicing ---------------------------------------------------------
-
-/** content book name -> canonical scripture key */
-const BOOK_ALIASES: Record<string, string> = {
-  Psalm: "Psalms",
-};
-
-export function canonicalBook(book: string): string {
-  return BOOK_ALIASES[book] ?? book;
-}
 
 /** Keep only verses within an optional focus range like "5-15" or "16". */
 export function filterFocus(
