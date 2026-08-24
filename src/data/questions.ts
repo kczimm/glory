@@ -14794,11 +14794,93 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Galatians 1:8", "2 Corinthians 11:4", "Acts 4:12", "Matthew 7:23", "2 John 1:9"],
-    raises: ["is-jesus-really-god", "what-is-the-gospel", "should-i-test-every-teaching-by-scripture", "how-can-i-be-saved"],
+    raises: ["is-jesus-really-god", "what-is-the-gospel", "should-i-test-every-teaching-by-scripture", "how-can-i-be-saved", "which-modern-portraits-preach-another-jesus"],
     followsFrom: ["who-is-jesus", "what-is-the-gospel"],
     related: ["can-i-trust-the-bible", "why-did-jesus-have-to-die", "should-i-test-every-teaching-by-scripture"],
-    planned: ["Which modern portraits of Jesus preach another Jesus?", "Can someone be saved while still confused about some things concerning Jesus?"],
+    planned: ["Can someone be saved while still confused about some things concerning Jesus?"],
     order: 83,
+  },
+
+  {
+    slug: "which-modern-portraits-preach-another-jesus",
+    question: "Which modern portraits of Jesus preach another Jesus?",
+    category: "jesus-christ",
+    summary:
+      "Whatever portrait subtracts from Scripture preaches another Jesus. The crowds had respectful guesses about Jesus, and every one fell short; modern versions repeat the pattern: teacher but not Lord, buddy but not Judge, life coach but not cross bearer, political champion but not King of kings. Each borrows His name while deleting what makes Him able to save. The apostles' portrait is the test: God the Son in flesh, crucified for our sins, risen on the third day, returning to judge and reign.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 16,
+        title: "Who do you say that I am?",
+        lookFor: "The crowd's flattering guesses versus Peter's confession, and how quickly a right confession gets corrected when it resists the cross.",
+        focus: "13-28",
+      },
+      {
+        book: "John",
+        chapter: 8,
+        title: "Before Abraham was, I AM",
+        lookFor: "Claims about Himself that force a verdict: forgiving sins, bearing the divine name, dividing everyone who hears.",
+        focus: "12-59",
+      },
+      {
+        book: "Philippians",
+        chapter: 2,
+        title: "The apostolic portrait",
+        lookFor: "Paul's summary of who Jesus is and what He did: true deity, real humiliation, death on a cross, exaltation, and universal confession of Jesus as Lord.",
+        focus: "1-18",
+      },
+      {
+        book: "Revelation",
+        chapter: 1,
+        title: "The risen Lord as John saw Him",
+        lookFor: "No tame portrait here: the glorified Jesus, first and last, alive forever, holding the keys of Death and Hades.",
+        focus: "9-20",
+      },
+    ],
+    points: [
+      {
+        heading: "Every generation redraws Jesus in its own image",
+        body:
+          "Paul saw it coming: people would pile up teachers who scratch where they itch, gathering speakers “after their own lusts” instead of enduring truth. It happened even in person. When Jesus asked who people said He was, the answers were respectful and all wrong: “Some say John the Baptizer, some, Elijah, and others, Jeremiah, or one of the prophets.” A portrait drawn to flatter the age is an idol wearing familiar clothes. The question that never expires is the one Jesus asked next: “But who do you say that I am?”",
+        verses: ["2 Timothy 4:3", "Matthew 16:14", "Matthew 16:15"],
+      },
+      {
+        heading: "The teacher-only portrait fails His own claims",
+        body:
+          "Modern taste prefers Jesus as wise moral instructor, nothing more. But the Jesus of history forgave sins as God's own prerogative: seeing a paralytic, He said, “Son, your sins are forgiven you.” When objectors demanded, “Who can forgive sins but God alone?”, He answered by asserting that “the Son of Man has authority on earth to forgive sins.” Later He declared, “Most certainly, I tell you, before Abraham came into existence, I AM.” His hearers understood exactly what was claimed and reached for stones, saying, “We don’t stone you for a good work, but for blasphemy: because you, being a man, make yourself God.” A portrait that keeps the ethics but deletes the identity keeps something Jesus never offered.",
+        verses: ["Mark 2:5", "Mark 2:7", "Mark 2:10", "John 8:58", "John 10:33"],
+      },
+      {
+        heading: "The affirming buddy omits the Judge",
+        body:
+          "Another popular portrait approves everything and confronts nothing. Jesus was merciful: to the woman dragged before Him He said, “Neither do I condemn you. Go your way. From now on, sin no more.” But mercy came with a command, and He warned hearers that unless they believed who He is, they would die in their sins. The same Lord appeared to John in glory and said, “Don’t be afraid. I am the first and the last, and the Living one.” Scripture assigns Him the judgment seat: “he has given all judgment to the Son,” and before Him “all the nations will be gathered, and he will separate them one from another.” A Jesus with no judgment to give is not the Jesus who saves from it.",
+        verses: ["John 8:11", "Revelation 1:17-18", "John 5:22", "Matthew 25:31-32"],
+      },
+      {
+        heading: "The life-improvement portrait cannot explain the cross",
+        body:
+          "The prosperity version of Jesus exists to upgrade your circumstances; the self-help version offers principles for a better you. The real One offered a cross: “Whoever wants to come after me, let him deny himself, and take up his cross, and follow me.” Then came the question no brand manager would approve: “For what does it profit a man, to gain the whole world, and forfeit his life?” He owned no bed, telling an eager follower that “the Son of Man has no place to lay his head.” And His route to blessing ran through poverty for our sake: “though he was rich, yet for your sakes he became poor, that you through his poverty might become rich.” A Jesus who exists to serve your goals is a mirror, not a Master.",
+        verses: ["Mark 8:34", "Mark 8:36", "Luke 9:58", "2 Corinthians 8:9"],
+      },
+      {
+        heading: "The political champion mistakes the mission",
+        body:
+          "Every era tries to draft Jesus into its cause, from the left or from the right. Galilee tried it first: perceiving the crowd meant to seize Him “to make him king”, He withdrew alone. Before Pilate He explained why: “My Kingdom is not of this world.” His model of greatness was not seizing power but serving under it, and His mission statement was substitution: “the Son of Man also came not to be served, but to serve, and to give his life as a ransom for many.” He will reign openly one day under the name “KING OF KINGS, AND LORD OF LORDS,” but on His terms and timetable, not ours. A Jesus enlisted in our platform is another Jesus; the real One recruits us into His.",
+        verses: ["John 6:15", "John 18:36", "Mark 10:45", "Revelation 19:16"],
+      },
+      {
+        heading: "The apostles' portrait is the test",
+        body:
+          "How do you tell a counterfeit from the real thing? Hold every portrait against what the eyewitnesses handed down: “Christ died for our sins according to the Scriptures,” He was buried, and He was “raised on the third day according to the Scriptures.” In Him risen and bodily, “all the fullness of the Godhead dwells bodily,” and Thomas's conclusion stands as the church's confession: “My Lord and my God!” Any portrait that carries these marks, however dimly understood, points at the real Jesus and can grow. Any that subtracts them, however sincerely held, is exactly the substitute Paul feared, one we too easily “put up with ... well enough.”",
+        verses: ["1 Corinthians 15:3-4", "Colossians 2:9", "John 20:28", "2 Corinthians 11:4"],
+      },
+    ],
+    keyVerses: ["Matthew 16:15", "John 8:58", "Mark 8:36", "Revelation 1:17-18", "Colossians 2:9"],
+    raises: ["is-jesus-really-god", "should-i-test-every-teaching-by-scripture", "will-jesus-return-literally", "why-did-jesus-have-to-die"],
+    followsFrom: ["does-it-matter-which-jesus-i-believe-in"],
+    related: ["who-is-jesus", "does-it-matter-which-jesus-i-believe-in", "did-jesus-treat-scripture-as-final"],
+    planned: [],
+    order: 86,
   },
 
   {
