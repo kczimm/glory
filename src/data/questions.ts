@@ -16187,4 +16187,65 @@ export const questions: Question[] = [
     planned: ["What does Sabbath rest mean, and is it still for today?"],
     order: 100,
   },
+
+  {
+    slug: "when-the-weight-wont-lift",
+    question: "When the weight won't lift: what happened to Elijah?",
+    category: "anxiety-peace",
+    summary:
+      "One day after fire fell from heaven, Elijah sat under a tree and asked God to end his life. God's response was no lecture: sleep, then two meals brought by an angel, a gentle question asked twice, a still small voice, and a new assignment with a companion. Scripture handles burnout with bread and rest before correction, and it corrects despair's biggest lie: 'I, even I only, am left' was never true.",
+    passages: [
+      {
+        book: "1 Kings",
+        chapter: 19,
+        title: "The prophet under the tree",
+        lookFor: "The collapse (1-8), the twice-asked question and the still small voice (9-13), and the recommissioning with seven thousand hidden faithful (14-18).",
+      },
+      {
+        book: "Psalms",
+        chapter: 103,
+        title: "He remembers that we are dust",
+        lookFor: "The Father's compassion as the frame for human frailty.",
+        focus: "8-18",
+      },
+    ],
+    points: [
+      {
+        heading: "Exhaustion can follow triumph within twenty-four hours",
+        body:
+          "Elijah had just seen fire from heaven; then one threat by messenger ('if I don't make your life as the life of one of them by tomorrow') sent him running for his life, asking to die. Spiritual highs do not immunize against collapse, and the crash is not proof of hypocrisy. Even the boldest believers run out of fuel, and the Bible records it without embarrassment.",
+        verses: ["1 Kings 19:2-4"],
+      },
+      {
+        heading: "God's first prescriptions were sleep and food, not lectures",
+        body:
+          "Twice the angel touched him with the same message, 'Arise and eat,' adding only, 'because the journey is too great for you.' Cake baked on coals and a jar of water came before any conversation about faith or feelings. When the weight will not lift, the first questions are sometimes the most physical ones: sleep, food, and the acknowledgment that the journey really is too great for you, which is why God provides rather than scolds.",
+        verses: ["1 Kings 19:5-8"],
+      },
+      {
+        heading: "God asks the question twice and lets Elijah repeat himself",
+        body:
+          "At Horeb, God asks simply, 'What are you doing here, Elijah?' Elijah answers with his grievance; after wind, earthquake, and fire have all passed without Yahweh in them, a still small voice asks the identical question again, and Elijah gives the identical answer. God does not interrupt the loop or shame the repetition; he draws the man out until the real wound is fully spoken, which is often how honest prayer actually proceeds.",
+        verses: ["1 Kings 19:9-13", "Psalms 62:8"],
+      },
+      {
+        heading: "Despair always inflates its arithmetic",
+        body:
+          "Twice Elijah insists, 'I, even I only, am left.' Twice is telling: despair had become his lens. God's reply quietly demolishes it: 'Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal.' The loneliness felt absolutely true from inside the cave, and it was off by six thousand nine hundred ninety-nine. Weights that won't lift tend to whisper the same exaggeration, you are alone, no one has ever felt this, nothing will change; measured against God's quiet facts, the math rarely survives.",
+        verses: ["1 Kings 19:10", "1 Kings 19:14", "1 Kings 19:18"],
+      },
+      {
+        heading: "Restoration ends in purpose and companionship",
+        body:
+          "God does not pension Elijah off in the cave. He sends him back with three tasks, including anointing Elisha 'to be prophet in your place', which means sharing the burden, not carrying it alone to the end. Like a father, 'Yahweh has compassion on those who fear him. For he knows how we are made. He remembers that we are dust.' The way through a weight that will not lift usually includes being handed work again, and someone to carry it alongside.",
+        verses: ["1 Kings 19:15-17", "Psalms 103:13-14"],
+      },
+    ],
+    keyVerses: ["1 Kings 19:7", "1 Kings 19:12", "Psalms 103:14"],
+    raises: ["does-god-still-speak-today", "why-does-god-seem-silent", "what-is-the-church"],
+    followsFrom: ["can-i-be-anxious-and-still-trust-god", "when-i-feel-far-from-god", "why-does-god-allow-suffering"],
+    related: ["how-do-i-help-a-friend-who-is-suffering", "where-is-god-in-my-pain", "does-god-hear-my-prayers"],
+    planned: ["What should I do when a friend talks about ending their life?"],
+    order: 101,
+  },
 ];
