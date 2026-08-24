@@ -1,9 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import type { Category, QuestionTeaser } from "@/data/types";
 import QuestionCard from "@/components/QuestionCard";
+import ShareButton from "@/components/ShareButton";
 import RandomLink from "@/components/RandomLink";
+import { SITE_URL } from "@/lib/site";
 
 const ALL = "all";
 
@@ -82,9 +85,7 @@ export default function QuestionsIndex({
           yours. Or don&apos;t look for anything at all:{" "}
           <RandomLink className="font-medium text-gold-deep underline-offset-4 transition-colors hover:text-ink hover:underline">
             take a surprise question
-          </RandomLink>
-          .
-          .
+          </RandomLink>.
         </p>
       </header>
 
@@ -140,6 +141,29 @@ export default function QuestionsIndex({
                     : ""
                 }`}
           </p>
+          {/* One trail selected: offer its page (and share) without losing
+              the filter state built up here. */}
+          {cat !== ALL &&
+            (() => {
+              const trail = categories.find((c) => c.slug === cat);
+              if (!trail) return null;
+              return (
+                <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
+                  <Link
+                    href={`/trails/${trail.slug}`}
+                    className="text-[13.5px] font-medium text-gold-deep underline-offset-4 hover:underline"
+                  >
+                    Open the {trail.title} trail →
+                  </Link>
+                  <ShareButton
+                    url={`${SITE_URL}/trails/${trail.slug}`}
+                    title={trail.title}
+                    text={trail.tagline}
+                    label="Share this trail"
+                  />
+                </div>
+              );
+            })()}
           {matches.length === 0 ? (
             <p className="mt-4 rounded-2xl border border-line bg-cream/50 p-6 text-center text-[14px] leading-relaxed text-ink-soft">
               Try a different word or two: “grace”, “pray”, “rapture”, “who is
@@ -171,7 +195,12 @@ export default function QuestionsIndex({
                   </span>
                   <div>
                     <h2 className="font-display text-2xl font-medium text-ink">
-                      {c.title}
+                      <Link
+                        href={`/trails/${c.slug}`}
+                        className="underline-offset-4 hover:text-gold-deep hover:underline"
+                      >
+                        {c.title}
+                      </Link>
                     </h2>
                     <p className="text-[13.5px] text-ink-soft">{c.tagline}</p>
                   </div>
