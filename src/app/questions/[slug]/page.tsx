@@ -12,12 +12,14 @@ import {
   questionTitles,
   studyListenData,
   visitChainData,
+  visitListenData,
 } from "@/data/server";
 import VerseCard from "@/components/VerseCard";
 import ChapterReader from "@/components/ChapterReader";
 import JourneyBreadcrumb from "@/components/JourneyBreadcrumb";
 import StudyListen from "@/components/StudyListen";
 import VisitChain from "@/components/VisitChain";
+import VisitListen from "@/components/VisitListen";
 import ShareButton from "@/components/ShareButton";
 import HoldAllButton from "@/components/HoldAllButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
@@ -59,6 +61,7 @@ export default async function QuestionPage({ params }: Props) {
   const related = resolveQuestions(question.related);
   const { prev, next } = trailOf(question);
   const chain = visitChainData(question);
+  const visitIntro = visitListenData(question);
 
   return (
     <article>
@@ -115,12 +118,16 @@ export default async function QuestionPage({ params }: Props) {
               />
             </span>
           </div>
-          <h1 className="mt-5 font-display text-3xl font-medium leading-tight tracking-tight text-ink sm:mt-6 sm:text-5xl">
+          <h1 id="q-question" className="mt-5 font-display text-3xl font-medium leading-tight tracking-tight text-ink sm:mt-6 sm:text-5xl">
             {question.question}
           </h1>
-          <p className="mt-5 text-[17px] leading-relaxed text-ink-soft">
+          <p id="q-summary" className="mt-5 text-[17px] leading-relaxed text-ink-soft">
             {question.summary}
           </p>
+          <div className="mt-6">
+            {/* One tap: opening answer, then VisitChain chains chapters -> study. */}
+            <VisitListen slug={visitIntro.slug} items={visitIntro.items} />
+          </div>
           {parents.length > 0 && (
             <p className="mt-5 text-[13px] text-ink-faint">
               This question arose from studying{" "}

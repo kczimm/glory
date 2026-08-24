@@ -29,6 +29,7 @@ import {
   filterFocus,
   sha1Hex,
   studyItems,
+  visitIntroItems,
 } from "../src/lib/audio-text.ts";
 import { verses, chapters } from "../src/data/scripture.ts";
 import { questions } from "../src/data/questions.ts";
@@ -75,6 +76,11 @@ const CUE = "And now, the study.";
 const wanted = []; // { source, id, text }
 
 for (const q of questions) {
+  // Whole-visit opening queue (VisitListen on the question page header).
+  for (const item of visitIntroItems(q)) {
+    wanted.push({ source: `visit-intro:${q.slug}`, id: item.id, text: item.text });
+  }
+
   // Study page queue (src/app/questions/[slug]: studyListenData -> no cue)
   for (const item of studyItems(q, getPassageText, {
     outroTargetId: "raises",

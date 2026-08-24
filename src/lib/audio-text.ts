@@ -38,6 +38,39 @@ export interface AudioTextStudy {
   planned?: string[];
 }
 
+export interface AudioTextVisitIntro {
+  slug: string;
+  question: string;
+  summary: string;
+}
+
+/**
+ * The whole-visit opening queue: the question and summary from the top of
+ * the study page, spoken before anything else. VisitChain continues this
+ * queue into the first chapter, so one tap plays the opening answer, every
+ * chapter, and the study. targetIds point at the header elements on the
+ * question page so the follow-along can highlight them.
+ */
+export function visitIntroItems(question: AudioTextVisitIntro): AudioChunk[] {
+  const out: AudioChunk[] = [
+    {
+      id: "q",
+      targetId: "q-question",
+      label: "The question",
+      text: `Here is the question: ${question.question}`,
+    },
+  ];
+  chunkText(question.summary).forEach((text, k) => {
+    out.push({
+      id: k === 0 ? "summary" : `summary|${k + 1}`,
+      targetId: "q-summary",
+      label: "About this study",
+      text,
+    });
+  });
+  return out;
+}
+
 export interface StudyItemsOptions {
   /** spoken line before the points, e.g. when chaining in from the chapters */
   cue?: string;

@@ -30,6 +30,7 @@ import {
   normalizeText,
   sha1Hex,
   studyItems,
+  visitIntroItems,
 } from "../src/lib/audio-text.ts";
 import { verses, chapters } from "../src/data/scripture.ts";
 import { questions } from "../src/data/questions.ts";
@@ -74,6 +75,14 @@ const entries = [];
 const unique = new Set();
 
 for (const q of questions) {
+  // Whole-visit opening (VisitListen -> VisitChain's first continuation).
+  const vkey = `visit-intro:${q.slug}`;
+  for (const item of visitIntroItems(q)) {
+    const hash = sha1Hex(item.text);
+    entries.push({ key: vkey, itemId: item.id, label: item.label, text: item.text, hash, path: `/v1/${VOICE}/${hash}.m4a` });
+    unique.add(hash);
+  }
+
   for (const p of q.passages) {
     const key = `passage:${q.slug}:${p.book} ${p.chapter}`;
     const ch = chapters[`${canonicalBook(p.book)} ${p.chapter}`];

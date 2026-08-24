@@ -1,6 +1,11 @@
 import "server-only";
 import { verses, chapters } from "./scripture";
-import { chapterItems, filterFocus, studyItems } from "../lib/audio-text";
+import {
+  chapterItems,
+  filterFocus,
+  studyItems,
+  visitIntroItems,
+} from "../lib/audio-text";
 import type { AudioChunk } from "../lib/audio-text";
 import { canonicalBook, joinPassage, parseRef } from "./ref";
 import { questions } from "./questions";
@@ -186,6 +191,11 @@ function chapterQueue(book: string, chapter: number, focus?: string): ChainQueue
   };
 }
 
+/** Whole-visit intro queue: the question and summary, then the chapters. */
+function visitIntroQueue(q: Question): ChainQueue {
+  return { sourceId: `visit:${q.slug}`, items: visitIntroItems(q) };
+}
+
 /** Study queue; the visit's continuation is the player-bar choices panel. */
 function studyQueue(q: Question, opts: { cue?: string } = {}): ChainQueue {
   const items = studyItems(q, getPassageText, {
@@ -205,6 +215,12 @@ export function studyListenData(q: Question): { slug: string; items: AudioChunk[
   return { slug: q.slug, items: queue.items };
 }
 
+/** Props for VisitListen: the whole-visit intro queue. */
+export function visitListenData(q: Question): { slug: string; items: AudioChunk[] } {
+  const queue = visitIntroQueue(q);
+  return { slug: q.slug, items: queue.items };
+}
+
 /** Props for VisitChain: every queue the visit may play, fully prebuilt. */
 export function visitChainData(q: Question): {
   slug: string;
@@ -216,9 +232,12 @@ export function visitChainData(q: Question): {
     study: ChainQueue;
   }[];
 } {
-  const segments: ChainQueue[] = q.passages.map((p) =>
-    chapterQueue(p.book, p.chapter, p.focus)
-  );
+  // The whole visit opens with the question and summary, then VisitChain's
+  // continuation carries on through each chapter and into the study.
+  const segments: ChainQueue[] = [
+    visitIntroQueue(q),
+    ...q.passages.map((p) => chapterQueue(p.book, p.chapter, p.focus)),
+  ];
   // The chained study entry keeps its original "And now, the study." cue.
   segments.push(studyQueue(q, { cue: "And now, the study." }));
   return {
