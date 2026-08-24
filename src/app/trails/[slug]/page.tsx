@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { categories, getCategory } from "@/data";
 import { questionsByCategory, resolveQuestions, toTeaser } from "@/data/server";
 import QuestionCard from "@/components/QuestionCard";
+import ShareButton from "@/components/ShareButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 interface Props {
@@ -79,6 +80,11 @@ export default async function TrailPage({ params }: Props) {
                 Begin here: {begin.question} →
               </Link>
             )}
+            <ShareButton
+              url={`${SITE_URL}/trails/${category.slug}`}
+              title={category.title}
+              text={category.tagline}
+            />
             <span className="text-[12.5px] uppercase tracking-[0.14em] text-ink-faint">
               {qs.length} {qs.length === 1 ? "question" : "questions"} in this
               trail
