@@ -11,7 +11,10 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-line bg-gradient-to-b from-cream/80 to-parchment">
+      {/* No overflow-hidden here: it would clip the search dropdown at the
+          section edge. The decorative layers below are inset-0, so nothing
+          overflows anyway. */}
+      <section className="relative border-b border-line bg-gradient-to-b from-cream/80 to-parchment">
         {/* paper-grain noise + warm vignette (pure CSS, no assets) */}
         <div
           aria-hidden
