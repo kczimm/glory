@@ -117,6 +117,14 @@ export const categories: Category[] = [
     order: 14,
     entry: ["why-am-i-so-anxious"],
   },
+  {
+    slug: "grief-loss",
+    title: "Grief & Loss",
+    tagline:
+      "When someone you love is gone: permission to mourn, the God who weeps with you, and the resurrection that gives grief a horizon.",
+    order: 15,
+    entry: ["why-does-death-hurt-so-much"],
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {

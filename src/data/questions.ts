@@ -4639,7 +4639,7 @@ export const questions: Question[] = [
     keyVerses: ["Psalm 34:18", "Psalm 23:4", "Isaiah 41:10", "2 Corinthians 1:3-4", "John 16:33"],
     raises: ["is-god-in-control", "why-does-god-seem-silent", "does-god-use-our-failures", "can-i-be-anxious-and-still-trust-god"],
     followsFrom: ["why-does-god-allow-suffering"],
-    related: ["why-does-god-allow-suffering", "who-is-the-father", "why-does-god-seem-silent", "is-god-in-control"],
+    related: ["why-does-god-allow-suffering", "who-is-the-father", "why-does-god-seem-silent", "is-god-in-control", "where-is-god-when-i-grieve"],
     planned: ["How long will this suffering last?"],
     order: 30,
   },
@@ -9118,10 +9118,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 2:27", "Acts 2:31", "Ephesians 4:9-10", "Hebrews 2:14-15", "Revelation 1:18"],
-    raises: ["between-the-cross-and-the-resurrection", "did-jesus-rise-from-the-dead"],
+    raises: ["between-the-cross-and-the-resurrection", "did-jesus-rise-from-the-dead", "did-anyone-enter-heaven-before-jesus-rose"],
     followsFrom: ["why-did-jesus-have-to-die", "between-the-cross-and-the-resurrection"],
-    related: ["between-the-cross-and-the-resurrection", "did-jesus-rise-from-the-dead", "where-is-jesus-now", "what-happens-when-i-die"],
-    planned: ["Why does the Bible call death a sleep?"],
+    related: ["between-the-cross-and-the-resurrection", "did-jesus-rise-from-the-dead", "where-is-jesus-now", "what-happens-when-i-die", "what-happened-to-the-one-i-lost"],
+    planned: [],
     order: 28,
   },
 
@@ -9801,7 +9801,7 @@ export const questions: Question[] = [
     keyVerses: ["Job 2:13", "Romans 12:15", "2 Corinthians 1:3-4", "Galatians 6:2", "James 5:16"],
     raises: ["where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "why-does-god-allow-suffering"],
     followsFrom: ["why-does-god-allow-suffering", "where-is-god-in-my-pain"],
-    related: ["why-does-god-allow-suffering", "where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "made-for-relationship"],
+    related: ["why-does-god-allow-suffering", "where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "made-for-relationship", "how-do-i-comfort-someone-who-is-grieving"],
     planned: [],
     order: 37,
   },
@@ -10558,10 +10558,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Peter 3:19-20", "2 Peter 2:4", "Jude 1:6", "Colossians 2:15", "1 Peter 3:22"],
-    raises: ["what-does-the-creed-mean-by-he-descended-into-hell", "did-jesus-rise-from-the-dead", "what-happens-when-i-die"],
+    raises: ["what-does-the-creed-mean-by-he-descended-into-hell", "did-jesus-rise-from-the-dead", "what-happens-when-i-die", "did-anyone-enter-heaven-before-jesus-rose"],
     followsFrom: ["between-the-cross-and-the-resurrection", "what-does-the-creed-mean-by-he-descended-into-hell"],
-    related: ["between-the-cross-and-the-resurrection", "what-does-the-creed-mean-by-he-descended-into-hell", "did-jesus-rise-from-the-dead"],
-    planned: ["Did anyone enter heaven before Jesus rose?"],
+    related: ["between-the-cross-and-the-resurrection", "what-does-the-creed-mean-by-he-descended-into-hell", "did-jesus-rise-from-the-dead", "did-anyone-enter-heaven-before-jesus-rose"],
+    planned: [],
     order: 34,
   },
 
@@ -11749,7 +11749,7 @@ export const questions: Question[] = [
     ],
     keyVerses: ["1 Corinthians 15:42-44", "1 Corinthians 13:12", "1 Thessalonians 4:17", "1 John 3:2", "Revelation 21:4"],
     raises: ["what-is-heaven-like", "what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation", "what-does-it-mean-to-be-a-child-of-god"],
-    followsFrom: ["what-is-the-resurrection"],
+    followsFrom: ["what-is-the-resurrection", "will-i-see-them-again"],
     related: ["what-is-the-resurrection", "what-happens-when-i-die", "what-is-the-new-heaven-and-new-earth"],
     planned: ["What did Jesus mean that in the resurrection there is no marriage?"],
     order: 50,
@@ -14174,7 +14174,7 @@ export const questions: Question[] = [
     ],
     keyVerses: ["Hebrews 9:27", "Luke 16:26", "Luke 23:43", "2 Corinthians 6:2"],
     raises: ["what-is-the-final-judgment-and-who-will-be-there", "what-is-hell", "what-is-heaven-like"],
-    followsFrom: ["what-happens-when-i-die"],
+    followsFrom: ["what-happens-when-i-die", "did-anyone-enter-heaven-before-jesus-rose"],
     related: ["what-happens-when-i-die", "what-does-the-creed-mean-by-he-descended-into-hell", "what-is-heaven-like"],
     planned: [],
     order: 74,
@@ -16243,9 +16243,581 @@ export const questions: Question[] = [
     ],
     keyVerses: ["1 Kings 19:7", "1 Kings 19:12", "Psalms 103:14"],
     raises: ["does-god-still-speak-today", "why-does-god-seem-silent", "what-is-the-church"],
-    followsFrom: ["can-i-be-anxious-and-still-trust-god", "when-i-feel-far-from-god", "why-does-god-allow-suffering"],
+    followsFrom: ["can-i-be-anxious-and-still-trust-god", "when-i-feel-far-from-god", "why-does-god-allow-suffering", "when-grief-wont-lift"],
     related: ["how-do-i-help-a-friend-who-is-suffering", "where-is-god-in-my-pain", "does-god-hear-my-prayers"],
     planned: ["What should I do when a friend talks about ending their life?"],
     order: 101,
+  },
+  {
+    slug: "why-does-death-hurt-so-much",
+    question: "Why does death hurt so much if God called His creation good?",
+    category: "grief-loss",
+    summary:
+      "Because death is not part of the design. It arrives in Scripture as an intruder: warned about before it happened, named an enemy centuries later, and promised an end. Grief hurts so much because we were made for a world where death does not exist, and something in us still knows it. The Bible never asks us to feel less; it tells us that death itself will die.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 3,
+        title: "The day death entered the world",
+        lookFor:
+          "The serpent denies what God said about dying, the sentence 'to dust you shall return' is spoken over the man, and death begins its work by the chapter's end.",
+      },
+      {
+        book: "Revelation",
+        chapter: 21,
+        title: "The world where death dies",
+        lookFor:
+          "The God whose dwelling is with humanity, and the four things He promises to end: death, mourning, crying, and pain.",
+        focus: "1-7",
+      },
+    ],
+    points: [
+      {
+        heading: "Death came with a warning label",
+        body:
+          "Before anyone ever died, God said what death was: not nature, but consequence, attached to the one forbidden tree. 'in the day that you eat of it, you will surely die.' A good creation did not include funerals. Death appears on the page as a threat bound to rebellion, which means the ache we feel at gravesides is tuned to how the world originally was.",
+        verses: ["Genesis 2:16-17"],
+      },
+      {
+        heading: "Death entered as an intruder through sin",
+        body:
+          "'For you are dust, and to dust you shall return' is not a description of the natural order; it is a sentence spoken into a broken one. Paul reads those first chapters together: sin entered through one man, and death through sin. Death is a squatter, and Scripture never treats it as part of the furniture.",
+        verses: ["Genesis 3:19", "Romans 5:12"],
+      },
+      {
+        heading: "Scripture calls death an enemy, not a friend",
+        body:
+          "Paul names it precisely: 'The last enemy that will be abolished is death.' We do not have to call loss good; God does not call it good either. The Bible's honesty here gives grief its dignity: if death were merely natural, sorrow would be sentimentality. Because it is an enemy, tears are truth-telling.",
+        verses: ["1 Corinthians 15:26"],
+      },
+      {
+        heading: "God plans to abolish the thing that broke you",
+        body:
+          "The Bible ends with death's funeral: 'Death will be no more; neither will there be mourning, nor crying, nor pain, any more.' Notice that God does not merely end death; He wipes away the tears death caused, tear by tear. A God who keeps receipts on weeping takes your grief seriously right now.",
+        verses: ["Revelation 21:4"],
+      },
+    ],
+    keyVerses: ["Genesis 3:19", "Romans 5:12", "Revelation 21:4"],
+    raises: ["is-it-wrong-to-grieve", "why-does-god-allow-suffering"],
+    followsFrom: [],
+    related: ["what-went-wrong-in-eden", "why-does-god-allow-suffering", "where-is-god-in-my-pain"],
+    planned: [],
+    order: 102,
+  },
+
+  {
+    slug: "is-it-wrong-to-grieve",
+    question: "Is it wrong to keep grieving? Should faith make it stop?",
+    category: "grief-loss",
+    summary:
+      "No. Paul expects believers to grieve; he only insists we do not grieve 'like the rest, who have no hope.' Jesus wept at a tomb He was minutes from emptying. Psalm 88 stays dark to its last line and is still inspired prayer. Hope does not shorten grief; it changes where grief ends.",
+    passages: [
+      {
+        book: "John",
+        chapter: 11,
+        title: "A funeral Jesus attended on purpose",
+        lookFor:
+          "How long Jesus waits, how plainly Martha and Mary both say what they think, and the shortest verse in your Bible.",
+        focus: "17-45",
+      },
+      {
+        book: "Psalms",
+        chapter: 88,
+        title: "The psalm that never gets happy",
+        lookFor:
+          "Every line addressed to Yahweh anyway: cries day and night, questions with no answer, and an ending that stays in darkness.",
+      },
+      {
+        book: "1 Thessalonians",
+        chapter: 4,
+        title: "Grief with a horizon",
+        lookFor:
+          "Paul's exact instruction about those who have fallen asleep, and where he aims our comfort.",
+        focus: "13-18",
+      },
+    ],
+    points: [
+      {
+        heading: "Paul assumes Christians will grieve",
+        body:
+          "Paul does not write, do not grieve. He writes that we should not 'grieve like the rest, who have no hope.' The sentence only makes sense because grieving remains. What hope changes is not whether tears fall but what they mean and where they lead; Christian grief is sorrow walking toward morning.",
+        verses: ["1 Thessalonians 4:13"],
+      },
+      {
+        heading: "Jesus wept at a tomb He was about to open",
+        body:
+          "Jesus knew He was going to raise Lazarus; He had said so before He arrived. Yet standing at the grave He 'groaned in the spirit, and was troubled', and then came the shortest verse: 'Jesus wept.' The bystanders drew the right conclusion from those tears: 'See how much affection he had for him!' Weeping at a funeral is not unbelief, even from someone holding resurrection power.",
+        verses: ["John 11:32-36"],
+      },
+      {
+        heading: "God gave sorrow inspired words",
+        body:
+          "Psalm 88 opens by naming its addressee: 'Yahweh, the God of my salvation.' Almost everything after that is complaint, cried day and night, asking why God hides His face, and it ends in darkness with no resolution. Heman's psalm made the canon anyway. That means lament is not a failure of faith; it is a form of it.",
+        verses: ["Psalms 88:1-3", "Psalms 88:13-14", "Psalms 88:18"],
+      },
+      {
+        heading: "Hope changes grief's destination, not its honesty",
+        body:
+          "Paul ends the passage with a command: 'Therefore comfort one another with these words.' The words are about the dead being with Christ and rising again. Notice the direction of travel: comfort comes from speaking resurrection truth to each other while the tears are still wet, not from pretending they are already dry.",
+        verses: ["1 Thessalonians 4:18"],
+      },
+    ],
+    keyVerses: ["John 11:35", "1 Thessalonians 4:13", "Psalms 88:1"],
+    raises: ["where-is-god-when-i-grieve", "how-do-i-help-a-friend-who-is-suffering"],
+    followsFrom: ["why-does-death-hurt-so-much"],
+    related: ["can-i-be-anxious-and-still-trust-god", "when-the-weight-wont-lift", "is-it-okay-to-doubt"],
+    planned: [],
+    order: 103,
+  },
+
+  {
+    slug: "where-is-god-when-i-grieve",
+    question: "Where is God while I sit in the ashes?",
+    category: "grief-loss",
+    summary:
+      "Near. Yahweh is near to the brokenhearted, the coming Servant carried sorrow Himself, and at a funeral procession in Nain Jesus felt compassion before He said a word. And when grief strips you of prayer entirely, the Spirit Himself intercedes with groanings too deep for language.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 34,
+        title: "The testimony of a man who survived",
+        lookFor:
+          "David's own taste of deliverance, climaxing in the verse about the brokenhearted and the crushed in spirit.",
+      },
+      {
+        book: "Isaiah",
+        chapter: 53,
+        title: "The Servant who learned grief firsthand",
+        lookFor:
+          "Despised, rejected, and then the turn: what the Servant took that belonged to us.",
+        focus: "1-6",
+      },
+      {
+        book: "Luke",
+        chapter: 7,
+        title: "A funeral interrupted",
+        lookFor:
+          "What Jesus feels first when He sees the widow, what He touches, and what He hands back to her.",
+        focus: "11-17",
+      },
+    ],
+    points: [
+      {
+        heading: "Nearness is God's address for the crushed",
+        body:
+          "Psalm 34 does not promise the brokenhearted a quick fix; it promises company: 'Yahweh is near to those who have a broken heart, and saves those who have a crushed spirit.' Nearness comes first, rescue second, and the order matters. The first thing God gives a crushed person is Himself.",
+        verses: ["Psalms 34:18"],
+      },
+      {
+        heading: "The Son walked this road before you",
+        body:
+          "Isaiah saw it seven centuries out: despised, rejected, 'a man of suffering'. Then the turn: 'Surely he has borne our sickness, and carried our suffering'. Your grief is not foreign territory to your Savior; He carried sorrow long enough to know its weight by feel.",
+        verses: ["Isaiah 53:3-4"],
+      },
+      {
+        heading: "Compassion came before the miracle",
+        body:
+          "At Nain, Jesus meets a widow burying her only son. Luke records what moved Him first: 'he had compassion on her'. Only then does He speak, touch the coffin, and hand the young man back to his mother alive. When you wonder where God is in grief, this scene answers: close enough to feel it first, acting even before you ask.",
+        verses: ["Luke 7:13-15"],
+      },
+      {
+        heading: "When grief steals your words, the Spirit prays",
+        body:
+          "Mourning often makes prayer impossible; you sit silent because language is gone. Paul says the Spirit covers exactly this case: 'we don't know how to pray as we ought. But the Spirit himself makes intercession for us with groanings which can't be uttered.' Silence before God is not absence from God; the groaning itself is prayer.",
+        verses: ["Romans 8:26"],
+      },
+    ],
+    keyVerses: ["Psalms 34:18", "Isaiah 53:4", "Romans 8:26"],
+    raises: ["what-happened-to-the-one-i-lost", "does-god-hear-my-prayers"],
+    followsFrom: ["is-it-wrong-to-grieve"],
+    related: ["where-is-god-in-my-pain", "how-do-i-pray", "why-does-god-seem-silent"],
+    planned: [],
+    order: 104,
+  },
+
+  {
+    slug: "what-happened-to-the-one-i-lost",
+    question: "What happened to the person I love, the moment they died?",
+    category: "grief-loss",
+    summary:
+      "If they trusted Christ, Scripture speaks with surprising immediacy: today, with Me, far better. The thief on the cross was promised paradise that very day; Paul calls leaving the body going home to the Lord. The Bible pictures the body resting while the person is awake with Christ, which is why Scripture calls death sleep without ever meaning unconsciousness.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 23,
+        title: "Paradise promised between two crosses",
+        lookFor:
+          "What the thief asks for, what Jesus grants instead, and the time frame Jesus uses.",
+        focus: "32-43",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 5,
+        title: "Tent and building",
+        lookFor:
+          "Paul's metaphors for death, and what he says we are while absent from the body.",
+        focus: "1-10",
+      },
+      {
+        book: "Philippians",
+        chapter: 1,
+        title: "To live is Christ, to die is gain",
+        lookFor:
+          "Paul weighing two desires, and which one he calls far better.",
+        focus: "18-26",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus puts no waiting room between death and paradise",
+        body:
+          "The dying thief asks to be remembered later, when Jesus comes into His Kingdom. Jesus answers now instead: 'Assuredly I tell you, today you will be with me in Paradise.' Not someday, not after a long pause: that very day, and together with Him. For the believer, the moment of death is the moment of arrival.",
+        verses: ["Luke 23:43"],
+      },
+      {
+        heading: "Away from the body is home with the Lord",
+        body:
+          "Paul faces death without dread because of geography: he is 'willing rather to be absent from the body, and to be at home with the Lord'. Absence from the body and presence with Christ are one event described from two sides. That is why he could weigh life against death and conclude it is gain, having the desire 'to depart and be with Christ, which is far better.'",
+        verses: ["2 Corinthians 5:6-8", "Philippians 1:21-23"],
+      },
+      {
+        heading: "Then why does the Bible call death sleep?",
+        body:
+          "Jesus told the disciples that Lazarus 'has fallen asleep'; Paul writes of believers who 'have fallen asleep in Jesus', whom God 'will bring with him'. Sleep pictures the body resting like a sleeper certain of waking, never the person ceasing to exist: the same Lazarus walks out talking, and the sleeping believers come back with Jesus. Sleep describes peace and certainty of rising; it never cancels the with-Christ immediacy of today.",
+        verses: ["John 11:11", "1 Thessalonians 4:14"],
+      },
+      {
+        heading: "What this means at the graveside",
+        body:
+          "Put the pieces together and Scripture's comfort is concrete: the believer you buried is with Christ now, conscious, home, and better off than we are, while their body rests awaiting resurrection. This does not erase missing them; it relocates them. You grieve your separation from them, not their abandonment by God.",
+        verses: ["Philippians 1:23", "2 Corinthians 5:8"],
+      },
+    ],
+    keyVerses: ["Luke 23:43", "Philippians 1:23", "2 Corinthians 5:8"],
+    raises: ["did-anyone-enter-heaven-before-jesus-rose", "will-i-see-them-again"],
+    followsFrom: ["where-is-god-when-i-grieve"],
+    related: ["what-happens-when-i-die", "is-there-a-second-chance-after-death", "what-does-the-creed-mean-by-he-descended-into-hell"],
+    planned: [],
+    order: 105,
+  },
+
+  {
+    slug: "did-anyone-enter-heaven-before-jesus-rose",
+    question: "Did anyone enter heaven before Jesus rose?",
+    category: "grief-loss",
+    summary:
+      "Believers before the cross died in faith, consciously kept by God while awaiting something better: Abraham's bosom in Jesus' parable, the heavenly country Hebrews says they longed for. They were saved by the same cross you were, credited ahead of time, and when Christ ascended He led captivity captive. Calvary reaches backward as well as forward.",
+    passages: [
+      {
+        book: "Hebrews",
+        chapter: 11,
+        title: "Faith before the promises arrived",
+        lookFor:
+          "How the faithful died: seeing and greeting promises from afar, desiring a better country than any on earth.",
+        focus: "13-16",
+      },
+      {
+        book: "Luke",
+        chapter: 16,
+        title: "Abraham's bosom",
+        lookFor:
+          "Where the beggar goes, who carries him, and what Abraham says changed for each man at death.",
+        focus: "19-31",
+      },
+      {
+        book: "Ephesians",
+        chapter: 4,
+        title: "Leading captivity captive",
+        lookFor:
+          "The ascent Paul describes, and what it implies about everything that came before it.",
+        focus: "7-10",
+      },
+    ],
+    points: [
+      {
+        heading: "Old Testament saints died trusting a promise they never held",
+        body:
+          "Hebrews sums up Abel through the prophets: 'These all died in faith, not having received the promises, but having seen them and embraced them from afar'. Their salvation was real but pending completion, so much so that God provided 'some better thing concerning us, so that apart from us they should not be made perfect'. They were with God, awaiting fullness.",
+        verses: ["Hebrews 11:13", "Hebrews 11:39-40"],
+      },
+      {
+        heading: "Abraham's bosom: conscious rest within covenant care",
+        body:
+          "Jesus paints the unseen world in colors rather than abstractions: the beggar dies and 'was carried away by the angels to Abraham’s bosom', where he is 'comforted', while the rich man suffers across 'a great gulf fixed'. Whatever else the parable teaches, before the cross the righteous dead were conscious, at rest, and held in Abraham's embrace rather than cast off.",
+        verses: ["Luke 16:22-26"],
+      },
+      {
+        heading: "They wanted heaven all along",
+        body:
+          "Hebrews insists this rest was no consolation prize: they confessed themselves strangers on earth because 'they desire a better country, that is, a heavenly one. Therefore God is not ashamed of them, to be called their God, for he has prepared a city for them.' The bosom was the waiting room for the city, not the substitute for it.",
+        verses: ["Hebrews 11:14-16"],
+      },
+      {
+        heading: "Christ opened the way at His ascension",
+        body:
+          "Paul quotes the triumph: 'When he ascended on high, he led captivity captive, and gave gifts to men.' One long-standing reading takes the captives as the redeemed dead, led out when their Liberator rose; others hear the defeated powers led behind Him in victory. Either way the ascent is a triumphal procession through death's own territory, which is the backdrop to the word Jesus spoke on the cross, 'today you will be with me in Paradise': the door opened at Calvary reaches in both directions of history.",
+        verses: ["Ephesians 4:8", "Luke 23:43"],
+      },
+    ],
+    keyVerses: ["Hebrews 11:13", "Hebrews 11:16", "Ephesians 4:8"],
+    raises: ["will-i-see-them-again", "is-there-a-second-chance-after-death"],
+    followsFrom: ["what-happened-to-the-one-i-lost"],
+    related: ["how-does-god-judge-people-who-never-heard-of-jesus", "what-does-the-creed-mean-by-he-descended-into-hell", "who-were-the-spirits-in-prison-and-what-did-christ-preach-to-them", "between-the-cross-and-the-resurrection"],
+    planned: [],
+    order: 106,
+  },
+
+  {
+    slug: "will-i-see-them-again",
+    question: "Will I actually see them again, or just know they're safe?",
+    category: "grief-loss",
+    summary:
+      "See. Job staked his hope on eyes: in my flesh shall I see God, whom I, even I, shall see. Jesus told Martha the resurrection is not merely an event at the end but a Person standing in front of her. And the dead rise first, bodily, imperishable, so that we are caught up together with them. Reunion in Christ is personal, physical, and promised.",
+    passages: [
+      {
+        book: "Job",
+        chapter: 19,
+        title: "The oldest resurrection confession",
+        lookFor:
+          "What Job knows while sitting in ashes, and how many times he insists on seeing for himself.",
+        focus: "23-27",
+      },
+      {
+        book: "John",
+        chapter: 11,
+        title: "Martha's creed meets its Owner",
+        lookFor:
+          "What Martha believes about the last day, and what Jesus says He is before He proves it.",
+        focus: "17-27",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 15,
+        title: "Raised the way seed becomes wheat",
+        lookFor:
+          "Paul's seed image for burial and raising, the change that is required, and death's defeat cry.",
+        focus: "42-58",
+      },
+    ],
+    points: [
+      {
+        heading: "Job sees with his own eyes",
+        body:
+          "From the ash heap Job makes the most audacious claim in the Old Testament: 'I know that my Redeemer lives... After my skin is destroyed, then in my flesh shall I see God, Whom I, even I, shall see on my side. My eyes shall see, and not as a stranger.' He piles up sight on purpose: I shall see, my eyes shall see, not as a stranger sees. Scripture's hope is not knowing your loved one is fine somewhere; it is face to face.",
+        verses: ["Job 19:25-27"],
+      },
+      {
+        heading: "Resurrection is a Person before it is an event",
+        body:
+          "Martha recites correct theology: she knows Lazarus 'will rise again in the resurrection at the last day'. Jesus moves her hope from a doctrine to Himself: 'I am the resurrection and the life. He who believes in me will still live, even if he dies.' Reunion is guaranteed not by a mechanism but by Someone who keeps His own.",
+        verses: ["John 11:21-27"],
+      },
+      {
+        heading: "You will recognize them because they will still be them",
+        body:
+          "Paul answers how with a mystery: 'we will all be changed, in a moment, in the twinkling of an eye, at the last trumpet', for 'this perishable body must become imperishable, and this mortal must put on immortality.' Transformation, not replacement: the same mortal person made immortal, which is why recognition is expected rather than feared.",
+        verses: ["1 Corinthians 15:51-53"],
+      },
+      {
+        heading: "Together is the point",
+        body:
+          "Paul's comfort builds to one word: 'then we who are alive, who are left, will be caught up together with them in the clouds... So we will be with the Lord forever.' Together with them: the ones we buried, whom God brings back with Jesus. Only then does the command follow, comfort one another with these words.",
+        verses: ["1 Thessalonians 4:17", "1 Thessalonians 4:18"],
+      },
+    ],
+    keyVerses: ["Job 19:26-27", "John 11:25", "1 Thessalonians 4:17"],
+    raises: ["how-do-i-live-with-this-loss", "will-we-recognize-each-other-in-the-resurrection", "what-is-the-resurrection"],
+    followsFrom: ["did-anyone-enter-heaven-before-jesus-rose", "what-happened-to-the-one-i-lost"],
+    related: ["will-jesus-return-literally", "what-is-heaven-like", "between-the-cross-and-the-resurrection"],
+    planned: [],
+    order: 107,
+  },
+
+  {
+    slug: "how-do-i-live-with-this-loss",
+    question: "How do I carry sorrow and hope in the same life?",
+    category: "grief-loss",
+    summary:
+      "Not by getting over it, but by learning Scripture's rhythm: recall, wait, receive the morning. Jeremiah found hope by recalling mercies that arrive new every morning. The psalmists let weeping stay for the night while insisting joy is coming, and one of them preached hope to his own soul twice because once was not enough. Living with loss is daily bread, not a finished project.",
+    passages: [
+      {
+        book: "Lamentations",
+        chapter: 3,
+        title: "Hope carved into the rubble",
+        lookFor:
+          "The turn in the middle of the book's darkest poem: what Jeremiah recalls, and what arrives every morning.",
+        focus: "19-39",
+      },
+      {
+        book: "Psalms",
+        chapter: 30,
+        title: "Night given a length",
+        lookFor:
+          "What David was rescued from, and the timetable mercy keeps: weeping, night, morning, joy.",
+        focus: "1-12",
+      },
+      {
+        book: "Psalms",
+        chapter: 42,
+        title: "Preaching to your own soul",
+        lookFor:
+          "The refrain repeated twice, the waves sweeping over, and the song that belongs to the night.",
+      },
+    ],
+    points: [
+      {
+        heading: "Hope is something you recall on purpose",
+        body:
+          "Jeremiah sits in Jerusalem's ruins when he performs the act that changes everything: 'This I recall to my mind; therefore have I hope.' What he recalls is not his circumstances but God's character: 'They are new every morning; great is your faithfulness.' Living with loss starts here, in deliberate remembering, because hope is fed by memory of who God is.",
+        verses: ["Lamentations 3:21-24"],
+      },
+      {
+        heading: "Quiet waiting is activity, not passivity",
+        body:
+          "Right after the morning mercies comes a pace: 'Yahweh is good to those who wait for him, to the soul that seeks him. It is good that a man should hope and quietly wait for the salvation of Yahweh.' Waiting quietly does not mean the grief is over; it means you have stopped demanding that the whole future resolve today, and started receiving salvation in installments.",
+        verses: ["Lamentations 3:25-26"],
+      },
+      {
+        heading: "Night has a length",
+        body:
+          "David sang it after his own near-death season: 'Weeping may stay for the night, but joy comes in the morning.' The promise is not that night is short; it is that night is bounded. Jesus' beatitude confirms the pattern: 'Blessed are those who mourn, for they shall be comforted.' Mourning is a residence, not a permanent address.",
+        verses: ["Psalms 30:5", "Matthew 5:4"],
+      },
+      {
+        heading: "Keep preaching to your soul",
+        body:
+          "Psalm 42 holds both halves honestly: waves and billows sweeping over, and yet in the night 'his song shall be with me: a prayer to the God of my life'. Twice the writer interrogates himself: 'Why are you in despair, my soul? Why are you disturbed within me? Hope in God!' Twice, because once did not settle it. Some mornings hope is something you say before you feel it, and saying it again is faith, not failure.",
+        verses: ["Psalms 42:7-8", "Psalms 42:5"],
+      },
+    ],
+    keyVerses: ["Lamentations 3:22-23", "Psalms 30:5", "Psalms 42:11"],
+    raises: ["how-do-i-comfort-someone-who-is-grieving", "does-god-hear-my-prayers"],
+    followsFrom: ["will-i-see-them-again"],
+    related: ["why-am-i-so-anxious", "can-i-be-anxious-and-still-trust-god", "when-i-feel-far-from-god"],
+    planned: [],
+    order: 108,
+  },
+
+  {
+    slug: "how-do-i-comfort-someone-who-is-grieving",
+    question: "What do I say to someone who just lost someone?",
+    category: "grief-loss",
+    summary:
+      "Often nothing, and that is biblical. Job's friends helped most during the seven days they sat silent. Comfort in Scripture is a relay: the Father of mercies comforts us so that we can hand it on, weeping with those who weep, speaking resurrection gently, and staying long after everyone else has gone back to normal.",
+    passages: [
+      {
+        book: "Job",
+        chapter: 2,
+        title: "Seven days of silence",
+        lookFor:
+          "What Job's friends do right before they open their mouths, and why it worked.",
+        focus: "11-13",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 1,
+        title: "The God of all comfort",
+        lookFor:
+          "Where comfort comes from, and the surprising purpose Paul gives for receiving it.",
+        focus: "3-11",
+      },
+      {
+        book: "Romans",
+        chapter: 12,
+        title: "Love without acting",
+        lookFor:
+          "Genuine love's unglamorous verbs: rejoicing, weeping, blessing, pursuing.",
+        focus: "9-21",
+      },
+    ],
+    points: [
+      {
+        heading: "Presence precedes speech",
+        body:
+          "When Job's friends arrived, 'they sat down with him on the ground seven days and seven nights, and no one spoke a word to him, for they saw that his grief was very great.' Seven days of silence was the most eloquent ministry of their entire visit; nearly everything they said afterward made it worse. Sitting on the ground with someone is theology before words.",
+        verses: ["Job 2:12-13"],
+      },
+      {
+        heading: "Comfort is a relay race, not a possession",
+        body:
+          "Paul blesses 'the Father of mercies and God of all comfort; who comforts us in all our affliction, that we may be able to comfort those who are in any affliction'. Comfort arrives addressed to you but routed through you. You do not manufacture solace for others; you pass along what the Father handed you in your own affliction.",
+        verses: ["2 Corinthians 1:3-4"],
+      },
+      {
+        heading: "Weep with those who weep",
+        body:
+          "Paul pairs two verbs without ranking them: 'Rejoice with those who rejoice. Weep with those who weep.' Notice what is absent from the list: explain with those who explain, fix with those who fix. Entering someone's grief means letting it be sad, shedding the same tears, and resisting the urge to turn their loss into a lesson.",
+        verses: ["Romans 12:15"],
+      },
+      {
+        heading: "Say the true words, gently",
+        body:
+          "There is something to say, but Paul defines it: 'Therefore comfort one another with these words.' The words are resurrection words, that the dead in Christ are with Him and will come back with Him. Spoken too early they sound like dismissal; spoken late, after tears, beside the grave, over the following months, they are exactly the medicine the verse intends.",
+        verses: ["1 Thessalonians 4:18"],
+      },
+    ],
+    keyVerses: ["Job 2:13", "2 Corinthians 1:4", "Romans 12:15"],
+    raises: ["when-grief-wont-lift", "how-do-i-help-a-friend-who-is-suffering"],
+    followsFrom: ["how-do-i-live-with-this-loss"],
+    related: ["made-for-relationship", "why-do-i-still-feel-lonely", "does-god-hear-my-prayers"],
+    planned: [],
+    order: 109,
+  },
+
+  {
+    slug: "when-grief-wont-lift",
+    question: "It has been months. Why is my grief not getting easier?",
+    category: "grief-loss",
+    summary:
+      "Some sorrow refuses the schedule. David asked how long four times in two verses and kept praying anyway; Elijah asked God to end his life and received food, sleep, and a gentle voice instead of a rebuke. Long grief is not failed faith. God deals patiently with slow healing, feeding one day at a time until journey strength returns.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 13,
+        title: "Four how-longs and a but",
+        lookFor:
+          "The raw opening questions, and the small conjunction five verses in that turns the whole psalm.",
+      },
+      {
+        book: "1 Kings",
+        chapter: 19,
+        title: "Prophet under the tree",
+        lookFor:
+          "What Elijah asks for, what the angel provides twice, and the reason given the second time.",
+        focus: "1-8",
+      },
+    ],
+    points: [
+      {
+        heading: "'How long?' is a question God allows",
+        body:
+          "Psalm 13 opens with the question stacked four times: 'How long, Yahweh? Will you forget me forever? How long will you hide your face from me?' David is not scolded for asking; the asking is itself prayer, aimed straight at Yahweh. Grief that lasts longer than expected can still be prayed honestly, and Scripture preserves the honesty in writing.",
+        verses: ["Psalms 13:1-2"],
+      },
+      {
+        heading: "Even the strongest collapse",
+        body:
+          "Elijah had called down fire on Carmel hours earlier; under the juniper tree he prays the unthinkable: 'It is enough. Now, O Yahweh, take away my life; for I am not better than my fathers.' Exhaustion flattens prophets and parents alike. If the boldest man of his century could want to quit, then your endurance was never the measure of your worth.",
+        verses: ["1 Kings 19:4"],
+      },
+      {
+        heading: "God's answer was bread and sleep, not a lecture",
+        body:
+          "Watch what God sends: an angel touches him, and there is cake baked on coals and a jar of water. Elijah lies down again, and the angel comes a second time with the reason attached: 'Arise and eat, because the journey is too great for you.' No sermon, no deadline. Sometimes the spiritual question underneath long grief is first a physical one, and God feeds it without shame.",
+        verses: ["1 Kings 19:5-8"],
+      },
+      {
+        heading: "Trust grows back slowly, and slow counts",
+        body:
+          "Five verses after the how-longs, David pivots on a small conjunction: 'But I trust in your loving kindness. My heart rejoices in your salvation. I will sing to Yahweh, because he has been good to me.' Nothing in his circumstances changed between verse two and verse five; trust reasserted itself anyway. Healing that inches forward is still healing, and God walks at inch-speed with you.",
+        verses: ["Psalms 13:5-6"],
+      },
+    ],
+    keyVerses: ["Psalms 13:1", "1 Kings 19:7", "Psalms 13:5"],
+    raises: ["when-the-weight-wont-lift", "can-i-be-anxious-and-still-trust-god"],
+    followsFrom: ["how-do-i-comfort-someone-who-is-grieving"],
+    related: ["when-i-feel-far-from-god", "where-is-god-in-my-pain", "why-does-god-seem-silent"],
+    planned: [],
+    order: 110,
   },
 ];
