@@ -16120,4 +16120,71 @@ export const questions: Question[] = [
     planned: ["Why does seeing God's glory sometimes come with a command not to fear instead of comfort?"],
     order: 99,
   },
+
+  {
+    slug: "how-can-i-rest-when-my-mind-wont-stop",
+    question: "How can I rest when my mind won't stop?",
+    category: "anxiety-peace",
+    summary:
+      "David wrote Psalm 3 while fleeing his own son who wanted him dead, and still said, 'I laid myself down and slept. I awakened; for Yahweh sustains me.' Psalm 4 closes the pair with the secret spelled out: 'In peace I will both lay myself down and sleep, for you, Yahweh alone, make me live in safety.' Sleep is not the absence of trouble; it is a nightly declaration that God stays on watch.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 3,
+        title: "The psalm of the sleepless fugitive",
+        lookFor: "Multiplied adversaries, the taunt that there is no help in God (its ancient heading names Absalom's rebellion), and the sleeping king in the middle of it.",
+      },
+      {
+        book: "Psalms",
+        chapter: 4,
+        title: "The bedtime liturgy",
+        lookFor: "The evening sequence: honest prayer, heart-searching on the bed, trust offered, and then peace enough to sleep.",
+      },
+      {
+        book: "Mark",
+        chapter: 4,
+        title: "Jesus asleep in the storm",
+        lookFor: "The same trust embodied: the Son of God sleeps on a cushion through a boat-filling gale.",
+        focus: "35-41",
+      },
+    ],
+    points: [
+      {
+        heading: "Rest does not wait for problems to be solved",
+        body:
+          "Psalm 3 is a battlefield prayer: adversaries multiplying, tens of thousands surrounding, and whispers that 'There is no help for him in God.' Right inside that situation David writes, 'I laid myself down and slept. I awakened; for Yahweh sustains me.' He did not wait for the rebellion to end before closing his eyes; he slept because God was awake.",
+        verses: ["Psalms 3:1-2", "Psalms 3:5-6"],
+      },
+      {
+        heading: "Nighttime thoughts can be searched instead of obeyed",
+        body:
+          "Psalm 4 prescribes what to do with the mind at midnight: 'Search your own heart on your bed, and be still.' The bed, where worry replays everything, becomes an examination room; and the verse pairs reflection with restraint, 'Stand in awe, and don't sin.' Thoughts that surface in the dark are to be audited against God rather than automatically believed or followed.",
+        verses: ["Psalms 4:4", "2 Corinthians 10:5"],
+      },
+      {
+        heading: "Peace comes from safety kept by Another",
+        body:
+          "The psalm's last line gives the reason rest is possible: 'for you, Yahweh alone, make me live in safety.' Notice the logic runs the opposite way from anxiety. Anxiety reasons that once everything is safe, then sleep becomes possible. David reasons that because God keeps him, he can lie down now. Watchmen were unnecessary in one sense, as Psalm 127 says, because unless the LORD keeps the city, the watchman wakes in vain; God's vigilance, not our vigilance, is what holds the night together.",
+        verses: ["Psalms 4:8", "Psalms 127:1-2"],
+      },
+      {
+        heading: "Gladness outbidding the harvest",
+        body:
+          "Psalm 4 contrasts two joys: 'You have put gladness in my heart, more than when their grain and their new wine are increased.' Anxiety is often abundance-arithmetic gone wrong, measuring security by stores and outcomes. David claims a gladness filed under different accounting, put there by God, which is why it survives seasons when the barns would not.",
+        verses: ["Psalms 4:6-7"],
+      },
+      {
+        heading: "Jesus slept in the storm, and then stood up in it",
+        body:
+          "In Mark 4 the disciples find the pattern incarnate: 'He himself was in the stern, asleep on the cushion' while waves filled the boat. Their question, 'don't you care that we are dying?' is the anxious heart's oldest accusation. Jesus rebukes the wind first and their fear second, revealing both: He can rest because He rules, and His care was never actually in doubt.",
+        verses: ["Mark 4:38-40"],
+      },
+    ],
+    keyVerses: ["Psalms 3:5", "Psalms 4:8", "Mark 4:39-40"],
+    raises: ["why-does-god-keep-saying-fear-not", "who-is-jesus", "why-pray-your-will-be-done"],
+    followsFrom: ["why-am-i-so-anxious", "can-i-be-anxious-and-still-trust-god"],
+    related: ["how-do-i-balance-planning-with-trusting-god", "how-do-i-pray", "does-god-hear-my-prayers"],
+    planned: ["What does Sabbath rest mean, and is it still for today?"],
+    order: 100,
+  },
 ];
