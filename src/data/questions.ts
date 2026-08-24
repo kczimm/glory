@@ -1577,10 +1577,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 2:8-10", "Romans 4:5", "James 2:17", "James 2:26", "Galatians 5:6"],
-    raises: ["what-is-justification", "what-is-sanctification-and-how-does-it-happen"],
+    raises: ["what-is-justification", "what-is-sanctification-and-how-does-it-happen", "how-does-god-change-me"],
     followsFrom: ["how-can-i-be-saved"],
     related: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again", "what-should-i-do-now-that-im-saved", "what-is-the-gospel"],
-    planned: ["How does growth in holiness happen over time?"],
+    planned: [],
     order: 21,
   },
 
@@ -1726,10 +1726,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 2:8-9", "Romans 3:24", "2 Corinthians 12:9", "Titus 2:11"],
-    raises: ["what-is-justification", "does-grace-mean-live-how-i-want", "what-is-the-difference-between-grace-and-mercy"],
+    raises: ["what-is-justification", "does-grace-mean-live-how-i-want", "what-is-the-difference-between-grace-and-mercy", "how-does-god-change-me"],
     followsFrom: ["what-is-the-gospel"],
     related: ["what-is-the-gospel", "how-can-i-be-saved"],
-    planned: ["What does it mean to grow in grace?"],
+    planned: [],
     order: 23,
   },
 
@@ -3882,10 +3882,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Corinthians 5:17", "John 15:4-5", "Colossians 3:12-14", "1 John 1:9", "Galatians 5:16"],
-    raises: ["how-do-i-fight-sin"],
+    raises: ["how-do-i-fight-sin", "how-does-god-change-me"],
     followsFrom: ["what-does-it-mean-to-be-born-again", "born-again-and-baptism"],
     related: ["born-again-and-baptism", "how-do-i-fight-sin", "how-do-i-pray", "who-is-the-holy-spirit", "what-are-spiritual-gifts"],
-    planned: ["How do I grow in Christlikeness?"],
+    planned: [],
     order: 22,
   },
 
@@ -6412,10 +6412,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Peter 4:10", "Romans 12:6-8", "1 Corinthians 12:7", "1 Corinthians 12:11", "1 Corinthians 14:12"],
-    raises: ["what-are-spiritual-gifts", "are-sign-gifts-active"],
+    raises: ["what-are-spiritual-gifts", "are-sign-gifts-active", "how-does-god-change-me"],
     followsFrom: ["what-are-spiritual-gifts", "how-do-i-receive-the-holy-spirit"],
     related: ["what-are-spiritual-gifts", "are-sign-gifts-active", "what-the-new-life-looks-like", "who-is-the-holy-spirit"],
-    planned: ["How do I grow in the fruit of the Spirit?"],
+    planned: [],
     order: 22,
   },
 
@@ -15033,5 +15033,62 @@ export const questions: Question[] = [
     planned: ["If God's existence cannot be proven scientifically, is faith irrational?", "Why doesn't God make Himself more obvious to sincere seekers?"],
     order: 85,
   },
-
+  {
+    slug: "how-does-god-change-me",
+    question: "How does God actually change me?",
+    category: "our-walk",
+    summary:
+      "Not by trying harder. Scripture says God changes us the way life works, not the way machines run: He gives a new heart, puts His Spirit within, and then works in us both to want and to do what pleases Him. We remain in Christ like branches in a vine, behold His glory until we are transformed, and actively put off the old self and put on the new. Your effort matters, but it is response, not engine: God supplies the power, and the fruit appears over time.",
+    passages: [
+      { book: "Ezekiel", chapter: 36, title: "A new heart and a new spirit", lookFor: "God promises to take away the stony heart, give a heart of flesh, and put His Spirit within so that His people walk in His ways.", focus: "25-27" },
+      { book: "John", chapter: 15, title: "The vine and the branches", lookFor: "Fruit is not manufactured; it grows as the branch remains in the vine. Apart from Christ we can do nothing.", focus: "1-8" },
+      { book: "Philippians", chapter: 2, title: "God works in you", lookFor: "We work out what God works in: He supplies both the willing and the doing.", focus: "12-18" },
+      { book: "Colossians", chapter: 3, title: "Put off the old, put on the new", lookFor: "The new self is already being renewed, and that renewal shows up in concrete daily behavior.", focus: "1-17" },
+      { book: "Galatians", chapter: 5, title: "Walk by the Spirit", lookFor: "Two ways of living are set side by side: the works of the flesh and the fruit of the Spirit.", focus: "16-26" },
+    ],
+    points: [
+      {
+        heading: "God begins the change by giving you a new heart",
+        body:
+          "The change starts with something only God can do. Through Ezekiel He promised, 'I will also give you a new heart, and I will put a new spirit within you,' taking away 'the stony heart out of your flesh' and giving 'a heart of flesh.' And He does not stop at a new heart: 'I will put my Spirit within you, and cause you to walk in my statutes.' Salvation itself is described as 'the washing of regeneration and renewing by the Holy Spirit.' You did not make yourself alive, and you do not remake yourself holy: the same God who began the work carries it forward.",
+        verses: ["Ezekiel 36:26", "Ezekiel 36:27", "Titus 3:5"],
+      },
+      {
+        heading: "The power is God's: He works in you to will and to work",
+        body:
+          "Paul joins two truths that sound opposed until you see they are one: 'work out your own salvation with fear and trembling. For it is God who works in you both to will and to work, for his good pleasure.' You work out precisely because God works in; even the willing is His gift. And the promise stands behind it all: 'He who calls you is faithful, who will also do it.'",
+        verses: ["Philippians 2:12", "Philippians 2:13", "1 Thessalonians 5:24"],
+      },
+      {
+        heading: "Change flows from abiding in Christ, not striving apart from Him",
+        body:
+          "Jesus' picture of growth is agricultural, not athletic. The branch does not strain to manufacture grapes; it stays connected to the vine. 'Remain in me, and I in you. As the branch can’t bear fruit by itself, unless it remains in the vine, so neither can you, unless you remain in me.' Union with Christ is not one technique among others; it is the whole engine, because 'apart from me you can do nothing.'",
+        verses: ["John 15:4", "John 15:5"],
+      },
+      {
+        heading: "You change as you behold Christ and renew your mind",
+        body:
+          "There is a looking that changes us. Paul says believers, 'with unveiled face seeing the glory of the Lord as in a mirror, are transformed into the same image from glory to glory, even as from the Lord, the Spirit.' The same instrument appears again in Romans: 'be transformed by the renewing of your mind.' Gaze long enough at Christ in His word, and the Spirit shapes the gazer into the image of the One gazed upon.",
+        verses: ["2 Corinthians 3:18", "Romans 12:2"],
+      },
+      {
+        heading: "Your part is real: put off, put on, put to death",
+        body:
+          "None of this makes you passive. Because God is at work, you act: 'put off the old man with his doings,' and 'put on the new man, who is being renewed in knowledge after the image of his Creator.' Where a specific sin still grips you, the command is surgical: 'if by the Spirit you put to death the deeds of the body, you will live.' Notice the phrase 'by the Spirit': even the killing of sin is done in His strength.",
+        verses: ["Colossians 3:9", "Colossians 3:10", "Romans 8:13"],
+      },
+      {
+        heading: "The proof of the change is fruit, and fruit takes time",
+        body:
+          "How do you know God is changing you? Look for fruit, not fireworks. 'The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faith, gentleness, and self-control.' Fruit grows quietly, season by season, which is why slow growth is still real growth. And the calling keeps both halves together: 'If we live by the Spirit, let’s also walk by the Spirit.'",
+        verses: ["Galatians 5:22-23", "Galatians 5:25"],
+      },
+    ],
+    keyVerses: ["Ezekiel 36:26", "Philippians 2:12-13", "John 15:5", "Colossians 3:9-10", "Galatians 5:22-23"],
+    raises: ["what-is-sanctification-and-how-does-it-happen", "what-is-the-fruit-of-the-spirit", "how-do-i-fight-sin"],
+    followsFrom: ["what-is-grace", "faith-or-works", "what-the-new-life-looks-like"],
+    related: ["what-the-new-life-looks-like", "what-is-sanctification-and-how-does-it-happen", "faith-or-works", "discovering-my-gift"],
+    planned: ["Why does God's change in me feel so slow?"],
+    order: 81,
+  },
 ];
