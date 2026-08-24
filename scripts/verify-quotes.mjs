@@ -216,10 +216,33 @@ function bestMatch(frag, candidateRefs) {
 // ---- extract quoted spans + attributed refs ----------------------------------
 function quotedSpans(content) {
   const s = content.replace(/\\"/g, "\u0001");
-  const re =
-    /\u0001([^\u0001\n]{6,}?)\u0001|\u201C([^\u201D\n]{6,}?)\u201D|(?<![\p{L}\p{N}])'([^'\n]{6,}?)'(?![\p{L}\p{N}])/gu;
   const out = [];
-  for (const m of s.matchAll(re)) out.push(m[1] ?? m[2] ?? m[3]);
+  // Double-quoted spans (escaped \" and curly “”) are unambiguous.
+  const reDouble =
+    /\u0001([^\u0001\n]{6,}?)\u0001|\u201C([^\u201D\n]{6,}?)\u201D/gu;
+  for (const m of s.matchAll(reDouble)) out.push(m[1] ?? m[2]);
+  // Straight-single-quote spans need a scanner: an apostrophe inside a word
+  // (don't, can't, let's) must not be mistaken for an opening or closing quote.
+  const chars = [...s];
+  const isLetterOrDigit = (c) => c !== undefined && /[\p{L}\p{N}]/u.test(c);
+  const OPENER_OK = /^[([{:"\s]$/; // char allowed right before an opening '
+  const CLOSER_OK = /^[)\]},.:;!?"\s]$/; // char allowed right after a closing '
+  // Note: ',' and ';' are deliberately NOT opener-allowed: a closing quote
+  // right after them ("...fellowship,' breaking bread...") must not reopen.
+  for (let i = 0; i < chars.length; i++) {
+    if (chars[i] !== "'") continue;
+    const prev = chars[i - 1] ?? "";
+    if (isLetterOrDigit(prev)) continue; // word-internal apostrophe
+    if (prev !== "" && !OPENER_OK.test(prev)) continue;
+    let j = i;
+    while ((j = s.indexOf("'", j + 1)) !== -1) {
+      if (!CLOSER_OK.test(chars[j + 1] ?? "")) continue; // e.g. don't
+      const span = s.slice(i + 1, j);
+      if (span.length >= 6 && !span.includes("\n")) out.push(span);
+      i = j; // resume scanning after the closer
+      break;
+    }
+  }
   return out;
 }
 const isCodeShaped = (span) =>
