@@ -15329,7 +15329,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 2:17", "Genesis 3:15", "Romans 5:12"],
-    raises: ["what-is-sin", "why-does-god-allow-suffering", "why-did-jesus-have-to-die"],
+    raises: ["what-is-sin", "why-does-god-allow-suffering", "why-did-jesus-have-to-die", "why-did-god-call-abraham"],
     followsFrom: ["what-is-the-bibles-big-story", "why-did-god-create-us", "what-does-it-mean-to-be-made-in-gods-image"],
     related: ["where-does-temptation-come-from", "does-god-use-our-failures"],
     planned: ["Why did God place the tree in the garden at all?"],
@@ -15392,7 +15392,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 12:1-3", "Genesis 15:6", "Galatians 3:8"],
-    raises: ["what-is-faith", "did-god-choose-me", "how-do-i-find-christ-in-the-old-testament"],
+    raises: ["what-is-faith", "did-god-choose-me", "how-do-i-find-christ-in-the-old-testament", "what-does-the-exodus-show-us-about-god"],
     followsFrom: ["what-went-wrong-in-eden", "what-is-the-bibles-big-story"],
     related: ["faith-or-works", "what-is-the-gospel"],
     planned: ["Why did God test Abraham with Isaac?"],
@@ -15462,7 +15462,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 12:13", "Exodus 14:31", "Exodus 6:7", "1 Corinthians 5:7"],
-    raises: ["why-did-jesus-have-to-die", "how-do-i-find-christ-in-the-old-testament"],
+    raises: ["why-did-jesus-have-to-die", "how-do-i-find-christ-in-the-old-testament", "why-did-israel-keep-drifting-into-idolatry"],
     followsFrom: ["why-did-god-call-abraham", "what-is-the-bibles-big-story"],
     related: ["what-is-baptism", "what-is-the-new-heart-that-god-promised"],
     planned: ["Why did God harden Pharaoh's heart?"],
@@ -15525,7 +15525,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 32:4", "Judges 21:25", "1 Kings 18:21", "Jeremiah 31:33"],
-    raises: ["are-there-other-gods", "what-is-sin", "what-is-the-new-heart-that-god-promised"],
+    raises: ["are-there-other-gods", "what-is-sin", "what-is-the-new-heart-that-god-promised", "why-did-god-promise-david-an-eternal-throne"],
     followsFrom: ["what-does-the-exodus-show-us-about-god", "are-there-other-gods"],
     related: ["where-does-temptation-come-from", "repentance-one-time-or-lifelong"],
     planned: ["What modern idols hide in ordinary Christian lives?"],
@@ -15588,7 +15588,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Samuel 7:16", "Psalms 89:34", "Luke 1:32-33"],
-    raises: ["what-does-it-mean-that-jesus-is-the-son-of-david", "what-does-the-title-christ-mean"],
+    raises: ["what-does-it-mean-that-jesus-is-the-son-of-david", "what-does-the-title-christ-mean", "why-did-god-send-his-people-into-exile"],
     followsFrom: ["why-did-israel-keep-drifting-into-idolatry", "what-does-the-exodus-show-us-about-god"],
     related: ["what-is-the-kingdom-of-god", "how-do-i-find-christ-in-the-old-testament"],
     planned: ["Why was David a man after God's own heart despite his sins?"],
@@ -15651,7 +15651,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Kings 17:14", "Jeremiah 31:33", "Lamentations 3:22-23"],
-    raises: ["god-remembers-our-sins-no-more", "how-do-i-know-my-repentance-is-genuine", "how-does-god-discipline-his-children"],
+    raises: ["god-remembers-our-sins-no-more", "how-do-i-know-my-repentance-is-genuine", "how-does-god-discipline-his-children", "how-does-the-old-story-reach-jesus"],
     followsFrom: ["why-did-god-promise-david-an-eternal-throne", "why-did-israel-keep-drifting-into-idolatry"],
     related: ["how-does-god-discipline-his-children", "where-is-god-in-my-pain"],
     planned: ["How should Christians live as exiles in their own culture?"],
@@ -15725,5 +15725,67 @@ export const questions: Question[] = [
     related: ["is-the-whole-bible-about-jesus", "how-do-i-find-christ-in-the-old-testament", "what-is-the-gospel"],
     planned: ["Where do the wisdom books fit in the Bible's story?"],
     order: 93,
+  },
+
+  {
+    slug: "why-am-i-so-anxious",
+    question: "Why am I so anxious?",
+    category: "anxiety-peace",
+    summary:
+      "Jesus does not treat worry as a quirk to manage but as a gaze to correct: anxiety tracks what we treasure, forgets the Father who feeds birds and clothes lilies, and cannot add a single moment to our lives. His answer is not a technique but a treasure swap: seek first the kingdom.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 6,
+        title: "The Sermon on the Mount: treasure, worry, and the Father who knows",
+        lookFor: "How Jesus links treasure (19-21), masters (24), and worry (25-34) into one continuous teaching.",
+        focus: "19-34",
+      },
+      {
+        book: "Luke",
+        chapter: 12,
+        title: "The same sermon from another day",
+        lookFor: "The parallel words about ravens, lilies, and the little flock, ending with the Father's good pleasure to give the Kingdom.",
+        focus: "22-32",
+      },
+    ],
+    points: [
+      {
+        heading: "Anxiety has an address: it lives where your treasure is",
+        body:
+          "Before Jesus says a word about worry, He talks about treasure: 'where your treasure is, there your heart will be also.' Worry is not random; it clusters around whatever we have decided we cannot live without. That is why money, approval, and control breed so much of it: hearts follow investments, and threatened investments produce anxious hearts.",
+        verses: ["Matthew 6:19-21"],
+      },
+      {
+        heading: "Worry is work that accomplishes nothing",
+        body:
+          "Jesus asks the sharpest diagnostic question in Scripture: which of us, by being anxious, can add one moment to his lifespan? Anxiety feels like responsibility, as if worrying were a way of caring for tomorrow. Jesus unmasks it: it is effort with zero yield. Luke records the same claim in different measure: 'Which of you by being anxious can add a cubit to his height?' The hours we spend worrying do not protect us; they only spend us.",
+        verses: ["Matthew 6:27", "Luke 12:25"],
+      },
+      {
+        heading: "Worry forgets the Father who feeds birds and clothes grass",
+        body:
+          "Jesus grounds His command in observation, not sentiment: birds 'don't sow, neither do they reap,' yet 'Your heavenly Father feeds them.' Grass thrown into the oven gets better clothing than Solomon. The argument runs by how much more: if God sustains what He merely made, will He abandon what He calls His children? Worry, at bottom, is amnesia about whose child you are.",
+        verses: ["Matthew 6:26", "Matthew 6:28-30"],
+      },
+      {
+        heading: "The pagans seek these things; your Father already knows",
+        body:
+          "Jesus names the alternative worldview precisely: 'the Gentiles seek after all these things,' chasing provision as if the universe were indifferent. Against that He sets one sentence that changes everything: 'your heavenly Father knows that you need all these things.' The question behind anxiety is never whether God is able; it is whether anyone is watching. Jesus says Someone is, and He is your Father.",
+        verses: ["Matthew 6:31-32"],
+      },
+      {
+        heading: "The cure is replacement: seek first the kingdom, live one day at a time",
+        body:
+          "Jesus does not end with 'stop worrying'; He ends with a new pursuit: 'seek first God's Kingdom, and his righteousness; and all these things will be given to you as well.' An empty mind refills itself; a heart aimed at the kingdom has somewhere for its energy to go. And He shrinks the battlefield to today: 'tomorrow will be anxious for itself. Each day's own evil is sufficient.' Grace arrives daily, like manna, never stockpiled ahead of time. And underneath it all stands the Father's disposition, which Jesus states without hedging: 'Don't be afraid, little flock, for it is your Father's good pleasure to give you the Kingdom.'",
+        verses: ["Matthew 6:33-34", "Luke 12:31-32"],
+      },
+    ],
+    keyVerses: ["Matthew 6:26", "Matthew 6:27", "Matthew 6:33"],
+    raises: ["can-i-be-anxious-and-still-trust-god", "what-does-gods-peace-feel-like", "what-is-the-kingdom-of-god"],
+    followsFrom: [],
+    related: ["how-do-i-pray", "where-is-god-in-my-pain", "does-god-hear-my-prayers"],
+    planned: ["What does it mean to seek first the kingdom in ordinary decisions?"],
+    order: 94,
   },
 ];

@@ -109,6 +109,14 @@ export const categories: Category[] = [
     order: 13,
     entry: ["what-is-the-bibles-big-story"],
   },
+  {
+    slug: "anxiety-peace",
+    title: "Anxiety & Peace",
+    tagline:
+      "When worry will not let go: what Jesus says to the anxious, the peace that guards heart and mind, and the Father who cares for you.",
+    order: 14,
+    entry: ["why-am-i-so-anxious"],
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {
