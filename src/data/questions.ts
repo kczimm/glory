@@ -15854,4 +15854,73 @@ export const questions: Question[] = [
     planned: ["How do I answer people who mock, asking 'Where is your God?'"],
     order: 95,
   },
+
+  {
+    slug: "what-did-jesus-do-when-he-was-overwhelmed",
+    question: "What did Jesus do when He was overwhelmed?",
+    category: "anxiety-peace",
+    summary:
+      "In Gethsemane the Son of God was greatly troubled and distressed, sorrowful even to death, and he prayed on through the night while sweat fell like blood. He is not a stranger standing outside your anguish giving advice from a safe distance; Hebrews says his own suffering is exactly why he can help the tempted right now.",
+    passages: [
+      {
+        book: "Mark",
+        chapter: 14,
+        title: "Gethsemane: the night of sorrow",
+        lookFor: "Jesus naming his anguish, praying three times with honest request plus full surrender, and rising to meet the betrayer.",
+        focus: "32-50",
+      },
+      {
+        book: "Psalms",
+        chapter: 55,
+        title: "A believer's terror, centuries earlier",
+        lookFor: "The language of being overwhelmed (4-8), and where the psalmist lands: casting his burden on the LORD.",
+        focus: "1-8, 16-17, 22",
+      },
+      {
+        book: "Hebrews",
+        chapter: 4,
+        title: "Why this matters forever",
+        lookFor: "The high priest who is touched with the feeling of our infirmities, and the throne we approach because of it.",
+        focus: "14-16",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus refused to pretend; he named the anguish out loud",
+        body:
+          "Mark reports that Jesus 'began to be greatly troubled and distressed,' and his own words match: 'My soul is exceedingly sorrowful, even to death.' The sinless Son of God felt overwhelm so severe he described himself as dying of sorrow. Being crushed by circumstance was never evidence of failed faith in him, which should retire that accusation against everyone else too.",
+        verses: ["Mark 14:33-34", "Psalms 55:4-5"],
+      },
+      {
+        heading: "He brought the unbearable to the Father as Father",
+        body:
+          "His prayer opens with the most intimate address a suffering mouth can use: 'Abba, Father.' Then comes an unvarnished request ('Please remove this cup from me') held together with total surrender ('However, not what I desire, but what you desire'). He knew rescue was available ('do you think that I couldn't ask my Father?'), and asked to be spared anyway; yet Gethsemane teaches that honest asking and full trust are not opposites; they belong in one breath.",
+        verses: ["Mark 14:36", "Matthew 26:53"],
+      },
+      {
+        heading: "When the answer did not come, he prayed again, saying the same words",
+        body:
+          "Jesus returned and 'prayed, saying the same words,' pressing in again when no answer had come; Mark shows him coming back a third time still in prayer as the hour arrives. Repetition here is not failure of eloquence; it is endurance in prayer when heaven seems silent. If the Son of God prayed identical sentences through a sleepless night until the hour arrived, believers who find themselves praying the same desperate prayer tomorrow have excellent company.",
+        verses: ["Mark 14:35", "Mark 14:39", "Mark 14:41"],
+      },
+      {
+        heading: "God's answer was strength for the path, not escape from it",
+        body:
+          "Luke reveals what the Father gave: 'An angel from heaven appeared to him, strengthening him,' after which 'being in agony he prayed more earnestly.' Hebrews says he was actually heard, 'having been heard for his godly fear,' yet the cup did not pass. Sometimes the gracious answer to overwhelming prayer is not removal but reinforcement: grace to stand up, walk forward, and meet the thing itself.",
+        verses: ["Luke 22:43-44", "Hebrews 5:7"],
+      },
+      {
+        heading: "His overwhelm became permanent help for ours",
+        body:
+          "Hebrews draws the conclusion: 'we don't have a high priest who can't be touched with the feeling of our infirmities,' because he 'has suffered being tempted, he is able to help those who are tempted.' At Lazarus's tomb the same man was visibly troubled, and 'Jesus wept.' Your worst night does not impress him or embarrass him; it summons his sympathy, because he has been there and come through it.",
+        verses: ["Hebrews 4:15", "Hebrews 2:18", "John 11:33-35"],
+      },
+    ],
+    keyVerses: ["Mark 14:36", "Hebrews 4:15", "Hebrews 5:7"],
+    raises: ["why-did-jesus-have-to-die", "does-god-hear-my-prayers", "what-does-gods-peace-feel-like"],
+    followsFrom: ["can-i-be-anxious-and-still-trust-god", "who-is-jesus"],
+    related: ["how-do-i-pray", "why-did-god-become-a-man", "what-is-the-difference-between-testing-and-temptation"],
+    planned: ["How do I pray when I must walk into something I dread?"],
+    order: 96,
+  },
 ];

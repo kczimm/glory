@@ -283,6 +283,14 @@ export const connections: Record<string, Connection[]> = {
     c("Romans 3:23", "theme", "All have sinned: because all died in the one man's transgression."),
     c("Ezekiel 18:20", "contrast", "The soul who sins will die: the just sentence for the offense."),
   ],
+  "Mark 14:36": [
+    c("Matthew 6:10", "theme", "Your will be done: the Lord's Prayer petition that Gethsemane prays at the cost of everything."),
+    c("Luke 22:42-44", "parallel", "The parallel account of the same surrender, with the angel strengthening recorded only by Luke."),
+  ],
+  "Hebrews 4:15": [
+    c("Psalms 55:4-5", "pattern", "David's terror and horror foreshadow the greater David's sorrow even to death."),
+    c("1 Peter 2:23", "theme", "He suffered without threatening, because he entrusted himself to the one who judges rightly."),
+  ],
   "Psalms 42:5": [
     c("Psalms 43:5", "theme", "The refrain repeated across two psalms: questioning the soul, then commanding it to hope in God."),
     c("2 Corinthians 7:5", "parallel", "Paul's honest report: fightings outside, fears inside. Distress and faith in the same breath."),
