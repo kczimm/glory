@@ -15991,4 +15991,65 @@ export const questions: Question[] = [
     planned: ["What does it mean that the Lord is at hand?"],
     order: 97,
   },
+
+  {
+    slug: "why-does-peter-tell-me-to-cast-my-anxiety",
+    question: "Why does Peter tell me to cast my anxiety?",
+    category: "anxiety-peace",
+    summary:
+      "Peter welds two commands into one breath: humble yourselves, casting all your worries on him, because he cares for you. In Scripture's grammar, anxiety and pride are neighbors: worry is self-reliance running out of strength. Casting the load on God is humility in motion, and Peter of all people knew it, the man who collapsed and was restored wrote this to exiles under fire.",
+    passages: [
+      {
+        book: "1 Peter",
+        chapter: 5,
+        title: "Humility, casting, and the roaring lion",
+        lookFor: "How verse 7 sits inside the humility sentence (5-7), then pivots straight to the adversary (8-9) and restoration (10).",
+      },
+      {
+        book: "Matthew",
+        chapter: 11,
+        title: "The invitation behind the command",
+        lookFor: "Jesus' own offer to the burdened: come, take my yoke, find rest for your souls.",
+        focus: "25-30",
+      },
+    ],
+    points: [
+      {
+        heading: "Casting anxiety is an act of humility",
+        body:
+          "In Greek, verses 6 and 7 are one continuous thought: 'Humble yourselves therefore under the mighty hand of God,' and participles follow, 'casting all your worries on him.' The layout matters: Peter does not treat worry mainly as a feeling problem but as a posture problem. Carrying what only God can carry is quietly proud; handing it over is what humility looks like when it walks.",
+        verses: ["1 Peter 5:6-7"],
+      },
+      {
+        heading: "The reason you may cast it is His care, not your grip",
+        body:
+          "Peter grounds the whole command in one clause: 'because he cares for you.' People often hold onto worry as a form of responsibility, as if releasing it meant negligence. Peter reverses the logic: the load stays on you only until you notice whose hands are underneath. David had sung the same line long before: 'Cast your burden on Yahweh, and he will sustain you.'",
+        verses: ["1 Peter 5:7", "Psalms 55:22", "Psalms 68:19"],
+      },
+      {
+        heading: "The man who wrote this had dropped everything before",
+        body:
+          "Peter is not lecturing from a pedestal. This is the disciple who boasted he would never fall and then denied Jesus three times in one night, who was asked three times by the risen Lord whether he loved him, and restored to service. When he tells suffering believers to hand their fears to God, it carries the accent of experience: the man knows both directions, the sinking and the catching.",
+        verses: ["Luke 22:54-62", "John 21:15-17"],
+      },
+      {
+        heading: "Anxiety lives next door to the war",
+        body:
+          "Immediately after the casting comes the warning: 'Be sober and self-controlled. Be watchful. Your adversary, the devil, walks around like a roaring lion,' and believers resist him 'steadfast in your faith.' Peter will not let anxious Christians forget they are in contested territory: despair isolates, fear mutes faith, and a prowling enemy prefers targets already cut from the herd.",
+        verses: ["1 Peter 5:8-9"],
+      },
+      {
+        heading: "Underneath the command stands a restoring God",
+        body:
+          "Peter ends the section with the promise: the God of all grace will himself 'perfect, establish, strengthen, and settle you' after you have suffered a little while. Notice who does the verbs: God himself, fourfold, personally. And Jesus had already issued the open invitation Peter now echoes: 'Come to me, all you who labor and are heavily burdened, and I will give you rest.'",
+        verses: ["1 Peter 5:10", "Matthew 11:28"],
+      },
+    ],
+    keyVerses: ["1 Peter 5:6-7", "Psalms 55:22", "Matthew 11:28"],
+    raises: ["what-is-spiritual-warfare", "how-do-i-know-my-repentance-is-genuine", "when-the-weight-wont-lift"],
+    followsFrom: ["why-am-i-so-anxious", "can-i-be-anxious-and-still-trust-god"],
+    related: ["praying-against-the-enemy", "how-do-i-pray", "still-my-father-when-i-fail"],
+    planned: ["What does it mean that God gives grace to the humble?"],
+    order: 98,
+  },
 ];
