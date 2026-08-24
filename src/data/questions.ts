@@ -6753,10 +6753,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 1:14", "Hebrews 2:14-17", "Romans 8:3", "1 Timothy 2:5", "Galatians 4:4-5"],
-    raises: ["why-did-jesus-have-to-die", "why-is-jesus-both-son-of-god-and-son-of-man", "who-is-the-father"],
+    raises: ["why-did-jesus-have-to-die", "why-is-jesus-both-son-of-god-and-son-of-man", "who-is-the-father", "how-does-the-old-story-reach-jesus"],
     followsFrom: ["is-jesus-really-god", "who-is-jesus"],
     related: ["is-jesus-really-god", "who-is-jesus", "why-is-jesus-both-son-of-god-and-son-of-man", "who-is-the-father"],
-    planned: ["What was the world waiting for before Jesus came?"],
+    planned: [],
     order: 23,
   },
 
@@ -13305,10 +13305,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Deuteronomy 4:35", "Isaiah 45:5", "Psalms 82:1", "1 Corinthians 8:4-6", "Isaiah 44:8"],
-    raises: ["who-are-the-gods-of-psalm-82", "what-does-firstborn-mean"],
+    raises: ["who-are-the-gods-of-psalm-82", "what-does-firstborn-mean", "why-did-israel-keep-drifting-into-idolatry"],
     followsFrom: ["what-does-it-mean-that-god-is-one"],
     related: ["does-jesus-sharing-gods-nature-mean-two-gods", "who-is-satan"],
-    planned: ["Why did Israel keep drifting into idolatry if there are no other gods?"],
+    planned: [],
     order: 62,
   },
 
@@ -15192,5 +15192,538 @@ export const questions: Question[] = [
     related: ["did-god-choose-me", "can-anyone-resist-gods-grace", "does-god-change-his-mind", "what-does-it-mean-that-god-is-sovereign"],
     planned: ["Can someone whose heart has been hardened come back?"],
     order: 86,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Story of Scripture
+  // ------------------------------------------------------------------
+  {
+    slug: "what-is-the-bibles-big-story",
+    question: "What is the Bible's big story?",
+    category: "story-of-scripture",
+    summary:
+      "The Bible is one unfolding story: God makes a very good world, humanity rebels, and God begins a long work of rescue through one family, one nation, and finally one Son, until all things are made new. Every book is a chapter in that single plot.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 1,
+        title: "Creation",
+        lookFor: "A world made good on purpose, and humans made in God's own image to rule it under Him.",
+        focus: "26-31",
+      },
+      {
+        book: "Genesis",
+        chapter: 3,
+        title: "The fall",
+        lookFor: "How trust in God broke, and the first promise that a descendant of the woman would crush the serpent.",
+        focus: "1-24",
+      },
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "Jesus opens the story",
+        lookFor: "The risen Jesus walks two disciples through Scripture and shows that the whole thing was about Him.",
+        focus: "13-35",
+      },
+      {
+        book: "Revelation",
+        chapter: 21,
+        title: "The ending",
+        lookFor: "Where the story lands: God dwelling with His people again, death and mourning gone, everything made new.",
+        focus: "1-8",
+      },
+    ],
+    points: [
+      {
+        heading: "It begins with a good creation",
+        body:
+          "The story does not open with a problem to solve but with a gift to enjoy. God creates by His word, calls each day good, and at the end sees 'everything that he had made, and, behold, it was very good.' Humans are the crown: 'God created man in his own image,' made to know Him and to steward His world.",
+        verses: ["Genesis 1:27", "Genesis 1:31"],
+      },
+      {
+        heading: "It turns on a rebellion",
+        body:
+          "The first humans were given one boundary, with death attached: 'in the day that you eat of it, you will surely die.' They crossed it. Sin entered through one man, Paul says, 'and death through sin; and so death passed to all men.' Everything that follows in Scripture, the covenants, the sacrifices, the cross itself, is God's answer to this moment.",
+        verses: ["Genesis 2:17", "Romans 5:12"],
+      },
+      {
+        heading: "It carries a promise through history",
+        body:
+          "Even in the ruins of Eden, God promised that the woman's offspring would bruise the serpent's head. From there the story narrows and widens at once: one couple, then one family in Abraham, then one nation in Israel, then one Son from David's line, and through Him blessing spreading back out to 'all the families of the earth.' The plot is rescue, and the rescuer keeps being promised before He arrives.",
+        verses: ["Genesis 3:15", "Genesis 12:3"],
+      },
+      {
+        heading: "Jesus claimed the whole story pointed to Him",
+        body:
+          "On the road to Emmaus, the risen Jesus did not pick a proof text or two: 'Beginning from Moses and from all the prophets, he explained to them in all the Scriptures the things concerning himself.' Later He said everything written in the law, the prophets, and the psalms concerning Him must be fulfilled. The Bible is not a loose collection; it has a Hero.",
+        verses: ["Luke 24:27", "Luke 24:44", "John 5:39"],
+      },
+      {
+        heading: "It ends where it began, only better",
+        body:
+          "Revelation closes the loop Eden opened: 'Behold, God's dwelling is with people, and he will dwell with them.' Tears, death, mourning, and pain are removed, and the One on the throne says, 'Behold, I am making all things new.' Creation is not discarded but renewed, and communion with God, lost in a garden, is restored in a city.",
+        verses: ["Revelation 21:3", "Revelation 21:4-5"],
+      },
+    ],
+    keyVerses: ["Genesis 1:27", "Genesis 3:15", "Luke 24:27", "Revelation 21:5"],
+    raises: ["what-went-wrong-in-eden", "why-did-god-create-us", "is-the-whole-bible-about-jesus"],
+    followsFrom: [],
+    related: ["how-do-i-find-christ-in-the-old-testament", "what-is-the-new-heaven-and-new-earth"],
+    planned: ["Why is the Bible arranged the way it is?"],
+    order: 86,
+  },
+
+  {
+    slug: "what-went-wrong-in-eden",
+    question: "What went wrong in Eden?",
+    category: "story-of-scripture",
+    summary:
+      "Our first parents doubted God's word, seized what He had forbidden, and brought sin and death into a very good world. But even as He judged them, God promised that the woman's offspring would one day crush the serpent: the whole rest of the Bible is the story of that promise kept.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 2,
+        title: "Life before the fall",
+        lookFor: "Generous provision, real work, real relationship, and one clear boundary with a warning attached.",
+        focus: "4-25",
+      },
+      {
+        book: "Genesis",
+        chapter: 3,
+        title: "The fall",
+        lookFor: "The serpent's twist of God's words, the couple's choice, the shame, and God's judgments mixed with mercy.",
+        focus: "1-24",
+      },
+      {
+        book: "Romans",
+        chapter: 5,
+        title: "One man, one act, many affected",
+        lookFor: "Paul reads Genesis 3 theologically: through one man sin entered, and through one Man grace much more abounds.",
+        focus: "12-21",
+      },
+    ],
+    points: [
+      {
+        heading: "Eden was freedom with one fence",
+        body:
+          "God was no miser: 'You may freely eat of every tree of the garden.' A single tree was withheld, with death as its warning. That is the shape of life with God still: abundant liberty inside a loving boundary, and the boundary exists because He knows what we do not.",
+        verses: ["Genesis 2:16-17"],
+      },
+      {
+        heading: "Sin began as doubting God's word",
+        body:
+          "Before the taking came the twisting: 'Has God really said?' The serpent reframed God's generosity as stinginess and His warning as bluff, and Eve trusted the new voice over the old one. Every temptation since runs the same play: make God look like the one withholding good.",
+        verses: ["Genesis 3:1", "Genesis 3:4-5"],
+      },
+      {
+        heading: "Death entered through disobedience",
+        body:
+          "God had been explicit, and He proved true: 'you will surely die.' Toil, pain, and dust-bound mortality followed, and Paul traces the genealogy of death directly to Adam's transgression. This is why the gospel cannot be self-improvement: our problem is deeper than bad habits.",
+        verses: ["Genesis 2:17", "Genesis 3:19", "Romans 5:12"],
+      },
+      {
+        heading: "Judgment came wrapped in promise",
+        body:
+          "Even the sentence on the serpent carried the first gospel: 'I will put hostility between you and the woman... He will bruise your head, and you will bruise his heel.' God clothed the couple Himself before sending them from the garden. From the very first page, judgment and mercy travel together.",
+        verses: ["Genesis 3:15", "Genesis 3:21"],
+      },
+    ],
+    keyVerses: ["Genesis 2:17", "Genesis 3:15", "Romans 5:12"],
+    raises: ["what-is-sin", "why-does-god-allow-suffering", "why-did-jesus-have-to-die"],
+    followsFrom: ["what-is-the-bibles-big-story", "why-did-god-create-us", "what-does-it-mean-to-be-made-in-gods-image"],
+    related: ["where-does-temptation-come-from", "does-god-use-our-failures"],
+    planned: ["Why did God place the tree in the garden at all?"],
+    order: 87,
+  },
+
+  {
+    slug: "why-did-god-call-abraham",
+    question: "Why did God call Abraham?",
+    category: "story-of-scripture",
+    summary:
+      "After the fall spread across the nations, God called one man to carry one promise: descendants, land, and blessing for all families of the earth through him. Abraham believed God, and it counted as righteousness, which is why everyone who believes today is called his child.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 12,
+        title: "The call",
+        lookFor: "What God commands Abram to leave and the sevenfold promise He gives in return.",
+        focus: "1-9",
+      },
+      {
+        book: "Genesis",
+        chapter: 15,
+        title: "The covenant",
+        lookFor: "Abraham's faith credited as righteousness, and God alone passing between the pieces to seal His promise.",
+        focus: "1-21",
+      },
+      {
+        book: "Romans",
+        chapter: 4,
+        title: "Abraham the believer",
+        lookFor: "Paul argues that Abraham was justified by faith before circumcision, making him father of all who believe.",
+        focus: "1-25",
+      },
+    ],
+    points: [
+      {
+        heading: "God's answer to Babel was a person, not a program",
+        body:
+          "After humanity's pride scattered the nations, God did not launch a reform movement. He told one seventy-five-year-old, childless man to leave everything behind for 'the land that I will show you.' Salvation history funnels through one family so that the blessing can later fan out to every family on earth.",
+        verses: ["Genesis 12:1", "Acts 7:2-3"],
+      },
+      {
+        heading: "The promise was bigger than Abraham could see",
+        body:
+          "'All of the families of the earth will be blessed in you': Abraham was chosen not for privilege alone but for mission. Paul reads this precisely: God announced the gospel in advance to Abraham when He promised that the nations would be blessed through him. The promise always aimed past Israel at the world.",
+        verses: ["Genesis 12:3", "Galatians 3:8"],
+      },
+      {
+        heading: "He believed, and God counted it as righteousness",
+        body:
+          "When Abraham worried that his servant would inherit everything, God pointed him at the stars and repeated the promise, and 'He believed in Yahweh; and he reckoned it to him for righteousness.' Before any ritual, any law, any sign, Abraham was right with God by trusting Him. That is why faith, not descent or performance, marks his true children.",
+        verses: ["Genesis 15:6", "Romans 4:3", "Galatians 3:7"],
+      },
+      {
+        heading: "The covenant rested on God alone",
+        body:
+          "In the strange ceremony of Genesis 15, God had the animals cut in pieces, and only the smoking firepot and flaming torch passed between them while Abraham slept. In that culture both parties walked the path; here only God did. The promise is guaranteed by His character alone, which is why Abraham's failures and ours cannot break it.",
+        verses: ["Genesis 15:17", "Psalms 89:34"],
+      },
+    ],
+    keyVerses: ["Genesis 12:1-3", "Genesis 15:6", "Galatians 3:8"],
+    raises: ["what-is-faith", "did-god-choose-me", "how-do-i-find-christ-in-the-old-testament"],
+    followsFrom: ["what-went-wrong-in-eden", "what-is-the-bibles-big-story"],
+    related: ["faith-or-works", "what-is-the-gospel"],
+    planned: ["Why did God test Abraham with Isaac?"],
+    order: 88,
+  },
+
+  {
+    slug: "what-does-the-exodus-show-us-about-god",
+    question: "What does the Exodus show us about God?",
+    category: "story-of-scripture",
+    summary:
+      "In the Exodus, God hears the cries of slaves, judges Egypt and its gods, redeems His people by blood, and brings them to Himself to be His own. It became the Old Testament's defining picture of salvation, and the Passover lamb points straight to Christ, our Passover sacrificed for us.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 3,
+        title: "God hears",
+        lookFor: "God's self-revelation at the burning bush, and the reason He acts: He has heard, He has seen, He has come down.",
+        focus: "1-15",
+      },
+      {
+        book: "Exodus",
+        chapter: 12,
+        title: "Passover",
+        lookFor: "A lamb without blemish dies so that judgment passes over; the blood marks the rescued households.",
+        focus: "1-14",
+      },
+      {
+        book: "Exodus",
+        chapter: 14,
+        title: "Deliverance",
+        lookFor: "The sea splits, the army drowns, and Israel responds with fear, belief, and song.",
+        focus: "10-31",
+      },
+      {
+        book: "Exodus",
+        chapter: 19,
+        title: "Brought to God",
+        lookFor: "Why God saved them: not just out of slavery but into a covenant, a treasured possession and kingdom of priests.",
+        focus: "1-6",
+      },
+    ],
+    points: [
+      {
+        heading: "God acts because He hears His people's cry",
+        body:
+          "The Exodus begins in heaven's attention: God says He has seen the misery, heard the cry, known the sorrows, and come down to deliver. Salvation starts not with Israel climbing toward God but with God descending toward Israel. Every rescue since follows that pattern of grace.",
+        verses: ["Exodus 2:24-25", "Exodus 3:7-8"],
+      },
+      {
+        heading: "Redemption cost blood",
+        body:
+          "The decisive night required a spotless lamb, its blood applied in faith: 'when I see the blood, I will pass over you.' Israel left Egypt bought with a death. That is why John the Baptist greets Jesus as the Lamb of God who takes away the sin of the world, and why Paul says flatly, 'Christ, our Passover, has been sacrificed in our place.'",
+        verses: ["Exodus 12:13", "John 1:29", "1 Corinthians 5:7"],
+      },
+      {
+        heading: "Rescue creates worshipers, not just survivors",
+        body:
+          "At the far shore, Israel saw the great work, feared Yahweh, and believed. God's stated goal was relational: 'I will take you to me for a people, and I will be to you a God.' Deliverance was never merely escape from Egypt; it was adoption into covenant fellowship.",
+        verses: ["Exodus 14:31", "Exodus 6:7"],
+      },
+      {
+        heading: "The pattern repeats all through Scripture",
+        body:
+          "The prophets appeal back to the Exodus when they describe forgiveness, as when Micah asks, 'Who is a God like you, who pardons iniquity?'; Isaiah recalls the God 'who makes a way in the sea'; the Psalms sing it; and Paul says our fathers 'were all baptized into Moses in the cloud and in the sea.' When Jesus set His face toward Jerusalem, Luke says that at the transfiguration Moses and Elijah spoke of His departure: literally, His exodus. The greater deliverance, accomplished at another Passover.",
+        verses: ["Micah 7:18", "Isaiah 43:16", "1 Corinthians 10:1-2", "Luke 9:31"],
+      },
+    ],
+    keyVerses: ["Exodus 12:13", "Exodus 14:31", "Exodus 6:7", "1 Corinthians 5:7"],
+    raises: ["why-did-jesus-have-to-die", "how-do-i-find-christ-in-the-old-testament"],
+    followsFrom: ["why-did-god-call-abraham", "what-is-the-bibles-big-story"],
+    related: ["what-is-baptism", "what-is-the-new-heart-that-god-promised"],
+    planned: ["Why did God harden Pharaoh's heart?"],
+    order: 89,
+  },
+
+  {
+    slug: "why-did-israel-keep-drifting-into-idolatry",
+    question: "Why did Israel keep drifting into idolatry?",
+    category: "story-of-scripture",
+    summary:
+      "Israel drifted because idolatry is not mainly an intellectual mistake but a heart disease: they wanted gods they could see, control, and use. Their story exposes how quickly delivered people forget their Deliverer, and how faithfully God sent prophets to call them home.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 32,
+        title: "The golden calf",
+        lookFor: "How fast the redeemed traded the invisible God for a visible one, and Moses' intercession.",
+        focus: "1-14",
+      },
+      {
+        book: "Judges",
+        chapter: 2,
+        title: "The cycle begins",
+        lookFor: "The repeating rhythm of the whole book: forget, serve other gods, fall under enemies, cry out, be delivered, forget again.",
+        focus: "10-23",
+      },
+      {
+        book: "1 Kings",
+        chapter: 18,
+        title: "Mount Carmel",
+        lookFor: "Elijah's question to a nation limping between two opinions, and fire falling on a repaired altar.",
+        focus: "16-39",
+      },
+    ],
+    points: [
+      {
+        heading: "Idolatry promises what only God gives",
+        body:
+          "Israel did not stop believing in Yahweh when they made the calf; they wanted a god they could manage, a golden figure to go before them. Idols domesticate the divine: fertility on demand, victory on demand, approval on demand. That trade, exchanging the glory of God for images, is what Paul calls the root of human unrighteousness.",
+        verses: ["Exodus 32:1", "Romans 1:22-23"],
+      },
+      {
+        heading: "Forgetfulness precedes unfaithfulness",
+        body:
+          "Judges names the mechanism: another generation arose 'who didn’t know Yahweh, nor yet the work which he had worked for Israel,' and served the Baals. Idolatry rarely attacks doctrine first; it attacks memory. Which is why Scripture keeps commanding remembrance: tell the children, keep the feasts, build the memorial stones.",
+        verses: ["Judges 2:10", "Deuteronomy 6:12"],
+      },
+      {
+        heading: "Every drift ends in the same dead end",
+        body:
+          "The era's epitaph reads: 'every man did that which was right in his own eyes.' Autonomy sounds like freedom but produced chaos, oppression, and fear. Elijah put the alternative plainly on Carmel: 'If Yahweh is God, follow him; but if Baal, then follow him.' Half-hearted religion satisfies no one, least of all God.",
+        verses: ["Judges 21:25", "1 Kings 18:21"],
+      },
+      {
+        heading: "God kept calling them back",
+        body:
+          "Through drought and fire on Carmel the people fell on their faces crying, 'Yahweh, he is God!' Through prophet after prophet the Lord pleaded rather than abandoned. And He promised the cure for idolatry itself: a new heart, His law written within, so that His people would finally love Him with an undivided heart.",
+        verses: ["1 Kings 18:39", "Jeremiah 31:33", "Ezekiel 36:26"],
+      },
+    ],
+    keyVerses: ["Exodus 32:4", "Judges 21:25", "1 Kings 18:21", "Jeremiah 31:33"],
+    raises: ["are-there-other-gods", "what-is-sin", "what-is-the-new-heart-that-god-promised"],
+    followsFrom: ["what-does-the-exodus-show-us-about-god", "are-there-other-gods"],
+    related: ["where-does-temptation-come-from", "repentance-one-time-or-lifelong"],
+    planned: ["What modern idols hide in ordinary Christian lives?"],
+    order: 90,
+  },
+
+  {
+    slug: "why-did-god-promise-david-an-eternal-throne",
+    question: "Why did God promise David an eternal throne?",
+    category: "story-of-scripture",
+    summary:
+      "When David wanted to build God a house, God promised to build David a house instead: a son, a throne, and a kingdom established forever. Israel's kings failed, but the promise did not expire; it waited for the Son of David in whom it finds its yes and amen.",
+    passages: [
+      {
+        book: "1 Samuel",
+        chapter: 8,
+        title: "We want a king",
+        lookFor: "Israel asks for a king like the nations have, and God tells Samuel whom they are really rejecting.",
+        focus: "1-9",
+      },
+      {
+        book: "2 Samuel",
+        chapter: 7,
+        title: "The covenant with David",
+        lookFor: "David plans a temple; God flips the request into a dynasty, and swears an offspring whose throne lasts forever.",
+        focus: "1-17",
+      },
+      {
+        book: "Psalms",
+        chapter: 89,
+        title: "The promise under strain",
+        lookFor: "The psalm celebrates the sworn covenant with David, then laments the fallen crown, holding both in tension.",
+        focus: "19-37",
+      },
+    ],
+    points: [
+      {
+        heading: "Israel's king-request exposed the heart's real problem",
+        body:
+          "Asking for a king was not wrong in itself; God had planned for one. What stung was the motive: a king 'like all the nations.' God told Samuel, 'they have rejected me, that I should not be king over them.' Behind every misplaced hope for a human fix lies the older refusal of God's own rule.",
+        verses: ["1 Samuel 8:5", "1 Samuel 8:7"],
+      },
+      {
+        heading: "God turned the request into a promise",
+        body:
+          "David, settled in his cedar house, proposed building God a house. God answered with wordplay of covenant proportions: He would make David a house, a dynasty, and establish the throne of his offspring forever. Grace habitually answers our initiatives with gifts we never thought to ask for.",
+        verses: ["2 Samuel 7:11", "2 Samuel 7:16"],
+      },
+      {
+        heading: "The promise survived every failure",
+        body:
+          "David's sons sinned, split the kingdom, and lost the throne to Babylon, and Psalm 89 cries out over that fallen crown: 'You have renounced the covenant of your servant.' Yet God had sworn, 'I will not break my covenant, nor alter what my lips have uttered.' The gap between oath and reality became the engine of messianic hope: a greater Son must be coming.",
+        verses: ["Psalms 89:3-4", "Psalms 89:39", "Psalms 89:34"],
+      },
+      {
+        heading: "The New Testament announces the heir",
+        body:
+          "Matthew opens his Gospel naming Jesus 'the son of David'; the angel tells Mary that 'the Lord God will give him the throne of his father David'; and the crowds shout the title themselves at the triumphal entry. Peter preaches that David foresaw the Christ raised and enthroned. The eternal throne is not a metaphor: it is occupied.",
+        verses: ["Matthew 1:1", "Luke 1:32-33", "Acts 2:30-31"],
+      },
+    ],
+    keyVerses: ["2 Samuel 7:16", "Psalms 89:34", "Luke 1:32-33"],
+    raises: ["what-does-it-mean-that-jesus-is-the-son-of-david", "what-does-the-title-christ-mean"],
+    followsFrom: ["why-did-israel-keep-drifting-into-idolatry", "what-does-the-exodus-show-us-about-god"],
+    related: ["what-is-the-kingdom-of-god", "how-do-i-find-christ-in-the-old-testament"],
+    planned: ["Why was David a man after God's own heart despite his sins?"],
+    order: 91,
+  },
+
+  {
+    slug: "why-did-god-send-his-people-into-exile",
+    question: "Why did God send His people into exile?",
+    category: "story-of-scripture",
+    summary:
+      "Exile was covenant discipline, not covenant collapse: after centuries of warnings ignored, Jerusalem fell, the temple burned, and Judah went to Babylon. Yet even there God promised to gather, cleanse, and renew His people, and the return home became another picture of the greater rescue to come.",
+    passages: [
+      {
+        book: "2 Kings",
+        chapter: 17,
+        title: "Why the north fell",
+        lookFor: "The historian's verdict: they secretly did things against God, ignored every prophet, and hardened like their fathers.",
+        focus: "7-20",
+      },
+      {
+        book: "Jeremiah",
+        chapter: 29,
+        title: "Life in Babylon",
+        lookFor: "God's letter to the exiles: settle down, seek the city's peace, and wait for Him, because He has plans for you.",
+        focus: "1-14",
+      },
+      {
+        book: "Lamentations",
+        chapter: 3,
+        title: "Grief with hope in it",
+        lookFor: "Raw lament over the catastrophe held together by steady mercies: His compassions do not fail.",
+        focus: "19-42",
+      },
+    ],
+    points: [
+      {
+        heading: "Exile was warned about long before it happened",
+        body:
+          "Moses had spelled out the terms centuries earlier: covenant blessing for obedience, scattering among the nations for persistent rebellion. The prophets repeated the warning generation after generation. Exile was not God losing His temper; it was the agreed consequence arriving exactly on schedule.",
+        verses: ["Deuteronomy 28:64", "2 Chronicles 36:16"],
+      },
+      {
+        heading: "They would not listen, but hardened like their fathers",
+        body:
+          "Second Kings' verdict is patient and devastating: Yahweh testified against Israel and Judah 'by every prophet, and every seer,' but 'they would not listen, but hardened their neck.' Judgment fell 'until there was no remedy.' Persistent refusal of God's voice eventually meets a silence that lets consequences speak.",
+        verses: ["2 Kings 17:13-14", "2 Chronicles 36:16"],
+      },
+      {
+        heading: "Discipline was severe but not final",
+        body:
+          "Even in the ashes, hope was built in: God promised a new covenant, with His law written on hearts rather than tablets. Lamentations finds the fulcrum mid-catastrophe: 'It is because of Yahweh's loving kindnesses that we are not consumed... his compassion doesn't fail.' Exile proved sin's wages without ever canceling God's faithfulness.",
+        verses: ["Jeremiah 31:33", "Lamentations 3:22-23", "Leviticus 26:44-45"],
+      },
+      {
+        heading: "Return became a picture of redemption",
+        body:
+          "The prophets describe the homecoming with Exodus-scale language: gathering the scattered, opening a highway, pouring out the Spirit. Jesus' ministry reads against that backdrop: forgiveness of sins is the true return from exile, and the new covenant He sealed at supper is Jeremiah's promise coming true.",
+        verses: ["Isaiah 43:5-6", "Luke 1:68", "Luke 22:20"],
+      },
+    ],
+    keyVerses: ["2 Kings 17:14", "Jeremiah 31:33", "Lamentations 3:22-23"],
+    raises: ["god-remembers-our-sins-no-more", "how-do-i-know-my-repentance-is-genuine", "how-does-god-discipline-his-children"],
+    followsFrom: ["why-did-god-promise-david-an-eternal-throne", "why-did-israel-keep-drifting-into-idolatry"],
+    related: ["how-does-god-discipline-his-children", "where-is-god-in-my-pain"],
+    planned: ["How should Christians live as exiles in their own culture?"],
+    order: 92,
+  },
+
+  {
+    slug: "how-does-the-old-story-reach-jesus",
+    question: "How does the old story reach Jesus?",
+    category: "story-of-scripture",
+    summary:
+      "At exactly the right time, God sent His Son, born of a woman, born under the law: the seed of Abraham in whom nations are blessed, the Passover Lamb, the Son of David on the throne, and the end of exile. Jesus is not a new story interrupting the old one; He is the old story arriving.",
+    passages: [
+      {
+        book: "Galatians",
+        chapter: 3,
+        title: "Abraham's seed",
+        lookFor: "Paul identifies the singular Seed as Christ, and argues the promise outranks the law that came 430 years later.",
+        focus: "6-29",
+      },
+      {
+        book: "Galatians",
+        chapter: 4,
+        title: "The fullness of time",
+        lookFor: "God's Son sent at the appointed moment to redeem and adopt, turning heirs-in-waiting into sons.",
+        focus: "1-7",
+      },
+      {
+        book: "Matthew",
+        chapter: 1,
+        title: "The resume of the Messiah",
+        lookFor: "The genealogy as a compressed history: Abraham, David, exile, and then Jesus, plus the name 'God with us.'",
+        focus: "1-23",
+      },
+    ],
+    points: [
+      {
+        heading: "He is the Seed promised to Abraham",
+        body:
+          "Paul notices the singular: the promises spoke to Abraham's 'seed,' and Paul argues they point not to many but to One, 'to your seed,' who is Christ. Everyone united to Jesus inherits what was sworn to Abraham, and the blessing of Abraham comes to the nations in Him. The Abrahamic story reaches its destination at the manger and the cross.",
+        verses: ["Galatians 3:16", "Galatians 3:14", "Genesis 12:3"],
+      },
+      {
+        heading: "He is the Lamb the Passover foreshadowed",
+        body:
+          "John the Baptist's greeting compresses the whole sacrificial system into one title: 'Behold, the Lamb of God, who takes away the sin of the world!' Paul draws the line explicitly: Christ our Passover was sacrificed for us, and His blood delivers from judgment just as surely as the lamb's blood did in Egypt.",
+        verses: ["John 1:29", "1 Corinthians 5:7", "1 Peter 1:18-19"],
+      },
+      {
+        heading: "He is the Son of David who reigns forever",
+        body:
+          "The angel's annunciation quotes the Davidic covenant almost verbatim: the throne of His father David, reigning over the house of Jacob, of whose kingdom there will be no end. What Psalm 89 mourned as a fallen crown, Matthew presents as restored in Jesus, son of David, son of Abraham.",
+        verses: ["Luke 1:32-33", "Matthew 1:1", "Isaiah 9:7"],
+      },
+      {
+        heading: "He ended the longest exile",
+        body:
+          "Zechariah blesses God because He 'has visited and worked redemption for his people'; Simeon waits for the consolation of Israel; Anna speaks of the child 'to all those who were looking for redemption in Jerusalem.' In Christ, God gathered His people, forgave their sins, and wrote His law on hearts: the return from exile completed at a deeper level.",
+        verses: ["Luke 1:68", "Luke 2:38", "Hebrews 8:10"],
+      },
+      {
+        heading: "And He carries the story to its ending",
+        body:
+          "The fullness of time came once; the fullness of all things is coming next. The same Jesus will appear a second time, and the story closes with the serpent crushed, the curse undone, the nations healed, and God dwelling with His people forever. Reading the Bible as one story means reading your own life as a chapter inside it.",
+        verses: ["Hebrews 9:28", "Revelation 21:3-4", "Romans 16:20"],
+      },
+    ],
+    keyVerses: ["Galatians 4:4-5", "John 1:29", "Luke 1:32-33", "Hebrews 9:28"],
+    raises: ["who-is-jesus", "why-did-jesus-have-to-die", "what-is-the-new-heaven-and-new-earth"],
+    followsFrom: ["why-did-god-send-his-people-into-exile", "why-did-god-promise-david-an-eternal-throne", "what-is-the-bibles-big-story"],
+    related: ["is-the-whole-bible-about-jesus", "how-do-i-find-christ-in-the-old-testament", "what-is-the-gospel"],
+    planned: ["Where do the wisdom books fit in the Bible's story?"],
+    order: 93,
   },
 ];

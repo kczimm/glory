@@ -101,6 +101,14 @@ export const categories: Category[] = [
     order: 12,
     entry: ["who-is-satan"],
   },
+  {
+    slug: "story-of-scripture",
+    title: "The Story of Scripture",
+    tagline:
+      "One unfolding story: creation, fall, Abraham, Exodus, kings and exile, and the promised Son who brings it all to its goal.",
+    order: 13,
+    entry: ["what-is-the-bibles-big-story"],
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {
