@@ -283,6 +283,15 @@ export const connections: Record<string, Connection[]> = {
     c("Romans 3:23", "theme", "All have sinned: because all died in the one man's transgression."),
     c("Ezekiel 18:20", "contrast", "The soul who sins will die: the just sentence for the offense."),
   ],
+  "Psalms 42:5": [
+    c("Psalms 43:5", "theme", "The refrain repeated across two psalms: questioning the soul, then commanding it to hope in God."),
+    c("2 Corinthians 7:5", "parallel", "Paul's honest report: fightings outside, fears inside. Distress and faith in the same breath."),
+    c("Jonah 2:7", "theme", "When my soul fainted within me, I remembered Yahweh. Despair remembered becomes prayer."),
+  ],
+  "Psalms 88:18": [
+    c("Psalms 30:5", "contrast", "Psalm 30 promises that weeping is for a night only; Psalm 88 sings a night that lasts to its final verse."),
+    c("Matthew 27:46", "pattern", "My God, my God, why have you forsaken me? The darkness of lament finds its deepest address at the cross."),
+  ],
   "1 Peter 5:8": [
     c("Job 1:7", "theme", "Where have you come from? From roaming the earth: the prowler at work."),
     c("Revelation 12:10", "theme", "The accuser who accuses our brothers day and night."),

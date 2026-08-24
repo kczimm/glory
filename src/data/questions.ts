@@ -2359,7 +2359,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Psalm 27:14", "Luke 18:1-8", "2 Corinthians 12:9", "Habakkuk 2:3"],
-    raises: ["gods-voice-or-my-own-thoughts", "does-god-still-speak-today"],
+    raises: ["gods-voice-or-my-own-thoughts", "does-god-still-speak-today", "can-i-be-anxious-and-still-trust-god"],
     followsFrom: ["does-god-hear-my-prayers"],
     related: ["why-does-god-allow-suffering", "is-god-in-control"],
     planned: [],
@@ -4637,7 +4637,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Psalm 34:18", "Psalm 23:4", "Isaiah 41:10", "2 Corinthians 1:3-4", "John 16:33"],
-    raises: ["is-god-in-control", "why-does-god-seem-silent", "does-god-use-our-failures"],
+    raises: ["is-god-in-control", "why-does-god-seem-silent", "does-god-use-our-failures", "can-i-be-anxious-and-still-trust-god"],
     followsFrom: ["why-does-god-allow-suffering"],
     related: ["why-does-god-allow-suffering", "who-is-the-father", "why-does-god-seem-silent", "is-god-in-control"],
     planned: ["How long will this suffering last?"],
@@ -15787,5 +15787,71 @@ export const questions: Question[] = [
     related: ["how-do-i-pray", "where-is-god-in-my-pain", "does-god-hear-my-prayers"],
     planned: ["What does it mean to seek first the kingdom in ordinary decisions?"],
     order: 94,
+  },
+
+  {
+    slug: "can-i-be-anxious-and-still-trust-god",
+    question: "Can I be anxious and still trust God?",
+    category: "anxiety-peace",
+    summary:
+      "Yes. The psalms of lament put anxiety itself into the mouth of believers: souls in despair, tears eaten as bread, questions flung straight at God, and one psalm that ends in darkness without a resolution. Yet every one of these prayers was addressed TO God, which means being overwhelmed has never disqualified anyone from trusting Him.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 42,
+        title: "Thirsting for God in the depths",
+        lookFor: "The movement between honest despair (3-7) and the refrain that preaches to the soul (5, 11), plus the question 'Where is your God?'",
+      },
+      {
+        book: "Psalms",
+        chapter: 43,
+        title: "The same prayer reaches for light",
+        lookFor: "How the abandoned worshipper prays for light and truth to lead him back, and how the refrain returns one last time.",
+      },
+      {
+        book: "Psalms",
+        chapter: 88,
+        title: "The darkest song in the book",
+        lookFor: "A prayer that never resolves: no turn to praise, no answered hope, and yet God preserved it in His songbook.",
+      },
+    ],
+    points: [
+      {
+        heading: "Anxiety does not silence prayer; desperation IS prayer",
+        body:
+          "The psalm opens with a soul in distress, and the distress is aimed at God: 'As the deer pants for the water brooks, so my soul pants after you, God.' Thirst, tears, and relentless taunts ('Where is your God?') are all spoken TO Him. Whatever else anxiety is, in Scripture it does not disqualify a person from seeking God; the very ache becomes the address.",
+        verses: ["Psalms 42:1-3"],
+      },
+      {
+        heading: "Faith talks to its own soul instead of only listening to it",
+        body:
+          "Three times across Psalms 42 and 43 the writer turns inward and interrogates himself: 'Why are you in despair, my soul? Why are you disturbed within me? Hope in God!' He does not deny the disturbance; he questions it. This is not pretending to be fine. It is preaching to yourself instead of only hearing yourself, and it is one of the most practical disciplines in the whole Bible for a spiraling mind.",
+        verses: ["Psalms 42:5", "Psalms 42:11", "Psalms 43:5"],
+      },
+      {
+        heading: "You may ask God 'why' without ceasing to believe",
+        body:
+          "The psalmist's faith is not fragile politeness: 'I will ask God, my rock, Why have you forgotten me?' Notice the contradiction he holds together: God is his rock even while he asks why God seems absent. Psalm 88 goes further still: 'Yahweh, why do you reject my soul? Why do you hide your face from me?' Lament directed at God is a form of trust, because only a believer brings the unedited heart to the One he still calls his rock.",
+        verses: ["Psalms 42:9", "Psalms 88:14"],
+      },
+      {
+        heading: "God canonized a psalm that ends in darkness",
+        body:
+          "Psalm 88 never turns. Its final line leaves lover and friend 'into darkness,' with no resolution and no sunrise. That is astonishing: the Spirit saw fit to preserve a believer's unresolved anguish in the permanent songbook of God's people. If you have seasons where faith survives but joy does not return by the last verse, you are not broken beyond the family of God; you are in a psalm.",
+        verses: ["Psalms 88:18", "Psalms 88:1"],
+      },
+      {
+        heading: "Hope is chosen before it is felt",
+        body:
+          "The refrain commands the soul: 'Hope in God!' before any relief has arrived, and grounds it forward: 'For I shall still praise him.' Psalm 43 shows what hoping looks like mid-darkness: praying for light and truth to lead home, and calling God 'my exceeding joy' while the way there is still unpaved. Trust under anxiety is often exactly this: an act of the will performed ahead of the feeling, sustained by remembering who God has been.",
+        verses: ["Psalms 42:5-6", "Psalms 43:3-4"],
+      },
+    ],
+    keyVerses: ["Psalms 42:5", "Psalms 42:8", "Psalms 43:5"],
+    raises: ["why-does-god-seem-silent", "where-is-god-in-my-pain", "when-the-weight-wont-lift"],
+    followsFrom: ["why-am-i-so-anxious", "why-does-god-allow-suffering"],
+    related: ["is-it-okay-to-doubt", "what-is-faith", "does-god-hear-my-prayers"],
+    planned: ["How do I answer people who mock, asking 'Where is your God?'"],
+    order: 95,
   },
 ];
