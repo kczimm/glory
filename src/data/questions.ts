@@ -2362,7 +2362,7 @@ export const questions: Question[] = [
     raises: ["gods-voice-or-my-own-thoughts", "does-god-still-speak-today"],
     followsFrom: ["does-god-hear-my-prayers"],
     related: ["why-does-god-allow-suffering", "is-god-in-control"],
-    planned: ["What should I do when God feels distant?"],
+    planned: [],
     order: 33,
   },
 
@@ -2792,7 +2792,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Revelation 21:3-4", "2 Peter 3:13", "Isaiah 65:17", "Revelation 21:22-23"],
-    raises: ["what-will-we-do-in-the-new-creation"],
+    raises: ["what-will-we-do-in-the-new-creation", "what-does-the-bible-say-about-animals-and-heaven"],
     followsFrom: ["what-is-the-resurrection"],
     related: ["where-is-jesus-now", "why-does-god-allow-suffering"],
     planned: ["Is the new creation a place or a state?"],
@@ -3215,7 +3215,7 @@ export const questions: Question[] = [
     raises: ["why-jesus-calls-the-spirit-another-helper", "how-do-i-receive-the-holy-spirit"],
     followsFrom: ["is-the-holy-spirit-god"],
     related: ["who-is-the-holy-spirit", "is-the-holy-spirit-god", "why-jesus-calls-the-spirit-another-helper"],
-    planned: ["Why did the Old Testament Spirit come and go?"],
+    planned: [],
     order: 17,
   },
 
@@ -3799,10 +3799,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 3:5-6", "Acts 2:38", "Romans 6:3-4", "1 Peter 3:21", "Colossians 2:12"],
-    raises: [],
+    raises: ["does-baptism-save-a-person"],
     followsFrom: ["what-does-it-mean-to-be-born-again", "how-can-i-be-saved"],
     related: ["what-is-baptism", "what-does-it-mean-to-be-born-again", "how-do-i-receive-the-holy-spirit"],
-    planned: ["Does baptism wash away sin?"],
+    planned: [],
     order: 20,
   },
 
@@ -5743,7 +5743,7 @@ export const questions: Question[] = [
     raises: ["why-does-god-allow-suffering", "what-does-it-mean-to-be-made-in-gods-image"],
     followsFrom: ["what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation"],
     related: ["what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation", "why-does-god-allow-suffering"],
-    planned: ["Will we recognize our beloved animals in the new creation?"],
+    planned: [],
     order: 46,
   },
 
@@ -6842,7 +6842,7 @@ export const questions: Question[] = [
     raises: ["what-does-it-mean-to-be-born-again", "how-do-i-receive-the-holy-spirit"],
     followsFrom: ["how-can-i-be-saved", "what-is-repentance"],
     related: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again", "what-is-repentance", "spirits-witness-or-my-own-feelings"],
-    planned: ["How do I know God has given me a new heart?"],
+    planned: [],
     order: 26,
   },
 
@@ -9802,7 +9802,7 @@ export const questions: Question[] = [
     raises: ["where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "why-does-god-allow-suffering"],
     followsFrom: ["why-does-god-allow-suffering", "where-is-god-in-my-pain"],
     related: ["why-does-god-allow-suffering", "where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "made-for-relationship"],
-    planned: ["What should I say to someone who is grieving?"],
+    planned: [],
     order: 37,
   },
 
@@ -10485,7 +10485,7 @@ export const questions: Question[] = [
     raises: ["where-is-jesus-now", "what-is-faith", "did-jesus-rise-from-the-dead"],
     followsFrom: ["why-did-the-disciples-not-recognize-him-after-he-rose", "did-jesus-rise-from-the-dead"],
     related: ["did-jesus-rise-from-the-dead", "what-was-it-like-to-see-the-risen-jesus", "what-is-faith", "is-the-whole-bible-about-jesus"],
-    planned: ["How can we be sure the resurrection really happened?"],
+    planned: [],
     order: 33,
   },
 
@@ -12356,7 +12356,7 @@ export const questions: Question[] = [
     raises: ["what-is-a-healthy-church", "what-is-the-church", "what-is-church-discipline", "what-authority-did-jesus-give-his-leaders"],
     followsFrom: ["what-is-a-healthy-church", "why-do-i-need-the-church"],
     related: ["what-is-a-healthy-church", "what-is-the-church", "why-do-i-need-the-church", "what-is-church-discipline"],
-    planned: ["How do we choose and recognize good church leaders?"],
+    planned: [],
     order: 49,
   },
 
@@ -13805,7 +13805,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 20:26-28", "Matthew 23:10-12", "John 13:14-15", "1 Peter 5:2-3"],
-    raises: ["what-does-peter-say-about-peter", "what-does-a-church-need-from-its-leaders"],
+    raises: ["what-does-peter-say-about-peter", "what-does-a-church-need-from-its-leaders", "must-gods-servants-stay-unmarried"],
     followsFrom: ["what-does-a-church-need-from-its-leaders", "what-is-a-healthy-church"],
     related: ["what-is-a-healthy-church", "what-is-church-discipline", "what-is-the-church"],
     planned: [],
