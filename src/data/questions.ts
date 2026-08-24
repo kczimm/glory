@@ -12818,10 +12818,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 3:10-12", "Romans 8:7", "Ephesians 2:1", "Isaiah 64:6", "John 1:13"],
-    raises: ["why-did-jesus-have-to-die", "did-god-choose-me", "can-anyone-resist-gods-grace"],
+    raises: ["why-did-jesus-have-to-die", "did-god-choose-me", "can-anyone-resist-gods-grace", "why-does-god-harden-hearts"],
     followsFrom: ["what-is-sin", "does-everyone-deserve-gods-judgment"],
     related: ["what-is-sin", "does-everyone-deserve-gods-judgment", "what-is-the-flesh-versus-the-spirit"],
-    planned: ["Why does God still hold us responsible if we cannot seek Him alone?"],
+    planned: [],
     order: 56,
   },
 
@@ -12901,10 +12901,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 1:4", "Romans 9:16", "John 15:16", "Acts 13:48", "2 Peter 1:10"],
-    raises: ["for-whom-did-christ-die", "can-anyone-resist-gods-grace", "what-is-the-difference-between-assurance-and-presumption"],
+    raises: ["for-whom-did-christ-die", "can-anyone-resist-gods-grace", "what-is-the-difference-between-assurance-and-presumption", "why-does-god-harden-hearts"],
     followsFrom: ["what-does-it-mean-that-god-is-sovereign", "do-my-choices-matter", "can-i-seek-god-on-my-own"],
     related: ["what-does-it-mean-that-god-is-sovereign", "is-god-in-control", "do-my-choices-matter", "how-can-i-be-saved"],
-    planned: ["What does it mean that God hardened Pharaoh's heart?"],
+    planned: [],
     order: 57,
   },
 
@@ -13066,10 +13066,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 6:44", "John 6:37", "Ephesians 2:8-9", "Acts 16:14", "Romans 8:30"],
-    raises: ["what-does-it-mean-to-be-born-again", "how-does-the-spirit-convict-the-world", "can-i-lose-my-salvation"],
+    raises: ["what-does-it-mean-to-be-born-again", "how-does-the-spirit-convict-the-world", "can-i-lose-my-salvation", "why-does-god-harden-hearts"],
     followsFrom: ["what-is-grace", "did-god-choose-me", "how-does-the-spirit-convict-the-world"],
     related: ["what-is-grace", "did-god-choose-me", "what-does-it-mean-to-be-born-again", "how-does-the-spirit-convict-the-world"],
-    planned: ["Why does the gospel soften some hearts and harden others?"],
+    planned: [],
     order: 59,
   },
 
@@ -15141,5 +15141,56 @@ export const questions: Question[] = [
     related: ["why-does-god-seem-silent", "is-it-okay-to-doubt", "can-gods-grace-really-cover-my-worst-sins", "how-do-i-receive-love-when-i-dont-feel-lovable"],
     planned: [],
     order: 80,
+  },
+  {
+    slug: "why-does-god-harden-hearts",
+    question: "Why does God harden hearts?",
+    category: "god-the-father",
+    summary:
+      "Scripture says Pharaoh hardened his heart, and it says God hardened it, and it will not let us flatten either statement into the other. The pattern Scripture shows is judicial: God gives people over to the unbelief they have chosen, weaving even their defiance into His purpose to display His power and His mercy, while His own warnings plead with everyone to soften today. The doctrine is meant less to satisfy curiosity than to press one urgent question: am I hearing His voice today?",
+    passages: [
+      { book: "Exodus", chapter: 9, title: "Plagues with a purpose", lookFor: "God declares why He has carried this confrontation this far: to show His power and have His name proclaimed. Then watch what Pharaoh does with that.", focus: "13-17" },
+      { book: "Isaiah", chapter: 6, title: "A commission that hardens", lookFor: "Isaiah is sent with a word that will judge those who refuse to hear it: hearing, they do not perceive.", focus: "8-13" },
+      { book: "Romans", chapter: 9, title: "Mercy, hardening, and God's purpose", lookFor: "Paul faces the objection head on: mercy and hardening both belong to God's purpose, endured with patience.", focus: "14-24" },
+      { book: "Hebrews", chapter: 3, title: "Today, if you hear his voice", lookFor: "The warning from Psalm 95 rings through the chapter: hear His voice today, and do not harden your hearts.", focus: "7-19" },
+    ],
+    points: [
+      {
+        heading: "The Bible speaks of hardening in both directions",
+        body:
+          "Any honest answer has to hold two strands together. Again and again the narrative says Pharaoh hardened himself: 'when Pharaoh saw that there was a respite, he hardened his heart,' and 'Pharaoh hardened his heart this time also.' And just as plainly, before a later plague we read, 'Yahweh hardened the heart of Pharaoh.' Scripture refuses to let the story collapse into 'only Pharaoh did it' or 'only God did it'; both lines run through the whole account from beginning to end.",
+        verses: ["Exodus 8:15", "Exodus 8:32", "Exodus 9:12"],
+      },
+      {
+        heading: "Hardening is judgment: God giving people over to what they chose",
+        body:
+          "Paul describes a solemn judicial pattern. Because people exchanged the truth of God for idols, 'God also gave them up in the lusts of their hearts to uncleanness,' and again, 'God gave them up to a reprobate mind.' Isaiah was commissioned with words that would 'make the heart of this people fat,' ears heavy and eyes shut, so that a message offered for healing became the instrument of judgment on those who would not have it. Hardening, then, is not God dragging unwilling hearts away from Him; it is His giving-over of hearts that first shut Him out.",
+        verses: ["Romans 1:24", "Romans 1:28", "Isaiah 6:9", "Isaiah 6:10"],
+      },
+      {
+        heading: "Even hardening serves God's purpose of power and mercy",
+        body:
+          "God tells Pharaoh, 'for this very purpose I caused you to be raised up, that I might show in you my power, and that my name might be proclaimed in all the earth.' Paul draws out the mystery: God endures 'vessels of wrath made for destruction' 'with much patience,' 'that he might make known the riches of his glory on vessels of mercy.' None of Pharaoh's defiance frustrated God; it became the dark backdrop against which rescue was displayed and mercy became visible.",
+        verses: ["Romans 9:17", "Romans 9:22", "Romans 9:23"],
+      },
+      {
+        heading: "He hardens no one who wants to be soft",
+        body:
+          "The warnings themselves prove the door stands open. Three times Hebrews rings the bell: 'Today if you will hear his voice, don’t harden your hearts.' A command not to harden makes no sense if hardening were irresistible. The psalm itself pleads, 'Today, oh that you would hear his voice!' And Peter explains the patience behind every delay: the Lord is 'not wishing that any should perish, but that all should come to repentance.' If you want a soft heart, bring that desire to Him; the warnings prove the door stands open, today.",
+        verses: ["Hebrews 3:15", "Psalms 95:7", "Psalms 95:8", "2 Peter 3:9"],
+      },
+      {
+        heading: "Hold severity and goodness together, and hear Him today",
+        body:
+          "Paul's conclusion is not a shrug but a summons: 'See then the goodness and severity of God. Toward those who fell, severity; but toward you, goodness, if you continue in his goodness.' Hold both without trimming either one. And take Jesus' open arm as the last word toward anyone who worries about this doctrine: 'He who comes to me I will in no way throw out.' The question the doctrine finally leaves us is not 'why did He harden them?' but 'am I hearing His voice today?'",
+        verses: ["Romans 11:22", "John 6:37"],
+      },
+    ],
+    keyVerses: ["Exodus 9:16", "Romans 9:18", "Romans 11:22", "Hebrews 3:15", "John 6:37"],
+    raises: ["did-god-choose-me", "does-everyone-deserve-gods-judgment"],
+    followsFrom: ["did-god-choose-me", "what-does-it-mean-that-god-is-sovereign"],
+    related: ["did-god-choose-me", "can-anyone-resist-gods-grace", "does-god-change-his-mind", "what-does-it-mean-that-god-is-sovereign"],
+    planned: ["Can someone whose heart has been hardened come back?"],
+    order: 86,
   },
 ];
