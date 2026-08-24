@@ -128,8 +128,14 @@ const PREFERRED_VOICES = [
   "Daniel",
 ];
 
+// The initial snapshot MUST be identical on server and client: hydration
+// calls getServerSnapshot() in the browser, so any environment-dependent
+// field here (e.g. `typeof window !== "undefined"`) makes the client
+// "server snapshot" disagree with the actual SSR HTML and React throws a
+// hydration mismatch. Real support is derived lazily in getSnapshot()
+// instead, flipping right after hydration.
 const INITIAL: SpeechState = {
-  supported: typeof window !== "undefined" && "speechSynthesis" in window,
+  supported: false,
   status: "idle",
   sourceId: null,
   queue: [],
@@ -141,6 +147,18 @@ const INITIAL: SpeechState = {
 };
 
 let state: SpeechState = INITIAL;
+
+/** The client-side truth: swap in a supported-aware snapshot once, lazily. */
+function clientInitial(): SpeechState {
+  if (
+    state === INITIAL &&
+    typeof window !== "undefined" &&
+    "speechSynthesis" in window
+  ) {
+    state = { ...INITIAL, supported: true };
+  }
+  return state;
+}
 let session = 0;
 /** Routes a choice tap on the "What next?" panel to the page that asked. */
 let chooseHandler: ((index: number) => void) | null = null;
@@ -163,7 +181,7 @@ export function subscribe(cb: () => void): () => void {
 }
 
 export function getSnapshot(): SpeechState {
-  return state;
+  return clientInitial();
 }
 
 export function getServerSnapshot(): SpeechState {
