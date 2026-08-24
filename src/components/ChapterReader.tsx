@@ -78,10 +78,20 @@ export default function ChapterReader({
 
   if (!verses) return null;
 
-  const focusStart = passage.focus ? Number(passage.focus.split("-")[0]) : -1;
-  const focusEnd = passage.focus
-    ? Number(passage.focus.split("-")[1] ?? passage.focus.split("-")[0])
-    : -1;
+  // Same semantics as filterFocus in audio-text.ts: "5-15", "16", or "1-4, 12".
+  const focusRanges = (() => {
+    if (!passage.focus) return null;
+    const ranges: [number, number][] = [];
+    for (const part of passage.focus.split(",")) {
+      const m = part.trim().match(/^(\d+)(?:-(\d+))?$/);
+      if (!m) return null;
+      const start = Number(m[1]);
+      const end = Number(m[2] ?? m[1]);
+      if (end < start) return null;
+      ranges.push([start, end]);
+    }
+    return ranges.length ? ranges : null;
+  })();
 
   return (
     <div className="rounded-xl border border-line bg-surface/50">
@@ -126,7 +136,7 @@ export default function ChapterReader({
         >
           {verses.map((v) => {
             const vId = `${passage.book} ${passage.chapter}:${v.n}`;
-            const focused = v.n >= focusStart && v.n <= focusEnd;
+            const focused = focusRanges?.some(([s, e]) => v.n >= s && v.n <= e) ?? false;
             const speaking = matchesVerse(activeId, vId);
             return (
               <p

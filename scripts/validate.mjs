@@ -105,12 +105,14 @@ for (const q of questions) {
     const ckey = `${canonicalBook(p.book)} ${p.chapter}`;
     ok(chapterKeys.has(ckey), `${q.slug}: missing chapter ${p.book} ${p.chapter}`);
     if (!p.focus) continue;
-    const fm = p.focus.match(/^(\d+)(?:-(\d+))?$/);
-    ok(fm, `${q.slug}: unparseable focus "${p.focus}" in ${p.book} ${p.chapter}`);
-    if (fm) {
+    const parts = p.focus.split(",").map((s) => s.trim());
+    const fms = parts.map((part) => part.match(/^(\d+)(?:-(\d+))?$/));
+    ok(fms.every((fm) => fm), `${q.slug}: unparseable focus "${p.focus}" in ${p.book} ${p.chapter}`);
+    const len = chapterLens.get(ckey) ?? 0;
+    for (const fm of fms) {
+      if (!fm) continue;
       const start = +fm[1];
       const end = fm[2] === undefined ? start : +fm[2];
-      const len = chapterLens.get(ckey) ?? 0;
       ok(start >= 1 && end <= len, `${q.slug}: focus ${p.focus} out of bounds for ${p.book} ${p.chapter} (chapter has ${len ? len : "unknown"} verses)`);
     }
   }

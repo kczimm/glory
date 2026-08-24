@@ -2317,7 +2317,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 John 5:14-15", "John 16:23-24", "Hebrews 4:16", "James 4:3"],
-    raises: ["why-does-god-seem-silent", "what-does-it-mean-to-pray-in-jesus-name"],
+    raises: ["why-does-god-seem-silent", "what-does-it-mean-to-pray-in-jesus-name", "what-does-gods-peace-feel-like"],
     followsFrom: ["how-do-i-pray"],
     related: ["who-is-the-father"],
     planned: ["What does it mean to pray in faith?"],
@@ -15922,5 +15922,73 @@ export const questions: Question[] = [
     related: ["how-do-i-pray", "why-did-god-become-a-man", "what-is-the-difference-between-testing-and-temptation"],
     planned: ["How do I pray when I must walk into something I dread?"],
     order: 96,
+  },
+
+  {
+    slug: "what-does-gods-peace-feel-like",
+    question: "What does God's peace actually feel like?",
+    category: "anxiety-peace",
+    summary:
+      "Paul describes God's peace from inside a prison cell: it is not a warm mood but a garrison, something that 'will guard your hearts and your thoughts' when anxiety would overrun them. It arrives along a marked path (prayer with thanksgiving), it pairs with a disciplined thought life, and it can be learned even by people whose circumstances never asked their permission.",
+    passages: [
+      {
+        book: "Philippians",
+        chapter: 4,
+        title: "The peace of God and the God of peace",
+        lookFor: "The chain from rejoicing and prayer (4-7) to thinking and practicing (8-9), then contentment learned in every state.",
+      },
+      {
+        book: "John",
+        chapter: 14,
+        title: "Jesus bequeaths His own peace",
+        lookFor: "The farewell gift: 'not as the world gives,' spoken on the night before the cross.",
+        focus: "25-31",
+      },
+      {
+        book: "Isaiah",
+        chapter: 26,
+        title: "Perfect peace and its anchor",
+        lookFor: "The mind stayed on God, kept in peace because it trusts in Him.",
+        focus: "1-4, 12",
+      },
+    ],
+    points: [
+      {
+        heading: "Peace here is a guard, not a glow",
+        body:
+          "Paul says the peace of God 'will guard your hearts and your thoughts in Christ Jesus.' The word pictures a military garrison standing watch. That tells us what biblical peace actually does: it holds the gates while trouble still surrounds the city. Feelings of calm may come and go, but the promise is protection for heart and mind precisely while life stays hard.",
+        verses: ["Philippians 4:7"],
+      },
+      {
+        heading: "The gate anxiety enters by becomes the gate peace walks through: prayer",
+        body:
+          "The command pair is exact: 'In nothing be anxious, but in everything, by prayer and petition with thanksgiving, let your requests be made known to God.' Every worry is to be converted, same moment, same subject matter, into a request, and gratitude rides along. Anxiety ruminates to no one; prayer hands the same load to Someone, and verse 7's guarding follows directly on verse 6's handing over.",
+        verses: ["Philippians 4:6-7", "Psalms 55:22"],
+      },
+      {
+        heading: "Peace shares a house with a disciplined thought life",
+        body:
+          "Immediately after promising peace, Paul assigns homework: 'whatever things are true... whatever things are lovely... think about these things.' Scripture never treats the mind as passive terrain where thoughts simply happen to us. You cannot always choose what lands in your head, but you can choose what you rehearse, and rehearsed truth is one of peace's regular companions.",
+        verses: ["Philippians 4:8"],
+      },
+      {
+        heading: "This peace is learned, often in prison",
+        body:
+          "Paul writes as a man under guard, and he says contentment is something he 'learned': 'I know how to be humbled, and I know also how to abound.' The secret worked both directions, feast and famine, through Christ who strengthened him (4:13), and his chains had advanced the gospel rather than ending it (1:12-13). Nobody stumbles into this peace; it is acquired like a craft, and hard circumstances are the workshop.",
+        verses: ["Philippians 4:11-13", "Philippians 1:12-13", "Philippians 4:19"],
+      },
+      {
+        heading: "It is Christ's own peace, kept for those who trust",
+        body:
+          "On his last night Jesus said, 'Peace I leave with you. My peace I give to you; not as the world gives, give I to you.' The world negotiates peace from calm circumstances; Jesus gives peace before the cross. Isaiah had already named its mechanism centuries earlier: the mind 'steadfast' toward God is kept 'in perfect peace, because he trusts in you.' The feeling, when it comes, rests on a Person, not on the weather of life.",
+        verses: ["John 14:27", "Isaiah 26:3", "John 16:33"],
+      },
+    ],
+    keyVerses: ["Philippians 4:6-7", "Isaiah 26:3", "John 14:27"],
+    raises: ["what-is-the-fruit-of-the-spirit", "how-does-god-change-me", "when-i-feel-far-from-god"],
+    followsFrom: ["why-am-i-so-anxious", "what-did-jesus-do-when-he-was-overwhelmed", "does-god-hear-my-prayers"],
+    related: ["how-do-i-pray", "what-does-it-mean-to-abide-in-christs-love", "how-do-i-experience-the-love-of-god-day-to-day"],
+    planned: ["What does it mean that the Lord is at hand?"],
+    order: 97,
   },
 ];

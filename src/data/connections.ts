@@ -291,6 +291,10 @@ export const connections: Record<string, Connection[]> = {
     c("Psalms 55:4-5", "pattern", "David's terror and horror foreshadow the greater David's sorrow even to death."),
     c("1 Peter 2:23", "theme", "He suffered without threatening, because he entrusted himself to the one who judges rightly."),
   ],
+  "Philippians 4:7": [
+    c("Isaiah 26:3", "theme", "Perfect peace kept for the mind stayed on God; the same guarding promise in the prophets."),
+    c("John 14:27", "parallel", "The peace Jesus bequeathed on his last night is the peace Paul says now garrisons believers."),
+  ],
   "Psalms 42:5": [
     c("Psalms 43:5", "theme", "The refrain repeated across two psalms: questioning the soul, then commanding it to hope in God."),
     c("2 Corinthians 7:5", "parallel", "Paul's honest report: fightings outside, fears inside. Distress and faith in the same breath."),
