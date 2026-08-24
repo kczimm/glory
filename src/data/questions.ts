@@ -2275,10 +2275,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 6:9-13", "Luke 11:2-4"],
-    raises: ["why-pray-your-will-be-done", "what-does-it-mean-to-pray-in-the-holy-spirit"],
+    raises: ["why-pray-your-will-be-done", "what-does-it-mean-to-pray-in-the-holy-spirit", "when-i-feel-far-from-god"],
     followsFrom: ["how-do-i-pray"],
     related: ["how-do-i-pray"],
-    planned: ["How do I pray when I don't know what to say?"],
+    planned: [],
     order: 31,
   },
 
@@ -4469,10 +4469,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Mark 9:24", "John 20:29", "Matthew 11:6", "2 Timothy 1:12", "Hebrews 11:1"],
-    raises: ["why-does-god-seem-silent", "what-is-faith"],
+    raises: ["why-does-god-seem-silent", "what-is-faith", "when-i-feel-far-from-god"],
     followsFrom: ["what-is-faith", "can-i-lose-my-salvation"],
     related: ["what-is-faith", "can-i-lose-my-salvation", "spirits-witness-or-my-own-feelings", "why-does-god-seem-silent"],
-    planned: ["Why does God seem to hide Himself sometimes?"],
+    planned: [],
     order: 29,
   },
 
@@ -5055,10 +5055,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 10:27", "2 Timothy 3:16-17", "1 Corinthians 2:14", "1 Thessalonians 5:19-21", "1 John 4:1"],
-    raises: ["how-do-i-know-the-spirit-is-leading-me"],
+    raises: ["how-do-i-know-the-spirit-is-leading-me", "when-i-feel-far-from-god"],
     followsFrom: ["why-does-god-seem-silent", "how-do-i-pray"],
     related: ["why-does-god-seem-silent", "how-do-i-know-the-spirit-is-leading-me", "can-i-trust-the-bible", "is-it-okay-to-doubt"],
-    planned: ["What should I do when God's voice is quiet?"],
+    planned: [],
     order: 35,
   },
 
@@ -7256,10 +7256,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Timothy 1:15", "Romans 5:20", "Hebrews 7:25", "1 John 1:9", "Psalm 103:12"],
-    raises: ["spirits-witness-or-my-own-feelings", "what-is-justification", "does-god-use-our-failures"],
+    raises: ["spirits-witness-or-my-own-feelings", "what-is-justification", "does-god-use-our-failures", "when-i-feel-far-from-god"],
     followsFrom: ["what-happens-when-i-sin", "spirits-witness-or-my-own-feelings"],
     related: ["what-happens-when-i-sin", "can-i-lose-my-salvation", "what-is-justification", "does-god-use-our-failures"],
-    planned: ["What if I don't feel forgiven?"],
+    planned: [],
     order: 29,
   },
 
@@ -12050,10 +12050,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 5:8", "Luke 15:20", "1 John 1:9", "Zephaniah 3:17", "1 John 3:1"],
-    raises: ["how-do-i-experience-the-love-of-god-day-to-day", "what-does-it-mean-to-be-a-child-of-god", "made-for-relationship"],
+    raises: ["how-do-i-experience-the-love-of-god-day-to-day", "what-does-it-mean-to-be-a-child-of-god", "made-for-relationship", "when-i-feel-far-from-god"],
     followsFrom: ["how-can-i-know-gods-affection-for-me-is-real", "how-do-i-experience-the-love-of-god-day-to-day"],
     related: ["how-can-i-know-gods-affection-for-me-is-real", "what-does-it-mean-to-be-a-child-of-god", "made-for-relationship", "can-gods-grace-really-cover-my-worst-sins"],
-    planned: ["How do I stop measuring God's love by my performance?"],
+    planned: [],
     order: 29,
   },
 
@@ -15090,5 +15090,56 @@ export const questions: Question[] = [
     related: ["what-the-new-life-looks-like", "what-is-sanctification-and-how-does-it-happen", "faith-or-works", "discovering-my-gift"],
     planned: ["Why does God's change in me feel so slow?"],
     order: 81,
+  },
+  {
+    slug: "when-i-feel-far-from-god",
+    question: "What do I do when I feel far from God?",
+    category: "prayer",
+    summary:
+      "Feeling far from God is not the same as being far from Him. Scripture gives the feeling an honest voice in the psalms, then sets facts underneath it: He has promised never to leave, nothing can separate us from His love, and anyone once far off has been made near in the blood of Christ. Where sin has dulled the sense of nearness, confession clears it. And when words run out, the Spirit intercedes while we wait for Him, because waiting on God is often how He is found.",
+    passages: [
+      { book: "Psalms", chapter: 13, title: "How long, Yahweh?", lookFor: "David brings the feeling of being forgotten straight to God, and ends the same psalm trusting His faithful love.", focus: "1-6" },
+      { book: "Psalms", chapter: 88, title: "The darkest psalm", lookFor: "A believer prays while heaven seems silent, and the prayer itself is still addressed to the God who saves." },
+      { book: "Isaiah", chapter: 55, title: "Seek Yahweh while he may be found", lookFor: "An open invitation: seek, call, return, and find a God who pardons richly.", focus: "6-11" },
+      { book: "Hebrews", chapter: 10, title: "Draw near with a true heart", lookFor: "Because of Christ's blood we have confidence to enter the holy place and draw near to God.", focus: "19-25" },
+    ],
+    points: [
+      {
+        heading: "The feeling is ancient, and Scripture does not scold you for it",
+        body:
+          "'How long, Yahweh? Will you forget me forever? How long will you hide your face from me?' That is not unbelief talking; that is an inspired psalmist. Even Jesus prayed Psalm 22's opening from the cross: 'My God, my God, why have you forsaken me?' The Bible gives you language for the ache instead of pretending that faithful people never feel abandoned.",
+        verses: ["Psalms 13:1", "Psalms 22:1"],
+      },
+      {
+        heading: "Feeling far is not the same as being far",
+        body:
+          "Underneath the feeling stand unmovable facts. He has said, 'I will in no way leave you, neither will I in any way forsake you,' and Jesus closes Matthew with, 'I am with you always, even to the end of the age.' Paul stacks impossibilities: nothing in all creation 'will be able to separate us from the love of God, which is in Christ Jesus our Lord.' Your emotions can go dark without His presence going anywhere. Feelings are weather; union with Christ is climate.",
+        verses: ["Hebrews 13:5", "Matthew 28:20", "Romans 8:38-39"],
+      },
+      {
+        heading: "Sometimes the distance has a name, and confession clears it",
+        body:
+          "Not every sense of distance comes from sin, but some does. Isaiah names it plainly: 'your iniquities have separated between you and your God, and your sins have hidden his face from you.' If that is what is happening, the way back is short and well lit: 'If we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.' Do not let unnamed sin sit between you; bring it into the light and be cleansed.",
+        verses: ["Isaiah 59:2", "1 John 1:9"],
+      },
+      {
+        heading: "Draw near, on the ground of His blood rather than your performance",
+        body:
+          "The command is not to feel close but to come close. 'Draw near to God, and he will draw near to you.' To exiles far from home God said, 'you shall seek Yahweh your God, and you shall find him, when you search after him with all your heart and with all your soul.' And the ground of your approach is never your performance but His blood: 'you who once were far off are made near in the blood of Christ.' So come confidently: 'let’s draw near with a true heart in fullness of faith.'",
+        verses: ["James 4:8", "Deuteronomy 4:29", "Ephesians 2:13", "Hebrews 10:22"],
+      },
+      {
+        heading: "When words run out, the Spirit intercedes and waiting becomes worship",
+        body:
+          "There will be seasons when you do not know what to say. Paul answers directly: 'we don’t know how to pray as we ought. But the Spirit himself makes intercession for us with groanings which can’t be uttered.' In the meantime, wait well: 'Yahweh is good to those who wait for him, to the soul that seeks him.' Micah settles his own heart this way: 'But as for me, I will look to Yahweh. I will wait for the God of my salvation. My God will hear me.' Waiting on God is not the opposite of finding Him; it is often the very way He is found.",
+        verses: ["Romans 8:26", "Lamentations 3:25", "Lamentations 3:26", "Micah 7:7"],
+      },
+    ],
+    keyVerses: ["Psalms 13:1", "Isaiah 59:2", "James 4:8", "Ephesians 2:13", "Lamentations 3:25-26"],
+    raises: ["why-does-god-seem-silent", "gods-voice-or-my-own-thoughts", "can-gods-grace-really-cover-my-worst-sins"],
+    followsFrom: ["does-god-hear-my-prayers", "is-it-okay-to-doubt"],
+    related: ["why-does-god-seem-silent", "is-it-okay-to-doubt", "can-gods-grace-really-cover-my-worst-sins", "how-do-i-receive-love-when-i-dont-feel-lovable"],
+    planned: [],
+    order: 80,
   },
 ];
