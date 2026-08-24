@@ -60,7 +60,7 @@ export default async function QuestionPage({ params }: Props) {
   const raisedAll = resolveQuestions(question.raises);
   const raisedSlugs = new Set(raisedAll.map((q) => q.slug));
   const sameTrail = raisedAll
-    .filter((q) => q.category === question.category)
+    .filter((q) => q.category === question.category && q.order > question.order)
     .sort((a, b) => a.order - b.order);
   const trailRest = questionsByCategory(question.category)
     .filter((q) => q.order > question.order && !raisedSlugs.has(q.slug));
