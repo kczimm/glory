@@ -54,7 +54,14 @@ export default function VersesIndex() {
             className="text-gold-deep underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
           >
             Read any chapter of the Bible →
-          </Link>
+          </Link>{" "}
+          Or wander where Scripture connects to Scripture in{" "}
+          <Link
+            href="/connections"
+            className="text-gold-deep underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
+          >
+            Connections
+          </Link>.
         </p>
       </header>
 
