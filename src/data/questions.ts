@@ -449,7 +449,7 @@ export const questions: Question[] = [
     keyVerses: ["John 1:1", "John 8:58", "Colossians 2:9", "Hebrews 1:3", "John 20:28"],
     raises: ["why-did-jesus-have-to-die", "what-is-the-trinity", "does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man", "what-does-firstborn-mean", "does-it-matter-which-jesus-i-believe-in"],
     followsFrom: ["who-is-jesus"],
-    related: ["is-the-holy-spirit-god", "are-there-other-gods", "who-are-the-gods-of-psalm-82"],
+    related: ["is-the-holy-spirit-god", "are-there-other-gods", "who-are-the-gods-of-psalm-82", "should-we-worship-jesus"],
     planned: ["How does Jesus' becoming man show us the Father's love?"],
     order: 6,
   },
@@ -1118,9 +1118,9 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 12:4-7", "1 Corinthians 12:11", "1 Peter 4:10", "1 Corinthians 13:13"],
-    raises: ["are-sign-gifts-active", "discovering-my-gift"],
+    raises: ["are-sign-gifts-active", "discovering-my-gift", "what-is-the-spirits-role-in-public-worship"],
     followsFrom: ["how-do-i-receive-the-holy-spirit"],
-    related: ["who-is-the-holy-spirit", "how-does-the-spirit-convict-the-world"],
+    related: ["who-is-the-holy-spirit", "how-does-the-spirit-convict-the-world", "what-is-the-spirits-role-in-public-worship"],
     planned: ["What is the difference between a talent and a spiritual gift?"],
     order: 15,
   },
@@ -2540,7 +2540,7 @@ export const questions: Question[] = [
     keyVerses: ["Hebrews 10:24-25", "Ephesians 4:15-16", "Acts 2:42", "1 Corinthians 12:27"],
     raises: ["what-is-baptism", "what-is-the-lords-supper", "what-is-a-healthy-church", "what-is-church-discipline"],
     followsFrom: ["made-for-relationship"],
-    related: ["what-should-i-do-now-that-im-saved"],
+    related: ["what-should-i-do-now-that-im-saved", "what-do-we-do-when-we-gather"],
     planned: [],
     order: 37,
   },
@@ -5644,9 +5644,9 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Revelation 21:3-4", "2 Peter 3:13", "Isaiah 65:17", "Revelation 22:4-5", "1 Corinthians 2:9"],
-    raises: ["what-is-the-resurrection"],
+    raises: ["what-is-the-resurrection", "what-will-worship-be-like-in-the-new-creation"],
     followsFrom: ["what-is-the-new-heaven-and-new-earth"],
-    related: ["what-is-the-new-heaven-and-new-earth", "what-happens-when-i-die", "where-is-jesus-now", "why-does-god-allow-suffering"],
+    related: ["what-is-the-new-heaven-and-new-earth", "what-happens-when-i-die", "where-is-jesus-now", "why-does-god-allow-suffering", "what-will-worship-be-like-in-the-new-creation"],
     planned: ["What does the Bible mean by 'God all in all'?"],
     order: 45,
   },
@@ -8471,10 +8471,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 8:26-27", "Galatians 4:6", "Ephesians 6:18", "Jude 1:20", "Zechariah 12:10"],
-    raises: ["how-do-i-pray", "does-god-hear-my-prayers", "who-is-the-holy-spirit"],
+    raises: ["how-do-i-pray", "does-god-hear-my-prayers", "who-is-the-holy-spirit", "what-is-the-spirits-role-in-public-worship"],
     followsFrom: ["what-does-the-lords-prayer-teach", "how-do-i-pray"],
-    related: ["how-do-i-pray", "what-does-the-lords-prayer-teach", "who-is-the-holy-spirit", "what-is-the-fruit-of-the-spirit"],
-    planned: ["What is the role of the Spirit in public worship?"],
+    related: ["how-do-i-pray", "what-does-the-lords-prayer-teach", "who-is-the-holy-spirit", "what-is-the-fruit-of-the-spirit", "what-is-the-spirits-role-in-public-worship"],
+    planned: [],
     order: 37,
   },
 
@@ -11678,10 +11678,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Revelation 21:3-4", "John 14:2-3", "Revelation 22:4", "1 Thessalonians 4:17", "2 Corinthians 5:8"],
-    raises: ["what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation", "will-we-recognize-each-other-in-the-resurrection", "what-happens-when-i-die"],
+    raises: ["what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation", "will-we-recognize-each-other-in-the-resurrection", "what-happens-when-i-die", "what-will-worship-be-like-in-the-new-creation"],
     followsFrom: ["what-happens-when-i-die"],
-    related: ["what-happens-when-i-die", "what-is-the-new-heaven-and-new-earth", "what-is-the-resurrection"],
-    planned: ["What will worship be like in the new creation?"],
+    related: ["what-happens-when-i-die", "what-is-the-new-heaven-and-new-earth", "what-is-the-resurrection", "what-will-worship-be-like-in-the-new-creation"],
+    planned: [],
     order: 49,
   },
   {
@@ -16819,5 +16819,596 @@ export const questions: Question[] = [
     related: ["when-i-feel-far-from-god", "where-is-god-in-my-pain", "why-does-god-seem-silent"],
     planned: [],
     order: 110,
+  },
+
+  {
+    slug: "what-is-worship",
+    question: "What is worship, really?",
+    category: "worship",
+    summary:
+      "Worship is not a place, a style of music, or an item on a Sunday schedule. It is your whole self answering God: spirit and truth, in response to mercy. Jesus dismantled the idea that worship lives at an address, and Paul called the presentation of your ordinary body an act of spiritual service. Wherever you are, worship is what you are doing with yourself before God.",
+    passages: [
+      {
+        book: "John",
+        chapter: 4,
+        title: "A conversation at a well that redefines worship",
+        lookFor:
+          "The woman asks WHERE worship must happen, and Jesus answers that it no longer happens at an address at all.",
+        focus: "19-26",
+      },
+      {
+        book: "Romans",
+        chapter: 12,
+        title: "The worship that looks like your whole life",
+        lookFor:
+          "Paul's therefore: eleven chapters of mercy first, and only then the call to offer your body as a living sacrifice.",
+        focus: "1-2",
+      },
+    ],
+    points: [
+      {
+        heading: "Jesus took worship off the map",
+        body:
+          "The Samaritan woman tried to turn a conversation about thirst into an argument about real estate: 'Our fathers worshiped in this mountain, and you Jews say that in Jerusalem is the place where people ought to worship.' Jesus refused both options: 'Neither in this mountain, nor in Jerusalem.' Worship was never going to live at an address. That should reorganize our instincts, because most of us still quietly assume worship is somewhere we go.",
+        verses: ["John 4:20-21"],
+      },
+      {
+        heading: "True worship is spirit and truth",
+        body:
+          "What replaces geography is a manner: 'the true worshipers will worship the Father in spirit and truth, for the Father seeks such to be his worshipers.' Spirit, because God is not a thing you can reach with rituals alone; truth, because worship shaped by anything false is not worship of Him at all. Notice who does the seeking: the Father seeks worshipers. Worship is not us manufacturing a feeling for a distant God; it is answer to a pursuing one.",
+        verses: ["John 4:23-24"],
+      },
+      {
+        heading: "Worship is offering your whole self",
+        body:
+          "Paul's word for worship startles anyone who thinks it means singing: 'present your bodies a living sacrifice, holy, acceptable to God, which is your spiritual service.' Your body: your hands, commute, calendar, and money. Under the old covenant worshipers brought animal sacrifices; under the new, God asks for the worshiper. What He wants from you is not a performance on an hour but the possession of a life.",
+        verses: ["Romans 12:1"],
+      },
+      {
+        heading: "Worship is a response to mercy, never a bribe",
+        body:
+          "Romans 12 opens with 'Therefore I urge you, brothers, by the mercies of God': eleven chapters of grace come first, and only then the call to offer ourselves. Paul cannot even write the transition without erupting into praise: 'For of him, and through him, and to him, are all things. To him be the glory for ever! Amen.' Worship that begins with what we owe is pressure; worship that begins with what we have been given is the only kind Scripture calls true.",
+        verses: ["Romans 12:1", "Romans 11:36"],
+      },
+    ],
+    keyVerses: ["John 4:23-24", "Romans 12:1"],
+    raises: ["why-does-god-want-worship", "when-worship-rings-hollow"],
+    followsFrom: [],
+    related: ["how-do-i-pray", "why-do-i-need-the-church", "who-is-jesus"],
+    planned: [],
+    order: 111,
+  },
+
+  {
+    slug: "why-does-god-want-worship",
+    question: "Why does God want worship? Doesn't that seem needy?",
+    category: "worship",
+    summary:
+      "God does not want worship because He lacks anything. He owns the cattle on a thousand hills and is not served by human hands as though He needed anything. Worship is not God feeding His ego; it is the Creator insisting we live in reality, and inviting us into the only relationship where giving Him glory is what fills us.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 50,
+        title: "God cross-examines His own worshipers",
+        lookFor:
+          "How completely unimpressed God is by what worshipers bring, and what He says He actually wants instead.",
+      },
+      {
+        book: "Acts",
+        chapter: 17,
+        title: "Paul explains God to philosophers",
+        lookFor:
+          "The sentence that separates the living God from every idol: He is not served by human hands, as though He needed anything.",
+        focus: "22-31",
+      },
+    ],
+    points: [
+      {
+        heading: "God flatly denies needing anything from us",
+        body:
+          "In Psalm 50, God does not rebuke Israel for sacrificing; He rebukes them for imagining the sacrifices feed Him. 'I have no need for a bull from your stall, nor male goats from your pens,' He says, because 'the world is mine, and all that is in it.' The line is almost comic on purpose: 'If I were hungry, I would not tell you.' Worship can never be a supply line for a needy deity, because our God has no needs.",
+        verses: ["Psalms 50:9", "Psalms 50:12"],
+      },
+      {
+        heading: "Paul said the same to the philosophers",
+        body:
+          "Standing before the Areopagus in Athens, city full of shrines, Paul described the Maker of everything as one who 'doesn't dwell in temples made with hands' and 'neither is he served by men's hands, as though he needed anything.' Then comes the reversal that changes everything about worship: 'seeing he himself gives to all life and breath, and all things.' We do not give to God as though He were short; He gives to us, constantly, or we would stop existing.",
+        verses: ["Acts 17:24-25"],
+      },
+      {
+        heading: "What He wants instead is thanksgiving and trust",
+        body:
+          "So if God gets nothing He needs, what does He ask for? Psalm 50 answers: 'Offer to God the sacrifice of thanksgiving,' and 'Call on me in the day of trouble. I will deliver you, and you will honor me.' Notice what kind of honor this is: honor that flows from being rescued. God wants worship because He wants worshipers who depend on Him, which is simply another way of saying He wants us alive to reality.",
+        verses: ["Psalms 50:14-15"],
+      },
+      {
+        heading: "Worship proclaims His worth to us and for the world",
+        body:
+          "Peter says God made us 'a people for God's own possession, that you may proclaim the excellence of him who called you out of darkness into his marvelous light.' Proclaiming excellence is what praise is: saying out loud how good someone is. When we worship, we are not topping God up; we are telling the truth about who He is, to our own forgetful hearts and to everyone listening.",
+        verses: ["1 Peter 2:9"],
+      },
+    ],
+    keyVerses: ["Psalms 50:12", "Acts 17:24-25", "Psalms 50:15"],
+    raises: ["when-worship-rings-hollow", "how-do-i-approach-a-holy-god"],
+    followsFrom: ["what-is-worship"],
+    related: ["what-is-worship", "who-is-the-father", "why-did-god-create-us"],
+    planned: [],
+    order: 112,
+  },
+
+  {
+    slug: "when-worship-rings-hollow",
+    question: "Can God actually hate a worship service?",
+    category: "worship",
+    summary:
+      "Yes, and Scripture says so in the most startling language in the Bible. Through Isaiah and Amos, God calls His own appointed feasts a burden, tells Israel to take away the noise of their songs, and refuses to hear their prayers, because the worship had detached from obedience. God is not moved by religious production. He wants the songs and the life to be about the same God.",
+    passages: [
+      {
+        book: "Isaiah",
+        chapter: 1,
+        title: "A lawsuit against Judah's religion",
+        lookFor:
+          'God\'s verdict on sacrifices He Himself commanded, once the hands lifting them were full of blood.',
+        focus: "10-17",
+      },
+      {
+        book: "Amos",
+        chapter: 5,
+        title: "The day of Yahweh nobody wanted",
+        lookFor:
+          "The most shocking sentence in prophetic literature, followed by what God wanted instead: justice rolling down like water.",
+        focus: "18-27",
+      },
+      {
+        book: "Mark",
+        chapter: 7,
+        title: "Jesus diagnoses the same disease",
+        lookFor:
+          "Jesus quotes Isaiah against His own contemporaries: lips that honor while hearts stay far away.",
+        focus: "1-13",
+      },
+    ],
+    points: [
+      {
+        heading: "God can refuse worship He himself prescribed",
+        body:
+          "Isaiah 1 is one of the most unsettling passages in Scripture because God is not rejecting pagan ritual; He is rejecting His own. 'What are the multitude of your sacrifices to me?', says Yahweh. 'I have had enough of the burnt offerings of rams.' He even names prayer among the refused things: 'When you make many prayers, I will not hear.' The problem was never the liturgy; it was the lives attached to it.",
+        verses: ["Isaiah 1:11", "Isaiah 1:15"],
+      },
+      {
+        heading: "Hollow worship is not neutral; it offends",
+        body:
+          "Amos goes further than refusal: 'I hate, I despise your feasts, and I can't stand your solemn assemblies.' Even the music, the part we most associate with sincerity, gets sent away: 'Take away from me the noise of your songs! I will not listen to the music of your harps.' Worship performed for an audience while injustice runs unchecked is noise to God, however beautiful it sounds in the room.",
+        verses: ["Amos 5:21", "Amos 5:23"],
+      },
+      {
+        heading: "God tells us what He wanted all along",
+        body:
+          "Right after sending the music away, Amos delivers the alternative: 'But let justice roll on like rivers, and righteousness like a mighty stream.' God never wanted ceremony instead of obedience; He wanted ceremony flowing out of obedience. A life of justice and righteousness is the river, and gathered worship is meant to stand downstream of it, not substitute for it.",
+        verses: ["Amos 5:24"],
+      },
+      {
+        heading: "Jesus applied the diagnosis to the religious experts",
+        body:
+          "Centuries later Jesus quotes this very indictment of Isaiah against the Pharisees: 'This people honors me with their lips, but their heart is far from me. But in vain do they worship me, teaching as doctrines the commandments of men.' The phrase to sit with is 'in vain': worship can be fully attended, beautifully executed, and completely empty. Distance of heart is measurable at the offering plate before it is audible in the singing.",
+        verses: ["Mark 7:6-7"],
+      },
+    ],
+    keyVerses: ["Amos 5:23-24", "Isaiah 1:15", "Mark 7:6-7"],
+    raises: ["how-do-i-approach-a-holy-god", "what-is-repentance", "is-all-of-life-worship"],
+    followsFrom: ["what-is-worship", "why-does-god-want-worship"],
+    related: ["what-is-worship", "why-does-god-want-worship", "faith-or-works", "how-do-i-fight-sin"],
+    planned: [],
+    order: 113,
+  },
+
+  {
+    slug: "how-do-i-approach-a-holy-god",
+    question: "If God is a consuming fire, how can anyone approach Him?",
+    category: "worship",
+    summary:
+      "With reverence and with confidence, and only because God made the way Himself. The ark story warns us that closeness to God is never casual, yet Hebrews tells us to draw near with boldness. Both are true at once, because the fire fell on the Son so that worshipers could come home: acceptable worship is bold about the invitation and serious about the One who invites.",
+    passages: [
+      {
+        book: "2 Samuel",
+        chapter: 6,
+        title: "The day the ark came home",
+        lookFor:
+          "Two extremes in one chapter: Uzzah's casual touch, and David dancing with all his might once the approach is done God's way.",
+      },
+      {
+        book: "Hebrews",
+        chapter: 12,
+        title: "The mountain we have come to",
+        lookFor:
+          'The contrast between Sinai\'s terror and the joyful assembly, ending in two sentences that hold reverence and grace together.',
+        focus: "18-29",
+      },
+    ],
+    points: [
+      {
+        heading: "God defines the terms of approach",
+        body:
+          "Uzzah's impulse looked noble: the cart lurched, the ark tipped, he steadied it. But the ark was to be carried on poles, never on a cart, and never touched, and God had said so. 'Yahweh's anger was kindled against Uzzah; and God struck him there for his error; and there he died by the ark of God.' The warning is not that God is unpredictable; it is that He is exactly as holy as He says, and we are never entitled to handle Him on our terms.",
+        verses: ["2 Samuel 6:6-7"],
+      },
+      {
+        heading: "David learned the fear first, then danced",
+        body:
+          "David's first reaction was anger; his second was awe: 'David was afraid of Yahweh that day; and he said, How shall Yahweh's ark come to me?' Only after the ark was carried the way God commanded does the chapter erupt into joy: 'David danced before Yahweh with all his might.' Reverence did not kill David's joy; it was the doorway to it. The most exuberant worshiper in Scripture was also the man who learned to ask how God wants to be approached.",
+        verses: ["2 Samuel 6:9", "2 Samuel 6:14"],
+      },
+      {
+        heading: "The new covenant holds both: awe and access",
+        body:
+          "Hebrews refuses to let us pick a side: 'let us have grace, through which we serve God acceptably, with reverence and awe, for our God is a consuming fire.' This was God's own word when Nadab and Abihu died for approaching wrongly: 'I will show myself holy to those who come near me.' Notice that acceptable service comes through grace, not through our performance of holiness. Yet the fire has not cooled. Familiarity that forgets He is fire is not intimacy; it is irreverence wearing intimacy's clothes.",
+        verses: ["Hebrews 12:28-29"],
+      },
+      {
+        heading: "Because Jesus opened the way, we draw near boldly",
+        body:
+          "The same letter that calls God a consuming fire says: 'Let us therefore draw near with boldness to the throne of grace, that we may receive mercy, and may find grace for help in time of need.' Boldness here is not casualness; it is confidence in the blood of Christ that opened the way. We do not approach like Uzzah, grabbing at God uninvited, nor like Israel at Sinai, backing away terrified. We walk right up, because we were invited, at terrible cost.",
+        verses: ["Hebrews 4:16", "Leviticus 10:3"],
+      },
+    ],
+    keyVerses: ["2 Samuel 6:7", "Hebrews 12:28-29", "Hebrews 4:16"],
+    raises: ["should-we-worship-jesus", "when-worship-rings-hollow"],
+    followsFrom: ["why-does-god-want-worship", "when-worship-rings-hollow"],
+    related: ["why-did-jesus-have-to-die", "how-do-i-pray", "who-is-jesus", "when-worship-rings-hollow"],
+    planned: [],
+    order: 114,
+  },
+
+  {
+    slug: "should-we-worship-jesus",
+    question: "Is it right to worship Jesus, or only God?",
+    category: "worship",
+    summary:
+      "The Bible's own worship practice answers the question. Angels and apostles refuse worship with horror, yet Jesus accepts it freely, and at history's high point every created thing worships the One on the throne and the Lamb in the same breath. Worship is the Bible's most practical doctrine of who Jesus is: He receives what no creature may take.",
+    passages: [
+      {
+        book: "Revelation",
+        chapter: 5,
+        title: "The Lamb joins the throne",
+        lookFor:
+          "One act of worship addressed to two distinct persons, and a song only the slain Lamb is worthy to open.",
+        focus: "1-14",
+      },
+      {
+        book: "Acts",
+        chapter: 10,
+        title: "Peter refuses what Jesus always accepted",
+        lookFor:
+          "Cornelius falls at Peter's feet, and the apostle's reaction shows the line between creature and Creator.",
+        focus: "24-33",
+      },
+    ],
+    points: [
+      {
+        heading: "Every creature may not be worshiped",
+        body:
+          "Twice in Revelation, John falls at an angel's feet and twice he is stopped: 'Look! Don't do it! I am a fellow bondservant with you... Worship God.' Peter has the same reflex when Cornelius kneels: 'Stand up! I myself am also a man.' The rule could not be clearer, and it runs through the whole Bible: worship belongs to God alone, and every faithful servant of God refuses it.",
+        verses: ["Revelation 19:10", "Acts 10:25-26"],
+      },
+      {
+        heading: "Jesus received worship without correction",
+        body:
+          "Against that backdrop, notice what Jesus does when people worship Him. The disciples in the sinking boat worship Him, saying, 'You are truly the Son of God!' Thomas falls before the risen Christ with the highest confession in the Gospels: 'My Lord and my God!' No angel voice stops him; no apostle corrects him; Jesus affirms instead of refusing. The one person in Scripture who never declines worship is the one who shares the Father's nature.",
+        verses: ["Matthew 14:33", "John 20:28"],
+      },
+      {
+        heading: "Heaven worships the Throne and the Lamb together",
+        body:
+          "The climax of Revelation 5 is a single hymn to two persons: 'To him who sits on the throne, and to the Lamb be the blessing, the honor, the glory, and the dominion, forever and ever! Amen!' Then 'the elders fell down and worshiped.' If worshiping anyone but God were idolatry, this scene would be heaven committing it in unison. Instead, worshiping the Lamb precisely because He was slain is the definition of true worship.",
+        verses: ["Revelation 5:13-14", "Revelation 5:12"],
+      },
+      {
+        heading: "So the question turns back on us",
+        body:
+          "Jesus said that true worshipers worship the Father in spirit and truth, and truth includes everything the Father says about the Son: all things made through Him, the exact representation of God's nature, the name above every name. To admire Jesus while withholding the worship angels are forbidden to receive is not humility toward God; it is disobedience of heaven's clearest instinct. The question is not whether we may worship Jesus, but whether we will.",
+        verses: ["John 4:23", "Revelation 5:12"],
+      },
+    ],
+    keyVerses: ["Revelation 5:13", "John 20:28", "Revelation 19:10"],
+    raises: ["is-jesus-really-god", "what-do-we-do-when-we-gather"],
+    followsFrom: ["how-do-i-approach-a-holy-god", "what-is-worship"],
+    related: ["is-jesus-really-god", "who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god"],
+    planned: [],
+    order: 115,
+  },
+
+  {
+    slug: "what-do-we-do-when-we-gather",
+    question: "What are God's people supposed to do when they gather?",
+    category: "worship",
+    summary:
+      "The gatherings in Scripture have a simple, durable shape: the word read and explained, teaching that leads to response, prayer, the Lord's Supper, singing, and mutual encouragement. None of it depends on a production; all of it depends on the word dwelling richly among us. The question to ask of any gathering is not was it impressive, but did we meet the Word.",
+    passages: [
+      {
+        book: "Nehemiah",
+        chapter: 8,
+        title: "A revival built on a public reading",
+        lookFor:
+          "The word read distinctly, explained until understood, and the understanding turning into weeping, then feasting.",
+        focus: "1-12",
+      },
+      {
+        book: "Colossians",
+        chapter: 3,
+        title: "What fills the room when the church meets",
+        lookFor:
+          "The word of Christ dwelling richly, teaching and singing flowing from it, everything done in Jesus' name.",
+        focus: "12-17",
+      },
+    ],
+    points: [
+      {
+        heading: "Reading and explaining the word is central",
+        body:
+          "In Nehemiah 8 the returned exiles stand for hours while the law is read aloud, and the Levites 'gave the sense, so that they understood the reading.' Paul's instruction to Timothy is just as unglamorous: 'pay attention to reading, to exhortation, and to teaching.' The center of gathered worship has never been the talent on stage but the voice reading Scripture to the people of God.",
+        verses: ["Nehemiah 8:8", "1 Timothy 4:13"],
+      },
+      {
+        heading: "Understanding turns into joy and sharing",
+        body:
+          "When the people finally understand the words, the governor has to tell them not to mourn, because the day is holy. And then: 'All the people went their way... to make great mirth, because they had understood the words that were declared to them.' Real preaching ends in feasting and generosity, not merely in information. Worship that never reaches the table or the neighbor has stopped short of what the word produces.",
+        verses: ["Nehemiah 8:10", "Nehemiah 8:12"],
+      },
+      {
+        heading: "The first churches had four habits",
+        body:
+          "Luke's summary of the Jerusalem church reads like a checklist that still works: 'They continued steadfastly in the apostles' teaching and fellowship, in the breaking of bread, and prayer.' Teaching, community, the Table, and prayer. No building mentioned, no style of music, no program. When we gather around those four, we are doing what the church has done from its first days.",
+        verses: ["Acts 2:42"],
+      },
+      {
+        heading: "Gathering is for one another, and increasingly so",
+        body:
+          "Hebrews commands us not to forsake assembling, and gives the reason: 'Let us consider how to provoke one another to love and good works... exhorting one another; and so much the more, as you see the Day approaching.' Notice who ministers in that sentence: everyone. The gathering is where each believer arrives carrying something for the others, which is also why missing it quietly starves someone else.",
+        verses: ["Hebrews 10:24-25", "Colossians 3:16"],
+      },
+    ],
+    keyVerses: ["Acts 2:42", "Colossians 3:16", "Hebrews 10:24-25"],
+    raises: ["why-does-the-bible-command-singing", "why-do-i-need-the-church"],
+    followsFrom: ["should-we-worship-jesus", "why-do-i-need-the-church"],
+    related: ["why-do-i-need-the-church", "what-is-baptism", "what-is-the-lords-supper", "should-i-test-every-teaching-by-scripture"],
+    planned: [],
+    order: 116,
+  },
+
+  {
+    slug: "why-does-the-bible-command-singing",
+    question: "Why does the Bible command singing? And what if I don't feel like it?",
+    category: "worship",
+    summary:
+      "Because singing does things speaking alone cannot: it teaches, it remembers, and it carries truth down into the body. The Bible's songs come from the sea shore, the prison cell, and the ruined harvest, which means the command to sing is not a command to feel happy. It is an instruction for what to do with truth while your feelings catch up.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 15,
+        title: "The first song in Scripture",
+        lookFor:
+          "Israel singing on the far side of the sea, theology you can dance to, and Miriam leading the response.",
+        focus: "1-21",
+      },
+      {
+        book: "Psalms",
+        chapter: 96,
+        title: "A song written for everyone else",
+        lookFor:
+          "Singing aimed outward: at the nations, declaring glory and salvation day by day.",
+      },
+    ],
+    points: [
+      {
+        heading: "The first thing a rescued people did was sing",
+        body:
+          "Within hours of crossing the sea, before any law was given or tabernacle built, Israel sang. Miriam took a tambourine and the answer rolled back across the shore: 'Sing to Yahweh, for he has triumphed gloriously.' Redemption produced music the way fire produces heat. When God saves, His people do not merely report it; they burst into song about it.",
+        verses: ["Exodus 15:20-21"],
+      },
+      {
+        heading: "Songs teach and carry the word",
+        body:
+          "Paul ties singing directly to teaching: 'teaching and admonishing one another with psalms, hymns, and spiritual songs, singing with grace in your heart to the Lord.' A congregation's songs are its catechism; long after the sermon fades, the melody keeps delivering the doctrine. This is also why what we sing matters so much: we are memorizing theology every time we open our mouths.",
+        verses: ["Colossians 3:16", "Ephesians 5:19"],
+      },
+      {
+        heading: "Singing is commanded for the joyless too",
+        body:
+          "Habakkuk wrote his song on the worst economic day imaginable: no figs, no fruit, no flocks. 'Yet I will rejoice in Yahweh. I will be joyful in the God of my salvation!' James gives the same instruction both ways: suffering? pray. cheerful? 'Let him sing praises.' And Hebrews calls praise a sacrifice: 'the fruit of lips which proclaim allegiance to his name.' A sacrifice, by definition, costs something. Singing when you feel nothing is not hypocrisy; it is faith offering its fruit early, before the feelings ripen.",
+        verses: ["Habakkuk 3:17-18", "Hebrews 13:15", "James 5:13"],
+      },
+      {
+        heading: "Even a dungeon cannot enforce silence",
+        body:
+          "In Philippi, beaten and chained at midnight, Paul and Silas were 'praying and singing hymns to God, and the prisoners were listening to them.' Nobody sings in a stocks because it is culturally expected. They sing because the gospel gives them something true enough to sing in the dark, and the listening prisoners heard it. Your song has an audience you may never see.",
+        verses: ["Acts 16:25"],
+      },
+    ],
+    keyVerses: ["Colossians 3:16", "Habakkuk 3:17-18", "Acts 16:25"],
+    raises: ["what-is-the-spirits-role-in-public-worship", "can-i-be-anxious-and-still-trust-god"],
+    followsFrom: ["what-do-we-do-when-we-gather"],
+    related: ["what-do-we-do-when-we-gather", "when-the-weight-wont-lift", "why-am-i-so-anxious", "is-all-of-life-worship"],
+    planned: [],
+    order: 117,
+  },
+
+  {
+    slug: "what-is-the-spirits-role-in-public-worship",
+    question: "What is the Spirit's role when the church gathers?",
+    category: "worship",
+    summary:
+      "He is the host, not an uninvited interruption. The Spirit gives every believer a manifestation for the profit of all, turns a meeting into a body where everyone carries something, and then orders what He builds: not confusion but peace, everything done decently and in order. Spirit-led worship is measured by whether others are built up, not by how it felt in the moment.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 12,
+        title: "One Spirit, many gifts, one body",
+        lookFor:
+          "Who decides who gets which gift, and what every single gift is for.",
+        focus: "4-27",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 14,
+        title: "The most chaotic church gets a liturgy",
+        lookFor:
+          "Paul regulating a genuinely supernatural gathering, and the one test he applies to everything done in it.",
+      },
+    ],
+    points: [
+      {
+        heading: "The Spirit distributes gifts for the profit of all",
+        body:
+          "Paul's first principle about gifts in the assembly is otherward: 'to each one is given the manifestation of the Spirit for the profit of all.' And the Sovereign over distribution is the Spirit himself, 'distributing to each one separately as he desires.' That means when you walk into a gathered church you are not an audience member; you are carrying something the body needs, placed there deliberately by the Spirit.",
+        verses: ["1 Corinthians 12:7", "1 Corinthians 12:11"],
+      },
+      {
+        heading: "Everyone brings something, and building up is the test",
+        body:
+          "Paul describes the Corinthian gathering as participatory at every level: 'When you come together, each one of you has a psalm, has a teaching, has a revelation...' followed immediately by the governing rule: 'Let all things be done to build each other up.' Whatever cannot pass that test, however impressive, does not belong. The Spirit's aim in the assembly is never the display of an individual; it is the growth of the whole.",
+        verses: ["1 Corinthians 14:26"],
+      },
+      {
+        heading: "Spirit-led worship is spirit and understanding, ordered and peaceful",
+        body:
+          "To the most gifted and disorderly church, Paul insists both halves belong together: 'I will pray with the spirit, and I will pray with the understanding also. I will sing with the spirit, and I will sing with the understanding also.' Then he names the character of the God being worshiped: 'God is not a God of confusion, but of peace,' and gives the standing instruction: 'Let all things be done decently and in order.' Order is not the absence of the Spirit; it is one of His fruits.",
+        verses: ["1 Corinthians 14:15", "1 Corinthians 14:33", "1 Corinthians 14:40"],
+      },
+      {
+        heading: "Self-control is a fruit of the very Spirit leading worship",
+        body:
+          "It is worth noticing that Paul lists 'self-control' among 'the fruit of the Spirit', right beside love and peace. A gathering truly led by the Spirit will therefore look less like losing control and more like controlled fire: real power, real participation, and real restraint, all at once. The Spirit who inspired the psalms also inspired the sentence that says to do everything decently and in order.",
+        verses: ["Galatians 5:22-23"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 14:26", "1 Corinthians 12:7", "1 Corinthians 14:33"],
+    raises: ["is-all-of-life-worship", "what-are-spiritual-gifts"],
+    followsFrom: ["why-does-the-bible-command-singing", "what-do-we-do-when-we-gather"],
+    related: ["what-are-spiritual-gifts", "discovering-my-gift", "what-is-speaking-in-tongues-and-is-it-for-today", "why-do-i-need-the-church"],
+    planned: [],
+    order: 118,
+  },
+
+  {
+    slug: "is-all-of-life-worship",
+    question: "Is all of life worship, or only what happens on Sunday?",
+    category: "worship",
+    summary:
+      "All of it. Paul calls your ordinary body the sacrifice, and says whether you eat or drink, do all to the glory of God. The gathered service is the rehearsal; the week is the performance. Work done honestly, meals eaten thankfully, and justice loved quietly are all worship when they are offered to Him.",
+    passages: [
+      {
+        book: "Romans",
+        chapter: 12,
+        title: "The living sacrifice has a weekday schedule",
+        lookFor:
+          "How fast the chapter moves from offering your body to ordinary life: gifts, work, love, enemies.",
+      },
+      {
+        book: "Micah",
+        chapter: 6,
+        title: "God takes His people to court",
+        lookFor:
+          "What God says He requires, and how little of it is ceremony.",
+        focus: "1-8",
+      },
+    ],
+    points: [
+      {
+        heading: "The offering is your body, not your Sunday hour",
+        body:
+          "Paul's worship vocabulary lands on the most everyday thing about you: 'present your bodies a living sacrifice, holy, acceptable to God, which is your spiritual service.' Your body goes to work, eats dinner, drives the carpool, and answers emails. By making the body the sacrifice, Paul makes Monday through Saturday part of the act of worship, not the intermission after it.",
+        verses: ["Romans 12:1"],
+      },
+      {
+        heading: "Eating and drinking can glorify God",
+        body:
+          "Paul picks deliberately mundane examples: 'Whether therefore you eat, or drink, or whatever you do, do all to the glory of God.' And he writes the same truth to Colossae: 'Whatever you do, in word or in deed, do all in the name of the Lord Jesus, giving thanks to God the Father, through him.' If eating lunch can be done to the glory of God, then worship is not an activity you attend; it is an aim you bring to every activity.",
+        verses: ["1 Corinthians 10:31", "Colossians 3:17"],
+      },
+      {
+        heading: "God's own list of requirements is almost entirely weekday material",
+        body:
+          "When Micah's Israel asks what God wants, the answer contains no festival calendar: 'to act justly, to love mercy, and to walk humbly with your God.' Justice at the gate, mercy in relationships, humility before God. This is why hollow-ceremony passages like Isaiah 1 hit so hard: God never accepted ritual as a substitute for the ordinary obedience it was supposed to express.",
+        verses: ["Micah 6:8"],
+      },
+      {
+        heading: "Ordinary faithfulness preaches to outsiders",
+        body:
+          "Even Paul's advice about work is missional: 'make it your ambition to lead a quiet life, and to do your own business, and to work with your own hands... that you may walk properly toward those who are outside.' Jesus said our good works are meant to be seen so that observers 'glorify your Father who is in heaven.' Your quiet competence this week is part of someone else's evidence for God.",
+        verses: ["1 Thessalonians 4:11-12", "Matthew 5:16"],
+      },
+    ],
+    keyVerses: ["Romans 12:1", "1 Corinthians 10:31", "Micah 6:8"],
+    raises: ["what-will-worship-be-like-in-the-new-creation", "how-do-i-know-gods-will"],
+    followsFrom: ["what-is-worship", "when-worship-rings-hollow", "what-is-the-spirits-role-in-public-worship"],
+    related: ["what-do-we-do-when-we-gather", "why-does-the-bible-command-singing", "what-is-the-flesh-versus-the-spirit", "how-should-i-read-the-bible"],
+    planned: [],
+    order: 119,
+  },
+
+  {
+    slug: "what-will-worship-be-like-in-the-new-creation",
+    question: "What will worship be like in the new creation?",
+    category: "worship",
+    summary:
+      "Unmediated, unbroken, and universal. John sees no temple in the city because God and the Lamb are the temple; His servants see His face and serve Him without any curse. Every thread of this trail converges there: no more sacrifice because nothing is withheld, no more distance because nothing separates, and one multitude from every nation singing with one voice.",
+    passages: [
+      {
+        book: "Revelation",
+        chapter: 21,
+        title: "The dwelling of God is with people",
+        lookFor:
+          "The sentence that ends all distance, and the strange detail that the holy city has no temple.",
+        focus: "1-5, 22-27",
+      },
+      {
+        book: "Revelation",
+        chapter: 22,
+        title: "Face to face at last",
+        lookFor:
+          "Servants who serve the throne, faces that finally get to see God, and a name worn openly.",
+        focus: "1-5",
+      },
+      {
+        book: "Revelation",
+        chapter: 7,
+        title: "A rehearsal of the final congregation",
+        lookFor:
+          "Every nation, tribe, people, and language, one song, palms in hand.",
+        focus: "9-17",
+      },
+    ],
+    points: [
+      {
+        heading: "Worship will need no building because God is the temple",
+        body:
+          "John measures the new Jerusalem and reports what is missing: 'I saw no temple in it, for the Lord God, the Almighty, and the Lamb, are its temple.' A temple exists to bridge distance between a holy God and His people. When God's dwelling is permanently with people, the bridge becomes unnecessary because the two ends have met. Gathered worship now is a pointer; then it becomes a presence.",
+        verses: ["Revelation 21:22", "Revelation 21:3"],
+      },
+      {
+        heading: "Service without sorrow, sight without veil",
+        body:
+          "The worship language of eternity is serving: 'his servants serve him', and then the promise that outruns every limitation of life now: 'They will see his face.' Moses was hidden in the rock cleft; the high priest entered once a year with blood; Isaiah's seraphim cover their faces even in the throne room. In the new creation the servants see His face, and His name is on their foreheads like a wedding announcement.",
+        verses: ["Revelation 22:3-4"],
+      },
+      {
+        heading: "Nothing withheld, nothing broken: no more curse",
+        body:
+          "'There will be no curse any more' is the sentence behind all future worship. Romans 12 asked for our bodies as living sacrifices because something in us resists being offered; in that day the resistance is gone. No tears to wipe mid-song, no death interrupting the choir, no sin to confess between verses. What we call the worship wars now will look like learning scales before the symphony.",
+        verses: ["Revelation 22:3", "Revelation 21:4"],
+      },
+      {
+        heading: "The congregation is already bigger than your tradition",
+        body:
+          "John sees the final worship service in advance: a great multitude 'out of every nation and of all tribes, peoples, and languages', standing before the throne and crying out, 'Salvation be to our God, who sits on the throne, and to the Lamb!' One song, every tongue. Every faithful expression of gathered worship today is practice for that day, and none of our preferences will survive as walls.",
+        verses: ["Revelation 7:9-10", "Psalms 84:4"],
+      },
+    ],
+    keyVerses: ["Revelation 21:22", "Revelation 22:3-4", "Revelation 7:9-10"],
+    raises: ["what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation"],
+    followsFrom: ["is-all-of-life-worship", "should-we-worship-jesus"],
+    related: ["what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation", "will-jesus-return-literally", "what-do-we-do-when-we-gather"],
+    planned: [],
+    order: 120,
   },
 ];

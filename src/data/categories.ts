@@ -125,6 +125,14 @@ export const categories: Category[] = [
     order: 15,
     entry: ["why-does-death-hurt-so-much"],
   },
+  {
+    slug: "worship",
+    title: "Worship",
+    tagline:
+      "What worship actually is: answering God with your whole self, in spirit and truth, until the day every nation sings one song.",
+    order: 16,
+    entry: ["what-is-worship"],
+  },
 ];
 
 export function getCategory(slug: string): Category | undefined {
