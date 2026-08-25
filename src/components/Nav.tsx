@@ -29,6 +29,27 @@ export default function Nav() {
         <nav className="flex items-center gap-3 text-sm sm:gap-6">
           <Link
             href="/verses"
+            aria-label="Verses"
+            title="Verses"
+            className="inline-flex items-center text-ink-soft transition-colors hover:text-gold sm:hidden"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg>
+          </Link>
+          <Link
+            href="/verses"
             className="hidden text-ink-soft transition-colors hover:text-gold sm:inline"
           >
             Verses

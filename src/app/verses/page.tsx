@@ -47,7 +47,14 @@ export default function VersesIndex() {
         <p className="mt-4 text-[16px] leading-relaxed text-ink-soft">
           Every verse below has its own page: where it is studied, and the
           cross-references that tie it to the rest of the Word. {refs.length}{" "}
-          verses in the graph so far.
+          verses in the graph so far. Looking for a verse that is not yet in
+          the graph?{" "}
+          <Link
+            href="/bible"
+            className="text-gold-deep underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
+          >
+            Read any chapter of the Bible →
+          </Link>
         </p>
       </header>
 

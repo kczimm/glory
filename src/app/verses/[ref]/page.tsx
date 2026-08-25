@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getConnections, connectionKindLabel, verseSlug } from "@/data";
+import { getConnections, connectionKindLabel, verseSlug, parseRef } from "@/data";
 import {
   getPassageText,
   questionsUsing,
@@ -11,6 +11,7 @@ import {
 } from "@/data/server";
 import ShareButton from "@/components/ShareButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
+import { chapterSlug } from "@/data/books";
 
 interface Props {
   params: Promise<{ ref: string }>;
@@ -51,6 +52,9 @@ export default async function VersePage({ params }: Props) {
   const outgoing = getConnections(verse);
   const incoming = incomingConnections(verse);
 
+  const parsed = parseRef(verse);
+  const chapterHref = parsed ? `/bible/${chapterSlug(parsed.book, parsed.chapter)}` : null;
+
   return (
     <article>
       <header className="border-b border-line bg-gradient-to-b from-cream/70 to-parchment">
@@ -75,6 +79,14 @@ export default async function VersePage({ params }: Props) {
           </p>
           <p className="mt-3 text-[14px] font-semibold tracking-wide text-gold-deep">
             {verse} · World English Bible
+            {chapterHref && (
+              <Link
+                href={chapterHref}
+                className="ml-2 font-sans text-[13px] font-medium text-ink-soft transition-colors hover:text-gold-deep"
+              >
+                Read the whole chapter →
+              </Link>
+            )}
           </p>
         </div>
       </header>

@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 import { verseSlug } from "@/data";
-import { questions, graphVerseRefs } from "@/data/server";
+import { bookSlug } from "@/data/books";
+import { questions, graphVerseRefs, bibleBooks } from "@/data/server";
 import { categories } from "@/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/questions`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/search`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/verses`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${SITE_URL}/bible`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
   ];
 
   const questionRoutes: MetadataRoute.Sitemap = questions.map((q) => ({
@@ -29,6 +31,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
+  // Every chapter of the vendored Bible has a /bible reader page.
+  const bibleRoutes: MetadataRoute.Sitemap = bibleBooks().flatMap(({ book, chapters }) =>
+    Array.from({ length: chapters }, (_, i) => ({
+      url: `${SITE_URL}/bible/${bookSlug(book)}-${i + 1}`,
+      lastModified: now,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    }))
+  );
+
   const trailRoutes: MetadataRoute.Sitemap = [...categories]
     .sort((a, b) => a.order - b.order)
     .map((c) => ({
@@ -43,5 +55,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...trailRoutes,
     ...questionRoutes,
     ...verseRoutes,
+    ...bibleRoutes,
   ];
 }

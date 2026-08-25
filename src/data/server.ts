@@ -8,6 +8,7 @@ import {
 } from "../lib/audio-text";
 import type { AudioChunk } from "../lib/audio-text";
 import { canonicalBook, joinPassage, parseRef } from "./ref";
+import { BIBLE_BOOKS } from "./books";
 import { questions } from "./questions";
 import { connections } from "./connections";
 import { questionsUsing, incomingConnections, graphVerseRefs, refFromSlug } from "./verseIndex";
@@ -53,6 +54,29 @@ export function getChapterFocus(
   const ch = getChapter(book, chapter);
   if (!ch) return null;
   return filterFocus(ch, focus);
+}
+
+// ---- whole-Bible reader ---------------------------------------------------
+
+/** Chapters per canonical book, computed once from the vendored chapters map. */
+const chapterCounts = (() => {
+  const counts = new Map<string, number>();
+  for (const key of Object.keys(chapters)) {
+    const cut = key.lastIndexOf(" ");
+    const book = key.slice(0, cut);
+    const n = Number(key.slice(cut + 1));
+    if (Number.isFinite(n)) counts.set(book, Math.max(counts.get(book) ?? 0, n));
+  }
+  return counts;
+})();
+
+export function getChapterCount(book: string): number {
+  return chapterCounts.get(canonicalBook(book)) ?? 0;
+}
+
+/** All books in canonical order with their chapter counts. */
+export function bibleBooks(): { book: string; chapters: number }[] {
+  return BIBLE_BOOKS.map((book) => ({ book, chapters: chapterCounts.get(book) ?? 0 }));
 }
 
 // ---- questions ------------------------------------------------------------
