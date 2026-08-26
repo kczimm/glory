@@ -15200,7 +15200,7 @@ export const questions: Question[] = [
   {
     slug: "what-is-the-bibles-big-story",
     question: "What is the Bible's big story?",
-    category: "story-of-scripture",
+    category: "in-the-beginning",
     summary:
       "The Bible is one unfolding story: God makes a very good world, humanity rebels, and God begins a long work of rescue through one family, one nation, and finally one Son, until all things are made new. Every book is a chapter in that single plot.",
     passages: [
@@ -15269,14 +15269,14 @@ export const questions: Question[] = [
     raises: ["what-went-wrong-in-eden", "why-did-god-create-us", "is-the-whole-bible-about-jesus"],
     followsFrom: [],
     related: ["how-do-i-find-christ-in-the-old-testament", "what-is-the-new-heaven-and-new-earth"],
-    planned: ["Why is the Bible arranged the way it is?"],
+    planned: ["Why is the Bible arranged the way it is?", "What does the flood show us about God's judgment and mercy?", "Why did God scatter the nations at Babel?"],
     order: 86,
   },
 
   {
     slug: "what-went-wrong-in-eden",
     question: "What went wrong in Eden?",
-    category: "story-of-scripture",
+    category: "in-the-beginning",
     summary:
       "Our first parents doubted God's word, seized what He had forbidden, and brought sin and death into a very good world. But even as He judged them, God promised that the woman's offspring would one day crush the serpent: the whole rest of the Bible is the story of that promise kept.",
     passages: [
@@ -15339,7 +15339,7 @@ export const questions: Question[] = [
   {
     slug: "why-did-god-call-abraham",
     question: "Why did God call Abraham?",
-    category: "story-of-scripture",
+    category: "the-fathers",
     summary:
       "After the fall spread across the nations, God called one man to carry one promise: descendants, land, and blessing for all families of the earth through him. Abraham believed God, and it counted as righteousness, which is why everyone who believes today is called his child.",
     passages: [
@@ -15395,14 +15395,14 @@ export const questions: Question[] = [
     raises: ["what-is-faith", "did-god-choose-me", "how-do-i-find-christ-in-the-old-testament", "what-does-the-exodus-show-us-about-god"],
     followsFrom: ["what-went-wrong-in-eden", "what-is-the-bibles-big-story"],
     related: ["faith-or-works", "what-is-the-gospel"],
-    planned: ["Why did God test Abraham with Isaac?"],
+    planned: ["Why did God test Abraham with Isaac?", "How did Jacob become Israel?", "What was God doing in Joseph's slavery?"],
     order: 88,
   },
 
   {
     slug: "what-does-the-exodus-show-us-about-god",
     question: "What does the Exodus show us about God?",
-    category: "story-of-scripture",
+    category: "exodus-and-covenant",
     summary:
       "In the Exodus, God hears the cries of slaves, judges Egypt and its gods, redeems His people by blood, and brings them to Himself to be His own. It became the Old Testament's defining picture of salvation, and the Passover lamb points straight to Christ, our Passover sacrificed for us.",
     passages: [
@@ -15465,14 +15465,14 @@ export const questions: Question[] = [
     raises: ["why-did-jesus-have-to-die", "how-do-i-find-christ-in-the-old-testament", "why-did-israel-keep-drifting-into-idolatry"],
     followsFrom: ["why-did-god-call-abraham", "what-is-the-bibles-big-story"],
     related: ["what-is-baptism", "what-is-the-new-heart-that-god-promised"],
-    planned: ["Why did God harden Pharaoh's heart?"],
+    planned: ["Why did God harden Pharaoh's heart?", "Why did God give Israel the law at Sinai?", "What was the tabernacle for?"],
     order: 89,
   },
 
   {
     slug: "why-did-israel-keep-drifting-into-idolatry",
     question: "Why did Israel keep drifting into idolatry?",
-    category: "story-of-scripture",
+    category: "land-and-throne",
     summary:
       "Israel drifted because idolatry is not mainly an intellectual mistake but a heart disease: they wanted gods they could see, control, and use. Their story exposes how quickly delivered people forget their Deliverer, and how faithfully God sent prophets to call them home.",
     passages: [
@@ -15535,7 +15535,7 @@ export const questions: Question[] = [
   {
     slug: "why-did-god-promise-david-an-eternal-throne",
     question: "Why did God promise David an eternal throne?",
-    category: "story-of-scripture",
+    category: "land-and-throne",
     summary:
       "When David wanted to build God a house, God promised to build David a house instead: a son, a throne, and a kingdom established forever. Israel's kings failed, but the promise did not expire; it waited for the Son of David in whom it finds its yes and amen.",
     passages: [
@@ -15598,7 +15598,7 @@ export const questions: Question[] = [
   {
     slug: "why-did-god-send-his-people-into-exile",
     question: "Why did God send His people into exile?",
-    category: "story-of-scripture",
+    category: "prophets-and-exile",
     summary:
       "Exile was covenant discipline, not covenant collapse: after centuries of warnings ignored, Jerusalem fell, the temple burned, and Judah went to Babylon. Yet even there God promised to gather, cleanse, and renew His people, and the return home became another picture of the greater rescue to come.",
     passages: [
@@ -15661,7 +15661,7 @@ export const questions: Question[] = [
   {
     slug: "how-does-the-old-story-reach-jesus",
     question: "How does the old story reach Jesus?",
-    category: "story-of-scripture",
+    category: "prophets-and-exile",
     summary:
       "At exactly the right time, God sent His Son, born of a woman, born under the law: the seed of Abraham in whom nations are blessed, the Passover Lamb, the Son of David on the throne, and the end of exile. Jesus is not a new story interrupting the old one; He is the old story arriving.",
     passages: [
