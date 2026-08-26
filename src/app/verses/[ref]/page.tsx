@@ -62,7 +62,7 @@ export default async function VersePage({ params, searchParams }: Props) {
   const incoming = incomingConnections(verse);
 
   const parsed = parseRef(verse);
-  const chapterHref = parsed ? `/bible/${chapterSlug(parsed.book, parsed.chapter)}` : null;
+  const chapterHref = parsed ? `/bible/${chapterSlug(parsed.book, parsed.chapter)}${version === "kjv" ? "?version=kjv" : ""}` : null;
 
   return (
     <article>
@@ -77,7 +77,7 @@ export default async function VersePage({ params, searchParams }: Props) {
             </Link>
             <span className="ml-auto">
               <ShareButton
-                url={`${SITE_URL}/verses/${ref}`}
+                url={`${SITE_URL}/verses/${ref}${version === "kjv" ? "?version=kjv" : ""}`}
                 title={verse}
                 text={text ?? undefined}
               />

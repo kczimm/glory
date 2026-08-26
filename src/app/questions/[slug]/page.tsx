@@ -106,7 +106,7 @@ export default async function QuestionPage({ params, searchParams }: Props) {
             </Link>
             <span className="ml-auto flex items-center gap-2">
               <Link
-                href={`/questions/${question.slug}/print`}
+                href={`/questions/${question.slug}/print${version === "kjv" ? "?version=kjv" : ""}`}
                 className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
               >
                 <svg
@@ -127,7 +127,7 @@ export default async function QuestionPage({ params, searchParams }: Props) {
                 Print
               </Link>
               <ShareButton
-                url={`${SITE_URL}/questions/${question.slug}`}
+                url={`${SITE_URL}/questions/${question.slug}${version === "kjv" ? "?version=kjv" : ""}`}
                 title={question.question}
                 text={question.keyVerses[0] ? getPassageText(question.keyVerses[0], version) ?? question.summary : question.summary}
               />

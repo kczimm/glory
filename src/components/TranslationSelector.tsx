@@ -6,8 +6,10 @@
  * cookie (for the server), and updates the URL.
  */
 
+import { useEffect } from "react";
 import { useSyncExternalStore } from "react";
 import {
+  getVersionFromURL,
   resolveVersion,
   setVersionInStorage,
   TRANSLATIONS,
@@ -32,6 +34,18 @@ function setVersionCookie(code: TranslationCode) {
 
 export default function TranslationSelector() {
   const currentVersion = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot) as TranslationCode;
+
+  // On first load, if the URL carries an explicit ?version= param (e.g. a
+  // shared KJV link opened by someone with no cookie), persist it so the
+  // whole session (all internal navigation) stays in that translation.
+  // This only runs client-side after hydration.
+  useEffect(() => {
+    const urlVersion = getVersionFromURL(new URLSearchParams(window.location.search));
+    if (urlVersion) {
+      setVersionInStorage(urlVersion);
+      setVersionCookie(urlVersion);
+    }
+  }, []);
 
   const handleChange = (newVersion: TranslationCode) => {
     // Save to localStorage (client-side preference)
