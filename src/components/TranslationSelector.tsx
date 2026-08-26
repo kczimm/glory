@@ -5,7 +5,6 @@
  * WEB and KJV. Persists the choice to localStorage and updates the URL.
  */
 
-import { useRouter } from "next/navigation";
 import { useSyncExternalStore } from "react";
 import {
   resolveVersion,
@@ -26,22 +25,22 @@ function getServerSnapshot(): string {
 }
 
 export default function TranslationSelector() {
-  const router = useRouter();
   const currentVersion = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot) as TranslationCode;
 
   const handleChange = (newVersion: TranslationCode) => {
     // Save to localStorage
     setVersionInStorage(newVersion);
 
-    // Update URL with version param
+    // Update URL with version param and force full navigation
+    // This ensures the server re-renders with the new translation
     const params = new URLSearchParams(window.location.search);
     if (newVersion === "web") {
       params.delete("version"); // web is default, no need for param
     } else {
       params.set("version", newVersion);
     }
-    const newUrl = params.toString() ? `?${params.toString()}` : window.location.pathname;
-    router.push(newUrl, { scroll: false });
+    const newUrl = params.toString() ? `${window.location.pathname}?${params.toString()}` : window.location.pathname;
+    window.location.href = newUrl;
   };
 
   return (
