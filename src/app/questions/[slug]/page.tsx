@@ -24,9 +24,11 @@ import VisitListen from "@/components/VisitListen";
 import ShareButton from "@/components/ShareButton";
 import HoldAllButton from "@/components/HoldAllButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
+import { type TranslationCode } from "@/lib/translation-shared";
 
 interface Props {
   params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ version?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -51,8 +53,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function QuestionPage({ params }: Props) {
+export default async function QuestionPage({ params, searchParams }: Props) {
   const { slug } = await params;
+  const sp = await searchParams;
+  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
   const question = getQuestion(slug);
   if (!question) notFound();
 
@@ -125,7 +129,7 @@ export default async function QuestionPage({ params }: Props) {
               <ShareButton
                 url={`${SITE_URL}/questions/${question.slug}`}
                 title={question.question}
-                text={question.keyVerses[0] ? getPassageText(question.keyVerses[0]) ?? question.summary : question.summary}
+                text={question.keyVerses[0] ? getPassageText(question.keyVerses[0], version) ?? question.summary : question.summary}
               />
             </span>
           </div>
@@ -174,7 +178,7 @@ export default async function QuestionPage({ params }: Props) {
           </p>
           <div className="mt-6 space-y-3">
             {question.passages.map((p) => (
-              <ChapterReader key={`${p.book}-${p.chapter}`} passage={p} verses={getChapter(p.book, p.chapter)} />
+              <ChapterReader key={`${p.book}-${p.chapter}`} passage={p} verses={getChapter(p.book, p.chapter, version)} />
             ))}
           </div>
         </section>
@@ -190,7 +194,7 @@ export default async function QuestionPage({ params }: Props) {
                 What the Scripture says
               </h2>
             </div>
-            <StudyListen {...studyListenData(question)} />
+            <StudyListen {...studyListenData(question, version)} />
           </div>
           <div className="mt-8 space-y-10">
             {question.points.map((point, i) => (
@@ -208,7 +212,7 @@ export default async function QuestionPage({ params }: Props) {
                   <div className="mt-4 space-y-2.5">
                     {point.verses.map((ref, j) => (
                       <div key={ref} id={`sp-${i}-v-${j}`}>
-                        <VerseCard verse={ref} />
+                        <VerseCard verse={ref} translation={version} />
                       </div>
                     ))}
                   </div>
@@ -238,7 +242,7 @@ export default async function QuestionPage({ params }: Props) {
                     Continue this trail
                   </p>
                   {sameTrailAll.map((q) => {
-                    const text = getPassageText(q.keyVerses[0]);
+                    const text = getPassageText(q.keyVerses[0], version);
                     return (
                       <Link
                         key={q.slug}
@@ -267,7 +271,7 @@ export default async function QuestionPage({ params }: Props) {
                     Explore further
                   </p>
                   {crossTrail.map((q) => {
-                    const text = getPassageText(q.keyVerses[0]);
+                    const text = getPassageText(q.keyVerses[0], version);
                     const trail = categoryOf(q);
                     return (
                       <Link
@@ -326,7 +330,7 @@ export default async function QuestionPage({ params }: Props) {
           </div>
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             {question.keyVerses.map((ref) => (
-              <VerseCard key={ref} verse={ref} />
+              <VerseCard key={ref} verse={ref} translation={version} />
             ))}
           </div>
         </section>
