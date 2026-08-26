@@ -6,8 +6,17 @@ import QuestionCard from "@/components/QuestionCard";
 import VerseCard from "@/components/VerseCard";
 import JourneyHomeCard from "@/components/JourneyHomeCard";
 import DailyCard from "@/components/DailyCard";
+import { resolveServerTranslation } from "@/lib/translation-server";
 
-export default function Home() {
+interface Props {
+  searchParams?: Promise<{ version?: string }>;
+}
+
+export default async function Home({ searchParams }: Props) {
+  const sp = await searchParams;
+  const version = await resolveServerTranslation(
+    sp as Record<string, string | undefined> | undefined
+  );
   return (
     <div>
       {/* Hero */}
@@ -45,7 +54,7 @@ export default function Home() {
             <SearchBox />
           </div>
           <div className="mt-10 flex justify-center sm:mt-12">
-            <VerseCard verse="John 5:39" />
+            <VerseCard verse="John 5:39" translation={version} />
           </div>
         </div>
       </section>
