@@ -466,6 +466,84 @@ export const connections: Record<string, Connection[]> = {
   "Jonah 4:11": [
     c("Luke 15:10", "theme", "God's pity for the hundred twenty thousand of Nineveh anticipates heaven's joy over one repenting sinner."),
   ],
+// how-did-jacob-become-israel
+  "Genesis 28:12": [
+    c("John 1:51", "fulfilled", "Jesus tells Nathanael he will see the angels of God ascending and descending on the Son of Man, presenting Jesus as the true stairway where heaven meets earth."),
+  ],
+  "Genesis 28:14": [
+    c("Genesis 12:3", "pattern", "God repeats to fleeing Jacob the exact promise He gave Abraham, that all the families of the earth will be blessed in him and his seed."),
+  ],
+  "Genesis 28:15": [
+    c("Matthew 28:20", "promise", "The risen Jesus closes Matthew with the same covenant presence, saying he is with his people always, even to the end of the age."),
+  ],
+  "Genesis 32:28": [
+    c("Hosea 12:4", "parallel", "Hosea looks back on this night centuries later, remembering how Jacob struggled with the angel, wept, and pleaded until he prevailed."),
+  ],
+  "Genesis 35:11": [
+    c("Genesis 17:1", "pattern", "The God who named himself God Almighty to Abram reappears under the same name to confirm the identical covenant with Jacob."),
+  ],
+// what-was-god-doing-in-josephs-slavery
+  "Genesis 37:28": [
+    c("Matthew 26:15", "pattern", "Another hated brother is handed over by his own for silver weighed out in betrayal."),
+  ],
+  "Genesis 39:21": [
+    c("Acts 7:9", "parallel", "Stephen retells the story centuries later and draws the same conclusion: men sold Joseph, but God was with him."),
+  ],
+  "Genesis 45:8": [
+    c("Proverbs 16:9", "pattern", "The brothers planned a course for Joseph's life, but Yahweh directed where his steps actually went."),
+  ],
+  "Genesis 50:20": [
+    c("Romans 8:28", "theme", "Paul states the same principle for every believer: God works all things, even evil things, together for good."),
+    c("Acts 2:23", "pattern", "At the cross the pattern repeats: lawless men did the wicked deed by God's determined counsel and foreknowledge."),
+  ],
+// why-did-god-harden-pharaohs-heart
+  "Exodus 8:15": [
+    c("Hebrews 3:13", "theme", "Pharaoh shows where a habit of refusing to listen ends: Scripture warns that any of us can be hardened by the deceitfulness of sin."),
+  ],
+  "Exodus 9:27": [
+    c("2 Corinthians 7:10", "contrast", "Pharaoh admitted guilt yet changed nothing once the pain stopped; only godly sorrow works repentance leading to salvation."),
+  ],
+  "Hebrews 3:15": [
+    c("Psalms 95:8", "quotes", "The warning Hebrews repeats three times is drawn directly from the psalm recalling Israel's rebellion at Meribah."),
+  ],
+  "Romans 9:17": [
+    c("Exodus 9:16", "quotes", "Paul cites God's word to Pharaoh about being raised up to display His power when he answers the charge that hardening is unjust."),
+  ],
+  "Romans 9:22": [
+    c("2 Peter 3:9", "parallel", "The patience that bears with vessels of wrath is the same forbearance by which the Lord delays judgment, wanting all to come to repentance."),
+  ],
+// what-was-the-tabernacle-for
+  "Exodus 25:8": [
+    c("Revelation 21:3", "theme", "The sanctuary command already aimed at the end of the story, where a loud voice announces that God's dwelling is with people and He will dwell with them."),
+  ],
+  "Exodus 25:21": [
+    c("Romans 3:25", "pattern", "Paul calls Jesus the atoning sacrifice through faith in his blood, the reality toward which the covering placed over the testimony pointed."),
+  ],
+  "Exodus 25:22": [
+    c("Hebrews 9:24", "parallel", "The meeting place God appointed above the ark was one of the hand-made holy places that Hebrews calls representations of the true, where Christ now appears in God's presence for us."),
+  ],
+  "Exodus 40:34": [
+    c("John 1:14", "parallel", "The glory that once filled the tent and barred Moses from entering is the glory the apostles say they saw in the Word become flesh, full of grace and truth."),
+  ],
+  "Leviticus 16:2": [
+    c("Hebrews 9:24", "contrast", "Aaron was forbidden to enter the Most Holy Place at all times on pain of death, while Christ enters heaven itself to appear in the presence of God for us."),
+  ],
+// what-did-the-sacrificial-system-teach-israel
+  "Leviticus 17:11": [
+    c("Matthew 26:28", "fulfilled", "Jesus calls His own poured-out blood the blood of the covenant given for the remission of sins, the atonement-by-blood principle reaching its intended end."),
+  ],
+  "Leviticus 1:4": [
+    c("Isaiah 53:6", "theme", "The hand laid on the victim's head pictures exactly what Yahweh later did, laying on Him the iniquity of us all."),
+  ],
+  "Leviticus 16:21": [
+    c("2 Corinthians 5:21", "pattern", "Confessed sins placed on the innocent goat foreshadow God making Him who knew no sin to be sin on our behalf."),
+  ],
+  "Leviticus 16:22": [
+    c("John 1:29", "fulfilled", "A goat carrying Israel's iniquity to a solitary land anticipates the Lamb of God who takes away the sin of the world."),
+  ],
+  "Hebrews 10:4": [
+    c("Hebrews 10:14", "contrast", "What bulls and goats were powerless to do, one offering of Christ accomplished, perfecting forever those who are being sanctified."),
+  ],
 };
 
 /** Connections leaving from a verse reference. */

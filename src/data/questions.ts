@@ -15395,7 +15395,7 @@ export const questions: Question[] = [
     raises: ["what-is-faith", "did-god-choose-me", "how-do-i-find-christ-in-the-old-testament", "what-does-the-exodus-show-us-about-god", "why-did-god-test-abraham-with-isaac"],
     followsFrom: ["what-went-wrong-in-eden", "what-is-the-bibles-big-story", "what-happened-at-babel"],
     related: ["faith-or-works", "what-is-the-gospel"],
-    planned: ["How did Jacob become Israel?", "What was God doing in Joseph's slavery?"],
+    planned: [],
     order: 88,
   },
 
@@ -15462,10 +15462,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 12:13", "Exodus 14:31", "Exodus 6:7", "1 Corinthians 5:7"],
-    raises: ["why-did-jesus-have-to-die", "how-do-i-find-christ-in-the-old-testament", "why-did-israel-keep-drifting-into-idolatry", "why-did-god-give-israel-the-law-at-sinai", "why-did-god-spare-rahab"],
+    raises: ["why-did-jesus-have-to-die", "how-do-i-find-christ-in-the-old-testament", "why-did-israel-keep-drifting-into-idolatry", "why-did-god-give-israel-the-law-at-sinai", "why-did-god-spare-rahab", "why-did-god-harden-pharaohs-heart"],
     followsFrom: ["why-did-god-call-abraham", "what-is-the-bibles-big-story"],
     related: ["what-is-baptism", "what-is-the-new-heart-that-god-promised"],
-    planned: ["Why did God harden Pharaoh's heart?", "What was the tabernacle for?"],
+    planned: [],
     order: 89,
   },
 
@@ -15938,7 +15938,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 22:8", "Genesis 22:14", "Hebrews 11:19", "Romans 8:32"],
-    raises: ["why-did-jesus-have-to-die", "what-is-faith"],
+    raises: ["why-did-jesus-have-to-die", "what-is-faith", "how-did-jacob-become-israel"],
     followsFrom: ["why-did-god-call-abraham"],
     related: ["how-do-i-find-christ-in-the-old-testament", "faith-or-works"],
     planned: [],
@@ -16007,10 +16007,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 20:2", "Exodus 19:5-6", "Matthew 5:17", "Galatians 3:24"],
-    raises: ["how-is-the-new-covenant-different-from-the-old-one", "faith-or-works"],
+    raises: ["how-is-the-new-covenant-different-from-the-old-one", "faith-or-works", "what-was-the-tabernacle-for"],
     followsFrom: ["what-does-the-exodus-show-us-about-god"],
     related: ["can-i-trust-the-bible", "what-is-grace"],
-    planned: ["What did the sacrificial system teach Israel?"],
+    planned: [],
     order: 97,
   },
 
@@ -16289,6 +16289,350 @@ export const questions: Question[] = [
     related: ["what-is-the-gospel", "does-god-change-his-mind"],
     planned: [],
     order: 92,
+  },
+
+  {
+    slug: "how-did-jacob-become-israel",
+    question: "How did Jacob become Israel?",
+    category: "the-fathers",
+    summary:
+      "Jacob was a grasper from the womb who took his brother's birthright and blessing by deceit, yet God met him by grace at Bethel before he had changed a thing, repeating to him the promise made to Abraham. Then came an all-night wrestle by the Jabbok, where Jacob refused to release God until he was blessed, and walked away with a new name and a limp. God explained the name Himself: 'you have fought with God and with men, and have prevailed'; but the limp meant Jacob never forgot that the blessing was given, not seized.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 28,
+        title: "Bethel and the stairway",
+        lookFor: "God meeting a fleeing deceiver in a dream, repeating Abraham's promise to him unasked, before Jacob has repented of anything.",
+        focus: "10-22",
+      },
+      {
+        book: "Genesis",
+        chapter: 32,
+        title: "The wrestle at Peniel",
+        lookFor: "The all-night struggle, Jacob's refusal to let go without a blessing, his confession of his own name, and the new name Israel.",
+        focus: "22-32",
+      },
+      {
+        book: "Genesis",
+        chapter: 35,
+        title: "The name confirmed",
+        lookFor: "God appearing again at Bethel, confirming the new name, and recommitting to Jacob the covenant made with Abraham and Isaac.",
+        focus: "9-15",
+      },
+    ],
+    points: [
+      {
+        heading: "Jacob grasped from the beginning",
+        body:
+          "He arrived clutching his brother's heel, and Esau later complained that 'he has supplanted me these two times': the birthright for a bowl of stew, then the blessing through a lie told in their father's tent. His very name became shorthand for a schemer. Scripture never hides this; the man God chose to carry the covenant began as a deceiver who tried to secure God's promises by his own cunning.",
+        verses: ["Genesis 25:26", "Genesis 25:31", "Genesis 27:36"],
+      },
+      {
+        heading: "Grace met him at Bethel before he changed",
+        body:
+          "Jacob was fleeing the consequences of his fraud when God found him, not after he cleaned up. In the dream Yahweh stood above the stairway and gave land, countless seed, and blessing for all families of the earth, the same promise spoken over Abraham. Then came the pledge no runaway deserved: 'I am with you, and will keep you, wherever you go.' Only after waking did Jacob confess, 'Surely Yahweh is in this place, and I didn't know it,' and set up his pillar and vow.",
+        verses: ["Genesis 28:13-15", "Genesis 28:16", "Genesis 28:22"],
+      },
+      {
+        heading: "He would not let go unless God blessed him",
+        body:
+          "Alone at night, Jacob wrestled a stranger until dawn, and when the man asked to be released Jacob answered, 'I won't let you go, unless you bless me.' For once the grasping instinct was aimed at God himself, and God let Himself be held. Asked his name, Jacob had to say it aloud: deceiver, supplanter. The confession of what he was became the doorway to what he would be called.",
+        verses: ["Genesis 32:24-28", "Hosea 12:4"],
+      },
+      {
+        heading: "Blessed and wounded at the same time",
+        body:
+          "God declared, 'Your name will no longer be called Jacob, but Israel', because he had struggled with God and men and prevailed. Yet the same night left him touching his thigh and limping for the rest of his life. Jacob saw it truly at Peniel: 'I have seen God face to face, and my life is preserved.' Every step afterward carried both truths, that God had blessed him and that the blessing cost him his self-reliance.",
+        verses: ["Genesis 32:28", "Genesis 32:30", "Genesis 32:31"],
+      },
+      {
+        heading: "God keeps covenant with flawed people",
+        body:
+          "At Bethel years later, God said, 'Your name is Jacob. Your name shall not be Jacob any more, but your name will be Israel', and announced Himself as 'I am God Almighty' with nations, kings, and land promised to Jacob's line, exactly as He had sworn to Abraham and Isaac. The covenant never depended on Jacob's character. It rested on God's, which is why a limping deceiver could become the father of twelve tribes.",
+        verses: ["Genesis 35:10-12", "Genesis 17:1"],
+      },
+    ],
+    keyVerses: ["Genesis 28:15", "Genesis 32:26", "Genesis 32:28", "Genesis 35:10"],
+    raises: ["what-was-god-doing-in-josephs-slavery"],
+    followsFrom: ["why-did-god-test-abraham-with-isaac"],
+    related: ["does-god-use-our-failures", "what-is-repentance"],
+    planned: [],
+    order: 97,
+  },
+
+  {
+    slug: "what-was-god-doing-in-josephs-slavery",
+    question: "What was God doing in Joseph's slavery?",
+    category: "the-fathers",
+    summary:
+      "Joseph's brothers sold him into slavery, and yet the narrator keeps repeating one quiet refrain: Yahweh was with him, in Potiphar's house and in the prison alike. Years later Joseph can say that his brothers' evil and God's sending were both true at once: 'you meant evil against me, but God meant it for good', to save many people alive. His story shows providence working through real human wickedness, not around it, and a forgiveness that refuses revenge.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 37,
+        title: "Sold by his brothers",
+        lookFor: "The cold arithmetic of the sale, and what the narrator does and does not say about God while it happens.",
+        focus: "23-36",
+      },
+      {
+        book: "Genesis",
+        chapter: 45,
+        title: "The reveal",
+        lookFor: "How Joseph interprets his own story when he finally names himself: sent, not sold; preservation, not payback.",
+        focus: "4-15",
+      },
+      {
+        book: "Genesis",
+        chapter: 50,
+        title: "You meant it for good",
+        lookFor: "Joseph's theology in a single sentence after Jacob dies, and how he treats the brothers who wronged him.",
+        focus: "15-21",
+      },
+    ],
+    points: [
+      {
+        heading: "The betrayal was real, and Scripture does not soften it",
+        body:
+          "Judah's logic is chillingly practical: 'Come, and let's sell him to the Ishmaelites.' They pulled seventeen-year-old Joseph out of the pit and sold him for twenty pieces of silver, then dipped his robe in blood and told their father a lie. The Bible never pretends the brothers were secretly doing God's will; what they did was evil, and Genesis records it as evil.",
+        verses: ["Genesis 37:26-28", "Genesis 37:36"],
+      },
+      {
+        heading: "The refrain: Yahweh was with Joseph",
+        body:
+          "In prosperity we read that 'Yahweh was with Joseph'; in the dungeon we read it again, that 'Yahweh was with Joseph, and showed kindness to him'. The narrator marks God's presence not by Joseph's comfort but by His nearness in both places. Slavery and prison never canceled it, which is exactly why Stephen could sum up the whole story by saying God was with him.",
+        verses: ["Genesis 39:2-3", "Genesis 39:21", "Acts 7:9"],
+      },
+      {
+        heading: "Providence worked through the evil, not around it",
+        body:
+          "When Joseph reveals himself, he does not erase his brothers' guilt; he places it inside a larger intention. 'It wasn't you who sent me here, but God': both actors are real, human malice and divine purpose, and the second is not an excuse for the first but sovereign over it. God did not need the brothers' sin, yet He wove even their sin into the rescue plan.",
+        verses: ["Genesis 45:5", "Genesis 45:8", "Proverbs 16:9"],
+      },
+      {
+        heading: "The goal: saving many people alive",
+        body:
+          "God's sending had a stated aim: 'to preserve for you a remnant in the earth, and to save you alive by a great deliverance.' The family through whom all nations would be blessed was one famine away from extinction in a famine, and God positioned a despised brother on the throne of Egypt to feed them. The promise to Abraham survived because Joseph suffered.",
+        verses: ["Genesis 45:7", "Genesis 12:3"],
+      },
+      {
+        heading: "Forgiveness that refuses revenge",
+        body:
+          "With power fully in his hands, Joseph weeps instead of settling accounts. 'Am I in the place of God?', he asks; judgment belongs to God, so he takes up nourishment instead: 'I will nourish you and your little ones.' He comforted them and spoke kindly to them. That is what it looks like when someone trusts God's justice enough to stop demanding his own.",
+        verses: ["Genesis 50:19-21"],
+      },
+    ],
+    keyVerses: ["Genesis 50:20", "Genesis 45:7-8", "Genesis 39:21"],
+    raises: ["why-does-god-allow-suffering", "is-god-in-control"],
+    followsFrom: ["how-did-jacob-become-israel"],
+    related: ["does-god-use-our-failures", "where-is-god-in-my-pain"],
+    planned: [],
+    order: 98,
+  },
+
+  {
+    slug: "why-did-god-harden-pharaohs-heart",
+    question: "Why did God harden Pharaoh's heart?",
+    category: "exodus-and-covenant",
+    summary:
+      "Pharaoh's stubbornness was real: plague after plague, the text says he hardened his own heart. Yet God announced before Moses ever stood in court that He would harden it too, turning Egypt's defiance into the stage where His power and name would be known. Paul faces the objection head-on in Romans 9, and the warning reaches us, because a heart that keeps refusing to hear can lose the ability to hear.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 7,
+        title: "The first sign",
+        lookFor: "The staff becomes a serpent, the magicians copy it, and Pharaoh's heart is hardened exactly as Yahweh said it would be.",
+        focus: "1-13",
+      },
+      {
+        book: "Exodus",
+        chapter: 9,
+        title: "Confession without change",
+        lookFor: "Hail falls, Pharaoh admits sin and begs for prayer, then sins again the moment the storm stops.",
+        focus: "27-35",
+      },
+      {
+        book: "Romans",
+        chapter: 9,
+        title: "Paul faces the objection",
+        lookFor: "If God hardens whom He hardens, is He unjust? Paul answers from God's mercy, the potter's clay, and His astonishing patience.",
+        focus: "14-24",
+      },
+    ],
+    points: [
+      {
+        heading: "The text says it both ways, and the order matters",
+        body:
+          "Track the verbs across the plagues and a pattern emerges. After the frogs and the flies, 'he hardened his heart': Pharaoh saw relief coming, changed his mind, and refused. Beginning with the sixth plague, Yahweh appears as the subject, 'Yahweh hardened the heart of Pharaoh,' and His hardening carries the story to the sea. Yet even after that, hail melts Pharaoh back into self-hardening once more (9:34). Scripture hides neither line: Pharaoh willed the stubbornness, and God's judicial hardening answered long-informed refusal.",
+        verses: ["Exodus 8:15", "Exodus 8:32", "Exodus 9:34", "Exodus 9:12", "Exodus 10:20", "Exodus 14:8"],
+      },
+      {
+        heading: "God announced the hardening in advance",
+        body:
+          "This was no surprise twist in the plot. Before Moses returned to Egypt, God said, 'I will harden his heart and he will not let the people go,' and He repeated it at the start of the signs. The purpose was stated too: the Egyptians would know that Yahweh is God, and His name would be declared throughout all the earth. Egypt's king, who claimed to be divine, became the exhibit in God's case against every false god.",
+        verses: ["Exodus 4:21", "Exodus 7:3-4", "Exodus 7:5", "Exodus 9:16"],
+      },
+      {
+        heading: "A confession is not the same as repentance",
+        body:
+          "Under hail and thunder, Pharaoh said, 'I have sinned this time. Yahweh is righteous, and I and my people are wicked.' It sounds like brokenness. Then the storm stopped, and 'he sinned yet more, and hardened his heart.' Notice the tell: 'this time.' He confessed to escape pain, not to change. Words without surrender leave a heart worse than before, and that is precisely the soil in which judicial hardening grows.",
+        verses: ["Exodus 9:27", "Exodus 9:28", "Exodus 9:34", "Exodus 10:3"],
+      },
+      {
+        heading: "Paul faces the objection instead of dodging it",
+        body:
+          "Someone will ask whether God is unfair. Paul answers with God's own word to Moses: 'I will have mercy on whom I have mercy, and I will have compassion on whom I have compassion.' Mercy, by definition, is never owed; neither is withheld judgment deserved less. Then the startling sentence: 'he has mercy on whom he desires, and he hardens whom he desires.' Even His hardening serves patience, for God endured 'with much patience vessels of wrath' while preparing vessels of mercy for glory.",
+        verses: ["Romans 9:14-16", "Romans 9:17", "Romans 9:18", "Romans 9:22-23"],
+      },
+      {
+        heading: "The warning shape lands on us",
+        body:
+          "Hebrews takes Pharaoh's story and turns it toward the church: 'Today if you will hear his voice, don't harden your hearts.' The danger is not that God randomly crushes someone, but that hearing and refusing, again and again, calcifies into inability to hear. Sin's deceitfulness hardens gradually, one dismissed conviction at a time. The remedy Hebrews gives is communal and daily: exhort one another today, while it is still called today.",
+        verses: ["Hebrews 3:15", "Hebrews 3:13"],
+      },
+    ],
+    keyVerses: ["Exodus 4:21", "Exodus 9:12", "Exodus 9:16", "Romans 9:18"],
+    raises: ["is-god-in-control", "do-my-choices-matter", "what-does-it-mean-that-god-is-sovereign"],
+    followsFrom: ["what-does-the-exodus-show-us-about-god"],
+    related: ["does-god-change-his-mind", "can-i-trust-the-bible"],
+    planned: [],
+    order: 93,
+  },
+
+  {
+    slug: "what-was-the-tabernacle-for",
+    question: "What was the tabernacle for?",
+    category: "exodus-and-covenant",
+    summary:
+      "Fresh from Sinai's thunder, God asked for an offering and built a home: a sanctuary so He could dwell among the people He had rescued. Every board and curtain taught that access to Him is real but mediated, and the mercy seat sat above the tablets of the law. When the glory filled the finished tent, God moved in; and John says the Word became flesh and tabernacled among us.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 25,
+        title: "The dwelling and the ark",
+        lookFor: "A freewill offering for a sanctuary, a building done strictly by the shown pattern, and the ark with its mercy seat where God promises to meet with Moses.",
+        focus: "1-22",
+      },
+      {
+        book: "Exodus",
+        chapter: 40,
+        title: "Glory fills the tent",
+        lookFor: "Obedience completing the work, then the cloud and the glory filling the tabernacle, Moses shut out, and the cloud and fire leading every journey.",
+        focus: "34-38",
+      },
+      {
+        book: "John",
+        chapter: 1,
+        title: "The Word dwelt among us",
+        lookFor: "The Word becoming flesh and living among us, glory seen, and the contrast between the law given through Moses and grace and truth realized in Jesus Christ.",
+        focus: "14-18",
+      },
+    ],
+    points: [
+      {
+        heading: "The goal of the covenant was life together with God",
+        body:
+          "Sinai gave commandments, but God's first request after them was a home: 'Let them make me a sanctuary, that I may dwell among them.' He later names this as the very reason for the Exodus, saying He brought Israel out of Egypt 'that I might dwell among them.' Rescue was never just out of slavery; it was into residence with God. The tabernacle exists because the covenant aims at fellowship.",
+        verses: ["Exodus 25:8", "Exodus 29:45-46"],
+      },
+      {
+        heading: "Access is real, but mediated",
+        body:
+          "God says of the mercy seat, 'There I will meet with you,' yet He also warns Aaron not to come at all times into the Most Holy Place, lest he die. Curtains, courts, washings, and a priesthood all preach the same sermon: nearness to God is genuinely offered, but only on His terms and through His appointed way. Hebrews confirms the design, calling those holy places 'representations of the true'.",
+        verses: ["Exodus 25:22", "Leviticus 16:2", "Hebrews 9:24"],
+      },
+      {
+        heading: "The mercy seat sat above the law",
+        body:
+          "Inside the ark lay the testimony, the tablets of the covenant law; on top of it was the mercy seat, and there, above the law, God said He would meet with His people. The furniture arrangement preaches before any prophet does: atonement covers commandment-breaking. Paul reaches for the same word when he says God sent Jesus as 'an atoning sacrifice', received through faith in his blood.",
+        verses: ["Exodus 25:21-22", "Romans 3:25"],
+      },
+      {
+        heading: "The glory filling the tent was God moving in",
+        body:
+          "When the work was finished exactly as commanded, the cloud covered the Tent of Meeting, 'and Yahweh’s glory filled the tabernacle.' So heavy was the presence that Moses himself could not get inside. From then on the cloud by day and the fire by night directed every march and every camp. The tabernacle was never mainly architecture; it was Presence, God traveling with His people.",
+        verses: ["Exodus 40:34-35", "Exodus 40:38"],
+      },
+      {
+        heading: "Jesus tabernacled among us",
+        body:
+          "John's claim about the incarnation borrows this chapter's vocabulary: 'The Word became flesh, and lived among us,' literally, pitched His tent in our midst, and 'we saw his glory.' He frames it against Sinai: 'The law was given through Moses. Grace and truth were realized through Jesus Christ.' No one has seen God, John says, but the Son has declared Him. This is Immanuel, 'God with us.'",
+        verses: ["John 1:14", "John 1:17-18", "Matthew 1:23"],
+      },
+    ],
+    keyVerses: ["Exodus 25:8-9", "Exodus 40:34", "John 1:14"],
+    raises: ["who-can-forgive-sins", "do-i-need-a-priest-to-reach-god"],
+    followsFrom: ["why-did-god-give-israel-the-law-at-sinai"],
+    related: ["what-is-worship", "what-is-the-new-heaven-and-new-earth"],
+    planned: ["What did the temple add that the tent lacked?"],
+    order: 98,
+  },
+
+  {
+    slug: "what-did-the-sacrificial-system-teach-israel",
+    question: "What did the sacrificial system teach Israel?",
+    category: "exodus-and-covenant",
+    summary:
+      "The sacrifices taught Israel a hard lesson with every offering: sin costs a life, and the worshiper must own it, laying a hand on the victim's head before it dies in his place. Yet the same sacrifices repeated year after year proved they could never actually cleanse the conscience. The whole system was a shadow waiting for the once-for-all offering it pointed toward.",
+    passages: [
+      {
+        book: "Leviticus",
+        chapter: 1,
+        title: "The burnt offering",
+        lookFor: "Who brings the animal, and what the laying on of hands means before it is killed.",
+      },
+      {
+        book: "Leviticus",
+        chapter: 16,
+        title: "The Day of Atonement",
+        lookFor: "Two goats: one slain for the sanctuary, one sent away carrying Israel's sins into the wilderness.",
+        focus: "6-22",
+      },
+      {
+        book: "Hebrews",
+        chapter: 10,
+        title: "Once for all",
+        lookFor: "Why the yearly repetition could never take away sin, and what Christ's single offering accomplished instead.",
+        focus: "1-18",
+      },
+    ],
+    points: [
+      {
+        heading: "Sin costs a life",
+        body:
+          "Before anything else, the altar taught the price tag: 'the life of the flesh is in the blood', and God gave that life 'to make atonement for your souls', 'for it is the blood that makes atonement by reason of the life.' Every morning sacrifice said the same thing over breakfast fires across the camp. Forgiveness was never cheap; someone innocent always bled so the guilty could keep living.",
+        verses: ["Leviticus 17:11"],
+      },
+      {
+        heading: "Substitution: an innocent life for the guilty",
+        body:
+          "The worshiper did not send an animal; he brought one, his own, from his own herd, and 'he shall lay his hand on the head of the burnt offering, and it shall be accepted for him to make atonement for him.' The gesture transferred the burden: this death stands for mine. Isaiah says it happened at the cross too, that Yahweh 'has laid on him the iniquity of us all.'",
+        verses: ["Leviticus 1:2", "Leviticus 1:4", "Isaiah 53:6", "2 Corinthians 5:21"],
+      },
+      {
+        heading: "Two goats, one lesson: carried away",
+        body:
+          "On the Day of Atonement Aaron confessed 'all the iniquities of the children of Israel, and all their transgressions, even all their sins' over the live goat, putting them on its head. Then 'the goat shall carry all their iniquities on himself to a solitary land'. One goat died under judgment; the other removed guilt out of sight. Together they pictured both payment and removal, so that Israel could hear: 'from all your sins you shall be clean before Yahweh.'",
+        verses: ["Leviticus 16:21", "Leviticus 16:22", "Leviticus 16:30"],
+      },
+      {
+        heading: "The repetition proved the system insufficient",
+        body:
+          "If the offerings worked, they would have stopped being offered, Hebrews argues, because worshipers 'once cleansed, would have had no more consciousness of sins.' Instead there was 'a yearly reminder of sins', for 'it is impossible that the blood of bulls and goats should take away sins.' David already knew this: God's delight was never the animal but 'a broken spirit. A broken and contrite heart, O God, you will not despise.'",
+        verses: ["Hebrews 10:1-4", "Psalms 51:16", "Psalms 51:17"],
+      },
+      {
+        heading: "Christ is what the altar was pointing at",
+        body:
+          "The shadow gave way to the substance: 'by which will we have been sanctified through the offering of the body of Jesus Christ once for all.' He 'offered one sacrifice for sins forever, sat down on the right hand of God', and 'by one offering he has perfected forever those who are being sanctified.' Where sins are remitted, 'there is no more offering for sin.' John names Him 'the Lamb of God, who takes away the sin of the world!'",
+        verses: ["Hebrews 10:10", "Hebrews 10:12", "Hebrews 10:14", "Hebrews 10:18", "John 1:29"],
+      },
+    ],
+    keyVerses: ["Leviticus 17:11", "Leviticus 16:22", "Hebrews 10:4", "Hebrews 10:14"],
+    raises: ["why-did-jesus-have-to-die", "what-price-can-buy-forgiveness"],
+    followsFrom: ["what-was-the-tabernacle-for"],
+    related: ["what-is-repentance", "can-gods-grace-really-cover-my-worst-sins"],
+    planned: [],
+    order: 99,
   },
 
   {
