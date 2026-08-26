@@ -3,6 +3,7 @@ import Link from "next/link";
 import { chapterSlug } from "@/data/books";
 import { bibleBooks } from "@/data/server";
 import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
+import { resolveServerTranslation } from "@/lib/translation-server";
 
 export const metadata: Metadata = {
   title: "Read the Word",
@@ -16,7 +17,7 @@ interface Props {
 
 export default async function BibleIndex({ searchParams }: Props) {
   const sp = await searchParams;
-  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
   const translationInfo = getTranslationInfo(version);
   const books = bibleBooks(version);
 

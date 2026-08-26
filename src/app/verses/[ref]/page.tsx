@@ -13,19 +13,21 @@ import ShareButton from "@/components/ShareButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { chapterSlug } from "@/data/books";
 import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
+import { resolveServerTranslation } from "@/lib/translation-server";
 
 interface Props {
   params: Promise<{ ref: string }>;
+  searchParams?: Promise<{ version?: string }>;
 }
 
 export async function generateStaticParams() {
   return graphVerseRefs().map((ref) => ({ ref: verseSlug(ref) }));
 }
 
-export async function generateMetadata({ params, searchParams }: Props & { searchParams?: Promise<{ version?: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { ref } = await params;
   const sp = await searchParams;
-  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
   const translationInfo = getTranslationInfo(version);
   const verse = refFromSlug(ref);
   if (!verse) return {};
@@ -45,10 +47,10 @@ export async function generateMetadata({ params, searchParams }: Props & { searc
   };
 }
 
-export default async function VersePage({ params, searchParams }: Props & { searchParams?: Promise<{ version?: string }> }) {
+export default async function VersePage({ params, searchParams }: Props) {
   const { ref } = await params;
   const sp = await searchParams;
-  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
   const translationInfo = getTranslationInfo(version);
   const verse = refFromSlug(ref);
   if (!verse) notFound();

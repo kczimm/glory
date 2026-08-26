@@ -2,7 +2,8 @@
 
 /**
  * Translation selector: a dropdown that lets users switch between
- * WEB and KJV. Persists the choice to localStorage and updates the URL.
+ * WEB and KJV. Persists the choice to localStorage (for the client) and a
+ * cookie (for the server), and updates the URL.
  */
 
 import { useSyncExternalStore } from "react";
@@ -24,15 +25,23 @@ function getServerSnapshot(): string {
   return "web";
 }
 
+/** Set the translation cookie so server components pick up the preference. */
+function setVersionCookie(code: TranslationCode) {
+  document.cookie = `glory:translation=${code}; path=/; max-age=31536000; SameSite=Lax`;
+}
+
 export default function TranslationSelector() {
   const currentVersion = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot) as TranslationCode;
 
   const handleChange = (newVersion: TranslationCode) => {
-    // Save to localStorage
+    // Save to localStorage (client-side preference)
     setVersionInStorage(newVersion);
+    // Set cookie so server components render the correct translation even
+    // when navigating to a URL without an explicit ?version= param.
+    setVersionCookie(newVersion);
 
-    // Update URL with version param and force full navigation
-    // This ensures the server re-renders with the new translation
+    // Update URL with version param and force full navigation.
+    // This ensures the server re-renders with the new translation.
     const params = new URLSearchParams(window.location.search);
     if (newVersion === "web") {
       params.delete("version"); // web is default, no need for param

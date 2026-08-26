@@ -6,6 +6,7 @@ import { questions, getQuestion, categoryOf, getPassageText, getChapterFocus } f
 import AutoPrint from "@/components/AutoPrint";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
+import { resolveServerTranslation } from "@/lib/translation-server";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PrintStudyPage({ params, searchParams }: Props) {
   const { slug } = await params;
   const sp = await searchParams;
-  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
   const translationInfo = getTranslationInfo(version);
   const question = getQuestion(slug);
   if (!question) notFound();

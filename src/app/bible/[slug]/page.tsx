@@ -5,6 +5,7 @@ import { chapterSlug, bookFromSlug } from "@/data/books";
 import { parseRef, verseKeys, verseSlug } from "@/data/ref";
 import { getChapter, bibleBooks, graphVerseRefs } from "@/data/server";
 import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
+import { resolveServerTranslation } from "@/lib/translation-server";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -32,7 +33,7 @@ function getCanon(version: TranslationCode = "web") {
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { slug } = await params;
   const sp = await searchParams;
-  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
   const translationInfo = getTranslationInfo(version);
   const { book, chapter } = parseChapterSlug(slug) ?? {};
   if (!book || !chapter) return {};
@@ -54,7 +55,7 @@ function parseChapterSlug(slug: string): { book: string; chapter: number } | nul
 export default async function BibleChapter({ params, searchParams }: Props) {
   const { slug } = await params;
   const sp = await searchParams;
-  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
   const translationInfo = getTranslationInfo(version);
   const parsed = parseChapterSlug(slug);
   if (!parsed) notFound();

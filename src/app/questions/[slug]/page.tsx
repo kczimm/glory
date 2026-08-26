@@ -24,7 +24,7 @@ import VisitListen from "@/components/VisitListen";
 import ShareButton from "@/components/ShareButton";
 import HoldAllButton from "@/components/HoldAllButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
-import { type TranslationCode } from "@/lib/translation-shared";
+import { resolveServerTranslation } from "@/lib/translation-server";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function QuestionPage({ params, searchParams }: Props) {
   const { slug } = await params;
   const sp = await searchParams;
-  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const version = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
   const question = getQuestion(slug);
   if (!question) notFound();
 
