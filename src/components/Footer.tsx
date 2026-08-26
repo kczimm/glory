@@ -16,6 +16,12 @@ function getServerSnapshot(): string {
   return "web";
 }
 
+/** Acts 17:11 in each translation */
+const ACTS_17_11: Record<TranslationCode, string> = {
+  web: "searching the Scriptures daily to see whether these things were so",
+  kjv: "searched the scriptures daily, whether those things were so",
+};
+
 export default function Footer() {
   const version = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot) as TranslationCode;
   const info = getTranslationInfo(version);
@@ -35,8 +41,7 @@ export default function Footer() {
           <Link href="/about-translation" className="underline-offset-2 hover:underline">
             {info.name}
           </Link>{" "}
-          (Public Domain). Study with the Bereans in mind: “searching the
-          Scriptures daily to see whether these things were so” (Acts 17:11).
+          (Public Domain). Study with the Bereans in mind: &ldquo;{ACTS_17_11[version]} (Acts 17:11).
         </p>
       </div>
     </footer>

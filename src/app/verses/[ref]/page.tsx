@@ -137,7 +137,7 @@ export default async function VersePage({ params, searchParams }: Props & { sear
             </p>
             <div className="mt-4 space-y-3">
               {outgoing.map((e) => (
-                <VerseConnectionRow key={e.target} target={e.target} note={e.note} kindLabel={connectionKindLabel[e.kind]} />              ))}
+                <VerseConnectionRow key={e.target} target={e.target} note={e.note} kindLabel={connectionKindLabel[e.kind]} translation={version} />              ))}
             </div>
           </section>
         )}
@@ -155,6 +155,7 @@ export default async function VersePage({ params, searchParams }: Props & { sear
                   target={e.from}
                   note={e.note}
                   kindLabel={`${connectionKindLabel[e.kind]} (this verse)`}
+                  translation={version}
                 />
               ))}
             </div>
@@ -169,12 +170,14 @@ function VerseConnectionRow({
   target,
   note,
   kindLabel,
+  translation = "web",
 }: {
   target: string;
   note: string;
   kindLabel: string;
+  translation?: TranslationCode;
 }) {
-  const text = getPassageText(target);
+  const text = getPassageText(target, translation);
   return (
     <div className="rounded-xl border border-line bg-surface/60 px-4 py-3">
       <p className="flex items-baseline gap-2">
