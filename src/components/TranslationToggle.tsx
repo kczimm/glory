@@ -19,7 +19,8 @@ export default function TranslationToggle() {
 
   return (
     <>
-      {/* Mobile: one compact switch button. */}
+      {/* Mobile: one compact button showing the CURRENT translation; tap
+          toggles to the other (same footprint as the theme toggle). */}
       <button
         type="button"
         onClick={() => setVersion(other)}
@@ -27,7 +28,7 @@ export default function TranslationToggle() {
         title={`Switch to ${TRANSLATIONS[other].name}`}
         className="sm:hidden shrink-0 rounded-full border border-line bg-surface px-2 py-1 text-[10.5px] font-semibold text-ink-soft transition-colors hover:text-gold-deep"
       >
-        {TRANSLATIONS[other].shortName}
+        {TRANSLATIONS[version].shortName}
       </button>
 
       {/* Desktop: segmented control. */}
