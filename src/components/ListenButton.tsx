@@ -14,10 +14,24 @@ import {
 } from "@/lib/speech";
 import type { SpeechItem } from "@/lib/speech";
 import { PauseIcon, PlayIcon, StopIcon } from "@/components/speech-icons";
+import { resolveVersion } from "@/lib/translation";
+import { hasAudio } from "@/lib/translation-shared";
+
+/** Subscribe/unsubscribe stub for reading the current translation client-side. */
+function subscribeVersion(): () => void {
+  return () => {};
+}
+function getVersionSnapshot(): string {
+  return typeof window !== "undefined" ? resolveVersion(new URLSearchParams(window.location.search)) : "web";
+}
+function getVersionServerSnapshot(): string {
+  return "web";
+}
 
 /**
  * A small Listen control. Starts reading `items` (tagged with `sourceId`),
  * then flips to pause/resume plus stop while this source is the active one.
+ * Hidden entirely for translations without audio (e.g. KJV).
  */
 export default function ListenButton({
   sourceId,
@@ -31,12 +45,14 @@ export default function ListenButton({
   onStart?: () => void;
 }) {
   const speech = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const version = useSyncExternalStore(subscribeVersion, getVersionSnapshot, getVersionServerSnapshot);
+  const audioAvailable = hasAudio(version as "web" | "kjv");
 
   useEffect(() => {
     ensureVoices();
   }, []);
 
-  if (!speech.supported) return null;
+  if (!speech.supported || !audioAvailable) return null;
 
   const active = speech.sourceId === sourceId && speech.status !== "idle";
   const playing = speech.status === "playing";

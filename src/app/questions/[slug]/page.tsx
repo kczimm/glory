@@ -75,8 +75,8 @@ export default async function QuestionPage({ params, searchParams }: Props) {
   const parents = resolveQuestions(question.followsFrom);
   const related = resolveQuestions(question.related);
   const { prev, next } = trailOf(question);
-  const chain = visitChainData(question);
-  const visitIntro = visitListenData(question);
+  const chain = visitChainData(question, version);
+  const visitIntro = visitListenData(question, version);
 
   return (
     <article>
