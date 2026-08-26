@@ -54,6 +54,28 @@ export function useTranslation() {
     }
   }, []);
 
+  // Guard against the browser's back/forward cache: a page frozen before a
+  // translation switch can be restored by the Back button without any
+  // script re-running, so it would show the previous translation. Tag the
+  // rendered page with its translation and, on a bfcache restore, reload if
+  // the current preference no longer matches.
+  useEffect(() => {
+    const root = document.documentElement;
+    root.dataset.translation = version;
+    const onShow = (e: PageTransitionEvent) => {
+      if (
+        e.persisted &&
+        root.dataset.translation !==
+          resolveVersion(new URLSearchParams(window.location.search))
+      ) {
+        window.location.reload();
+      }
+    };
+    window.addEventListener("pageshow", onShow);
+    return () => window.removeEventListener("pageshow", onShow);
+  }, [version]);
+
+
   /** Apply a translation: persist it and navigate so the server re-renders. */
   const setVersion = (next: TranslationCode) => {
     setVersionInStorage(next);
