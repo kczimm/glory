@@ -4,6 +4,7 @@ import { snippet } from "@/lib/snippet";
 import { verseSlug } from "@/data/ref";
 import { categoryOf } from "@/data/server";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
+import { isValidTranslationCode, type TranslationCode } from "@/lib/translation-shared";
 
 const MAX_QUERY_LENGTH = 120;
 
@@ -30,9 +31,14 @@ export function GET(req: NextRequest) {
     Math.max(Math.trunc(Number(req.nextUrl.searchParams.get("studies")) || 6), 1),
     40,
   );
-  if (!q) return NextResponse.json({ verses: [], questions: [] });
+  
+  // Get translation from query param, default to web
+  const versionParam = req.nextUrl.searchParams.get("version") ?? "web";
+  const translation: TranslationCode = isValidTranslationCode(versionParam) ? versionParam : "web";
+  
+  if (!q) return NextResponse.json({ verses: [], questions: [], translation });
 
-  const verses = searchScripture(q, verseLimit).map((v) => {
+  const verses = searchScripture(q, verseLimit, translation).map((v) => {
     const sn = snippet(v.text, q);
     return {
       ref: v.ref,
@@ -47,5 +53,5 @@ export function GET(req: NextRequest) {
     categoryTitle: categoryOf(question)?.title ?? "",
   }));
 
-  return NextResponse.json({ verses, questions });
+  return NextResponse.json({ verses, questions, translation });
 }

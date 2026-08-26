@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { resolveVersion } from "@/lib/translation";
 
 export interface SearchHit {
   ref: string;
@@ -54,6 +55,9 @@ export function useSearch(term: string, verseLimit = 5, qLimit = 4): SearchState
         const params = new URLSearchParams({ q: term.trim() });
         if (verseLimit !== 8) params.set("verses", String(verseLimit));
         if (qLimit !== 6) params.set("studies", String(qLimit));
+        // Pass current translation to the search API
+        const translation = resolveVersion(new URLSearchParams(window.location.search));
+        if (translation !== "web") params.set("version", translation);
         const res = await fetch(`/api/search?${params}`, { signal: ctrl.signal });
         if (!res.ok) {
           setStatus("error");

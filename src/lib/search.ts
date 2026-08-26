@@ -1,7 +1,8 @@
 import "server-only";
-import { verses, questions, graphVerseRefs } from "@/data/server";
+import { verses as defaultVerses, questions, graphVerseRefs } from "@/data/server";
 import { getCategory } from "@/data";
 import type { Question } from "@/data/types";
+import type { TranslationCode } from "@/lib/translation-shared";
 
 /**
  * Search over the vendored World English Bible and over the study questions.
@@ -22,16 +23,31 @@ interface Entry {
   haystack: string;
 }
 
-let index: Entry[] | null = null;
+// Indexes per translation, cached
+const indexes: Map<TranslationCode, Entry[]> = new Map();
 
-function buildIndex(): Entry[] {
-  if (index) return index;
-  index = new Array(Object.keys(verses).length);
+function buildIndex(translation: TranslationCode = "web"): Entry[] {
+  const cached = indexes.get(translation);
+  if (cached) return cached;
+  const verses = translation === "web" ? defaultVerses : getTranslationVerses(translation);
+  const idx: Entry[] = new Array(Object.keys(verses).length);
   let i = 0;
   for (const ref of Object.keys(verses)) {
-    index[i++] = { ref, haystack: `${ref} ${verses[ref]}`.toLowerCase() };
+    idx[i++] = { ref, haystack: `${ref} ${verses[ref]}`.toLowerCase() };
   }
-  return index;
+  indexes.set(translation, idx);
+  return idx;
+}
+
+/** Get verses for a specific translation. */
+function getTranslationVerses(translation: TranslationCode): Record<string, string> {
+  // Dynamic import to avoid shipping all translations to the client
+  if (translation === "kjv") {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { verses } = require("@/data/scripture-kjv");
+    return verses;
+  }
+  return defaultVerses;
 }
 
 export interface VerseHit {
@@ -232,10 +248,11 @@ function knownVerseRefs(): Set<string> {
 }
 
 /** Case-insensitive substring search of the whole Bible, known verses first. */
-export function searchScripture(term: string, limit = 8): VerseHit[] {
+export function searchScripture(term: string, limit = 8, translation: TranslationCode = "web"): VerseHit[] {
   const t = term.trim().toLowerCase().replace(/\s+/g, " ");
   if (!t) return [];
-  const idx = buildIndex();
+  const verses = translation === "web" ? defaultVerses : getTranslationVerses(translation);
+  const idx = buildIndex(translation);
   const known = knownVerseRefs();
 
   const knownHits: Entry[] = [];
@@ -254,11 +271,11 @@ export interface SearchResults {
   questions: Question[];
 }
 
-export function searchAll(term: string, verseLimit = 8, qLimit = 6): SearchResults {
+export function searchAll(term: string, verseLimit = 8, qLimit = 6, translation: TranslationCode = "web"): SearchResults {
   const t = term.trim().toLowerCase();
   if (!t) return { verses: [], questions: [] };
   return {
-    verses: searchScripture(t, verseLimit),
+    verses: searchScripture(t, verseLimit, translation),
     questions: searchQuestions(t, qLimit),
   };
 }

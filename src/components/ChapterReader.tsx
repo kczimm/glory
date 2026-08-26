@@ -12,6 +12,19 @@ import {
 } from "@/lib/speech";
 import type { SpeechItem } from "@/lib/speech";
 import ListenButton from "@/components/ListenButton";
+import { resolveVersion } from "@/lib/translation";
+import { hasAudio, type TranslationCode } from "@/lib/translation-shared";
+
+/** Subscribe/unsubscribe stub for useSyncExternalStore. */
+function subscribeVersion(): () => void {
+  return () => {};
+}
+function getVersionSnapshot(): string {
+  return typeof window !== "undefined" ? resolveVersion(new URLSearchParams(window.location.search)) : "web";
+}
+function getVersionServerSnapshot(): string {
+  return "web";
+}
 
 /**
  * An expandable full-chapter reader. This is where the learner actually
@@ -30,6 +43,8 @@ export default function ChapterReader({
   const [opened, setOpened] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
   const speech = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const version = useSyncExternalStore(subscribeVersion, getVersionSnapshot, getVersionServerSnapshot) as TranslationCode;
+  const audioAvailable = hasAudio(version);
 
   const sourceId = `chapter:${passage.book} ${passage.chapter}`;
 
@@ -122,11 +137,13 @@ export default function ChapterReader({
             </svg>
           </span>
         </button>
-        <ListenButton
-          sourceId={sourceId}
-          items={items}
-          onStart={() => setOpened(true)}
-        />
+        {audioAvailable && (
+          <ListenButton
+            sourceId={sourceId}
+            items={items}
+            onStart={() => setOpened(true)}
+          />
+        )}
       </div>
       {open && (
         <div

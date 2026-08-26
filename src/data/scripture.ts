@@ -4,6 +4,7 @@
 
 export const translation = "World English Bible";
 export const translationNote = "Public Domain";
+export const translationCode = "web";
 
 export const verses: Record<string, string> = {
   "1 Chronicles 1:1": "Adam, Seth, Enosh,",
