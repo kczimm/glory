@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getQuestion, getPassageText } from "@/data/server";
 import { SITE_NAME } from "@/lib/site";
+import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
 
 export const alt = "Glory study";
 export const size = { width: 1200, height: 630 };
@@ -15,11 +16,20 @@ const C = {
   line: "#e6ddc9",
 };
 
-export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+export default async function Image({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ version?: string }>;
+}) {
   const { slug } = await params;
+  const sp = await searchParams;
+  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const translationInfo = getTranslationInfo(version);
   const q = getQuestion(slug);
   const ref = q?.keyVerses[0];
-  const verseText = ref ? getPassageText(ref) : null;
+  const verseText = ref ? getPassageText(ref, version) : null;
 
   return new ImageResponse(
     (
@@ -76,7 +86,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           {verseText && ref ? (
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
               <span style={{ fontSize: "22px", letterSpacing: "0.12em", textTransform: "uppercase", color: C.goldDeep, fontWeight: 600 }}>
-                {ref} · World English Bible
+                {ref} · {translationInfo.shortName}
               </span>
               <div style={{ fontSize: "30px", color: C.inkSoft, lineHeight: 1.4, maxHeight: "170px", overflow: "hidden" }}>
                 {verseText}

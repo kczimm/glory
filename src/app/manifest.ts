@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Glory: A question-driven study of Scripture",
     short_name: "Glory",
     description:
-      "Come with a question. Leave with Scripture. A topical, question-driven Bible study of who God is and our relationship with Him, grounded in the World English Bible.",
+      "Come with a question. Leave with Scripture. A topical, question-driven Bible study of who God is and our relationship with Him, grounded in the Word of God.",
     start_url: "/",
     display: "standalone",
     background_color: "#fbf7ee",

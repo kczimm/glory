@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { refFromSlug, getPassageText } from "@/data/server";
 import { SITE_NAME } from "@/lib/site";
+import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
 
 export const alt = "Verse";
 export const size = { width: 1200, height: 630 };
@@ -18,10 +19,19 @@ const C = {
   line: "#e6ddc9",
 };
 
-export default async function Image({ params }: { params: Promise<{ ref: string }> }) {
+export default async function Image({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ ref: string }>;
+  searchParams?: Promise<{ version?: string }>;
+}) {
   const { ref } = await params;
+  const sp = await searchParams;
+  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const translationInfo = getTranslationInfo(version);
   const verse = refFromSlug(ref);
-  const text = verse ? getPassageText(verse) : null;
+  const text = verse ? getPassageText(verse, version) : null;
 
   return new ImageResponse(
     (
@@ -75,7 +85,7 @@ export default async function Image({ params }: { params: Promise<{ ref: string 
             {verse ?? "Scripture"}
           </div>
           <div style={{ fontSize: "38px", color: C.ink, lineHeight: 1.4, maxHeight: "300px", overflow: "hidden" }}>
-            {text ?? "The Word of God, read in the World English Bible."}
+            {text ?? `The Word of God, read in the ${translationInfo.name}.`}
           </div>
         </div>
 
@@ -88,7 +98,7 @@ export default async function Image({ params }: { params: Promise<{ ref: string 
             paddingTop: "24px",
           }}
         >
-          <span style={{ fontSize: "20px", color: C.inkFaint }}>World English Bible, public domain</span>
+          <span style={{ fontSize: "20px", color: C.inkFaint }}>{translationInfo.name}, public domain</span>
           <span style={{ fontSize: "20px", color: C.inkFaint }}>glorystudy.com</span>
         </div>
       </div>

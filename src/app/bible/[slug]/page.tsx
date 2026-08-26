@@ -4,10 +4,11 @@ import { notFound } from "next/navigation";
 import { chapterSlug, bookFromSlug } from "@/data/books";
 import { parseRef, verseKeys, verseSlug } from "@/data/ref";
 import { getChapter, bibleBooks, graphVerseRefs } from "@/data/server";
-import { translation } from "@/data/scripture";
+import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
 
 interface Props {
   params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ version?: string }>;
 }
 
 /** Every single verse touched by a study citation or cross-reference edge. */
@@ -22,18 +23,23 @@ const graphVerses = (() => {
 })();
 
 /** The whole canon as an ordered (book, chapter) walk, for prev/next. */
-const canon = bibleBooks().flatMap(({ book, chapters }) =>
-  Array.from({ length: chapters }, (_, i) => ({ book, chapter: i + 1 }))
-);
+function getCanon(version: TranslationCode = "web") {
+  return bibleBooks(version).flatMap(({ book, chapters }) =>
+    Array.from({ length: chapters }, (_, i) => ({ book, chapter: i + 1 }))
+  );
+}
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { slug } = await params;
+  const sp = await searchParams;
+  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const translationInfo = getTranslationInfo(version);
   const { book, chapter } = parseChapterSlug(slug) ?? {};
   if (!book || !chapter) return {};
   const title = `${book} ${chapter}`;
   return {
     title,
-    description: `${title}: read the whole chapter in the World English Bible, offline.`,
+    description: `${title}: read the whole chapter in the ${translationInfo.name}, offline.`,
     alternates: { canonical: `/bible/${slug}` },
   };
 }
@@ -45,13 +51,17 @@ function parseChapterSlug(slug: string): { book: string; chapter: number } | nul
   return book ? { book, chapter: Number(m[2]) } : null;
 }
 
-export default async function BibleChapter({ params }: Props) {
+export default async function BibleChapter({ params, searchParams }: Props) {
   const { slug } = await params;
+  const sp = await searchParams;
+  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const translationInfo = getTranslationInfo(version);
   const parsed = parseChapterSlug(slug);
   if (!parsed) notFound();
-  const verses = getChapter(parsed.book, parsed.chapter);
+  const verses = getChapter(parsed.book, parsed.chapter, version);
   if (!verses) notFound();
 
+  const canon = getCanon(version);
   const idx = canon.findIndex(
     (c) => c.book === parsed.book && c.chapter === parsed.chapter
   );
@@ -72,7 +82,7 @@ export default async function BibleChapter({ params }: Props) {
             {parsed.book} {parsed.chapter}
           </h1>
           <div className="mt-4 flex items-center gap-3 text-[13px] text-ink-soft">
-            <span>{translation}</span>
+            <span>{translationInfo.shortName}</span>
             <span aria-hidden>·</span>
             <nav className="flex gap-2" aria-label="Nearby chapters">
               {prev ? (

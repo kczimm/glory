@@ -2,15 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { chapterSlug } from "@/data/books";
 import { bibleBooks } from "@/data/server";
+import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
 
 export const metadata: Metadata = {
   title: "Read the Word",
   description:
-    "Read any chapter of the World English Bible offline: all 66 books, whole chapters, with cross-references into the studies.",
+    "Read any chapter of the Bible offline: all 66 books, whole chapters, with cross-references into the studies.",
 };
 
-export default function BibleIndex() {
-  const books = bibleBooks();
+interface Props {
+  searchParams?: Promise<{ version?: string }>;
+}
+
+export default async function BibleIndex({ searchParams }: Props) {
+  const sp = await searchParams;
+  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const translationInfo = getTranslationInfo(version);
+  const books = bibleBooks(version);
 
   return (
     <div className="mx-auto max-w-5xl px-5 py-16">
@@ -22,7 +30,7 @@ export default function BibleIndex() {
           Whole chapters, whole Word
         </h1>
         <p className="mt-4 text-[16px] leading-relaxed text-ink-soft">
-          Every chapter of the World English Bible is here, ready offline. Pick
+          Every chapter of the {translationInfo.name} is here, ready offline. Pick
           a book and read at length; verses that appear in a study or a
           cross-reference lead you back into the questions.
         </p>

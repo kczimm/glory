@@ -5,9 +5,11 @@ import { verseSlug } from "@/data";
 import { questions, getQuestion, categoryOf, getPassageText, getChapterFocus } from "@/data/server";
 import AutoPrint from "@/components/AutoPrint";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
+import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
 
 interface Props {
   params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ version?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -29,8 +31,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  * their grounding verses, and the key verses. Hidden from search engines;
  * opened with ?print=1 it opens the print dialog automatically.
  */
-export default async function PrintStudyPage({ params }: Props) {
+export default async function PrintStudyPage({ params, searchParams }: Props) {
   const { slug } = await params;
+  const sp = await searchParams;
+  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const translationInfo = getTranslationInfo(version);
   const question = getQuestion(slug);
   if (!question) notFound();
 
@@ -62,7 +67,7 @@ export default async function PrintStudyPage({ params }: Props) {
         </h1>
         <p className="mt-3 max-w-[65ch] text-ink-soft">{question.summary}</p>
         <p className="mt-3 text-[11px] text-ink-faint">
-          {SITE_URL}/questions/{slug} · Scripture quoted from the World English Bible
+          {SITE_URL}/questions/{slug} · Scripture quoted from the {translationInfo.name}
         </p>
       </header>
 
@@ -72,7 +77,7 @@ export default async function PrintStudyPage({ params }: Props) {
           Begin by reading
         </h2>
         {question.passages.map((p) => {
-          const verses = getChapterFocus(p.book, p.chapter, p.focus);
+          const verses = getChapterFocus(p.book, p.chapter, p.focus, version);
           if (!verses) return null;
           return (
             <div key={`${p.book}-${p.chapter}`} className="mt-5 break-inside-avoid-page">
@@ -106,7 +111,7 @@ export default async function PrintStudyPage({ params }: Props) {
             </h3>
             <p className="mt-2 max-w-[70ch] text-ink">{point.body}</p>
             {point.verses.map((ref) => {
-              const text = getPassageText(ref);
+              const text = getPassageText(ref, version);
               return (
                 <blockquote
                   key={ref}

@@ -84,7 +84,7 @@ export default function OpengraphImage() {
             paddingTop: "24px",
           }}
         >
-          <span style={{ fontSize: "20px", color: C.inkFaint }}>World English Bible, public domain</span>
+          <span style={{ fontSize: "20px", color: C.inkFaint }}>Public Domain translations</span>
           <span style={{ fontSize: "20px", color: C.inkFaint }}>glorystudy.com</span>
         </div>
       </div>

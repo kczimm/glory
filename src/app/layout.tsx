@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import RegisterServiceWorker from "@/components/RegisterServiceWorker";
 import SpeechPlayer from "@/components/SpeechPlayer";
 import { SITE_URL } from "@/lib/site";
 
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s · Glory",
   },
   description:
-    "Come with a question. Leave with Scripture. A topical, question-driven Bible study of who God is and our relationship with Him, grounded in the World English Bible.",
+    "Come with a question. Leave with Scripture. A topical, question-driven Bible study of who God is and our relationship with Him, grounded in the Word of God.",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">{children}</main>
         <Footer />
         <SpeechPlayer />
+        <RegisterServiceWorker />
       </body>
     </html>
   );

@@ -12,6 +12,7 @@ import {
 import ShareButton from "@/components/ShareButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { chapterSlug } from "@/data/books";
+import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
 
 interface Props {
   params: Promise<{ ref: string }>;
@@ -21,31 +22,37 @@ export async function generateStaticParams() {
   return graphVerseRefs().map((ref) => ({ ref: verseSlug(ref) }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props & { searchParams?: Promise<{ version?: string }> }): Promise<Metadata> {
   const { ref } = await params;
+  const sp = await searchParams;
+  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const translationInfo = getTranslationInfo(version);
   const verse = refFromSlug(ref);
   if (!verse) return {};
-  const text = getPassageText(verse);
+  const text = getPassageText(verse, version);
   if (!text) return {};
   return {
     title: verse,
-    description: `${verse}: read in the World English Bible, with the study questions and cross-references that connect to it.`,
+    description: `${verse}: read in the ${translationInfo.name}, with the study questions and cross-references that connect to it.`,
     alternates: { canonical: `${SITE_URL}/verses/${ref}` },
     openGraph: {
       type: "article",
       title: verse,
-      description: `${verse}: read in the World English Bible, with the study questions and cross-references that connect to it.`,
+      description: `${verse}: read in the ${translationInfo.name}, with the study questions and cross-references that connect to it.`,
       url: `${SITE_URL}/verses/${ref}`,
       siteName: SITE_NAME,
     },
   };
 }
 
-export default async function VersePage({ params }: Props) {
+export default async function VersePage({ params, searchParams }: Props & { searchParams?: Promise<{ version?: string }> }) {
   const { ref } = await params;
+  const sp = await searchParams;
+  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
+  const translationInfo = getTranslationInfo(version);
   const verse = refFromSlug(ref);
   if (!verse) notFound();
-  const text = getPassageText(verse);
+  const text = getPassageText(verse, version);
   if (!text) notFound();
 
   const used = questionsUsing(verse);
@@ -78,7 +85,7 @@ export default async function VersePage({ params }: Props) {
             {text}
           </p>
           <p className="mt-3 text-[14px] font-semibold tracking-wide text-gold-deep">
-            {verse} · World English Bible
+            {verse} · {translationInfo.shortName}
             {chapterHref && (
               <Link
                 href={chapterHref}
