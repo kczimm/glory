@@ -314,6 +314,158 @@ export const connections: Record<string, Connection[]> = {
     c("2 Corinthians 10:4-5", "parallel", "Divine weapons to pull down the strongholds of the enemy."),
     c("1 Thessalonians 5:8", "theme", "Put on the breastplate of faith and love, and the helmet of hope: the same armor."),
   ],
+
+  // ------------------------------------------------------------------
+  // OT story studies (canonical era trails)
+  // ------------------------------------------------------------------
+// what-does-the-flood-show-us-about-god
+  "Genesis 6:6": [
+    c("Hosea 11:8", "parallel", "The God who grieved over drowning a violent world also cries out over Ephraim with His heart turned within Him, proving divine judgment always flows through grief, not indifference."),
+  ],
+  "Genesis 6:8": [
+    c("Ephesians 2:8", "pattern", "Noah found favor in God's eyes before any achievement, the same order of salvation Paul names directly: by grace you have been saved, and that not of yourselves."),
+  ],
+  "Genesis 7:23": [
+    c("Matthew 24:37", "theme", "Jesus points back to the days of Noah as the standing pattern for His return, so the flood teaches that history is heading toward a real day of verdict."),
+  ],
+  "Genesis 8:1": [
+    c("Exodus 2:24", "parallel", "God remembered Noah at the ark and God remembered His covenant with Abraham at the Red Sea, marking both turning points where deliverance begins with God acting on His promise."),
+  ],
+  "Genesis 9:15": [
+    c("Isaiah 54:9", "promise", "God stakes future salvation on the flood covenant itself, swearing that as the waters of Noah will not again cover the earth, so His anger will not return against His redeemed people."),
+  ],
+  "1 Peter 3:21": [
+    c("Romans 6:4", "fulfilled", "Peter calls the flood waters a symbol of baptism, and Paul explains the reality: burial with Christ in baptism and rising with Him to newness of life."),
+  ],
+// what-happened-at-babel
+  "Genesis 11:4": [
+    c("Daniel 4:30", "pattern", "Nebuchadnezzar repeats Babel word for word, boasting of great Babylon he built for his own majesty's glory."),
+    c("Luke 14:11", "contrast", "Babel exalts a name and is scattered; Jesus says whoever exalts himself will be humbled, and whoever humbles himself will be exalted."),
+  ],
+  "Genesis 11:5": [
+    c("Psalms 113:6", "theme", "The God who must come down even to see mankind's tallest tower is the same God who stoops down to see heaven and earth."),
+  ],
+  "Genesis 11:9": [
+    c("Zephaniah 3:9", "promise", "What Yahweh confused at Babel He promises to purify, giving the peoples pure lips to call on His name together."),
+  ],
+  "Genesis 11:8": [
+    c("Acts 17:26", "fulfilled", "Paul reads the scattering as God's providence, fixing the appointed seasons and boundaries of every nation made from one blood."),
+  ],
+  "Acts 2:6": [
+    c("Genesis 11:7", "contrast", "At Babel confused languages stopped understanding; at Pentecost many languages carry one message and everyone understands."),
+  ],
+// why-did-god-test-abraham-with-isaac
+  "Genesis 22:5": [
+    c("Hebrews 11:19", "parallel", "Telling the servants that both would come back shows Abraham had already concluded that God is able to raise up even from the dead."),
+  ],
+  "Genesis 22:8": [
+    c("John 1:29", "fulfilled", "Abraham's confidence that God would provide the lamb is answered when John names Jesus the Lamb of God who takes away the sin of the world."),
+  ],
+  "Genesis 22:12": [
+    c("Romans 8:32", "contrast", "Abraham was stopped before he could give his son, but God went through with it and did not spare His own Son for us all."),
+  ],
+  "Genesis 22:13": [
+    c("1 Peter 1:19", "pattern", "A substitute dies so the promised son lives, foreshadowing the faultless and pure lamb, the blood of Christ."),
+  ],
+  "Genesis 22:14": [
+    c("Genesis 15:6", "theme", "The mountain named Yahweh Will Provide stands near the earlier moment when Abraham believed Yahweh and was counted righteous."),
+  ],
+  "Hebrews 11:19": [
+    c("John 11:25", "theme", "The resurrection Abraham trusted God for is the reality Jesus claims to be when He calls Himself the resurrection and the life."),
+  ],
+// why-did-god-give-israel-the-law-at-sinai
+  "Exodus 20:2": [
+    c("Romans 6:14", "theme", "Paul's order matches Sinai's preamble: being under grace rather than law does not weaken obedience, it grounds obedience in rescue already accomplished."),
+  ],
+  "Exodus 19:5": [
+    c("1 Peter 2:9", "fulfilled", "Peter applies Sinai's covenant identity language directly to the church, calling believers 'a people for God’s own possession'."),
+  ],
+  "Exodus 19:6": [
+    c("Revelation 1:6", "fulfilled", "John sees the Sinai ideal realized in Christ, who made us 'priests to his God and Father', a kingdom of priestly worshipers."),
+  ],
+  "Exodus 20:19": [
+    c("Hebrews 12:22", "contrast", "Israel begged God to stop speaking from the trembling mountain, while the writer of Hebrews announces that believers have come instead to joyful Mount Zion through the Mediator."),
+  ],
+  "Matthew 5:17": [
+    c("Romans 10:4", "fulfilled", "Paul agrees with Jesus that the law is not discarded but reaches its goal, since 'Christ is the fulfillment of the law' for everyone who believes."),
+  ],
+  "Galatians 3:24": [
+    c("Romans 3:31", "parallel", "Both apostles defend the law against misuse: the tutor leads to Christ, and faith upholds the law rather than nullifying it."),
+  ],
+// why-did-god-spare-rahab
+  "Joshua 2:11": [
+    c("Deuteronomy 4:39", "parallel", "Israel's own confession that Yahweh alone is God over heaven and earth comes first here from a Canaanite woman's lips."),
+  ],
+  "Joshua 2:21": [
+    c("Exodus 12:13", "pattern", "A visible sign on the house marks out those spared when judgment passes through, just as the Passover blood marked the doorposts."),
+  ],
+  "Joshua 6:17": [
+    c("Genesis 15:16", "fulfilled", "Jericho falls in exactly the generation God named to Abraham, when the iniquity of the Amorite would finally be full."),
+  ],
+  "Joshua 6:25": [
+    c("Genesis 12:3", "fulfilled", "The promise to bless all families of the earth through Abraham's seed begins reaching Canaanites in Rahab's rescue."),
+  ],
+  "Hebrews 11:31": [
+    c("James 2:25", "parallel", "Two New Testament writers hold up the same woman: Hebrews to display her faith, James to show that her faith worked."),
+  ],
+  "Matthew 1:5": [
+    c("Galatians 3:8", "fulfilled", "The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother."),
+  ],
+// what-does-ruth-teach-about-redemption
+  "Ruth 2:12": [
+    c("Psalms 91:4", "theme", "Boaz blesses the foreigner who took refuge under the wings of the God of Israel, and the Psalm turns that same shelter into every believer's promise."),
+    c("Matthew 23:37", "theme", "Jesus longs to gather Jerusalem 'even as a hen gathers her chicks under her wings,' the very refuge image Boaz invoked over Ruth."),
+  ],
+  "Ruth 2:20": [
+    c("Ruth 4:14", "theme", "What Naomi names as God's hesed over the barley harvest ripens into the town's cry, 'Blessed be Yahweh,' over a grandson."),
+  ],
+  "Leviticus 25:25": [
+    c("Ephesians 1:7", "pattern", "The law's provision for a kinsman to buy back what a brother lost anticipates redemption's core cost: in Christ we have 'redemption through his blood', the price Boaz's transaction only foreshadowed."),
+  ],
+  "Ruth 4:9": [
+    c("Ephesians 1:7", "fulfilled", "Boaz pays out silver to buy back a lost inheritance, while we have redemption through blood, the costlier purchase Boaz only foreshadowed."),
+  ],
+  "Ruth 4:10": [
+    c("1 Peter 1:18-19", "contrast", "Ruth was bought with a legal transaction at the gate, but Peter says we were redeemed not with silver or gold 'but with precious blood, as of a faultless and pure lamb.'"),
+  ],
+  "Ruth 4:22": [
+    c("Matthew 1:5", "fulfilled", "The book ends its genealogy at David, and Matthew traces that exact line through Rahab, Boaz, Ruth, Obed, and Jesse straight to Jesus."),
+  ],
+// why-did-david-spare-saul
+  "1 Samuel 24:6": [
+    c("Psalms 105:15", "theme", "Yahweh guards His anointed ones Himself, warning 'Don't touch my anointed ones!', so David refuses the very touch God reserved to His own authority."),
+  ],
+  "1 Samuel 24:12": [
+    c("Romans 12:19", "parallel", "David hands his case to Yahweh centuries before Paul tells every believer to give place to God's wrath instead of seeking revenge."),
+  ],
+  "1 Samuel 26:10": [
+    c("Psalms 37:7", "theme", "David lives out the psalmist's counsel to rest in Yahweh and wait patiently, trusting God's timing for a throne already promised."),
+  ],
+  "Romans 12:19": [
+    c("Deuteronomy 32:35", "quotes", "Paul cites the song of Moses, where Yahweh claims vengeance and recompense as His own prerogative rather than Israel's."),
+  ],
+  "Romans 12:21": [
+    c("1 Peter 2:23", "pattern", "Jesus embodied the command: when he was cursed he didn't curse back, but committed himself to him who judges righteously."),
+  ],
+// why-did-god-send-jonah-to-nineveh
+  "Jonah 1:17": [
+    c("Matthew 12:40", "fulfilled", "Jesus reads Jonah's three days in the fish as a prophetic sign of His own burial and resurrection."),
+  ],
+  "Jonah 2:9": [
+    c("Psalms 3:8", "theme", "A hunted psalmist and a drowning prophet land on the same confession, that salvation belongs to Yahweh alone."),
+  ],
+  "Jonah 3:10": [
+    c("Exodus 32:14", "pattern", "Both scenes show Yahweh relenting from declared disaster, once at Moses' intercession and once at Nineveh's repentance."),
+  ],
+  "Jonah 4:2": [
+    c("Exodus 34:6", "quotes", "Jonah prays back what God proclaimed about Himself at Sinai, including that He is 'slow to anger, and abundant in loving kindness'."),
+  ],
+  "Jonah 3:5": [
+    c("Matthew 12:41", "fulfilled", "Jesus treats Nineveh's repentance as historical and so real that its citizens will rise in judgment on unbelieving generations."),
+  ],
+  "Jonah 4:11": [
+    c("Luke 15:10", "theme", "God's pity for the hundred twenty thousand of Nineveh anticipates heaven's joy over one repenting sinner."),
+  ],
 };
 
 /** Connections leaving from a verse reference. */

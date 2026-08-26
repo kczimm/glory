@@ -15269,7 +15269,7 @@ export const questions: Question[] = [
     raises: ["what-went-wrong-in-eden", "why-did-god-create-us", "is-the-whole-bible-about-jesus"],
     followsFrom: [],
     related: ["how-do-i-find-christ-in-the-old-testament", "what-is-the-new-heaven-and-new-earth"],
-    planned: ["Why is the Bible arranged the way it is?", "What does the flood show us about God's judgment and mercy?", "Why did God scatter the nations at Babel?"],
+    planned: ["Why is the Bible arranged the way it is?"],
     order: 86,
   },
 
@@ -15329,7 +15329,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 2:17", "Genesis 3:15", "Romans 5:12"],
-    raises: ["what-is-sin", "why-does-god-allow-suffering", "why-did-jesus-have-to-die", "why-did-god-call-abraham"],
+    raises: ["what-is-sin", "why-does-god-allow-suffering", "why-did-jesus-have-to-die", "why-did-god-call-abraham", "what-does-the-flood-show-us-about-god"],
     followsFrom: ["what-is-the-bibles-big-story", "why-did-god-create-us", "what-does-it-mean-to-be-made-in-gods-image"],
     related: ["where-does-temptation-come-from", "does-god-use-our-failures"],
     planned: ["Why did God place the tree in the garden at all?"],
@@ -15392,10 +15392,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 12:1-3", "Genesis 15:6", "Galatians 3:8"],
-    raises: ["what-is-faith", "did-god-choose-me", "how-do-i-find-christ-in-the-old-testament", "what-does-the-exodus-show-us-about-god"],
-    followsFrom: ["what-went-wrong-in-eden", "what-is-the-bibles-big-story"],
+    raises: ["what-is-faith", "did-god-choose-me", "how-do-i-find-christ-in-the-old-testament", "what-does-the-exodus-show-us-about-god", "why-did-god-test-abraham-with-isaac"],
+    followsFrom: ["what-went-wrong-in-eden", "what-is-the-bibles-big-story", "what-happened-at-babel"],
     related: ["faith-or-works", "what-is-the-gospel"],
-    planned: ["Why did God test Abraham with Isaac?", "How did Jacob become Israel?", "What was God doing in Joseph's slavery?"],
+    planned: ["How did Jacob become Israel?", "What was God doing in Joseph's slavery?"],
     order: 88,
   },
 
@@ -15462,10 +15462,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 12:13", "Exodus 14:31", "Exodus 6:7", "1 Corinthians 5:7"],
-    raises: ["why-did-jesus-have-to-die", "how-do-i-find-christ-in-the-old-testament", "why-did-israel-keep-drifting-into-idolatry"],
+    raises: ["why-did-jesus-have-to-die", "how-do-i-find-christ-in-the-old-testament", "why-did-israel-keep-drifting-into-idolatry", "why-did-god-give-israel-the-law-at-sinai", "why-did-god-spare-rahab"],
     followsFrom: ["why-did-god-call-abraham", "what-is-the-bibles-big-story"],
     related: ["what-is-baptism", "what-is-the-new-heart-that-god-promised"],
-    planned: ["Why did God harden Pharaoh's heart?", "Why did God give Israel the law at Sinai?", "What was the tabernacle for?"],
+    planned: ["Why did God harden Pharaoh's heart?", "What was the tabernacle for?"],
     order: 89,
   },
 
@@ -15525,11 +15525,11 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 32:4", "Judges 21:25", "1 Kings 18:21", "Jeremiah 31:33"],
-    raises: ["are-there-other-gods", "what-is-sin", "what-is-the-new-heart-that-god-promised", "why-did-god-promise-david-an-eternal-throne"],
+    raises: ["are-there-other-gods", "what-is-sin", "what-is-the-new-heart-that-god-promised", "why-did-god-promise-david-an-eternal-throne", "why-did-david-spare-saul", "why-did-god-send-jonah-to-nineveh"],
     followsFrom: ["what-does-the-exodus-show-us-about-god", "are-there-other-gods"],
     related: ["where-does-temptation-come-from", "repentance-one-time-or-lifelong"],
     planned: ["What modern idols hide in ordinary Christian lives?"],
-    order: 90,
+    order: 92,
   },
 
   {
@@ -15589,10 +15589,10 @@ export const questions: Question[] = [
     ],
     keyVerses: ["2 Samuel 7:16", "Psalms 89:34", "Luke 1:32-33"],
     raises: ["what-does-it-mean-that-jesus-is-the-son-of-david", "what-does-the-title-christ-mean", "why-did-god-send-his-people-into-exile"],
-    followsFrom: ["why-did-israel-keep-drifting-into-idolatry", "what-does-the-exodus-show-us-about-god"],
+    followsFrom: ["why-did-israel-keep-drifting-into-idolatry", "why-did-david-spare-saul"],
     related: ["what-is-the-kingdom-of-god", "how-do-i-find-christ-in-the-old-testament"],
     planned: ["Why was David a man after God's own heart despite his sins?"],
-    order: 91,
+    order: 94,
   },
 
   {
@@ -15655,7 +15655,7 @@ export const questions: Question[] = [
     followsFrom: ["why-did-god-promise-david-an-eternal-throne", "why-did-israel-keep-drifting-into-idolatry"],
     related: ["how-does-god-discipline-his-children", "where-is-god-in-my-pain"],
     planned: ["How should Christians live as exiles in their own culture?"],
-    order: 92,
+    order: 93,
   },
 
   {
@@ -15724,7 +15724,571 @@ export const questions: Question[] = [
     followsFrom: ["why-did-god-send-his-people-into-exile", "why-did-god-promise-david-an-eternal-throne", "what-is-the-bibles-big-story"],
     related: ["is-the-whole-bible-about-jesus", "how-do-i-find-christ-in-the-old-testament", "what-is-the-gospel"],
     planned: ["Where do the wisdom books fit in the Bible's story?"],
+    order: 94,
+  },
+
+  // ------------------------------------------------------------------
+  // OT story studies (canonical era trails)
+  // ------------------------------------------------------------------
+
+  {
+    slug: "what-does-the-flood-show-us-about-god",
+    question: "What does the flood show us about God's judgment and mercy?",
+    category: "in-the-beginning",
+    summary:
+      "The flood shows us a God who is anything but indifferent: He saw the violence and evil filling the earth, and it grieved Him in His heart. His judgment really fell, yet Noah found favor before he had built a single plank, and after the waters receded God bound Himself by a covenant never again to destroy all flesh by flood. The same water that buried the old world carried the ark, and Peter says that water points to baptism.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 6,
+        title: "The corruption and the grace",
+        lookFor: "Why God's heart was grieved rather than merely angry, how Noah found favor, and what God commanded him to build.",
+        focus: "5-22",
+      },
+      {
+        book: "Genesis",
+        chapter: 7,
+        title: "The flood comes",
+        lookFor: "How completely judgment fell on everything outside the ark, and how completely God preserved what He had shut inside.",
+        focus: "17-24",
+      },
+      {
+        book: "Genesis",
+        chapter: 8,
+        title: "God remembers",
+        lookFor: "The wind passing over the waters, Noah's altar of thanksgiving, and God's promise spoken to Himself about the human heart.",
+        focus: "20-22",
+      },
+      {
+        book: "Genesis",
+        chapter: 9,
+        title: "The bow in the cloud",
+        lookFor: "A covenant made not only with Noah but with every living creature, sealed by a sign God set in the sky as His own reminder.",
+        focus: "8-17",
+      },
+    ],
+    points: [
+      {
+        heading: "God judged sin, and it grieved Him to do it",
+        body:
+          "The flood does not open with a distant deity losing patience. It opens with a heartbroken one: 'Yahweh saw that the wickedness of man was great in the earth', and 'it grieved him in his heart.' Sin is not a technicality God waves off; corruption so wounded the Maker that judgment itself cost Him. If you have ever pictured God as coldly dropping the hammer, Genesis 6 corrects the picture.",
+        verses: ["Genesis 6:5", "Genesis 6:6"],
+      },
+      {
+        heading: "Judgment is real, moral, and final",
+        body:
+          "Whatever the flood means, it cannot mean less than this: 'Only Noah was left, and those who were with him in the ship.' Peter calls it the flood brought 'on the world of the ungodly', a real verdict on real evil. Jesus treats it the same way, saying 'As the days of Noah were, so will be the coming of the Son of Man.' The story stands as history's standing warning that God will one day judge the world.",
+        verses: ["Genesis 7:23", "2 Peter 2:5", "Matthew 24:37"],
+      },
+      {
+        heading: "Noah found grace before he built anything",
+        body:
+          "'But Noah found favor in Yahweh's eyes' comes before the ark, before the obedience, before any record of righteousness. Grace is the cause; the boat is the fruit. Even Noah's righteousness is God's assessment: 'I have seen your righteousness before me in this generation.' Then comes the simplest sentence about him: 'Thus Noah did. He did all that God commanded him.' Saved by favor, saved through trusting obedience; that order has never changed.",
+        verses: ["Genesis 6:8", "Genesis 7:1", "Genesis 6:22"],
+      },
+      {
+        heading: "God remembers",
+        body:
+          "Months of water could feel like abandonment, until the narrator says, 'God remembered Noah'. Remember, in Scripture, is never recalling something forgotten; it is God moving in covenant faithfulness. He remembered Noah at the ark and Israel groaning in Egypt. And then God remembers what humanity is: 'the imagination of man's heart is evil from his youth', and promises to restrain the curse anyway. Mercy acts with full knowledge of us, not naive hope about us.",
+        verses: ["Genesis 8:1", "Exodus 2:24", "Genesis 8:21"],
+      },
+      {
+        heading: "The bow, the water, and baptism",
+        body:
+          "God set 'my rainbow in the cloud' as a sign of a covenant with every living creature, swearing the waters 'will no more become a flood to destroy all flesh'. Isaiah swears salvation on that very pledge. Peter then reads the flood as a pattern: eight souls 'were saved through water', which he calls 'a symbol of baptism', saving 'through the resurrection of Jesus Christ'. Judgment fell on Christ so that the waters that should drown us now carry us.",
+        verses: ["Genesis 9:13", "Genesis 9:15", "Isaiah 54:9", "1 Peter 3:20", "1 Peter 3:21"],
+      },
+    ],
+    keyVerses: ["Genesis 6:5-6", "Genesis 6:8", "Genesis 8:1", "Genesis 9:13-16", "1 Peter 3:21"],
+    raises: ["what-happened-at-babel", "does-god-change-his-mind"],
+    followsFrom: ["what-went-wrong-in-eden", "what-is-the-bibles-big-story"],
+    related: ["why-does-god-allow-suffering", "what-is-baptism"],
+    planned: [],
+    order: 94,
+  },
+
+  {
+    slug: "what-happened-at-babel",
+    question: "What happened at Babel?",
+    category: "in-the-beginning",
+    summary:
+      "Humanity, still one family with one language, pooled its strength to build a city and a tower and to make a name for itself rather than receive the name God gives. God came down, confused their speech, and scattered them over the earth: a judgment that was also quiet providence, filling the world He meant to fill. At Pentecost many languages heard one gospel, the first hint that what Babel divided, God would reunite in Christ.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 11,
+        title: "Babel",
+        lookFor: "One language turned into one pride project, then God's surprising gentleness: He comes down, confuses, and scatters.",
+        focus: "1-9",
+      },
+      {
+        book: "Genesis",
+        chapter: 10,
+        title: "Nimrod's world",
+        lookFor: "Where Babel sits in the table of nations: Nimrod's kingdom begins there, so Babel is already empire in embryo.",
+        focus: "8-12",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Pentecost, the reversal",
+        lookFor: "Devout Jews from every nation hearing the mighty works of God, each in his own language: many tongues, one people.",
+        focus: "5-13",
+      },
+    ],
+    points: [
+      {
+        heading: "One language became one pride project",
+        body:
+          "Nothing in the text says the tower was aimed at heaven's throne; the aim was self-preservation by reputation: \"let's make ourselves a name, lest we be scattered abroad.\" They had been told to fill the earth, so scattering was the command they were engineering against. Babel is pride wearing the mask of safety, technology and consensus harnessed to secure a future without God.",
+        verses: ["Genesis 11:4", "Genesis 9:1"],
+      },
+      {
+        heading: "Babel was empire before it was a ruin",
+        body:
+          "The table of nations has already introduced Nimrod, the mighty hunter, and noted, \"The beginning of his kingdom was Babel.\" So the tower episode is not an isolated oddity; it is the seed of Babylon and Assyria, the powers Israel will meet for a thousand years. Genesis wants you to see that human empire and human self-naming grow from the same root.",
+        verses: ["Genesis 10:8-10", "Genesis 10:11"],
+      },
+      {
+        heading: "God came down to inspect their tallest work",
+        body:
+          "After all the brick and tar, the punchline is scale: \"Yahweh came down to see the city and the tower.\" Their greatest achievement required Him to stoop even to see it. And His response is not lightning but wit: if united rebellion can do anything, \"Come, let's go down, and there confuse their language.\" Judgment here is almost gentle, like a father separating squabbling children before someone gets hurt.",
+        verses: ["Genesis 11:5", "Genesis 11:6-7", "Psalms 113:6"],
+      },
+      {
+        heading: "Scattering was judgment and providence at once",
+        body:
+          "\"So Yahweh scattered them abroad\": the very thing they feared became the thing God accomplished, and the very thing He had commanded. Centuries later Paul tells Athens the same story from the other side: God made every nation from one man and set the boundaries of its dwelling \"that they should seek the Lord.\" The dispersion of the nations was punishment on pride and preparation for grace at the same time.",
+        verses: ["Genesis 11:8-9", "Acts 17:26-27"],
+      },
+      {
+        heading: "Pentecost began undoing Babel",
+        body:
+          "At Babel many languages meant confusion and scattering; at Pentecost the crowd was \"bewildered, because everyone heard them speaking in his own language.\" The sign announced the direction of history: not one empire forcing one tongue, but one Spirit gathering every tongue. What Babel divided, Pentecost starts to heal, and Revelation pictures its completion when a multitude from every nation sings one song.",
+        verses: ["Acts 2:6", "Acts 2:11", "Revelation 7:9"],
+      },
+    ],
+    keyVerses: ["Genesis 11:4", "Genesis 11:7", "Genesis 11:9", "Acts 2:6", "Acts 17:26-27"],
+    raises: ["why-did-god-call-abraham"],
+    followsFrom: ["what-does-the-flood-show-us-about-god"],
+    related: ["why-do-i-need-the-church", "who-is-the-holy-spirit"],
+    planned: [],
+    order: 95,
+  },
+
+  {
+    slug: "why-did-god-test-abraham-with-isaac",
+    question: "Why did God test Abraham with Isaac?",
+    category: "the-fathers",
+    summary:
+      "God asked Abraham to give up the very son through whom every promise had to come, and Abraham obeyed, reasoning that God could raise the dead. At the last moment the Angel of Yahweh stopped the knife, a ram died in Isaac's place, and Abraham named the place Yahweh Will Provide. Hebrews reads the scene as a picture of resurrection, James as faith brought to completion, and both point ahead to the Father who actually gave His own Son.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 22,
+        title: "The test on Moriah",
+        lookFor: "The hard command, Abraham's 'here I am' obedience, the question about the lamb, the provided ram, and the new name 'Yahweh Will Provide'.",
+        focus: "1-19",
+      },
+      {
+        book: "Hebrews",
+        chapter: 11,
+        title: "Abraham's reasoning faith",
+        lookFor: "Why offering Isaac did not break the promise: Abraham concluded God is able to raise the dead, so he received Isaac back as a figure.",
+        focus: "17-19",
+      },
+      {
+        book: "James",
+        chapter: 2,
+        title: "Faith completed by works",
+        lookFor: "How the offering of Isaac perfected Abraham's faith and fulfilled the word spoken about him in Genesis 15:6.",
+        focus: "20-26",
+      },
+    ],
+    points: [
+      {
+        heading: "The test met Abraham's 'Here I am'",
+        body:
+          "After decades of walking with God, Abraham heard the hardest command imaginable: 'take your son, your only son, whom you love, even Isaac', and offer him on Moriah. Notice how he moves: he rose early, saddled the donkey, split the wood himself, and answered every call, from heaven or from his boy, with 'Here I am.' The test was not information God lacked; it was the visible proof of what a lifetime of faith had grown into.",
+        verses: ["Genesis 22:1-2", "Genesis 22:3"],
+      },
+      {
+        heading: "The command cut against the promise itself",
+        body:
+          "Isaac was not just beloved; he was irreplaceable, the child through whom God had said, 'In Isaac will your seed be called.' To offer him seemed to unravel the covenant. Hebrews names the tension precisely: the one who had gladly received the promises was offering up his one and only son. Sometimes real trust has to carry a promise and an impossibility in the same arms, and this chapter shows what that looks like.",
+        verses: ["Hebrews 11:17", "Hebrews 11:18"],
+      },
+      {
+        heading: "God will provide himself the lamb",
+        body:
+          "When Isaac asked where the lamb was, Abraham answered, 'God will provide himself the lamb for a burnt offering, my son.' A ram caught by its horns died so the son could live, and Abraham called that place Yahweh Will Provide. On Moriah a father got his boy back because a substitute died in his place. On Calvary God actually went through with it: He is 'who didn’t spare his own Son, but delivered him up for us all'.",
+        verses: ["Genesis 22:7", "Genesis 22:8", "Genesis 22:13", "Genesis 22:14", "Romans 8:32"],
+      },
+      {
+        heading: "Abraham reasoned that God raises the dead",
+        body:
+          "Hebrews opens the logic behind the knife: Abraham concluded 'that God is able to raise up even from the dead.' If the promise required a living Isaac, and God demanded an offered Isaac, then resurrection was the only road left, and Abraham took it. That is why he told the servants, 'We will worship, and come back to you.' Then, at the last second, the Angel stopped his hand, saying, 'now I know that you fear God'.",
+        verses: ["Genesis 22:5", "Genesis 22:10", "Genesis 22:12", "Hebrews 11:19"],
+      },
+      {
+        heading: "Faith was perfected by obedience",
+        body:
+          "James asks plainly whether Abraham our father was justified by works when he offered Isaac, and answers: 'faith worked with his works, and by works faith was perfected.' The word spoken years earlier, that 'Abraham believed God, and it was accounted to him as righteousness', was fulfilled on Moriah, and Abraham 'was called the friend of God.' Faith alone saves, but the faith that saves is never left alone.",
+        verses: ["James 2:21", "James 2:22", "James 2:23"],
+      },
+    ],
+    keyVerses: ["Genesis 22:8", "Genesis 22:14", "Hebrews 11:19", "Romans 8:32"],
+    raises: ["why-did-jesus-have-to-die", "what-is-faith"],
+    followsFrom: ["why-did-god-call-abraham"],
+    related: ["how-do-i-find-christ-in-the-old-testament", "faith-or-works"],
+    planned: [],
+    order: 96,
+  },
+
+  {
+    slug: "why-did-god-give-israel-the-law-at-sinai",
+    question: "Why did God give Israel the law at Sinai?",
+    category: "exodus-and-covenant",
+    summary:
+      "The law was not a ladder Israel climbed to earn God's favor; it was given to people God had already redeemed from Egypt. Spoken from the smoking mountain, it formed a rescued mob into a covenant nation and revealed the holy character of the God who saved them. Jesus did not abolish it but fulfilled it, and under the new covenant its deepest demand is written not on stone but on hearts.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 19,
+        title: "The mountain prepared",
+        lookFor: "God's offer of covenant identity before any commandment is given, and the terrifying holiness that surrounds His descent.",
+        focus: "16-25",
+      },
+      {
+        book: "Exodus",
+        chapter: 20,
+        title: "The Ten Commandments",
+        lookFor: "How the preamble names redemption first, then flows into commandments, and how the people beg for a mediator.",
+        focus: "1-21",
+      },
+      {
+        book: "Matthew",
+        chapter: 5,
+        title: "The law fulfilled",
+        lookFor: "Jesus' claim to fulfill rather than abolish the law, and how He presses it past behavior into the heart.",
+        focus: "17-48",
+      },
+    ],
+    points: [
+      {
+        heading: "Redemption came first; the law second",
+        body:
+          "Before a single commandment sounds, God identifies Himself as Redeemer: 'I am Yahweh your God, who brought you out of the land of Egypt, out of the house of bondage.' The order is everything. Israel is not saved because they kept the law; they receive the law because they are saved. Grace precedes obligation at Sinai just as it does in the gospel, which is why obedience answers deliverance instead of purchasing it.",
+        verses: ["Exodus 20:2", "Exodus 19:4"],
+      },
+      {
+        heading: "A covenant constitution revealing God's character",
+        body:
+          "God offers Israel a calling before He gives them rules: if they obey His voice they will be 'my own possession from among all peoples', 'a kingdom of priests, and a holy nation'. Each commandment then shows what holiness looks like in daily life, since it mirrors the character of the One who spoke it. The law is less a fence around Israel than a portrait of God, drawn for a nation meant to display Him.",
+        verses: ["Exodus 19:5", "Exodus 19:6"],
+      },
+      {
+        heading: "The terrifying mountain and the mediator",
+        body:
+          "At Sinai there were 'thunders and lightnings' and 'the whole mountain quaked greatly'. The people begged Moses, 'Speak with us yourself, and we will listen; but don’t let God speak with us, lest we die.' The fear taught them that sinners cannot stand unmediated before absolute holiness. Yet Moses answers, 'Don’t be afraid, for God has come to test you'; reverence and trust were meant to stand together. The whole scene cries out for a better Mediator.",
+        verses: ["Exodus 19:16", "Exodus 19:18", "Exodus 20:19", "Exodus 20:20"],
+      },
+      {
+        heading: "Jesus fulfills, He does not abolish",
+        body:
+          "Jesus says plainly, 'I didn’t come to destroy, but to fulfill.' Then, in the rest of the Sermon on the Mount, He deepens every commandment until it reaches the heart: murder becomes hatred, adultery becomes lust, and the standard rises to 'just as your Father in heaven is perfect.' Paul agrees that faith does not cancel the law but establishes it, because in Christ the law finds what it always aimed at: a righteousness God gives, not merely commands.",
+        verses: ["Matthew 5:17", "Matthew 5:48", "Romans 3:31"],
+      },
+      {
+        heading: "The law as tutor, and the promise written on hearts",
+        body:
+          "Paul calls the law a guardian for God's children on the way to maturity: 'the law has become our tutor to bring us to Christ'. By exposing sin it drove Israel, and drives us, toward the promised remedy. That remedy is the new covenant, where God pledges, 'I will put my law in their inward parts, and in their heart will I write it'. The same law, once carved on stone tablets below the smoking mountain, comes home to the heart by the Spirit.",
+        verses: ["Galatians 3:24", "Galatians 3:25", "Jeremiah 31:33"],
+      },
+    ],
+    keyVerses: ["Exodus 20:2", "Exodus 19:5-6", "Matthew 5:17", "Galatians 3:24"],
+    raises: ["how-is-the-new-covenant-different-from-the-old-one", "faith-or-works"],
+    followsFrom: ["what-does-the-exodus-show-us-about-god"],
+    related: ["can-i-trust-the-bible", "what-is-grace"],
+    planned: ["What did the sacrificial system teach Israel?"],
+    order: 97,
+  },
+
+  {
+    slug: "why-did-god-spare-rahab",
+    question: "Why did God spare Rahab?",
+    category: "land-and-throne",
+    summary:
+      "Rahab was a Canaanite and a prostitute, doubly outside the covenant, yet she heard what Yahweh did at the Red Sea and confessed Him as God in heaven above and on earth beneath. When Jericho fell under God's judgment, the one household marked by a scarlet cord was spared. Hebrews and James both name her for her faith, and Matthew names her in the family tree of Jesus Himself.",
+    passages: [
+      {
+        book: "Joshua",
+        chapter: 2,
+        title: "The spies and the cord",
+        lookFor: "An outsider who has heard of the Exodus and believes, hiding the spies and asking for a token of mercy before she knows how the story ends.",
+        focus: "1-24",
+      },
+      {
+        book: "Joshua",
+        chapter: 6,
+        title: "The fall of Jericho",
+        lookFor: "A whole city devoted to destruction, yet one house under a scarlet cord standing open until the last moment.",
+        focus: "15-25",
+      },
+      {
+        book: "Hebrews",
+        chapter: 11,
+        title: "Named among the faithful",
+        lookFor: "Rahab listed between the Red Sea and Jericho's fallen walls, defined by faith rather than her nation or her past.",
+        focus: "29-31",
+      },
+    ],
+    points: [
+      {
+        heading: "A Canaanite outsider confesses Yahweh",
+        body:
+          "Rahab is an outsider three times over: a woman, a Canaanite, a prostitute. Yet she tells the spies, 'I know that Yahweh has given you the land,' and gives the clearest confession in the book: 'for Yahweh your God, he is God in heaven above, and on earth beneath.' All she had was news of the Red Sea, decades old, and she believed it. Faith starts with hearing, not with pedigree.",
+        verses: ["Joshua 2:9", "Joshua 2:10", "Joshua 2:11"],
+      },
+      {
+        heading: "Her faith showed itself in action",
+        body:
+          "She hid the spies at risk of her life, let them down by a cord through the window, and obeyed the sign they gave: 'She tied the scarlet line in the window.' Belief moved her hands. That is why James can ask whether she was not 'justified by works': her works did not replace faith, they exposed it. The scarlet cord was simply her trust in Yahweh made visible.",
+        verses: ["Joshua 2:4", "Joshua 2:15", "Joshua 2:21", "James 2:25"],
+      },
+      {
+        heading: "Judgment on sin, mercy for all who flee to Yahweh",
+        body:
+          "Jericho was not destroyed on a whim. Four centuries earlier God told Abraham the delay was deliberate, 'for the iniquity of the Amorite is not yet full'; now it was full, and the city was devoted. Yet in the middle of judgment a door stood open: 'Only Rahab the prostitute shall live, she and all who are with her in the house.' One city, two outcomes, divided by nothing but faith.",
+        verses: ["Genesis 15:16", "Joshua 6:17", "Joshua 6:21", "Joshua 6:23"],
+      },
+      {
+        heading: "The New Testament remembers her twice",
+        body:
+          "Hebrews sets her between the Red Sea and the falling walls: 'By faith, Rahab the prostitute, didn't perish with those who were disobedient, having received the spies in peace.' Her neighbors heard the same reports and hardened; she heard and believed, which is the whole difference. James holds up the same woman to prove that living faith acts. Heaven measures people by their trust in Yahweh, not by nation or record.",
+        verses: ["Hebrews 11:30", "Hebrews 11:31", "James 2:25"],
+      },
+      {
+        heading: "Grafted into Israel, then into the Messiah",
+        body:
+          "Joshua records that 'She lived in the midst of Israel to this day': the outsider adopted into the covenant people. Matthew goes further back into the family tree: 'Salmon became the father of Boaz by Rahab.' The woman from doomed Jericho becomes an ancestor of David, and so of Jesus Christ. The blessing promised to all the families of the earth through Abraham reaches home in His own genealogy.",
+        verses: ["Joshua 6:25", "Matthew 1:5", "Genesis 12:3"],
+      },
+    ],
+    keyVerses: ["Joshua 2:11", "Joshua 6:25", "Hebrews 11:31", "Matthew 1:5"],
+    raises: ["faith-or-works", "how-does-god-judge-people-who-never-heard-of-jesus", "what-does-ruth-teach-about-redemption"],
+    followsFrom: ["what-does-the-exodus-show-us-about-god"],
+    related: ["what-is-faith", "what-does-it-mean-that-jesus-is-the-son-of-david"],
+    planned: [],
+    order: 90,
+  },
+
+  {
+    slug: "what-does-ruth-teach-about-redemption",
+    question: "What does Ruth teach us about redemption?",
+    category: "land-and-throne",
+    summary:
+      "Famine and death strip Naomi down to nothing, and what restores her is loyal love: Ruth refusing to leave, and Boaz stepping forward as the goel, the kinsman-redeemer who had both the right and the means to buy back what was lost. The book ends quietly with a genealogy running from Perez to David, tying this small story of ordinary faithfulness into God's throne promise. And Boaz points beyond himself to Christ, our Redeemer, who was made kin to us and paid far more than a field.",
+    passages: [
+      {
+        book: "Ruth",
+        chapter: 1,
+        title: "Empty",
+        lookFor: "Famine, three funerals, Naomi renaming herself Mara, and the Moabite widow who refuses to walk away.",
+        focus: "1-22",
+      },
+      {
+        book: "Ruth",
+        chapter: 2,
+        title: "Gleanings",
+        lookFor: "Boaz noticing a foreigner in his field, his kindness to her, and his blessing about taking refuge under God's wings.",
+        focus: "1-13",
+      },
+      {
+        book: "Ruth",
+        chapter: 4,
+        title: "The purchase",
+        lookFor: "The transaction at the city gate, a nearer kinsman declining, Boaz paying the full price, and the genealogy that ends at David.",
+        focus: "1-17",
+      },
+    ],
+    points: [
+      {
+        heading: "Loss does not get the last word",
+        body:
+          "Naomi leaves Bethlehem full and comes home hollow, telling the women, 'the Almighty has dealt very bitterly with me.' Yet even her bitterness carries an unnoticed clue: she left because of famine and returned because 'Yahweh had visited his people in giving them bread.' God's provision arrived while she was still in Moab, before she felt anything but empty. The story never denies her grief; it just refuses to end there.",
+        verses: ["Ruth 1:20", "Ruth 1:6"],
+      },
+      {
+        heading: "Hesed: love that stays when it could walk away",
+        body:
+          "Orpah does the sensible thing and goes back to her mother's house. Ruth clings instead and swears, 'where you go, I will go,' and 'your people shall be my people, and your God my God,' calling down Yahweh's judgment if death alone parts them. This Hebrew covenant loyalty, hesed, is love that binds itself to someone with nothing to offer in return. By the end, the women of Bethlehem tell Naomi herself that such love 'is better to you than seven sons.'",
+        verses: ["Ruth 1:16", "Ruth 1:17", "Ruth 4:15"],
+      },
+      {
+        heading: "Refuge under His wings",
+        body:
+          "When Boaz meets the gleaner in his field, he blesses her for sheltering 'under whose wings you have come to take refuge': the same picture Psalm 91 gives every believer. Then watch what happens. The man who prayed the blessing becomes its answer, feeding her at his table and covering her with his own cloak. Jesus reaches for the identical image when He longs to gather Jerusalem 'as a hen gathers her chicks under her wings.'",
+        verses: ["Ruth 2:12", "Psalms 91:4", "Matthew 23:37"],
+      },
+      {
+        heading: "The redeemer had to be kin, willing, and able to pay",
+        body:
+          "The law provided that a brother who lost his land could have it bought back by 'his kinsman who is next to him,' and levirate marriage kept a dead man's name alive. So redemption required relationship, right, and resources. A nearer kinsman has first claim, but he balks: 'I can’t redeem it for myself, lest I mar my own inheritance.' Boaz, kin through Elimelech's clan, stands ready and willing. Only such a man could redeem.",
+        verses: ["Leviticus 25:25", "Deuteronomy 25:5", "Ruth 3:13", "Ruth 4:6"],
+      },
+      {
+        heading: "Redemption bought publicly, ending at David's door",
+        body:
+          "Boaz settles the matter at the gate before ten elders, saying, 'You are witnesses this day': he buys every field and purchases Ruth as wife, so the name of the dead is not cut off. The town cries 'Blessed be Yahweh' over a son who is 'a restorer of life,' and the book closes by naming Obed, Jesse, and David. Matthew shows that same line running through Rahab and Ruth to Christ, who did not redeem with silver or gold 'but with precious blood, as of a faultless and pure lamb.'",
+        verses: ["Ruth 4:9", "Ruth 4:10", "Ruth 4:22", "Matthew 1:5", "1 Peter 1:19"],
+      },
+    ],
+    keyVerses: ["Ruth 2:12", "Ruth 4:10", "Ruth 4:22", "1 Peter 1:19"],
+    raises: ["what-is-grace"],
+    followsFrom: ["why-did-god-spare-rahab"],
+    related: ["why-did-god-promise-david-an-eternal-throne", "what-is-the-gospel"],
+    planned: [],
+    order: 91,
+  },
+
+  {
+    slug: "why-did-david-spare-saul",
+    question: "Why did David spare Saul?",
+    category: "land-and-throne",
+    summary:
+      "Twice, while Saul hunted him through the wilderness, David held the king's life in his hand and let him walk away, because Saul was Yahweh's anointed and judgment belonged to God alone. David would not seize by force the throne God had promised by anointing oil. His refusal shows how faith waits: it trusts God's timing, refuses self-serving violence, and leaves vengeance with Him.",
+    passages: [
+      {
+        book: "1 Samuel",
+        chapter: 24,
+        title: "Saul in the cave",
+        lookFor: "The perfect opportunity at Engedi, why David's own conscience strikes him over a mere cut robe, and what he says about touching Yahweh's anointed.",
+      },
+      {
+        book: "1 Samuel",
+        chapter: 26,
+        title: "The spear and the water jar",
+        lookFor: "A second delivered enemy, Abishai's offer to finish Saul in one stroke, and where David says his vindication must come from.",
+      },
+      {
+        book: "Romans",
+        chapter: 12,
+        title: "Leaving room for God",
+        lookFor: "Paul's commands toward enemies and persecutors, his quotation about vengeance, and how good overcomes evil.",
+        focus: "14-21",
+      },
+    ],
+    points: [
+      {
+        heading: "Twice God put Saul into David's hand",
+        body:
+          "In both cave and camp, David's men saw the same opening and drew the same conclusion. At Engedi they even dressed it in promise language: 'Behold, I will deliver your enemy into your hand, and you shall do to him as it shall seem good to you.' Later Abishai volunteered to pin Saul to the earth with one stroke. The logic looked airtight both times. Yet David shows that an open door is not always God's invitation, and that faith sometimes refuses an opportunity that appears heaven-sent.",
+        verses: ["1 Samuel 24:4", "1 Samuel 26:8"],
+      },
+      {
+        heading: "He would not stretch out his hand against Yahweh's anointed",
+        body:
+          "David's reason was theological, not tactical. Saul was still Yahweh's anointed king, so striking him meant striking what God had consecrated: 'Yahweh forbid that I should do this thing to my lord, Yahweh's anointed, to stretch out my hand against him, since he is Yahweh's anointed.' A chapter later the principle holds even with the spear at hand, for 'who can stretch out his hand against Yahweh's anointed, and be guiltless?' God's gifts come through God's appointments, never through desecrating them.",
+        verses: ["1 Samuel 24:6", "1 Samuel 26:9", "1 Samuel 26:11"],
+      },
+      {
+        heading: "A cut robe and a stricken conscience",
+        body:
+          "Merely trimming Saul's robe wounded David more than it wounded Saul: 'David's heart struck him, because he had cut off Saul's skirt.' He treats even that small act as too near the line, and later pleads with the evidence in hand, 'there is neither evil nor disobedience in my hand, and I have not sinned against you.' Holiness for David was not a floor beneath which he managed his worst, but a ceiling he refused to approach, starting with his own heart's protests.",
+        verses: ["1 Samuel 24:5", "1 Samuel 24:11"],
+      },
+      {
+        heading: "He trusted God's timing instead of seizing the throne",
+        body:
+          "David had been anointed years before he wore the crown, and he would wait for God to make the difference: 'As Yahweh lives, Yahweh will strike him; or his day shall come to die; or he shall go down into battle and perish.' He names three doors God could use and walks away from none of them being his own hand. His confidence rests on God's justice, that 'Yahweh will render to every man his righteousness and his faithfulness,' and history vindicates the waiting.",
+        verses: ["1 Samuel 26:10", "1 Samuel 26:23"],
+      },
+      {
+        heading: "Vengeance belongs to God, so good can do its work",
+        body:
+          "Before Saul left the cave, David had already stated Paul's doctrine: 'May Yahweh judge between me and you, and may Yahweh avenge me of you; but my hand shall not be on you.' Paul universalizes it for every believer: 'Vengeance belongs to me; I will repay, says the Lord.' Because judgment is God's office, ours is blessing enemies and feeding them, until 'overcome evil with good' becomes the strategy. Peter saw the same shape in Jesus, who committed himself to him who judges righteously.",
+        verses: ["1 Samuel 24:12", "Romans 12:19", "Romans 12:21", "1 Peter 2:23"],
+      },
+    ],
+    keyVerses: ["1 Samuel 24:6", "1 Samuel 24:12", "1 Samuel 26:23", "Romans 12:19"],
+    raises: ["why-did-god-promise-david-an-eternal-throne"],
+    followsFrom: ["why-did-israel-keep-drifting-into-idolatry"],
+    related: ["how-do-i-fight-sin", "what-does-it-mean-to-walk-by-faith-and-not-by-sight"],
+    planned: ["How do I wait on God's timing when a promise feels delayed?"],
     order: 93,
+  },
+
+  {
+    slug: "why-did-god-send-jonah-to-nineveh",
+    question: "Why did God send Jonah to Nineveh?",
+    category: "prophets-and-exile",
+    summary:
+      "God sent a prophet to preach doom over a brutal Gentile superpower, and then forgave the whole city the moment it repented. Jonah ran from the call, raged at the mercy, and sat outside the walls hoping for fire, while the story quietly exposed his small heart beside God's great compassion. Jesus took the name of Jonah and turned it into the sign of His own death and resurrection.",
+    passages: [
+      {
+        book: "Jonah",
+        chapter: 1,
+        title: "The runaway",
+        lookFor:
+          "Jonah fleeing from the presence of Yahweh, the storm that follows him, pagan sailors turning from panic to worship, and a great fish prepared by God.",
+      },
+      {
+        book: "Jonah",
+        chapter: 3,
+        title: "The second call",
+        lookFor:
+          "A one-sentence sermon, an entire city believing God from the throne down to the animals, and God relenting of the disaster He had spoken.",
+      },
+      {
+        book: "Jonah",
+        chapter: 4,
+        title: "The angry prophet",
+        lookFor:
+          "Why Jonah fled in the first place, God's gentle object lesson with a plant, and the unanswered question that ends the book.",
+      },
+    ],
+    points: [
+      {
+        heading: "God's word goes to Israel's enemies too",
+        body:
+          "Nineveh was a great city of Assyria, the empire that would one day grind Israel under its boot. Yet God saw its cruelty, 'for their wickedness has come up before me,' and He sent a warning instead of immediate judgment: 'Arise, go to Nineveh, that great city, and preach against it.' That is the first surprise of the book. God's attention is not bounded by Israel; even a violent Gentile capital receives a preacher before it receives destruction.",
+        verses: ["Jonah 1:2", "Jonah 3:1"],
+      },
+      {
+        heading: "You cannot flee from the presence of Yahweh",
+        body:
+          "Jonah 'rose up to flee to Tarshish from the presence of Yahweh,' and the verse repeats the phrase twice because that is the whole point: you can buy a ticket away from the assignment, not away from God. A storm chases the ship, and the pagan sailors who started out crying to their idols end in the opposite direction: 'the men feared Yahweh exceedingly; and they offered a sacrifice to Yahweh, and made vows.' The prophet running from God's presence becomes the means by which outsiders enter it.",
+        verses: ["Jonah 1:3", "Jonah 1:16"],
+      },
+      {
+        heading: "The fish was rescue, not reward",
+        body:
+          "The fish looks like punishment, but the text says God prepared it; the same God Jonah was fleeing pursued him in mercy. Down in the dark Jonah finally prays, and lands on the old confession, 'Salvation belongs to Yahweh.' Centuries later Jesus named this episode as prophecy: as Jonah was three days and three nights in the belly of the whale, so will the Son of Man be three days and three nights in the heart of the earth. The fish points past Jonah's rescue toward Christ's resurrection.",
+        verses: ["Jonah 1:17", "Jonah 2:9", "Matthew 12:40"],
+      },
+      {
+        heading: "Forty days, and a city believes God",
+        body:
+          "Jonah's entire sermon was one short sentence: 'In forty days, Nineveh will be overthrown!' No invitation, no explanation, yet the response shames every stubborn generation of Israel: 'The people of Nineveh believed God; and they proclaimed a fast, and put on sackcloth, from their greatest even to their least.' Even the king left his throne for ashes, and 'God relented of the disaster which he said he would do to them.' Jesus confirmed it was real repentance: 'they repented at the preaching of Jonah,' and that faith will rise in judgment on unbelief.",
+        verses: ["Jonah 3:4", "Jonah 3:5", "Jonah 3:10", "Matthew 12:41"],
+      },
+      {
+        heading: "Jonah's small heart, God's great compassion",
+        body:
+          "At last Jonah admits why he ran: 'I knew that you are a gracious God, and merciful, slow to anger, and abundant in loving kindness, and you relent of doing harm.' He could forgive Israel that mercy, just not Assyria. So God contrasts the prophet grieving over a vine he never made grow with His own question: 'Shouldn't I be concerned for Nineveh, that great city?' The book closes with the question hanging over us too: will our hearts grow as large as God's pity?",
+        verses: ["Jonah 4:2", "Jonah 4:10", "Jonah 4:11"],
+      },
+    ],
+    keyVerses: ["Jonah 2:9", "Jonah 3:10", "Jonah 4:2", "Jonah 4:11", "Matthew 12:41"],
+    raises: [
+      "how-does-god-judge-people-who-never-heard-of-jesus",
+      "did-jesus-rise-from-the-dead",
+    ],
+    followsFrom: ["why-did-israel-keep-drifting-into-idolatry"],
+    related: ["what-is-the-gospel", "does-god-change-his-mind"],
+    planned: [],
+    order: 92,
   },
 
   {
