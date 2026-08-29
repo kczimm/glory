@@ -9,8 +9,7 @@ import { TRANSLATIONS, type TranslationCode } from "@/lib/translation";
  *
  * On desktop a two-button segmented control shows both options. On small
  * screens the row is tight, so it collapses to a single compact pill showing
- * the translation you'd switch to (tap to switch), same footprint as the
- * theme toggle.
+ * the current translation (tap to switch), same footprint as the theme toggle.
  */
 export default function TranslationToggle() {
   const { version, setVersion } = useTranslation();
