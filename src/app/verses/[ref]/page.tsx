@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getConnections, connectionKindLabel, verseSlug, parseRef } from "@/data";
+import {
+  getConnections,
+  connectionKindLabel,
+  verseSlug,
+  parseRef,
+} from "@/data";
 import {
   getPassageText,
   questionsUsing,
@@ -12,7 +17,11 @@ import {
 import ShareButton from "@/components/ShareButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { chapterSlug } from "@/data/books";
-import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
+import {
+  getTranslationInfo,
+  versionedUrl,
+  type TranslationCode,
+} from "@/lib/translation-shared";
 import { resolveServerTranslation } from "@/lib/translation-server";
 
 interface Props {
@@ -24,10 +33,15 @@ export async function generateStaticParams() {
   return graphVerseRefs().map((ref) => ({ ref: verseSlug(ref) }));
 }
 
-export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+  searchParams,
+}: Props): Promise<Metadata> {
   const { ref } = await params;
   const sp = await searchParams;
-  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
+  const version: TranslationCode = await resolveServerTranslation(
+    sp as Record<string, string | undefined> | undefined,
+  );
   const translationInfo = getTranslationInfo(version);
   const verse = refFromSlug(ref);
   if (!verse) return {};
@@ -50,7 +64,9 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
 export default async function VersePage({ params, searchParams }: Props) {
   const { ref } = await params;
   const sp = await searchParams;
-  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
+  const version: TranslationCode = await resolveServerTranslation(
+    sp as Record<string, string | undefined> | undefined,
+  );
   const translationInfo = getTranslationInfo(version);
   const verse = refFromSlug(ref);
   if (!verse) notFound();
@@ -62,7 +78,12 @@ export default async function VersePage({ params, searchParams }: Props) {
   const incoming = incomingConnections(verse);
 
   const parsed = parseRef(verse);
-  const chapterHref = parsed ? `/bible/${chapterSlug(parsed.book, parsed.chapter)}${version === "kjv" ? "?version=kjv" : ""}` : null;
+  const chapterHref = parsed
+    ? versionedUrl(
+        `/bible/${chapterSlug(parsed.book, parsed.chapter)}`,
+        version,
+      )
+    : null;
 
   return (
     <article>
@@ -77,7 +98,7 @@ export default async function VersePage({ params, searchParams }: Props) {
             </Link>
             <span className="ml-auto">
               <ShareButton
-                url={`${SITE_URL}/verses/${ref}${version === "kjv" ? "?version=kjv" : ""}`}
+                url={versionedUrl(`/verses/${ref}`, version)}
                 title={verse}
                 text={text ?? undefined}
               />
@@ -125,8 +146,8 @@ export default async function VersePage({ params, searchParams }: Props) {
             </div>
           ) : (
             <p className="mt-3 text-[14px] text-ink-soft">
-              Not yet the focus of a full study, but it is connected in the
-              Word below.
+              Not yet the focus of a full study, but it is connected in the Word
+              below.
             </p>
           )}
         </section>
@@ -139,7 +160,14 @@ export default async function VersePage({ params, searchParams }: Props) {
             </p>
             <div className="mt-4 space-y-3">
               {outgoing.map((e) => (
-                <VerseConnectionRow key={e.target} target={e.target} note={e.note} kindLabel={connectionKindLabel[e.kind]} translation={version} />              ))}
+                <VerseConnectionRow
+                  key={e.target}
+                  target={e.target}
+                  note={e.note}
+                  kindLabel={connectionKindLabel[e.kind]}
+                  translation={version}
+                />
+              ))}
             </div>
           </section>
         )}
@@ -187,7 +215,7 @@ function VerseConnectionRow({
           {kindLabel}
         </span>
         <Link
-          href={`/verses/${verseSlug(target)}`}
+          href={versionedUrl(`/verses/${verseSlug(target)}`, translation)}
           className="text-[13px] font-semibold text-gold-deep underline-offset-2 hover:underline"
         >
           {target}

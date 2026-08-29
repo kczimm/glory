@@ -43,3 +43,14 @@ export function isValidTranslationCode(code: string): code is TranslationCode {
 export function hasAudio(code: TranslationCode): boolean {
   return TRANSLATIONS[code]?.hasAudio ?? false;
 }
+
+/**
+ * Build a URL path with ?version= appended when non-default.
+ * Used by internal navigation links so that the translation is preserved
+ * in the address bar and in shared URLs.
+ */
+export function versionedUrl(path: string, version: TranslationCode): string {
+  if (version === "web") return path;
+  const separator = path.includes("?") ? "&" : "?";
+  return `${path}${separator}version=${version}`;
+}

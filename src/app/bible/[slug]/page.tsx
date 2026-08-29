@@ -4,7 +4,11 @@ import { notFound } from "next/navigation";
 import { chapterSlug, bookFromSlug } from "@/data/books";
 import { parseRef, verseKeys, verseSlug } from "@/data/ref";
 import { getChapter, bibleBooks, graphVerseRefs } from "@/data/server";
-import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
+import {
+  getTranslationInfo,
+  versionedUrl,
+  type TranslationCode,
+} from "@/lib/translation-shared";
 import { resolveServerTranslation } from "@/lib/translation-server";
 
 interface Props {
@@ -26,14 +30,19 @@ const graphVerses = (() => {
 /** The whole canon as an ordered (book, chapter) walk, for prev/next. */
 function getCanon(version: TranslationCode = "web") {
   return bibleBooks(version).flatMap(({ book, chapters }) =>
-    Array.from({ length: chapters }, (_, i) => ({ book, chapter: i + 1 }))
+    Array.from({ length: chapters }, (_, i) => ({ book, chapter: i + 1 })),
   );
 }
 
-export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+  searchParams,
+}: Props): Promise<Metadata> {
   const { slug } = await params;
   const sp = await searchParams;
-  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
+  const version: TranslationCode = await resolveServerTranslation(
+    sp as Record<string, string | undefined> | undefined,
+  );
   const translationInfo = getTranslationInfo(version);
   const { book, chapter } = parseChapterSlug(slug) ?? {};
   if (!book || !chapter) return {};
@@ -45,7 +54,9 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   };
 }
 
-function parseChapterSlug(slug: string): { book: string; chapter: number } | null {
+function parseChapterSlug(
+  slug: string,
+): { book: string; chapter: number } | null {
   const m = slug.match(/^(.+)-(\d+)$/);
   if (!m) return null;
   const book = bookFromSlug(m[1]);
@@ -55,7 +66,9 @@ function parseChapterSlug(slug: string): { book: string; chapter: number } | nul
 export default async function BibleChapter({ params, searchParams }: Props) {
   const { slug } = await params;
   const sp = await searchParams;
-  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
+  const version: TranslationCode = await resolveServerTranslation(
+    sp as Record<string, string | undefined> | undefined,
+  );
   const translationInfo = getTranslationInfo(version);
   const parsed = parseChapterSlug(slug);
   if (!parsed) notFound();
@@ -64,7 +77,7 @@ export default async function BibleChapter({ params, searchParams }: Props) {
 
   const canon = getCanon(version);
   const idx = canon.findIndex(
-    (c) => c.book === parsed.book && c.chapter === parsed.chapter
+    (c) => c.book === parsed.book && c.chapter === parsed.chapter,
   );
   const prev = idx > 0 ? canon[idx - 1] : null;
   const next = idx < canon.length - 1 ? canon[idx + 1] : null;
@@ -88,7 +101,10 @@ export default async function BibleChapter({ params, searchParams }: Props) {
             <nav className="flex gap-2" aria-label="Nearby chapters">
               {prev ? (
                 <Link
-                  href={`/bible/${chapterSlug(prev.book, prev.chapter)}`}
+                  href={versionedUrl(
+                    `/bible/${chapterSlug(prev.book, prev.chapter)}`,
+                    version,
+                  )}
                   className="transition-colors hover:text-gold-deep"
                 >
                   ← {shortLabel(prev.book, prev.chapter)}
@@ -96,7 +112,10 @@ export default async function BibleChapter({ params, searchParams }: Props) {
               ) : null}
               {next ? (
                 <Link
-                  href={`/bible/${chapterSlug(next.book, next.chapter)}`}
+                  href={versionedUrl(
+                    `/bible/${chapterSlug(next.book, next.chapter)}`,
+                    version,
+                  )}
                   className="transition-colors hover:text-gold-deep"
                 >
                   {shortLabel(next.book, next.chapter)} →
@@ -124,7 +143,7 @@ export default async function BibleChapter({ params, searchParams }: Props) {
                 </sup>
                 {studied ? (
                   <Link
-                    href={`/verses/${verseSlug(ref)}`}
+                    href={versionedUrl(`/verses/${verseSlug(ref)}`, version)}
                     title={`${ref}: see where this verse is studied`}
                     className="underline decoration-gold/40 decoration-dotted underline-offset-4 transition-colors hover:text-gold-deep"
                   >
@@ -144,7 +163,10 @@ export default async function BibleChapter({ params, searchParams }: Props) {
         >
           {prev ? (
             <Link
-              href={`/bible/${chapterSlug(prev.book, prev.chapter)}`}
+              href={versionedUrl(
+                `/bible/${chapterSlug(prev.book, prev.chapter)}`,
+                version,
+              )}
               className="rounded-full border border-line bg-surface/60 px-4 py-2 text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
             >
               ← {shortLabel(prev.book, prev.chapter)}
@@ -153,14 +175,20 @@ export default async function BibleChapter({ params, searchParams }: Props) {
             <span />
           )}
           <Link
-            href={`/bible/${chapterSlug(parsed.book, 1)}`}
+            href={versionedUrl(
+              `/bible/${chapterSlug(parsed.book, 1)}`,
+              version,
+            )}
             className="hidden text-ink-faint transition-colors hover:text-gold-deep sm:inline"
           >
             {parsed.book} 1
           </Link>
           {next ? (
             <Link
-              href={`/bible/${chapterSlug(next.book, next.chapter)}`}
+              href={versionedUrl(
+                `/bible/${chapterSlug(next.book, next.chapter)}`,
+                version,
+              )}
               className="rounded-full border border-line bg-surface/60 px-4 py-2 text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
             >
               {shortLabel(next.book, next.chapter)} →

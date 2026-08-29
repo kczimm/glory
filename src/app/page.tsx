@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { categories } from "@/data";
-import { questionsByCategory, questionTitles, resolveQuestions, teasers } from "@/data/server";
+import {
+  questionsByCategory,
+  questionTitles,
+  resolveQuestions,
+  teasers,
+} from "@/data/server";
 import SearchBox from "@/components/SearchBox";
 import QuestionCard from "@/components/QuestionCard";
 import VerseCard from "@/components/VerseCard";
@@ -15,7 +20,7 @@ interface Props {
 export default async function Home({ searchParams }: Props) {
   const sp = await searchParams;
   const version = await resolveServerTranslation(
-    sp as Record<string, string | undefined> | undefined
+    sp as Record<string, string | undefined> | undefined,
   );
   return (
     <div>
@@ -45,10 +50,9 @@ export default async function Home({ searchParams }: Props) {
             <span className="italic text-gold-deep">Leave with Scripture.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-ink-soft sm:mt-6 sm:text-[16px]">
-            Ask what you genuinely want to know: who Jesus is, and how we
-            come to know and have a relationship with Him. Then read the
-            passages that answer it, and let the Word itself raise the next
-            question.
+            Ask what you genuinely want to know: who Jesus is, and how we come
+            to know and have a relationship with Him. Then read the passages
+            that answer it, and let the Word itself raise the next question.
           </p>
           <div className="mt-8 sm:mt-10">
             <SearchBox />
@@ -98,7 +102,7 @@ export default async function Home({ searchParams }: Props) {
       </section>
 
       {/* Today */}
-      <DailyCard />
+      <DailyCard version={version} />
 
       {/* Continue the journey */}
       <JourneyHomeCard titles={questionTitles()} />

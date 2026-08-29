@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getConnections, verseSlug } from "@/data";
 import { graphVerseRefs, incomingConnections } from "@/data/server";
+import { versionedUrl } from "@/lib/translation-shared";
+import { resolveServerTranslation } from "@/lib/translation-server";
 
 export const metadata: Metadata = {
   title: "The Word, connected",
@@ -10,23 +12,91 @@ export const metadata: Metadata = {
 };
 
 const BOOKS = [
-  "Genesis","Exodus","Leviticus","Numbers","Deuteronomy","Joshua","Judges","Ruth",
-  "1 Samuel","2 Samuel","1 Kings","2 Kings","1 Chronicles","2 Chronicles","Ezra",
-  "Nehemiah","Esther","Job","Psalms","Proverbs","Ecclesiastes","Song of Solomon",
-  "Isaiah","Jeremiah","Lamentations","Ezekiel","Daniel","Hosea","Joel","Amos",
-  "Obadiah","Jonah","Micah","Nahum","Habakkuk","Zephaniah","Haggai","Zechariah",
-  "Malachi","Matthew","Mark","Luke","John","Acts","Romans","1 Corinthians",
-  "2 Corinthians","Galatians","Ephesians","Philippians","Colossians",
-  "1 Thessalonians","2 Thessalonians","1 Timothy","2 Timothy","Titus","Philemon",
-  "Hebrews","James","1 Peter","2 Peter","1 John","2 John","3 John","Jude","Revelation",
+  "Genesis",
+  "Exodus",
+  "Leviticus",
+  "Numbers",
+  "Deuteronomy",
+  "Joshua",
+  "Judges",
+  "Ruth",
+  "1 Samuel",
+  "2 Samuel",
+  "1 Kings",
+  "2 Kings",
+  "1 Chronicles",
+  "2 Chronicles",
+  "Ezra",
+  "Nehemiah",
+  "Esther",
+  "Job",
+  "Psalms",
+  "Proverbs",
+  "Ecclesiastes",
+  "Song of Solomon",
+  "Isaiah",
+  "Jeremiah",
+  "Lamentations",
+  "Ezekiel",
+  "Daniel",
+  "Hosea",
+  "Joel",
+  "Amos",
+  "Obadiah",
+  "Jonah",
+  "Micah",
+  "Nahum",
+  "Habakkuk",
+  "Zephaniah",
+  "Haggai",
+  "Zechariah",
+  "Malachi",
+  "Matthew",
+  "Mark",
+  "Luke",
+  "John",
+  "Acts",
+  "Romans",
+  "1 Corinthians",
+  "2 Corinthians",
+  "Galatians",
+  "Ephesians",
+  "Philippians",
+  "Colossians",
+  "1 Thessalonians",
+  "2 Thessalonians",
+  "1 Timothy",
+  "2 Timothy",
+  "Titus",
+  "Philemon",
+  "Hebrews",
+  "James",
+  "1 Peter",
+  "2 Peter",
+  "1 John",
+  "2 John",
+  "3 John",
+  "Jude",
+  "Revelation",
 ];
 
-export default function VersesIndex() {
+export default async function VersesIndex({
+  searchParams,
+}: {
+  searchParams?: Promise<{ version?: string }>;
+}) {
+  const sp = await searchParams;
+  const version = await resolveServerTranslation(
+    sp as Record<string, string | undefined> | undefined,
+  );
   const refs = graphVerseRefs();
   // How many cross-reference edges touch this verse (leaving + reaching it).
   const degreeCache = new Map<string, number>();
   for (const r of refs) {
-    degreeCache.set(r, getConnections(r).length + incomingConnections(r).length);
+    degreeCache.set(
+      r,
+      getConnections(r).length + incomingConnections(r).length,
+    );
   }
   const groups = BOOKS.map((book) => ({
     book,
@@ -47,8 +117,8 @@ export default function VersesIndex() {
         <p className="mt-4 text-[16px] leading-relaxed text-ink-soft">
           Every verse below has its own page: where it is studied, and the
           cross-references that tie it to the rest of the Word. {refs.length}{" "}
-          verses in the graph so far. Looking for a verse that is not yet in
-          the graph?{" "}
+          verses in the graph so far. Looking for a verse that is not yet in the
+          graph?{" "}
           <Link
             href="/bible"
             className="text-gold-deep underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
@@ -61,7 +131,8 @@ export default function VersesIndex() {
             className="text-gold-deep underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
           >
             Connections
-          </Link>.
+          </Link>
+          .
         </p>
       </header>
 
@@ -75,7 +146,7 @@ export default function VersesIndex() {
               {g.refs.map((ref) => (
                 <Link
                   key={ref}
-                  href={`/verses/${verseSlug(ref)}`}
+                  href={versionedUrl(`/verses/${verseSlug(ref)}`, version)}
                   className="rounded-full border border-line bg-surface/60 px-3 py-1 text-[13px] text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
                 >
                   {ref}

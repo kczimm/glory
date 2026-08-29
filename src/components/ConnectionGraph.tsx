@@ -5,7 +5,13 @@ import Link from "next/link";
 import type { ConnectionKind } from "@/data/types";
 import { verseSlug, connectionKindLabel } from "@/data";
 import { edgesOf, shortRef, type GraphEdge } from "@/lib/graph";
-import { subscribe as journeySubscribe, getSnapshot as journeySnapshot, getServerSnapshot as journeyServerSnapshot } from "@/lib/journey";
+import {
+  subscribe as journeySubscribe,
+  getSnapshot as journeySnapshot,
+  getServerSnapshot as journeyServerSnapshot,
+} from "@/lib/journey";
+import { versionedUrl } from "@/lib/translation-shared";
+import { useTranslation } from "@/lib/useTranslation";
 
 export interface GraphData {
   /** verse text for every reachable node (connection endpoints) */
@@ -70,7 +76,14 @@ function jitter(): number {
   return jitterSeed / 233280 - 0.5;
 }
 
-export default function ConnectionGraph({ startRef, graph }: { startRef: string; graph: GraphData }) {
+export default function ConnectionGraph({
+  startRef,
+  graph,
+}: {
+  startRef: string;
+  graph: GraphData;
+}) {
+  const { version } = useTranslation();
   // The node map is created once (seeded with the start verse) and then
   // mutated in place by the simulation; a tick counter drives re-renders.
   const [nodesMap] = useState<Map<string, SimNode>>(() => {
@@ -91,7 +104,11 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
   const [, setTick] = useState(0);
   const [selected, setSelected] = useState<string | null>(startRef);
   const [kinds, setKinds] = useState<Set<ConnectionKind>>(new Set(ALL_KINDS));
-  const journey = useSyncExternalStore(journeySubscribe, journeySnapshot, journeyServerSnapshot);
+  const journey = useSyncExternalStore(
+    journeySubscribe,
+    journeySnapshot,
+    journeyServerSnapshot,
+  );
 
   // Verses the reader has already met, via the studies in their journey.
   const visitedVerses = useMemo(() => {
@@ -126,8 +143,12 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
         let dx = b.x - a.x;
         let dy = b.y - a.y;
         let d2 = dx * dx + dy * dy;
-        if (d2 < 1) { dx = jitter(); dy = jitter(); d2 = 1; }
-        const repulse = ((2600 / d2) * alpha);
+        if (d2 < 1) {
+          dx = jitter();
+          dy = jitter();
+          d2 = 1;
+        }
+        const repulse = (2600 / d2) * alpha;
         const d = Math.sqrt(d2);
         a.vx -= (dx / d) * repulse;
         a.vy -= (dy / d) * repulse;
@@ -149,12 +170,15 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
       const f = (d - ideal) * 0.02 * alpha;
       const fx = (dx / d) * f;
       const fy = (dy / d) * f;
-      a.vx += fx; a.vy += fy;
-      b.vx -= fx; b.vy -= fy;
+      a.vx += fx;
+      a.vy += fy;
+      b.vx -= fx;
+      b.vy -= fy;
     }
     let energy = 0;
     for (const n of nodes) {
-      n.vx *= 0.6; n.vy *= 0.6;
+      n.vx *= 0.6;
+      n.vy *= 0.6;
       n.x = Math.min(Math.max(n.x + n.vx, 40), W - 40);
       n.y = Math.min(Math.max(n.y + n.vy, 36), H - 36);
       energy += Math.abs(n.vx) + Math.abs(n.vy);
@@ -175,7 +199,10 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
       for (const e of edgesOf(ref)) {
         if (!nodesMap.has(e.source) || !nodesMap.has(e.target)) continue;
         if (!kinds.has(e.kind)) continue;
-        const key = e.source < e.target ? `${e.source}|${e.target}|${e.kind}` : `${e.target}|${e.source}|${e.kind}`;
+        const key =
+          e.source < e.target
+            ? `${e.source}|${e.target}|${e.kind}`
+            : `${e.target}|${e.source}|${e.kind}`;
         if (seen.has(key)) continue;
         seen.add(key);
         out.push(e);
@@ -196,8 +223,8 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
       const angle = baseAngle + (i * 2 * Math.PI) / 7;
       map.set(other, {
         ref: other,
-        x: (src?.x ?? W / 2) + Math.cos(angle) * 120 + (jitter()) * 30,
-        y: (src?.y ?? H / 2) + Math.sin(angle) * 120 + (jitter()) * 30,
+        x: (src?.x ?? W / 2) + Math.cos(angle) * 120 + jitter() * 30,
+        y: (src?.y ?? H / 2) + Math.sin(angle) * 120 + jitter() * 30,
         vx: 0,
         vy: 0,
         degree: edgesOf(other).length,
@@ -210,7 +237,9 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
 
   const nodes = [...nodesMap.values()];
   const edges = visibleEdges();
-  const selEdges = selected ? edges.filter((e) => e.source === selected || e.target === selected) : [];
+  const selEdges = selected
+    ? edges.filter((e) => e.source === selected || e.target === selected)
+    : [];
   const selQuestions = selected ? (graph.usages[selected] ?? []) : [];
 
   return (
@@ -225,7 +254,8 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
               onClick={() => {
                 setKinds((prev) => {
                   const next = new Set(prev);
-                  if (next.has(k)) next.delete(k); else next.add(k);
+                  if (next.has(k)) next.delete(k);
+                  else next.add(k);
                   return next;
                 });
                 heat(0.8);
@@ -237,13 +267,18 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
             >
               <svg width="18" height="6" aria-hidden>
                 <line
-                  x1="0" y1="3" x2="18" y2="3"
+                  x1="0"
+                  y1="3"
+                  x2="18"
+                  y2="3"
                   stroke={KIND_STYLE[k].stroke}
                   strokeWidth="2"
                   strokeDasharray={KIND_STYLE[k].dash}
                 />
               </svg>
-              <span className={kinds.has(k) ? "text-ink-soft" : "text-ink-faint"}>
+              <span
+                className={kinds.has(k) ? "text-ink-soft" : "text-ink-faint"}
+              >
                 {connectionKindLabel[k]}
               </span>
             </button>
@@ -274,62 +309,77 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
             className="block h-auto select-none"
             style={{ minWidth: 640, width: "100%", maxWidth: "none" }}
           >
-          {/* edges */}
-          {edges.map((e) => {
-            const a = nodesMap.get(e.source)!;
-            const b = nodesMap.get(e.target)!;
-            const hot = selected === e.source || selected === e.target;
-            const style = KIND_STYLE[e.kind];
-            return (
-              <line
-                key={`${e.source}|${e.target}|${e.kind}`}
-                x1={a.x} y1={a.y} x2={b.x} y2={b.y}
-                stroke={style.stroke}
-                strokeWidth={hot ? 2.5 : 1.4}
-                strokeDasharray={style.dash}
-                opacity={hot ? 0.95 : 0.4}
-              />
-            );
-          })}
-          {/* nodes */}
-          {nodes.map((n) => {
-            const isSel = n.ref === selected;
-            const r = radius(n.degree);
-            return (
-              <g
-                key={n.ref}
-                transform={`translate(${n.x},${n.y})`}
-                onClick={() => expand(n.ref)}
-                className="cursor-pointer group/node"
-              >
-                <circle
-                  r={r + 4}
-                  fill="transparent"
-                  stroke={isSel ? "var(--color-gold)" : "transparent"}
-                  strokeWidth="2"
-                  className="transition-all group-hover/node:stroke-gold"
+            {/* edges */}
+            {edges.map((e) => {
+              const a = nodesMap.get(e.source)!;
+              const b = nodesMap.get(e.target)!;
+              const hot = selected === e.source || selected === e.target;
+              const style = KIND_STYLE[e.kind];
+              return (
+                <line
+                  key={`${e.source}|${e.target}|${e.kind}`}
+                  x1={a.x}
+                  y1={a.y}
+                  x2={b.x}
+                  y2={b.y}
+                  stroke={style.stroke}
+                  strokeWidth={hot ? 2.5 : 1.4}
+                  strokeDasharray={style.dash}
+                  opacity={hot ? 0.95 : 0.4}
                 />
-                <circle
-                  r={r}
-                  fill={isSel ? "var(--color-gold-deep)" : "var(--color-parchment)"}
-                  stroke="var(--color-gold-deep)"
-                  strokeWidth="1.5"
-                />
-                {visitedVerses.has(n.ref) && !isSel && (
-                  <circle r={r + 3.5} fill="none" stroke="var(--color-ink-faint)" strokeWidth="1.5" strokeDasharray="2 3" />
-                )}
-                <text
-                  y={r + 13}
-                  textAnchor="middle"
-                  fontSize="12.5"
-                  fill={isSel ? "var(--color-gold-deep)" : "var(--color-ink-soft)"}
-                  fontWeight={isSel ? 600 : 400}
+              );
+            })}
+            {/* nodes */}
+            {nodes.map((n) => {
+              const isSel = n.ref === selected;
+              const r = radius(n.degree);
+              return (
+                <g
+                  key={n.ref}
+                  transform={`translate(${n.x},${n.y})`}
+                  onClick={() => expand(n.ref)}
+                  className="cursor-pointer group/node"
                 >
-                  {shortRef(n.ref)}
-                </text>
-              </g>
-            );
-          })}
+                  <circle
+                    r={r + 4}
+                    fill="transparent"
+                    stroke={isSel ? "var(--color-gold)" : "transparent"}
+                    strokeWidth="2"
+                    className="transition-all group-hover/node:stroke-gold"
+                  />
+                  <circle
+                    r={r}
+                    fill={
+                      isSel
+                        ? "var(--color-gold-deep)"
+                        : "var(--color-parchment)"
+                    }
+                    stroke="var(--color-gold-deep)"
+                    strokeWidth="1.5"
+                  />
+                  {visitedVerses.has(n.ref) && !isSel && (
+                    <circle
+                      r={r + 3.5}
+                      fill="none"
+                      stroke="var(--color-ink-faint)"
+                      strokeWidth="1.5"
+                      strokeDasharray="2 3"
+                    />
+                  )}
+                  <text
+                    y={r + 13}
+                    textAnchor="middle"
+                    fontSize="12.5"
+                    fill={
+                      isSel ? "var(--color-gold-deep)" : "var(--color-ink-soft)"
+                    }
+                    fontWeight={isSel ? 600 : 400}
+                  >
+                    {shortRef(n.ref)}
+                  </text>
+                </g>
+              );
+            })}
           </svg>
         </div>
         <p className="border-t border-line px-4 py-3 text-[12.5px] text-ink-faint">
@@ -355,7 +405,7 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
               </blockquote>
             )}
             <Link
-              href={`/verses/${verseSlug(selected)}`}
+              href={versionedUrl(`/verses/${verseSlug(selected)}`, version)}
               className="mt-3 inline-block text-[13px] font-semibold text-gold-deep underline-offset-2 hover:underline"
             >
               Open verse page →
@@ -366,7 +416,9 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
             </h3>
             <div className="mt-3 space-y-4">
               {selEdges.length === 0 && (
-                <p className="text-[13px] text-ink-faint">No visible edges; try enabling more kinds above.</p>
+                <p className="text-[13px] text-ink-faint">
+                  No visible edges; try enabling more kinds above.
+                </p>
               )}
               {selEdges.map((e) => {
                 const other = e.source === selected ? e.target : e.source;
@@ -385,7 +437,10 @@ export default function ConnectionGraph({ startRef, graph }: { startRef: string;
                       <span aria-hidden>→</span>
                     </span>
                     <span className="mt-0.5 block text-[12.5px] leading-relaxed text-ink-soft">
-                      <em className="not-italic font-semibold" style={{ color: KIND_STYLE[e.kind].stroke }}>
+                      <em
+                        className="not-italic font-semibold"
+                        style={{ color: KIND_STYLE[e.kind].stroke }}
+                      >
                         {connectionKindLabel[e.kind]}:
                       </em>{" "}
                       {e.note}

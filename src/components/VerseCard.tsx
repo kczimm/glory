@@ -3,7 +3,11 @@ import { verseSlug, getConnections } from "@/data";
 import Link from "next/link";
 import VerseConnections, { type ConnectionRowData } from "./VerseConnections";
 import MemorizeButton from "./MemorizeButton";
-import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
+import {
+  getTranslationInfo,
+  versionedUrl,
+  type TranslationCode,
+} from "@/lib/translation-shared";
 
 /**
  * A scripture callout: the reference, the exact text, and any
@@ -36,7 +40,7 @@ export default function VerseCard({
       </blockquote>
       <figcaption className="mt-1.5 text-[13px]">
         <Link
-          href={`/verses/${verseSlug(verse)}`}
+          href={versionedUrl(`/verses/${verseSlug(verse)}`, translation)}
           className="font-semibold tracking-wide text-gold-deep underline-offset-2 hover:underline"
         >
           {verse}

@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { verseSlug } from "@/data";
 import { connectionKindLabel } from "@/data/connections";
+import { versionedUrl } from "@/lib/translation-shared";
+import { useTranslation } from "@/lib/useTranslation";
 import type { ConnectionKind } from "@/data/types";
 
 export interface ConnectionRowData {
@@ -27,6 +29,7 @@ export default function VerseConnections({
   rows: ConnectionRowData[];
 }) {
   const [open, setOpen] = useState(false);
+  const { version } = useTranslation();
   if (!rows.length) return null;
 
   return (
@@ -39,20 +42,23 @@ export default function VerseConnections({
       >
         <span aria-hidden>✦</span>
         Cross-references ({rows.length})
-        <span className={`transition-transform ${open ? "rotate-90" : ""}`} aria-hidden>
+        <span
+          className={`transition-transform ${open ? "rotate-90" : ""}`}
+          aria-hidden
+        >
           ›
         </span>
       </button>
       {open && (
         <ul className="mt-2.5 space-y-3">
           {rows.map((row) => (
-            <ConnectionRow key={row.target} row={row} />
+            <ConnectionRow key={row.target} row={row} version={version} />
           ))}
         </ul>
       )}
       {open && (
         <Link
-          href={`/connections/${verseSlug(verse)}`}
+          href={versionedUrl(`/connections/${verseSlug(verse)}`, version)}
           className="mt-3 inline-flex items-center gap-1 text-[12px] font-semibold text-gold-deep underline-offset-2 hover:underline"
         >
           See this verse&apos;s connection map
@@ -63,7 +69,13 @@ export default function VerseConnections({
   );
 }
 
-function ConnectionRow({ row }: { row: ConnectionRowData }) {
+function ConnectionRow({
+  row,
+  version,
+}: {
+  row: ConnectionRowData;
+  version: import("@/lib/translation-shared").TranslationCode;
+}) {
   return (
     <li className="rounded-lg bg-parchment/80 px-3 py-2.5">
       <p className="flex items-baseline gap-2">
@@ -71,7 +83,7 @@ function ConnectionRow({ row }: { row: ConnectionRowData }) {
           {connectionKindLabel[row.kind]}
         </span>
         <Link
-          href={`/verses/${verseSlug(row.target)}`}
+          href={versionedUrl(`/verses/${verseSlug(row.target)}`, version)}
           className="text-[12.5px] font-semibold text-gold-deep underline-offset-2 hover:underline"
         >
           {row.target}

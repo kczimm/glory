@@ -2,11 +2,20 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { verseSlug } from "@/data";
-import { questions, refFromSlug, graphVerseTexts, graphUsages, citedVersesBySlug } from "@/data/server";
+import {
+  questions,
+  refFromSlug,
+  graphVerseTexts,
+  graphUsages,
+  citedVersesBySlug,
+} from "@/data/server";
 import ConnectionGraph from "@/components/ConnectionGraph";
+import { versionedUrl } from "@/lib/translation-shared";
+import { resolveServerTranslation } from "@/lib/translation-server";
 
 interface Props {
   params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ version?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -27,8 +36,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ConnectionsPage({ params }: Props) {
+export default async function ConnectionsPage({ params, searchParams }: Props) {
   const { slug } = await params;
+  const sp = await searchParams;
+  const version = await resolveServerTranslation(
+    sp as Record<string, string | undefined> | undefined,
+  );
   const ref = refFromSlug(slug);
   if (!ref) notFound();
 
@@ -58,13 +71,16 @@ export default async function ConnectionsPage({ params }: Props) {
       <p className="mt-8 text-[13px] text-ink-faint">
         Prefer to read?{" "}
         <Link
-          href={`/verses/${slug}`}
+          href={versionedUrl(`/verses/${slug}`, version)}
           className="font-semibold text-gold-deep underline-offset-2 hover:underline"
         >
           Open the verse page
         </Link>{" "}
         or{" "}
-        <Link href="/" className="font-semibold text-gold-deep underline-offset-2 hover:underline">
+        <Link
+          href="/"
+          className="font-semibold text-gold-deep underline-offset-2 hover:underline"
+        >
           start from a question
         </Link>
         .

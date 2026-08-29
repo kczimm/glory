@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { chapterSlug } from "@/data/books";
 import { bibleBooks } from "@/data/server";
-import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
+import {
+  getTranslationInfo,
+  versionedUrl,
+  type TranslationCode,
+} from "@/lib/translation-shared";
 import { resolveServerTranslation } from "@/lib/translation-server";
 
 export const metadata: Metadata = {
@@ -17,7 +21,9 @@ interface Props {
 
 export default async function BibleIndex({ searchParams }: Props) {
   const sp = await searchParams;
-  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
+  const version: TranslationCode = await resolveServerTranslation(
+    sp as Record<string, string | undefined> | undefined,
+  );
   const translationInfo = getTranslationInfo(version);
   const books = bibleBooks(version);
 
@@ -31,8 +37,8 @@ export default async function BibleIndex({ searchParams }: Props) {
           Whole chapters, whole Word
         </h1>
         <p className="mt-4 text-[16px] leading-relaxed text-ink-soft">
-          Every chapter of the {translationInfo.name} is here, ready offline. Pick
-          a book and read at length; verses that appear in a study or a
+          Every chapter of the {translationInfo.name} is here, ready offline.
+          Pick a book and read at length; verses that appear in a study or a
           cross-reference lead you back into the questions.
         </p>
       </header>
@@ -47,7 +53,7 @@ export default async function BibleIndex({ searchParams }: Props) {
               {Array.from({ length: chapters }, (_, i) => i + 1).map((n) => (
                 <Link
                   key={n}
-                  href={`/bible/${chapterSlug(book, n)}`}
+                  href={versionedUrl(`/bible/${chapterSlug(book, n)}`, version)}
                   className="flex h-7 w-7 items-center justify-center rounded-full border border-line bg-surface/60 text-[12px] text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
                 >
                   {n}
