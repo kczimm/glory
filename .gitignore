@@ -58,3 +58,6 @@ scripts/packs/
 __pycache__/
 .ruff_cache/
 *.pyc
+
+# pi agent task/output directory
+/.pi/

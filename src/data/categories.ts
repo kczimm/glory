@@ -103,9 +103,10 @@ export const categories: Category[] = [
   },
   // The Story of Scripture: a canonical walk from Genesis to Christ.
   // These trails are ordered; read them in sequence for the whole sweep
-  // of the Bible's narrative. New Testament story trails (the Gospels,
-  // Acts, the letters in their setting, Revelation) are planned as this
-  // arc fills in; until then the doctrinal trails above carry those eras.
+  // of the Bible's narrative. Esther fills the post-exile Persian court
+  // (contemporary with Ezra and Nehemiah). New Testament story trails (the
+  // Gospels, Acts, the letters in their setting, Revelation) are planned as
+  // this arc fills in; until then the doctrinal trails above carry those eras.
   {
     slug: "in-the-beginning",
     title: "In the Beginning",
@@ -146,12 +147,22 @@ export const categories: Category[] = [
     order: 17,
     entry: ["why-did-god-send-his-people-into-exile"],
   },
+
+  {
+    slug: "esther",
+    title: "Esther",
+    tagline:
+      "Exiles in a foreign court, a queen who risks everything, and a God who works behind the scenes. The whole book never names Him, and that is exactly the point: rescue comes even when He seems silent. Esther 1 through 10.",
+    order: 18,
+    entry: ["why-is-god-absent-in-esther"],
+  },
+
   {
     slug: "anxiety-peace",
     title: "Anxiety & Peace",
     tagline:
       "When worry will not let go: what Jesus says to the anxious, the peace that guards heart and mind, and the Father who cares for you.",
-    order: 18,
+    order: 19,
     entry: ["why-am-i-so-anxious"],
   },
   {
@@ -159,7 +170,7 @@ export const categories: Category[] = [
     title: "Grief & Loss",
     tagline:
       "When someone you love is gone: permission to mourn, the God who weeps with you, and the resurrection that gives grief a horizon.",
-    order: 19,
+    order: 20,
     entry: ["why-does-death-hurt-so-much"],
   },
   {
@@ -167,7 +178,7 @@ export const categories: Category[] = [
     title: "Worship",
     tagline:
       "What worship actually is: answering God with your whole self, in spirit and truth, until the day every nation sings one song.",
-    order: 20,
+    order: 21,
     entry: ["what-is-worship"],
   },
 ];

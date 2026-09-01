@@ -16636,6 +16636,475 @@ export const questions: Question[] = [
   },
 
   {
+    slug: "why-is-god-absent-in-esther",
+    question: "Why does the book of Esther never mention God?",
+    category: "esther",
+    summary:
+      "The whole book of Esther never names God, yet His hand is on every page: a queen placed for a crisis, a king kept awake, an enemy hoisted on his own gallows. Esther teaches that God rules even when He seems silent.",
+    passages: [
+      {
+        book: "Esther",
+        chapter: 4,
+        title: "A people sentenced to death",
+        lookFor: "The decree against the Jews and Mordecai's plea to Esther, with the words the book turns on.",
+        focus: "1-17",
+      },
+      {
+        book: "Esther",
+        chapter: 6,
+        title: "The king who couldn't sleep",
+        lookFor: "The sleepless night that reverses the whole story, and the honor meant for Haman given to Mordecai.",
+        focus: "1-14",
+      },
+    ],
+    points: [
+      {
+        heading: "The book never says His name, and that is the point",
+        body:
+          "Esther is the only book of the Bible where God is never named. There is no prayer, no prophet, no miracle, no temple. Yet the story turns entirely on His hidden providence, which means the silence is the lesson, not the absence.",
+        verses: ["Esther 4:14"],
+      },
+      {
+        heading: "A people far from home",
+        body:
+          "The story opens in Susa, the citadel of a pagan empire, decades after some Jews returned to Judah. Mordecai had been carried from Jerusalem with the exiles, and Esther is his orphaned cousin. God's people are scattered and not safe, and still under His care.",
+        verses: ["Esther 2:5-6"],
+      },
+      {
+        heading: "Relief and deliverance would come from another place",
+        body:
+          "When Esther wonders whether to stay quiet, Mordecai answers that if she is silent now, 'relief and deliverance will come to the Jews from another place,' but she and her father's house will perish. The rescue does not depend on one person. It depends on the God who sends it.",
+        verses: ["Esther 4:14"],
+      },
+      {
+        heading: "The pivot is a sleepless king",
+        body:
+          "The hinge of the whole book is not a battle but a night. On that night 'the king couldn't sleep,' a chronicle is read aloud, and the man Haman meant to hang is honored instead. The smaller the detail, the clearer the hand.",
+        verses: ["Esther 6:1"],
+      },
+      {
+        heading: "Hidden is not absent",
+        body:
+          "Esther refuses to proof-text God because it wants us to feel the silence and still trust the hand. For a people living between the promises and their fulfillment, that is exactly the comfort: the God who seems farthest off is working the closest.",
+        verses: ["Esther 4:14", "Esther 6:1"],
+      },
+    ],
+    keyVerses: ["Esther 4:14", "Esther 6:1"],
+    raises: ["how-did-esther-become-queen", "why-does-god-allow-suffering"],
+    followsFrom: [],
+    related: ["why-does-god-allow-suffering", "how-does-the-old-story-reach-jesus"],
+    planned: ["Why does the Bible include a book that never names God?"],
+    order: 121,
+  },
+
+  {
+    slug: "how-did-esther-become-queen",
+    question: "How did a Jewish exile become queen of Persia?",
+    category: "esther",
+    summary:
+      "A pagan king deposes one queen and, through a gathering of young women from across the provinces, crowns an unnamed Jewish orphan. Behind the palace politics, God positions His person for a day not yet seen.",
+    passages: [
+      {
+        book: "Esther",
+        chapter: 1,
+        title: "Vashti removed",
+        lookFor: "Why the first queen is set aside, and the decree that goes out in every province.",
+        focus: "10-22",
+      },
+      {
+        book: "Esther",
+        chapter: 2,
+        title: "Esther taken, then crowned",
+        lookFor: "Mordecai and Esther in Susa, and how a quiet orphan rises to the throne.",
+        focus: "1-18",
+      },
+    ],
+    points: [
+      {
+        heading: "A queen set aside for refusing to be displayed",
+        body:
+          "When Vashti will not parade her beauty before the king's guests, the counselors decree that 'Vashti may never again come before King Ahasuerus,' and that every man should rule his own house. Her removal opens the door Esther will walk through.",
+        verses: ["Esther 1:19", "Esther 1:22"],
+      },
+      {
+        heading: "An orphan in the citadel of Susa",
+        body:
+          "Mordecai, a Benjamite carried from Jerusalem with the exiles, had brought up Hadassah, that is Esther, his orphaned cousin. She had neither father nor mother, and he took her for his own daughter. The story of a deliverer begins with ordinary, quiet love.",
+        verses: ["Esther 2:5-7"],
+      },
+      {
+        heading: "Gathered into the king's house",
+        body:
+          "Esther is taken among the young women of the provinces. She asks for nothing beyond what the keeper advises, and she obtains favor in the sight of all who look at her. Her beauty is real, but the narrative keeps pointing past it to the favor.",
+        verses: ["Esther 2:15-16"],
+      },
+      {
+        heading: "He made her queen instead of Vashti",
+        body:
+          "The king loved Esther more than all the women, and he set the royal crown on her head, and 'made her queen instead of Vashti.' The throne that looked like the fruit of a beauty contest is, in the telling, the place God has been preparing.",
+        verses: ["Esther 2:17"],
+      },
+      {
+        heading: "Positioned before the crisis",
+        body:
+          "Esther becomes queen in the seventh year of the king, years before Haman's plot. The crown is given long before it is needed, which is how providence usually works: God seats His person, then the moment arrives.",
+        verses: ["Esther 2:16-17"],
+      },
+    ],
+    keyVerses: ["Esther 2:17", "Esther 2:7"],
+    raises: ["why-did-haman-hate-the-jews"],
+    followsFrom: ["why-is-god-absent-in-esther"],
+    related: ["what-does-ruth-teach-about-redemption"],
+    planned: [],
+    order: 122,
+  },
+
+  {
+    slug: "why-did-haman-hate-the-jews",
+    question: "Why did Haman want to destroy the Jews?",
+    category: "esther",
+    summary:
+      "Haman is promoted above all the princes, and when one Jew will not bow, his wrath swells from a man to a nation. He buys a decree to annihilate them, and the king signs it without a thought.",
+    passages: [
+      {
+        book: "Esther",
+        chapter: 3,
+        title: "The lot is cast against a people",
+        lookFor: "How personal pique becomes a royal decree to kill every Jew in the empire.",
+        focus: "1-15",
+      },
+    ],
+    points: [
+      {
+        heading: "A man lifted up",
+        body:
+          "After these things the king promoted Haman above all the princes, and set his seat above them all. Pride is the soil and the offense is the seed. From the height of his station, Haman cannot bear one person who will not honor him.",
+        verses: ["Esther 3:1"],
+      },
+      {
+        heading: "One Jew would not bow",
+        body:
+          "All the king's servants bowed to Haman, for the king had commanded it, but Mordecai did not bow or pay him homage. Mordecai bows to God alone, and that refusal is the spark of the whole plot.",
+        verses: ["Esther 3:2", "Esther 3:4"],
+      },
+      {
+        heading: "Wrath against a people",
+        body:
+          "When Haman saw that Mordecai would not bow, he was full of wrath, but he scorned to lay hands on Mordecai alone. Because Mordecai was a Jew, Haman sought to destroy all the Jews throughout the kingdom. Contempt for one becomes hatred for all.",
+        verses: ["Esther 3:5-6"],
+      },
+      {
+        heading: "A decree to destroy, to kill, and to cause to perish, all Jews",
+        body:
+          "Haman tells the king the people keep different laws and are not worth keeping, and offers ten thousand talents of silver for the deed. The king gives his signet and the letters go out 'to destroy, to kill, and to cause to perish, all Jews,' young and old, in a single day.",
+        verses: ["Esther 3:8-9", "Esther 3:13"],
+      },
+      {
+        heading: "The king and Haman sat down to drink",
+        body:
+          "With the decree sent, 'the king and Haman sat down to drink,' but the city of Susa was perplexed. The men who signed the death warrant feast, and the people marked for death sit in confusion. The silence of God is never the end of the story.",
+        verses: ["Esther 3:15"],
+      },
+    ],
+    keyVerses: ["Esther 3:13", "Esther 3:6"],
+    raises: ["what-esther-risked"],
+    followsFrom: ["how-did-esther-become-queen"],
+    related: ["why-does-god-allow-suffering"],
+    planned: [],
+    order: 123,
+  },
+
+  {
+    slug: "what-esther-risked",
+    question: "What did Esther risk to save her people?",
+    category: "esther",
+    summary:
+      "When Mordecai tells her of the decree, Esther answers that going unsummoned to the king means death. She calls the people to fast, then walks in, and speaks the words the book is remembered for.",
+    passages: [
+      {
+        book: "Esther",
+        chapter: 4,
+        title: "Mordecai's plea, Esther's resolve",
+        lookFor: "The death that waits on the unsummoned, and Esther's answer to risk herself.",
+        focus: "1-17",
+      },
+      {
+        book: "Esther",
+        chapter: 5,
+        title: "Esther stands in the court",
+        lookFor: "The scepter held out, and the banquet that buys her one more day.",
+        focus: "1-8",
+      },
+    ],
+    points: [
+      {
+        heading: "Sackcloth at the gate",
+        body:
+          "When Mordecai learns all that is done, he tears his clothes, puts on sackcloth with ashes, and goes out into the city wailing bitterly. The decree is not abstract to him. It is a death sentence on his people, and on the daughter he raised.",
+        verses: ["Esther 4:1"],
+      },
+      {
+        heading: "One law for him: that he be put to death",
+        body:
+          "Esther sends word that no one may approach the king unsummoned, on pain of death, unless the king holds out the golden scepter. For thirty days she has not been called, so to go in is to risk her own life. Courage here has a real cost.",
+        verses: ["Esther 4:11"],
+      },
+      {
+        heading: "You and your father's house will perish",
+        body:
+          "Mordecai sends back that she should not think she will escape in the king's house any more than all the Jews. If she stays silent, she loses her people and herself. The choice is not between safety and danger, but between silence and rescue.",
+        verses: ["Esther 4:13"],
+      },
+      {
+        heading: "Who knows if you haven't come to the kingdom for such a time as this?",
+        body:
+          "Mordecai's question is the hinge of the book. Perhaps Esther's quiet rise to the throne was not chance but purpose. The same question sits before every reader in a hard place: what have I been placed here for?",
+        verses: ["Esther 4:14"],
+      },
+      {
+        heading: "Go, gather all the Jews, and fast... if I perish, I perish",
+        body:
+          "Esther calls the Jews of Susa to fast three days, and she and her maidens will fast with them. Then she will go to the king, which is against the law, and 'if I perish, I perish.' On the third day she stands in the court, the king holds out the scepter, and the rescue begins.",
+        verses: ["Esther 4:16", "Esther 5:1-2"],
+      },
+    ],
+    keyVerses: ["Esther 4:14", "Esther 4:16"],
+    raises: ["the-kings-sleepless-night"],
+    followsFrom: ["why-did-haman-hate-the-jews"],
+    related: ["why-does-god-allow-suffering"],
+    planned: [],
+    order: 124,
+  },
+
+  {
+    slug: "the-kings-sleepless-night",
+    question: "How did the king's sleepless night save a nation?",
+    category: "esther",
+    summary:
+      "On the very night Haman builds a gallows, the king cannot sleep. A chronicle is read, a question is asked, and the man Haman hoped to hang is paraded through the city instead.",
+    passages: [
+      {
+        book: "Esther",
+        chapter: 6,
+        title: "The night the story turns",
+        lookFor: "The insomnia, the chronicle, and the honor Haman designed for himself given to Mordecai.",
+        focus: "1-14",
+      },
+    ],
+    points: [
+      {
+        heading: "On that night, the king couldn't sleep",
+        body:
+          "The pivot of the whole book is a sleepless king. On that night 'the king couldn't sleep,' and he commands the book of the records to be brought and read to him. The smallest detail in the story is the one God is using.",
+        verses: ["Esther 6:1"],
+      },
+      {
+        heading: "A service remembered too late for Haman",
+        body:
+          "The chronicle records that Mordecai had exposed a plot against the king and was never honored for it. The king asks what has been done for Mordecai, and learns: nothing. The man Haman means to destroy is, at that very hour, owed the highest honor.",
+        verses: ["Esther 6:2-3"],
+      },
+      {
+        heading: "What shall be done for the man the king delights to honor?",
+        body:
+          "Just then Haman enters to ask for Mordecai's death. The king asks him how to honor a favored man, and Haman, sure it is himself, describes royal robes, a horse, and a herald crying through the city. He has written the script for his own rival's glory.",
+        verses: ["Esther 6:6-9"],
+      },
+      {
+        heading: "Do this for Mordecai the Jew",
+        body:
+          "The king turns Haman's words on their author: hurry and 'do this for Mordecai the Jew.' Haman must array Mordecai and proclaim his honor through the square. The enemy becomes the herald of the man he hates.",
+        verses: ["Esther 6:10-11"],
+      },
+      {
+        heading: "Haman hurried home, mourning",
+        body:
+          "Haman returns with his head covered, and his wife and friends tell him that if Mordecai is of Jewish descent, he will surely fall before him. The reversal that began with a sleepless night is now past turning back.",
+        verses: ["Esther 6:12-13"],
+      },
+    ],
+    keyVerses: ["Esther 6:1", "Esther 6:10-11"],
+    raises: ["how-the-tables-turned-on-haman"],
+    followsFrom: ["what-esther-risked"],
+    related: ["why-does-god-allow-suffering"],
+    planned: [],
+    order: 125,
+  },
+
+  {
+    slug: "how-the-tables-turned-on-haman",
+    question: "How did the tables turn on Haman?",
+    category: "esther",
+    summary:
+      "At Esther's second banquet she names the enemy, Haman falls at her feet, and the king hangs him on the gallows he built. Then a new decree lets the Jews defend their lives.",
+    passages: [
+      {
+        book: "Esther",
+        chapter: 7,
+        title: "Haman unmasked",
+        lookFor: "Esther's petition, the king's return, and the gallows made for Mordecai.",
+        focus: "1-10",
+      },
+      {
+        book: "Esther",
+        chapter: 8,
+        title: "The counter-decree",
+        lookFor: "Esther's second plea, the king's ring, and the letter that lets the Jews stand.",
+        focus: "1-17",
+      },
+    ],
+    points: [
+      {
+        heading: "Let my life be given me, and my people",
+        body:
+          "At the banquet the king offers Esther up to half his kingdom. She answers that if she has found favor, let her life be given her at her petition, and her people at her request, for they are sold to be destroyed, to be slain, and to perish. She names the enemy by naming the crime.",
+        verses: ["Esther 7:3-4"],
+      },
+      {
+        heading: "Will he even assault the queen in front of me?",
+        body:
+          "The king storms into the garden and finds Haman fallen on the couch where Esther sits. The word of the king's mouth condemns him before any trial: the man who meant to kill the queen is judged by his own posture.",
+        verses: ["Esther 7:8"],
+      },
+      {
+        heading: "Hang him on it!",
+        body:
+          "An attendant mentions the gallows fifty cubits high that Haman made for Mordecai. The king says, 'Hang him on it,' and they hanged Haman on the gallows he had prepared for Mordecai. The trap closes on its builder.",
+        verses: ["Esther 7:9-10"],
+      },
+      {
+        heading: "The king granted the Jews to defend their life",
+        body:
+          "Haman's decree cannot be reversed, so the king gives his ring again and lets the Jews write a second letter. In those letters the king granted the Jews in every city 'to defend their life' against any who would assault them.",
+        verses: ["Esther 8:8", "Esther 8:11"],
+      },
+      {
+        heading: "The Jews had light, gladness, joy, and honor",
+        body:
+          "Where there was a sentence of death, there is now a feast. 'The Jews had light, gladness, joy, and honor,' and many from among the peoples of the land became Jews, for the fear of them had fallen on all. Deliverance spreads beyond the rescued.",
+        verses: ["Esther 8:16-17"],
+      },
+    ],
+    keyVerses: ["Esther 7:10", "Esther 8:11"],
+    raises: ["what-is-the-feast-of-purim"],
+    followsFrom: ["the-kings-sleepless-night"],
+    related: ["what-does-the-exodus-show-us-about-god"],
+    planned: [],
+    order: 126,
+  },
+
+  {
+    slug: "what-is-the-feast-of-purim",
+    question: "What is the feast of Purim?",
+    category: "esther",
+    summary:
+      "Saved from annihilation, the Jews turn the days of deliverance into an annual feast. Purim, named from the lot Haman cast, is kept by every generation with gladness and gifts to the poor.",
+    passages: [
+      {
+        book: "Esther",
+        chapter: 9,
+        title: "Victory and a feast instituted",
+        lookFor: "The day turned from sorrow to gladness, and the ordinance to remember it always.",
+        focus: "1-32",
+      },
+    ],
+    points: [
+      {
+        heading: "The day the enemies hoped to conquer them",
+        body:
+          "On the thirteenth of Adar, the day the enemies hoped to overcome the Jews, it turned the other way, and the Jews conquered those who hated them. The date Haman chose for their death became the day of their victory.",
+        verses: ["Esther 9:1"],
+      },
+      {
+        heading: "No one could withstand them",
+        body:
+          "The Jews gathered in their cities to lay hands on those who wanted to harm them, and no one could withstand them, because the fear of them had fallen on all the people. The princes and governors helped them, for the fear of Mordecai had fallen on them.",
+        verses: ["Esther 9:2-3"],
+      },
+      {
+        heading: "From sorrow to gladness, and from mourning into a good day",
+        body:
+          "Mordecai writes to all the Jews to keep the fourteenth and fifteenth of Adar yearly, as the days in which they had rest from their enemies, and the month which was turned to them 'from sorrow to gladness, and from mourning into a good day.'",
+        verses: ["Esther 9:22"],
+      },
+      {
+        heading: "Days of feasting, and gifts to the needy",
+        body:
+          "He ordains that they should make them 'days of feasting and gladness, and of sending presents of food to one another, and gifts to the needy.' A feast of deliverance is also a feast of generosity. The rescued share the joy with the poor.",
+        verses: ["Esther 9:22"],
+      },
+      {
+        heading: "Remembered and kept throughout every generation",
+        body:
+          "The Jews established Purim for themselves and their descendants, and these days should be 'remembered and kept throughout every generation,' every family, every province, and every city. Salvation is meant to be enacted, not only believed.",
+        verses: ["Esther 9:27-28"],
+      },
+    ],
+    keyVerses: ["Esther 9:22", "Esther 9:28"],
+    raises: ["how-esther-points-to-christ"],
+    followsFrom: ["how-the-tables-turned-on-haman"],
+    related: ["what-does-the-exodus-show-us-about-god", "what-is-worship"],
+    planned: [],
+    order: 127,
+  },
+
+  {
+    slug: "how-esther-points-to-christ",
+    question: "How does Esther point to Christ?",
+    category: "esther",
+    summary:
+      "Esther is a picture of rescue: a mediator who risks her life for her people, a bride whose favor shields her household, and a deliverer whose victory becomes a feast. She points beyond herself to the greater Son of David.",
+    passages: [
+      {
+        book: "Esther",
+        chapter: 4,
+        title: "Her resolve to go in",
+        lookFor: "Esther's willingness to die for her people, the pattern a greater Deliverer will fulfill.",
+        focus: "13-17",
+      },
+      {
+        book: "John",
+        chapter: 15,
+        title: "The friend who lays down his life",
+        lookFor: "Jesus names the love that Esther only pictured, and does it.",
+        focus: "9-17",
+      },
+    ],
+    points: [
+      {
+        heading: "A mediator who risks herself for her people",
+        body:
+          "Esther goes in where no one may go, for the life of her people, and says she will go though it cost her. Jesus names the love behind it: 'Greater love has no one than this, that someone lay down his life for his friends.' Esther pictures the mediation, and Christ accomplishes it.",
+        verses: ["Esther 4:16", "John 15:13"],
+      },
+      {
+        heading: "A bride whose favor shields her household",
+        body:
+          "The king set the crown on Esther and made her queen, and her position becomes the protection of her people. So 'Christ also loved the assembly, and gave himself up for it,' that He might present it to Himself a pure bride. The queen's place foreshadows the Bridegroom's.",
+        verses: ["Esther 2:17", "Ephesians 5:25"],
+      },
+      {
+        heading: "The greater Deliverer",
+        body:
+          "Esther saves one people from one decree for a season. The Lamb who was slain is worthy to open the scroll, for He was killed and bought us for God with His blood, 'out of every tribe, language, people, and nation.' Her local rescue opens onto His global one.",
+        verses: ["Esther 8:17", "Revelation 5:9"],
+      },
+      {
+        heading: "Her victory becomes a feast",
+        body:
+          "The days of deliverance become Purim, a feast of gladness and gifts. The final feast is 'the marriage supper of the Lamb,' to which every rescued people is invited. Esther's table is a shadow of the wedding banquet of the King.",
+        verses: ["Esther 9:22", "Revelation 19:9"],
+      },
+    ],
+    keyVerses: ["Esther 4:16", "John 15:13", "Revelation 5:9"],
+    raises: [],
+    followsFrom: ["what-is-the-feast-of-purim"],
+    related: ["who-is-jesus", "what-does-the-exodus-show-us-about-god"],
+    planned: ["How does the book of Esther point forward to the greater exodus?"],
+    order: 128,
+  },
+
+  {
     slug: "why-am-i-so-anxious",
     question: "Why am I so anxious?",
     category: "anxiety-peace",
