@@ -31,5 +31,8 @@
   "when he washed the disciples": "extraction artifact: apostrophe pairing across sentences; text is our own commentary",
   "praying in jesus": "extraction artifact: apostrophe pairing across sentences; text is our own heading",
   "i will build my assembly and the gates of hades will not prevail against it": "WEB source itself glues 'Hadeswill' (getbible.net upstream defect); quote is word-perfect otherwise",
-  "blows where it wants to": "WEB source itself glues 'windblows' in John 3:8 (getbible.net upstream defect); quote is word-perfect otherwise"
+  "blows where it wants to": "WEB source itself glues 'windblows' in John 3:8 (getbible.net upstream defect); quote is word-perfect otherwise",
+  "does this make me impressive": "our own rhetorical question, not scripture",
+  "does this build up others": "our own rhetorical question, not scripture",
+  "lion of judah": "title for Jesus from Revelation 5:5, used as a label not a direct quote"
 }

@@ -154,10 +154,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 5:3-4", "Matthew 28:19", "1 Corinthians 2:10-11", "Hebrews 9:14"],
-    raises: ["what-is-the-trinity", "how-does-the-spirit-convict-the-world", "holy-spirit-in-the-old-testament", "what-is-the-fruit-of-the-spirit"],
+    raises: ["what-is-the-trinity", "how-does-the-spirit-convict-the-world", "holy-spirit-in-the-old-testament", "what-is-the-fruit-of-the-spirit", "fruit-vs-works-of-the-flesh"],
     followsFrom: ["who-is-the-holy-spirit"],
     related: ["is-jesus-really-god"],
-    planned: ["What is the difference between the fruit and the works of the flesh?"],
+    planned: [],
     order: 2,
   },
 
@@ -292,10 +292,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 2:38-39", "Ephesians 1:13-14", "Romans 8:15-16", "Galatians 3:2"],
-    raises: ["what-are-spiritual-gifts", "how-do-i-know-the-spirit-is-leading-me", "what-does-it-mean-to-be-baptized-with-the-holy-spirit"],
+    raises: ["what-are-spiritual-gifts", "how-do-i-know-the-spirit-is-leading-me", "what-does-it-mean-to-be-baptized-with-the-holy-spirit", "spirit-baptism-vs-filling"],
     followsFrom: ["who-is-the-holy-spirit"],
     related: ["who-is-the-holy-spirit", "how-can-i-be-saved"],
-    planned: ["What is the difference between the Spirit's baptism and His filling?"],
+    planned: [],
     order: 4,
   },
 
@@ -447,10 +447,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 1:1", "John 8:58", "Colossians 2:9", "Hebrews 1:3", "John 20:28"],
-    raises: ["why-did-jesus-have-to-die", "what-is-the-trinity", "does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man", "what-does-firstborn-mean", "does-it-matter-which-jesus-i-believe-in"],
+    raises: ["why-did-jesus-have-to-die", "what-is-the-trinity", "does-jesus-sharing-gods-nature-mean-two-gods", "why-did-god-become-a-man", "what-does-firstborn-mean", "does-it-matter-which-jesus-i-believe-in", "jesus-incarnation-fathers-love"],
     followsFrom: ["who-is-jesus"],
     related: ["is-the-holy-spirit-god", "are-there-other-gods", "who-are-the-gods-of-psalm-82", "should-we-worship-jesus"],
-    planned: ["How does Jesus' becoming man show us the Father's love?"],
+    planned: [],
     order: 6,
   },
 
@@ -752,10 +752,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 5:18", "John 10:30", "Hebrews 1:3", "John 5:21"],
-    raises: ["is-jesus-really-god", "why-is-jesus-both-son-of-god-and-son-of-man", "what-does-it-mean-that-jesus-is-the-son-of-david"],
+    raises: ["is-jesus-really-god", "why-is-jesus-both-son-of-god-and-son-of-man", "what-does-it-mean-that-jesus-is-the-son-of-david", "jesus-lion-of-judah"],
     followsFrom: ["who-is-jesus"],
     related: ["who-is-the-holy-spirit"],
-    planned: ["What does it mean that Jesus is the Lion of Judah?"],
+    planned: [],
     order: 10,
   },
 
@@ -828,10 +828,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 3:3", "John 1:12-13", "2 Corinthians 5:17", "1 Peter 1:3"],
-    raises: ["how-do-i-receive-the-holy-spirit", "what-happens-when-i-sin", "born-again-and-baptism", "what-the-new-life-looks-like", "what-does-it-mean-to-be-a-child-of-god"],
+    raises: ["how-do-i-receive-the-holy-spirit", "what-happens-when-i-sin", "born-again-and-baptism", "what-the-new-life-looks-like", "what-does-it-mean-to-be-a-child-of-god", "child-of-god-changes-life"],
     followsFrom: ["how-can-i-be-saved", "what-is-faith"],
     related: ["how-can-i-be-saved"],
-    planned: ["How does being a child of God change how I live?"],
+    planned: [],
     order: 11,
   },
 
@@ -1044,10 +1044,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 16:8-11", "Acts 2:37-38", "John 3:19-20"],
-    raises: ["how-do-i-receive-the-holy-spirit", "what-does-it-mean-that-the-world-hates-jesus"],
+    raises: ["how-do-i-receive-the-holy-spirit", "what-does-it-mean-that-the-world-hates-jesus", "world-vs-kingdom-of-god"],
     followsFrom: ["is-the-holy-spirit-god"],
     related: ["who-is-the-holy-spirit"],
-    planned: ["What is the difference between the world and the kingdom of God?"],
+    planned: [],
     order: 14,
   },
 
@@ -1118,10 +1118,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 12:4-7", "1 Corinthians 12:11", "1 Peter 4:10", "1 Corinthians 13:13"],
-    raises: ["are-sign-gifts-active", "discovering-my-gift", "what-is-the-spirits-role-in-public-worship"],
+    raises: ["are-sign-gifts-active", "discovering-my-gift", "what-is-the-spirits-role-in-public-worship", "talent-vs-spiritual-gift"],
     followsFrom: ["how-do-i-receive-the-holy-spirit"],
     related: ["who-is-the-holy-spirit", "how-does-the-spirit-convict-the-world", "what-is-the-spirits-role-in-public-worship"],
-    planned: ["What is the difference between a talent and a spiritual gift?"],
+    planned: [],
     order: 15,
   },
 
@@ -1346,10 +1346,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 15:4-5", "Luke 9:23", "Colossians 3:12-14", "2 Peter 3:18"],
-    raises: ["how-do-i-fight-sin", "how-do-i-share-my-faith-with-others"],
+    raises: ["how-do-i-fight-sin", "how-do-i-share-my-faith-with-others", "prayer-and-evangelism"],
     followsFrom: ["how-can-i-be-saved", "what-does-it-mean-to-be-born-again"],
     related: ["who-is-the-holy-spirit", "how-do-i-receive-the-holy-spirit", "why-do-i-need-the-church", "how-should-i-read-the-bible", "how-do-i-pray"],
-    planned: ["What role does prayer play in sharing the gospel?"],
+    planned: [],
     order: 18,
   },
 
@@ -18787,5 +18787,595 @@ export const questions: Question[] = [
     related: ["what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation", "will-jesus-return-literally", "what-do-we-do-when-we-gather"],
     planned: [],
     order: 120,
+  },
+
+  // ------------------------------------------------------------------
+  // NEW QUESTIONS: written from planned links
+  // ------------------------------------------------------------------
+  {
+    slug: "fruit-vs-works-of-the-flesh",
+    question: "What is the difference between the fruit of the Spirit and the works of the flesh?",
+    category: "holy-spirit",
+    summary:
+      "The fruit of the Spirit is the natural character of Christ forming in you as you walk with Him; the works of the flesh are what grows when you walk apart from Him. One is produced by the Spirit, the other by the unredeemed self. They are opposed to each other, and you will see one or the other in your life.",
+    passages: [
+      {
+        book: "Galatians",
+        chapter: 5,
+        title: "Walk by the Spirit",
+        lookFor: "Paul's contrast between living by the Spirit and gratifying the desires of the flesh.",
+        focus: "16-26",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "Life in the Spirit vs. the mind of the flesh",
+        lookFor: "The mind set on the flesh versus the mind set on the Spirit.",
+        focus: "5-14",
+      },
+      {
+        book: "Colossians",
+        chapter: 3,
+        title: "Put off the old, put on the new",
+        lookFor: "The practical outworking: what to rid yourselves of and what to clothe yourselves with.",
+        focus: "1-17",
+      },
+    ],
+    points: [
+      {
+        heading: "The works of the flesh are what the self produces apart from God",
+        body:
+          "Paul lists them without flinching: sexual immorality, impurity, lust, idolatry, sorcery, hatred, strife, jealousy, outbursts of anger, selfish ambitions, divisions, envy, drunkenness, and things like these. These are not occasional failures; they are the natural output of a life lived according to the desires of the flesh, apart from the Spirit's work.",
+        verses: ["Galatians 5:19-21"],
+      },
+      {
+        heading: "The fruit of the Spirit is what God produces in you",
+        body:
+          "Love, joy, peace, patience, kindness, goodness, faith, gentleness, self-control. Notice: not fruits, plural, but fruit, singular. This is one character with many expressions, and it is the Spirit's work, not yours. You cannot manufacture it by willpower; it grows as you walk with Him.",
+        verses: ["Galatians 5:22-23"],
+      },
+      {
+        heading: "They are opposed to each other",
+        body:
+          "Paul says the flesh sets its desire against the Spirit, and the Spirit against the flesh. They are in conflict, so that you cannot do the things you would. The Christian life is not neutral ground; it is a battleground, and which side you feed determines which side grows.",
+        verses: ["Galatians 5:17", "Romans 8:5-8"],
+      },
+      {
+        heading: "The key is walking by the Spirit",
+        body:
+          "The command is not 'try harder' but 'walk by the Spirit, and you won't fulfill the lust of the flesh.' Walking implies daily, step-by-step dependence. As you yield to Him, He produces His fruit in you, and the flesh loses its grip.",
+        verses: ["Galatians 5:16", "Galatians 5:25"],
+      },
+      {
+        heading: "The fruit is visible and measurable",
+        body:
+          "Jesus said you know a tree by its fruit. A good tree cannot produce bad fruit, and a bad tree cannot produce good fruit. The evidence of the Spirit's work is not ecstatic experience but changed character, visible in how you love, serve, and endure.",
+        verses: ["Matthew 7:16-20", "Galatians 5:22-23"],
+      },
+    ],
+    keyVerses: ["Galatians 5:22-23", "Galatians 5:16-17", "Romans 8:5-8", "Matthew 7:16"],
+    raises: ["what-is-the-flesh-versus-the-spirit", "how-do-i-fight-sin", "what-is-sanctification-and-how-does-it-happen"],
+    followsFrom: ["is-the-holy-spirit-god", "what-is-the-flesh-versus-the-spirit"],
+    related: ["what-is-the-flesh-versus-the-spirit", "what-is-the-fruit-of-the-spirit", "how-do-i-fight-sin"],
+    planned: [],
+    order: 129,
+  },
+
+  {
+    slug: "spirit-baptism-vs-filling",
+    question: "What is the difference between the Spirit's baptism and His filling?",
+    category: "holy-spirit",
+    summary:
+      "Baptism with the Spirit is the one-time event that places you into Christ and into His body; filling is the ongoing, repeated experience of being empowered and controlled by Him for daily life and service. Every believer is baptized once; every believer is filled again and again.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 12,
+        title: "One Spirit, one body",
+        lookFor: "Paul's statement that all believers were baptized into one body by one Spirit.",
+        focus: "12-14",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "The Spirit falls at Pentecost",
+        lookFor: "The Spirit fills the believers, and the result is bold proclamation.",
+        focus: "1-4, 14-21",
+      },
+      {
+        book: "Ephesians",
+        chapter: 5,
+        title: "Be filled with the Spirit",
+        lookFor: "The command to be filled, and what it looks like in practice.",
+        focus: "15-21",
+      },
+      {
+        book: "Acts",
+        chapter: 4,
+        title: "Filled again for boldness",
+        lookFor: "After prayer, the place was shaken and they were filled again.",
+        focus: "29-31",
+      },
+    ],
+    points: [
+      {
+        heading: "Baptism with the Spirit is a one-time union with Christ",
+        body:
+          "Paul writes that in one Spirit we were all baptized into one body. This is the moment you are placed into Christ, united with Him and with every other believer. It happens at conversion, not at a later experience. It is God's work, not yours.",
+        verses: ["1 Corinthians 12:13", "Romans 6:3-4", "Galatians 3:27"],
+      },
+      {
+        heading: "Filling is the ongoing empowerment for daily life",
+        body:
+          "Paul commands, 'Be filled with the Spirit,' using a present tense that implies continuous action. The filling is not a one-time event but a repeated reality: the early church was filled again and again as they faced new challenges and needed new boldness. It is about who controls your life.",
+        verses: ["Ephesians 5:18", "Acts 4:31", "Acts 13:52"],
+      },
+      {
+        heading: "The evidence is different for each",
+        body:
+          "Baptism places you in the body; filling empowers you for service. The result of filling is boldness, joy, wisdom, and the ability to speak God's word with power. It is not a second salvation, but a fresh empowering for the work ahead.",
+        verses: ["Acts 4:31", "Acts 6:3", "Acts 13:52"],
+      },
+      {
+        heading: "Filling is commanded, not optional",
+        body:
+          "The command is not 'be baptized' again, but 'be filled.' This means the filling is something you are responsible to pursue. It comes through prayer, surrender, and obedience, and it is the normal Christian life, not an extraordinary one.",
+        verses: ["Ephesians 5:18", "Acts 4:29-31", "Luke 11:13"],
+      },
+      {
+        heading: "Both are the work of God, not human effort",
+        body:
+          "You do not baptize yourself, and you do not fill yourself. Both are the Spirit's work. The difference is that baptism is the foundation laid once at conversion, and filling is the ongoing supply that flows from the same Spirit as you yield to Him.",
+        verses: ["1 Corinthians 12:13", "Ephesians 5:18", "Galatians 3:2"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 12:13", "Ephesians 5:18", "Acts 4:31", "Galatians 3:27"],
+    raises: ["how-do-i-know-the-spirit-is-leading-me", "what-does-it-mean-to-be-baptized-with-the-holy-spirit", "what-are-spiritual-gifts"],
+    followsFrom: ["how-do-i-receive-the-holy-spirit", "who-is-the-holy-spirit"],
+    related: ["how-do-i-receive-the-holy-spirit", "what-does-it-mean-to-be-baptized-with-the-holy-spirit", "what-are-spiritual-gifts"],
+    planned: [],
+    order: 130,
+  },
+
+  {
+    slug: "jesus-incarnation-fathers-love",
+    question: "How does Jesus becoming man show us the Father's love?",
+    category: "jesus-christ",
+    summary:
+      "The incarnation is God's love entering our world at the cost of everything. The Father sent His Son not because we deserved it, but because He loved us while we were still sinners. The manger, the cross, and the empty tomb are one continuous act of divine love that we can never exhaust.",
+    passages: [
+      {
+        book: "Philippians",
+        chapter: 2,
+        title: "He emptied Himself",
+        lookFor: "The Son's descent from equality with God to the death of a cross.",
+        focus: "5-11",
+      },
+      {
+        book: "John",
+        chapter: 3,
+        title: "God so loved the world",
+        lookFor: "The most famous sentence in the Bible: the Father gave His Son because He loved.",
+        focus: "16-17",
+      },
+      {
+        book: "Romans",
+        chapter: 5,
+        title: "God's love demonstrated",
+        lookFor: "God's love proven while we were still sinners.",
+        focus: "6-11",
+      },
+      {
+        book: "1 John",
+        chapter: 4,
+        title: "God is love",
+        lookFor: "The Father's love made visible in sending His Son as the atoning sacrifice.",
+        focus: "7-12",
+      },
+    ],
+    points: [
+      {
+        heading: "The Father initiated the mission of love",
+        body:
+          "The incarnation was not an accident or a plan B. Paul writes that God sent His Son 'in the likeness of sinful flesh,' and that He 'didn't spare his own Son, but delivered him up for us all.' The Father was not passive at the cross; He gave the Son He loved because He loved the world He made.",
+        verses: ["Romans 8:3", "Romans 8:32", "John 3:16"],
+      },
+      {
+        heading: "The Son's descent shows the cost of that love",
+        body:
+          "Paul says Christ, being in the form of God, did not consider equality with God something to be grasped, but emptied Himself, taking the form of a servant, being born in the likeness of men. The distance from heaven to the manger, from the throne to the cross, is the measure of the Father's love for you.",
+        verses: ["Philippians 2:6-8"],
+      },
+      {
+        heading: "It was love for sinners, not the deserving",
+        body:
+          "Paul makes it plain: 'God commends his own love toward us, in that while we were yet sinners, Christ died for us.' We were not searching; He was. We were not worthy; He loved us anyway. The cross is not a reward for the good but a rescue for the lost.",
+        verses: ["Romans 5:8", "1 John 4:10", "Luke 19:10"],
+      },
+      {
+        heading: "The incarnation makes God knowable and near",
+        body:
+          "John says the Word became flesh and lived among us, and we have seen His glory. God did not send a messenger or a system; He came Himself, in person, so that we could see what He is like. Jesus said, 'He who has seen me has seen the Father.' The manger brings God within reach.",
+        verses: ["John 1:14", "John 14:9", "Hebrews 1:1-3"],
+      },
+      {
+        heading: "The love does not end at the cradle; it reaches the cross and the tomb",
+        body:
+          "The same Father who sent the Son to be born also raised Him from the dead. The love that entered the world at Christmas accomplishes its work at Easter. Paul writes that Christ was 'who was delivered up for our trespasses, and was raised for our justification.' The full arc of incarnation, death, and resurrection is one act of love.",
+        verses: ["Romans 4:25", "1 Corinthians 15:3-4", "John 3:16"],
+      },
+    ],
+    keyVerses: ["John 3:16", "Philippians 2:6-8", "Romans 5:8", "1 John 4:9-10"],
+    raises: ["why-did-god-become-a-man", "what-does-it-mean-that-jesus-is-the-son-of-god", "how-does-gods-love-differ-from-human-love"],
+    followsFrom: ["is-jesus-really-god", "who-is-jesus"],
+    related: ["why-did-god-become-a-man", "who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god"],
+    planned: [],
+    order: 131,
+  },
+
+  {
+    slug: "jesus-lion-of-judah",
+    question: "What does it mean that Jesus is the Lion of Judah?",
+    category: "jesus-christ",
+    summary:
+      "The Lion of Judah is the conquering King who comes from David's line, fulfilling God's promise that the scepter would not depart from Judah. When John turns to see the Lion, he sees a Lamb. The title means Jesus is both the conquering ruler and the sacrificial Savior, and the two cannot be separated.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 49,
+        title: "Jacob's blessing on Judah",
+        lookFor: "The prophecy that the scepter belongs to Judah, and a ruler will come from his line.",
+        focus: "8-12",
+      },
+      {
+        book: "Revelation",
+ chapter: 5,
+        title: "The Lion who is the Lamb",
+        lookFor: "John hears 'the Lion who is of the tribe of Judah,' but when he looks, he sees a Lamb.",
+        focus: "5-7",
+      },
+      {
+        book: "Hebrews",
+        chapter: 7,
+        title: "The eternal priesthood",
+        lookFor: "Jesus from the tribe of Judah, a priesthood not derived from the Law.",
+        focus: "11-19",
+      },
+    ],
+    points: [
+      {
+        heading: "The title traces back to Jacob's prophecy",
+        body:
+          "When Jacob blessed his sons, he told Judah that the scepter would not depart from him, nor the ruler's staff from between his feet, 'until he comes to whom it belongs.' This was the promise of a king from Judah's line, and it pointed forward to David and beyond David to the Messiah.",
+        verses: ["Genesis 49:8-10"],
+      },
+      {
+        heading: "Jesus is the fulfillment of that royal line",
+        body:
+          "The New Testament traces Jesus' genealogy through Judah to David. Paul writes that Jesus 'was born of the seed of David according to the flesh.' The Lion of Judah is not a metaphor; it is a claim that Jesus is the promised King from David's throne.",
+        verses: ["Matthew 1:1-16", "Romans 1:3", "Revelation 22:16"],
+      },
+      {
+        heading: "John hears a Lion but sees a Lamb",
+        body:
+          "This is one of the most striking moments in the Bible. The announcement is 'the Lion who is of the tribe of Judah, the Root of David,' but when John looks, 'in the midst of the throne' stands 'a Lamb standing, as though it had been slain.' The Lion conquers by dying. Power and sacrifice are the same person.",
+        verses: ["Revelation 5:5-6"],
+      },
+      {
+        heading: "The Lion is worthy to open God's plan",
+        body:
+          "Only the Lamb who was slain can take the scroll and open its seals. The title 'Lion of Judah' is not about political conquest or military might; it is about the One who, by His death and resurrection, has authority over all history and all creation.",
+        verses: ["Revelation 5:7-9", "Revelation 5:12-14"],
+      },
+      {
+        heading: "It means Jesus rules with both power and compassion",
+        body:
+          "The Lion is fierce against evil and tender toward His people. He is the King who will judge the nations and the Shepherd who gathers lambs in His arms. To say Jesus is the Lion of Judah is to say He is not tame, but He is good.",
+        verses: ["Revelation 19:15-16", "Isaiah 40:11", "Revelation 5:5-6"],
+      },
+    ],
+    keyVerses: ["Revelation 5:5-6", "Genesis 49:10", "Revelation 22:16", "Romans 1:3"],
+    raises: ["is-jesus-really-god", "what-does-it-mean-that-jesus-is-the-son-of-david", "what-is-the-final-judgment-and-who-will-be-there"],
+    followsFrom: ["what-does-it-mean-that-jesus-is-the-son-of-god", "who-is-jesus"],
+    related: ["who-is-jesus", "what-does-it-mean-that-jesus-is-the-son-of-god", "what-does-the-title-christ-mean"],
+    planned: [],
+    order: 132,
+  },
+
+  {
+    slug: "child-of-god-changes-life",
+    question: "How does being a child of God change how I live?",
+    category: "our-walk",
+    summary:
+      "If God is your Father, then your identity is secure before your behavior catches up. Knowing you are His child changes your motives for obedience, your response to failure, your view of others, and your hope for the future. You do not obey to become accepted; you obey because you already are.",
+    passages: [
+      {
+        book: "1 John",
+        chapter: 3,
+        title: "See what kind of love",
+        lookFor: "The children of God are known by their love and their hope of seeing Him.",
+        focus: "1-3",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "The Spirit of adoption",
+        lookFor: "The Spirit makes us cry 'Abba' and confirms we are heirs with Christ.",
+        focus: "14-17",
+      },
+      {
+        book: "Galatians",
+        chapter: 4,
+        title: "From slaves to sons",
+        lookFor: "God sent His Son so we might receive adoption, and the Spirit confirms our sonship.",
+        focus: "4-7",
+      },
+    ],
+    points: [
+      {
+        heading: "Your identity comes before your performance",
+        body:
+          "John opens with the staggering statement: 'See how great a love the Father has bestowed on us, that we should be called children of God!' Notice the sequence: we are His children, and that is the foundation. Our obedience flows from our identity, not the other way around.",
+        verses: ["1 John 3:1", "1 John 3:19"],
+      },
+      {
+        heading: "The Spirit confirms your sonship",
+        body:
+          "Paul writes that the Spirit Himself testifies with our spirit that we are God's children. He gives us the instinct to cry 'Abba, Father,' the intimate address of a child who trusts their parent. This is not wishful thinking; it is the Spirit's own witness in your heart.",
+        verses: ["Romans 8:15-16", "Galatians 4:6"],
+      },
+      {
+        heading: "Obedience becomes a response, not a requirement",
+        body:
+          "A slave obeys out of fear; a child obeys out of love. Jesus said, 'If you love me, keep my commandments.' The Christian life is not a rigid checklist to earn God's approval; it is the natural response of someone who knows they are loved and wants to live like it.",
+        verses: ["John 14:15", "1 John 5:3", "Romans 8:15"],
+      },
+      {
+        heading: "Failure does not erase your identity",
+        body:
+          "When a child stumbles, the father does not disown them. John writes, 'If anyone sins, we have a Counselor with the Father.' Paul asks, 'Who shall separate us from the love of Christ?' Nothing can. Your failures are real, but they are not the final word about you.",
+        verses: ["1 John 2:1-2", "Romans 8:35-39", "Psalm 103:13"],
+      },
+      {
+        heading: "It shapes how you treat others",
+        body:
+          "If God is your Father, then every other believer is your brother or sister. John says, 'Beloved, if God loved us in this way, we also ought to love one another.' The family identity produces family behavior: humility, forgiveness, and a willingness to serve.",
+        verses: ["1 John 4:11", "1 John 3:16-18", "Romans 8:17"],
+      },
+    ],
+    keyVerses: ["1 John 3:1", "Romans 8:15-16", "Galatians 4:6-7", "1 John 4:11"],
+    raises: ["what-does-it-mean-to-be-made-in-gods-image", "how-do-i-know-gods-will", "what-does-it-mean-to-abide-in-christs-love"],
+    followsFrom: ["what-does-it-mean-to-be-born-again", "how-can-i-be-saved"],
+    related: ["what-does-it-mean-to-be-born-again", "can-i-lose-my-salvation", "what-does-it-mean-to-be-a-child-of-god"],
+    planned: [],
+    order: 133,
+  },
+
+  {
+    slug: "world-vs-kingdom-of-god",
+    question: "What is the difference between the world and the kingdom of God?",
+    category: "holy-spirit",
+    summary:
+      "The world is the system of values, desires, and loyalties that operates apart from God; the kingdom of God is His rule and reign breaking in through Christ. They are opposed to each other. You belong to one or the other, and the Spirit convicts you of which one is shaping your life.",
+    passages: [
+      {
+        book: "John",
+        chapter: 18,
+        title: "My kingdom is not of this world",
+        lookFor: "Jesus before Pilate, explaining the nature of His kingdom.",
+        focus: "33-38",
+      },
+      {
+        book: "1 John",
+        chapter: 2,
+        title: "Do not love the world",
+        lookFor: "The love of the Father versus the love of the world.",
+        focus: "15-17",
+      },
+      {
+        book: "Colossians",
+        chapter: 1,
+        title: "Transferred from darkness to light",
+        lookFor: "God has rescued us from the domain of darkness and transferred us to the kingdom of His Son.",
+        focus: "9-14",
+      },
+      {
+        book: "John",
+        chapter: 15,
+        title: "The world hates Jesus and His people",
+        lookFor: "Why the world opposes those who follow Christ.",
+        focus: "18-25",
+      },
+    ],
+    points: [
+      {
+        heading: "The world is a system, not just a place",
+        body:
+          "When John says 'Don't love the world,' he is not talking about the physical creation, which God made and called good. He is talking about 'the lust of the flesh, the lust of the eyes, and the pride of life,' the system of values that says pleasure, possessions, and status are what matter most. It is the world that rejected Jesus.",
+        verses: ["1 John 2:15-17", "John 15:18-19"],
+      },
+      {
+        heading: "The kingdom of God is His rule breaking in",
+        body:
+          "Jesus said, 'The Kingdom of God doesn't come with observation,' but 'the Kingdom of God is within you.' It is not a territory or a political system; it is God's authority and reign, present now in the hearts of His people and coming in fullness when He returns.",
+        verses: ["Luke 17:20-21", "Romans 14:17", "Matthew 6:33"],
+      },
+      {
+        heading: "Jesus' kingdom is not of this world's order",
+        body:
+          "When Pilate asked if Jesus was a king, Jesus said His kingdom was 'not of this world.' It does not advance by violence or politics, but by truth, love, and the Spirit. The cross looked like defeat; it was the greatest victory in history.",
+        verses: ["John 18:36-37", "2 Corinthians 10:3-5"],
+      },
+      {
+        heading: "The two kingdoms are in conflict",
+        body:
+          "Paul says God rescued us from the domain of darkness and transferred us to the kingdom of His beloved Son. The transfer has happened; you are no longer under that rule. But the old system still exerts pressure, and the Spirit convicts you of where your loyalties lie.",
+        verses: ["Colossians 1:13", "Ephesians 2:2", "John 16:8-11"],
+      },
+      {
+        heading: "Choosing one means rejecting the other",
+        body:
+          "Jesus said you cannot serve both God and money. John says, 'If anyone loves the world, the Father's love isn't in him.' The two systems make competing claims on your heart, your time, your money, and your allegiance. There is no neutral ground.",
+        verses: ["Matthew 6:24", "1 John 2:15", "James 4:4"],
+      },
+    ],
+    keyVerses: ["John 18:36", "1 John 2:15-17", "Colossians 1:13", "Matthew 6:33"],
+    raises: ["what-is-the-kingdom-of-god", "what-does-it-mean-to-be-made-in-gods-image", "what-does-it-mean-that-the-world-hates-jesus"],
+    followsFrom: ["how-does-the-spirit-convict-the-world", "what-is-the-flesh-versus-the-spirit"],
+    related: ["what-is-the-kingdom-of-god", "what-is-the-flesh-versus-the-spirit", "what-does-it-mean-that-the-world-hates-jesus"],
+    planned: [],
+    order: 134,
+  },
+
+  {
+    slug: "talent-vs-spiritual-gift",
+    question: "What is the difference between a talent and a spiritual gift?",
+    category: "holy-spirit",
+    summary:
+      "A talent is a natural ability you are born with or develop; a spiritual gift is a supernatural ability given by the Holy Spirit for the building up of the church. Both are from God, but they differ in origin, purpose, and power. The Spirit may sovereignly fill your natural abilities with supernatural power, and He may give you gifts you never expected.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 12,
+        title: "One Spirit, different gifts",
+        lookFor: "The variety of gifts, all from the same Spirit, all for the profit of all.",
+        focus: "4-11"
+      },
+      {
+        book: "1 Peter",
+        chapter: 4,
+        title: "Serve with the gift you received",
+        lookFor: "Peter's instruction to use whatever gift you have to serve others.",
+        focus: "10-11"
+      },
+      {
+        book: "Matthew",
+        chapter: 25,
+        title: "The parable of the talents",
+        lookFor: "The master gives talents according to ability, and each is expected to steward what was given.",
+        focus: "14-30"
+      },
+      {
+        book: "Romans",
+        chapter: 12,
+        title: "Different gifts, one body",
+        lookFor: "Paul lists gifts and says each is given according to the measure of faith.",
+        focus: "6-8"
+      },
+    ],
+    points: [
+      {
+        heading: "A talent is natural; a gift is supernatural",
+        body:
+          "Everyone has natural abilities: some are musical, some are administrative, some are good with people. These are real and good, and they come from God's common grace. But a spiritual gift is different in kind. It is the Holy Spirit Himself distributing 'to each one separately as He desires,' giving ability that did not exist before.",
+        verses: ["1 Corinthians 12:11", "1 Peter 4:10"],
+      },
+      {
+        heading: "Spiritual gifts are for the church, not for personal glory",
+        body:
+          "Peter says, 'As each has received a gift, employ it in serving one another, as good managers of the grace of God in its various forms.' The test of a spiritual gift is not 'does this make me impressive?' but 'does this build up others?' Natural talent can be used for self-promotion; spiritual gifts are always otherward.",
+        verses: ["1 Peter 4:10", "1 Corinthians 12:7", "1 Corinthians 14:12"],
+      },
+      {
+        heading: "The Spirit may sovereignly fill your natural abilities",
+        body:
+          "Bezalel was filled with the Spirit for craftsmanship. Luke was a physician and a historian, and the Spirit used both. The Spirit does not discard what you already are; He fills it, transforms it, and uses it for purposes you never imagined.",
+        verses: ["Exodus 31:3", "Colossians 4:14", "1 Corinthians 12:4-6"],
+      },
+      {
+        heading: "The gifts are given, not earned",
+        body:
+          "You cannot study your way into a spiritual gift or earn one through spiritual discipline. The Spirit distributes 'as He desires.' You can ask, and you should, but the gift is His to give. What you can do is be faithful with what He has already given.",
+        verses: ["1 Corinthians 12:11", "James 1:17", "Matthew 25:21"],
+      },
+      {
+        heading: "The parable teaches stewardship, not comparison",
+        body:
+          "Jesus said the master gave talents 'to each according to his own ability.' The point was not that one gift was better than another, but that each servant was expected to be faithful with what they received. The one who buried his talent was condemned not for having less, but for doing nothing with what he was given.",
+        verses: ["Matthew 25:14-30", "1 Corinthians 4:2"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 12:7", "1 Peter 4:10", "1 Corinthians 12:11", "Matthew 25:21"],
+    raises: ["discovering-my-gift", "how-are-justification-and-sanctification-related", "what-are-spiritual-gifts"],
+    followsFrom: ["what-are-spiritual-gifts", "how-do-i-receive-the-holy-spirit"],
+    related: ["what-are-spiritual-gifts", "discovering-my-gift", "how-do-i-share-my-faith-with-others"],
+    planned: [],
+    order: 135,
+  },
+
+  {
+    slug: "prayer-and-evangelism",
+    question: "What role does prayer play in sharing the gospel?",
+    category: "our-walk",
+    summary:
+      "Prayer is not a warm-up act before evangelism; it is the engine. Paul urges believers to pray for open doors, for boldness, and for the right words, because the battle for souls is spiritual before it is physical. The early church prayed, and the word spread.",
+    passages: [
+      {
+        book: "Colossians",
+        chapter: 4,
+        title: "Devote yourselves to prayer",
+        lookFor: "Paul's instruction to pray for open doors and clear speech.",
+        focus: "2-4",
+      },
+      {
+        book: "Acts",
+        chapter: 4,
+        title: "Boldness through prayer",
+        lookFor: "The church prays for boldness, and the place is shaken.",
+        focus: "29-31",
+      },
+      {
+        book: "2 Thessalonians",
+        chapter: 3,
+        title: "Pray that the word runs",
+        lookFor: "Paul asks for prayer that the message of the Lord would run swiftly.",
+        focus: "1-5",
+      },
+      {
+        book: "Romans",
+        chapter: 10,
+        title: "Pray for laborers",
+        lookFor: "The harvest is plentiful, and the Lord of the harvest must send workers.",
+        focus: "14-15",
+      },
+    ],
+    points: [
+      {
+        heading: "Prayer opens doors that strategy cannot",
+        body:
+          "Paul asks the Colossians to pray 'that God may open to us a door for the word.' The most effective evangelistic strategy in the world will fail if God does not open the way. Prayer is not passive; it is asking the Lord of the harvest to do what only He can do.",
+        verses: ["Colossians 4:3", "Acts 16:14", "Acts 14:27"],
+      },
+      {
+        heading: "Prayer gives boldness to speak",
+        body:
+          "The early church did not pray for safety; they prayed for boldness. 'Now, Lord, look at their threats, and grant to your servants to speak your word with all boldness.' And the Spirit answered: the place was shaken and they were filled again. Courage is a gift of prayer.",
+        verses: ["Acts 4:29-31", "Acts 28:31", "Ephesians 6:19-20"],
+      },
+      {
+        heading: "Prayer addresses the real enemy",
+        body:
+          "Paul writes that our struggle is not against flesh and blood. The person who resists the gospel is not ultimately the problem; the spiritual forces of evil are. Prayer engages the real battle, asking God to open blind eyes and soften hard hearts where human effort cannot reach.",
+        verses: ["Ephesians 6:12", "2 Corinthians 4:4", "2 Corinthians 10:3-5"],
+      },
+      {
+        heading: "Jesus prayed for laborers",
+        body:
+          "Jesus told His disciples, 'The harvest indeed is plentiful, but the laborers are few. Pray therefore that the Lord of the harvest will send out laborers into his harvest.' Evangelism begins not with a technique but with asking God to raise up people who will go.",
+        verses: ["Matthew 9:37-38", "Luke 10:2"],
+      },
+      {
+        heading: "The early church prayed and the word spread",
+        body:
+          "After prayer, the Spirit said, 'Separate Barnabas and Saul for me, for the work to which I have called them.' The missionary movement of the church was born in a prayer meeting, not a strategy session. When the church prays, the word goes out.",
+        verses: ["Acts 13:2-3", "Acts 13:49", "Acts 12:24"],
+      },
+    ],
+    keyVerses: ["Colossians 4:3-4", "Acts 4:29-31", "2 Thessalonians 3:1", "Matthew 9:38"],
+    raises: ["how-do-i-share-my-faith-with-others", "does-god-still-speak-today", "what-should-i-do-now-that-im-saved"],
+    followsFrom: ["what-should-i-do-now-that-im-saved", "how-do-i-pray"],
+    related: ["how-do-i-share-my-faith-with-others", "how-do-i-pray", "the-churchs-mission-in-the-world"],
+    planned: [],
+    order: 136,
   },
 ];
