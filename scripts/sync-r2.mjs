@@ -66,7 +66,9 @@ const listStart = Date.now();
 const LIST_TIMEOUT = 60_000; // 60s max for listing
 do {
   if (Date.now() - listStart > LIST_TIMEOUT) {
-    console.warn(`Listing timed out after ${LIST_TIMEOUT / 1000}s with ${existing.size} files found. Proceeding with partial list.`);
+    console.warn(
+      `Listing timed out after ${LIST_TIMEOUT / 1000}s with ${existing.size} files found. Proceeding with partial list.`,
+    );
     break;
   }
   const resp = await R2.send(listCmd);
