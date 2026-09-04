@@ -30,6 +30,10 @@ const R2 = new S3Client({
     accessKeyId: getEnv("R2_ACCESS_KEY_ID"),
     secretAccessKey: getEnv("R2_SECRET_ACCESS_KEY"),
   },
+  requestHandler: {
+    requestTimeout: 30_000,
+    httpsAgent: { timeout: 30_000 },
+  },
 });
 
 const BUCKET = getEnv("R2_BUCKET") || "glory-audio";
@@ -58,7 +62,13 @@ console.log(`Found ${files.length} audio files in ${AUDIO_DIR}`);
 const listCmd = new ListObjectsV2Command({ Bucket: BUCKET, Prefix: "v1/" });
 const existing = new Set();
 let continuationToken;
+const listStart = Date.now();
+const LIST_TIMEOUT = 60_000; // 60s max for listing
 do {
+  if (Date.now() - listStart > LIST_TIMEOUT) {
+    console.warn(`Listing timed out after ${LIST_TIMEOUT / 1000}s with ${existing.size} files found. Proceeding with partial list.`);
+    break;
+  }
   const resp = await R2.send(listCmd);
   for (const obj of resp.Contents || []) {
     existing.add(obj.Key);
