@@ -7428,7 +7428,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Matthew 16:18", "Ephesians 1:22-23", "1 Timothy 3:15", "Ephesians 5:25-27", "Acts 2:47"],
-    raises: ["why-do-i-need-the-church", "what-is-a-healthy-church"],
+    raises: ["why-do-i-need-the-church", "what-is-a-healthy-church", "who-are-gods-chosen-people"],
     followsFrom: ["where-is-jesus-now", "why-do-i-need-the-church"],
     related: ["why-do-i-need-the-church", "what-is-a-healthy-church", "what-is-baptism", "what-is-the-lords-supper"],
     planned: ["What is the difference between the universal church and the local church?"],
@@ -9648,7 +9648,7 @@ export const questions: Question[] = [
     ],
     keyVerses: ["Jeremiah 31:33-34", "Hebrews 8:10-12", "Luke 22:20", "Hebrews 9:15", "2 Corinthians 3:6"],
     raises: ["what-is-grace", "what-happens-when-i-sin", "can-i-lose-my-salvation"],
-    followsFrom: ["how-can-i-be-saved", "why-did-jesus-have-to-die"],
+    followsFrom: ["how-can-i-be-saved", "why-did-jesus-have-to-die", "who-are-gods-chosen-people"],
     related: ["how-can-i-be-saved", "what-is-imputation", "what-is-justification", "what-is-grace"],
     planned: ["How does Christ fulfill the law without abolishing it?"],
     order: 31,
@@ -19378,4 +19378,90 @@ export const questions: Question[] = [
     planned: [],
     order: 136,
   },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Church (continued)
+  // ------------------------------------------------------------------
+  {
+    slug: "who-are-gods-chosen-people",
+    question: "Who are God's chosen people?",
+    category: "church",
+    summary:
+      "God chose Israel as His people through Abraham's covenant, and that choice was never revoked. But Scripture also reveals a mystery hidden for ages: that Gentiles in Christ are grafted into the same olive tree, becoming fellow members with Israel of one body. The church is not a replacement for Israel; it is the fullness of what Israel was always called to be, a people from every nation joined to the God of Abraham by faith in Jesus.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 19,
+        title: "A kingdom of priests, a holy nation",
+        lookFor: "God calls Israel 'a people for his own possession' and sets them apart as a kingdom of priests and a holy nation.",
+        focus: "3-8",
+      },
+      {
+        book: "Deuteronomy",
+        chapter: 7,
+        title: "Chosen not because of greatness",
+        lookFor: "God chose Israel not because they were the greatest, but because of His oath to Abraham and His love.",
+        focus: "6-11",
+      },
+      {
+        book: "Ephesians",
+        chapter: 2,
+        title: "The wall broken down",
+        lookFor: "Gentiles who were separate from Christ are now made near, one new man, the barrier between them broken.",
+        focus: "11-22",
+      },
+      {
+        book: "Ephesians",
+        chapter: 3,
+        title: "The mystery revealed",
+        lookFor: "The mystery hidden for ages: that Gentiles are fellow heirs, fellow members of the body.",
+        focus: "1-12",
+      },
+      {
+        book: "Romans",
+        chapter: 11,
+        title: "The olive tree",
+        lookFor: "Wild olive branches grafted into Israel's tree; God has not cast away His people.",
+        focus: "17-24",
+      },
+    ],
+    points: [
+      {
+        heading: "God chose Israel as His people",
+        body:
+          "At Sinai, God called Israel 'a people for his own possession, above all peoples who are on the face of the earth.' He chose them not because they were the greatest, but because of His love and His oath to Abraham. Israel was set apart to be a kingdom of priests and a holy nation, a light to the world that reflected the character of their God.",
+        verses: ["Exodus 19:5-6", "Deuteronomy 7:6-8"],
+      },
+      {
+        heading: "God promised this would expand to all nations",
+        body:
+          "Even in the Old Testament, God hinted that His chosen people would one day include the nations. He told Israel, 'I will move them to jealousy with those who are not a people. I will provoke them to anger with a foolish nation.' Hosea prophesied that those who were 'not my people' would be called 'sons of the living God.' The expansion was always part of the plan.",
+        verses: ["Deuteronomy 32:21", "Hosea 1:10", "Hosea 2:23", "Isaiah 49:6"],
+      },
+      {
+        heading: "The mystery hidden for ages was revealed in Christ",
+        body:
+          "Paul calls this the mystery that was hidden for ages and generations but now revealed: that Gentiles in Christ are fellow heirs, fellow members of the body, and fellow partakers of the promise. This was not a change of plan; it was the unveiling of what was always intended. The door that was opened to Israel through Abraham is now open to all who come by faith.",
+        verses: ["Ephesians 3:4-6", "Colossians 1:26-27"],
+      },
+      {
+        heading: "The wall of division was broken down in Christ",
+        body:
+          "Paul writes that Gentiles were once separate from Christ, alienated from the commonwealth of Israel, strangers to the covenants of promise. But now in Christ Jesus, those who were far off have been made near by His blood. He Himself is our peace, who made both one and broke down the barrier that divided them, creating one new people from the two.",
+        verses: ["Ephesians 2:12-14", "Ephesians 2:15", "Galatians 3:28"],
+      },
+      {
+        heading: "Gentiles are grafted into Israel's tree, not replacing it",
+        body:
+          "Paul's olive tree metaphor makes it clear: wild olive branches (Gentiles) are grafted into the good olive tree (Israel), becoming partakers of the root and its richness. But he warns Gentiles not to boast over the natural branches, for it is not you who support the root, but the root supports you. God has not cast away His people. The church is one tree, one people, built on Israel's covenants and promises.",
+        verses: ["Romans 11:17-18", "Romans 11:24-25"],
+      },
+    ],
+    keyVerses: ["Exodus 19:6", "1 Peter 2:9-10", "Ephesians 2:14", "Ephesians 3:6", "Romans 11:17"],
+    raises: ["why-do-i-need-the-church", "how-is-the-new-covenant-different-from-the-old-one", "the-churchs-mission-in-the-world"],
+    followsFrom: ["what-is-the-church", "what-is-the-gospel", "how-can-i-be-saved"],
+    related: ["what-is-the-church", "why-do-i-need-the-church", "what-does-it-mean-to-be-born-again", "the-churchs-mission-in-the-world"],
+    planned: [],
+    order: 44,
+  }
 ];
