@@ -1,6 +1,5 @@
 import "server-only";
 import { verses as webVerses, chapters as webChapters } from "./scripture";
-import { verses as kjvVerses, chapters as kjvChapters } from "./scripture-kjv";
 import {
   chapterItems,
   filterFocus,
@@ -12,7 +11,12 @@ import { canonicalBook, joinPassage, parseRef } from "./ref";
 import { BIBLE_BOOKS } from "./books";
 import { questions } from "./questions";
 import { connections } from "./connections";
-import { questionsUsing, incomingConnections, graphVerseRefs, refFromSlug } from "./verseIndex";
+import {
+  questionsUsing,
+  incomingConnections,
+  graphVerseRefs,
+  refFromSlug,
+} from "./verseIndex";
 import { getCategory as categoryLookup } from "./categories";
 import type { Category, Question, QuestionTeaser } from "./types";
 import type { TranslationCode } from "../lib/translation";
@@ -26,24 +30,42 @@ import type { TranslationCode } from "../lib/translation";
 
 // ---- translation support --------------------------------------------------
 
-/** Scripture data organized by translation code. */
-const scriptureData: Record<TranslationCode, { verses: Record<string, string>; chapters: Record<string, { n: number; text: string }[]> }> = {
-  web: { verses: webVerses, chapters: webChapters },
-  kjv: { verses: kjvVerses, chapters: kjvChapters },
-};
+/** Lazy-load the KJV translation so it is not bundled into every deployment.
+ *  Caches the result after first load so subsequent requests are instant. */
+let kjvCache: {
+  verses: Record<string, string>;
+  chapters: Record<string, { n: number; text: string }[]>;
+} | null = null;
+function getKJV() {
+  if (!kjvCache) {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    kjvCache = require("./scripture-kjv");
+  }
+  return kjvCache!;
+}
 
 /** Get the scripture data for a given translation code. */
 function getScripture(code: TranslationCode = "web") {
-  return scriptureData[code] ?? scriptureData.web;
+  if (code === "kjv") return getKJV();
+  return { verses: webVerses, chapters: webChapters };
 }
 
 // Re-export the default (WEB) for backward compatibility
 export { webVerses as verses, webChapters as chapters, questions };
 export { canonicalBook, filterFocus };
-export { parseRef, questionsUsing, incomingConnections, graphVerseRefs, refFromSlug };
+export {
+  parseRef,
+  questionsUsing,
+  incomingConnections,
+  graphVerseRefs,
+  refFromSlug,
+};
 
 /** Full text of a single verse, or null if we don't have it. */
-export function getVerseText(ref: string, translation: TranslationCode = "web"): string | null {
+export function getVerseText(
+  ref: string,
+  translation: TranslationCode = "web",
+): string | null {
   const p = parseRef(ref);
   if (!p) return null;
   const scripture = getScripture(translation);
@@ -51,7 +73,10 @@ export function getVerseText(ref: string, translation: TranslationCode = "web"):
 }
 
 /** Text of a verse or range ("John 14:16-17"), joined with spaces. */
-export function getPassageText(ref: string, translation: TranslationCode = "web"): string | null {
+export function getPassageText(
+  ref: string,
+  translation: TranslationCode = "web",
+): string | null {
   const p = parseRef(ref);
   if (!p) return null;
   const scripture = getScripture(translation);
@@ -59,7 +84,11 @@ export function getPassageText(ref: string, translation: TranslationCode = "web"
 }
 
 /** Whole chapter as verse list, or null. */
-export function getChapter(book: string, chapter: number, translation: TranslationCode = "web"): { n: number; text: string }[] | null {
+export function getChapter(
+  book: string,
+  chapter: number,
+  translation: TranslationCode = "web",
+): { n: number; text: string }[] | null {
   const scripture = getScripture(translation);
   return scripture.chapters[`${canonicalBook(book)} ${chapter}`] ?? null;
 }
@@ -69,7 +98,7 @@ export function getChapterFocus(
   book: string,
   chapter: number,
   focus?: string,
-  translation: TranslationCode = "web"
+  translation: TranslationCode = "web",
 ): { n: number; text: string }[] | null {
   const ch = getChapter(book, chapter, translation);
   if (!ch) return null;
@@ -81,7 +110,9 @@ export function getChapterFocus(
 /** Chapters per canonical book, computed once from the vendored chapters map. */
 const chapterCountsMap = new Map<TranslationCode, Map<string, number>>();
 
-function getChapterCounts(translation: TranslationCode = "web"): Map<string, number> {
+function getChapterCounts(
+  translation: TranslationCode = "web",
+): Map<string, number> {
   if (chapterCountsMap.has(translation)) {
     return chapterCountsMap.get(translation)!;
   }
@@ -91,18 +122,24 @@ function getChapterCounts(translation: TranslationCode = "web"): Map<string, num
     const cut = key.lastIndexOf(" ");
     const book = key.slice(0, cut);
     const n = Number(key.slice(cut + 1));
-    if (Number.isFinite(n)) counts.set(book, Math.max(counts.get(book) ?? 0, n));
+    if (Number.isFinite(n))
+      counts.set(book, Math.max(counts.get(book) ?? 0, n));
   }
   chapterCountsMap.set(translation, counts);
   return counts;
 }
 
-export function getChapterCount(book: string, translation: TranslationCode = "web"): number {
+export function getChapterCount(
+  book: string,
+  translation: TranslationCode = "web",
+): number {
   return getChapterCounts(translation).get(canonicalBook(book)) ?? 0;
 }
 
 /** All books in canonical order with their chapter counts. */
-export function bibleBooks(translation: TranslationCode = "web"): { book: string; chapters: number }[] {
+export function bibleBooks(
+  translation: TranslationCode = "web",
+): { book: string; chapters: number }[] {
   const counts = getChapterCounts(translation);
   return BIBLE_BOOKS.map((book) => ({ book, chapters: counts.get(book) ?? 0 }));
 }
@@ -141,7 +178,6 @@ export function resolveQuestions(slugs: string[]): Question[] {
 export function categoryOf(q: Question): Category | undefined {
   return categoryLookup(q.category);
 }
-
 
 /**
  * Up to three questions offered in the "What next?" panel when a study
@@ -191,7 +227,9 @@ export function teasers(): QuestionTeaser[] {
 }
 
 /** Verse text for every connection endpoint, for the client graph explorer. */
-export function graphVerseTexts(translation: TranslationCode = "web"): Record<string, string> {
+export function graphVerseTexts(
+  translation: TranslationCode = "web",
+): Record<string, string> {
   const out: Record<string, string> = {};
   for (const edges of Object.values(connections)) {
     for (const e of edges) {
@@ -207,9 +245,13 @@ export function graphVerseTexts(translation: TranslationCode = "web"): Record<st
 }
 
 /** Which studies cite each connection endpoint (slug -> title pairs). */
-export function graphUsages(): Record<string, { slug: string; question: string }[]> {
+export function graphUsages(): Record<
+  string,
+  { slug: string; question: string }[]
+> {
   const refs = new Set<string>(Object.keys(connections));
-  for (const edges of Object.values(connections)) for (const e of edges) refs.add(e.target);
+  for (const edges of Object.values(connections))
+    for (const e of edges) refs.add(e.target);
   const out: Record<string, { slug: string; question: string }[]> = {};
   for (const ref of refs) {
     const used = questionsUsing(ref);
@@ -236,20 +278,35 @@ export interface ChainQueue {
   items: AudioChunk[];
 }
 
-function chapterQueue(book: string, chapter: number, focus?: string, translation: TranslationCode = "web"): ChainQueue {
+function chapterQueue(
+  book: string,
+  chapter: number,
+  focus?: string,
+  translation: TranslationCode = "web",
+): ChainQueue {
   return {
     sourceId: `chapter:${book} ${chapter}`,
-    items: chapterItems(book, chapter, getChapterFocus(book, chapter, focus, translation) ?? []),
+    items: chapterItems(
+      book,
+      chapter,
+      getChapterFocus(book, chapter, focus, translation) ?? [],
+    ),
   };
 }
 
 /** Whole-visit intro queue: the question and summary, then the chapters. */
-function visitIntroQueue(q: Question, translation: TranslationCode = "web"): ChainQueue {
+function visitIntroQueue(
+  q: Question,
+  translation: TranslationCode = "web",
+): ChainQueue {
   return { sourceId: `visit:${q.slug}`, items: visitIntroItems(q) };
 }
 
 /** Study queue; the visit's continuation is the player-bar choices panel. */
-function studyQueue(q: Question, opts: { cue?: string; translation?: TranslationCode } = {}): ChainQueue {
+function studyQueue(
+  q: Question,
+  opts: { cue?: string; translation?: TranslationCode } = {},
+): ChainQueue {
   const translation = opts.translation ?? "web";
   const verseText = (ref: string) => getPassageText(ref, translation);
   const items = studyItems(q, verseText, {
@@ -264,19 +321,28 @@ function studyQueue(q: Question, opts: { cue?: string; translation?: Translation
 }
 
 /** Props for StudyListen: the study queue. */
-export function studyListenData(q: Question, translation: TranslationCode = "web"): { slug: string; items: AudioChunk[] } {
+export function studyListenData(
+  q: Question,
+  translation: TranslationCode = "web",
+): { slug: string; items: AudioChunk[] } {
   const queue = studyQueue(q, { translation });
   return { slug: q.slug, items: queue.items };
 }
 
 /** Props for VisitListen: the whole-visit intro queue. */
-export function visitListenData(q: Question, translation: TranslationCode = "web"): { slug: string; items: AudioChunk[] } {
+export function visitListenData(
+  q: Question,
+  translation: TranslationCode = "web",
+): { slug: string; items: AudioChunk[] } {
   const queue = visitIntroQueue(q, translation);
   return { slug: q.slug, items: queue.items };
 }
 
 /** Props for VisitChain: every queue the visit may play, fully prebuilt. */
-export function visitChainData(q: Question, translation: TranslationCode = "web"): {
+export function visitChainData(
+  q: Question,
+  translation: TranslationCode = "web",
+): {
   slug: string;
   segments: ChainQueue[];
   options: {
@@ -290,7 +356,9 @@ export function visitChainData(q: Question, translation: TranslationCode = "web"
   // continuation carries on through each chapter and into the study.
   const segments: ChainQueue[] = [
     visitIntroQueue(q, translation),
-    ...q.passages.map((p) => chapterQueue(p.book, p.chapter, p.focus, translation)),
+    ...q.passages.map((p) =>
+      chapterQueue(p.book, p.chapter, p.focus, translation),
+    ),
   ];
   // The chained study entry keeps its original "And now, the study." cue.
   segments.push(studyQueue(q, { cue: "And now, the study.", translation }));
