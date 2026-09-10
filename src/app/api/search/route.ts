@@ -12,7 +12,12 @@ const MAX_QUERY_LENGTH = 120;
  * Server-side search over the whole vendored Bible and the studies.
  * Keeps the 9.5 MB Scripture index out of the client bundle entirely:
  * the browser sends a query, the server scans its own in-memory index.
+ *
+ * Revalidate every 60s: identical queries are served from the CDN cache
+ * (free) instead of re-scanning all 31k verses on every request.
  */
+export const revalidate = 60;
+
 export function GET(req: NextRequest) {
   const limited = rateLimit(clientIp(req));
   if (!limited.ok) {
