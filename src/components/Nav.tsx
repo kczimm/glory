@@ -97,12 +97,6 @@ export default function Nav() {
           <MemorizeNavLink />
           <ThemeToggle />
           <TranslationToggle />
-          <Link
-            href="/"
-            className="hidden rounded-full border border-gold/40 px-4 py-1 text-xs font-medium text-gold-deep transition-colors hover:bg-gold-wash sm:inline-block"
-          >
-            Start with a question
-          </Link>
         </nav>
       </div>
     </header>
