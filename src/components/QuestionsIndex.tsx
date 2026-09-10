@@ -139,7 +139,7 @@ export default function QuestionsIndex({
             </button>
           )}
         </div>
-        <div className="mt-2.5 flex gap-2 overflow-x-auto pb-0.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="mt-2.5 flex flex-wrap gap-2">
           <Chip active={cat === ALL} onClick={() => setCat(ALL)}>
             All · {total}
           </Chip>
