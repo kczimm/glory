@@ -2493,11 +2493,87 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Luke 24:27", "John 5:39", "2 Corinthians 1:20", "Genesis 3:15"],
-    raises: ["how-do-i-find-christ-in-the-old-testament"],
+    raises: ["how-do-i-find-christ-in-the-old-testament", "what-are-the-greatest-promises-god-made-before-christ"],
     followsFrom: ["can-i-trust-the-bible"],
     related: ["who-is-jesus", "what-is-the-gospel"],
-    planned: ["What are the greatest promises God made before Christ?"],
+    planned: [],
     order: 36,
+  },
+
+  {
+    slug: "what-are-the-greatest-promises-god-made-before-christ",
+    question: "What are the greatest promises God made before Christ?",
+    category: "word-of-god",
+    summary:
+      "God did not wait until Bethlehem to start promising. In Eden He promised an offspring who would crush the serpent; to Abraham He swore a seed and a blessing for every family on earth; through Moses He promised a prophet like Moses; to David He swore an eternal throne; and through the prophets He promised a new covenant, a new heart, His own Spirit, and a servant who would carry sin away. Every one of those promises finds its yes in Christ, which is why the New Testament keeps reporting that the old promises were kept in Him.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 22,
+        title: "The oath to Abraham",
+        lookFor: "How God guarantees a promise when there is no one greater to swear by, and what He swears about Abraham's seed.",
+        focus: "15-18",
+      },
+      {
+        book: "Deuteronomy",
+        chapter: 18,
+        title: "A prophet like Moses",
+        lookFor: "The promise of a mediator who will speak God's words, and the warning attached to refusing him.",
+        focus: "15-22",
+      },
+      {
+        book: "Jeremiah",
+        chapter: 31,
+        title: "A new covenant",
+        lookFor: "What makes the new covenant new: not a better list on the same stone, but law written inside and sins remembered no more.",
+        focus: "31-34",
+      },
+      {
+        book: "2 Corinthians",
+        chapter: 1,
+        title: "Yes in him",
+        lookFor: "Paul's summary of how every promise of God behaves once Christ has come.",
+        focus: "18-22",
+      },
+    ],
+    points: [
+      {
+        heading: "The first promise was made in a garden, to a guilty couple",
+        body:
+          "Before there were covenants, kings, or prophets, there was a sentence spoken to a serpent: “I will put hostility between you and the woman, and between your offspring and her offspring. He will bruise your head, and you will bruise his heel.” Judgment had just fallen, and inside it God announced a future deliverer. Every promise that follows is an unfolding of this one, and the bruise on the heel tells you from the start how much the victory will cost.",
+        verses: ["Genesis 3:15"],
+      },
+      {
+        heading: "He swore to Abraham a seed and a blessing for every family on earth",
+        body:
+          "God told Abraham that “all of the families of the earth will be blessed in you,” and then, after the test on Moriah, He sealed it with an oath: “I have sworn by myself... All the nations of the earth will be blessed by your seed.” Paul notices that the promise speaks of a singular seed, “which is Christ,” and Hebrews explains why God swore by Himself: there was no one greater, so the oath rests on God's own unchanging character. That is the promise the whole Bible is tracking.",
+        verses: ["Genesis 12:3", "Genesis 22:16", "Genesis 22:18", "Galatians 3:16", "Hebrews 6:13", "Hebrews 6:17"],
+      },
+      {
+        heading: "He promised a prophet like Moses and an eternal throne for David's son",
+        body:
+          "Moses told Israel that God would raise up “a prophet from your midst, of your brothers, like me,” and that they must listen to Him, a promise Peter later applies directly to Jesus. To David, God swore something even larger: “Your house and your kingdom shall be made sure forever before you. Your throne shall be established forever.” The prophets saw the shape of it, a child born with the government on His shoulders and a kingdom with no end “on the throne of David,” and a ruler coming out of tiny Bethlehem “whose goings out are from of old, from ancient times.”",
+        verses: ["Deuteronomy 18:15", "Deuteronomy 18:18", "Acts 3:22", "2 Samuel 7:16", "Isaiah 9:6-7", "Micah 5:2"],
+      },
+      {
+        heading: "He promised a new covenant, a new heart, His Spirit, and a suffering servant",
+        body:
+          "The deepest promises are internal. Through Jeremiah God said, “I will put my law in their inward parts, and in their heart will I write it,” and added the sentence no sacrifice could accomplish: “I will forgive their iniquity, and their sin will I remember no more.” Through Ezekiel He said, “I will also give you a new heart... I will put my Spirit within you.” Joel promised that this Spirit would be poured out on all flesh, not just on prophets and kings. And Isaiah drew the portrait no one could have guessed: a servant “pierced for our transgressions,” on whom “Yahweh has laid on him the iniquity of us all,” who would “justify many” and “bear their iniquities.”",
+        verses: ["Jeremiah 31:31", "Jeremiah 31:33", "Jeremiah 31:34", "Ezekiel 36:26-27", "Joel 2:28-29", "Isaiah 53:5-6", "Isaiah 53:11"],
+      },
+      {
+        heading: "Every promise finds its yes in Christ, and the oath makes it sure",
+        body:
+          "Paul states the rule plainly: “however many are the promises of God, in him is the ‘Yes.’” Christ came, Romans says, “that he might confirm the promises given to the fathers,” and those promises do not expire, because “the gifts and the calling of God are irrevocable.” Hebrews says God's oath gives us “strong encouragement, who have fled for refuge to take hold of the hope set before us.” And the door is open to everyone: “If you are Christ’s, then you are Abraham’s seed and heirs according to promise.” The old promises are not merely history you admire; they are an inheritance you receive by faith.",
+        verses: ["2 Corinthians 1:20", "Romans 15:8", "Romans 11:29", "Hebrews 6:18", "Galatians 3:29"],
+      },
+    ],
+    keyVerses: ["Genesis 3:15", "Genesis 22:18", "2 Samuel 7:16", "Jeremiah 31:33", "2 Corinthians 1:20"],
+    raises: ["how-is-the-new-covenant-different-from-the-old-one", "what-is-the-gospel", "how-do-i-find-christ-in-the-old-testament"],
+    followsFrom: ["is-the-whole-bible-about-jesus", "why-did-god-call-abraham"],
+    related: ["what-is-the-gospel", "how-does-the-old-story-reach-jesus", "what-is-grace"],
+    planned: [],
+    order: 46,
   },
 
   // ------------------------------------------------------------------
@@ -15316,11 +15392,87 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 1:27", "Genesis 3:15", "Luke 24:27", "Revelation 21:5"],
-    raises: ["what-went-wrong-in-eden", "why-did-god-create-us", "is-the-whole-bible-about-jesus"],
+    raises: ["what-went-wrong-in-eden", "why-did-god-create-us", "is-the-whole-bible-about-jesus", "why-is-the-bible-arranged-the-way-it-is"],
     followsFrom: [],
     related: ["how-do-i-find-christ-in-the-old-testament", "what-is-the-new-heaven-and-new-earth"],
-    planned: ["Why is the Bible arranged the way it is?"],
+    planned: [],
     order: 86,
+  },
+
+  {
+    slug: "why-is-the-bible-arranged-the-way-it-is",
+    question: "Why is the Bible arranged the way it is?",
+    category: "word-of-god",
+    summary:
+      "The Bible is a library of sixty-six books written across more than a thousand years, and it is shelved by kind rather than by date. The Old Testament gathers law, history, wisdom, and prophets; the New Testament gathers gospels, one history, letters, and an apocalypse. The Hebrew order, which Jesus Himself named, moves from the Law to the Prophets to the Writings. The arrangement is not the inspired part, but it is a wise reading path, and it shows the direction of the whole story: promise, then fulfillment, then a new creation.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "The law, the prophets, and the psalms",
+        lookFor: "How Jesus divides the Scriptures into three parts and then claims all three are about Him.",
+        focus: "44-47",
+      },
+      {
+        book: "Hebrews",
+        chapter: 1,
+        title: "God has spoken",
+        lookFor: "The two-movement shape of revelation: the fathers through the prophets, and us through the Son.",
+        focus: "1-4",
+      },
+      {
+        book: "2 Timothy",
+        chapter: 3,
+        title: "God-breathed and profitable",
+        lookFor: "Why every part of the library is worth reading, and what it is for.",
+        focus: "14-17",
+      },
+      {
+        book: "Revelation",
+        chapter: 22,
+        title: "The end of the book",
+        lookFor: "The last page of the Bible: a warning about the words, and a prayer for the One who is coming.",
+        focus: "18-21",
+      },
+    ],
+    points: [
+      {
+        heading: "The Bible is a library, and it is shelved by kind",
+        body:
+          "Sixty-six books, dozens of authors, three languages, and well over a thousand years separate the first page from the last. Inside that span there is law, history, poetry, wisdom, prophecy, gospel, letter, and apocalypse. The order you hold in your hands groups those kinds together: law, then history, then wisdom, then prophets, then gospels, then letters, then the final vision. That grouping is a reading path, not a timeline.",
+        verses: ["2 Timothy 3:16", "Romans 15:4"],
+      },
+      {
+        heading: "The Hebrew order is even more revealing, and Jesus named it",
+        body:
+          "On the road to Emmaus and again in the upper room, Jesus said that “all things which are written in the law of Moses, the prophets, and the psalms, concerning me must be fulfilled.” That threefold phrase matches how the Hebrew Bible was actually organized: the Law, the Prophets, and the Writings, with Psalms standing at the head of the third. The order moves from foundation to commentary to response, and Jesus' claim covers all three parts: every shelf in the library speaks of Him.",
+        verses: ["Luke 24:44", "Luke 24:27", "John 5:39"],
+      },
+      {
+        heading: "The two testaments are one story in two movements",
+        body:
+          "Hebrews opens by describing the shape of the whole Bible: “God, having in the past spoken to the fathers through the prophets at many times and in various ways, has at the end of these days spoken to us by his Son.” The Old Testament anticipates; the New Testament announces. Jesus was explicit that He came not to abolish the Law and the Prophets but “to fulfill.” So the arrangement is theological, and it runs in one direction: toward Christ, and then through Christ toward the new creation.",
+        verses: ["Hebrews 1:1-2", "Matthew 5:17", "Luke 24:46-47"],
+      },
+      {
+        heading: "It is deliberately not chronological, and that helps us read",
+        body:
+          "Chronicles retells the story Samuel and Kings already told. Job most likely belongs among the patriarchs, not among the exiles. The Psalms and Proverbs span centuries, and the prophetic books are grouped by size rather than by date, which is why the twelve “minor” prophets come after the “major” ones. Paul's letters are ordered roughly by length. God gave us a library rather than a timeline, and that shape teaches us to read wisdom as wisdom, prophecy as prophecy, and letters as letters, while still reading the whole as one story. Paul says the older books were written “for our learning,” and that the events “happened to them by way of example.”",
+        verses: ["Romans 15:4", "1 Corinthians 10:11"],
+      },
+      {
+        heading: "How to live in a library like this",
+        body:
+          "Because “every Scripture is God-breathed and profitable,” the goal is not to master a genre but to become “complete, thoroughly equipped for every good work.” That takes work: Paul tells Timothy to be “properly handling the Word of Truth,” and when Ezra's team read the law aloud, they “gave the sense, so that they understood the reading.” The Bereans did the same, “examining the Scriptures daily to see whether these things were so.” And the library's last page tells you what the whole shelf is for. It warns against adding or taking away, and then it ends not with a rule but with a promise and a prayer: “Yes, I come quickly.” “Yes, come, Lord Jesus.”",
+        verses: ["2 Timothy 3:16-17", "2 Timothy 2:15", "Nehemiah 8:8", "Acts 17:11", "Revelation 22:18-20"],
+      },
+    ],
+    keyVerses: ["Luke 24:44", "Hebrews 1:1-2", "2 Timothy 3:16", "Revelation 22:20"],
+    raises: ["how-should-i-read-the-bible", "how-do-we-know-which-books-belong-in-the-bible", "why-do-bible-translations-differ"],
+    followsFrom: ["what-is-the-bibles-big-story", "is-the-whole-bible-about-jesus"],
+    related: ["how-should-i-read-the-bible", "how-do-we-know-which-books-belong-in-the-bible", "what-does-it-mean-that-the-bible-is-both-human-and-divine"],
+    planned: ["How can I understand hard passages in the Bible?"],
+    order: 47,
   },
 
   {
@@ -15379,11 +15531,80 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 2:17", "Genesis 3:15", "Romans 5:12"],
-    raises: ["what-is-sin", "why-does-god-allow-suffering", "why-did-jesus-have-to-die", "why-did-god-call-abraham", "what-does-the-flood-show-us-about-god"],
+    raises: ["what-is-sin", "why-does-god-allow-suffering", "why-did-jesus-have-to-die", "why-did-god-call-abraham", "what-does-the-flood-show-us-about-god", "why-did-god-place-the-tree-in-the-garden"],
     followsFrom: ["what-is-the-bibles-big-story", "why-did-god-create-us", "what-does-it-mean-to-be-made-in-gods-image"],
     related: ["where-does-temptation-come-from", "does-god-use-our-failures"],
-    planned: ["Why did God place the tree in the garden at all?"],
+    planned: [],
     order: 87,
+  },
+
+  {
+    slug: "why-did-god-place-the-tree-in-the-garden",
+    question: "Why did God place the tree in the garden at all?",
+    category: "in-the-beginning",
+    summary:
+      "The tree looks like a trap until you see what it was for. God filled the garden with food and beauty, fenced off one tree, said plainly which one it was and what it would cost, and let the man and woman choose Him freely. A love that cannot say no is not love, so the tree was the one place where trusting God could be chosen rather than assumed. The serpent's whole strategy was to make that boundary look like stinginess, and every temptation since has run the same play.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 2,
+        title: "A garden, a command, one tree",
+        lookFor: "How much God gives before He withholds anything, and how plainly He names both the gift and the warning.",
+        focus: "8-17",
+      },
+      {
+        book: "Genesis",
+        chapter: 3,
+        title: "The one boundary reframed",
+        lookFor: "The serpent's question about God's word, the woman's answer with an addition of her own, and the promise that they would be like God.",
+        focus: "1-7",
+      },
+      {
+        book: "Deuteronomy",
+        chapter: 30,
+        title: "Life and death set before you",
+        lookFor: "God's own framing of covenant as a choice, and the appeal that follows it: choose life.",
+        focus: "15-20",
+      },
+    ],
+    points: [
+      {
+        heading: "The tree was good; the command was about trust, not poison",
+        body:
+          "God made every tree of the garden, and the tree of the knowledge of good and evil stands in that list alongside the tree of life. It was pleasant to look at and good for food. Nothing in the tree itself was cursed; what made it deadly was that God had said, “you shall not eat of the tree of the knowledge of good and evil.” A good gift becomes a snare only when it is taken against the Giver's word.",
+        verses: ["Genesis 2:9", "Genesis 2:17"],
+      },
+      {
+        heading: "Abundance came first, and the boundary was one tree wide",
+        body:
+          "Before there is a single prohibition there is a feast: “You may freely eat of every tree of the garden.” God is not a miser guarding a hoard. He gives a whole world and withholds one thing, then tells the man exactly which thing and exactly why. The boundary is the exception that gives the abundance its shape, not the point of the garden.",
+        verses: ["Genesis 2:16", "Genesis 2:17"],
+      },
+      {
+        heading: "A command made a real choice possible, and real choice makes real love possible",
+        body:
+          "Obedience that can never be refused is not obedience; it is gravity. Moses later set the same choice before Israel: “I have set before you life and death, the blessing and the curse. Therefore choose life.” His reason for choosing is relational: “to love Yahweh your God, to obey his voice, and to cling to him; for he is your life.” Jesus says the same about His own commandments: “If you love me, keep my commandments.” The tree was God's way of making fellowship voluntary, so that love could be love.",
+        verses: ["Deuteronomy 30:19", "Deuteronomy 30:20", "John 14:15", "1 John 5:3"],
+      },
+      {
+        heading: "The serpent attacked the boundary, not the fruit",
+        body:
+          "Notice where the temptation starts: not with a piece of fruit but with a question about God's character, “Has God really said, ‘You shall not eat of any tree of the garden?’” That is a lie about a lavish God, and it worked. Then came the promise, “you will be like God, knowing good and evil.” James insists the trap was never God's: He “can't be tempted by evil, and he himself tempts no one,” while each of us “is tempted, when he is drawn away by his own lust, and enticed.” The tree tested trust; the serpent turned it into a question about whether God could be trusted at all.",
+        verses: ["Genesis 3:1", "Genesis 3:5", "James 1:13", "James 1:14"],
+      },
+      {
+        heading: "God guarded the way to life, then opened another",
+        body:
+          "After the fall God barred the way to the tree of life, “lest he reach out his hand, and also take of the tree of life, and eat, and live forever.” Death entered, but endless life in a ruined state did not. That exile is where mercy begins, and Scripture keeps using tree language until it reaches the cross, where Christ “bore our sins in his body on the tree,” and “Cursed is everyone who hangs on a tree.” The story ends where Eden began, with “the tree of life” and leaves “for the healing of the nations.”",
+        verses: ["Genesis 3:22", "Genesis 3:24", "1 Peter 2:24", "Galatians 3:13", "Revelation 22:2"],
+      },
+    ],
+    keyVerses: ["Genesis 2:16-17", "Genesis 3:5", "Deuteronomy 30:19", "Revelation 22:2"],
+    raises: ["where-does-temptation-come-from", "how-do-i-fight-sin", "why-did-jesus-have-to-die"],
+    followsFrom: ["what-went-wrong-in-eden", "what-is-the-bibles-big-story"],
+    related: ["what-is-sin", "does-god-use-our-failures", "why-did-god-create-us"],
+    planned: [],
+    order: 88,
   },
 
   {
@@ -15575,11 +15796,87 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 32:4", "Judges 21:25", "1 Kings 18:21", "Jeremiah 31:33"],
-    raises: ["are-there-other-gods", "what-is-sin", "what-is-the-new-heart-that-god-promised", "why-did-god-promise-david-an-eternal-throne", "why-did-david-spare-saul", "why-did-god-send-jonah-to-nineveh"],
+    raises: ["are-there-other-gods", "what-is-sin", "what-is-the-new-heart-that-god-promised", "why-did-god-promise-david-an-eternal-throne", "why-did-david-spare-saul", "why-did-god-send-jonah-to-nineveh", "what-modern-idols-hide-in-ordinary-christian-lives"],
     followsFrom: ["what-does-the-exodus-show-us-about-god", "are-there-other-gods"],
     related: ["where-does-temptation-come-from", "repentance-one-time-or-lifelong"],
-    planned: ["What modern idols hide in ordinary Christian lives?"],
+    planned: [],
     order: 92,
+  },
+
+  {
+    slug: "what-modern-idols-hide-in-ordinary-christian-lives",
+    question: "What modern idols hide in ordinary Christian lives?",
+    category: "land-and-throne",
+    summary:
+      "Idolatry did not end with statues. The Bible calls covetousness idolatry and says the covetous man is an idolater, which means the throne of your heart can be occupied by money, comfort, approval, control, or even ministry. Ezekiel names the real location: men who “have taken their idols into their heart.” Idols are usually good things promoted to ultimate things, and they always pay in slavery. The cure is not to want less but to delight in something better, because a heart captured by treasure in a field will gladly sell everything else.",
+    passages: [
+      {
+        book: "Ezekiel",
+        chapter: 14,
+        title: "Idols in the heart",
+        lookFor: "Men who come to inquire of God while carrying idols inwardly, and God's answer to that arrangement.",
+        focus: "1-6",
+      },
+      {
+        book: "Romans",
+        chapter: 1,
+        title: "The great exchange",
+        lookFor: "The sequence from knowing God to not honoring Him, and the swap at the center of it: glory for images, truth for a lie.",
+        focus: "18-25",
+      },
+      {
+        book: "Colossians",
+        chapter: 3,
+        title: "Put to death what is earthly",
+        lookFor: "Where covetousness lands in Paul's list, and what he calls it.",
+        focus: "1-11",
+      },
+      {
+        book: "Psalms",
+        chapter: 73,
+        title: "Whom do I have in heaven?",
+        lookFor: "The psalmist's envy of the prosperous resolved not by argument but by nearness, ending in the one desire that outranks all others.",
+        focus: "21-28",
+      },
+    ],
+    points: [
+      {
+        heading: "The idol's real address is the heart",
+        body:
+          "The elders of Israel came to Ezekiel to inquire of God, and God told the prophet what He saw: “these men have taken their idols into their heart.” They had no shrine in the room, yet the throne was occupied. That is why God says He will answer such a man “according to the multitude of his idols.” Idolatry is not measured by what stands on your shelf but by what sits on your throne, and the two are often very far apart in appearance.",
+        verses: ["Ezekiel 14:3", "Ezekiel 14:4"],
+      },
+      {
+        heading: "Scripture calls ordinary desires idolatry when they become ultimate",
+        body:
+          "Paul lists greed in the same breath as sexual sin and then names it: “covetousness, which is idolatry.” He tells the Ephesians that “no sexually immoral person, nor unclean person, nor covetous man, who is an idolater, has any inheritance in the Kingdom of Christ and God.” Jesus says, “You can't serve both God and Mammon,” and Paul describes people “whose god is the belly.” Proverbs adds the social version: “The fear of man proves to be a snare.” Money, appetite, applause, safety, control: the New Testament keeps widening the category until it covers an ordinary week.",
+        verses: ["Colossians 3:5", "Ephesians 5:5", "Matthew 6:24", "Philippians 3:19", "Proverbs 29:25"],
+      },
+      {
+        heading: "The mechanism is exchange, and the trade is always bad",
+        body:
+          "Romans describes idolatry as a swap: humanity “traded the glory of the incorruptible God for the likeness of an image,” and “exchanged the truth of God for a lie, and worshiped and served the creature rather than the Creator.” Jeremiah pictures the same transaction from God's side: “they have forsaken me, the spring of living waters, and cut them out cisterns, broken cisterns, that can hold no water.” Isaiah asks the obvious question, “Why do you spend money for that which is not bread?” and the psalmist answers with the cost: “Their sorrows shall be multiplied who give gifts to another god.” An idol is not a neutral hobby; it is a broken cistern that promises water.",
+        verses: ["Romans 1:23", "Romans 1:25", "Jeremiah 2:13", "Isaiah 55:2", "Psalms 16:4"],
+      },
+      {
+        heading: "How to find the idols you cannot see",
+        body:
+          "Idols are rarely obvious to the people who keep them, which is why Scripture keeps telling us to examine ourselves. A few questions do most of the work. What do you sacrifice for without being asked? What can you not imagine losing? Where does your mind go when it is finally free? Whose approval changes how you behave, the way the elders' approval changed Saul, who begged, “please honor me now before the elders of my people”? What makes you disproportionately angry or despairing when it is threatened? And remember that idols hide inside good things: family, health, ministry, nation, even correct doctrine. Paul told the Corinthians these stories “were our examples, to the intent we should not lust after evil things,” and then gave the only safe instruction: “flee from idolatry.”",
+        verses: ["1 Samuel 15:30", "Proverbs 29:25", "1 Corinthians 10:6", "1 Corinthians 10:14"],
+      },
+      {
+        heading: "The cure is not less desire but a greater one",
+        body:
+          "You cannot simply delete a heart's treasure; you have to replace it. The psalmist found the exchange that works: “Whom do I have in heaven? There is no one on earth whom I desire besides you... God is the strength of my heart and my portion forever.” Psalm 37 makes the promise plain: “Also delight yourself in Yahweh, and he will give you the desires of your heart.” Jesus tells the story as a man who finds “a treasure hidden in the field,” and “in his joy, he goes and sells all that he has.” That is the shape of repentance, God's own appeal through Ezekiel: “Return, and turn yourselves from your idols.” And underneath the command is covenant love, not mere demand: “Yahweh, whose name is Jealous, is a jealous God,” jealous for the whole heart because He means to be its joy.",
+        verses: ["Psalms 73:25-26", "Psalms 37:4", "Matthew 13:44", "Ezekiel 14:6", "Exodus 34:14"],
+      },
+    ],
+    keyVerses: ["Ezekiel 14:3", "Colossians 3:5", "Romans 1:25", "Psalms 73:25", "1 John 5:21"],
+    raises: ["what-is-repentance", "how-do-i-fight-sin", "does-grace-mean-live-how-i-want"],
+    followsFrom: ["why-did-israel-keep-drifting-into-idolatry", "are-there-other-gods"],
+    related: ["where-does-temptation-come-from", "what-is-sin", "repentance-one-time-or-lifelong"],
+    planned: [],
+    order: 98,
   },
 
   {
@@ -15638,11 +15935,87 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Samuel 7:16", "Psalms 89:34", "Luke 1:32-33"],
-    raises: ["what-does-it-mean-that-jesus-is-the-son-of-david", "what-does-the-title-christ-mean", "why-did-god-send-his-people-into-exile"],
+    raises: ["what-does-it-mean-that-jesus-is-the-son-of-david", "what-does-the-title-christ-mean", "why-did-god-send-his-people-into-exile", "why-was-david-a-man-after-gods-own-heart"],
     followsFrom: ["why-did-israel-keep-drifting-into-idolatry", "why-did-david-spare-saul"],
     related: ["what-is-the-kingdom-of-god", "how-do-i-find-christ-in-the-old-testament"],
-    planned: ["Why was David a man after God's own heart despite his sins?"],
+    planned: [],
     order: 94,
+  },
+
+  {
+    slug: "why-was-david-a-man-after-gods-own-heart",
+    question: "Why was David a man after God's own heart despite his sins?",
+    category: "land-and-throne",
+    summary:
+      "God called David “a man after my heart,” and He said it of a man who committed adultery and arranged a murder. The phrase never meant a spotless record; it meant a heart aimed at God, one that broke when it was confronted and ran to mercy instead of excuses. Saul defended himself and lost the kingdom; David confessed and kept it. Grace put away his sin, discipline still fell on his house, and the greater Son of David would come as the One who always did the Father's will.",
+    passages: [
+      {
+        book: "1 Samuel",
+        chapter: 13,
+        title: "A man after his own heart",
+        lookFor: "The first use of the phrase, spoken as a verdict against Saul's disobedience rather than a compliment to David's record.",
+        focus: "8-14",
+      },
+      {
+        book: "1 Samuel",
+        chapter: 15,
+        title: "Saul's self-defense",
+        lookFor: "Two confessions from the same man: one that names the fear of people, and one that asks to be honored in front of them.",
+        focus: "22-31",
+      },
+      {
+        book: "2 Samuel",
+        chapter: 12,
+        title: "You are the man",
+        lookFor: "Nathan's parable, the exposure, David's four-word confession, and the forgiveness and the sword that arrive together.",
+        focus: "1-15",
+      },
+      {
+        book: "Psalms",
+        chapter: 51,
+        title: "Have mercy on me",
+        lookFor: "What repentance sounds like when it is not managing an image: no excuses, an appeal to mercy, and a plea for a new heart.",
+        focus: "1-17",
+      },
+    ],
+    points: [
+      {
+        heading: "The phrase describes the aim of a life, not a spotless record",
+        body:
+          "Samuel told Saul that God had sought “a man after his own heart,” and centuries later Paul repeated the verdict: “I have found David the son of Jesse, a man after my heart, who will do all my will.” The defining clause is the last one. God was not certifying David's performance; He was describing a man whose will had been handed over to God's. That is why the title can sit on top of a life with terrible chapters in it.",
+        verses: ["1 Samuel 13:14", "Acts 13:22"],
+      },
+      {
+        heading: "Saul shows what the phrase does not mean",
+        body:
+          "Saul also said the words “I have sinned,” twice. But listen to the reasons. The first time, “because I feared the people, and obeyed their voice.” The second, “please honor me now before the elders of my people.” Saul's religion was crowd management; he wanted the appearance of obedience while keeping the throne of his own reputation. Samuel had already told him the standard: “to obey is better than sacrifice.” God was never looking for the better offering; He was looking for the yielded heart.",
+        verses: ["1 Samuel 15:22", "1 Samuel 15:24", "1 Samuel 15:30"],
+      },
+      {
+        heading: "David's sin was real, grave, and hidden until God exposed it",
+        body:
+          "Scripture refuses to airbrush its heroes. David saw, sent, took, and then had Uriah killed with a letter carried by the man himself. For months the cover story held, until the narrator delivers the quiet verdict, “the thing that David had done displeased Yahweh.” Then Nathan's parable springs the trap with four words: “You are the man.” The question is not whether David sinned; it is how he responded when he was caught.",
+        verses: ["2 Samuel 11:2-4", "2 Samuel 11:14-15", "2 Samuel 11:27", "2 Samuel 12:7", "2 Samuel 12:9"],
+      },
+      {
+        heading: "Repentance was the difference",
+        body:
+          "David did not mount a defense. He said, “I have sinned against Yahweh,” and in the psalm he wrote from that wreckage he refused every excuse: “Against you, and you only, have I sinned.” He appealed to mercy, “Have mercy on me, God, according to your loving kindness,” asked for what only God can make, “Create in me a clean heart, O God,” and brought the only offering left: “The sacrifices of God are a broken spirit.” Nathan's answer is the gospel in miniature: “Yahweh also has put away your sin.” David knew the blessedness of that, which is why Paul quotes him to prove that righteousness is counted apart from works.",
+        verses: ["2 Samuel 12:13", "Psalms 51:1", "Psalms 51:4", "Psalms 51:10", "Psalms 51:17", "Psalms 32:5", "Romans 4:6-8", "1 John 1:9"],
+      },
+      {
+        heading: "Grace forgave him; discipline still fell, and the greater Son of David came",
+        body:
+          "The same sentence that announced forgiveness announced consequence: “the sword will never depart from your house,” and the child died. God's pardon is free, but sin still works its damage in a family and a nation, and “whom the Lord loves, he chastens.” David's deepest need was not a nicer record but a new heart, exactly what God later promised: “I will also give you a new heart.” That promise arrives in David's greater Son, who could say without qualification, “I always do the things that are pleasing to him.” What David could not be, Jesus is, and His obedience is credited to everyone who trusts Him.",
+        verses: ["2 Samuel 12:10", "2 Samuel 12:14", "Hebrews 12:6", "Ezekiel 36:26", "John 8:29"],
+      },
+    ],
+    keyVerses: ["1 Samuel 13:14", "2 Samuel 12:13", "Psalms 51:10", "Psalms 51:17", "Acts 13:22"],
+    raises: ["what-is-repentance", "can-gods-grace-really-cover-my-worst-sins", "how-do-i-know-my-repentance-is-genuine"],
+    followsFrom: ["why-did-god-promise-david-an-eternal-throne", "why-did-david-spare-saul"],
+    related: ["what-is-grace", "does-god-use-our-failures", "what-is-sanctification-and-how-does-it-happen"],
+    planned: [],
+    order: 95,
   },
 
   {
@@ -15701,11 +16074,87 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Kings 17:14", "Jeremiah 31:33", "Lamentations 3:22-23"],
-    raises: ["god-remembers-our-sins-no-more", "how-do-i-know-my-repentance-is-genuine", "how-does-god-discipline-his-children", "how-does-the-old-story-reach-jesus"],
+    raises: ["god-remembers-our-sins-no-more", "how-do-i-know-my-repentance-is-genuine", "how-does-god-discipline-his-children", "how-does-the-old-story-reach-jesus", "how-should-christians-live-as-exiles"],
     followsFrom: ["why-did-god-promise-david-an-eternal-throne", "why-did-israel-keep-drifting-into-idolatry"],
     related: ["how-does-god-discipline-his-children", "where-is-god-in-my-pain"],
-    planned: ["How should Christians live as exiles in their own culture?"],
+    planned: [],
     order: 93,
+  },
+
+  {
+    slug: "how-should-christians-live-as-exiles",
+    question: "How should Christians live as exiles in their own culture?",
+    category: "prophets-and-exile",
+    summary:
+      "Exile is the right picture for the Christian life, and it is not a defeat. Peter addresses his readers as foreigners living in the Dispersion, and he tells them to do two things at once: abstain from the desires that war against the soul, and live so well among their neighbors that slander turns into glory to God. Jeremiah told the exiles in Babylon to build houses, plant gardens, and seek the city's peace, because their welfare was bound up with it. So Christians neither conquer the culture, nor flee it, nor melt into it. They bless it, stay distinct where God has spoken, expect hostility without surprise, and keep their hope fixed on the city that is coming.",
+    passages: [
+      {
+        book: "Jeremiah",
+        chapter: 29,
+        title: "Seek the city's peace",
+        lookFor: "A letter telling exiles to settle down rather than agitate, and the promise attached to seeking the welfare of a pagan city.",
+        focus: "4-14",
+      },
+      {
+        book: "Daniel",
+        chapter: 1,
+        title: "Purposed not to defile himself",
+        lookFor: "How a young exile says no to compromise while saying yes to serving well, and what God gives him in return.",
+        focus: "1-17",
+      },
+      {
+        book: "1 Peter",
+        chapter: 2,
+        title: "Foreigners and pilgrims among the nations",
+        lookFor: "The two halves of the exile life: abstaining from what wars against the soul, and doing good that silences slander.",
+        focus: "9-17",
+      },
+      {
+        book: "1 Peter",
+        chapter: 3,
+        title: "Ready to give an answer",
+        lookFor: "How to respond when following Christ costs: without fear, without hostility, and with a reason for hope.",
+        focus: "13-17",
+      },
+    ],
+    points: [
+      {
+        heading: "Exile is the right picture, and it is not a defeat",
+        body:
+          "Peter writes “to the chosen ones who are living as foreigners in the Dispersion,” and calls them “foreigners and pilgrims.” Hebrews describes the faithful as people who “confessed that they were strangers and pilgrims on the earth,” and Paul says flatly, “our citizenship is in heaven.” Jeremiah's letter to Babylon assumed a long stay, not a quick exit. Being a resident alien is normal Christianity, not a crisis, and it is the posture Scripture expects us to hold for as long as we are here.",
+        verses: ["1 Peter 1:1", "1 Peter 2:11", "Hebrews 11:13", "Philippians 3:20"],
+      },
+      {
+        heading: "Settle in and seek the city's good, because your peace is bound up with its peace",
+        body:
+          "God did not tell the exiles to sabotage Babylon or to hide from it. He told them, “Build houses, and dwell in them; and plant gardens, and eat their fruit,” and then gave the command that shapes Christian civic life: “Seek the peace of the city where I have caused you to be carried away captive, and pray to Yahweh for it; for in its peace you shall have peace.” He added that His thoughts toward them were “thoughts of peace, and not of evil, to give you hope and a future.” Daniel lived this out: he rose to govern the whole province of Babylon while his windows stayed open toward Jerusalem.",
+        verses: ["Jeremiah 29:5", "Jeremiah 29:7", "Jeremiah 29:11", "Daniel 2:48", "Daniel 6:10"],
+      },
+      {
+        heading: "Be distinct where God has spoken, and stay in the room everywhere else",
+        body:
+          "Daniel drew one clear line: “Daniel purposed in his heart that he would not defile himself with the king’s dainties.” Yet he did not withdraw. He learned the language and literature, served in the administration, and God gave him “knowledge and skill in all learning and wisdom.” Jesus prays the same balance over His people: “I pray not that you would take them from the world, but that you would keep them from the evil one.” Paul never asked the Corinthians to leave the world, only to stop being ruled by it. Exiles are not called to be strange where God has not spoken, but they must be unmistakable where He has.",
+        verses: ["Daniel 1:8", "Daniel 1:17", "John 17:15", "John 17:18", "1 Corinthians 5:10"],
+      },
+      {
+        heading: "Do good, submit where you can, and answer with hope rather than hostility",
+        body:
+          "Peter's strategy is not protest but goodness: “having good behavior among the nations, so in that of which they speak against you as evildoers, they may by your good works, which they see, glorify God.” He says that “by well-doing you should put to silence the ignorance of foolish men,” and he compresses the ethic into four commands: “Honor all men. Love the brotherhood. Fear God. Honor the king.” When hostility comes anyway, the response is neither fear nor counterattack: “sanctify the Lord God in your hearts; and always be ready to give an answer to everyone who asks you a reason concerning the hope that is in you, with humility and fear.” He grants that suffering may come, and simply says “it is better, if it is God’s will, that you suffer for doing well than for doing evil.”",
+        verses: ["1 Peter 2:12", "1 Peter 2:15", "1 Peter 2:17", "1 Peter 3:15", "1 Peter 3:17"],
+      },
+      {
+        heading: "Keep your eyes on the city that is coming",
+        body:
+          "The exile posture only makes sense with a destination in view. Hebrews says the pilgrims were “seeking a country of their own,” and that “they desire a better country, that is, a heavenly one. Therefore God is not ashamed of them, to be called their God, for he has prepared a city for them.” Jesus told His people they are “the light of the world,” and that “a city located on a hill can’t be hidden.” So live, Peter says, “in reverent fear” during “the time of your living as foreigners.” We are not home yet, and that is precisely why we can love this place deeply without needing it to be heaven.",
+        verses: ["Hebrews 11:14", "Hebrews 11:16", "Matthew 5:14", "1 Peter 1:17"],
+      },
+    ],
+    keyVerses: ["Jeremiah 29:7", "Daniel 1:8", "1 Peter 2:11-12", "1 Peter 3:15", "Philippians 3:20"],
+    raises: ["how-do-i-share-my-faith-with-others", "why-do-i-need-the-church", "what-does-it-mean-that-the-world-hates-jesus"],
+    followsFrom: ["why-did-god-send-his-people-into-exile", "how-does-the-old-story-reach-jesus"],
+    related: ["the-churchs-mission-in-the-world", "how-do-i-share-my-faith-with-others", "why-do-i-need-the-church"],
+    planned: [],
+    order: 95,
   },
 
   {
@@ -15770,11 +16219,87 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Galatians 4:4-5", "John 1:29", "Luke 1:32-33", "Hebrews 9:28"],
-    raises: ["who-is-jesus", "why-did-jesus-have-to-die", "what-is-the-new-heaven-and-new-earth"],
+    raises: ["who-is-jesus", "why-did-jesus-have-to-die", "what-is-the-new-heaven-and-new-earth", "where-do-the-wisdom-books-fit"],
     followsFrom: ["why-did-god-send-his-people-into-exile", "why-did-god-promise-david-an-eternal-throne", "what-is-the-bibles-big-story"],
     related: ["is-the-whole-bible-about-jesus", "how-do-i-find-christ-in-the-old-testament", "what-is-the-gospel"],
-    planned: ["Where do the wisdom books fit in the Bible's story?"],
+    planned: [],
     order: 94,
+  },
+
+  {
+    slug: "where-do-the-wisdom-books-fit",
+    question: "Where do the wisdom books fit in the Bible's story?",
+    category: "word-of-god",
+    summary:
+      "The wisdom books sit in the middle of the story without advancing the plot, and that is exactly their point: they teach how to live before God in ordinary days and in agonizing ones. Job asks why the righteous suffer; Proverbs gives skill for work, money, speech, and friendship; Ecclesiastes tells the truth about life as vapor; the Psalms put every human emotion into prayer; the Song celebrates covenant love. They assume the whole story and press it into daily life, and they all point to Christ, in whom wisdom is not a book but a Person.",
+    passages: [
+      {
+        book: "Job",
+        chapter: 28,
+        title: "Where is wisdom found?",
+        lookFor: "The poem that searches the earth, the deep, and the grave for wisdom, and the one place it finally locates it.",
+        focus: "12-28",
+      },
+      {
+        book: "Proverbs",
+        chapter: 1,
+        title: "The fear of Yahweh is the beginning",
+        lookFor: "The stated purpose of the book, and the two audiences it names: the simple who need wisdom and the wise who need more.",
+        focus: "1-7",
+      },
+      {
+        book: "Ecclesiastes",
+        chapter: 12,
+        title: "The end of the matter",
+        lookFor: "A book full of hard questions landing on a plain conclusion, and the counsel to remember the Creator early.",
+        focus: "9-14",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 1,
+        title: "Christ, the wisdom of God",
+        lookFor: "How Paul sets God's wisdom against the world's, and what he says Christ has become for us.",
+        focus: "18-31",
+      },
+    ],
+    points: [
+      {
+        heading: "They are the story applied, not the story interrupted",
+        body:
+          "The historical books tell what God did; the wisdom books ask how to live before that God. They assume the call of Abraham, the covenant at Sinai, the tabernacle, and the throne of David, and then work all of it out in the ordinary material of a human week: work, money, speech, friendship, marriage, suffering, aging, and death. That is why they sit where they do. They are the Bible's library of how to live, and they belong in the middle of the story because the middle of the story is where we actually live.",
+        verses: ["Psalms 19:7", "Proverbs 2:1", "Proverbs 2:5"],
+      },
+      {
+        heading: "Job: wisdom when everything collapses",
+        body:
+          "Job asks the question the whole Bible has to answer somewhere: “But where shall wisdom be found?” He loses children, wealth, and health, his friends offer tidy formulas, and God never explains. Job holds on anyway: “Yahweh gave, and Yahweh has taken away. Blessed be Yahweh’s name.” And in the middle of his agony he strikes a note that reaches past the book: “I know that my Redeemer lives.” The poem's answer to where wisdom lives is not a principle but a posture: “the fear of the Lord, that is wisdom.”",
+        verses: ["Job 28:12", "Job 1:21", "Job 19:25", "Job 28:28"],
+      },
+      {
+        heading: "Proverbs: wisdom for ordinary days",
+        body:
+          "Proverbs opens with its thesis: “The fear of Yahweh is the beginning of knowledge.” This fear is not terror of a bully but reverent trust in a Father, and it is the foundation everything else is built on: “Trust in Yahweh with all your heart, and don’t lean on your own understanding.” Proverbs is a portrait of the wise life, not a vending machine of promises; it teaches skill for living, and it teaches us how to read the rest of Scripture wisely.",
+        verses: ["Proverbs 1:7", "Proverbs 3:5-6", "Proverbs 9:10"],
+      },
+      {
+        heading: "Ecclesiastes and the Song: honesty about vapor, delight in love",
+        body:
+          "Ecclesiastes refuses to pretend. Its verdict on life “under the sun” is “Vanity of vanities, all is vanity,” and yet the same book says God “has also set eternity in their hearts.” Its counsel is not despair but gratitude and remembrance: “Remember also your Creator in the days of your youth,” and “Fear God, and keep his commandments; for this is the whole duty of man.” The Song supplies the other half, celebrating embodied covenant love, where “love is strong as death” and its flame is “a very flame of Yahweh.” Together they say that life under the sun is vapor and gift at the same time, and both are meant to be received from God's hand.",
+        verses: ["Ecclesiastes 1:2", "Ecclesiastes 3:11", "Ecclesiastes 12:1", "Ecclesiastes 12:13", "Song of Songs 8:6"],
+      },
+      {
+        heading: "All of it points to Christ, in whom wisdom is a Person",
+        body:
+          "Jesus told His hearers that “someone greater than Solomon is here,” and Paul drew the conclusion: to the called, “Christ is the power of God and the wisdom of God,” the one “who was made to us wisdom from God, and righteousness and sanctification, and redemption.” Colossians adds that “in whom are all the treasures of wisdom and knowledge hidden.” The righteous sufferer of Job, the prayers of the Psalms, the wise son of Proverbs, the honest searcher of Ecclesiastes, and the Bridegroom of the Song all converge in Him. So when you lack wisdom, James says where to go: “if any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach.”",
+        verses: ["Matthew 12:42", "1 Corinthians 1:24", "1 Corinthians 1:30", "Colossians 2:3", "James 1:5"],
+      },
+    ],
+    keyVerses: ["Job 28:28", "Proverbs 1:7", "Ecclesiastes 12:13", "1 Corinthians 1:24", "Colossians 2:3"],
+    raises: ["why-does-god-allow-suffering", "is-it-okay-to-doubt", "what-is-worship"],
+    followsFrom: ["how-does-the-old-story-reach-jesus", "what-is-the-bibles-big-story"],
+    related: ["how-should-i-read-the-bible", "how-do-i-find-christ-in-the-old-testament", "is-the-whole-bible-about-jesus"],
+    planned: [],
+    order: 45,
   },
 
   // ------------------------------------------------------------------
@@ -16262,11 +16787,87 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Samuel 24:6", "1 Samuel 24:12", "1 Samuel 26:23", "Romans 12:19"],
-    raises: ["why-did-god-promise-david-an-eternal-throne"],
+    raises: ["why-did-god-promise-david-an-eternal-throne", "how-do-i-wait-on-gods-timing"],
     followsFrom: ["why-did-israel-keep-drifting-into-idolatry"],
     related: ["how-do-i-fight-sin", "what-does-it-mean-to-walk-by-faith-and-not-by-sight"],
-    planned: ["How do I wait on God's timing when a promise feels delayed?"],
+    planned: [],
     order: 93,
+  },
+
+  {
+    slug: "how-do-i-wait-on-gods-timing",
+    question: "How do I wait on God's timing when a promise feels delayed?",
+    category: "land-and-throne",
+    summary:
+      "Waiting on God's timing is not idle hoping; it is continuing to obey the last thing He said while refusing the shortcut. David was anointed king years before he wore the crown, and he spent those years serving, hiding, and declining to seize what God had promised. Scripture keeps telling the same story: the vision has an appointed time, the farmer waits for rain, Abraham's shortcut produced lasting sorrow, and God is never late. The delay is not wasted either, because it is usually doing something in you that the promise could not do for you.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 27,
+        title: "Wait for Yahweh",
+        lookFor: "Confidence in the middle of pursuit, the one desire that steadies him, and the command he gives his own heart at the end.",
+        focus: "1-14",
+      },
+      {
+        book: "Isaiah",
+        chapter: 40,
+        title: "Renewed strength",
+        lookFor: "Why the everlasting God never grows tired, and what He promises to those who wait for Him rather than run ahead.",
+        focus: "27-31",
+      },
+      {
+        book: "Habakkuk",
+        chapter: 2,
+        title: "The appointed time",
+        lookFor: "A prophet told to write a vision down and wait, with a promise attached to the interval itself.",
+        focus: "1-4",
+      },
+      {
+        book: "Genesis",
+        chapter: 16,
+        title: "The shortcut",
+        lookFor: "What happens when a promise is old and an idea is available, and how quickly the substitute creates its own pain.",
+        focus: "1-6",
+      },
+    ],
+    points: [
+      {
+        heading: "Waiting is active, not idle",
+        body:
+          "David did not sit still between his anointing and his crown. He fought Goliath, served in Saul's court, led men in the wilderness, and twice spared the king who was hunting him, saying he would let God decide the hour. Then he told his own heart, “Wait for Yahweh. Be strong, and let your heart take courage.” Biblical waiting is strength held in check, not strength switched off. Isaiah promises that the ones who wait are the ones who end up running: “those who wait for Yahweh will renew their strength.”",
+        verses: ["Psalms 27:14", "1 Samuel 26:10", "Isaiah 40:31"],
+      },
+      {
+        heading: "The promise has an appointed time, and God is not slow",
+        body:
+          "God told Habakkuk to write the vision down so that a runner could read it on the way, and then explained the wait: “Though it takes time, wait for it; because it will surely come. It won’t delay.” What looks late to us is on schedule with Him. Paul says the Son came “when the fullness of the time came,” and Peter answers our impatience directly: “The Lord is not slow concerning his promise, as some count slowness; but is patient with us.” Balaam put the logic plainly: “Has he said, and will he not do it?”",
+        verses: ["Habakkuk 2:2-3", "Galatians 4:4", "2 Peter 3:9", "Numbers 23:19"],
+      },
+      {
+        heading: "The shortcut costs more than the wait",
+        body:
+          "Abraham and Sarah had a promise and no child, and Sarah offered a workable plan: “Please go in to my handmaid.” It was not adultery by their culture's rules, and it produced a son, but Ishmael was not the promised son, and the arrangement bred contempt and conflict in the house that same chapter. God did not need their help to keep His word. Years later, “Yahweh visited Sarah as he had said,” and she bore Isaac “at the set time of which God had spoken to him.” Faith waits for God to do what only God can do; the flesh insists on helping.",
+        verses: ["Genesis 16:1-2", "Genesis 16:4", "Genesis 21:1-2"],
+      },
+      {
+        heading: "The delay is doing something in you",
+        body:
+          "Waiting is not dead time; it is the workshop where endurance is made. James says the testing of your faith “produces endurance,” and then tells endurance to finish its work so that you may be “perfect and complete, lacking in nothing.” Paul lays out the chain: “suffering works perseverance; and perseverance, proven character; and proven character, hope.” Hebrews names the stakes: “you need endurance so that, having done the will of God, you may receive the promise.” God is not only preparing a gift for you; He is preparing you for the gift.",
+        verses: ["James 1:3-4", "Romans 5:3-4", "Hebrews 10:36", "Philippians 1:6"],
+      },
+      {
+        heading: "How to wait: honestly, patiently, with your eyes on Him",
+        body:
+          "Scripture does not require a cheerful face during the delay. David asked, “How long, Yahweh? Will you forget me forever?” and kept praying. But he also anchored his desire: “One thing I have asked of Yahweh, that I will seek after, that I may dwell in Yahweh’s house all the days of my life.” The psalms teach the posture: “Rest in Yahweh, and wait patiently for him,” and “my soul longs for the Lord more than watchmen long for the morning.” James points to a farmer waiting for rain, and promises that the wait has an end, because “he who comes will come, and will not wait.” The point of waiting is not the thing you are waiting for; it is the One you are waiting with.",
+        verses: ["Psalms 13:1", "Psalms 27:4", "Psalms 37:7", "Psalms 130:5-6", "James 5:7", "Hebrews 10:37"],
+      },
+    ],
+    keyVerses: ["Psalms 27:14", "Isaiah 40:31", "Habakkuk 2:3", "Hebrews 10:36", "James 5:7"],
+    raises: ["is-god-in-control", "why-does-god-seem-silent", "how-do-i-know-gods-will"],
+    followsFrom: ["why-did-david-spare-saul", "why-did-god-promise-david-an-eternal-throne"],
+    related: ["what-does-it-mean-to-walk-by-faith-and-not-by-sight", "how-do-i-balance-planning-with-trusting-god", "does-god-change-his-mind"],
+    planned: [],
+    order: 96,
   },
 
   {
@@ -16610,11 +17211,87 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 25:8-9", "Exodus 40:34", "John 1:14"],
-    raises: ["what-did-the-sacrificial-system-teach-israel", "who-can-forgive-sins", "do-i-need-a-priest-to-reach-god"],
+    raises: ["what-did-the-sacrificial-system-teach-israel", "who-can-forgive-sins", "do-i-need-a-priest-to-reach-god", "what-did-the-temple-add-that-the-tent-lacked"],
     followsFrom: ["why-did-god-give-israel-the-law-at-sinai"],
     related: ["what-is-worship", "what-is-the-new-heaven-and-new-earth"],
-    planned: ["What did the temple add that the tent lacked?"],
+    planned: [],
     order: 98,
+  },
+
+  {
+    slug: "what-did-the-temple-add-that-the-tent-lacked",
+    question: "What did the temple add that the tent lacked?",
+    category: "land-and-throne",
+    summary:
+      "The temple was the tabernacle with an address. Same God, same furniture, same curtain, same mediation; what changed was that the tent stopped moving and a son of David built a house for God's name. That permanence was real progress: a fixed place of prayer, a welcome for the foreigner, and glory filling the house. But it added no access. The veil still hung, the high priest still went in alone, and Babylon could still burn it down. The greater glory arrived when God became flesh, and when the veil tore from top to bottom.",
+    passages: [
+      {
+        book: "2 Samuel",
+        chapter: 7,
+        title: "A house for my name",
+        lookFor: "God's surprising reply to David's offer: He has never asked for a house, and the house will be built by David's son.",
+        focus: "4-16",
+      },
+      {
+        book: "1 Kings",
+        chapter: 8,
+        title: "Glory fills the house",
+        lookFor: "The cloud and the glory, then Solomon's own confession that no building can contain God, and his plea for the foreigner.",
+        focus: "10-30",
+      },
+      {
+        book: "Jeremiah",
+        chapter: 7,
+        title: "Don't trust in lying words",
+        lookFor: "How a building can become a substitute for obedience, and what God says about that kind of confidence.",
+        focus: "1-15",
+      },
+      {
+        book: "John",
+        chapter: 2,
+        title: "Destroy this temple",
+        lookFor: "Jesus clearing the courts and then answering with a claim the disciples only understood after the resurrection.",
+        focus: "13-22",
+      },
+    ],
+    points: [
+      {
+        heading: "The temple kept the tent's design and added permanence",
+        body:
+          "God told David, “I have not lived in a house since the day that I brought up the children of Israel out of Egypt, even to this day, but have moved around in a tent and in a tabernacle.” Solomon built to the same plan: the same altar and lampstand, the same bread and incense, the same ark, and the same Most Holy Place behind the same kind of veil. What changed was that God's dwelling stopped traveling. Psalm 132 celebrates the arrival: “This is my resting place forever. Here I will live, for I have desired it.”",
+        verses: ["2 Samuel 7:6", "Psalms 132:13-14"],
+      },
+      {
+        heading: "It came with a promise, and the builder was a son of David",
+        body:
+          "David wanted to build God a house; God answered by promising to build David one. “I will set up your seed after you,” He said, “and I will establish his kingdom. He shall build a house for my name, and I will establish the throne of his kingdom forever.” The temple is therefore not just architecture; it is covenant, with the house and the throne tied together in a single sentence. Solomon's dedication even quotes the promise back to God, asking Him to keep what He swore to David.",
+        verses: ["2 Samuel 7:12-13", "1 Kings 8:29"],
+      },
+      {
+        heading: "It added glory, and a fixed place where outsiders could pray",
+        body:
+          "When the priests came out, “Yahweh’s glory filled Yahweh’s house,” so thick that they could not stand to minister. But Solomon refused to overclaim: “Behold, heaven and the heaven of heavens can’t contain you; how much less this house that I have built!” The temple's greatness was never that it held God, but that God agreed to put His name there and listen. And He listened for strangers: “Moreover concerning the foreigner, who is not of your people Israel, when he shall come out of a far country for your name’s sake,” Solomon asks God to hear him too, so that all peoples may know His name. The temple is the tabernacle's hospitality made permanent.",
+        verses: ["1 Kings 8:10-11", "1 Kings 8:27", "1 Kings 8:41", "1 Kings 8:43"],
+      },
+      {
+        heading: "It added no access, and it could be lost",
+        body:
+          "For all its gold, the temple left the way in unchanged. The veil still hung, the high priest still entered alone once a year, and the Holy Spirit was saying “that the way into the Holy Place wasn’t yet revealed while the first tabernacle was still standing.” God also warned Solomon that the house was not a guarantee: if Israel turned to other gods, “this house, which I have made holy for my name, will I cast out of my sight.” Babylon burned it. Jeremiah had already mocked the false confidence: “Don’t trust in lying words, saying, ‘Yahweh’s temple, Yahweh’s temple, Yahweh’s temple, are these.’” A building is never a substitute for a relationship.",
+        verses: ["Hebrews 9:8", "1 Kings 9:6-7", "2 Kings 25:9", "Jeremiah 7:4"],
+      },
+      {
+        heading: "The greater glory: Christ, and His people as a temple",
+        body:
+          "Haggai promised that “the latter glory of this house will be greater than the former,” and Jesus announced what that meant: “one greater than the temple is here.” When He was challenged in the courts, He said, “Destroy this temple, and in three days I will raise it up,” and John explains that “he spoke of the temple of his body.” At His death “the veil of the temple was torn in two from the top to the bottom,” opening the way the old house could only guard. Now the dwelling of God is a people: “You also, as living stones, are built up as a spiritual house,” and “you are a temple of God.” Revelation closes the arc: “I saw no temple in it, for the Lord God, the Almighty, and the Lamb, are its temple.”",
+        verses: ["Haggai 2:9", "Matthew 12:6", "John 2:19-21", "Matthew 27:51", "Hebrews 10:19-20", "1 Peter 2:5", "1 Corinthians 3:16", "Revelation 21:22"],
+      },
+    ],
+    keyVerses: ["2 Samuel 7:13", "1 Kings 8:27", "John 2:19", "Matthew 27:51", "1 Peter 2:5"],
+    raises: ["why-do-i-need-the-church", "what-is-the-church", "what-is-the-new-heaven-and-new-earth"],
+    followsFrom: ["what-was-the-tabernacle-for", "why-did-god-promise-david-an-eternal-throne"],
+    related: ["what-is-worship", "who-can-forgive-sins", "what-is-the-new-heaven-and-new-earth"],
+    planned: [],
+    order: 97,
   },
 
   {
@@ -16743,7 +17420,7 @@ export const questions: Question[] = [
     raises: ["how-did-esther-become-queen", "why-does-god-allow-suffering"],
     followsFrom: [],
     related: ["why-does-god-allow-suffering", "how-does-the-old-story-reach-jesus"],
-    planned: ["Why does the Bible include a book that never names God?"],
+    planned: [],
     order: 121,
   },
 
@@ -17147,11 +17824,87 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Esther 4:16", "John 15:13", "Revelation 5:9"],
-    raises: [],
+    raises: ["how-does-esther-point-forward-to-the-greater-exodus"],
     followsFrom: ["what-is-the-feast-of-purim"],
     related: ["who-is-jesus", "what-does-the-exodus-show-us-about-god"],
-    planned: ["How does the book of Esther point forward to the greater exodus?"],
+    planned: [],
     order: 128,
+  },
+
+  {
+    slug: "how-does-esther-point-forward-to-the-greater-exodus",
+    question: "How does the book of Esther point forward to the greater exodus?",
+    category: "esther",
+    summary:
+      "Esther runs on the same four beats as the Exodus: a people under a death decree, a mediator who puts their life in the gap, a decisive reversal, and a feast of remembrance. Haman's letters to destroy the Jews echo Pharaoh's order to drown the sons, and Haman the Agagite even carries Amalek's ancient grudge. What makes Esther remarkable is that this exodus happens with no plagues, no parted sea, and no named God, which is exactly why it speaks to exiles. The prophets promised a greater exodus still, and Jesus accomplished it: He is our Passover, His departure at Jerusalem was the true exodus, and Revelation ends with the song of Moses and the Lamb.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 12,
+        title: "The first Passover",
+        lookFor: "The pattern Esther will repeat: a lamb, blood on the doorposts, a people passed over, and a memorial feast kept forever.",
+        focus: "1-14",
+      },
+      {
+        book: "Esther",
+        chapter: 3,
+        title: "The decree to destroy",
+        lookFor: "Why Haman targets a whole people rather than one man, and how the paperwork of an empire becomes a death sentence.",
+        focus: "6-13",
+      },
+      {
+        book: "Esther",
+        chapter: 9,
+        title: "The feast of Purim",
+        lookFor: "How a day appointed for slaughter becomes a day of rest, and how the reversal is written into the calendar.",
+        focus: "20-28",
+      },
+      {
+        book: "Luke",
+        chapter: 22,
+        title: "The Passover fulfilled",
+        lookFor: "Jesus taking the oldest feast of deliverance and giving it a new meaning in His own body and blood.",
+        focus: "7-20",
+      },
+    ],
+    points: [
+      {
+        heading: "Esther follows the Exodus shape beat for beat",
+        body:
+          "In Egypt God told Israel to take a lamb and put its blood on the doorposts, promising, “when I see the blood, I will pass over you,” and then He said, “This day shall be to you for a memorial, and you shall keep it a feast to Yahweh.” Esther reproduces the four beats in a Persian court: a decree of death, a mediator who risks her life, a decisive reversal on the appointed day, and a memorial feast that “should be remembered and kept throughout every generation.” It is the Exodus pattern replayed far from Egypt and far from home.",
+        verses: ["Exodus 12:7", "Exodus 12:13", "Exodus 12:14", "Esther 3:13", "Esther 4:16", "Esther 9:1", "Esther 9:28"],
+      },
+      {
+        heading: "Haman's decree is a new Pharaoh's decree, and the grudge is older than Persia",
+        body:
+          "Pharaoh's first strategy was a decree: “You shall cast every son who is born into the river.” Haman's is broader and colder: “Letters were sent by couriers into all the king’s provinces, to destroy, to kill, and to cause to perish, all Jews, both young and old, little children and women, in one day.” And this is not a random politician's spite. Haman is “the Agagite,” heir to Amalek, the nation that ambushed Israel on the way out of Egypt, against whom God swore, “Yahweh will have war with Amalek from generation to generation.” The enemy is the same enemy, with the same aim, wearing new clothes.",
+        verses: ["Exodus 1:22", "Esther 3:13", "Esther 3:8-9", "Esther 3:1", "Exodus 17:16", "Deuteronomy 25:17"],
+      },
+      {
+        heading: "Esther is the mediator who steps into the gap",
+        body:
+          "Esther's decision is deliberately framed as self-sacrifice: “Then I will go in to the king, which is against the law; and if I perish, I perish.” That is Moses at Sinai, offering himself for a guilty people: “if not, please blot me out of your book.” Esther risked death to stand between a decree and her people. The greater Mediator did more than risk it, because Jesus was crowned with glory “that by the grace of God he should taste of death for everyone,” and He is the good shepherd who “lays down his life for the sheep.” Her mediation is a shadow; His is the substance.",
+        verses: ["Esther 4:16", "Exodus 32:32", "Hebrews 2:9", "John 10:11"],
+      },
+      {
+        heading: "The reversal is the gospel pattern, and the cross is where the decree was reversed",
+        body:
+          "On the day the enemies of the Jews expected to conquer them, “it was turned out the opposite happened.” The month “was turned to them from sorrow to gladness, and from mourning into a good day,” and the feast took its name from the lot itself: Purim, “from the word ‘Pur.’” A lot was cast against God's people, and it came out reversed. A lot was cast at the cross too, for Jesus' clothing. And there God performed the greater reversal: “wiping out the handwriting in ordinances which was against us; and he has taken it out of the way, nailing it to the cross.” The decree against us was not waved aside; it was executed on Christ.",
+        verses: ["Esther 9:1", "Esther 9:22", "Esther 9:26", "John 19:24", "Colossians 2:14"],
+      },
+      {
+        heading: "The greater exodus, and the song at the end",
+        body:
+          "The prophets promised an exodus bigger than Egypt's: “Don’t remember the former things... Behold, I will do a new thing. It springs out now.” Jeremiah said a day would come when people swear by the God “who brought up the children of Israel from the land of the north,” because He would gather them from everywhere. Jesus fulfilled it. On the mountain Moses and Elijah spoke with Him about “his departure, which he was about to accomplish at Jerusalem,” where the word is literally exodus. At the table He took the Passover and said, “This cup is the new covenant in my blood,” and Paul draws the conclusion: “Christ, our Passover, has been sacrificed in our place.” Esther's deliverance is a rehearsal for that, and the last book of the Bible shows the choir: the redeemed sing “the song of Moses, the servant of God, and the song of the Lamb.”",
+        verses: ["Isaiah 43:18-19", "Jeremiah 16:14-15", "Luke 9:31", "Luke 22:20", "1 Corinthians 5:7", "Revelation 15:3"],
+      },
+    ],
+    keyVerses: ["Esther 3:13", "Esther 4:16", "Esther 9:22", "1 Corinthians 5:7", "Luke 22:20"],
+    raises: ["what-is-the-gospel", "why-did-jesus-have-to-die", "what-is-the-lords-supper"],
+    followsFrom: ["how-esther-points-to-christ", "what-is-the-feast-of-purim", "what-does-the-exodus-show-us-about-god"],
+    related: ["what-does-the-exodus-show-us-about-god", "who-is-jesus", "why-do-i-need-the-church"],
+    planned: [],
+    order: 129,
   },
 
   {
@@ -19512,6 +20265,6 @@ export const questions: Question[] = [
     followsFrom: ["what-is-the-church", "what-is-the-gospel", "how-can-i-be-saved"],
     related: ["what-is-the-church", "why-do-i-need-the-church", "what-does-it-mean-to-be-born-again", "the-churchs-mission-in-the-world"],
     planned: [],
-    order: 44,
+    order: 82,
   }
 ];

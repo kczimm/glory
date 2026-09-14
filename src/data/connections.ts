@@ -2423,6 +2423,384 @@ export const connections: Record<string, Connection[]> = {
       "A graft lives by the vine or not at all: apart from me you can do nothing.",
     ),
   ],
+
+  // ------------------------------------------------------------------
+  // The story of Scripture: Eden, the throne, exile, and Esther
+  // ------------------------------------------------------------------
+  "Genesis 2:17": [
+    c(
+      "Genesis 3:4-5",
+      "contrast",
+      "God said the day they ate they would surely die; the serpent answered that they would not. The first doctrine ever denied was God's own warning.",
+    ),
+    c(
+      "Romans 5:12",
+      "theme",
+      "Paul traces death's entrance into the world back to this one command and this one choice.",
+    ),
+    c(
+      "James 1:13-14",
+      "contrast",
+      "God tempts no one. The boundary tested trust; the desire that followed was the couple's own.",
+    ),
+  ],
+  "Genesis 3:15": [
+    c(
+      "Galatians 4:4",
+      "fulfilled",
+      "In the fullness of time God sent His Son, born of a woman: the offspring promised in the garden.",
+    ),
+    c(
+      "Romans 16:20",
+      "fulfilled",
+      "The God of peace will crush Satan under the feet of His people, the same promise widened to the church.",
+    ),
+    c(
+      "Hebrews 2:14",
+      "fulfilled",
+      "Through His own death He destroyed the one who had the power of death.",
+    ),
+    c(
+      "Revelation 12:9",
+      "fulfilled",
+      "The ancient serpent is finally thrown down, the heel-bruise avenged.",
+    ),
+  ],
+  "2 Samuel 7:16": [
+    c(
+      "Luke 1:32-33",
+      "fulfilled",
+      "The angel speaks this promise over Mary's son almost word for word: the throne of His father David, a kingdom without end.",
+    ),
+    c(
+      "Psalms 89:34",
+      "promise",
+      "God swore not to break His covenant or alter what His lips had uttered, which is why the fallen crown could not be the last word.",
+    ),
+    c(
+      "Matthew 1:1",
+      "pattern",
+      "Matthew opens his Gospel by naming Jesus the son of David, the heir of this throne.",
+    ),
+  ],
+  "Jeremiah 31:33": [
+    c(
+      "Hebrews 8:10",
+      "quotes",
+      "Hebrews quotes this verse at length to prove the new covenant has already come in Christ.",
+    ),
+    c(
+      "Ezekiel 36:26-27",
+      "parallel",
+      "The companion promise: a new heart, a new spirit, and God's own Spirit placed within.",
+    ),
+    c(
+      "2 Corinthians 3:3",
+      "fulfilled",
+      "Believers are a letter written not on stone tablets but on hearts, by the Spirit of the living God.",
+    ),
+  ],
+  "Habakkuk 2:3": [
+    c(
+      "Hebrews 10:37",
+      "quotes",
+      "Hebrews quotes this verse to urge endurance: the coming One will come and will not delay.",
+    ),
+    c(
+      "Galatians 4:4",
+      "fulfilled",
+      "The appointed time arrived when God sent His Son, born under the law.",
+    ),
+    c(
+      "2 Peter 3:9",
+      "theme",
+      "The Lord is not slow concerning His promise; His delay is patience, not forgetfulness.",
+    ),
+  ],
+  "Psalms 27:14": [
+    c(
+      "Isaiah 40:31",
+      "parallel",
+      "Waiting on Yahweh is the very posture that renews strength, so that the weary run and do not faint.",
+    ),
+    c(
+      "Lamentations 3:25",
+      "parallel",
+      "Yahweh is good to those who wait for Him, to the soul that seeks Him.",
+    ),
+    c(
+      "Hebrews 10:36",
+      "theme",
+      "Endurance is what carries a believer from doing God's will to receiving the promise.",
+    ),
+  ],
+  "Job 28:28": [
+    c(
+      "Proverbs 1:7",
+      "parallel",
+      "Proverbs states the same thesis from the other direction: the fear of Yahweh is where knowledge begins.",
+    ),
+    c(
+      "Ecclesiastes 12:13",
+      "parallel",
+      "Ecclesiastes lands exactly where Job lands: fear God and keep His commandments.",
+    ),
+    c(
+      "1 Corinthians 1:24",
+      "fulfilled",
+      "Christ is the wisdom of God, the fear of the Lord made visible in a person.",
+    ),
+  ],
+  "Proverbs 1:7": [
+    c(
+      "Job 28:28",
+      "parallel",
+      "Job's poem reaches the same conclusion after searching the earth, the deep, and the grave.",
+    ),
+    c(
+      "James 1:5",
+      "theme",
+      "If anyone lacks wisdom, the instruction is to ask God, who gives liberally and without reproach.",
+    ),
+    c(
+      "1 Kings 3:9",
+      "pattern",
+      "Solomon asked for a listening heart rather than riches, and God gave him both.",
+    ),
+  ],
+  "Ecclesiastes 1:2": [
+    c(
+      "Romans 8:20",
+      "theme",
+      "Creation was subjected to futility, yet in hope, which is why the vapor is not the whole story.",
+    ),
+    c(
+      "Ecclesiastes 12:13",
+      "theme",
+      "The book answers its own complaint: fear God and keep His commandments.",
+    ),
+  ],
+  "Daniel 1:8": [
+    c(
+      "Daniel 6:10",
+      "parallel",
+      "The same resolve decades later: he prayed as he had always done, even with the decree signed.",
+    ),
+    c(
+      "Romans 12:2",
+      "theme",
+      "Refusing the world's shaping while serving faithfully inside it is the exile's double calling.",
+    ),
+    c(
+      "1 Corinthians 10:31",
+      "theme",
+      "Even eating and drinking are to be done for the glory of God, which is why the king's table was not a small matter.",
+    ),
+  ],
+  "Jeremiah 29:7": [
+    c(
+      "1 Peter 2:11-12",
+      "theme",
+      "Peter's exile ethic matches Jeremiah's: abstain from fleshly desires, and do good among the nations.",
+    ),
+    c(
+      "Matthew 5:14",
+      "theme",
+      "A city set on a hill cannot be hidden, which is what God intends a scattered people to be.",
+    ),
+    c(
+      "1 Timothy 2:1-2",
+      "theme",
+      "The church prays for kings and all in authority, seeking the same peace Jeremiah commanded the exiles to seek.",
+    ),
+  ],
+  "1 Peter 2:11": [
+    c(
+      "Philippians 3:20",
+      "parallel",
+      "Citizenship in heaven is why the pilgrim posture makes sense.",
+    ),
+    c(
+      "Hebrews 11:13",
+      "parallel",
+      "The faithful of the old covenant confessed the same thing: strangers and pilgrims on the earth.",
+    ),
+    c(
+      "John 17:15",
+      "theme",
+      "Kept in the world rather than taken out of it, which is the tension every exile lives in.",
+    ),
+  ],
+  "1 Peter 3:15": [
+    c(
+      "Matthew 5:16",
+      "theme",
+      "Let your light shine so that others see your good works and give glory to your Father.",
+    ),
+    c(
+      "Colossians 4:6",
+      "theme",
+      "Speech seasoned with salt, so that you know how to answer each person.",
+    ),
+    c(
+      "1 Peter 2:12",
+      "theme",
+      "Good conduct among the nations turns slander into glory to God on the day of visitation.",
+    ),
+  ],
+  "Colossians 2:14": [
+    c(
+      "Ephesians 2:15-16",
+      "parallel",
+      "The law of commandments abolished in His flesh, making peace between Jew and Gentile.",
+    ),
+    c(
+      "2 Corinthians 5:21",
+      "theme",
+      "God made the sinless One to be sin for us, which is how the record against us was cancelled.",
+    ),
+    c(
+      "Esther 9:1",
+      "pattern",
+      "The decree against God's people reversed on the appointed day.",
+    ),
+  ],
+  "Luke 22:20": [
+    c(
+      "Jeremiah 31:31",
+      "fulfilled",
+      "The new covenant Jeremiah promised, here sealed in blood rather than written on stone.",
+    ),
+    c(
+      "Exodus 24:8",
+      "pattern",
+      "Moses sprinkled the blood of the covenant over the people at Sinai; now the covenant is ratified in Christ's own blood.",
+    ),
+    c(
+      "Hebrews 9:15",
+      "theme",
+      "Mediator of a new covenant, so that a death has occurred for the redemption of transgressions.",
+    ),
+  ],
+  "1 Corinthians 5:7": [
+    c(
+      "Exodus 12:13",
+      "fulfilled",
+      "The Passover blood that turned away judgment finds its substance in Christ.",
+    ),
+    c(
+      "John 1:29",
+      "fulfilled",
+      "The Lamb of God who takes away the sin of the world.",
+    ),
+    c(
+      "1 Peter 1:19",
+      "theme",
+      "Redeemed not with perishable things like silver or gold, but with the precious blood of a faultless lamb.",
+    ),
+  ],
+  "Esther 3:13": [
+    c(
+      "Exodus 1:22",
+      "parallel",
+      "Pharaoh's decree to cast the sons into the river; the same enemy, a new empire, an older grudge.",
+    ),
+    c(
+      "Exodus 17:16",
+      "theme",
+      "Yahweh swore war with Amalek from generation to generation, and Haman is the Agagite.",
+    ),
+    c(
+      "Esther 9:1",
+      "contrast",
+      "The day appointed for slaughter becomes the day of reversal.",
+    ),
+  ],
+  "Esther 4:16": [
+    c(
+      "John 10:11",
+      "pattern",
+      "The good shepherd lays down his life for the sheep.",
+    ),
+    c(
+      "Hebrews 2:9",
+      "fulfilled",
+      "The greater Mediator did more than risk death; He tasted death for everyone.",
+    ),
+    c(
+      "Exodus 32:32",
+      "pattern",
+      "Moses offered to be blotted out of God's book for the sake of a guilty people.",
+    ),
+  ],
+  "Esther 9:22": [
+    c(
+      "Psalms 30:11",
+      "theme",
+      "Mourning turned into dancing, sackcloth exchanged for gladness: the same reversal sung in the psalms.",
+    ),
+    c(
+      "Revelation 19:9",
+      "theme",
+      "The marriage supper of the Lamb, the final feast of reversal to which every rescued people is invited.",
+    ),
+    c(
+      "Esther 3:13",
+      "contrast",
+      "The month appointed for destruction becomes a month of feasting and gifts to the needy.",
+    ),
+  ],
+  "Deuteronomy 18:15": [
+    c(
+      "Acts 3:22",
+      "fulfilled",
+      "Peter applies this promise directly to Jesus and warns that refusing Him is refusing the prophet God sent.",
+    ),
+    c(
+      "John 1:45",
+      "fulfilled",
+      "Philip announces the fulfillment: the one Moses and the prophets wrote about has been found.",
+    ),
+    c(
+      "Hebrews 1:1-2",
+      "fulfilled",
+      "God, who spoke to the fathers by the prophets, has now spoken by His Son.",
+    ),
+  ],
+  "Genesis 22:18": [
+    c(
+      "Galatians 3:16",
+      "quotes",
+      "Paul notices that the promise speaks of a singular seed, and says that seed is Christ.",
+    ),
+    c(
+      "Acts 3:25",
+      "quotes",
+      "Peter tells the crowd they are heirs of the covenant God made with Abraham.",
+    ),
+    c(
+      "Revelation 7:9",
+      "fulfilled",
+      "A multitude from every nation, the blessing finally reaching all the families of the earth.",
+    ),
+  ],
+  "Genesis 12:3": [
+    c(
+      "Galatians 3:8",
+      "quotes",
+      "Paul says God announced the gospel in advance to Abraham in this very promise.",
+    ),
+    c(
+      "Acts 3:25",
+      "quotes",
+      "Peter names the blessing of Abraham as the covenant now fulfilled in the risen Jesus.",
+    ),
+    c(
+      "Psalms 72:17",
+      "theme",
+      "Men shall be blessed by him and all nations call him blessed: the same promise sung in the psalms.",
+    ),
+  ],
 };
 
 /** Connections leaving from a verse reference. */
