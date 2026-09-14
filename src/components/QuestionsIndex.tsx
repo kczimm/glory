@@ -46,7 +46,7 @@ export default function QuestionsIndex({
           question.keyVerses.join(" "),
         ]
           .join(" ")
-          .toLowerCase()
+          .toLowerCase(),
       );
     }
     return m;
@@ -57,14 +57,17 @@ export default function QuestionsIndex({
     const filtered = teasers.filter(
       (question) =>
         (cat === ALL || question.category === cat) &&
-        terms.every((t) => haystack.get(question.slug)!.includes(t))
+        terms.every((t) => haystack.get(question.slug)!.includes(t)),
     );
     return filtered.length ? filtered : [];
   }, [terms, cat, haystack, teasers]);
 
   const visibleCategories = useMemo(
-    () => categories.filter((c) => (cat === ALL || c.slug === cat) && (counts[c.slug] ?? 0) > 0),
-    [cat, counts, categories]
+    () =>
+      categories.filter(
+        (c) => (cat === ALL || c.slug === cat) && (counts[c.slug] ?? 0) > 0,
+      ),
+    [cat, counts, categories],
   );
 
   const total = teasers.length;
@@ -111,14 +114,23 @@ export default function QuestionsIndex({
           yours. Or don&apos;t look for anything at all:{" "}
           <RandomLink className="font-medium text-gold-deep underline-offset-4 transition-colors hover:text-ink hover:underline">
             take a surprise question
-          </RandomLink>.
+          </RandomLink>
+          .
         </p>
       </header>
 
       {/* Filter + category jump */}
       <div className="sticky top-14 z-30 -mx-5 border-b border-line/60 bg-parchment/95 px-5 py-3 backdrop-blur-sm sm:top-16">
         <div className="flex items-center gap-3 rounded-xl border border-line bg-surface px-4 py-2.5 focus-within:border-gold/60">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink-faint)" strokeWidth="2" className="shrink-0">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="var(--color-ink-faint)"
+            strokeWidth="2"
+            className="shrink-0"
+          >
             <circle cx="11" cy="11" r="7" />
             <path d="m20 20-3.5-3.5" strokeLinecap="round" />
           </svg>
@@ -173,7 +185,12 @@ export default function QuestionsIndex({
               Try a different word or two: “grace”, “pray”, “rapture”, “who is
               Jesus”. Or{" "}
               <button
-                onClick={() => { setQ(""); setCat(ALL); }} className="font-medium text-gold-deep hover:underline">
+                onClick={() => {
+                  setQ("");
+                  setCat(ALL);
+                }}
+                className="font-medium text-gold-deep hover:underline"
+              >
                 clear the filter
               </button>{" "}
               and browse.
@@ -227,9 +244,8 @@ export default function QuestionsIndex({
       )}
 
       <p className="mt-16 rounded-2xl border border-line bg-cream/50 p-6 text-center text-[13.5px] leading-relaxed text-ink-soft">
-        More questions are being gathered: the Bible always has more to show
-        us. If you have a question of your own, bring it: the Word has an
-        answer.
+        More questions are being gathered: the Bible always has more to show us.
+        If you have a question of your own, bring it: the Word has an answer.
       </p>
     </div>
   );

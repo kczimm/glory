@@ -4,7 +4,10 @@ import { snippet } from "@/lib/snippet";
 import { verseSlug } from "@/data/ref";
 import { categoryOf } from "@/data/server";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
-import { isValidTranslationCode, type TranslationCode } from "@/lib/translation-shared";
+import {
+  isValidTranslationCode,
+  type TranslationCode,
+} from "@/lib/translation-shared";
 
 const MAX_QUERY_LENGTH = 120;
 
@@ -27,20 +30,30 @@ export function GET(req: NextRequest) {
     );
   }
 
-  const q = (req.nextUrl.searchParams.get("q") ?? "").trim().slice(0, MAX_QUERY_LENGTH);
+  const q = (req.nextUrl.searchParams.get("q") ?? "")
+    .trim()
+    .slice(0, MAX_QUERY_LENGTH);
   const verseLimit = Math.min(
-    Math.max(Math.trunc(Number(req.nextUrl.searchParams.get("verses")) || 8), 1),
+    Math.max(
+      Math.trunc(Number(req.nextUrl.searchParams.get("verses")) || 8),
+      1,
+    ),
     40,
   );
   const qLimit = Math.min(
-    Math.max(Math.trunc(Number(req.nextUrl.searchParams.get("studies")) || 6), 1),
+    Math.max(
+      Math.trunc(Number(req.nextUrl.searchParams.get("studies")) || 6),
+      1,
+    ),
     40,
   );
-  
+
   // Get translation from query param, default to web
   const versionParam = req.nextUrl.searchParams.get("version") ?? "web";
-  const translation: TranslationCode = isValidTranslationCode(versionParam) ? versionParam : "web";
-  
+  const translation: TranslationCode = isValidTranslationCode(versionParam)
+    ? versionParam
+    : "web";
+
   if (!q) return NextResponse.json({ verses: [], questions: [], translation });
 
   const verses = searchScripture(q, verseLimit, translation).map((v) => {
