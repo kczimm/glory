@@ -123,6 +123,14 @@ This is enforced mechanically:
 - When writing new content, do NOT quote from memory: paste from the vendored
   WEB, then adjust capitalization at the edges if needed (normalization is
   case-insensitive). If you must omit words mid-quote, use an ellipsis (…).
+- The check only sees text **inside quotation marks**. Scripture rendered in
+  `body`/`summary` prose with no quote marks is unverified, and it has drifted
+  in the past: memory-written renderings silently borrowed wording from other
+  translations ("in remembrance of me" for the WEB's "in memory of me", "holy
+  conduct" for "holy living", "this world" for "this age", "into heaven" for
+  "into the sky"). **Wrap any verse you render in quotation marks** so the
+  verifier enforces it. `lookFor` and `title` on a passage stay free paraphrase:
+  they are reading guidance, not quotation.
 - A few getbible.net upstream verses contain glued words ("Hadeswill",
   "windblows"); quotes of those verses are allowlisted rather than altered.
 
@@ -147,6 +155,7 @@ on the home page).
 case-insensitive phrase matching (lazy-built lowercase index over `scripture.ts`,
 cached). `searchScripture` / `searchQuestions` / `searchAll` / `snippet`
 (highlight extraction).
+
 - Home `SearchBox` shows grouped live results (limit ~5 verses / 4 questions) with a
   link to `/search?q=`. The `/search` page is a client component (Suspense +
   `useSearchParams`) doing it client-side, initialized from `?q=`.
@@ -169,10 +178,11 @@ cached). `searchScripture` / `searchQuestions` / `searchAll` / `snippet`
   or a sentence restructure. This is an absolute rule, with no exceptions: the
   previous `— John 1:1` citation pattern under verse cards was swept out too, so
   verse references now render with no dash (see `VerseCard`).
-- Run `grep -rn "—" src --include="*.ts" --include="*.tsx" | grep -v scripture.ts`
+- Run `grep -rn "—" src --include="*.ts" --include="*.tsx" | grep -vE 'scripture(-kjv)?\.ts'`
   before finishing to confirm the copy is clean.
-- Em dashes inside `src/data/scripture.ts` are the WEB's own punctuation
-  (generated file, quoted text, not our copy). Leave them alone.
+- Em dashes inside `src/data/scripture.ts` and `src/data/scripture-kjv.ts` are
+  the translations' own punctuation (generated files, quoted text, not our
+  copy). Leave them alone.
 
 ## Before you finish
 

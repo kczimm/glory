@@ -2570,7 +2570,7 @@ export const questions: Question[] = [
       },
       {
         heading: "It is the response of faith, not the work that saves",
-        body: "Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit. We are saved by grace through faith, not by works; baptism is the believer's obedient confession of that grace.",
+        body: "'Repent, and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of sins, and you will receive the gift of the Holy Spirit.' We are saved by grace through faith, not by works; baptism is the believer's obedient confession of that grace.",
         verses: ["Acts 2:38", "Ephesians 2:8-9", "1 Peter 3:21"],
       },
       {
@@ -2592,7 +2592,7 @@ export const questions: Question[] = [
     question: "What is the Lord's Supper?",
     category: "church",
     summary:
-      "The Lord's Supper is the meal Jesus gave His church in remembrance of Him: the bread and the cup proclaim His death until He comes, and believers share it in faith, examining themselves, receiving Christ, and renewing communion with Him and with one another.",
+      "The Lord's Supper is the meal Jesus gave His church in memory of Him: the bread and the cup proclaim His death until He comes, and believers share it in faith, examining themselves, receiving Christ, and renewing communion with Him and with one another.",
     passages: [
       { book: "Luke", chapter: 22, title: "Instituted by Jesus", lookFor: "This is my body, given for you; this cup is the new covenant in my blood.", focus: "14-20" },
       { book: "1 Corinthians", chapter: 11, title: "Proclaim the Lord's death", lookFor: "Examine yourself, and eat and drink in remembrance of him.", focus: "23-34" },
@@ -2601,27 +2601,27 @@ export const questions: Question[] = [
     points: [
       {
         heading: "Jesus instituted it at the Last Supper",
-        body: "This is my body, which is given for you. Do this in remembrance of me. And he took the cup, saying, this cup is the new covenant in my blood, which is poured out for you. It is His gift to the church, given the night He was betrayed.",
+        body: "He took bread, and when he had given thanks, he broke it, and gave to them, saying, 'This is my body which is given for you. Do this in memory of me.' Likewise, he took the cup after supper, saying, 'This cup is the new covenant in my blood, which is poured out for you.' It is His gift to the church, given the night He was betrayed.",
         verses: ["Luke 22:19-20", "Matthew 26:26-28"],
       },
       {
         heading: "It proclaims the gospel",
-        body: "As often as you eat this bread and drink this cup, you proclaim the Lord's death until he comes. It is a sermon in bread and wine, declaring the cross to ourselves, to the church, and to the watching world.",
+        body: "'As often as you eat this bread and drink this cup, you proclaim the Lord's death until he comes.' It is a sermon in bread and wine, declaring the cross to ourselves, to the church, and to the watching world.",
         verses: ["1 Corinthians 11:26", "1 Corinthians 11:23-25"],
       },
       {
         heading: "It requires self-examination",
-        body: "Whoever eats the bread or drinks the cup of the Lord in an unworthy manner will be guilty of the body and blood of the Lord. Let a man examine himself, and so let him eat and drink. We come repentant, not perfect, but honest.",
+        body: "'Therefore whoever eats this bread or drinks the Lord's cup in a way unworthy of the Lord will be guilty of the body and the blood of the Lord. But let a man examine himself, and so let him eat of the bread, and drink of the cup.' We come repentant, not perfect, but honest.",
         verses: ["1 Corinthians 11:27-29", "1 Corinthians 11:31"],
       },
       {
         heading: "It is communion with Christ and His people",
-        body: "The cup of blessing which we bless, is it not a sharing of the blood of Christ? We, who are many, are one bread, one body, for we all partake of the one bread. It is a family meal around the one Table.",
+        body: "'The cup of blessing which we bless, isn't it a sharing of the blood of Christ? The bread which we break, isn't it a sharing of the body of Christ? Because there is one loaf of bread, we, who are many, are one body; for we all partake of the one loaf of bread.' It is a family meal around the one Table.",
         verses: ["1 Corinthians 10:16-17", "Acts 2:42"],
       },
     ],
     keyVerses: ["1 Corinthians 11:23-26", "Luke 22:19-20", "1 Corinthians 11:28"],
-    raises: ["how-often-the-lords-supper", "who-may-take-the-lords-supper"],
+    raises: ["how-often-the-lords-supper", "who-may-take-the-lords-supper", "what-does-it-mean-to-eat-his-flesh"],
     followsFrom: ["why-do-i-need-the-church"],
     related: ["why-do-i-need-the-church", "what-is-the-gospel"],
     planned: [],
@@ -2688,22 +2688,22 @@ export const questions: Question[] = [
     points: [
       {
         heading: "The angels promised it at the ascension",
-        body: "This Jesus, who was taken up from you into heaven, will come in like manner as you saw him going into heaven: visibly, bodily, personally. The ascension was not the end of His appearing; it was the guarantee of His return.",
+        body: "'This Jesus, who was received up from you into the sky will come back in the same way as you saw him going into the sky.' He will come visibly, bodily, personally. The ascension was not the end of His appearing; it was the guarantee of His return.",
         verses: ["Acts 1:9-11", "Mark 13:26"],
       },
       {
         heading: "The Lord Himself will descend",
-        body: "The Lord himself will descend from heaven with a shout, with the voice of the archangel and with God's trumpet. The dead in Christ will rise first, then we who are alive will be caught up together with them in the clouds, to meet the Lord in the air.",
+        body: "'The Lord himself will descend from heaven with a shout, with the voice of the archangel, and with God's trumpet. The dead in Christ will rise first, then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air.' So we will be with the Lord forever.",
         verses: ["1 Thessalonians 4:16-17", "1 Corinthians 15:51-52"],
       },
       {
         heading: "Every eye will see Him",
-        body: "Behold, he is coming with the clouds, and every eye will see him, including those who pierced him. They will see the Son of Man coming on the clouds of heaven with power and great glory. His return is public, not private.",
+        body: "'Behold, he is coming with the clouds, and every eye will see him, including those who pierced him.' And 'they will see the Son of Man coming on the clouds of the sky with power and great glory.' His return is public, not private.",
         verses: ["Revelation 1:7", "Matthew 24:30", "Titus 2:13"],
       },
       {
         heading: "So we wait, watch, and work",
-        body: "Since all these things will be dissolved, what kind of people ought you to be in holy conduct and godliness, waiting for the coming of the day of God? Stay awake, for you do not know on what day your Lord is coming.",
+        body: "'Since all these things will be destroyed like this, what kind of people ought you to be in holy living and godliness, looking for and earnestly desiring the coming of the day of God?' And then the warning: 'Watch therefore, for you don't know in what hour your Lord comes.'",
         verses: ["2 Peter 3:11-13", "Matthew 24:42", "Revelation 22:20"],
       },
     ],
@@ -3030,7 +3030,7 @@ export const questions: Question[] = [
     points: [
       {
         heading: "The battle is real, but not against people",
-        body: "Our wrestling is not against flesh and blood, but against the principalities, the powers, and the rulers of the darkness of this world. Though we walk in the flesh, we do not wage war according to the flesh. Your enemy is not your neighbor; it is the enemy of your soul.",
+        body: "'Our wrestling is not against flesh and blood, but against the principalities, against the powers, against the world's rulers of the darkness of this age, and against the spiritual forces of wickedness in the heavenly places.' Though we walk in the flesh, we don't wage war according to the flesh. Your enemy is not your neighbor; it is the enemy of your soul.",
         verses: ["Ephesians 6:12", "2 Corinthians 10:3-4"],
       },
       {
@@ -12255,8 +12255,8 @@ export const questions: Question[] = [
       {
         heading: "The historic readings of the presence",
         body:
-          "The church has described Christ's presence in four main ways. The Catholic view holds that the bread and wine become His body and blood (transubstantiation). Luther held Christ is truly present 'in, with, and under' the elements (consubstantiation). The Reformed view holds a spiritual presence received by faith, not in the physical elements. And the memorialist view sees the Supper chiefly as a remembrance of a Christ who is present in His church by His Spirit. Each has honored the text and sought to guard the reality of Christ's presence and the once-for-allness of His sacrifice.",
-        verses: ["Luke 22:19-20", "Matthew 26:26-28", "1 Corinthians 11:24", "Luke 22:19"],
+          "The church has described Christ's presence in four main ways. The Catholic view holds that the bread and wine become His body and blood (transubstantiation). Luther held Christ is truly present 'in, with, and under' the elements (consubstantiation). The Reformed view holds a spiritual presence received by faith, not in the physical elements. And the memorialist view sees the Supper chiefly as a remembrance of a Christ who is present in His church by His Spirit. And the text the views divide over most sharply is not in the upper room at all: in the synagogue at Capernaum, long before the Supper, Jesus said, 'unless you eat the flesh of the Son of Man and drink his blood, you don't have life in yourselves,' and 'my flesh is food indeed, and my blood is drink indeed.' Catholic and Lutheran readers hear the Supper in those words; the Reformed and memorialist readings take them as feeding on Christ by faith, which is how He explains the eating Himself: coming to Him is the eating, and believing in Him is the drinking. Each reading has honored the text and sought to guard the reality of Christ's presence and the once-for-allness of His sacrifice.",
+        verses: ["Luke 22:19-20", "Matthew 26:26-28", "1 Corinthians 11:24", "Luke 22:19", "John 6:53-58"],
       },
       {
         heading: "What is beyond dispute: it is a communion with Christ",
@@ -12905,6 +12905,56 @@ export const questions: Question[] = [
     followsFrom: ["what-does-it-mean-that-god-is-sovereign", "do-my-choices-matter", "can-i-seek-god-on-my-own"],
     related: ["what-does-it-mean-that-god-is-sovereign", "is-god-in-control", "do-my-choices-matter", "how-can-i-be-saved"],
     planned: [],
+    order: 57,
+  },
+
+  {
+    slug: "what-does-it-mean-to-eat-his-flesh",
+    question: "What does it mean to eat His flesh and drink His blood?",
+    category: "jesus-christ",
+    summary:
+      "Jesus said the bread He gives is His own flesh, and that unless we eat His flesh and drink His blood we have no life in ourselves. He was not describing cannibalism, and the Supper in the upper room was still to come. He tells us Himself that the eating is coming to Him and the drinking is believing in Him, so that whoever feeds on Him by faith lives in Him and He in him. The bread of life is a Person, and faith is the mouth that receives Him.",
+    passages: [
+      { book: "John", chapter: 6, title: "The bread of life", lookFor: "The loaves, the hard saying, and the One who is Himself the bread.", focus: "26-58" },
+      { book: "Exodus", chapter: 16, title: "The manna in the wilderness", lookFor: "Bread rained from the sky each morning, enough for one day at a time.", focus: "1-21" },
+    ],
+    points: [
+      {
+        heading: "The bread that perishes and the bread that endures",
+        body: "The crowd crossed the sea looking for Jesus because they had eaten their fill the day before, and He named the real hunger: 'Most certainly I tell you, you seek me, not because you saw signs, but because you ate of the loaves, and were filled.' Then He turned them from the gift to the Giver: 'Don't work for the food which perishes, but for the food which remains to eternal life.' They asked what work God required, and the answer ruled out earning anything at all: 'This is the work of God, that you believe in him whom he has sent.'",
+        verses: ["John 6:26", "John 6:27", "John 6:28", "John 6:29"],
+      },
+      {
+        heading: "The manna was a picture, and not the reality",
+        body: "Israel ate bread rained from the sky in the wilderness for forty years, and they still died. Jesus took that memory and turned it: 'Our fathers ate the manna in the wilderness,' the crowd said, and He answered, 'Most certainly, I tell you, it wasn't Moses who gave you the bread out of heaven, but my Father gives you the true bread out of heaven.' The manna fed a nation one day at a time; the bread He gives is a Person who came down, and 'the bread which I will give for the life of the world is my flesh.'",
+        verses: ["John 6:31", "John 6:32", "John 6:35", "John 6:49", "John 6:51", "Exodus 16:31"],
+      },
+      {
+        heading: "The hard saying: how can this man give us his flesh to eat?",
+        body: "This is where the crowd balked, and their objection is the very question this study answers: 'How can this man give us his flesh to eat?' Jesus did not soften it. 'Most certainly I tell you, unless you eat the flesh of the Son of Man and drink his blood, you don't have life in yourselves,' He said, and then He made the promise three ways: the one who eats and drinks 'has eternal life', 'lives in me, and I in him', and will be raised 'at the last day'. Whatever else this means, it is not a figure of speech for something optional. It is union with Christ, or nothing.",
+        verses: ["John 6:52", "John 6:53", "John 6:54", "John 6:55", "John 6:56"],
+      },
+      {
+        heading: "He tells us what He meant: coming, believing, and the Spirit",
+        body: "Jesus interpreted His own words, and He did it before the crowd ever objected. When He said 'I am the bread of life', He defined the eating in the same breath: 'He who comes to me will not be hungry, and he who believes in me will never be thirsty.' Later He said it plainly: 'he who believes in me has eternal life.' So the coming is the eating and the believing is the drinking, and no one does it by their own strength: 'No one can come to me unless the Father who sent me draws him.' Then, when the saying had scattered His followers, He named why it works at all: 'It is the spirit who gives life. The flesh profits nothing.' His words are 'spirit, and are life' because the Spirit makes them effective. The eating is real, and it is spiritual.",
+        verses: ["John 6:35", "John 6:47", "John 6:44", "John 6:63", "John 6:40"],
+      },
+      {
+        heading: "Many turned back, and Peter stayed for the right reason",
+        body: "John records what the hard saying cost: 'At this, many of his disciples went back, and walked no more with him.' Jesus turned to the twelve and asked whether they wanted to leave as well, and Peter's answer is this whole study in one sentence: 'Lord, to whom would we go? You have the words of eternal life. We have come to believe and know that you are the Christ, the Son of the living God.' The bread of life is not a doctrine to master but a Person to stay with, and the ones who stay are the ones who keep feeding on Him by faith.",
+        verses: ["John 6:66", "John 6:67", "John 6:68", "John 6:69"],
+      },
+      {
+        heading: "Where the Supper fits",
+        body: "The Supper in the upper room came later, and Jesus gave His church a meal He did not give that day in Capernaum. He gave it as the sign of exactly this reality: 'The cup of blessing which we bless, isn't it a sharing of the blood of Christ? The bread which we break, isn't it a sharing of the body of Christ?' The bread and the cup are given to those who have come to Him and believed, and they proclaim His death until He comes. How Christ is present in them is a question the church has answered differently; what John 6 settles is where the life is.",
+        verses: ["1 Corinthians 10:16", "1 Corinthians 11:26", "John 6:53", "John 6:57"],
+      },
+    ],
+    keyVerses: ["John 6:35", "John 6:51", "John 6:53-54", "John 6:63", "John 6:68-69"],
+    raises: ["what-is-the-lords-supper", "how-is-christ-present-in-the-lords-supper", "what-is-faith", "can-anyone-resist-gods-grace"],
+    followsFrom: ["what-is-the-lords-supper"],
+    related: ["what-is-the-lords-supper", "how-is-christ-present-in-the-lords-supper", "what-is-faith", "what-does-it-mean-to-be-born-again"],
+    planned: ["What does it mean to abide in Christ?"],
     order: 57,
   },
 
