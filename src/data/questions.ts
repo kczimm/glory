@@ -2033,7 +2033,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 8:28", "Genesis 50:20", "2 Corinthians 1:3-4", "Revelation 21:4"],
-    raises: ["is-god-in-control", "where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "how-do-i-help-a-friend-who-is-suffering"],
+    raises: ["is-god-in-control", "does-god-control-evil", "where-is-god-in-my-pain", "what-does-it-look-like-to-suffer-well", "how-do-i-help-a-friend-who-is-suffering"],
     followsFrom: ["what-does-it-mean-that-the-world-hates-jesus"],
     related: ["who-is-the-father", "where-is-jesus-now", "why-does-god-seem-silent"],
     planned: [],
@@ -11088,12 +11088,102 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Daniel 4:35", "Ephesians 1:11", "Isaiah 40:15", "Romans 8:28", "Acts 2:23"],
-    raises: ["do-my-choices-matter", "is-god-in-control", "how-do-i-know-gods-will"],
+    raises: ["do-my-choices-matter", "is-god-in-control", "does-god-control-evil", "how-do-i-know-gods-will"],
     followsFrom: ["do-my-choices-matter", "is-god-in-control"],
     related: ["do-my-choices-matter", "is-god-in-control", "how-do-i-know-gods-will", "does-god-change-his-mind"],
-    planned: ["Does God control evil as well as good?"],
+    planned: [],
     order: 38,
   },
+
+  {
+    slug: "does-god-control-evil",
+    question: "Does God control evil as well as good?",
+    category: "suffering-will",
+    summary:
+      "Scripture answers yes, and it never makes God the author of sin. God rules over evil the way a king rules over rebels: nothing escapes His decree or His limits, and yet the guilt stays wholly with the one who does it. The cross is the proof. The worst deed in history was also the most certainly planned, and there God meant for good what men meant for evil.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 50,
+        title: "You meant evil, God meant it for good",
+        lookFor: "Joseph speaks to the brothers who sold him, and names two intentions behind one deed.",
+        focus: "15-21",
+      },
+      {
+        book: "Acts",
+        chapter: 2,
+        title: "Delivered up by the determined counsel of God",
+        lookFor: "Peter holds God's plan and human guilt together in a single sentence about the cross.",
+        focus: "22-36",
+      },
+      {
+        book: "Isaiah",
+        chapter: 45,
+        title: "I form the light and create darkness",
+        lookFor: "God claims the whole span of what happens in the world: light and dark, peace and calamity.",
+        focus: "5-13",
+      },
+      {
+        book: "Job",
+        chapter: 1,
+        title: "The leash on the enemy",
+        lookFor: "Satan can do only what God permits, and not one step past the line God draws.",
+        focus: "6-22",
+      },
+      {
+        book: "James",
+        chapter: 1,
+        title: "God tempts no one",
+        lookFor: "The guardrail, stated flatly, and then where temptation actually comes from.",
+        focus: "12-18",
+      },
+    ],
+    points: [
+      {
+        heading: "One deed, two intentions",
+        body:
+          "Joseph names both causes in a single sentence: 'you meant evil against me, but God meant it for good, to bring to pass, as it is this day, to save many people alive.' The brothers were not puppets; their envy was their own, and Joseph still calls it evil. Nor was the outcome an accident God salvaged afterward, because God meant it, and the good He meant was the saving of many lives. Years before, Joseph had said it plainly: 'So now it wasn't you who sent me here, but God.' Scripture does not choose between the brothers' guilt and God's purpose. It states both, about the same deed, in one breath.",
+        verses: ["Genesis 50:20", "Genesis 45:5-8", "Genesis 37:11"],
+      },
+      {
+        heading: "The cross: the worst deed, most certainly planned",
+        body:
+          "This is where the question stops being abstract. Peter tells the crowd in Jerusalem that Jesus was 'delivered up by the determined counsel and foreknowledge of God,' and in the same sentence says, 'you have taken by the hand of lawless men, crucified and killed.' The church's prayer later said the same: Herod, Pilate, the Gentiles, and Israel 'were gathered together to do whatever your hand and your council foreordained to happen.' Isaiah goes further back and calls it God's own pleasure: 'Yet it pleased Yahweh to bruise him.' Jesus holds both truths at once. His betrayal 'has been determined, but woe to that man through whom he is betrayed!' A plan that certain, and a guilt that real. And He tells Pilate, 'You would have no power at all against me, unless it were given to you from above.'",
+        verses: ["Acts 2:23", "Acts 4:27-28", "Isaiah 53:10", "Luke 22:22", "John 19:11"],
+      },
+      {
+        heading: "God claims the darkness as well as the light",
+        body:
+          "Scripture is not embarrassed to say that disaster is under God's hand. 'I form the light, and create darkness. I make peace, and create calamity. I am Yahweh, who does all these things.' Amos asks a question whose answer is built into it: 'Does evil happen to a city, and Yahweh hasn't done it?' Lamentations asks, 'Doesn't evil and good come out of the mouth of the Most High?' And God says of Himself, 'I kill and I make alive. I wound and I heal.' These texts speak of calamity and death, the ruin that comes on a city or a life, and they tell us that nothing here simply happens. It all lies inside the counsel of the One who works all things after the counsel of His will.",
+        verses: ["Isaiah 45:7", "Amos 3:6", "Lamentations 3:37-38", "Deuteronomy 32:39", "Ephesians 1:11"],
+      },
+      {
+        heading: "And yet God is not the author of sin",
+        body:
+          "Here is the guardrail that keeps all of this from becoming blasphemy. James allows no one to blame God for temptation: 'Let no man say when he is tempted, I am tempted by God, for God can't be tempted by evil, and he himself tempts no one.' He traces temptation to its real source: 'each one is tempted, when he is drawn away by his own lust, and enticed.' John states it flatly: 'God is light, and in him is no darkness at all.' Habakkuk appeals to God's own purity: 'You who have purer eyes than to see evil.' And God says of the worst idolatry in Judah, 'which I didn't command them, neither did it come into my mind.' So Scripture never says that God sins, approves of sin, or delights in it. He decrees that it will happen, sets its limits, and turns it to His purpose, while the doing of it remains the creature's own and the creature is answerable for it.",
+        verses: ["James 1:13-14", "1 John 1:5", "Habakkuk 1:13", "Jeremiah 32:35"],
+      },
+      {
+        heading: "How Scripture holds the two together",
+        body:
+          "Scripture gives us a pattern rather than a formula. God permits, and He limits: Satan may touch Job's possessions, then Job's body, but never one step past the line God draws, 'only spare his life.' God moves even where a creature acts: one account says 'Satan stood up against Israel, and moved David to number Israel,' and another says of the same event that 'he moved David against them,' naming God. God sends the deception that a rebellious heart has already chosen: 'I will go out and will be a lying spirit in the mouth of all his prophets,' and in the next verse, 'Yahweh has put a lying spirit in the mouth of all these your prophets.' And when people insist on refusing Him, His judgment is to give them what they wanted: 'God gave them up to a reprobate mind,' and 'God sends them a working of error, that they should believe a lie.' Permission, limits, direction, judgment: through all of it the sin stays the sinner's own, and God stays holy.",
+        verses: ["Job 1:12", "Job 2:6", "1 Chronicles 21:1", "2 Samuel 24:1", "1 Kings 22:22-23", "Romans 1:28", "2 Thessalonians 2:11"],
+      },
+      {
+        heading: "What this does not mean, and why it is comfort",
+        body:
+          "It does not mean evil is not evil: 'Woe to those who call evil good, and good evil.' It does not excuse the guilty: Peter says God planned the cross, and then tells the same crowd, 'you have taken by the hand of lawless men.' It does not promise we will be shown the reason now: 'the secret things belong to Yahweh our God,' and His judgments are 'past tracing out.' What it does mean is that no betrayal, no cruelty, and no loss is loose in the universe. Joseph's sentence is the whole answer, because what was meant to destroy became the means of rescue. Paul's promise stands on the same foundation: 'all things work together for good for those who love God,' and nothing, 'neither death, nor life… nor any other created thing,' can separate us from the One who rules it all. God controls evil, and evil does not control Him.",
+        verses: ["Isaiah 5:20", "Acts 2:23", "Deuteronomy 29:29", "Romans 11:33", "Genesis 50:20", "Romans 8:28", "Romans 8:38-39"],
+      },
+    ],
+    keyVerses: ["Genesis 50:20", "Acts 2:23", "Isaiah 45:7", "James 1:13", "Romans 8:28"],
+    raises: ["why-does-god-allow-suffering", "why-does-god-harden-hearts", "who-is-satan", "do-my-choices-matter"],
+    followsFrom: ["what-does-it-mean-that-god-is-sovereign", "why-does-god-allow-suffering"],
+    related: ["is-god-in-control", "do-my-choices-matter", "what-does-it-mean-that-god-is-sovereign", "why-does-god-harden-hearts"],
+    planned: ["What is the difference between God's decree and His command?"],
+    order: 39,
+  },
+
   {
     slug: "what-will-believers-be-rewarded-for-if-salvation-is-by-grace-alone",
     question: "What will believers be rewarded for, if salvation is by grace alone?",
@@ -12894,7 +12984,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 3:10-12", "Romans 8:7", "Ephesians 2:1", "Isaiah 64:6", "John 1:13"],
-    raises: ["why-did-jesus-have-to-die", "did-god-choose-me", "can-anyone-resist-gods-grace", "why-does-god-harden-hearts"],
+    raises: ["why-did-jesus-have-to-die", "did-god-choose-me", "can-anyone-resist-gods-grace", "why-does-god-harden-hearts", "can-a-hardened-heart-come-back"],
     followsFrom: ["what-is-sin", "does-everyone-deserve-gods-judgment"],
     related: ["what-is-sin", "does-everyone-deserve-gods-judgment", "what-is-the-flesh-versus-the-spirit"],
     planned: [],
@@ -12977,7 +13067,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 1:4", "Romans 9:16", "John 15:16", "Acts 13:48", "2 Peter 1:10"],
-    raises: ["for-whom-did-christ-die", "can-anyone-resist-gods-grace", "what-is-the-difference-between-assurance-and-presumption", "why-does-god-harden-hearts"],
+    raises: ["for-whom-did-christ-die", "can-anyone-resist-gods-grace", "what-does-the-whole-world-mean", "does-god-want-everyone-to-be-saved", "what-is-the-difference-between-assurance-and-presumption", "why-does-god-harden-hearts"],
     followsFrom: ["what-does-it-mean-that-god-is-sovereign", "do-my-choices-matter", "can-i-seek-god-on-my-own"],
     related: ["what-does-it-mean-that-god-is-sovereign", "is-god-in-control", "do-my-choices-matter", "how-can-i-be-saved"],
     planned: [],
@@ -13109,11 +13199,100 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 10:11", "John 10:28", "Hebrews 9:28", "1 John 2:2", "Romans 8:32"],
-    raises: ["how-can-i-be-saved", "can-anyone-resist-gods-grace", "can-i-lose-my-salvation"],
+    raises: ["how-can-i-be-saved", "can-anyone-resist-gods-grace", "what-does-the-whole-world-mean", "can-i-lose-my-salvation"],
     followsFrom: ["why-did-jesus-have-to-die", "did-god-choose-me"],
     related: ["why-did-jesus-have-to-die", "how-can-i-be-saved", "can-gods-grace-really-cover-my-worst-sins"],
-    planned: ["What does it mean that Christ is the atoning sacrifice for the whole world?"],
+    planned: [],
     order: 58,
+  },
+
+  {
+    slug: "what-does-the-whole-world-mean",
+    question: "What does 'the whole world' mean in 1 John 2:2?",
+    category: "jesus-christ",
+    summary:
+      "John says Jesus is the atoning sacrifice for our sins, and not for ours only, but also for the whole world, and he uses the word world elsewhere for humanity in its rebellion against God. So the phrase reaches past the church and past Israel to the widest possible reach of people. Scripture holds two things without embarrassment: the sacrifice is worth more than every person who has ever lived and is offered to every person, and it certainly saves the people it was given to save.",
+    passages: [
+      {
+        book: "1 John",
+        chapter: 2,
+        title: "The atoning sacrifice for the whole world",
+        lookFor: "John's purpose in writing, and the scope he gives the sacrifice: for our sins, and not for ours only.",
+        focus: "1-11",
+      },
+      {
+        book: "John",
+        chapter: 11,
+        title: "One man dies for the nation",
+        lookFor: "Caiaphas prophesies without knowing it: one man dies for the nation, and not for that nation only.",
+        focus: "45-53",
+      },
+      {
+        book: "John",
+        chapter: 3,
+        title: "God so loved the world",
+        lookFor: "The most famous sentence in the Bible, and the verse that says the Son was sent so that the world should be saved.",
+        focus: "14-21",
+      },
+      {
+        book: "1 Timothy",
+        chapter: 2,
+        title: "A ransom for all",
+        lookFor: "Paul grounds prayer for all people in God's desire that all be saved and in the ransom given for all.",
+        focus: "1-7",
+      },
+      {
+        book: "Romans",
+        chapter: 5,
+        title: "The free gift to all men",
+        lookFor: "Two Adams, two acts, and two outcomes: condemnation reaching all, and justification offered to all.",
+        focus: "12-21",
+      },
+    ],
+    points: [
+      {
+        heading: "John states the breadth on purpose",
+        body:
+          "The sentence is built to widen as it goes: 'And he is the atoning sacrifice for our sins, and not for ours only, but also for the whole world.' John writes it to comfort anxious believers, and he reaches past the church to say what the sacrifice is worth and whom it is held out to. The same author records the same widening from Caiaphas, the high priest who condemned Jesus: he 'prophesied that Jesus would die for the nation, and not for the nation only, but that he might also gather together into one the children of God who are scattered abroad.' The scope of the sacrifice is not a doctrinal afterthought in this letter; it is the ground of the assurance John is giving.",
+        verses: ["1 John 2:2", "1 John 2:1", "John 11:51-52"],
+      },
+      {
+        heading: "What John means when he says 'the world'",
+        body:
+          "In John's letters, the world is not the church and not Israel; it is the fallen human order in its hostility to God. 'We know that we are of God, and the whole world lies in the power of the evil one.' 'They are of the world. Therefore they speak of the world.' John tells his readers, 'Don't be surprised, my brothers, if the world hates you.' He warns them, 'Don't love the world, neither the things that are in the world,' and describes it as 'the lust of the flesh, the lust of the eyes, and the pride of life.' So when John says the sacrifice reaches the whole world, he is not quietly meaning a subset of believers. He is naming the very world that hates God and lies under the evil one, the widest reach of humanity there is, and saying the sacrifice is for that.",
+        verses: ["1 John 5:19", "1 John 4:5", "1 John 3:13", "1 John 2:15-17"],
+      },
+      {
+        heading: "The same breadth runs through the letters",
+        body:
+          "Paul tells Timothy to pray for all men and gives the reason: God 'desires all people to be saved and come to full knowledge of the truth,' and there is 'one mediator between God and men, the man Christ Jesus, who gave himself as a ransom for all.' He says the grace of God 'has appeared, bringing salvation to all men,' and calls God 'the Savior of all men, especially of those who believe.' Hebrews says Jesus was crowned with glory and honor 'that by the grace of God he should taste of death for everyone.' Paul's summary of the two Adams has the same shape: as one trespass led to condemnation for all, so one act of righteousness leads toward justification for all. Read together, these texts will not let us shrink the sacrifice into a private transaction for a nameless few.",
+        verses: ["1 Timothy 2:4-6", "Titus 2:11", "1 Timothy 4:10", "Hebrews 2:9", "Romans 5:18"],
+      },
+      {
+        heading: "And yet the same Bible names a definite people",
+        body:
+          "The Bible is just as definite in the other direction. Jesus says, 'I lay down my life for the sheep,' and tells others plainly, 'you don't believe, because you are not of my sheep.' On the night before He died He prays for those the Father gave Him, and says, 'I don't pray for the world.' The angel's announcement is not conditional: 'it is he who shall save his people from their sins.' Paul tells the Ephesian elders to shepherd 'the assembly of the Lord and God which he purchased with his own blood,' and Hebrews says He was 'offered once to bear the sins of many.' If the first set of texts shows how wide the sacrifice reaches, this set shows that it certainly accomplishes what it was given to accomplish. Scripture will not let us drop either set.",
+        verses: ["John 10:15", "John 10:26", "John 17:9", "Matthew 1:21", "Acts 20:28", "Hebrews 9:28", "Titus 2:14"],
+      },
+      {
+        heading: "Two readings, and why we take this one",
+        body:
+          "Christians have read these texts in two ways, and it is worth saying so plainly. Some conclude that the breadth of the all texts means Christ's death accomplished salvation for every person without exception, and that the whole difference lies in whether a person believes. Others conclude that those texts declare the worth of the sacrifice and the freeness of the offer, while the death actually secures and keeps the people it was given to save. We take the second, for three reasons. First, the texts themselves: John can say the sacrifice is for the whole world, and in the same letter can say that those who are born of God are kept and that Jesus prays for the ones the Father gave Him. Second, breadth language in Scripture usually means all without distinction rather than all without exception, the same way the gospel goes to all nations and John sees a multitude out of every tribe, language, people, and nation. Third, the alternative leaves the same sins paid for twice, once at the cross and again in judgment. But notice what both readings affirm, which is the part that matters to you: the offer is genuine, and nobody is barred from it by a hidden list.",
+        verses: ["1 John 2:2", "John 10:16", "John 3:16", "Revelation 5:9", "Acts 17:30", "John 6:37"],
+      },
+      {
+        heading: "What the breadth is for: come and see",
+        body:
+          "The scope of the atonement was never given to us as a ledger to inspect; it was given as a door to walk through. 'For there is no distinction between Jew and Greek; for the same Lord is Lord of all, and is rich to all who call on him. For, whoever will call on the name of the Lord will be saved.' Paul's conclusion from the whole argument is an entreaty, not a classification: 'We are therefore ambassadors on behalf of Christ, as though God were entreating by us: we beg you on behalf of Christ, be reconciled to God.' If you are asking whether the sacrifice is enough for you and whether it is held out to you, the answer Scripture gives is not a doctrine about lists but a person to come to. 'He who comes to me I will in no way throw out.' And the last page of the Bible says, 'He who is thirsty, let him come. He who desires, let him take the water of life freely.'",
+        verses: ["Romans 10:12-13", "2 Corinthians 5:20", "John 6:37", "Revelation 22:17", "1 John 1:9"],
+      },
+    ],
+    keyVerses: ["1 John 2:2", "John 11:52", "1 Timothy 2:4", "Hebrews 2:9", "John 6:37"],
+    raises: ["does-god-want-everyone-to-be-saved", "how-can-i-be-saved", "can-anyone-resist-gods-grace"],
+    followsFrom: ["for-whom-did-christ-die", "did-god-choose-me"],
+    related: ["for-whom-did-christ-die", "did-god-choose-me", "does-god-want-everyone-to-be-saved", "why-did-jesus-have-to-die"],
+    planned: ["What does it mean that Christ is the Mediator?"],
+    order: 59,
   },
 
   {
@@ -13192,11 +13371,100 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 6:44", "John 6:37", "Ephesians 2:8-9", "Acts 16:14", "Romans 8:30"],
-    raises: ["what-does-it-mean-to-be-born-again", "how-does-the-spirit-convict-the-world", "can-i-lose-my-salvation", "why-does-god-harden-hearts"],
+    raises: ["what-does-it-mean-to-be-born-again", "how-does-the-spirit-convict-the-world", "does-god-want-everyone-to-be-saved", "can-i-lose-my-salvation", "why-does-god-harden-hearts"],
     followsFrom: ["what-is-grace", "did-god-choose-me", "how-does-the-spirit-convict-the-world"],
     related: ["what-is-grace", "did-god-choose-me", "what-does-it-mean-to-be-born-again", "how-does-the-spirit-convict-the-world"],
     planned: [],
     order: 59,
+  },
+
+  {
+    slug: "does-god-want-everyone-to-be-saved",
+    question: "Doesn't God want everyone to be saved?",
+    category: "gospel",
+    summary:
+      "Yes, and Scripture says so in the strongest terms: God swears He takes no pleasure in the death of the wicked, Jesus wept over a city that would not come, and the command to repent goes out to every person everywhere. The Bible also uses 'the will of God' for two different things, what He commands and desires of us, and what He has determined to do. Holding both keeps us from two errors: that God is indifferent to the lost, and that anyone is lost because God shut the door.",
+    passages: [
+      {
+        book: "Ezekiel",
+        chapter: 33,
+        title: "I have no pleasure in the death of the wicked",
+        lookFor: "God's oath about the wicked, and the watchman's urgent plea: turn, turn from your evil ways, for why will you die?",
+        focus: "1-20",
+      },
+      {
+        book: "Matthew",
+        chapter: 23,
+        title: "I would have gathered you, and you would not",
+        lookFor: "Jesus' lament over Jerusalem, and the refusal He names without excusing.",
+        focus: "23-39",
+      },
+      {
+        book: "Acts",
+        chapter: 17,
+        title: "He commands all people everywhere to repent",
+        lookFor: "Paul in Athens, telling a pagan city what God now commands and why the day is fixed.",
+        focus: "16-34",
+      },
+      {
+        book: "2 Peter",
+        chapter: 3,
+        title: "Not wishing that any should perish",
+        lookFor: "Why the day has not come yet, and what God's patience is for.",
+        focus: "1-18",
+      },
+      {
+        book: "Isaiah",
+        chapter: 46,
+        title: "My counsel shall stand",
+        lookFor: "God's own contrast between the idols who cannot save and the One who declares the end from the beginning.",
+        focus: "1-13",
+      },
+    ],
+    points: [
+      {
+        heading: "God takes no pleasure in the death of the wicked",
+        body:
+          "This is not our inference from His kindness; it is His own oath. 'Tell them, As I live, says the Lord Yahweh, I have no pleasure in the death of the wicked; but that the wicked turn from his way and live: turn, turn from your evil ways; for why will you die, house of Israel?' He asks it twice in Ezekiel: 'Have I any pleasure in the death of the wicked? says the Lord Yahweh; and not rather that he should return from his way, and live?' and again, 'For I have no pleasure in the death of him who dies, says the Lord Yahweh: therefore turn yourselves, and live.' Lamentations says it from the other side: 'For he does not afflict willingly, nor grieve the children of men.' And the invitation is issued as a command: 'Seek Yahweh while he may be found; call you on him while he is near.' If God were indifferent to the lost, none of this could be said of Him.",
+        verses: ["Ezekiel 33:11", "Ezekiel 18:23", "Ezekiel 18:32", "Lamentations 3:33", "Isaiah 55:6", "Isaiah 55:7"],
+      },
+      {
+        heading: "Jesus wept over the ones who would not come",
+        body:
+          "'Jerusalem, Jerusalem, who kills the prophets, and stones those who are sent to her! How often I would have gathered your children together, even as a hen gathers her chicks under her wings, and you would not!' Luke's account of the same lament says, 'you refused,' and Luke tells us that when Jesus came near the city He wept over it. He does not say their refusal was impossible; He says they would not. The same Lord says to others, 'Yet you will not come to me, that you may have life,' and explains the refusal from the human side: 'This is the judgment, that the light has come into the world, and men loved the darkness rather than the light; for their works were evil.' Whatever we conclude about God's decree, Scripture never lets us say that the lost were kept out. They would not come.",
+        verses: ["Matthew 23:37", "Luke 13:34", "Luke 19:41-42", "John 5:40", "John 3:19-20"],
+      },
+      {
+        heading: "The command goes out to every person without exception",
+        body:
+          "Paul stands in Athens and tells a pagan audience that God 'commands that all people everywhere should repent,' grounding it in a day He has fixed to judge the world. The risen Christ sends His church to 'all nations,' to 'preach the Good News to the whole creation,' with 'repentance and remission of sins' preached 'to all the nations, beginning at Jerusalem.' The invitation has no gate attached to it: 'the same Lord is Lord of all, and is rich to all who call on him. For, whoever will call on the name of the Lord will be saved.' The Bible's last invitation is its widest one: 'He who is thirsty, let him come. He who desires, let him take the water of life freely.' The desire of God and the offer of the gospel are real, and they are universal, and they are for you.",
+        verses: ["Acts 17:30-31", "Matthew 28:19", "Mark 16:15", "Luke 24:47", "Romans 10:12-13", "Revelation 22:17"],
+      },
+      {
+        heading: "Scripture uses 'the will of God' for two different things",
+        body:
+          "Here is the distinction that makes the rest of the Bible fit together. Sometimes the will of God means what He commands and what pleases Him: 'this is the will of God: your sanctification,' 'this is the will of God, that by well-doing you should put to silence the ignorance of foolish men,' and 'not everyone who says to me, Lord, Lord, will enter into the Kingdom of Heaven; but he who does the will of my Father who is in heaven.' Sometimes the same phrase means what God has determined to do: 'My counsel shall stand, and I will do all my pleasure.' 'Our God is in the heavens. He does whatever he pleases.' 'He does according to his will in the army of heaven, and among the inhabitants of the earth; and no one can stay his hand, or ask him, What are you doing?' Paul blesses God as the One 'who works all things after the counsel of his will.' Both are truly His will, and they are not the same list. So when Scripture says God desires all to be saved, it is telling us what He commands and what pleases Him, and it is telling us the truth. When Scripture says His counsel stands, it is telling us what He will certainly do, and that is true as well. Moses put the boundary in one verse: 'The secret things belong to Yahweh our God; but the things that are revealed belong to us and to our children forever, that we may do all the words of this law.'",
+        verses: ["1 Thessalonians 4:3", "1 Peter 2:15", "Matthew 7:21", "Isaiah 46:10", "Psalm 115:3", "Daniel 4:35", "Ephesians 1:11", "Deuteronomy 29:29"],
+      },
+      {
+        heading: "So no one is lost because God refused them",
+        body:
+          "Held together, these two truths protect us from two very different mistakes. The first is that God is indifferent to the lost, which Ezekiel and Luke and the whole missionary command forbid. The second is that anyone is lost because God shut the door, which Scripture forbids just as firmly: 'whoever will call on the name of the Lord will be saved,' and 'he who comes to me I will in no way throw out.' When Paul's own people refused the word, he did not say God had barred them; he said they 'judge yourselves unworthy of eternal life.' Scripture lays the loss at the feet of those who loved the darkness rather than the light. And at the same time it says that the coming itself is a gift: 'No one can come to me unless the Father who sent me draws him.' Nobody is condemned for lack of a real offer, and nobody is saved for lack of need.",
+        verses: ["Romans 10:13", "John 6:37", "Acts 13:46", "John 3:19", "John 6:44", "Romans 3:11"],
+      },
+      {
+        heading: "Two readings, and what both of them confess",
+        body:
+          "Christians have read these texts in two ways, and it is worth saying so plainly. Some conclude that God's desire to save all means the outcome turns entirely on the free response of each person, and that His grace can be, and often is, finally refused. Others conclude that God's desire declares what He commands and what pleases Him, while the drawing that actually saves is His own gift to whom He gives it, and that no one who is drawn is lost. We take the second, because Paul can spend three chapters on mercy and hardening and then refuse to explain it, ending instead in doxology: 'Oh the depth of the riches both of the wisdom and the knowledge of God! How unsearchable are his judgments, and his ways past tracing out!' And because the same Bible that says God desires all to be saved also says, 'I will have mercy on whom I have mercy,' and that we were saved 'not by works of righteousness, which we did ourselves, but according to his mercy.' What both readings confess is what matters for you: God takes no pleasure in your death, the offer that reached you is genuine, and no one who comes is turned away. If you want to be saved, that wanting did not begin with you, and it will not be refused.",
+        verses: ["1 Timothy 2:4", "2 Peter 3:9", "2 Peter 3:15", "Romans 11:33-36", "Romans 9:15-16", "Titus 3:5", "John 6:44"],
+      },
+    ],
+    keyVerses: ["Ezekiel 33:11", "Matthew 23:37", "Acts 17:30", "2 Peter 3:9", "John 6:37"],
+    raises: ["why-does-god-harden-hearts", "how-can-i-be-saved", "does-god-change-his-mind", "is-there-a-second-chance-after-death"],
+    followsFrom: ["did-god-choose-me", "can-anyone-resist-gods-grace"],
+    related: ["did-god-choose-me", "can-anyone-resist-gods-grace", "what-does-the-whole-world-mean", "why-does-god-harden-hearts"],
+    planned: ["Why does God delay His judgment?"],
+    order: 58,
   },
 
   {
@@ -15313,11 +15581,100 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 9:16", "Romans 9:18", "Romans 11:22", "Hebrews 3:15", "John 6:37"],
-    raises: ["did-god-choose-me", "does-everyone-deserve-gods-judgment"],
+    raises: ["did-god-choose-me", "can-a-hardened-heart-come-back", "does-everyone-deserve-gods-judgment"],
     followsFrom: ["did-god-choose-me", "what-does-it-mean-that-god-is-sovereign"],
     related: ["did-god-choose-me", "can-anyone-resist-gods-grace", "does-god-change-his-mind", "what-does-it-mean-that-god-is-sovereign"],
-    planned: ["Can someone whose heart has been hardened come back?"],
+    planned: [],
     order: 86,
+  },
+
+  {
+    slug: "can-a-hardened-heart-come-back",
+    question: "Can someone whose heart has been hardened come back?",
+    category: "god-the-father",
+    summary:
+      "Yes, if the turning is real and it is done now. Scripture holds out both a warning and an open door: there is a hardness so settled that it no longer wants to come, and there is a God who says, 'Seek Yahweh while he may be found.' The worst king in Judah's history came back, and the men who crucified the Son of God were told to repent, and three thousand did. If you want to come back, that wanting is itself grace at work.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 9,
+        title: "The confession that was not repentance",
+        lookFor: "Pharaoh admits he has sinned and asks for prayer, and then does the same thing again.",
+        focus: "27-35",
+      },
+      {
+        book: "2 Chronicles",
+        chapter: 33,
+        title: "The worst king, and he came back",
+        lookFor: "Manasseh outdid every king before him in evil, and when he humbled himself God was entreated by him.",
+        focus: "1-20",
+      },
+      {
+        book: "Isaiah",
+        chapter: 55,
+        title: "Seek him while he may be found",
+        lookFor: "God's own invitation to the wicked and the unrighteous, with an abundance of pardon attached.",
+        focus: "1-9",
+      },
+      {
+        book: "Psalms",
+        chapter: 51,
+        title: "A broken and contrite heart",
+        lookFor: "David prays after adultery and murder, and asks not for ritual but for a clean heart.",
+        focus: "1-17",
+      },
+      {
+        book: "Hebrews",
+        chapter: 6,
+        title: "The line Scripture warns about",
+        lookFor: "The sober warning about falling away, and the confidence the writer still has for his readers.",
+        focus: "1-12",
+      },
+    ],
+    points: [
+      {
+        heading: "The invitation is issued now, and that is the point",
+        body:
+          "God does not offer pardon in the past tense. 'Seek Yahweh while he may be found; call you on him while he is near,' and the next verse says what happens to the one who does: 'let the wicked forsake his way, and the unrighteous man his thoughts; and let him return to Yahweh, and he will have mercy on him; and to our God, for he will abundantly pardon.' Hebrews presses the same urgency twice in one chapter: 'Today if you will hear his voice, don't harden your hearts, as in the rebellion.' A warning like that is not a locked door with a sign on it; it is a hand held out. And Paul says it as plainly as it can be said: 'Behold, now is the acceptable time. Behold, now is the day of salvation.'",
+        verses: ["Isaiah 55:6-7", "Hebrews 3:7-8", "Hebrews 3:15", "2 Corinthians 6:2"],
+      },
+      {
+        heading: "God promises to be found by those who seek Him",
+        body:
+          "The promise is not hedged with qualifications about how bad you have been. 'You shall seek me, and find me, when you shall search for me with all your heart.' Moses had said the same to a people about to be scattered for their idolatry: 'from there you shall seek Yahweh your God, and you shall find him, when you search after him with all your heart and with all your soul.' Solomon's prayer over a failed nation has the same shape: 'if my people, who are called by my name, shall humble themselves, and pray, and seek my face, and turn from their wicked ways; then I will hear from heaven, and will forgive their sin.' Even the parable of the son who wasted everything ends with the father running: 'But while he was still far off, his father saw him, and was moved with compassion, and ran, and fell on his neck, and kissed him.' And Jesus says of every comer, 'He who comes to me I will in no way throw out.' The last page of the Bible is still saying, 'He who is thirsty, let him come. He who desires, let him take the water of life freely.'",
+        verses: ["Jeremiah 29:13", "Deuteronomy 4:29", "2 Chronicles 7:14", "Luke 15:20", "John 6:37", "Revelation 22:17"],
+      },
+      {
+        heading: "The worst man in Scripture came back",
+        body:
+          "If there were a category of sin too dark to return from, Manasseh would have been in it. He rebuilt the high places, worshiped the host of heaven inside the temple, and 'shed innocent blood very much, until he had filled Jerusalem from one end to another.' God spoke to him, and he gave no heed. Then, in chains in Babylon, 'when he was in distress, he begged Yahweh his God, and humbled himself greatly before the God of his fathers. He prayed to him; and he was entreated by him, and heard his supplication.' The same is true of the men who killed Jesus. Peter told them to their faces, 'this Jesus whom you crucified,' and they 'were cut to the heart.' Peter did not tell them the door was shut; he said, 'Repent, and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of sins, and you will receive the gift of the Holy Spirit.' 'There were added that day about three thousand souls.' And Paul, who had hunted Christians, called himself the chief of sinners and said God showed him mercy 'for this cause... that in me first, Jesus Christ might display all his patience, for an example of those who were going to believe in him for eternal life.'",
+        verses: ["2 Chronicles 33:10-13", "2 Kings 21:16", "Acts 2:36-41", "1 Timothy 1:15-16"],
+      },
+      {
+        heading: "But there is a repentance that is only fear",
+        body:
+          "Pharaoh is the warning here, and he confessed twice. Under the hail he said, 'I have sinned this time. Yahweh is righteous, and I and my people are wicked,' and asked Moses to pray for him. Then the hail stopped, and 'he sinned yet more, and hardened his heart.' Under the locusts he said it again, 'I have sinned against Yahweh your God, and against you,' and hardened again. His words were true and his repentance was not, because nothing changed. Paul draws the line: 'godly sorrow works repentance to salvation, which brings no regret. But the sorrow of the world works death.' So the test is not whether you feel bad or say the right words. Joel says, 'Tear your heart, and not your garments, and turn to Yahweh, your God,' and Proverbs says, 'He who conceals his sins doesn't prosper, but whoever confesses and renounces them finds mercy.' David knew what God was looking for: 'The sacrifices of God are a broken spirit. A broken and contrite heart, O God, you will not despise.'",
+        verses: ["Exodus 9:27-28", "Exodus 9:34", "Exodus 10:16-17", "2 Corinthians 7:10", "Joel 2:12-13", "Proverbs 28:13", "Psalm 51:16-17"],
+      },
+      {
+        heading: "The line Scripture actually warns about",
+        body:
+          "There is a hardness that goes past returning, and Scripture names it so that we will not stumble into it. Hebrews speaks of people who were 'once enlightened and tasted of the heavenly gift,' and then fell away, and says 'it is impossible to renew them again to repentance.' It warns about sinning 'willfully after we have received the knowledge of the truth,' and about the man who 'has insulted the Spirit of grace.' It sets Esau before us as an example: afterward he wanted the blessing, 'for he found no place for a change of mind though he sought it diligently with tears.' Jesus calls the same thing blasphemy against the Spirit, the sin that 'will not be forgiven him, neither in this age, nor in that which is to come.' Notice what all of these describe: not a person who trembles and wants to come back, but a person who has settled, who crucifies Christ again, and who calls the Spirit's work demonic. The warning is written to people who can still read it. Fearing that you have done it is not the same as having done it; the sin itself is ceasing to want forgiveness at all.",
+        verses: ["Hebrews 6:4-6", "Hebrews 10:26-29", "Hebrews 12:16-17", "Matthew 12:31-32", "Mark 3:29"],
+      },
+      {
+        heading: "What to do today",
+        body:
+          "Do not wait for a feeling before you come. God's word to us is 'Repent therefore, and turn again, that your sins may be blotted out,' and to the contrite He is near: 'Yahweh is near to those who have a broken heart, and saves those who have a crushed spirit.' Pray David's prayer after him: 'Create in me a clean heart, O God. Renew a right spirit within me.' Confess specifically and stop excusing: 'If we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.' Humble yourself instead of hardening: 'Draw near to God, and he will draw near to you,' and 'Humble yourselves in the sight of the Lord, and he will exalt you.' And take Him fully at His word, because He is the one saying it: 'Though your sins be as scarlet, they shall be as white as snow.' He is still standing at the door: 'Behold, I stand at the door and knock,' and 'As many as I love, I reprove and chasten. Be zealous therefore, and repent.'",
+        verses: ["Acts 3:19", "Psalm 34:18", "Psalm 51:10-12", "1 John 1:9", "James 4:6-10", "Isaiah 1:18", "Revelation 3:19-20"],
+      },
+    ],
+    keyVerses: ["Isaiah 55:6-7", "2 Chronicles 33:12-13", "John 6:37", "Psalm 51:17", "1 John 1:9"],
+    raises: ["what-is-the-unpardonable-sin", "how-do-i-know-my-repentance-is-genuine", "can-i-seek-god-on-my-own", "is-there-a-second-chance-after-death"],
+    followsFrom: ["why-does-god-harden-hearts", "can-i-seek-god-on-my-own"],
+    related: ["why-does-god-harden-hearts", "what-is-repentance", "how-do-i-know-my-repentance-is-genuine", "what-is-the-unpardonable-sin"],
+    planned: ["Can someone be saved at the very end of their life?"],
+    order: 87,
   },
 
   // ------------------------------------------------------------------
