@@ -1941,6 +1941,47 @@ export const connections: Record<string, Connection[]> = {
       "The practical outworking of the God of peace: let all things be done decently and in order.",
     ),
   ],
+  "1 Corinthians 14:34": [
+    c(
+      "1 Timothy 2:11-12",
+      "parallel",
+      "The same instruction carried into the church's ordinary life: a woman is not to teach or to exercise authority over a man.",
+    ),
+    c(
+      "1 Corinthians 11:5",
+      "contrast",
+      "Paul has already assumed women praying and prophesying in the assembly, so this silence concerns the teaching office rather than a woman's voice existing at all.",
+    ),
+  ],
+  "1 Corinthians 11:3": [
+    c(
+      "Ephesians 5:23",
+      "parallel",
+      "The same headship named plainly elsewhere: the husband is the head of the wife, and Christ is the head of the assembly.",
+    ),
+    c(
+      "1 Timothy 2:13",
+      "parallel",
+      "Paul's other word on men and women in the church reaches back to the same ground, the order of Adam and Eve.",
+    ),
+    c(
+      "John 14:28",
+      "theme",
+      "Headship inside the Trinity: the Son is fully God and still says the Father is greater, so order is not inferiority.",
+    ),
+  ],
+  "1 Timothy 2:12": [
+    c(
+      "1 Corinthians 14:34",
+      "parallel",
+      "The ruling given to Corinth and the standing order given to Timothy are one ruling, and Paul grounds both in creation.",
+    ),
+    c(
+      "1 Timothy 3:2",
+      "theme",
+      "The office in view is the overseer's, and its qualification is that he be good at teaching.",
+    ),
+  ],
   "1 Corinthians 10:31": [
     c(
       "Colossians 3:17",

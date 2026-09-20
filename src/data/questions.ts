@@ -12519,7 +12519,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Timothy 3:2", "Acts 20:28", "1 Peter 5:2-3", "Titus 1:9", "Matthew 20:26-28"],
-    raises: ["what-is-a-healthy-church", "what-is-the-church", "what-is-church-discipline", "what-authority-did-jesus-give-his-leaders"],
+    raises: ["what-is-a-healthy-church", "what-is-the-church", "what-is-church-discipline", "what-authority-did-jesus-give-his-leaders", "what-is-paul-saying-about-men-and-women-in-the-church"],
     followsFrom: ["what-is-a-healthy-church", "why-do-i-need-the-church"],
     related: ["what-is-a-healthy-church", "what-is-the-church", "why-do-i-need-the-church", "what-is-church-discipline"],
     planned: [],
@@ -19911,7 +19911,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 14:26", "1 Corinthians 12:7", "1 Corinthians 14:33"],
-    raises: ["is-all-of-life-worship", "what-are-spiritual-gifts"],
+    raises: ["is-all-of-life-worship", "what-are-spiritual-gifts", "what-is-paul-saying-about-men-and-women-in-the-church"],
     followsFrom: ["why-does-the-bible-command-singing", "what-do-we-do-when-we-gather"],
     related: ["what-are-spiritual-gifts", "discovering-my-gift", "what-is-speaking-in-tongues-and-is-it-for-today", "why-do-i-need-the-church"],
     planned: [],
@@ -20039,6 +20039,86 @@ export const questions: Question[] = [
     related: ["what-is-the-new-heaven-and-new-earth", "what-will-we-do-in-the-new-creation", "will-jesus-return-literally", "what-do-we-do-when-we-gather"],
     planned: [],
     order: 120,
+  },
+
+  {
+    slug: "what-is-paul-saying-about-men-and-women-in-the-church",
+    question: "What is Paul saying about men and women in the church?",
+    category: "worship",
+    summary:
+      "Paul says two things at once, and both are load-bearing. Men and women are equally God's image, equally redeemed, and equally gifted by the Spirit; both pray and prophesy in the assembly. And God has still given the gathered church an order: the teaching office belongs to men, and the meeting is not run by whoever speaks loudest. Paul grounds this not in Corinthian custom but in Genesis, and then refuses to let anyone treat it as his own opinion.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 2,
+        title: "Where the argument actually starts",
+        lookFor:
+          "The order God built into humanity before sin and before any culture: the woman taken from the man and brought to the man.",
+        focus: "18-25",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 11,
+        title: "Headship, glory, and a woman praying out loud",
+        lookFor:
+          "Paul grounding headship in creation, and then assuming women will pray and prophesy in the gathering.",
+        focus: "2-16",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 14,
+        title: "Order in a room full of speech",
+        lookFor:
+          "How Paul regulates a genuinely supernatural meeting, and how he answers the objection before anyone raises it.",
+        focus: "26-40",
+      },
+      {
+        book: "1 Timothy",
+        chapter: 2,
+        title: "The same teaching, as standing orders",
+        lookFor:
+          "Paul saying the same thing to a different church, and reaching past Corinth all the way back to Adam and Eve.",
+        focus: "8-15",
+      },
+    ],
+    points: [
+      {
+        heading: "He argues from Genesis, not from Corinth, and headship is order rather than worth",
+        body:
+          "The first thing to notice is where Paul goes for his reasoning. He does not reach for local custom, and he never says that women in that city happened to be uneducated. He reaches past Corinth entirely: 'For man is not from woman, but woman from man; for neither was man created for the woman, but woman for the man.' That is Genesis 2, not first-century Greece, the chapter where the woman is made for the man as 'a helper comparable to him.' He makes the same move writing to Timothy: 'For Adam was first formed, then Eve.' Ground a practice in creation rather than culture, and you cannot retire it by announcing that culture changed. Corinth is gone; Genesis is not. Now look at what he actually claims: 'the head of every man is Christ, and the head of the woman is the man, and the head of Christ is God.' Read that last clause again. If headship meant inferiority, the eternal Son would be inferior to the Father and the gospel would collapse. Paul puts Christ and the woman in one sentence and insults neither, and he does not deny what Scripture says elsewhere: 'male and female he created them,' both in His image. Order and worth are not enemies in God's design, because they are not enemies in God Himself.",
+        verses: ["1 Corinthians 11:3", "1 Corinthians 11:8-9", "1 Timothy 2:13", "Genesis 1:27", "Genesis 2:18"],
+      },
+      {
+        heading: "Paul assumes a woman will pray and prophesy, so 'silent' cannot mean 'never speak'",
+        body:
+          "Chapter 14 is the passage everyone quotes; chapter 11 is the key that unlocks it. There Paul assumes 'every woman praying or prophesying' in the assembly, and he regulates how she does it, not whether she may. He told the whole church to want exactly that gift: 'earnestly desire spiritual gifts, but especially that you may prophesy,' because 'he who prophesies speaks to men for their edification, exhortation, and consolation.' And he says plainly that 'you all can prophesy one by one, that all may learn, and all may be exhorted.' Whatever 14:34 forbids, then, it is not the sound of a woman's voice existing in the gathering. Paul does not contradict himself three chapters apart, and God does not pour out a gift in Joel's promise ('your sons and your daughters will prophesy') and then forbid half of it to be used.",
+        verses: ["1 Corinthians 11:5", "1 Corinthians 14:1", "1 Corinthians 14:3", "1 Corinthians 14:31", "Acts 2:17"],
+      },
+      {
+        heading: "The silence is about the teaching office and the judging of prophets, and Paul says the Lord commands it",
+        body:
+          "Set 14:34 inside the chapter. The room is full of speech, and Paul's worry is that it runs over itself: 'Let the prophets speak, two or three, and let the others discern.' The instruction about the wives comes in the middle of that regulating, and 1 Timothy states the same rule for the church's ordinary life: 'But I don't permit a woman to teach, nor to exercise authority over a man, but to be in quietness.' Notice what that describes: authoritative teaching and the public weighing of doctrine, which is the elders' work. An overseer must be 'good at teaching' and hold the faithful word; the leaders are the ones who 'watch on behalf of your souls,' and they give an account. The issue is not a woman's ability; it is an office, and the office carries the accountability. Then Paul answers the objection before anyone makes it: 'What? Was it from you that the word of God went out?' And the sentence that settles the question of authority: 'the things which I write to you' are 'the commandment of the Lord.' This is not Paul's cultural preference, and it is not overruled by ours.",
+        verses: ["1 Corinthians 14:29", "1 Corinthians 14:34", "1 Timothy 2:12", "1 Timothy 3:2", "Titus 1:9", "Hebrews 13:17", "1 Corinthians 14:36", "1 Corinthians 14:37"],
+      },
+      {
+        heading: "What this does not take away, and the women Scripture names",
+        body:
+          "Nothing above makes a woman less. Both are redeemed on the same terms: 'for you are all one in Christ Jesus.' Both inherit the same promise, which is why Peter calls wives 'joint heirs of the grace of life' and warns a husband that dishonoring his wife hinders his own prayers. Scripture then hands women real, named work. Paul commands older women to be 'teachers of that which is good.' Priscilla and Aquila together 'took him aside, and explained to him the way of God more accurately' when Apollos needed correcting. He commends Phoebe as 'a servant of the assembly that is at Cenchreae,' and names Mary, Tryphaena, Tryphosa, and Persis among those who labored in the Lord. Philip had 'four virgin daughters who prophesied,' and Deborah is called 'a prophetess' and judged Israel. And the first witness of the resurrection sent to the disciples was Mary Magdalene: 'Mary Magdalene came and told the disciples that she had seen the Lord.' Anyone told that Scripture never lets a woman speak for God should feel the misrepresentation. Those women are not the church's teaching office: God spoke through Deborah and Anna by direct revelation, and Paul's rule concerns who holds the office answerable for the doctrine of the assembly. What is reserved for men is the office of elder, not the voice, the mind, or the worth.",
+        verses: ["Galatians 3:28", "1 Peter 3:7", "Titus 2:3", "Romans 16:1", "Romans 16:6", "Romans 16:12", "Acts 18:26", "Acts 21:9", "Judges 4:4", "Luke 2:36", "John 20:18"],
+      },
+      {
+        heading: "Headship is measured by the cross",
+        body:
+          "A man who reads all of this and concludes he has been handed a license to be harsh has not read the rest of the New Testament. Headship in Scripture is defined by Christ, and Christ defines it by dying: 'Husbands, love your wives, even as Christ also loved the assembly, and gave himself up for it.' The one holding the authority is the one who goes first into the suffering. Peter adds that a husband lives with his wife 'according to knowledge, giving honor to the woman, as to the weaker vessel,' and warns that mistreating her will hinder his prayers. And Paul, in this same letter to this same church, insists that a husband has no authority over his own body either: 'The wife doesn't have authority over her own body, but the husband. Likewise also the husband doesn't have authority over his own body, but the wife.' Headship that does not look like the cross is not the headship Paul taught.",
+        verses: ["Ephesians 5:25", "1 Peter 3:7", "1 Corinthians 7:4", "Colossians 3:19", "Ephesians 5:33"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 11:3", "1 Corinthians 11:11-12", "1 Corinthians 14:37", "1 Timothy 2:12", "Ephesians 5:25"],
+    raises: ["does-god-have-one-plan-for-my-marriage", "does-god-still-speak-today", "what-does-it-mean-to-be-made-in-gods-image"],
+    followsFrom: ["what-is-the-spirits-role-in-public-worship", "what-does-a-church-need-from-its-leaders"],
+    related: ["what-is-the-spirits-role-in-public-worship", "what-does-a-church-need-from-its-leaders", "does-god-have-one-plan-for-my-marriage", "made-for-relationship"],
+    planned: ["How should a husband and wife relate in marriage?"],
+    order: 121,
   },
 
   // ------------------------------------------------------------------
