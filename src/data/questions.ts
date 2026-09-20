@@ -2451,7 +2451,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 17:11", "Luke 24:27", "2 Timothy 2:15", "James 1:22"],
-    raises: ["daily-habit-of-reading-the-bible", "what-does-it-mean-to-meditate-on-scripture", "what-is-the-difference-between-reading-and-studying-the-bible"],
+    raises: ["daily-habit-of-reading-the-bible", "what-does-it-mean-to-meditate-on-scripture", "what-is-the-difference-between-reading-and-studying-the-bible", "how-can-i-understand-hard-passages-in-the-bible"],
     followsFrom: ["can-i-trust-the-bible"],
     related: ["can-i-trust-the-bible", "what-should-i-do-now-that-im-saved"],
     planned: [],
@@ -5299,10 +5299,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Psalm 1:2", "Psalm 119:105", "Joshua 1:8", "Acts 17:11", "James 1:22"],
-    raises: ["how-should-i-read-the-bible", "why-do-bible-translations-differ", "is-the-whole-bible-about-jesus"],
+    raises: ["how-should-i-read-the-bible", "why-do-bible-translations-differ", "is-the-whole-bible-about-jesus", "how-can-i-understand-hard-passages-in-the-bible"],
     followsFrom: ["how-should-i-read-the-bible"],
     related: ["how-should-i-read-the-bible", "why-do-bible-translations-differ", "can-i-trust-the-bible", "what-the-new-life-looks-like"],
-    planned: ["How can I understand hard passages in the Bible?"],
+    planned: [],
     order: 38,
   },
 
@@ -15825,11 +15825,103 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Luke 24:44", "Hebrews 1:1-2", "2 Timothy 3:16", "Revelation 22:20"],
-    raises: ["how-should-i-read-the-bible", "how-do-we-know-which-books-belong-in-the-bible", "why-do-bible-translations-differ"],
+    raises: ["how-should-i-read-the-bible", "how-do-we-know-which-books-belong-in-the-bible", "why-do-bible-translations-differ", "how-can-i-understand-hard-passages-in-the-bible"],
     followsFrom: ["what-is-the-bibles-big-story", "is-the-whole-bible-about-jesus"],
     related: ["how-should-i-read-the-bible", "how-do-we-know-which-books-belong-in-the-bible", "what-does-it-mean-that-the-bible-is-both-human-and-divine"],
-    planned: ["How can I understand hard passages in the Bible?"],
+    planned: [],
     order: 47,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Word of God (continued: understanding hard passages)
+  // ------------------------------------------------------------------
+  {
+    slug: "how-can-i-understand-hard-passages-in-the-bible",
+    question: "How can I understand hard passages in the Bible?",
+    category: "word-of-god",
+    summary:
+      "Some of Scripture's difficulty is deliberate. God conceals so that we will search, speaks in figures until we can bear plainness, and unfolds His deepest truths across centuries rather than in one sentence. The way through is not a better technique but a Teacher: the Spirit who inspired the words is the One who opens the reader's eyes. So we read the whole counsel of God, ask for understanding, and let the hard places drive us to Him rather than away from Him.",
+    passages: [
+      {
+        book: "Proverbs",
+        chapter: 25,
+        title: "The glory of God to conceal a thing",
+        lookFor: "God keeps His own counsel, and searching out a matter is presented as honorable royal work, not as a punishment.",
+        focus: "1-3",
+      },
+      {
+        book: "Matthew",
+        chapter: 13,
+        title: "Why Jesus spoke in parables",
+        lookFor: "Jesus explains that the parables are given to some and hidden from others, and that He spoke this way by design.",
+        focus: "10-17",
+      },
+      {
+        book: "John",
+        chapter: 16,
+        title: "Figures of speech, and the plainness to come",
+        lookFor: "Jesus says He has more to say than they can bear, and promises a day when He will speak plainly.",
+        focus: "12-15",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 2,
+        title: "The deep things of God, revealed by the Spirit",
+        lookFor: "God's hidden wisdom is not discovered by human wisdom; the Spirit searches it and reveals it.",
+        focus: "6-16",
+      },
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "He opened the Scriptures, and then their minds",
+        lookFor: "On the road and in the room, Jesus explains Moses and the prophets, and then opens their minds to understand.",
+        focus: "13-35",
+      },
+    ],
+    points: [
+      {
+        heading: "God conceals on purpose, and the search is the honor",
+        body:
+          "Scripture is not embarrassed about being difficult; it explains why. 'It is the glory of God to conceal a thing, but the glory of kings is to search out a matter.' Moses drew the same line: 'The secret things belong to Yahweh our God; but the things that are revealed belong to us and to our children forever, that we may do all the words of this law.' God is not hiding to shut us out; He is keeping His own counsel while giving us everything we need to obey. So the psalmist does not demand a briefing. He prays, 'Open my eyes, that I may see wondrous things out of your law.' Proverbs describes wisdom the same way, as a treasure you dig for: 'If you seek her as silver, and search for her as for hidden treasures:' and 'then you will understand the fear of Yahweh, and find the knowledge of God.' The difficulty is the doorway, not the wall.",
+        verses: ["Proverbs 25:2", "Deuteronomy 29:29", "Psalm 119:18", "Proverbs 2:4-5"],
+      },
+      {
+        heading: "He gave light in stages, and only as they could bear it",
+        body:
+          "When the disciples asked why He taught in parables, Jesus gave the answer that settles the question: 'To you it is given to know the mysteries of the Kingdom of Heaven, but it is not given to them.' Yet the same passage shows the other side of it, that 'privately to his own disciples he explained everything.' There is a public veil and a private opening, and the timing belongs to God. God did not deliver the Bible as a finished system on one afternoon. He was 'having in the past spoken to the fathers through the prophets at many times and in various ways,' and then 'has at the end of these days spoken to us by his Son.' Paul marks the same timing: 'But when the fullness of the time came, God sent out his Son.' The prophets themselves did not see the end of what they carried. They 'sought and searched diligently,' 'searching for who or what kind of time the Spirit of Christ, which was in them, pointed to,' and Peter says these are 'things angels desire to look into.' Jesus said the same about His own teaching: 'I have yet many things to tell you, but you can't bear them now.' He told them plainly that He had been speaking 'in figures of speech,' and promised a day when He would 'tell you plainly about the Father.' Mark says He taught the crowds 'as they were able to hear it.' Hebrews names what is lost by skipping the sequence: a reader who never grows stays on milk, when 'solid food is for those who are full grown.'",
+        verses: ["Matthew 13:11", "Hebrews 1:1-2", "Galatians 4:4", "1 Peter 1:10-11", "1 Peter 1:12", "John 16:12", "John 16:25", "Mark 4:33-34", "Hebrews 5:14", "Ephesians 3:5"],
+      },
+      {
+        heading: "The Teacher is the Spirit, and understanding is a gift",
+        body:
+          "Jesus did not merely explain the Scriptures on the road to Emmaus; Luke says that 'then he opened their minds, that they might understand the Scriptures.' Comprehension is something God does in a reader. Paul says the same: 'But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God,' and 'we received, not the spirit of the world, but the Spirit which is from God, that we might know the things that were freely given to us by God.' This is why 'the natural man doesn't receive the things of God's Spirit, for they are foolishness to him, and he can't know them, because they are spiritually discerned.' James turns that into an invitation: 'But if any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach; and it will be given to him.' John assures believers that 'the anointing which you received from him remains in you, and you don't need for anyone to teach you.' And Jesus promised that the Spirit 'will guide you into all truth.' This is why prayer is not a technique for reading; it is the way we read.",
+        verses: ["Luke 24:45", "1 Corinthians 2:10", "1 Corinthians 2:12", "1 Corinthians 2:14", "James 1:5", "1 John 2:27", "John 16:13", "Psalm 119:130"],
+      },
+      {
+        heading: "Read the whole counsel of God, not a proof text",
+        body:
+          "Because Scripture's hardest places are answered by Scripture's other places, the Bible's own method is breadth. Paul could say, 'for I didn't shrink from declaring to you the whole counsel of God.' Jesus modeled it: 'Beginning from Moses and from all the prophets, he explained to them in all the Scriptures the things concerning himself.' The Bereans were commended for refusing to take even an apostle's word without checking, 'examining the Scriptures daily to see whether these things were so.' Paul tells Timothy to 'present yourself approved by God, a workman who doesn't need to be ashamed, properly handling the Word of Truth.' And Peter is honest that some of it stays hard: Paul's letters contain 'some things that are hard to understand, which the ignorant and unsettled twist, as they also do to the other Scriptures, to their own destruction.' Difficulty is not a reason to stop reading. It is a reason to keep reading, and to read everything.",
+        verses: ["Acts 20:27", "Luke 24:27", "Acts 17:11", "2 Timothy 2:15", "2 Peter 3:16"],
+      },
+      {
+        heading: "Why the Trinity has no single verse",
+        body:
+          "Here is the test case. Ask why God never wrote one sentence saying that He is three Persons in one being, and notice first that Scripture states every part of that sentence plainly. It insists on one God: 'Hear, Israel: Yahweh is our God. Yahweh is one.' It calls the Son God: 'In the beginning was the Word, and the Word was with God, and the Word was God,' and Thomas answers the risen Jesus with 'My Lord and my God!' It calls the Spirit God: Peter tells Ananias that he has lied to the Holy Spirit, and then says, 'You haven't lied to men, but to God.' It shows the three together and distinct: the Spirit descending on the Son while the Father speaks, the command to baptize 'in the name of the Father and of the Son and of the Holy Spirit,' and the blessing of 'the grace of the Lord Jesus Christ, the love of God, and the fellowship of the Holy Spirit.' What Scripture never supplies is the formula, and that is no accident. The word 'Trinity' is absent, as the words 'monotheism' and 'Bible' are absent, because the formula is a summary, and a summary can be memorized without being obeyed. God gave a cumulative witness instead, so the doctrine can only be built by reading all of it. It is worth knowing, too, that the one verse which old English translations render as an explicit formula rests on a later addition to the text. The World English Bible has only 'For there are three who testify,' and the earliest manuscripts do not carry the longer ending. The doctrine never needed that verse. It stands on the whole counsel of God, which is the very point.",
+        verses: ["Deuteronomy 6:4", "John 1:1", "John 20:28", "Acts 5:3-4", "Matthew 3:16-17", "Matthew 28:19", "2 Corinthians 13:14", "1 John 5:7"],
+      },
+      {
+        heading: "We know in part, and the part we know is worship",
+        body:
+          "Even with a good method and a good Teacher, this side of glory has a ceiling, and Scripture is calm about it. Paul writes, 'For now we see in a mirror, dimly, but then face to face. Now I know in part, but then I will know fully, even as I was also fully known,' and warns that 'if anyone thinks that he knows anything, he doesn't yet know as he ought to know.' God's answer to Job's demand for an explanation is another question: 'Can you fathom the mystery of God?' Paul's answer, at the end of his hardest argument, is not a system but doxology: 'Oh the depth of the riches both of the wisdom and the knowledge of God! How unsearchable are his judgments, and his ways past tracing out!' Isaiah gives the reason: 'For as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts.' That is not a wall but a door. Jesus defined eternal life as knowing, not as explaining: 'This is eternal life, that they should know you, the only true God, and him whom you sent, Jesus Christ.' So we do not read to master God. We read to be found by Him, and the parts we cannot yet understand are where He keeps us humble, hungry, and on our knees.",
+        verses: ["1 Corinthians 13:12", "1 Corinthians 8:2", "Job 11:7", "Romans 11:33", "Isaiah 55:9", "John 17:3", "Psalm 145:3"],
+      },
+    ],
+    keyVerses: ["Proverbs 25:2", "Deuteronomy 29:29", "Matthew 13:11", "Luke 24:45", "1 Corinthians 2:10", "John 16:12"],
+    raises: ["can-we-understand-the-trinity", "why-does-god-seem-silent", "is-it-okay-to-doubt"],
+    followsFrom: ["how-should-i-read-the-bible", "why-is-the-bible-arranged-the-way-it-is", "daily-habit-of-reading-the-bible"],
+    related: ["how-should-i-read-the-bible", "why-is-the-bible-arranged-the-way-it-is", "can-we-understand-the-trinity", "what-does-it-mean-to-meditate-on-scripture"],
+    planned: ["How can I tell the difference between a difficult passage and a contradiction?", "How should I read a parable without allegorizing it?"],
+    order: 48,
   },
 
   {

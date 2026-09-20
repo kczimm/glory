@@ -2801,6 +2801,195 @@ export const connections: Record<string, Connection[]> = {
       "Men shall be blessed by him and all nations call him blessed: the same promise sung in the psalms.",
     ),
   ],
+
+  // ------------------------------------------------------------------
+  // Understanding hard passages: why God conceals, and how we read
+  // ------------------------------------------------------------------
+  "Proverbs 25:2": [
+    c(
+      "Deuteronomy 29:29",
+      "theme",
+      "Moses draws the same boundary between what God keeps secret and what He reveals for us to live by.",
+    ),
+    c(
+      "Matthew 13:11",
+      "theme",
+      "Jesus applies the principle to His own teaching: the mysteries of the Kingdom are given to some and not to others.",
+    ),
+  ],
+  "Deuteronomy 29:29": [
+    c(
+      "Proverbs 25:2",
+      "theme",
+      "The hidden things are God's glory and the searching is ours, so concealment is an invitation rather than a refusal.",
+    ),
+    c(
+      "1 Peter 1:10-11",
+      "theme",
+      "Even the prophets who carried revelation did not understand its timing, but searched their own words diligently.",
+    ),
+  ],
+  "Matthew 13:11": [
+    c(
+      "Isaiah 6:9-10",
+      "quotes",
+      "Jesus explains the parables with Isaiah's commission: a people who closed their own eyes cannot see.",
+    ),
+    c(
+      "Daniel 12:9",
+      "theme",
+      "Understanding is sealed only until the time God appoints, so the veil is temporary and not a final verdict.",
+    ),
+    c(
+      "Mark 4:33-34",
+      "parallel",
+      "Mark gives the same scene from the other side: the crowds received parables, and the disciples received the explanation.",
+    ),
+  ],
+  "Mark 4:33-34": [
+    c(
+      "Matthew 13:11",
+      "parallel",
+      "Matthew records the reason Jesus gave for the parables; Mark records the private explanation He gave afterward.",
+    ),
+    c(
+      "John 16:12",
+      "theme",
+      "Jesus measured His teaching to what His hearers could carry, and told them plainly that He was holding things back.",
+    ),
+  ],
+  "John 16:12": [
+    c(
+      "John 16:25",
+      "theme",
+      "The same conversation promises an end to figures of speech, when He will speak plainly about the Father.",
+    ),
+    c(
+      "Hebrews 5:14",
+      "theme",
+      "What is withheld is not withheld forever; maturity, exercised by use, is what opens the solid food.",
+    ),
+  ],
+  "John 16:25": [
+    c(
+      "John 16:12",
+      "theme",
+      "The plainness Jesus promises answers the burden He said they could not yet bear.",
+    ),
+    c(
+      "Mark 4:34",
+      "theme",
+      "Figures of speech in public and plainness in private is the same pattern Mark describes.",
+    ),
+  ],
+  "Proverbs 2:4-5": [
+    c(
+      "Proverbs 25:2",
+      "theme",
+      "Wisdom is treated as hidden treasure, which is why God conceals it: what is dug for is valued.",
+    ),
+    c(
+      "James 1:5",
+      "theme",
+      "The search is not left to our own cleverness; God gives wisdom liberally to the one who asks.",
+    ),
+  ],
+  "1 Corinthians 2:10": [
+    c(
+      "John 16:13",
+      "theme",
+      "The Spirit who searches the deep things of God is the same Spirit Jesus promised would guide us into all truth.",
+    ),
+    c(
+      "Daniel 12:9",
+      "fulfilled",
+      "What Daniel was told was sealed until the time of the end is now revealed to us by the Spirit.",
+    ),
+  ],
+  "1 Corinthians 2:14": [
+    c(
+      "Luke 24:45",
+      "theme",
+      "Understanding Scripture is something God does in a reader, which is why the natural man cannot receive it.",
+    ),
+    c(
+      "1 John 2:27",
+      "theme",
+      "The anointing that teaches is the same Spirit, so no reader is left to his own resources.",
+    ),
+  ],
+  "Luke 24:45": [
+    c(
+      "Psalm 119:18",
+      "parallel",
+      "The psalmist prays for what Jesus gives: eyes opened to see wondrous things in the law.",
+    ),
+    c(
+      "1 Corinthians 2:14",
+      "theme",
+      "Paul explains why opened minds are necessary: the things of God are spiritually discerned.",
+    ),
+  ],
+  "1 Peter 1:10-11": [
+    c(
+      "Daniel 12:9",
+      "theme",
+      "The prophets searched what was sealed, which is why they inquired so carefully about the time.",
+    ),
+    c(
+      "Hebrews 1:1-2",
+      "theme",
+      "God spoke in many portions and many ways before He spoke finally and plainly in His Son.",
+    ),
+  ],
+  "Hebrews 5:14": [
+    c(
+      "1 Corinthians 2:6",
+      "parallel",
+      "Paul also reserves his wisdom teaching for the full grown, the same distinction Hebrews draws.",
+    ),
+    c(
+      "John 16:12",
+      "theme",
+      "Growing up into solid food is the answer to the things Jesus said they could not yet bear.",
+    ),
+  ],
+  "2 Peter 3:16": [
+    c(
+      "Acts 17:11",
+      "contrast",
+      "The Bereans searched the Scriptures daily to test what they heard; the ignorant and unsettled twist them instead.",
+    ),
+    c(
+      "Acts 20:27",
+      "theme",
+      "Paul's answer to hard letters is the whole counsel of God, not a few favorite verses.",
+    ),
+  ],
+  "1 Corinthians 13:12": [
+    c(
+      "Job 11:7",
+      "theme",
+      "Job is asked whether he can fathom the mystery of God, and the answer is the same as Paul's: not yet, but then.",
+    ),
+    c(
+      "Romans 11:33",
+      "theme",
+      "Paul ends his hardest argument in doxology rather than a system, because God's judgments are past tracing out.",
+    ),
+  ],
+  "1 John 5:7": [
+    c(
+      "Matthew 28:19",
+      "parallel",
+      "The three who testify in John's letter are the three named in one name at the Great Commission.",
+    ),
+    c(
+      "2 Corinthians 13:14",
+      "parallel",
+      "The same three appear in the blessing, which is why the doctrine rests on the whole witness rather than one verse.",
+    ),
+  ],
 };
 
 /** Connections leaving from a verse reference. */
