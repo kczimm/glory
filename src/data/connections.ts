@@ -1682,6 +1682,119 @@ export const connections: Record<string, Connection[]> = {
   ],
 
   // ------------------------------------------------------------------
+  // The fixed gulf: death, judgment, and no crossing over
+  // ------------------------------------------------------------------
+  "Luke 16:22": [
+    c(
+      "Revelation 7:17",
+      "theme",
+      "The beggar who longed for crumbs is carried to comfort, and heaven's own promise is the same picture: the Lamb 'shepherds them, and leads them to springs of waters of life.'",
+    ),
+    c(
+      "Hebrews 1:14",
+      "parallel",
+      "Angels carry Lazarus to Abraham's bosom because that is their office: 'serving spirits, sent out to do service for the sake of those who will inherit salvation.'",
+    ),
+  ],
+  "Luke 16:22-23": [
+    c(
+      "2 Corinthians 5:8",
+      "theme",
+      "Lazarus is at rest the moment he dies, which is Paul's own hope in other words: 'to be absent from the body, and to be at home with the Lord.'",
+    ),
+    c(
+      "Hebrews 9:27",
+      "theme",
+      "Both men die once and wake with their destination settled, the appointment the whole parable rests on: 'it is appointed for men to die once, and after this, judgment.'",
+    ),
+  ],
+  "Luke 16:22-26": [
+    c(
+      "Hebrews 11:39-40",
+      "theme",
+      "Abraham's bosom is comfort but not yet completion: the faithful of the old covenant 'should not be made perfect' apart from us.",
+    ),
+    c(
+      "Luke 23:43",
+      "fulfilled",
+      "What the parable pictures as a place of rest becomes personal at the cross: 'today you will be with me in Paradise.'",
+    ),
+  ],
+  "Luke 16:23-26": [
+    c(
+      "Mark 9:48",
+      "theme",
+      "The anguish of the parable is the Gehenna Jesus warns about elsewhere, the place 'where their worm doesn't die, and the fire is not quenched.'",
+    ),
+    c(
+      "Revelation 20:14-15",
+      "fulfilled",
+      "Hades is not the last word, and the gulf is not the end of the story: 'Death and Hades were thrown into the lake of fire. This is the second death, the lake of fire.'",
+    ),
+    c(
+      "Matthew 25:41",
+      "theme",
+      "The fire of the parable is the fire of the judgment, and Jesus names its first occupants: 'Depart from me, you cursed, into the eternal fire which is prepared for the devil and his angels.'",
+    ),
+  ],
+  "Luke 16:24": [
+    c(
+      "Isaiah 66:24",
+      "pattern",
+      "The thirst and the flame are imagery Jesus' hearers knew from the prophets: 'their worm shall not die, neither shall their fire be quenched.'",
+    ),
+    c(
+      "Matthew 25:46",
+      "theme",
+      "The same word measures both destinations, in the parable and in the judgment: 'These will go away into eternal punishment, but the righteous into eternal life.'",
+    ),
+  ],
+  "Luke 16:26": [
+    c(
+      "Hebrews 9:27-28",
+      "theme",
+      "The gulf is a settled verdict rather than a waiting room, because there is no third step between the two: 'it is appointed for men to die once, and after this, judgment.'",
+    ),
+    c(
+      "Luke 23:43",
+      "contrast",
+      "Two men died that same day and woke on opposite sides of this gulf: the thief with Jesus in Paradise, the rich man in anguish.",
+    ),
+    c(
+      "2 Corinthians 5:8",
+      "theme",
+      "The crossing is fixed because each person is already home somewhere: 'to be absent from the body, and to be at home with the Lord.'",
+    ),
+    c(
+      "Revelation 20:15",
+      "theme",
+      "What the gulf fixes in the parable is ratified at the judgment: 'If anyone was not found written in the book of life, he was cast into the lake of fire.'",
+    ),
+    c(
+      "Isaiah 55:6",
+      "contrast",
+      "The crossing no one may make afterward is the seeking God commands beforehand: 'Seek Yahweh while he may be found; call you on him while he is near.'",
+    ),
+  ],
+  "Luke 16:31": [
+    c(
+      "John 5:46-47",
+      "parallel",
+      "Jesus says the same to His own hearers: Moses wrote about Him, and a heart unmoved by Scripture will not be moved by wonders either.",
+    ),
+    c(
+      "John 3:18",
+      "theme",
+      "Abraham's answer is a verdict rather than a delay: 'He who doesn't believe has been judged already, because he has not believed in the name of the one and only Son of God.'",
+    ),
+    c(
+      "2 Corinthians 6:2",
+      "contrast",
+      "The warning against waiting for a sign becomes the apostle's plea to the living: 'Behold, now is the acceptable time. Behold, now is the day of salvation.'",
+    ),
+  ],
+
+  // ------------------------------------------------------------------
   // Worship: spirit and truth, gathered and scattered
   // ------------------------------------------------------------------
   "John 4:23-24": [
