@@ -149,6 +149,11 @@ export const connections: Record<string, Connection[]> = {
       "fulfilled",
       "Matthew applies this Servant-song to Jesus' healings.",
     ),
+    c(
+      "Romans 4:25",
+      "fulfilled",
+      "Paul says He was delivered up for our trespasses and raised for our justification, the same substitution in a sentence.",
+    ),
   ],
   "Isaiah 53:6": [
     c(
@@ -160,6 +165,11 @@ export const connections: Record<string, Connection[]> = {
       "Romans 5:8",
       "theme",
       "While we were still sinners, the sheep who had gone astray, Christ died for us.",
+    ),
+    c(
+      "1 Peter 2:25",
+      "fulfilled",
+      "Peter takes Isaiah's straying sheep as the story of his readers: you were going astray like sheep, but now have returned to the Shepherd.",
     ),
   ],
   "Romans 3:23": [
@@ -1688,6 +1698,11 @@ export const connections: Record<string, Connection[]> = {
       "Psalms 103:13-14",
       "theme",
       "The angel's word knows our frame: the journey is too great for you, so God's compassion treats the man as dust that needs sleep and food.",
+    ),
+    c(
+      "James 5:17",
+      "theme",
+      "James says Elijah was a man with a nature like ours, which is why the angel's care for his body belongs in the story.",
     ),
   ],
 
@@ -5288,6 +5303,351 @@ export const connections: Record<string, Connection[]> = {
       "Acts 7:10",
       "fulfilled",
       "Stephen says God delivered Joseph out of all his afflictions and gave him favor before Pharaoh.",
+    ),
+  ],
+  // ------------------------------------------------------------------
+  // Prophets & Exile: Elijah, Isaiah, Ezekiel, and Daniel
+  // ------------------------------------------------------------------
+  "1 Kings 19:4": [
+    c(
+      "Jonah 4:3",
+      "parallel",
+      "Jonah asks God to take his life too, a prophet at the end of himself right after a great work.",
+    ),
+    c(
+      "Numbers 11:14-15",
+      "pattern",
+      "Moses tells God the burden is too heavy for him and asks to die, so the exhaustion of leaders is an old story.",
+    ),
+    c(
+      "Psalms 42:5",
+      "theme",
+      "The psalm speaks to the same despair and answers it by addressing the soul with hope in God.",
+    ),
+  ],
+  "1 Kings 19:12": [
+    c(
+      "Job 26:14",
+      "theme",
+      "Job says these are only the outskirts of His ways and that we hear but a small whisper of Him.",
+    ),
+    c(
+      "Isaiah 30:21",
+      "theme",
+      "Isaiah promises a voice behind you saying this is the way, walk in it, the guidance the whisper gives.",
+    ),
+    c(
+      "Exodus 34:6",
+      "theme",
+      "At this same mountain God proclaimed His name to Moses as merciful and gracious, slow to anger.",
+    ),
+  ],
+  "1 Kings 19:18": [
+    c(
+      "Romans 11:4",
+      "quotes",
+      "Paul quotes this verse almost word for word to prove that God has not rejected His people.",
+    ),
+    c(
+      "Romans 11:5",
+      "theme",
+      "The seven thousand become Paul's model of a remnant chosen by grace rather than by works.",
+    ),
+  ],
+  "Romans 11:4": [
+    c(
+      "1 Kings 19:18",
+      "quotes",
+      "The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.",
+    ),
+    c(
+      "Romans 9:27",
+      "theme",
+      "Isaiah also says that though Israel be as the sand of the sea, it is the remnant who will be saved.",
+    ),
+  ],
+  "Isaiah 6:3": [
+    c(
+      "Revelation 4:8",
+      "parallel",
+      "The living creatures around the throne never rest from saying the same threefold holy.",
+    ),
+    c(
+      "John 12:41",
+      "fulfilled",
+      "John says Isaiah saw His glory, so the throne and the song belong to Christ.",
+    ),
+  ],
+  "Isaiah 6:5": [
+    c(
+      "Luke 5:8",
+      "pattern",
+      "Peter falls at Jesus' knees with the same confession after the catch of fish, asking Him to depart from a sinful man.",
+    ),
+    c(
+      "Job 42:5-6",
+      "pattern",
+      "Job says he had heard of God by the hearing of the ear but now his eye sees Him, and he repents in dust and ashes.",
+    ),
+  ],
+  "Isaiah 6:7": [
+    c(
+      "Hebrews 9:14",
+      "theme",
+      "The coal is taken from the altar, and Hebrews names the blood of Christ as what cleanses the conscience from dead works.",
+    ),
+    c(
+      "1 John 1:9",
+      "theme",
+      "God is faithful and righteous to forgive us and cleanse us, the promise the coal enacts for Isaiah.",
+    ),
+  ],
+  "Isaiah 6:8": [
+    c(
+      "Genesis 22:1",
+      "pattern",
+      "Abraham answers God with the same words, Here I am, when he is called to the hardest test of his life.",
+    ),
+    c(
+      "Matthew 4:19-20",
+      "pattern",
+      "Jesus says come after me, and the disciples immediately leave their nets and follow, the same readiness Isaiah shows.",
+    ),
+  ],
+  "John 12:41": [
+    c(
+      "Isaiah 6:1-3",
+      "fulfilled",
+      "The throne vision of Isaiah 6 was a vision of Christ, which is why the seraphim's song is His.",
+    ),
+    c(
+      "John 12:38",
+      "parallel",
+      "John sets the quotation from Isaiah 53:1 right beside the comment, tying the throne to the suffering servant.",
+    ),
+  ],
+  "Isaiah 53:7": [
+    c(
+      "Acts 8:32",
+      "quotes",
+      "The Ethiopian official was reading this very verse when he asked the prophet meant himself or someone else.",
+    ),
+    c(
+      "John 19:9",
+      "theme",
+      "Jesus gives Pilate no answer, the silence of the servant before his accusers.",
+    ),
+    c(
+      "Matthew 27:12-14",
+      "fulfilled",
+      "Matthew records that Jesus answered the accusations with nothing, to the governor's great astonishment.",
+    ),
+  ],
+  "Isaiah 53:11": [
+    c(
+      "Romans 5:19",
+      "theme",
+      "Through the obedience of the one, many will be made righteous, which is Isaiah's servant justifying many.",
+    ),
+    c(
+      "2 Corinthians 5:21",
+      "theme",
+      "God made the sinless One to be sin for us so that in Him we might become the righteousness of God.",
+    ),
+  ],
+  "Acts 8:35": [
+    c(
+      "Isaiah 53:7-8",
+      "quotes",
+      "The passage Philip began from describes a sheep led to the slaughter and silent before its shearers.",
+    ),
+    c(
+      "Luke 24:27",
+      "parallel",
+      "Jesus did the same on the Emmaus road, beginning from Moses and all the prophets and explaining the things concerning Himself.",
+    ),
+  ],
+  "1 Peter 2:24": [
+    c(
+      "Isaiah 53:5",
+      "quotes",
+      "Peter is quoting the servant song: by his wounds you were healed.",
+    ),
+    c(
+      "Isaiah 53:6",
+      "quotes",
+      "The shepherd who bore our sins is the one Isaiah said would carry the iniquity of us all.",
+    ),
+  ],
+  "Ezekiel 37:3": [
+    c(
+      "Genesis 2:7",
+      "pattern",
+      "Life began the same way in Genesis, with God breathing into dust, so the answer to the question belongs to God alone.",
+    ),
+    c(
+      "John 5:28",
+      "theme",
+      "Jesus says the hour is coming when all who are in the tombs will hear His voice, the question answered at the last day.",
+    ),
+  ],
+  "Ezekiel 37:5": [
+    c(
+      "John 3:8",
+      "theme",
+      "Jesus compares the Spirit to wind that blows where it wants, the breath Ezekiel is told to prophesy.",
+    ),
+    c(
+      "Ezekiel 36:27",
+      "parallel",
+      "The promise in the previous chapter says God will put His Spirit within them and cause them to walk in His statutes.",
+    ),
+  ],
+  "Ezekiel 37:14": [
+    c(
+      "Romans 8:11",
+      "fulfilled",
+      "The Spirit who raised Jesus from the dead will give life to mortal bodies, the promise Ezekiel saw in the valley.",
+    ),
+    c(
+      "Ezekiel 36:27",
+      "parallel",
+      "God promises to put His Spirit within His people, the gift that turns a valley of bones into a living nation.",
+    ),
+    c(
+      "Joel 2:28-29",
+      "theme",
+      "Joel promises that God will pour out His Spirit on all flesh, the same outpouring on servants and handmaids.",
+    ),
+  ],
+  "Ezekiel 37:24": [
+    c(
+      "John 10:16",
+      "fulfilled",
+      "Jesus speaks of one flock with one shepherd, the single shepherd Ezekiel promised.",
+    ),
+    c(
+      "Ezekiel 34:23-24",
+      "parallel",
+      "God promises one shepherd over them, His servant David, and promises to be their God.",
+    ),
+    c(
+      "Revelation 7:17",
+      "theme",
+      "The Lamb in the midst of the throne shepherds His people and leads them to springs of living water.",
+    ),
+  ],
+  "John 5:28": [
+    c(
+      "Ezekiel 37:12",
+      "fulfilled",
+      "God promised to open graves and bring His people up, and Jesus says the hour is coming when He will do exactly that.",
+    ),
+    c(
+      "1 Thessalonians 4:16",
+      "parallel",
+      "The Lord will descend with a shout and the dead in Christ will rise first.",
+    ),
+  ],
+  "Daniel 3:17-18": [
+    c(
+      "Matthew 10:28",
+      "theme",
+      "Jesus tells His disciples not to fear those who kill the body, the fear these three had already settled in advance.",
+    ),
+    c(
+      "Acts 5:29",
+      "theme",
+      "Peter and the apostles answer the council the same way: we must obey God rather than men.",
+    ),
+  ],
+  "Daniel 3:25": [
+    c(
+      "Isaiah 43:2",
+      "promise",
+      "God promises that when you walk through the fire you will not be burned, and the promise is kept in this furnace.",
+    ),
+    c(
+      "Daniel 6:22",
+      "parallel",
+      "In the next deliverance God again sends His angel, this time to shut the mouths of the lions.",
+    ),
+  ],
+  "Daniel 3:27": [
+    c(
+      "1 Peter 1:7",
+      "theme",
+      "Peter says the proof of faith tested by fire is more precious than gold, which is what the furnace demonstrated.",
+    ),
+    c(
+      "Hebrews 11:34",
+      "parallel",
+      "Hebrews lists those who quenched the power of fire among the exploits of faith.",
+    ),
+  ],
+  "Hebrews 11:34": [
+    c(
+      "Daniel 3:27",
+      "quotes",
+      "The catalogue is pointing at the furnace, where the fire had no power on their bodies and not a hair was singed.",
+    ),
+    c(
+      "Isaiah 43:2",
+      "promise",
+      "The promise that flame will not scorch those who pass through it is the faith Hebrews is describing.",
+    ),
+  ],
+  "Daniel 6:10": [
+    c(
+      "Psalms 55:17",
+      "theme",
+      "The psalmist prays evening, morning, and at noon, the same rhythm of set prayer Daniel kept.",
+    ),
+    c(
+      "Acts 10:9",
+      "pattern",
+      "Peter goes up on the housetop to pray at about noon, the same habit of fixed hours.",
+    ),
+  ],
+  "Daniel 6:22": [
+    c(
+      "Hebrews 11:33",
+      "quotes",
+      "Hebrews names this faith among those who stopped the mouths of lions.",
+    ),
+    c(
+      "Acts 12:7",
+      "parallel",
+      "An angel of the Lord wakes Peter in prison and his chains fall off, the same angelic rescue.",
+    ),
+    c(
+      "Psalms 91:11-12",
+      "theme",
+      "God commands His angels to guard His people in all their ways.",
+    ),
+  ],
+  "Daniel 6:23": [
+    c(
+      "Hebrews 11:33",
+      "quotes",
+      "The reason given is that he had trusted in his God, which is how Hebrews files the deliverance under faith.",
+    ),
+    c(
+      "Psalms 91:11-12",
+      "theme",
+      "The promise of angelic guard is what Daniel experienced in the den.",
+    ),
+  ],
+  "Hebrews 11:33": [
+    c(
+      "Daniel 6:22",
+      "quotes",
+      "Daniel told the king that God sent His angel and shut the mouths of the lions, the deliverance Hebrews summarizes.",
+    ),
+    c(
+      "1 Samuel 17:34-37",
+      "pattern",
+      "David killed the lion and the bear and trusted God to deliver him again, courage under the same promise.",
     ),
   ],
 };
