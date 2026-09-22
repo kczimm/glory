@@ -16245,7 +16245,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 32:4", "Judges 21:25", "1 Kings 18:21", "Jeremiah 31:33"],
-    raises: ["are-there-other-gods", "what-is-sin", "what-is-the-new-heart-that-god-promised", "why-did-god-promise-david-an-eternal-throne", "why-did-david-spare-saul", "why-did-god-send-jonah-to-nineveh", "what-modern-idols-hide-in-ordinary-christian-lives"],
+    raises: ["are-there-other-gods", "what-is-sin", "what-is-the-new-heart-that-god-promised", "why-did-god-promise-david-an-eternal-throne", "why-did-david-spare-saul", "why-did-elijah-run-to-the-mountain", "why-did-god-send-jonah-to-nineveh", "what-modern-idols-hide-in-ordinary-christian-lives"],
     followsFrom: ["what-does-the-exodus-show-us-about-god", "are-there-other-gods"],
     related: ["where-does-temptation-come-from", "repentance-one-time-or-lifelong"],
     planned: [],
@@ -16523,11 +16523,11 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["2 Kings 17:14", "Jeremiah 31:33", "Lamentations 3:22-23"],
-    raises: ["god-remembers-our-sins-no-more", "how-do-i-know-my-repentance-is-genuine", "how-does-god-discipline-his-children", "how-does-the-old-story-reach-jesus", "how-should-christians-live-as-exiles"],
+    raises: ["god-remembers-our-sins-no-more", "how-do-i-know-my-repentance-is-genuine", "how-does-god-discipline-his-children", "can-these-bones-live", "how-does-the-old-story-reach-jesus", "how-should-christians-live-as-exiles"],
     followsFrom: ["why-did-god-promise-david-an-eternal-throne", "why-did-israel-keep-drifting-into-idolatry"],
     related: ["how-does-god-discipline-his-children", "where-is-god-in-my-pain"],
     planned: [],
-    order: 93,
+    order: 92,
   },
 
   {
@@ -16603,7 +16603,7 @@ export const questions: Question[] = [
     followsFrom: ["why-did-god-send-his-people-into-exile", "how-does-the-old-story-reach-jesus"],
     related: ["the-churchs-mission-in-the-world", "how-do-i-share-my-faith-with-others", "why-do-i-need-the-church"],
     planned: [],
-    order: 95,
+    order: 97,
   },
 
   {
@@ -16672,7 +16672,7 @@ export const questions: Question[] = [
     followsFrom: ["why-did-god-send-his-people-into-exile", "why-did-god-promise-david-an-eternal-throne", "what-is-the-bibles-big-story"],
     related: ["is-the-whole-bible-about-jesus", "how-do-i-find-christ-in-the-old-testament", "what-is-the-gospel"],
     planned: [],
-    order: 94,
+    order: 96,
   },
 
   {
@@ -17388,7 +17388,7 @@ export const questions: Question[] = [
     followsFrom: ["why-did-israel-keep-drifting-into-idolatry"],
     related: ["what-is-the-gospel", "does-god-change-his-mind"],
     planned: [],
-    order: 92,
+    order: 91,
   },
 
   {
@@ -20584,6 +20584,432 @@ export const questions: Question[] = [
     related: ["what-was-god-doing-in-josephs-slavery", "how-do-i-wait-on-gods-timing"],
     planned: [],
     order: 97,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Prophets & Exile (continued: the prophets filled in)
+  // ------------------------------------------------------------------
+  {
+    slug: "why-did-elijah-run-to-the-mountain",
+    question: "Why did Elijah run to the mountain?",
+    category: "prophets-and-exile",
+    summary:
+      "Right after fire fell on Carmel, Elijah fled from a single threat and asked God to take his life. God answered not with a rebuke but with food, sleep, and a long journey to Horeb, where He spoke in a still small voice and corrected the prophet's loneliness with seven thousand who had not bowed. The chapter is a portrait of a burned-out servant and the God who restores him.",
+    passages: [
+      {
+        book: "1 Kings",
+        chapter: 19,
+        title: "The flight and the still small voice",
+        lookFor: "What Elijah asks for under the tree, how God treats him first, and what comes after the wind, the earthquake, and the fire.",
+        focus: "1-18",
+      },
+      {
+        book: "Romans",
+        chapter: 11,
+        title: "The remnant Paul finds here",
+        lookFor: "How Paul uses Elijah's complaint to prove that God has not rejected His people.",
+        focus: "1-6",
+      },
+      {
+        book: "Psalms",
+        chapter: 42,
+        title: "Hope in God when the soul is cast down",
+        lookFor: "The psalmist talking to his own soul, doing what Elijah needed to hear.",
+        focus: "1-11",
+      },
+    ],
+    points: [
+      {
+        heading: "The crash after Carmel",
+        body:
+          "The fire had fallen, the people had confessed, and the prophets of Baal were gone. Then Jezebel sent one message, and Elijah rose and ran for his life into the wilderness, sat down under a juniper tree, and asked to die: 'It is enough. Now, O Yahweh, take away my life; for I am not better than my fathers.' The chapter is honest about what a spiritual high can cost the man who carried it.",
+        verses: ["1 Kings 19:1-4"],
+      },
+      {
+        heading: "God's first answer was food and sleep",
+        body:
+          "An angel touched him and said, 'Arise and eat!', and when he lay down again the angel came a second time with the same words, adding, 'Arise and eat, because the journey is too great for you.' Only then does the forty-day journey to Horeb begin. God did not begin with a rebuke or a doctrine; He fed an exhausted man and let him sleep.",
+        verses: ["1 Kings 19:5-8"],
+      },
+      {
+        heading: "Not in the wind, the earthquake, or the fire",
+        body:
+          "At Horeb the mountain is torn by wind, shaken by an earthquake, and passed over by fire, and Yahweh is in none of them. Then comes 'a still small voice', and Elijah wraps his face in his mantle and stands at the entrance of the cave. The prophet who had just called down fire from heaven needed the whisper, which is a mercy to everyone whose faith feels small.",
+        verses: ["1 Kings 19:11-13"],
+      },
+      {
+        heading: "The loneliness is corrected, and the work continues",
+        body:
+          "Twice God asks, 'What are you doing here, Elijah?', and twice Elijah answers that he alone is left. God's reply is not comfort alone but fact and mission: He has left seven thousand in Israel whose knees have not bowed to Baal, and Elijah is to anoint Hazael, Jehu, and Elisha. Despair had shrunk the prophet's world; God widened it again.",
+        verses: ["1 Kings 19:14-18"],
+      },
+      {
+        heading: "Paul reads the same story as proof of grace",
+        body:
+          "Romans 11 opens with Elijah pleading against Israel, and God's answer, that He has reserved seven thousand who have not bowed the knee to Baal. Paul draws the conclusion Elijah could not see: there is a remnant chosen by grace, and if by grace then it is no longer by works. The prophet's darkest estimate of his own generation became Paul's evidence that God keeps His people.",
+        verses: ["Romans 11:2-6"],
+      },
+    ],
+    keyVerses: ["1 Kings 19:4", "1 Kings 19:7", "1 Kings 19:12", "1 Kings 19:18", "Romans 11:4"],
+    raises: ["what-did-isaiah-see-in-the-temple", "does-god-hear-my-prayers", "why-does-god-allow-suffering"],
+    followsFrom: ["why-did-israel-keep-drifting-into-idolatry"],
+    related: ["how-do-i-wait-on-gods-timing", "why-does-god-allow-suffering"],
+    planned: [],
+    order: 88,
+  },
+
+  {
+    slug: "what-did-isaiah-see-in-the-temple",
+    question: "What did Isaiah see in the temple?",
+    category: "prophets-and-exile",
+    summary:
+      "In the year King Uzziah died, Isaiah saw Yahweh on a throne, high and lifted up, with seraphim crying holy, holy, holy. The vision undid him, then cleansed him, then sent him. John tells us whose glory he saw: Isaiah saw Jesus and spoke of Him.",
+    passages: [
+      {
+        book: "Isaiah",
+        chapter: 6,
+        title: "The throne, the coal, and the commission",
+        lookFor: "What the seraphim cry, how Isaiah responds, where his cleansing comes from, and what he volunteers for.",
+        focus: "1-13",
+      },
+      {
+        book: "John",
+        chapter: 12,
+        title: "Isaiah saw his glory",
+        lookFor: "John's comment on the vision, placed right beside a quotation from Isaiah 53.",
+        focus: "36-43",
+      },
+      {
+        book: "Revelation",
+        chapter: 4,
+        title: "The same throne, the same song",
+        lookFor: "The throne John sees, and the threefold holy the living creatures never stop saying.",
+        focus: "1-11",
+      },
+    ],
+    points: [
+      {
+        heading: "A throne above a dying king",
+        body:
+          "The vision is dated by a funeral: king Uzziah died. What Isaiah saw was the throne that does not empty. The Lord sat high and lifted up, His train filled the temple, and the seraphim called to one another, 'Holy, holy, holy, is Yahweh of Armies! The whole earth is full of his glory!' Revelation gives the same throne and the same unending song.",
+        verses: ["Isaiah 6:1-4", "Revelation 4:8"],
+      },
+      {
+        heading: "The vision undid him before it sent him",
+        body:
+          "Isaiah's first word is not a sermon but a woe: 'Woe is me! For I am undone, because I am a man of unclean lips', and he adds that his eyes have seen the King. Seeing God does not flatter the seer; it exposes him. Every true call begins with a person who has stopped comparing himself to others.",
+        verses: ["Isaiah 6:5"],
+      },
+      {
+        heading: "Cleansed from the altar, not from himself",
+        body:
+          "A seraph flies to him with a live coal taken from the altar with tongs, touches his mouth, and says, 'your iniquity is taken away, and your sin forgiven.' The fire that cleanses Isaiah comes from the place of sacrifice, and it is applied to him rather than produced by him. That is the shape of every cleansing in Scripture.",
+        verses: ["Isaiah 6:6-7"],
+      },
+      {
+        heading: "Here I am. Send me!",
+        body:
+          "Only after the coal does Isaiah hear the question, 'Whom shall I send, and who will go for us?', and answer, 'Here I am. Send me!' The commission that follows is a hard one: a people who hear but do not understand, until the land is laid waste and only a stump remains, the holy seed. God tells the prophet in advance that the work will look like failure, and he goes anyway.",
+        verses: ["Isaiah 6:8-13"],
+      },
+      {
+        heading: "Whose glory did he see?",
+        body:
+          "John settles the identity. After recording the unbelief of Jesus' own generation, he quotes Isaiah 53:1 and then says that Isaiah spoke these things because he saw His glory and spoke of Him. The throne of Isaiah 6 and the suffering servant of Isaiah 53 belong to the same person, and the New Testament puts them side by side.",
+        verses: ["John 12:37-41"],
+      },
+    ],
+    keyVerses: ["Isaiah 6:3", "Isaiah 6:5", "Isaiah 6:7", "Isaiah 6:8", "John 12:41"],
+    raises: ["who-is-the-suffering-servant-in-isaiah-53", "how-do-i-find-christ-in-the-old-testament", "what-is-worship"],
+    followsFrom: ["why-did-elijah-run-to-the-mountain"],
+    related: ["what-is-worship", "is-the-whole-bible-about-jesus"],
+    planned: [],
+    order: 89,
+  },
+
+  {
+    slug: "who-is-the-suffering-servant-in-isaiah-53",
+    question: "Who is the suffering servant in Isaiah 53?",
+    category: "prophets-and-exile",
+    summary:
+      "Isaiah 53 describes a servant with no beauty, despised and rejected, pierced for our transgressions and crushed for our iniquities. He is led as a lamb to the slaughter, buried with the rich, and by his wounds we are healed. The New Testament answers the identity question directly: Philip, Peter, Matthew, and John all say this is Jesus.",
+    passages: [
+      {
+        book: "Isaiah",
+        chapter: 53,
+        title: "The servant and his suffering",
+        lookFor: "Who is speaking, who is suffering, and for whose sake. Count how many times the chapter says he bore something that belonged to us.",
+        focus: "1-12",
+      },
+      {
+        book: "Acts",
+        chapter: 8,
+        title: "The Ethiopian asks who the prophet means",
+        lookFor: "The passage the official was reading, his question, and how Philip answers it.",
+        focus: "26-39",
+      },
+      {
+        book: "1 Peter",
+        chapter: 2,
+        title: "Peter applies the chapter to Christ",
+        lookFor: "How Peter quotes Isaiah's words about the servant and the sheep and applies them to Jesus and to us.",
+        focus: "21-25",
+      },
+      {
+        book: "Matthew",
+        chapter: 8,
+        title: "He took our infirmities",
+        lookFor: "Matthew's comment on Jesus' healings, quoting Isaiah 53:4.",
+        focus: "14-17",
+      },
+    ],
+    points: [
+      {
+        heading: "No beauty, despised, a man of suffering",
+        body:
+          "The servant grows up like a root out of dry ground, and there is nothing in his appearance to attract us. He is despised and rejected, a man of suffering, one from whom men hide their face. Matthew, quoting Isaiah 53:4, applies the servant's bearing of sickness to Jesus' healings, and John quotes Isaiah 53:1 to describe a generation that would not believe despite the signs.",
+        verses: ["Isaiah 53:1-3", "Matthew 8:16-17", "John 12:37-38"],
+      },
+      {
+        heading: "Pierced for our transgressions",
+        body:
+          "The chapter's center is substitution: 'But he was pierced for our transgressions. He was crushed for our iniquities. The punishment that brought our peace was on him; and by his wounds we are healed.' Then the confession: 'All we like sheep have gone astray', and 'Yahweh has laid on him the iniquity of us all.' Peter takes those words and lays them directly on the cross.",
+        verses: ["Isaiah 53:4-6", "1 Peter 2:24-25"],
+      },
+      {
+        heading: "Led as a lamb, and silent",
+        body:
+          "The servant offers no defense: as a lamb led to the slaughter, as a sheep before its shearers, he does not open his mouth. He is cut off and given a grave with the wicked and a rich man in his death, though he had done no violence. This is the passage the Ethiopian official was reading when he asked whether the prophet meant himself or someone else, and Philip began there and preached Jesus to him.",
+        verses: ["Isaiah 53:7-9", "Acts 8:32-35"],
+      },
+      {
+        heading: "It pleased Yahweh to bruise him",
+        body:
+          "The chapter does not present the servant's death as an accident or a tragedy that God regrets. It pleased Yahweh to bruise him, and when his soul is made an offering for sin he sees his offspring and prolongs his days. He is numbered with the transgressors, bears the sin of many, and makes intercession for them, which is exactly how the Gospels describe the cross.",
+        verses: ["Isaiah 53:10-12", "Luke 22:37", "Mark 10:45"],
+      },
+      {
+        heading: "The righteous servant justifies many",
+        body:
+          "The last word about the servant is what he accomplishes: 'My righteous servant will justify many by the knowledge of himself; and he will bear their iniquities.' Paul says the same thing in a sentence when he writes that God made the sinless One to be sin for us, so that in Him we might become the righteousness of God.",
+        verses: ["Isaiah 53:11", "2 Corinthians 5:21", "Romans 4:25"],
+      },
+    ],
+    keyVerses: ["Isaiah 53:5-6", "Isaiah 53:7", "Isaiah 53:11", "Acts 8:35", "1 Peter 2:24"],
+    raises: ["why-did-jesus-have-to-die", "how-do-i-find-christ-in-the-old-testament", "what-is-the-gospel"],
+    followsFrom: ["what-did-isaiah-see-in-the-temple"],
+    related: ["what-is-the-gospel", "why-did-jesus-have-to-die"],
+    planned: [],
+    order: 90,
+  },
+
+  {
+    slug: "can-these-bones-live",
+    question: "Can these bones live?",
+    category: "prophets-and-exile",
+    summary:
+      "Ezekiel is set down in a valley full of very dry bones and asked whether they can live. He prophesies twice: the bones come together, and then breath enters them. It is a picture of exiled Israel raised out of its grave, and of the Spirit who raises the dead.",
+    passages: [
+      {
+        book: "Ezekiel",
+        chapter: 37,
+        title: "The valley of dry bones and the two sticks",
+        lookFor: "The two stages of the vision, what the bones turn out to represent, and who the one shepherd is.",
+        focus: "1-28",
+      },
+      {
+        book: "John",
+        chapter: 5,
+        title: "All in the tombs will hear his voice",
+        lookFor: "Jesus speaking of a resurrection that the vision only pictured.",
+        focus: "24-29",
+      },
+      {
+        book: "Romans",
+        chapter: 8,
+        title: "The Spirit who raised Jesus",
+        lookFor: "The same Spirit who raised Christ giving life to mortal bodies now.",
+        focus: "9-11",
+      },
+      {
+        book: "Ephesians",
+        chapter: 2,
+        title: "Dead in trespasses, made alive",
+        lookFor: "Paul's own use of the bones picture: dead, then made alive together with Christ.",
+        focus: "1-10",
+      },
+    ],
+    points: [
+      {
+        heading: "A valley of very dry bones, and a question",
+        body:
+          "The hand of Yahweh sets Ezekiel down in a valley full of bones, and the text adds that they were very dry. Then God asks the prophet a question he cannot answer: 'can these bones live?' Ezekiel's reply is the right one: 'Lord Yahweh, you know.' The vision begins with an honest admission of impossibility, not with optimism.",
+        verses: ["Ezekiel 37:1-3"],
+      },
+      {
+        heading: "The word comes first, then the breath",
+        body:
+          "Ezekiel is told to prophesy over the bones, and as he speaks there is a noise and a shaking, and the bones come together. Sinews, flesh, and skin cover them, but there is no breath in them yet. Only then does God say, 'I will put my Spirit in you, and you shall live.' Structure comes by the word; life comes by the Spirit, and both are His gift.",
+        verses: ["Ezekiel 37:4-8", "Ezekiel 37:14"],
+      },
+      {
+        heading: "The bones are the house of Israel",
+        body:
+          "God does not leave the picture unexplained. The bones are the whole house of Israel saying, 'Our bones are dried up, and our hope is lost.' The promise answers that despair directly: 'I will open your graves, and cause you to come up out of your graves, my people', and bring them into their own land. A people who called themselves finished are told that God is not finished.",
+        verses: ["Ezekiel 37:11-14"],
+      },
+      {
+        heading: "Two sticks, one nation, one shepherd",
+        body:
+          "The second half of the chapter joins two sticks into one, and promises one nation under one king: 'My servant David shall be king over them; and they all shall have one shepherd.' God makes an everlasting covenant of peace, sets His sanctuary among them, and says He will be their God and they will be His people. A scattered people is given a single future.",
+        verses: ["Ezekiel 37:21-27"],
+      },
+      {
+        heading: "The resurrection behind the picture",
+        body:
+          "The image reaches further than the return from exile. Jesus says the hour is coming when all who are in the tombs will hear His voice and come out. Romans says the Spirit who raised Jesus from the dead will give life to our mortal bodies. And Paul describes salvation itself in the valley's language: we were dead in trespasses, and God made us alive together with Christ.",
+        verses: ["John 5:28-29", "Romans 8:11", "Ephesians 2:1-5"],
+      },
+    ],
+    keyVerses: ["Ezekiel 37:3", "Ezekiel 37:5", "Ezekiel 37:14", "Ezekiel 37:24", "John 5:28"],
+    raises: ["what-is-the-resurrection", "who-is-the-holy-spirit", "what-happens-when-i-die", "why-did-daniels-friends-walk-into-the-fire"],
+    followsFrom: ["why-did-god-send-his-people-into-exile"],
+    related: ["what-is-the-new-heart-that-god-promised", "who-is-the-holy-spirit"],
+    planned: [],
+    order: 93,
+  },
+
+  {
+    slug: "why-did-daniels-friends-walk-into-the-fire",
+    question: "Why did Daniel's friends walk into the fire?",
+    category: "prophets-and-exile",
+    summary:
+      "Three exiles refused to bow to a golden image, and answered the king with a faith that did not demand rescue: our God is able to deliver us, but if not, we still will not serve your gods. They walked into the furnace and found they were not alone in it.",
+    passages: [
+      {
+        book: "Daniel",
+        chapter: 3,
+        title: "The image, the refusal, the furnace",
+        lookFor: "The exact words of their answer to the king, who the fourth figure in the fire is, and what the fire did and did not do.",
+        focus: "1-30",
+      },
+      {
+        book: "Hebrews",
+        chapter: 11,
+        title: "Faith that quenched the power of fire",
+        lookFor: "The catalogue of faith that includes this deliverance without naming it.",
+        focus: "32-34",
+      },
+      {
+        book: "1 Peter",
+        chapter: 1,
+        title: "Faith tested by fire",
+        lookFor: "How Peter uses fire as the image for trials that prove faith rather than destroy it.",
+        focus: "6-9",
+      },
+    ],
+    points: [
+      {
+        heading: "A faith that did not bargain for rescue",
+        body:
+          "The three men do not dispute the charge or ask for time. They say that God is able to deliver them from the burning fiery furnace, and then add the sentence that makes the story what it is: 'But if not, let it be known to you, O king, that we will not serve your gods.' Their obedience was not a wager on a miracle; it was settled before they knew the outcome.",
+        verses: ["Daniel 3:16-18"],
+      },
+      {
+        heading: "The fourth in the fire",
+        body:
+          "The furnace is heated seven times hotter than usual and the men who throw them in are killed by the flames. Then the king looks again and sees four men loose, walking in the midst of the fire, unharmed, and he says the aspect of the fourth is like a son of the gods. The deliverance God gave was not escape from the fire but company in it.",
+        verses: ["Daniel 3:19-25"],
+      },
+      {
+        heading: "Not even the smell of fire",
+        body:
+          "When they come out, the officials gather and see that the fire had no power on their bodies: not a hair of their head singed, their clothing unchanged, and no smell of fire on them. The king who built the image then blesses the God who sent His angel to deliver His servants who trusted in Him. A public test became a public testimony.",
+        verses: ["Daniel 3:26-29"],
+      },
+      {
+        heading: "The New Testament reads it back",
+        body:
+          "Hebrews lists, among the exploits of faith, those who 'quenched the power of fire', and Peter tells believers that their trials are the proving of faith, more precious than gold that perishes even though it is tested by fire. The furnace is not a sign that God has abandoned His people; Scripture treats it as one of the places where faith is shown to be real.",
+        verses: ["Hebrews 11:33-34", "1 Peter 1:6-7"],
+      },
+    ],
+    keyVerses: ["Daniel 3:17-18", "Daniel 3:25", "Daniel 3:27", "Hebrews 11:34"],
+    raises: ["why-did-daniel-keep-praying-at-the-window", "what-is-faith", "why-does-god-allow-suffering"],
+    followsFrom: ["can-these-bones-live"],
+    related: ["why-does-god-allow-suffering", "what-is-faith"],
+    planned: [],
+    order: 94,
+  },
+
+  {
+    slug: "why-did-daniel-keep-praying-at-the-window",
+    question: "Why did Daniel keep praying at the window?",
+    category: "prophets-and-exile",
+    summary:
+      "Daniel's enemies knew exactly where to find him: at an open window facing Jerusalem, on his knees, giving thanks three times a day. A decree made that prayer illegal, and Daniel did not change his habit. The lions' den became the place where a faithful God was publicly vindicated.",
+    passages: [
+      {
+        book: "Daniel",
+        chapter: 6,
+        title: "The decree, the window, the den",
+        lookFor: "What Daniel does when he learns of the decree, how the king reacts, and the reason Daniel gives for his safety.",
+        focus: "1-28",
+      },
+      {
+        book: "Luke",
+        chapter: 18,
+        title: "Pray and do not give up",
+        lookFor: "The parable Jesus tells so that His disciples would keep praying and not lose heart.",
+        focus: "1-8",
+      },
+      {
+        book: "Ephesians",
+        chapter: 6,
+        title: "Praying at all times in the Spirit",
+        lookFor: "Paul's instruction to keep alert with all perseverance and prayer.",
+        focus: "18-20",
+      },
+      {
+        book: "Hebrews",
+        chapter: 11,
+        title: "Who stopped the mouths of lions",
+        lookFor: "The same catalogue of faith, naming this deliverance in a phrase.",
+        focus: "32-34",
+      },
+    ],
+    points: [
+      {
+        heading: "A habit, not an emergency",
+        body:
+          "Daniel's windows were open toward Jerusalem, and he knelt three times a day to pray and give thanks, 'as he did before.' That last phrase is the whole point: nothing in the story is improvised. His enemies could build a trap around him precisely because his devotion was predictable.",
+        verses: ["Daniel 6:10"],
+      },
+      {
+        heading: "The trap and the choice",
+        body:
+          "The administrators can find no fault in Daniel's work, so they come at his God: they persuade the king to sign a decree that no one may petition any god or man but the king for thirty days. Daniel knows the writing is signed, and he goes home and prays anyway. He does not seek a confrontation, and he does not hide from one either.",
+        verses: ["Daniel 6:4-10"],
+      },
+      {
+        heading: "The mouths of the lions shut",
+        body:
+          "The king is distressed and works to deliver him, but the law of the Medes and Persians cannot be changed. A stone is laid on the mouth of the den and sealed. In the morning Daniel tells the king that God sent His angel and shut the lions' mouths, and that no kind of harm was found on him 'because he had trusted in his God.'",
+        verses: ["Daniel 6:14-23"],
+      },
+      {
+        heading: "Prayer that keeps going",
+        body:
+          "Jesus tells a parable about a widow who keeps coming to an unjust judge, and Luke tells us the point: that His disciples must always pray and not give up. Paul tells the church to pray at all times in the Spirit with all perseverance. Daniel's three times a day is one shape of that perseverance, and Hebrews files it under faith: his is one of the men who stopped the mouths of lions.",
+        verses: ["Luke 18:1-8", "Ephesians 6:18", "Hebrews 11:33"],
+      },
+    ],
+    keyVerses: ["Daniel 6:10", "Daniel 6:22", "Daniel 6:23", "Hebrews 11:33"],
+    raises: ["does-god-hear-my-prayers", "how-do-i-know-gods-will", "how-should-christians-live-as-exiles"],
+    followsFrom: ["why-did-daniels-friends-walk-into-the-fire"],
+    related: ["does-god-hear-my-prayers", "how-should-christians-live-as-exiles"],
+    planned: [],
+    order: 95,
   },
 
   // ------------------------------------------------------------------
