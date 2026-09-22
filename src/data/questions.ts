@@ -13774,10 +13774,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Psalms 82:1", "Psalms 82:6-7", "John 10:34-36", "John 10:30"],
-    raises: ["is-jesus-really-god", "what-does-firstborn-mean"],
+    raises: ["is-jesus-really-god", "what-does-firstborn-mean", "who-are-the-sons-of-god-in-genesis-6"],
     followsFrom: ["are-there-other-gods"],
     related: ["does-jesus-sharing-gods-nature-mean-two-gods", "why-jesus-calls-the-spirit-another-helper"],
-    planned: ["Who are the sons of God in Genesis 6?"],
+    planned: [],
     order: 63,
   },
 
@@ -15980,7 +15980,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 2:17", "Genesis 3:15", "Romans 5:12"],
-    raises: ["what-is-sin", "why-does-god-allow-suffering", "why-did-jesus-have-to-die", "why-did-god-call-abraham", "what-does-the-flood-show-us-about-god", "why-did-god-place-the-tree-in-the-garden"],
+    raises: ["what-is-sin", "why-does-god-allow-suffering", "why-did-jesus-have-to-die", "why-did-god-call-abraham", "who-are-the-sons-of-god-in-genesis-6", "what-does-the-flood-show-us-about-god", "why-did-god-place-the-tree-in-the-garden"],
     followsFrom: ["what-is-the-bibles-big-story", "why-did-god-create-us", "what-does-it-mean-to-be-made-in-gods-image"],
     related: ["where-does-temptation-come-from", "does-god-use-our-failures"],
     planned: [],
@@ -16112,7 +16112,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 12:1-3", "Genesis 15:6", "Galatians 3:8"],
-    raises: ["what-is-faith", "did-god-choose-me", "how-do-i-find-christ-in-the-old-testament", "what-does-the-exodus-show-us-about-god", "why-did-god-test-abraham-with-isaac"],
+    raises: ["what-is-faith", "did-god-choose-me", "how-do-i-find-christ-in-the-old-testament", "who-was-melchizedek", "what-does-the-exodus-show-us-about-god", "why-did-god-test-abraham-with-isaac"],
     followsFrom: ["what-went-wrong-in-eden", "what-is-the-bibles-big-story", "what-happened-at-babel"],
     related: ["faith-or-works", "what-is-the-gospel"],
     planned: [],
@@ -16962,11 +16962,11 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 22:8", "Genesis 22:14", "Hebrews 11:19", "Romans 8:32"],
-    raises: ["why-did-jesus-have-to-die", "what-is-faith", "how-did-jacob-become-israel"],
+    raises: ["why-did-jesus-have-to-die", "what-is-faith", "how-did-god-provide-a-wife-for-isaac", "how-did-jacob-become-israel"],
     followsFrom: ["why-did-god-call-abraham"],
     related: ["how-do-i-find-christ-in-the-old-testament", "faith-or-works"],
     planned: [],
-    order: 96,
+    order: 93,
   },
 
   {
@@ -17453,11 +17453,11 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 28:15", "Genesis 32:26", "Genesis 32:28", "Genesis 35:10"],
-    raises: ["what-was-god-doing-in-josephs-slavery"],
+    raises: ["how-did-god-raise-joseph-in-prison"],
     followsFrom: ["why-did-god-test-abraham-with-isaac"],
     related: ["does-god-use-our-failures", "what-is-repentance"],
     planned: [],
-    order: 97,
+    order: 96,
   },
 
   {
@@ -17523,7 +17523,7 @@ export const questions: Question[] = [
     ],
     keyVerses: ["Genesis 50:20", "Genesis 45:7-8", "Genesis 39:21"],
     raises: ["why-does-god-allow-suffering", "is-god-in-control"],
-    followsFrom: ["how-did-jacob-become-israel"],
+    followsFrom: ["how-did-god-raise-joseph-in-prison"],
     related: ["does-god-use-our-failures", "where-is-god-in-my-pain"],
     planned: [],
     order: 98,
@@ -20119,6 +20119,471 @@ export const questions: Question[] = [
     related: ["what-is-the-spirits-role-in-public-worship", "what-does-a-church-need-from-its-leaders", "does-god-have-one-plan-for-my-marriage", "made-for-relationship"],
     planned: ["How should a husband and wife relate in marriage?"],
     order: 121,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Story of Scripture (continued: the Genesis arc filled in)
+  // ------------------------------------------------------------------
+  {
+    slug: "who-are-the-sons-of-god-in-genesis-6",
+    question: "Who are the sons of God in Genesis 6?",
+    category: "in-the-beginning",
+    summary:
+      "Genesis 6 tells of the sons of God taking wives from the daughters of men, and of the wickedness that followed. The phrase elsewhere in the Old Testament names heavenly beings who stand before Yahweh, and the New Testament ties the days of Noah to angels who sinned. Whatever we conclude about the details, the weight of the passage falls on human corruption, God's grief, and one man who found favor.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 6,
+        title: "The sons of God and the wickedness of man",
+        lookFor: "Who the sons of God are said to be, what their marriages produce, and how God responds to the state of the human heart.",
+        focus: "1-8",
+      },
+      {
+        book: "Job",
+        chapter: 1,
+        title: "The sons of God present themselves",
+        lookFor: "The same phrase in another ancient book: heavenly beings gathered before Yahweh, with Satan among them.",
+        focus: "6-12",
+      },
+      {
+        book: "2 Peter",
+        chapter: 2,
+        title: "Angels who sinned",
+        lookFor: "Peter links angels who sinned, the ancient world of Noah, and Sodom in one chain of judgment and rescue.",
+        focus: "4-9",
+      },
+      {
+        book: "Jude",
+        chapter: 1,
+        title: "Angels who left their domain",
+        lookFor: "Jude sets angels who abandoned their own dwelling place beside Sodom as a warning.",
+        focus: "5-7",
+      },
+    ],
+    points: [
+      {
+        heading: "The phrase normally names heavenly beings",
+        body:
+          "Outside Genesis, the sons of God are the heavenly court: they present themselves before Yahweh in Job, they shout for joy when the foundations of the earth were laid, and the psalmist asks who among the heavenly beings can be compared to Yahweh. A Hebrew reader would hear the phrase the same way here, which is why the oldest reading of Genesis 6 takes them to be angelic beings rather than a godly family line.",
+        verses: ["Job 1:6", "Job 2:1", "Job 38:7", "Psalms 89:6"],
+      },
+      {
+        heading: "The New Testament ties the days of Noah to angels who sinned",
+        body:
+          "Peter and Jude both reach back behind the flood to angelic rebellion, and both use it as a warning. Jude says the angels who did not keep their first domain are kept in everlasting bonds for the judgment of the great day, and immediately compares them to Sodom. Peter joins the same three together: angels who sinned, the ancient world preserved through Noah, and the cities of the plain. That is not proof by itself, but it shows how the earliest Christians read the passage.",
+        verses: ["2 Peter 2:4-5", "Jude 1:6-7"],
+      },
+      {
+        heading: "Another reading is possible, and the passage does not turn on it",
+        body:
+          "Many faithful readers have taken the sons of God to be the line of Seth intermarrying with the line of Cain, and the text can bear that reading. Genesis does not explain the phrase here and spends no time on the mechanics. It tells us what happened to the world, not how to satisfy our curiosity about the visitors.",
+        verses: ["Genesis 6:1-4"],
+      },
+      {
+        heading: "The point is judgment, grief, and grace",
+        body:
+          "The verses that follow are the heart of the chapter: 'every imagination of the thoughts of man's heart was continually only evil', and 'Yahweh was sorry that he had made man on the earth, and it grieved him in his heart.' Then the whole story turns in one sentence: 'But Noah found favor in Yahweh's eyes.' The chapter is not a puzzle to solve but a mirror, and the only exit it offers is grace.",
+        verses: ["Genesis 6:5-6", "Genesis 6:8"],
+      },
+    ],
+    keyVerses: ["Genesis 6:2", "Genesis 6:5", "Genesis 6:8", "Job 1:6", "2 Peter 2:4", "Jude 1:6"],
+    raises: ["what-does-the-flood-show-us-about-god", "who-is-satan", "how-do-i-find-christ-in-the-old-testament"],
+    followsFrom: ["what-went-wrong-in-eden"],
+    related: ["what-does-the-flood-show-us-about-god", "what-is-sin"],
+    planned: [],
+    order: 89,
+  },
+
+  {
+    slug: "who-was-melchizedek",
+    question: "Who was Melchizedek?",
+    category: "the-fathers",
+    summary:
+      "Melchizedek appears once in Genesis: a priest-king of Salem who brings bread and wine to Abraham, blesses him, and receives a tenth of everything. He vanishes for a thousand years until Psalm 110 swears that the coming king will be a priest forever in his order, and Hebrews shows that this is the priesthood Jesus holds.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 14,
+        title: "The priest of God Most High",
+        lookFor: "Who comes out to meet Abram after the battle, what he brings, and what Abram gives him.",
+        focus: "17-24",
+      },
+      {
+        book: "Psalms",
+        chapter: 110,
+        title: "A priest forever",
+        lookFor: "The oath Yahweh swears to the coming Lord, and how it joins a throne and a priesthood in one person.",
+        focus: "1-7",
+      },
+      {
+        book: "Hebrews",
+        chapter: 7,
+        title: "The order of Melchizedek",
+        lookFor: "How the argument works: a different priesthood means a different covenant, and a priest who lives forever saves completely.",
+        focus: "1-28",
+      },
+    ],
+    points: [
+      {
+        heading: "He is a priest-king, and his names preach",
+        body:
+          "Melchizedek is king of Salem and priest of God Most High, and he arrives with bread and wine to bless Abram. Hebrews unpacks the names: first, king of righteousness, and then king of Salem, which is king of peace. Before Israel had a priesthood at all, a Gentile king was already serving the true God under both titles the Messiah would later bear.",
+        verses: ["Genesis 14:18-19", "Hebrews 7:1-2"],
+      },
+      {
+        heading: "He appears without genealogy, and the silence is doing work",
+        body:
+          "Hebrews says he is without father, without mother, without genealogy, having neither beginning of days nor end of life, but made like the Son of God, and so he remains a priest continually. Scripture gives him no family line, no birth, and no death. The silence is the point: he is a pattern of a priesthood that does not begin or end with a body in a grave.",
+        verses: ["Hebrews 7:3"],
+      },
+      {
+        heading: "Abraham bowed to him, and Levi was still in Abraham",
+        body:
+          "The lesser is blessed by the greater, and the one who receives the tithe stands above the one who pays it. Hebrews presses further: Levi, the ancestor of every Israelite priest, was still in the body of his father when Melchizedek met Abraham, so in a sense Levi paid tithes to him. The whole Levitical system therefore acknowledged a priesthood older and higher than itself.",
+        verses: ["Genesis 14:19-20", "Hebrews 7:9-10"],
+      },
+      {
+        heading: "A new priesthood means a new covenant",
+        body:
+          "If perfection had come through the Levitical priesthood, Hebrews argues, why would God promise another priest in another order? The change of priesthood forces a change of law, and Jesus becomes the guarantee of a better covenant. Because He lives forever, 'he is also able to save to the uttermost those who draw near to God through him', since He always lives to make intercession for them.",
+        verses: ["Psalms 110:4", "Hebrews 7:11-12", "Hebrews 7:22", "Hebrews 7:25"],
+      },
+    ],
+    keyVerses: ["Genesis 14:18-20", "Psalms 110:4", "Hebrews 7:3", "Hebrews 7:25"],
+    raises: ["what-did-circumcision-seal", "do-i-need-a-priest-to-reach-god", "why-did-jesus-have-to-die"],
+    followsFrom: ["why-did-god-call-abraham"],
+    related: ["what-did-the-sacrificial-system-teach-israel", "what-is-the-gospel"],
+    planned: [],
+    order: 90,
+  },
+
+  {
+    slug: "what-did-circumcision-seal",
+    question: "What did circumcision seal?",
+    category: "the-fathers",
+    summary:
+      "God gave Abraham circumcision as the sign of the covenant, a cutting in the flesh of every male in his house. But Abraham had already believed and been counted righteous years earlier, so the sign sealed a righteousness he already possessed by faith. The prophets therefore called for a circumcision of the heart, and Paul says believers receive the circumcision made without hands in Christ.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 17,
+        title: "The sign of the covenant",
+        lookFor: "What God promises, what He requires, and how the sign itself is described: a token of the covenant in the flesh.",
+        focus: "1-14",
+      },
+      {
+        book: "Romans",
+        chapter: 4,
+        title: "The seal of the righteousness of faith",
+        lookFor: "Paul's order of events: believing first, the sign afterward, so that Abraham could be father of all who believe.",
+        focus: "1-12",
+      },
+      {
+        book: "Colossians",
+        chapter: 2,
+        title: "The circumcision made without hands",
+        lookFor: "How Paul applies the image to believers: a putting off of the flesh, buried and raised with Christ in baptism.",
+        focus: "6-15",
+      },
+    ],
+    points: [
+      {
+        heading: "The sign came after the faith",
+        body:
+          "Abraham believed God in Genesis 15 and it was reckoned to him as righteousness. Circumcision was given in Genesis 17, years later. Paul builds his whole argument on that sequence: Abraham received the sign of circumcision as a seal of the righteousness of the faith he had while he was still uncircumcised, so that he might be the father of all who believe without being circumcised.",
+        verses: ["Genesis 15:6", "Genesis 17:10-11", "Romans 4:11"],
+      },
+      {
+        heading: "A seal confirms what is already true",
+        body:
+          "A seal does not create the document it authenticates; it certifies it. Circumcision marked Abraham and his household as participants in a covenant that rested on God's promise and Abraham's faith. That is why the sign could be given to infants who had not yet believed: it was a family mark of belonging to a covenant people, not a personal achievement to be earned.",
+        verses: ["Genesis 17:11", "Genesis 17:7"],
+      },
+      {
+        heading: "The prophets demanded a deeper circumcision",
+        body:
+          "Moses told Israel to circumcise the foreskin of their heart and to stop being stiff-necked, and later promised that Yahweh Himself would circumcise their heart so that they could love Him. Jeremiah repeated the call. The outward sign was never meant to stand alone; a marked body with an uncircumcised heart was the very hypocrisy the prophets condemned.",
+        verses: ["Deuteronomy 10:16", "Deuteronomy 30:6", "Jeremiah 4:4"],
+      },
+      {
+        heading: "In Christ the sign is fulfilled, not repeated",
+        body:
+          "Paul says believers were circumcised with a circumcision not made with hands, in the putting off of the body of the sins of the flesh, in the circumcision of Christ, having been buried with Him in baptism and raised with Him through faith. What the sign pointed at is accomplished at the cross and applied to the believer, which is why the physical rite is no longer the mark of God's people.",
+        verses: ["Colossians 2:11-12", "Jeremiah 31:33"],
+      },
+    ],
+    keyVerses: ["Genesis 17:10-11", "Romans 4:11", "Deuteronomy 30:6", "Colossians 2:11-12"],
+    raises: ["what-does-sodom-show-us-about-judgment", "what-is-baptism", "what-is-the-new-heart-that-god-promised"],
+    followsFrom: ["who-was-melchizedek"],
+    related: ["why-did-god-give-israel-the-law-at-sinai", "how-is-the-new-covenant-different-from-the-old-one"],
+    planned: [],
+    order: 91,
+  },
+
+  {
+    slug: "what-does-sodom-show-us-about-judgment",
+    question: "What does Sodom show us about judgment?",
+    category: "the-fathers",
+    summary:
+      "Sodom is the Bible's standing example of judgment: fire fell from Yahweh out of the sky and the cities of the plain were overthrown. But the story is told with Abraham interceding and Lot being rescued, and the prophets name Sodom's sins as pride, plenty, and neglect of the poor. Judgment is certain, and so is the mercy that pulls a person out of it.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 18,
+        title: "Abraham intercedes",
+        lookFor: "The conversation about the righteous in the city, and Abraham's appeal to the character of the Judge of all the earth.",
+        focus: "16-33",
+      },
+      {
+        book: "Genesis",
+        chapter: 19,
+        title: "The overthrow of the cities",
+        lookFor: "The violence of the city, the rescue of Lot and his family, and the patience with which they are brought out.",
+        focus: "1-29",
+      },
+      {
+        book: "2 Peter",
+        chapter: 2,
+        title: "An example to the ungodly",
+        lookFor: "How Peter pairs the judgment of Sodom with the rescue of righteous Lot in a single argument.",
+        focus: "4-9",
+      },
+      {
+        book: "Jude",
+        chapter: 1,
+        title: "A warning kept in view",
+        lookFor: "Jude points to these cities as an example of the punishment of eternal fire.",
+        focus: "5-7",
+      },
+    ],
+    points: [
+      {
+        heading: "The Judge of all the earth can be trusted",
+        body:
+          "God tells Abraham what He is about to do, and Abraham draws near with the boldest question in Genesis: will God sweep away the righteous along with the wicked? God does not rebuke him. He accepts the terms, one notch at a time, down to ten righteous people. The story invites us to trust the Judge's character even when we cannot see the whole case.",
+        verses: ["Genesis 18:23-25", "Genesis 18:32"],
+      },
+      {
+        heading: "The sin was cruelty, not only sexual violence",
+        body:
+          "Genesis records the mob at the door, but the prophets widen the charge. Ezekiel names Sodom's iniquity as pride, fullness of bread, and prosperous ease, and says she did not strengthen the hand of the poor and needy; then she was haughty and committed abomination. Sodom's sins were the ordinary sins of a comfortable, self-satisfied society, which makes the warning land much closer to home.",
+        verses: ["Ezekiel 16:49-50", "Genesis 19:4-9"],
+      },
+      {
+        heading: "Judgment is real, and Scripture keeps it in view",
+        body:
+          "Fire and sulfur rained from Yahweh out of the sky and overthrew the cities, and the New Testament treats it as history with a future. Jude calls the cities an example of the punishment of eternal fire. Jesus warns that it will be more tolerable for Sodom in the day of judgment than for a town that has heard the gospel and refused it. Softening Sodom's judgment would make the gospel's warning meaningless.",
+        verses: ["Genesis 19:24-25", "Jude 1:7", "Matthew 10:15"],
+      },
+      {
+        heading: "God remembers His people in the middle of it",
+        body:
+          "Genesis refuses to end on fire: 'When God destroyed the cities of the plain, God remembered Abraham, and sent Lot out of the middle of the overthrow.' Peter calls Lot a righteous man distressed by the lawless lives around him, and draws the lesson that the Lord knows how to deliver the godly out of temptation and to keep the unrighteous under punishment. Rescue and judgment are one work of one God.",
+        verses: ["Genesis 19:29", "2 Peter 2:7-9"],
+      },
+    ],
+    keyVerses: ["Genesis 18:25", "Genesis 19:24", "Genesis 19:29", "2 Peter 2:9"],
+    raises: ["why-did-god-test-abraham-with-isaac", "what-is-the-final-judgment-and-who-will-be-there", "why-does-god-allow-suffering"],
+    followsFrom: ["what-did-circumcision-seal"],
+    related: ["why-does-death-hurt-so-much", "what-is-repentance"],
+    planned: [],
+    order: 92,
+  },
+
+  {
+    slug: "how-did-god-provide-a-wife-for-isaac",
+    question: "How did God provide a wife for Isaac?",
+    category: "the-fathers",
+    summary:
+      "Abraham sends his oldest servant to find a wife for Isaac from his own family, and the whole errand runs on prayer and providence: the servant asks for a sign, God answers before he finishes speaking, and Rebekah says she will go. It is the promise of offspring advancing through ordinary means, and it shows how God keeps a covenant He alone guaranteed.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 21,
+        title: "The promised son arrives",
+        lookFor: "The birth of Isaac at the set time God had spoken, the child the whole errand depends on.",
+        focus: "1-7",
+      },
+      {
+        book: "Genesis",
+        chapter: 24,
+        title: "A bride for Isaac",
+        lookFor: "The servant's prayer, the sign at the well, Rebekah's willing answer, and how the chapter ends with comfort after grief.",
+        focus: "1-67",
+      },
+      {
+        book: "Genesis",
+        chapter: 25,
+        title: "Two sons in one womb",
+        lookFor: "The twins, the oracle that the elder will serve the younger, and the birthright already in view.",
+        focus: "19-26",
+      },
+    ],
+    points: [
+      {
+        heading: "The promise needed an heir, and God had sworn it",
+        body:
+          "Sarah bore Isaac at the set time God had spoken, and the line of promise now needed a next generation. The servant's own words show what he was carrying: he repeats God's oath to give this land to Abraham's seed and trusts that God will send His angel ahead of him. The errand is not a search for a suitable match; it is the covenant moving forward.",
+        verses: ["Genesis 21:1-2", "Genesis 24:7"],
+      },
+      {
+        heading: "The servant prayed for a specific sign",
+        body:
+          "At the well he asks for something only God could arrange: that the young woman who offers to water his camels would be the one appointed for Isaac. Before he had finished speaking, Rebekah came out with her pitcher on her shoulder. The scene shows a man praying with real dependence and a God who answers faster than the prayer expected.",
+        verses: ["Genesis 24:12-15"],
+      },
+      {
+        heading: "Rebekah was asked, and she said yes",
+        body:
+          "When her family hesitated, they called Rebekah herself and asked whether she would go with this man, and she said, 'I will go.' Her consent matters: this is not a transaction conducted over her head. The chapter gives her the decisive word, and her family blesses her departure.",
+        verses: ["Genesis 24:57-58"],
+      },
+      {
+        heading: "God keeps His promise through ordinary providence",
+        body:
+          "There is no miracle in Genesis 24, no angelic visitation, only a journey, a well, a generous young woman, and a family conversation. Yet the family recognizes it plainly: 'The thing proceeds from Yahweh.' The chapter also ends in tenderness, with Isaac bringing Rebekah into his mother's tent, loving her, and being comforted after Sarah's death. Providence is not cold; it arrives as comfort.",
+        verses: ["Genesis 24:50", "Genesis 24:67"],
+      },
+    ],
+    keyVerses: ["Genesis 24:7", "Genesis 24:15", "Genesis 24:58", "Genesis 24:67"],
+    raises: ["what-did-esau-trade-away", "does-god-hear-my-prayers", "how-do-i-know-gods-will"],
+    followsFrom: ["why-did-god-test-abraham-with-isaac"],
+    related: ["why-did-god-call-abraham", "how-do-i-wait-on-gods-timing"],
+    planned: [],
+    order: 94,
+  },
+
+  {
+    slug: "what-did-esau-trade-away",
+    question: "What did Esau trade away?",
+    category: "the-fathers",
+    summary:
+      "Esau sold his birthright for a bowl of stew and later lost the blessing to Jacob's deceit, and Hebrews uses him as a warning about despising holy things. His story shows how a single appetite can put a price on a priceless inheritance, and how God's purpose still stood through human scheming without excusing it.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 25,
+        title: "The birthright sold",
+        lookFor: "How cheaply the firstborn's inheritance is traded, and the verdict the chapter pronounces on it.",
+        focus: "19-34",
+      },
+      {
+        book: "Genesis",
+        chapter: 27,
+        title: "The blessing taken",
+        lookFor: "Jacob's deceit, Isaac's inability to reverse the blessing, and Esau's bitter cry.",
+        focus: "1-40",
+      },
+      {
+        book: "Hebrews",
+        chapter: 12,
+        title: "A warning named Esau",
+        lookFor: "Why Esau is called profane, and what his tears could not undo.",
+        focus: "14-17",
+      },
+    ],
+    points: [
+      {
+        heading: "He sold an inheritance for a meal",
+        body:
+          "Esau came in from the field famished and asked for the red stew; Jacob named his price, and Esau swore the oath and sold his birthright. The chapter does not soften the verdict: 'So Esau despised his birthright.' Hunger is real, but the trade reveals what he actually valued, and it was not the promise given to his grandfather Abraham.",
+        verses: ["Genesis 25:29-34"],
+      },
+      {
+        heading: "A blessing cannot be unsaid",
+        body:
+          "Jacob deceived his blind father and took the blessing, and when Esau learned of it he cried with an exceeding great and bitter cry: 'Bless me, even me also, my father.' Isaac had nothing left to give. The scene is painful precisely because it is irreversible: some losses are not repaired by regret, however loud the tears.",
+        verses: ["Genesis 27:34-38"],
+      },
+      {
+        heading: "Hebrews calls him profane, not merely foolish",
+        body:
+          "Hebrews warns against being sexually immoral or profane like Esau, who sold his birthright for one meal, and adds that afterward he was rejected and found no place for a change of mind though he sought it diligently with tears. The word profane means treating the sacred as ordinary. That is the real sin of Esau: he handled a holy inheritance like a piece of merchandise.",
+        verses: ["Hebrews 12:16-17"],
+      },
+      {
+        heading: "God's purpose stood, and Jacob still paid",
+        body:
+          "The oracle had already said the elder would serve the younger before either twin was born, so that God's purpose in election would stand apart from works. God's plan was never at risk from Jacob's deceit. And yet Jacob paid for it: he fled, was deceived by Laban in return, and spent twenty years in a household of manipulation. Grace overrules our sin without making it cheap.",
+        verses: ["Genesis 25:23", "Romans 9:11-12", "Genesis 29:25"],
+      },
+    ],
+    keyVerses: ["Genesis 25:33-34", "Genesis 27:34", "Hebrews 12:16-17", "Romans 9:12"],
+    raises: ["how-did-jacob-become-israel", "does-god-use-our-failures", "what-is-repentance"],
+    followsFrom: ["how-did-god-provide-a-wife-for-isaac"],
+    related: ["did-god-choose-me", "what-is-repentance"],
+    planned: [],
+    order: 95,
+  },
+
+  {
+    slug: "how-did-god-raise-joseph-in-prison",
+    question: "How did God raise Joseph in prison?",
+    category: "the-fathers",
+    summary:
+      "Joseph went from a slave in Potiphar's house to a prisoner for doing right, and from prison to the second throne of Egypt. The text repeats one explanation for every rise and every fall: Yahweh was with him. God did not spare him the dungeon; He met him there and used it to place him where his family could be saved.",
+    passages: [
+      {
+        book: "Genesis",
+        chapter: 39,
+        title: "Faithful in the house and in the prison",
+        lookFor: "The refrain that explains everything: Yahweh was with Joseph, and what he did prospered.",
+        focus: "1-23",
+      },
+      {
+        book: "Genesis",
+        chapter: 40,
+        title: "Dreams in the dungeon",
+        lookFor: "Joseph's answer to the cupbearer and baker, and the forgotten request that kept him in prison two more years.",
+        focus: "1-23",
+      },
+      {
+        book: "Genesis",
+        chapter: 41,
+        title: "From prison to the palace",
+        lookFor: "How Joseph refuses the credit for interpreting dreams, and how Pharaoh recognizes the Spirit of God in him.",
+        focus: "1-45",
+      },
+      {
+        book: "Psalms",
+        chapter: 105,
+        title: "The word that tested him",
+        lookFor: "The psalm's summary of the same years: sold, shackled, and tried until the word proved true.",
+        focus: "16-22",
+      },
+    ],
+    points: [
+      {
+        heading: "The refrain is that Yahweh was with him",
+        body:
+          "Genesis repeats it in the house and again in the prison: Yahweh was with Joseph, and he was a prosperous man, and the keeper of the prison committed everything to his hand. The presence of God did not exempt him from injustice; it made him fruitful inside it. What looked like a detour was the road the promise was traveling.",
+        verses: ["Genesis 39:2-3", "Genesis 39:21-23"],
+      },
+      {
+        heading: "He refused to claim the power to interpret",
+        body:
+          "When the prisoners despaired over their dreams, Joseph asked, 'Don't interpretations belong to God?' and when Pharaoh asked him directly, he answered, 'It isn't in me. God will give Pharaoh an answer of peace.' Twice offered the chance to look impressive before powerful people, he handed the credit away. That is why he could be trusted with the promotion.",
+        verses: ["Genesis 40:8", "Genesis 41:16"],
+      },
+      {
+        heading: "God used the delay, not only the outcome",
+        body:
+          "The cupbearer forgot Joseph, and two more years passed. Psalm 105 says his feet were bruised with shackles and his neck locked in irons until the time His word happened, and that Yahweh's word proved him true. The waiting was not wasted; it was how the word tested and formed the man who would administer grain to the nations.",
+        verses: ["Genesis 40:23", "Psalms 105:17-19"],
+      },
+      {
+        heading: "The rise was for rescue, not for Joseph alone",
+        body:
+          "Pharaoh recognized a man in whom was the Spirit of God and set him over all the land of Egypt. That throne existed for one purpose the reader already knows: to keep a family alive through a famine. Joseph names it himself in the end, saying that God sent him ahead to preserve life. The exaltation of one man is the rescue of the covenant line.",
+        verses: ["Genesis 41:38-41", "Genesis 45:5-7"],
+      },
+    ],
+    keyVerses: ["Genesis 39:2", "Genesis 39:21", "Genesis 41:16", "Psalms 105:19"],
+    raises: ["what-was-god-doing-in-josephs-slavery", "why-does-god-allow-suffering", "is-god-in-control"],
+    followsFrom: ["how-did-jacob-become-israel"],
+    related: ["what-was-god-doing-in-josephs-slavery", "how-do-i-wait-on-gods-timing"],
+    planned: [],
+    order: 97,
   },
 
   // ------------------------------------------------------------------
