@@ -140,20 +140,28 @@ function splitLong(text: string): string[] {
   return out.flatMap((s) => (s.length > CHUNK_MAX ? hardSplit(s) : [s]));
 }
 
-/** Index just after the last clause separator within the first `max` chars. */
+/**
+ * Index just after the last clause separator within the first `max` chars.
+ *
+ * The cut must land on a whitespace boundary in the source. chunkText's
+ * pieces are rejoined with a single space, so cutting against a non-space
+ * would insert a space the verse does not contain. Genesis 24:14 is the case
+ * that exposed it: a comma followed by a quote and then a dash, with no space
+ * anywhere after the comma, so that separator is skipped and an earlier one
+ * is used instead.
+ */
 function findClauseCut(text: string, max: number): number {
   const window = text.slice(0, max);
-  let idx = -1;
-  for (let i = 0; i < window.length; i++) {
+  for (let i = window.length - 1; i >= 0; i--) {
     const ch = window[i];
-    if (ch === "," || ch === ";" || ch === ":") idx = i + 1;
-  }
-  // Absorb any quote marks right after the separator ("…them,\" says"): the
-  // next chunk starts cleanly and the pieces reassemble the source exactly.
-  if (idx > -1) {
+    if (ch !== "," && ch !== ";" && ch !== ":") continue;
+    let idx = i + 1;
+    // Absorb any quote marks right after the separator ("…them,\" says"): the
+    // next chunk starts cleanly and the pieces reassemble the source exactly.
     while (idx < text.length && (text[idx] === '"' || text[idx] === "'")) idx += 1;
+    if (idx >= text.length || /\s/.test(text[idx])) return idx;
   }
-  return idx;
+  return -1;
 }
 
 /** Last resort: splice on word boundaries. */
