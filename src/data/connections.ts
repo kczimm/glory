@@ -1041,6 +1041,16 @@ export const connections: Record<string, Connection[]> = {
       "theme",
       "The mountain named Yahweh Will Provide stands near the earlier moment when Abraham believed Yahweh and was counted righteous.",
     ),
+    c(
+      "2 Chronicles 3:1",
+      "pattern",
+      "Solomon built the house of Yahweh at Jerusalem on Mount Moriah, so the mountain where a substitute died became the place of Israel's sacrifice.",
+    ),
+    c(
+      "Hebrews 13:12",
+      "contrast",
+      "The offerings continued on Moriah for centuries, but Jesus sanctified the people through His own blood and suffered outside the gate.",
+    ),
   ],
   "Hebrews 11:19": [
     c(
@@ -2936,6 +2946,67 @@ export const connections: Record<string, Connection[]> = {
       "Revelation 7:9",
       "fulfilled",
       "A multitude from every nation, the blessing finally reaching all the families of the earth.",
+    ),
+  ],
+  // why-did-god-test-abraham-with-isaac: the shape of the cross on Moriah
+  "Genesis 22:2": [
+    c(
+      "John 3:16",
+      "theme",
+      "Abraham is told to offer his son, his only son, the one he loves; the Gospel says God gave His one and only Son because He loved the world.",
+    ),
+    c(
+      "Mark 1:11",
+      "theme",
+      "The Father's voice at the Jordan names Jesus His beloved Son, the same words that made Isaac the son of the promise.",
+    ),
+  ],
+  "Genesis 22:6": [
+    c(
+      "John 19:17",
+      "pattern",
+      "Isaac carries the wood for his own offering up the mountain, and Jesus carries His own cross out to Golgotha.",
+    ),
+    c(
+      "1 Peter 2:24",
+      "pattern",
+      "The son who carried the wood is answered by the Savior who bore our sins in His body on the tree.",
+    ),
+  ],
+  "Genesis 22:7": [
+    c(
+      "Revelation 5:6",
+      "fulfilled",
+      "Isaac's question about where the lamb is finds its final answer at the throne, where a Lamb stands as though it had been slain.",
+    ),
+    c(
+      "Isaiah 53:7",
+      "pattern",
+      "The servant is led as a lamb to the slaughter and does not open his mouth, the lamb Abraham could not yet see.",
+    ),
+  ],
+  "Genesis 22:9": [
+    c(
+      "Philippians 2:8",
+      "theme",
+      "Isaac is laid on the altar by his father's hand; the Son of God humbled Himself and became obedient to death, yes, the death of the cross.",
+    ),
+    c(
+      "Hebrews 9:28",
+      "pattern",
+      "The offering of the beloved son on the mountain foreshadows the Christ offered once to bear the sins of many.",
+    ),
+  ],
+  "Genesis 22:16": [
+    c(
+      "Hebrews 6:13",
+      "quotes",
+      "Because He could swear by no one greater, God swore by Himself, and Hebrews quotes this very oath given to Abraham.",
+    ),
+    c(
+      "Hebrews 6:17",
+      "theme",
+      "The oath was given so the heirs of the promise would have strong encouragement, which is why the test on Moriah ends in a covenant secured by God alone.",
     ),
   ],
   "Genesis 12:3": [
@@ -4845,6 +4916,378 @@ export const connections: Record<string, Connection[]> = {
       "1 Corinthians 12:12",
       "theme",
       "As the body is one and has many members, so also is Christ, the image Paul applies directly to the church.",
+    ),
+  ],
+  // ------------------------------------------------------------------
+  // The Genesis arc studies (In the Beginning, The Fathers)
+  // ------------------------------------------------------------------
+  "Genesis 6:2": [
+    c(
+      "Job 1:6",
+      "parallel",
+      "The same phrase names the heavenly beings who present themselves before Yahweh in Job, which is why the oldest reading takes them to be angelic.",
+    ),
+    c(
+      "Jude 1:6",
+      "theme",
+      "Jude speaks of angels who did not keep their first domain, the rebellion the New Testament places behind the days of Noah.",
+    ),
+  ],
+  "Genesis 6:5": [
+    c(
+      "Genesis 8:21",
+      "parallel",
+      "After the flood God says in His heart that the imagination of man's heart is evil from his youth, the same diagnosis repeated after judgment.",
+    ),
+    c(
+      "Jeremiah 17:9",
+      "theme",
+      "Jeremiah asks who can know the heart, because it is deceitful above all things and exceedingly corrupt.",
+    ),
+    c(
+      "Mark 7:21-23",
+      "theme",
+      "Jesus traces evil thoughts, murders, and pride back to the heart, which is where Genesis 6 locates the corruption.",
+    ),
+  ],
+  "Job 1:6": [
+    c(
+      "Zechariah 3:1",
+      "parallel",
+      "Zechariah sees Joshua the high priest standing before the angel of Yahweh with Satan at his right hand to accuse him.",
+    ),
+    c(
+      "1 Kings 22:19",
+      "theme",
+      "Micaiah sees Yahweh sitting on His throne with all the army of heaven standing beside Him, the same court Job describes.",
+    ),
+  ],
+  "2 Peter 2:4": [
+    c(
+      "Jude 1:6",
+      "parallel",
+      "Jude records the same tradition: the angels who sinned are kept in everlasting bonds under darkness for judgment.",
+    ),
+    c(
+      "Genesis 6:2",
+      "theme",
+      "Peter reaches behind the flood to heavenly beings who overstepped their place, the rebellion Genesis 6 narrates.",
+    ),
+  ],
+  "Jude 1:6": [
+    c(
+      "2 Peter 2:4",
+      "parallel",
+      "Peter says the same thing, that God did not spare angels when they sinned but cast them down to be reserved for judgment.",
+    ),
+    c(
+      "Revelation 20:2",
+      "theme",
+      "The dragon, the old serpent who is the devil and Satan, is finally bound, the end of the rebellion that began before the flood.",
+    ),
+  ],
+  "Genesis 14:18-20": [
+    c(
+      "Psalms 110:4",
+      "promise",
+      "A thousand years later Yahweh swears that the coming king will be a priest forever in the order of Melchizedek.",
+    ),
+    c(
+      "Hebrews 7:3",
+      "fulfilled",
+      "Hebrews reads the silence of Genesis as a portrait: no father, no mother, no genealogy, made like the Son of God.",
+    ),
+    c(
+      "Hebrews 7:25",
+      "theme",
+      "The priest with no recorded end points to the priest who lives forever and saves completely.",
+    ),
+  ],
+  "Psalms 110:4": [
+    c(
+      "Hebrews 7:21",
+      "quotes",
+      "Hebrews quotes the oath to show that Jesus became a priest with a sworn guarantee, not by a temporary rule.",
+    ),
+    c(
+      "Genesis 14:18-20",
+      "theme",
+      "The oath points back to the priest-king who blessed Abraham and received a tenth of everything.",
+    ),
+  ],
+  "Hebrews 7:3": [
+    c(
+      "Psalms 110:4",
+      "quotes",
+      "The argument rests on the psalm's oath about an order of priesthood older than Levi.",
+    ),
+    c(
+      "Genesis 14:18-20",
+      "pattern",
+      "Melchizedek appears without genealogy, the pattern Hebrews reads as a priesthood without end.",
+    ),
+    c(
+      "Hebrews 7:25",
+      "theme",
+      "Because He remains a priest continually, He is able to save to the uttermost those who draw near through Him.",
+    ),
+  ],
+  "Genesis 17:10-11": [
+    c(
+      "Romans 4:11",
+      "theme",
+      "Paul explains what the sign was for: a seal of the righteousness of the faith Abraham already had.",
+    ),
+    c(
+      "Deuteronomy 30:6",
+      "theme",
+      "The outward sign pointed toward an inward one, the circumcision of the heart that God Himself would perform.",
+    ),
+    c(
+      "Colossians 2:11",
+      "fulfilled",
+      "In Christ believers receive a circumcision not made with hands, the putting off of the body of the flesh.",
+    ),
+  ],
+  "Romans 4:11": [
+    c(
+      "Genesis 15:6",
+      "quotes",
+      "Paul builds the argument on the verse where Abraham believed God and it was reckoned to him as righteousness.",
+    ),
+    c(
+      "Genesis 17:10-11",
+      "theme",
+      "The sign came after the believing, which is why Paul can call it a seal rather than a cause.",
+    ),
+    c(
+      "Romans 2:29",
+      "theme",
+      "Paul says the real circumcision is of the heart, in the spirit rather than the letter.",
+    ),
+  ],
+  "Deuteronomy 30:6": [
+    c(
+      "Deuteronomy 10:16",
+      "theme",
+      "Israel is commanded to circumcise the foreskin of their heart, a demand they could not meet on their own.",
+    ),
+    c(
+      "Romans 2:29",
+      "theme",
+      "Paul names the circumcision of the heart as the mark of the true Jew, whose praise is from God.",
+    ),
+    c(
+      "Colossians 2:11",
+      "fulfilled",
+      "What Moses promised God would do is accomplished in Christ, the circumcision made without hands.",
+    ),
+  ],
+  "Colossians 2:11-12": [
+    c(
+      "Romans 6:4",
+      "parallel",
+      "Buried with Him in baptism and raised with Him, we walk in newness of life, the same death and resurrection Paul describes.",
+    ),
+    c(
+      "Genesis 17:11",
+      "fulfilled",
+      "The token of the covenant in the flesh is answered by a cutting away that no hand performs.",
+    ),
+    c(
+      "Deuteronomy 30:6",
+      "theme",
+      "God's promise to circumcise the heart is what the believer receives in Christ.",
+    ),
+  ],
+  "Genesis 18:25": [
+    c(
+      "Deuteronomy 32:4",
+      "theme",
+      "Moses sings that the Rock's work is perfect and all His ways are just, the character Abraham appeals to.",
+    ),
+    c(
+      "Romans 3:6",
+      "theme",
+      "Paul argues from the same premise: if God were unjust, how could He judge the world?",
+    ),
+    c(
+      "Psalms 96:13",
+      "theme",
+      "The psalm announces that Yahweh comes to judge the earth with righteousness and the peoples with His truth.",
+    ),
+  ],
+  "Genesis 19:24": [
+    c(
+      "Luke 17:29",
+      "parallel",
+      "Jesus recalls the day Lot left Sodom and fire and sulfur fell from the sky, and says the day of the Son of Man will be like it.",
+    ),
+    c(
+      "2 Peter 2:6",
+      "fulfilled",
+      "Peter says the cities were turned to ashes as an example to those who would live ungodly.",
+    ),
+  ],
+  "Genesis 19:29": [
+    c(
+      "2 Peter 2:7",
+      "theme",
+      "Peter names Lot righteous and distressed by the lawless life around him, and says God rescued him.",
+    ),
+    c(
+      "Genesis 18:23",
+      "parallel",
+      "Abraham had interceded for the city, and the rescue of Lot is the answer to that prayer.",
+    ),
+  ],
+  "2 Peter 2:9": [
+    c(
+      "Genesis 19:29",
+      "pattern",
+      "God remembered Abraham and brought Lot out of the overthrow, the deliverance Peter draws his lesson from.",
+    ),
+    c(
+      "1 Corinthians 10:13",
+      "theme",
+      "Paul promises that God will not allow you to be tempted beyond what you are able, but will make a way of escape.",
+    ),
+  ],
+  "Genesis 24:7": [
+    c(
+      "Exodus 23:20",
+      "theme",
+      "God promises to send an angel before Israel to keep them in the way, the same care the servant expects for his errand.",
+    ),
+    c(
+      "Hebrews 1:14",
+      "theme",
+      "Angels are serving spirits sent out for the sake of those who will inherit salvation.",
+    ),
+  ],
+  "Genesis 24:15": [
+    c(
+      "Isaiah 65:24",
+      "theme",
+      "God promises that before they call He will answer, and Rebekah arrives before the servant finishes speaking.",
+    ),
+    c(
+      "Daniel 9:21",
+      "pattern",
+      "While Daniel was still speaking in prayer, Gabriel came to him, the same swift answer to a praying servant.",
+    ),
+  ],
+  "Genesis 24:58": [
+    c(
+      "Ruth 1:16",
+      "pattern",
+      "Ruth answers with the same willingness, binding herself to Naomi's people and Naomi's God.",
+    ),
+    c(
+      "Hebrews 11:8",
+      "pattern",
+      "Abraham went out not knowing where he was going, and Rebekah leaves for a land she has never seen.",
+    ),
+  ],
+  "Genesis 24:67": [
+    c(
+      "Matthew 5:4",
+      "theme",
+      "Jesus calls those who mourn blessed because they will be comforted, which is what Isaac receives in Rebekah.",
+    ),
+    c(
+      "Psalms 34:18",
+      "theme",
+      "Yahweh is near to those who have a broken heart and saves those who have a crushed spirit.",
+    ),
+  ],
+  "Genesis 25:33-34": [
+    c(
+      "Hebrews 12:16",
+      "quotes",
+      "Hebrews names Esau a profane person who sold his birthright for one meal, pointing straight at this exchange.",
+    ),
+    c(
+      "Genesis 27:36",
+      "parallel",
+      "Esau's own summary of his life: he took away my birthright, and now he has taken away my blessing.",
+    ),
+  ],
+  "Genesis 27:34": [
+    c(
+      "Hebrews 12:17",
+      "quotes",
+      "Hebrews says Esau afterward sought the blessing with tears and found no place for a change of mind.",
+    ),
+    c(
+      "Matthew 26:75",
+      "contrast",
+      "Peter also wept bitterly after denying Jesus, but his tears led to repentance and restoration rather than loss.",
+    ),
+  ],
+  "Hebrews 12:16-17": [
+    c(
+      "Genesis 25:33-34",
+      "quotes",
+      "The warning points back at the sale: Esau swore the oath and sold his birthright for a meal.",
+    ),
+    c(
+      "Hebrews 12:15",
+      "parallel",
+      "The same paragraph warns of a root of bitterness springing up, the soil in which Esau's contempt grew.",
+    ),
+  ],
+  "Romans 9:12": [
+    c(
+      "Genesis 25:23",
+      "quotes",
+      "Paul quotes the oracle given before the twins were born: the elder will serve the younger.",
+    ),
+    c(
+      "Malachi 1:3",
+      "theme",
+      "Malachi carries the same word forward: Jacob I loved, but Esau I hated.",
+    ),
+  ],
+  "Genesis 39:2": [
+    c(
+      "Genesis 26:28",
+      "pattern",
+      "Abimelech tells Isaac that he saw plainly Yahweh was with him, the same visible presence that prospered Joseph.",
+    ),
+    c(
+      "Acts 7:9",
+      "theme",
+      "Stephen tells the story and reaches the same conclusion: men sold Joseph, but God was with him.",
+    ),
+  ],
+  "Genesis 41:16": [
+    c(
+      "Daniel 2:28",
+      "pattern",
+      "Daniel stands before a king with the same answer: there is a God in heaven who reveals secrets.",
+    ),
+    c(
+      "Genesis 40:8",
+      "parallel",
+      "Joseph has already said it in the prison, that interpretations belong to God.",
+    ),
+    c(
+      "Genesis 41:38",
+      "theme",
+      "Pharaoh recognizes what Joseph refused to claim for himself, a man in whom is the Spirit of God.",
+    ),
+  ],
+  "Psalms 105:19": [
+    c(
+      "Genesis 45:7",
+      "theme",
+      "Joseph tells his brothers that God sent him ahead to preserve a remnant and save them alive.",
+    ),
+    c(
+      "Acts 7:10",
+      "fulfilled",
+      "Stephen says God delivered Joseph out of all his afflictions and gave him favor before Pharaoh.",
     ),
   ],
 };
