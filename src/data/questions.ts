@@ -17031,7 +17031,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 20:2", "Exodus 19:5-6", "Matthew 5:17", "Galatians 3:24"],
-    raises: ["how-is-the-new-covenant-different-from-the-old-one", "faith-or-works", "what-was-the-tabernacle-for"],
+    raises: ["how-is-the-new-covenant-different-from-the-old-one", "faith-or-works", "why-did-israel-worship-a-golden-calf", "what-was-the-tabernacle-for"],
     followsFrom: ["what-does-the-exodus-show-us-about-god"],
     related: ["can-i-trust-the-bible", "what-is-grace"],
     planned: [],
@@ -17664,7 +17664,7 @@ export const questions: Question[] = [
     followsFrom: ["why-did-god-give-israel-the-law-at-sinai"],
     related: ["what-is-worship", "what-is-the-new-heaven-and-new-earth"],
     planned: [],
-    order: 98,
+    order: 99,
   },
 
   {
@@ -17804,11 +17804,11 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Leviticus 17:11", "Leviticus 16:22", "Hebrews 10:4", "Hebrews 10:14"],
-    raises: ["why-did-jesus-have-to-die", "what-price-can-buy-forgiveness"],
+    raises: ["why-did-jesus-have-to-die", "what-price-can-buy-forgiveness", "why-did-israel-wander-for-forty-years"],
     followsFrom: ["what-was-the-tabernacle-for"],
     related: ["what-is-repentance", "can-gods-grace-really-cover-my-worst-sins"],
     planned: [],
-    order: 99,
+    order: 100,
   },
 
   {
@@ -21010,6 +21010,294 @@ export const questions: Question[] = [
     related: ["does-god-hear-my-prayers", "how-should-christians-live-as-exiles"],
     planned: [],
     order: 95,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Exodus & Covenant (continued: the wilderness and Deuteronomy)
+  // ------------------------------------------------------------------
+  {
+    slug: "why-did-israel-worship-a-golden-calf",
+    question: "Why did Israel worship a golden calf?",
+    category: "exodus-and-covenant",
+    summary:
+      "While Moses was on the mountain, Israel made a calf and credited it with bringing them out of Egypt, then held a feast to Yahweh around it. The sin was not atheism but image-making: they wanted a god they could see and manage. Moses stood in the breach for them, and God answered by proclaiming His own name and character.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 32,
+        title: "The calf and the intercession",
+        lookFor: "Who gets the credit for the exodus, what Aaron proclaims over the calf, and what Moses appeals to when he prays.",
+        focus: "1-35",
+      },
+      {
+        book: "Exodus",
+        chapter: 33,
+        title: "Show me your glory",
+        lookFor: "What Moses asks for after the calf, and what God promises to make pass before him.",
+        focus: "12-23",
+      },
+      {
+        book: "Exodus",
+        chapter: 34,
+        title: "The name proclaimed",
+        lookFor: "The words God uses to describe Himself as He passes by: the answer to a people who wanted a god they could carry.",
+        focus: "1-10",
+      },
+      {
+        book: "1 Corinthians",
+        chapter: 10,
+        title: "Flee from idolatry",
+        lookFor: "How Paul uses the wilderness generation as a warning written for the church.",
+        focus: "1-14",
+      },
+    ],
+    points: [
+      {
+        heading: "A god they could see, and a feast to Yahweh",
+        body:
+          "Moses delayed on the mountain, so the people asked Aaron for gods to go before them, and he made a molten calf from their earrings. Then they said, 'These are your gods, Israel, which brought you up out of the land of Egypt', and Aaron built an altar and proclaimed a feast to Yahweh. They were not abandoning worship; they were reshaping it into something they could see and control, which is exactly what the second commandment forbids.",
+        verses: ["Exodus 32:1-6", "Exodus 20:3-6"],
+      },
+      {
+        heading: "Moses stood in the breach",
+        body:
+          "God tells Moses to leave Him alone so that His wrath may burn, and offers to start over with Moses instead. Moses does not take the offer. He appeals to God's reputation among the nations and to the oath sworn to Abraham, Isaac, and Israel, and asks how the Egyptians would explain a God who brought His people out only to kill them. Psalm 106 says Moses stood in the breach to turn away His wrath.",
+        verses: ["Exodus 32:9-14", "Psalms 106:23"],
+      },
+      {
+        heading: "The mediator offers himself",
+        body:
+          "Moses breaks the tablets, burns the calf, grinds it to powder, and goes back up the mountain with a startling offer: 'if not, please blot me out of your book.' He is willing to be cut off with the guilty rather than see them destroyed. The plea is refused, since guilt is personal, but it is the shape of a mediator who truly intercedes, and it points forward to One who was not refused.",
+        verses: ["Exodus 32:19-20", "Exodus 32:30-32"],
+      },
+      {
+        heading: "God answers with His own name",
+        body:
+          "Moses asks to see God's glory, and God says He will make all His goodness pass before him. Then He descends and proclaims His name: merciful and gracious, slow to anger, abundant in loving kindness and truth, forgiving iniquity and disobedience and sin. The cure for a people who wanted a god they could carry is the character of the God who actually carries them.",
+        verses: ["Exodus 33:18-19", "Exodus 34:5-7"],
+      },
+      {
+        heading: "Written down as a warning for us",
+        body:
+          "Paul reaches back to this generation and says their story is our example: they sat down to eat and drink and rose up to play, and these things were written for the admonition of those on whom the ends of the ages have come. The conclusion is not a shrug but a command: flee from idolatry. The golden calf is not an ancient curiosity; it is the pattern of every substitute god.",
+        verses: ["1 Corinthians 10:6-11", "1 Corinthians 10:14", "Deuteronomy 9:7"],
+      },
+    ],
+    keyVerses: ["Exodus 32:4", "Exodus 32:14", "Exodus 32:32", "Exodus 34:6", "1 Corinthians 10:14"],
+    raises: ["what-modern-idols-hide-in-ordinary-christian-lives", "does-god-change-his-mind", "what-is-repentance"],
+    followsFrom: ["why-did-god-give-israel-the-law-at-sinai"],
+    related: ["why-did-israel-keep-drifting-into-idolatry", "does-god-change-his-mind"],
+    planned: [],
+    order: 98,
+  },
+
+  {
+    slug: "why-did-israel-wander-for-forty-years",
+    question: "Why did Israel wander for forty years?",
+    category: "exodus-and-covenant",
+    summary:
+      "Israel reached the edge of the promised land and refused to go in, because ten spies reported giants and the people did not believe God. The sentence was one year for each day of spying: forty years in the wilderness, until that generation died. The New Testament treats it as the standing warning against an unbelieving heart.",
+    passages: [
+      {
+        book: "Numbers",
+        chapter: 13,
+        title: "The spies and the report",
+        lookFor: "How the same land produces two completely different reports, and what Caleb says in the middle of it.",
+        focus: "1-33",
+      },
+      {
+        book: "Numbers",
+        chapter: 14,
+        title: "The refusal and the sentence",
+        lookFor: "What God says the people are actually doing, how Moses prays, and the terms of the sentence.",
+        focus: "1-45",
+      },
+      {
+        book: "Psalms",
+        chapter: 95,
+        title: "Do not harden your hearts",
+        lookFor: "How the psalm turns the wilderness into a warning aimed at the present day.",
+        focus: "1-11",
+      },
+      {
+        book: "Hebrews",
+        chapter: 3,
+        title: "The warning applied to the church",
+        lookFor: "What Hebrews names as the reason they could not enter, and what it asks of us today.",
+        focus: "7-19",
+      },
+    ],
+    points: [
+      {
+        heading: "Two reports about one good land",
+        body:
+          "The spies agree on the land: it is good, flowing with milk and honey. Then ten of them describe walled cities and men of great stature, and say they were like grasshoppers in their own sight. Caleb answers in a single sentence: 'Let us go up at once, and possess it; for we are well able to overcome it!' The difference is not the facts but what they believed about God.",
+        verses: ["Numbers 13:27-33", "Numbers 13:30"],
+      },
+      {
+        heading: "The unbelief was against God, not the Canaanites",
+        body:
+          "God's question goes to the root: how long will this people despise Me and not believe Me, for all the signs I have worked among them? Joshua and Caleb tear their clothes and tell the people not to rebel or fear, because Yahweh is with them. Refusing to enter the land was not caution; it was calling God a liar about His own promise.",
+        verses: ["Numbers 14:6-11"],
+      },
+      {
+        heading: "Moses appeals to God's name, and the sentence falls",
+        body:
+          "Moses asks what the nations will say, and appeals to God's own self-description as slow to anger and abundant in loving kindness. God pardons, and then the sentence is pronounced: the generation that refused will not enter, one year for each of the forty days of spying, and their children will wander until they are consumed. Forgiveness and consequence are not the same thing.",
+        verses: ["Numbers 14:13-20", "Numbers 14:29-34"],
+      },
+      {
+        heading: "Caleb wholly followed, and asked for the hill",
+        body:
+          "Two men of that generation entered the land. Caleb had followed Yahweh wholeheartedly, and forty-five years later, at eighty-five, he came to Joshua and asked for the very hill country where the Anakim were, the giants that had terrified the spies. Nothing had changed except that he still believed God.",
+        verses: ["Numbers 14:24", "Numbers 14:30", "Joshua 14:10-12"],
+      },
+      {
+        heading: "The wilderness becomes a warning",
+        body:
+          "Psalm 95 pleads with the present generation: today, if you hear His voice, do not harden your hearts as at Meribah. Hebrews takes up the psalm and applies it directly to the church, naming the danger as an evil heart of unbelief, and pointing out that they failed to enter because of unbelief, not weakness. Paul adds that these things happened as examples written for our admonition.",
+        verses: ["Psalms 95:7-11", "Hebrews 3:12-19", "1 Corinthians 10:11"],
+      },
+    ],
+    keyVerses: ["Numbers 13:30", "Numbers 14:9", "Numbers 14:24", "Psalms 95:8", "Hebrews 3:12"],
+    raises: ["why-did-god-let-israel-go-hungry", "what-is-faith", "how-does-god-discipline-his-children"],
+    followsFrom: ["what-did-the-sacrificial-system-teach-israel"],
+    related: ["how-do-i-know-gods-will", "what-is-faith"],
+    planned: [],
+    order: 101,
+  },
+
+  {
+    slug: "why-did-god-let-israel-go-hungry",
+    question: "Why did God let Israel go hungry in the wilderness?",
+    category: "exodus-and-covenant",
+    summary:
+      "God fed Israel with manna every morning for forty years, and Moses explains why the hunger came first: it was a lesson, teaching them that man does not live by bread alone but by every word from God's mouth. Deuteronomy also warns that fullness is more dangerous than hunger, because plenty makes us forget.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 16,
+        title: "Bread from the sky",
+        lookFor: "How much they were told to gather, what happened to the leftovers, and what the food was called.",
+        focus: "1-36",
+      },
+      {
+        book: "Deuteronomy",
+        chapter: 8,
+        title: "Remember the wilderness, and beware of plenty",
+        lookFor: "What Moses says the hunger was for, and the warning about what happens when the stomachs are full.",
+        focus: "1-20",
+      },
+      {
+        book: "Matthew",
+        chapter: 4,
+        title: "Jesus answers with Deuteronomy",
+        lookFor: "The verse Jesus uses when He is hungry in the wilderness.",
+        focus: "1-11",
+      },
+      {
+        book: "John",
+        chapter: 6,
+        title: "The true bread from heaven",
+        lookFor: "How Jesus compares the manna with Himself.",
+        focus: "25-58",
+      },
+    ],
+    points: [
+      {
+        heading: "A day's portion, every day",
+        body:
+          "God rains bread from the sky with a stated purpose: that the people may be tested, whether they will walk in His law. They are to gather an omer a head and leave none until morning, and those who tried to stockpile found it bred worms. Each morning the bread came again and melted when the sun grew hot. Daily dependence was built into the menu.",
+        verses: ["Exodus 16:4", "Exodus 16:16-21"],
+      },
+      {
+        heading: "The hunger was the lesson",
+        body:
+          "Moses explains the whole arrangement: God humbled them, and allowed them to be hungry, and fed them with manna they had never known, 'that he might teach you that man does not live by bread only, but man lives by every word that proceeds out of Yahweh's mouth.' The hunger was not neglect; it was instruction, and the bread was the illustration.",
+        verses: ["Deuteronomy 8:2-4"],
+      },
+      {
+        heading: "Beware the full stomach",
+        body:
+          "The danger Moses warns about comes afterwards, not during the hunger. When you have eaten and are full, and built fine houses, and your herds and silver and gold have multiplied, then your heart might be lifted up and you forget Yahweh who brought you out of Egypt. The temptation is to say that your own power and hand got you the wealth. Prosperity, not poverty, is where the remembering gets hard.",
+        verses: ["Deuteronomy 8:11-18"],
+      },
+      {
+        heading: "Jesus takes up the wilderness text",
+        body:
+          "After fasting forty days Jesus is hungry, and the tempter suggests He turn stones to bread. He answers with this verse: man shall not live by bread alone, but by every word that proceeds out of the mouth of God. Later He tells a crowd that their fathers ate manna in the wilderness and died, and that He Himself is the living bread which came down out of heaven.",
+        verses: ["Matthew 4:2-4", "John 6:31-35", "John 6:49-51"],
+      },
+    ],
+    keyVerses: ["Deuteronomy 8:2-3", "Exodus 16:4", "Deuteronomy 8:18", "Matthew 4:4", "John 6:35"],
+    raises: ["what-did-moses-set-before-israel", "what-is-faith", "why-does-god-allow-suffering"],
+    followsFrom: ["why-did-israel-wander-for-forty-years"],
+    related: ["why-does-god-allow-suffering", "where-is-god-in-my-pain"],
+    planned: [],
+    order: 102,
+  },
+
+  {
+    slug: "what-did-moses-set-before-israel",
+    question: "What did Moses set before Israel at the end?",
+    category: "exodus-and-covenant",
+    summary:
+      "At the end of Deuteronomy, Moses sets life and death before Israel and calls them to choose life. The command, he says, is not too hard or out of reach: the word is very near, in their mouth and in their heart. Paul later quotes that exact sentence to describe the word of faith he preached.",
+    passages: [
+      {
+        book: "Deuteronomy",
+        chapter: 30,
+        title: "Life and death set before you",
+        lookFor: "The promise that reaches past the curse, and the choice Moses puts in front of the people.",
+        focus: "1-20",
+      },
+      {
+        book: "Deuteronomy",
+        chapter: 28,
+        title: "The blessing for obedience",
+        lookFor: "What the blessing looks like when Israel obeys, so that the choice in chapter 30 has a shape.",
+        focus: "1-14",
+      },
+      {
+        book: "Romans",
+        chapter: 10,
+        title: "The word of faith Paul preaches",
+        lookFor: "How Paul takes Moses' sentence about the near word and applies it to the gospel.",
+        focus: "1-13",
+      },
+    ],
+    points: [
+      {
+        heading: "The promise reaches past the curse",
+        body:
+          "Deuteronomy 30 begins with the worst case already in view: the blessing and the curse have come and the people are scattered among the nations. Even there, Moses says, if they return, God will gather them from the uttermost parts of the heavens and bring them back. And He goes further than return, promising to circumcise their hearts so that they can love Him, which is what the law alone could never produce.",
+        verses: ["Deuteronomy 30:1-6"],
+      },
+      {
+        heading: "The command is not out of reach",
+        body:
+          "Moses answers the excuse before anyone makes it. The commandment is not too hard or too distant: it is not in heaven, that someone must go up and bring it down, and it is not beyond the sea, that someone must cross and fetch it. 'But the word is very near to you, in your mouth and in your heart, that you may do it.' God's demand never needed a heroic journey; it needed a heart.",
+        verses: ["Deuteronomy 30:11-14"],
+      },
+      {
+        heading: "Paul finds the gospel in that sentence",
+        body:
+          "Romans 10 quotes Moses' words and turns them toward Christ: do not ask who will ascend into heaven, that is, to bring Christ down, or who will descend into the abyss, that is, to bring Him up from the dead. What does it say? The word is near you, in your mouth and in your heart, that is, the word of faith we preach. Then Paul names the content of that faith: confess with your mouth that Jesus is Lord, and believe in your heart that God raised Him from the dead.",
+        verses: ["Romans 10:5-13"],
+      },
+      {
+        heading: "Choose life",
+        body:
+          "Moses calls heaven and earth as witnesses and sets the two paths plainly: life and prosperity, or death and evil. His summary of the good path is not rule-keeping for its own sake but love, obedience, and clinging, 'for he is your life, and the length of your days.' And the command is 'Therefore choose life, that you may live', which is still the shape of the gospel invitation.",
+        verses: ["Deuteronomy 30:15-20"],
+      },
+    ],
+    keyVerses: ["Deuteronomy 30:6", "Deuteronomy 30:14", "Deuteronomy 30:19", "Romans 10:9"],
+    raises: ["what-is-faith", "how-is-the-new-covenant-different-from-the-old-one", "what-is-repentance"],
+    followsFrom: ["why-did-god-let-israel-go-hungry"],
+    related: ["how-is-the-new-covenant-different-from-the-old-one", "what-is-faith"],
+    planned: [],
+    order: 103,
   },
 
   // ------------------------------------------------------------------
