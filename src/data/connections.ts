@@ -4337,6 +4337,516 @@ export const connections: Record<string, Connection[]> = {
       "God promises to put His Spirit within His people and cause them to walk in His statutes, the promise that makes the walk possible.",
     ),
   ],
+  "Matthew 6:9": [
+    c(
+      "Luke 11:2",
+      "parallel",
+      "Luke records the same prayer on another occasion, so the opening address belongs to the disciples' whole practice of prayer.",
+    ),
+    c(
+      "Isaiah 6:3",
+      "theme",
+      "The seraphim cry that Yahweh of Armies is holy, holy, holy, and the prayer asks that His name be kept holy on earth.",
+    ),
+    c(
+      "Ezekiel 36:23",
+      "theme",
+      "God promises to sanctify His great name that has been profaned among the nations, which is what the petition asks Him to do.",
+    ),
+  ],
+  "Philippians 4:6-7": [
+    c(
+      "Matthew 6:25-26",
+      "theme",
+      "Jesus forbids anxiety and points to the Father who feeds the birds, the reasoning Paul turns into prayer.",
+    ),
+    c(
+      "Isaiah 26:3",
+      "theme",
+      "God keeps the one whose mind is steadfast in perfect peace because he trusts in Him.",
+    ),
+    c(
+      "John 14:27",
+      "theme",
+      "The peace Jesus gives is not the peace the world gives, which is why it can guard a heart in the middle of trouble.",
+    ),
+  ],
+  "2 Timothy 2:15": [
+    c(
+      "2 Timothy 3:16-17",
+      "theme",
+      "Paul grounds the workman's confidence in Scripture itself: God-breathed and profitable for every part of the ministry.",
+    ),
+    c(
+      "Hebrews 4:12",
+      "theme",
+      "The word handled rightly is living and active, discerning the thoughts and intentions of the heart.",
+    ),
+    c(
+      "James 1:22",
+      "theme",
+      "James names the same danger from the other side: hearing the word without doing it is self-deception.",
+    ),
+  ],
+  "1 Thessalonians 4:16-17": [
+    c(
+      "1 Corinthians 15:51-52",
+      "parallel",
+      "At the last trumpet the dead are raised incorruptible and the living are changed, the same moment Paul describes here.",
+    ),
+    c(
+      "Daniel 7:13-14",
+      "promise",
+      "Daniel sees one like a son of man coming with the clouds and receiving everlasting dominion, the coming Paul describes.",
+    ),
+    c(
+      "Matthew 24:30-31",
+      "parallel",
+      "Jesus says the Son of Man will come on the clouds with power and send His angels to gather the chosen.",
+    ),
+  ],
+  "Philippians 3:20-21": [
+    c(
+      "1 Corinthians 15:43",
+      "theme",
+      "The body sown in dishonor and weakness is raised in glory and power, the transformation Paul says the Savior brings.",
+    ),
+    c(
+      "Romans 8:23",
+      "theme",
+      "We groan waiting for adoption, the redemption of the body, which is exactly the change of our lowly body Paul awaits.",
+    ),
+    c(
+      "1 John 3:2",
+      "theme",
+      "When He is revealed we will be like Him, for we will see Him just as He is.",
+    ),
+  ],
+  "2 Peter 3:13": [
+    c(
+      "Isaiah 65:17",
+      "promise",
+      "God promises to create new heavens and a new earth where the former things are not remembered.",
+    ),
+    c(
+      "Isaiah 66:22",
+      "promise",
+      "As the new heavens and new earth remain before Him, so the seed and name of His people will remain.",
+    ),
+    c(
+      "Revelation 21:1",
+      "theme",
+      "John sees the new heaven and new earth with the first passed away, the hope Peter says we are looking for.",
+    ),
+  ],
+  "John 15:26": [
+    c(
+      "John 14:26",
+      "parallel",
+      "Jesus promises the Counselor, the Holy Spirit, whom the Father will send in His name to teach and remind.",
+    ),
+    c(
+      "John 16:13-14",
+      "theme",
+      "The Spirit of truth will guide into all truth and glorify the Son, which is the testimony Jesus describes here.",
+    ),
+    c(
+      "Romans 8:16",
+      "theme",
+      "The Spirit testifies with our spirit that we are children of God, the inward side of His witness to Christ.",
+    ),
+  ],
+  "Isaiah 44:6": [
+    c(
+      "Isaiah 48:12",
+      "theme",
+      "God says it again through the same prophet: I am He, I am the first, I also am the last.",
+    ),
+    c(
+      "Revelation 1:17-18",
+      "fulfilled",
+      "The risen Christ takes the title as His own and adds that He was dead and is alive forever more.",
+    ),
+    c(
+      "Deuteronomy 32:39",
+      "theme",
+      "Moses hears God say that there is no god with Him, no one who can deliver out of His hand.",
+    ),
+  ],
+  "Acts 26:20": [
+    c(
+      "Matthew 3:8",
+      "parallel",
+      "John the Baptist demands fruit worthy of repentance, the same deeds Paul says should follow the turning.",
+    ),
+    c(
+      "Acts 3:19",
+      "theme",
+      "Peter's own sermon calls for repentance and turning so that sins may be blotted out.",
+    ),
+    c(
+      "Ezekiel 18:30",
+      "theme",
+      "God calls Israel to return and turn from all their transgressions so that iniquity will not be their ruin.",
+    ),
+  ],
+  "Psalm 34:18": [
+    c(
+      "Psalm 51:17",
+      "theme",
+      "The sacrifice God wants is a broken spirit, and a broken and contrite heart He will not despise.",
+    ),
+    c(
+      "Isaiah 57:15",
+      "theme",
+      "The high and lofty One who inhabits eternity also dwells with the contrite and humble in spirit.",
+    ),
+    c(
+      "Matthew 5:4",
+      "theme",
+      "Jesus calls those who mourn blessed because they will be comforted, the nearness the psalmist celebrates.",
+    ),
+  ],
+  "Luke 22:42": [
+    c(
+      "Matthew 26:39",
+      "parallel",
+      "Matthew records the same prayer in Gethsemane with the same surrender: not what I desire, but what you desire.",
+    ),
+    c(
+      "Hebrews 5:7-8",
+      "theme",
+      "Jesus offered up prayers with strong crying and learned obedience through what He suffered, the scene Hebrews reads back into His prayer.",
+    ),
+    c(
+      "John 6:38",
+      "theme",
+      "Jesus says He came down from heaven not to do His own will but the will of the One who sent Him.",
+    ),
+  ],
+  "1 John 5:14": [
+    c(
+      "1 John 5:15",
+      "parallel",
+      "John draws the confidence out: if He listens, we know we have the petitions we asked of Him.",
+    ),
+    c(
+      "Matthew 6:10",
+      "theme",
+      "The Lord's Prayer asks for God's will to be done, which is the condition John names for answered prayer.",
+    ),
+    c(
+      "James 4:3",
+      "contrast",
+      "James explains the prayers that go unanswered: they ask with wrong motives, to spend on their own pleasures.",
+    ),
+  ],
+  "Psalm 1:2": [
+    c(
+      "Joshua 1:8",
+      "pattern",
+      "Joshua is told to meditate on the book of the law day and night so that he may observe to do it.",
+    ),
+    c(
+      "Psalm 119:97",
+      "theme",
+      "The same delight appears again: how I love your law, it is my meditation all day.",
+    ),
+    c(
+      "2 Timothy 3:16-17",
+      "theme",
+      "Scripture is God-breathed and profitable for instruction, the ground of the delight the psalmist describes.",
+    ),
+  ],
+  "2 Corinthians 5:7": [
+    c(
+      "Hebrews 11:1",
+      "theme",
+      "Faith is the assurance of things hoped for and the conviction of things not seen, which is how the walk by faith works.",
+    ),
+    c(
+      "1 Peter 1:8-9",
+      "theme",
+      "Peter blesses those who have not seen Him and yet believe, receiving the outcome of their faith.",
+    ),
+    c(
+      "Romans 8:24-25",
+      "theme",
+      "Hope that is seen is not hope, so we wait for what we do not see with patience.",
+    ),
+  ],
+  "Romans 8:30": [
+    c(
+      "Romans 8:28-29",
+      "parallel",
+      "Paul has just said that all things work together for those called according to His purpose, foreknown and predestined to be conformed to His Son.",
+    ),
+    c(
+      "Ephesians 1:4-5",
+      "theme",
+      "He chose us in Him before the foundation of the world and predestined us for adoption, the same golden chain from the other end.",
+    ),
+    c(
+      "2 Thessalonians 2:13-14",
+      "theme",
+      "God chose them from the beginning for salvation and called them through the Good News to obtain the glory of Christ.",
+    ),
+  ],
+  "2 Peter 1:20-21": [
+    c(
+      "2 Samuel 23:2",
+      "theme",
+      "David says the Spirit of Yahweh spoke by him and His word was on his tongue, the human mouth and divine origin together.",
+    ),
+    c(
+      "Jeremiah 1:9",
+      "pattern",
+      "God touches Jeremiah's mouth and puts His words there, the calling that shows how prophecy comes to be.",
+    ),
+    c(
+      "Numbers 12:6",
+      "theme",
+      "God says He makes Himself known to a prophet in a vision and speaks with him in a dream.",
+    ),
+  ],
+  "Zephaniah 3:17": [
+    c(
+      "Isaiah 12:6",
+      "theme",
+      "Zion is told to shout because the Holy One of Israel is great in her midst, the presence Zephaniah celebrates.",
+    ),
+    c(
+      "Zephaniah 3:15",
+      "parallel",
+      "Two verses earlier the same prophet announces that Yahweh the King of Israel is in your midst and the enemy is thrown out.",
+    ),
+    c(
+      "Deuteronomy 30:9",
+      "pattern",
+      "God promises to rejoice over His people for good, the joy Zephaniah hears as singing.",
+    ),
+  ],
+  "1 Peter 5:8-9": [
+    c(
+      "James 4:7",
+      "parallel",
+      "James gives the same counsel in two moves: submit to God, resist the devil, and he will flee from you.",
+    ),
+    c(
+      "Luke 22:31",
+      "theme",
+      "Jesus tells Simon that Satan asked to sift him as wheat, the prowling adversary seen from the inside of a trial.",
+    ),
+    c(
+      "2 Corinthians 2:11",
+      "theme",
+      "Paul says we are not ignorant of Satan's schemes, the watchfulness Peter demands.",
+    ),
+  ],
+  "Matthew 28:20": [
+    c(
+      "Matthew 28:18-19",
+      "parallel",
+      "The promise closes a commission that opens with all authority in heaven and on earth and the command to make disciples of all nations.",
+    ),
+    c(
+      "Exodus 3:12",
+      "pattern",
+      "God answers Moses' fear with the same assurance: certainly I will be with you.",
+    ),
+    c(
+      "Hebrews 13:5",
+      "promise",
+      "God has said He will in no way leave His people nor forsake them, the promise Jesus speaks in His own name.",
+    ),
+  ],
+  "Hebrews 9:28": [
+    c(
+      "Hebrews 9:26",
+      "parallel",
+      "Once at the end of the ages He has been revealed to put away sin by the sacrifice of Himself, which is why the second appearing carries no more offering.",
+    ),
+    c(
+      "1 Thessalonians 4:16-17",
+      "parallel",
+      "The Lord descends with a shout and a trumpet and the dead in Christ rise first, the appearing Hebrews says the eager wait for.",
+    ),
+    c(
+      "Titus 2:13",
+      "theme",
+      "Paul calls it the blessed hope, the appearing of the glory of our great God and Savior Jesus Christ.",
+    ),
+  ],
+  "1 John 2:2": [
+    c(
+      "John 1:29",
+      "theme",
+      "John the Baptist names Jesus the Lamb of God who takes away the sin of the world, the scope John's letter echoes.",
+    ),
+    c(
+      "Isaiah 53:6",
+      "theme",
+      "Yahweh laid on the servant the iniquity of us all, the sacrifice that reaches beyond Israel.",
+    ),
+    c(
+      "Romans 3:25",
+      "theme",
+      "God put Him forward as an atoning sacrifice through faith in His blood, the same propitiation John names.",
+    ),
+  ],
+  "2 Peter 3:9": [
+    c(
+      "Ezekiel 33:11",
+      "theme",
+      "God swears He has no pleasure in the death of the wicked but that they turn and live, the patience Peter explains.",
+    ),
+    c(
+      "1 Timothy 2:4",
+      "theme",
+      "God desires all people to be saved and to come to full knowledge of the truth, the wish behind the delay.",
+    ),
+    c(
+      "Romans 2:4",
+      "theme",
+      "The goodness and forbearance of God lead to repentance, which is what His slowness is for.",
+    ),
+  ],
+  "Esther 4:14": [
+    c(
+      "Genesis 50:20",
+      "pattern",
+      "Joseph tells his brothers they meant evil while God meant it for good, the same hidden hand Mordecai trusts.",
+    ),
+    c(
+      "Proverbs 21:1",
+      "theme",
+      "The king's heart is in Yahweh's hand like a watercourse, which is how a decree and a queen both serve His purpose.",
+    ),
+    c(
+      "Romans 8:28",
+      "theme",
+      "All things work together for good for those who love God, the confidence behind relief from another place.",
+    ),
+  ],
+  "John 3:3": [
+    c(
+      "John 3:5",
+      "parallel",
+      "Jesus restates it two verses later as being born of water and spirit, without which no one can enter the Kingdom.",
+    ),
+    c(
+      "Ezekiel 36:26",
+      "promise",
+      "God promises a new heart and a new spirit, the birth from above that Nicodemus had not yet understood.",
+    ),
+    c(
+      "1 Peter 1:3",
+      "theme",
+      "God in His great mercy caused us to be born again to a living hope through the resurrection of Jesus Christ.",
+    ),
+  ],
+  "Hebrews 4:15-16": [
+    c(
+      "Hebrews 2:17",
+      "parallel",
+      "He was made like His brothers so that He might become a merciful and faithful high priest, the sympathy argued here.",
+    ),
+    c(
+      "2 Corinthians 5:21",
+      "theme",
+      "He who knew no sin was made sin for us, the sinlessness that lets His sympathy be trusted.",
+    ),
+    c(
+      "1 Corinthians 10:13",
+      "theme",
+      "God provides the way of escape in temptation, the help found at the throne of grace.",
+    ),
+  ],
+  "Colossians 3:12-14": [
+    c(
+      "Galatians 5:22-23",
+      "theme",
+      "The compassion, kindness, and patience Paul lists are the fruit the Spirit grows rather than virtues we manufacture.",
+    ),
+    c(
+      "Ephesians 4:32",
+      "parallel",
+      "Paul gives the same list with the same motive: be kind and tender hearted, forgiving as God in Christ forgave you.",
+    ),
+    c(
+      "1 Peter 4:8",
+      "theme",
+      "Love above all things covers a multitude of sins, which is why Paul calls it the bond of perfection.",
+    ),
+  ],
+  "Ephesians 1:5": [
+    c(
+      "Romans 8:15",
+      "theme",
+      "The Spirit of adoption is the One by whom we cry Abba, Father, the sonship predestined here.",
+    ),
+    c(
+      "Galatians 4:4-5",
+      "parallel",
+      "God sent His Son so that we might receive the adoption of children, the same purpose Paul states in Ephesians.",
+    ),
+    c(
+      "John 1:12",
+      "theme",
+      "To those who received Him He gave the right to become children of God, the adoption applied.",
+    ),
+  ],
+  "Romans 4:5": [
+    c(
+      "Genesis 15:6",
+      "quotes",
+      "Abraham believed Yahweh and it was reckoned to him for righteousness, the verse Paul builds the whole argument on.",
+    ),
+    c(
+      "Romans 3:24",
+      "theme",
+      "Justified freely by His grace through the redemption in Christ Jesus, the ground on which the ungodly are justified.",
+    ),
+    c(
+      "Ephesians 2:8-9",
+      "theme",
+      "Saved by grace through faith, not of works, so that no one may boast, the same exclusion of earning.",
+    ),
+  ],
+  "James 1:22": [
+    c(
+      "Matthew 7:24-25",
+      "parallel",
+      "Jesus likens the one who hears His words and does them to a man who built his house on rock.",
+    ),
+    c(
+      "James 2:17",
+      "theme",
+      "James presses the same point to its conclusion: faith without works is dead in itself.",
+    ),
+    c(
+      "Luke 6:46",
+      "theme",
+      "Jesus asks why His disciples call Him Lord and do not do what He says, the self-deception James warns against.",
+    ),
+  ],
+  "1 Corinthians 12:27": [
+    c(
+      "Romans 12:5",
+      "parallel",
+      "Paul says the same in Romans: we who are many are one body in Christ and individually members of one another.",
+    ),
+    c(
+      "Ephesians 4:15-16",
+      "theme",
+      "The body grows up into the head, Christ, as each part works in its measure, which is why the members matter.",
+    ),
+    c(
+      "1 Corinthians 12:12",
+      "theme",
+      "As the body is one and has many members, so also is Christ, the image Paul applies directly to the church.",
+    ),
+  ],
 };
 
 /** Connections leaving from a verse reference. */
