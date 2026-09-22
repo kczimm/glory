@@ -3895,6 +3895,448 @@ export const connections: Record<string, Connection[]> = {
       "As a man disciplines his son, so Yahweh your God disciplines you, the fatherly pattern behind the chastening.",
     ),
   ],
+  "Philippians 2:12-13": [
+    c(
+      "Ephesians 2:10",
+      "theme",
+      "We are His workmanship, created in Christ Jesus for good works that God prepared beforehand, which is why obedience is the outworking of His work in us.",
+    ),
+    c(
+      "Hebrews 13:20-21",
+      "theme",
+      "The God of peace works in His people that which is well pleasing in His sight, the same divine working Paul names.",
+    ),
+    c(
+      "Philippians 1:6",
+      "theme",
+      "The One who began a good work in them will complete it, which is why working out salvation is not working it up.",
+    ),
+  ],
+  "Ephesians 4:30": [
+    c(
+      "Isaiah 63:10",
+      "pattern",
+      "Israel rebelled and grieved His holy Spirit, so the warning Paul gives is an old wound in the story of God with His people.",
+    ),
+    c(
+      "Ephesians 1:13-14",
+      "parallel",
+      "The Spirit grieved here is the same Spirit who sealed them as the guarantee of the inheritance.",
+    ),
+    c(
+      "Hebrews 10:29",
+      "contrast",
+      "Hebrews warns against insulting the Spirit of grace, the final stage of the grieving Paul tells the church to avoid.",
+    ),
+  ],
+  "Titus 3:5": [
+    c(
+      "Ezekiel 36:25-27",
+      "promise",
+      "The promised clean water, new heart, and Spirit within are the mercy Paul says saved us, not our own righteous deeds.",
+    ),
+    c(
+      "Ephesians 2:8-9",
+      "parallel",
+      "The same apostle says salvation is by grace through faith, not of works, so that no one may boast.",
+    ),
+    c(
+      "John 3:5",
+      "theme",
+      "Jesus tells Nicodemus that one must be born of water and the Spirit, the regeneration Paul names.",
+    ),
+  ],
+  "Acts 4:12": [
+    c(
+      "John 14:6",
+      "parallel",
+      "Jesus says He is the way, the truth, and the life, and that no one comes to the Father except through Him.",
+    ),
+    c(
+      "Joel 2:32",
+      "promise",
+      "Joel promises that whoever calls on the name of Yahweh will be saved, the name Peter says is given among men.",
+    ),
+    c(
+      "Philippians 2:9-11",
+      "theme",
+      "God highly exalted Him and gave Him the name above every name, the ground of Peter's exclusive claim.",
+    ),
+  ],
+  "Luke 24:44": [
+    c(
+      "Luke 24:27",
+      "parallel",
+      "Earlier the same day Jesus began with Moses and all the prophets, and here He names the three divisions He opened.",
+    ),
+    c(
+      "Psalm 40:7-8",
+      "fulfilled",
+      "The psalmist says it is written about him in the scroll and that he delights to do God's will, a text Hebrews applies to Christ.",
+    ),
+    c(
+      "John 5:39",
+      "theme",
+      "Jesus says the Scriptures testify about Him, which is the claim He restates to the disciples.",
+    ),
+  ],
+  "Revelation 21:3": [
+    c(
+      "Leviticus 26:11-12",
+      "promise",
+      "God promised to set His tent among His people, to walk among them, and to be their God.",
+    ),
+    c(
+      "Ezekiel 37:27",
+      "promise",
+      "The restored people are promised a dwelling place with God, the same sentence John hears from heaven.",
+    ),
+    c(
+      "John 1:14",
+      "theme",
+      "The Word became flesh and lived among us, the tabernacling that Revelation brings to its final home.",
+    ),
+  ],
+  "Acts 2:38-39": [
+    c(
+      "Joel 2:28-29",
+      "fulfilled",
+      "Peter has just quoted Joel's promise that God will pour out His Spirit on all flesh, which is the gift he now announces.",
+    ),
+    c(
+      "Titus 3:5",
+      "theme",
+      "Paul names the same washing of regeneration and renewing by the Holy Spirit that Peter promises.",
+    ),
+    c(
+      "Acts 2:41",
+      "pattern",
+      "Those who received his word were baptized, and three thousand were added that day, the promise taking effect immediately.",
+    ),
+  ],
+  "2 Corinthians 5:17": [
+    c(
+      "Isaiah 43:18-19",
+      "promise",
+      "God promises to do a new thing, making a way in the wilderness, the newness Paul says belongs to those in Christ.",
+    ),
+    c(
+      "Revelation 21:5",
+      "theme",
+      "The One on the throne says He is making all things new, the same new creation seen from its final horizon.",
+    ),
+    c(
+      "Romans 6:4",
+      "theme",
+      "Buried with Christ in baptism and raised with Him, we walk in newness of life, the personal form of the new creation.",
+    ),
+  ],
+  "Psalm 119:105": [
+    c(
+      "Proverbs 6:23",
+      "theme",
+      "The commandment is a lamp and the law is light, the same image for the same gift.",
+    ),
+    c(
+      "2 Peter 1:19",
+      "theme",
+      "Peter calls the prophetic word a lamp shining in a dark place until the day dawns, which is how the psalmist's lamp works.",
+    ),
+    c(
+      "2 Timothy 3:16-17",
+      "theme",
+      "Scripture is God-breathed and profitable for instruction, the light the psalmist walks by.",
+    ),
+  ],
+  "Proverbs 3:5-6": [
+    c(
+      "Psalm 37:5",
+      "theme",
+      "Commit your way to Yahweh and trust also in Him, the same surrender of the whole path.",
+    ),
+    c(
+      "Proverbs 16:9",
+      "theme",
+      "A man's heart plans his course, but Yahweh directs his steps, the reason leaning on our own understanding fails.",
+    ),
+    c(
+      "Jeremiah 17:7-8",
+      "theme",
+      "The one who trusts Yahweh is like a tree by the waters that does not fear when the heat comes.",
+    ),
+  ],
+  "2 Peter 1:21": [
+    c(
+      "2 Timothy 3:16",
+      "theme",
+      "Paul grounds the same claim: every Scripture is God-breathed, so its origin is divine rather than human.",
+    ),
+    c(
+      "Acts 1:16",
+      "theme",
+      "Peter says the Holy Spirit spoke beforehand by the mouth of David, the human mouth and the divine speaker held together.",
+    ),
+    c(
+      "Micah 3:8",
+      "theme",
+      "Micah says he is full of power by the Spirit of Yahweh to declare Israel's sin, a prophet describing the same moving.",
+    ),
+  ],
+  "2 Corinthians 1:20": [
+    c(
+      "Romans 15:8-9",
+      "theme",
+      "Christ became a servant to confirm the promises given to the fathers, so that the Gentiles might glorify God for mercy.",
+    ),
+    c(
+      "Hebrews 6:17-18",
+      "theme",
+      "God interposed with an oath so that the heirs of the promise might have strong encouragement, the certainty behind the Amen.",
+    ),
+    c(
+      "Luke 24:44",
+      "theme",
+      "All things written in the law, the prophets, and the psalms concerning Him must be fulfilled, which is why every promise is Yes in Him.",
+    ),
+  ],
+  "Luke 22:19-20": [
+    c(
+      "Exodus 24:8",
+      "pattern",
+      "At Sinai Moses sprinkles the blood of the covenant on the people, the scene Jesus reopens over the cup.",
+    ),
+    c(
+      "Jeremiah 31:31-34",
+      "promise",
+      "Jeremiah foretells a new covenant with the law written on hearts and sins remembered no more, the covenant Jesus inaugurates.",
+    ),
+    c(
+      "1 Corinthians 11:26",
+      "theme",
+      "Paul draws the practice straight from this night: proclaiming the Lord's death until He comes.",
+    ),
+  ],
+  "1 Corinthians 11:28": [
+    c(
+      "1 Corinthians 11:27",
+      "parallel",
+      "Paul has just warned that eating and drinking unworthily makes one guilty of the body and blood of the Lord.",
+    ),
+    c(
+      "2 Corinthians 13:5",
+      "theme",
+      "Paul tells the Corinthians to test themselves and see whether they are in the faith, the same self-examination.",
+    ),
+    c(
+      "Psalm 139:23-24",
+      "theme",
+      "The psalmist asks God to search him and see if there is any wicked way in him, the prayer that makes self-examination honest.",
+    ),
+  ],
+  "Hebrews 9:27": [
+    c(
+      "Genesis 3:19",
+      "theme",
+      "The sentence in Eden, that man returns to the dust, is why dying once is appointed to all.",
+    ),
+    c(
+      "Hebrews 9:28",
+      "parallel",
+      "Christ was offered once to bear the sins of many and will appear a second time for salvation, the answer to the judgment that follows death.",
+    ),
+    c(
+      "2 Corinthians 5:10",
+      "theme",
+      "We must all be revealed before the judgment seat of Christ to receive what is due, the judgment Hebrews says follows death.",
+    ),
+  ],
+  "1 Corinthians 8:6": [
+    c(
+      "Deuteronomy 6:4",
+      "theme",
+      "Israel confesses that Yahweh is one, and Paul places the one God the Father and one Lord Jesus Christ inside that confession.",
+    ),
+    c(
+      "Ephesians 4:4-6",
+      "parallel",
+      "Paul gives the same confession in Ephesians: one Lord, one faith, one baptism, one God and Father of all.",
+    ),
+    c(
+      "John 17:3",
+      "theme",
+      "Jesus defines eternal life as knowing the only true God and the One He sent, the two names Paul joins here.",
+    ),
+  ],
+  "Romans 6:3-4": [
+    c(
+      "Colossians 2:12",
+      "parallel",
+      "Buried with Him in baptism and raised with Him through faith in the working of God, the same death and resurrection.",
+    ),
+    c(
+      "Galatians 3:27",
+      "theme",
+      "As many as were baptized into Christ have put on Christ, the union Paul works out here.",
+    ),
+    c(
+      "Romans 6:11",
+      "theme",
+      "Paul draws the conclusion: reckon yourselves dead to sin and alive to God in Christ Jesus.",
+    ),
+  ],
+  "1 Corinthians 10:13": [
+    c(
+      "Hebrews 4:15-16",
+      "theme",
+      "We have a high priest tempted in all points yet without sin, so we can draw near to the throne of grace for help in time of need.",
+    ),
+    c(
+      "2 Peter 2:9",
+      "theme",
+      "The Lord knows how to deliver the godly out of temptation, the faithfulness Paul rests on.",
+    ),
+    c(
+      "James 1:13-14",
+      "contrast",
+      "James locates temptation in our own lust rather than in God, while Paul locates the way of escape in the God who is faithful.",
+    ),
+  ],
+  "1 Thessalonians 5:23": [
+    c(
+      "1 Thessalonians 5:24",
+      "parallel",
+      "Paul immediately grounds the prayer: the One who calls is faithful, and He will do it.",
+    ),
+    c(
+      "Philippians 1:6",
+      "theme",
+      "The God who began a good work will complete it until the day of Christ, the same certainty of final sanctification.",
+    ),
+    c(
+      "Hebrews 13:20-21",
+      "theme",
+      "The God of peace makes His people complete in every good work, the sanctifying work Paul asks for.",
+    ),
+  ],
+  "1 Corinthians 1:30": [
+    c(
+      "Jeremiah 23:5-6",
+      "promise",
+      "The Branch from David is named Yahweh our righteousness, the righteousness Paul says Christ became to us.",
+    ),
+    c(
+      "2 Corinthians 5:21",
+      "theme",
+      "God made the sinless One to be sin for us so that we might become the righteousness of God in Him.",
+    ),
+    c(
+      "1 Corinthians 6:11",
+      "theme",
+      "The Corinthians were washed, sanctified, and justified in the name of the Lord Jesus, the same gifts named here.",
+    ),
+  ],
+  "Hebrews 10:14": [
+    c(
+      "Hebrews 9:26",
+      "parallel",
+      "Once at the end of the ages He has been revealed to put away sin by the sacrifice of Himself, which is why one offering is enough.",
+    ),
+    c(
+      "Hebrews 10:10",
+      "theme",
+      "By God's will we have been sanctified through the offering of the body of Jesus Christ once for all.",
+    ),
+    c(
+      "Leviticus 16:34",
+      "contrast",
+      "The law repeated atonement year after year, the standing reminder that those sacrifices could not perfect the worshiper.",
+    ),
+  ],
+  "1 Peter 5:7": [
+    c(
+      "Psalm 55:22",
+      "theme",
+      "Cast your burden on Yahweh and He will sustain you, the practice Peter commands.",
+    ),
+    c(
+      "Philippians 4:6-7",
+      "theme",
+      "Paul tells the church to make requests known with thanksgiving, and the peace of God guards heart and mind.",
+    ),
+    c(
+      "Matthew 6:26",
+      "theme",
+      "Jesus points to the birds the heavenly Father feeds to prove that anxiety is unnecessary.",
+    ),
+  ],
+  "1 Peter 5:10": [
+    c(
+      "Romans 8:18",
+      "theme",
+      "The sufferings of this present time are not worthy to be compared with the glory to be revealed, which is why the suffering is only a little while.",
+    ),
+    c(
+      "2 Corinthians 4:17",
+      "theme",
+      "Light and momentary affliction works an eternal weight of glory, the same arithmetic.",
+    ),
+    c(
+      "1 Peter 5:6",
+      "parallel",
+      "Peter has just called for humility under God's mighty hand with exaltation promised in due time, the shape of the restoring he now prays for.",
+    ),
+  ],
+  "1 John 4:19": [
+    c(
+      "1 John 4:10",
+      "parallel",
+      "John has just said that love is not that we loved God but that He loved us and sent His Son.",
+    ),
+    c(
+      "Romans 5:8",
+      "theme",
+      "God commends His love in that while we were yet sinners Christ died for us, love that starts on His side.",
+    ),
+    c(
+      "Deuteronomy 7:7-8",
+      "pattern",
+      "God set His love on Israel not because they were numerous but because He loves them, the same free initiative.",
+    ),
+  ],
+  "Acts 2:41": [
+    c(
+      "Acts 2:38",
+      "pattern",
+      "Peter's call to repent and be baptized is answered immediately by those who gladly received his word.",
+    ),
+    c(
+      "Acts 4:4",
+      "theme",
+      "The number of believing men grows to about five thousand, the same word bearing the same fruit.",
+    ),
+    c(
+      "Isaiah 55:11",
+      "theme",
+      "God's word does not return void but accomplishes what He pleases, which is what happens on the day of Pentecost.",
+    ),
+  ],
+  "Galatians 5:25": [
+    c(
+      "Galatians 5:16",
+      "parallel",
+      "Paul has just given the command in its negative form: walk by the Spirit, and you will not fulfill the lust of the flesh.",
+    ),
+    c(
+      "Romans 8:14",
+      "theme",
+      "As many as are led by the Spirit of God are children of God, the family identity behind the walk.",
+    ),
+    c(
+      "Ezekiel 36:27",
+      "theme",
+      "God promises to put His Spirit within His people and cause them to walk in His statutes, the promise that makes the walk possible.",
+    ),
+  ],
 };
 
 /** Connections leaving from a verse reference. */
