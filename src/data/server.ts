@@ -295,10 +295,7 @@ function chapterQueue(
 }
 
 /** Whole-visit intro queue: the question and summary, then the chapters. */
-function visitIntroQueue(
-  q: Question,
-  translation: TranslationCode = "web",
-): ChainQueue {
+function visitIntroQueue(q: Question): ChainQueue {
   return { sourceId: `visit:${q.slug}`, items: visitIntroItems(q) };
 }
 
@@ -330,11 +327,8 @@ export function studyListenData(
 }
 
 /** Props for VisitListen: the whole-visit intro queue. */
-export function visitListenData(
-  q: Question,
-  translation: TranslationCode = "web",
-): { slug: string; items: AudioChunk[] } {
-  const queue = visitIntroQueue(q, translation);
+export function visitListenData(q: Question): { slug: string; items: AudioChunk[] } {
+  const queue = visitIntroQueue(q);
   return { slug: q.slug, items: queue.items };
 }
 
@@ -355,7 +349,7 @@ export function visitChainData(
   // The whole visit opens with the question and summary, then VisitChain's
   // continuation carries on through each chapter and into the study.
   const segments: ChainQueue[] = [
-    visitIntroQueue(q, translation),
+    visitIntroQueue(q),
     ...q.passages.map((p) =>
       chapterQueue(p.book, p.chapter, p.focus, translation),
     ),

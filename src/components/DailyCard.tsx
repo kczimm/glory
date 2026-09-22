@@ -4,7 +4,6 @@ import { verseSlug } from "@/data";
 import { categoryOf } from "@/data/server";
 import RandomLink from "@/components/RandomLink";
 import { versionedUrl } from "@/lib/translation-shared";
-import { resolveServerTranslation } from "@/lib/translation-server";
 
 /**
  * The "Today" card on the home page: one question and its key verse,
