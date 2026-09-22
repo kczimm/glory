@@ -5097,6 +5097,11 @@ export const connections: Record<string, Connection[]> = {
       "fulfilled",
       "What Moses promised God would do is accomplished in Christ, the circumcision made without hands.",
     ),
+    c(
+      "Ezekiel 36:26",
+      "parallel",
+      "Ezekiel promises the same surgery from God's side: a new heart and a new spirit within His people.",
+    ),
   ],
   "Colossians 2:11-12": [
     c(
@@ -5648,6 +5653,228 @@ export const connections: Record<string, Connection[]> = {
       "1 Samuel 17:34-37",
       "pattern",
       "David killed the lion and the bear and trusted God to deliver him again, courage under the same promise.",
+    ),
+  ],
+  // ------------------------------------------------------------------
+  // Exodus & Covenant: the calf, the wilderness, and Deuteronomy
+  // ------------------------------------------------------------------
+  "Exodus 32:4": [
+    c(
+      "Psalms 106:20",
+      "quotes",
+      "The psalmist describes the same exchange: they exchanged their glory for the image of a bull that eats grass.",
+    ),
+    c(
+      "Romans 1:23",
+      "theme",
+      "Paul's charge against the nations is the same move, trading the glory of the incorruptible God for the likeness of an image.",
+    ),
+    c(
+      "1 Corinthians 10:7",
+      "quotes",
+      "Paul quotes the feast that followed the calf: the people sat down to eat and drink, and rose up to play.",
+    ),
+  ],
+  "Exodus 32:14": [
+    c(
+      "Jonah 3:10",
+      "parallel",
+      "When Nineveh turns, God relents of the disaster He said He would do, the same mercy Moses appeals to here.",
+    ),
+    c(
+      "Numbers 23:19",
+      "contrast",
+      "Balaam says God is not a man that He should repent, which is why what changes here is a threatened judgment withdrawn, not God's character.",
+    ),
+  ],
+  "Exodus 32:32": [
+    c(
+      "Romans 9:3",
+      "parallel",
+      "Paul says he could wish himself accursed from Christ for the sake of his brothers, the same self-offering heart.",
+    ),
+    c(
+      "Isaiah 53:12",
+      "fulfilled",
+      "The servant makes intercession for the transgressors and bears the sin of many, which is what Moses offers to do and cannot.",
+    ),
+  ],
+  "Exodus 34:6": [
+    c(
+      "Psalms 103:8",
+      "quotes",
+      "The psalm repeats the formula: Yahweh is merciful and gracious, slow to anger, and abundant in loving kindness.",
+    ),
+    c(
+      "Joel 2:13",
+      "quotes",
+      "Joel calls Israel to tear their hearts rather than their garments, appealing to this same self-description.",
+    ),
+    c(
+      "Jonah 4:2",
+      "quotes",
+      "Jonah complains that he knew God was gracious and merciful, slow to anger, which is this verse on a prophet's lips.",
+    ),
+  ],
+  "1 Corinthians 10:14": [
+    c(
+      "1 John 5:21",
+      "theme",
+      "John ends his letter with the same short command: little children, keep yourselves from idols.",
+    ),
+    c(
+      "Colossians 3:5",
+      "theme",
+      "Paul names covetousness as idolatry, showing how far the command reaches beyond carved images.",
+    ),
+  ],
+  "Numbers 13:30": [
+    c(
+      "Joshua 14:8",
+      "parallel",
+      "Forty-five years later Caleb still says he wholly followed Yahweh his God, the same confidence he showed at Kadesh.",
+    ),
+    c(
+      "Romans 8:31",
+      "theme",
+      "If God is for us, who can be against us, which is the arithmetic Caleb uses against the giants.",
+    ),
+  ],
+  "Numbers 14:9": [
+    c(
+      "Deuteronomy 1:29-30",
+      "parallel",
+      "Moses reminds the next generation not to dread, because Yahweh your God who goes before you will fight for you.",
+    ),
+    c(
+      "2 Chronicles 20:15",
+      "theme",
+      "Jehoshaphat is told the same thing before a greater army: do not be afraid, for the battle is not yours but God's.",
+    ),
+  ],
+  "Numbers 14:24": [
+    c(
+      "Joshua 14:12",
+      "fulfilled",
+      "Caleb asks for the hill country where the Anakim were, still trusting the promise after forty-five years.",
+    ),
+    c(
+      "Joshua 14:8",
+      "quotes",
+      "Caleb's own account is that his brothers made the people's heart melt, but he wholly followed Yahweh his God.",
+    ),
+  ],
+  "Psalms 95:8": [
+    c(
+      "Hebrews 3:15",
+      "quotes",
+      "Hebrews quotes this verse word for word and applies it to the church's today.",
+    ),
+    c(
+      "Exodus 17:7",
+      "theme",
+      "Meribah and Massah are named in the wilderness, where Israel tested Yahweh by asking whether He was among them.",
+    ),
+  ],
+  "Hebrews 3:12": [
+    c(
+      "Hebrews 3:19",
+      "parallel",
+      "The chapter ends with the diagnosis repeated: they were not able to enter in because of unbelief.",
+    ),
+    c(
+      "1 Corinthians 10:12",
+      "theme",
+      "Paul draws the same warning from the same history: let him who thinks he stands be careful that he does not fall.",
+    ),
+  ],
+  "Deuteronomy 8:2-3": [
+    c(
+      "Matthew 4:4",
+      "quotes",
+      "Jesus answers the wilderness temptation with this verse: man does not live by bread alone.",
+    ),
+    c(
+      "Exodus 16:4",
+      "parallel",
+      "God states the manna's purpose at the start, that He may test whether they will walk in His law.",
+    ),
+  ],
+  "Exodus 16:4": [
+    c(
+      "Deuteronomy 8:3",
+      "quotes",
+      "Moses later explains the test: God humbled them and allowed them to be hungry, then fed them with manna.",
+    ),
+    c(
+      "Psalms 78:24",
+      "quotes",
+      "The psalm remembers it as God raining down manna on them and giving them food from the sky.",
+    ),
+  ],
+  "Deuteronomy 8:18": [
+    c(
+      "Deuteronomy 8:17",
+      "contrast",
+      "The verse just before names the lie this answers: my power and the might of my hand has gotten me this wealth.",
+    ),
+    c(
+      "1 Chronicles 29:12",
+      "theme",
+      "David prays the same truth: riches and honor come from you, and it is in your hand to make great.",
+    ),
+  ],
+  "John 6:35": [
+    c(
+      "Exodus 16:15",
+      "fulfilled",
+      "Moses told Israel the manna was the bread Yahweh had given them, and Jesus says He is the bread of life.",
+    ),
+    c(
+      "Isaiah 55:1",
+      "theme",
+      "Isaiah invites everyone who thirsts to come and buy and eat without money, the same free invitation.",
+    ),
+  ],
+  "Deuteronomy 30:14": [
+    c(
+      "Romans 10:8",
+      "quotes",
+      "Paul quotes this sentence and applies it to the word of faith he preaches.",
+    ),
+    c(
+      "Psalms 119:11",
+      "theme",
+      "The psalmist hides God's word in his heart, which is the near word Moses describes.",
+    ),
+  ],
+  "Deuteronomy 30:19": [
+    c(
+      "Joshua 24:15",
+      "parallel",
+      "Joshua sets the same choice before Israel at Shechem: choose this day whom you will serve.",
+    ),
+    c(
+      "Jeremiah 21:8",
+      "quotes",
+      "Jeremiah gives the same two ways to the city: I set before you the way of life and the way of death.",
+    ),
+  ],
+  "Romans 10:9": [
+    c(
+      "Deuteronomy 30:14",
+      "quotes",
+      "Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart.",
+    ),
+    c(
+      "Philippians 2:11",
+      "theme",
+      "Every tongue will confess that Jesus Christ is Lord, which is the confession Paul says saves.",
+    ),
+    c(
+      "Matthew 10:32",
+      "theme",
+      "Jesus promises to confess before His Father everyone who confesses Him before men.",
     ),
   ],
 };
