@@ -3144,6 +3144,757 @@ export const connections: Record<string, Connection[]> = {
       "The same three appear in the blessing, which is why the doctrine rests on the whole witness rather than one verse.",
     ),
   ],
+  // ------------------------------------------------------------------
+  // Verses the studies cite most: the threads that hold the graph together
+  // ------------------------------------------------------------------
+  "Romans 8:1": [
+    c(
+      "Romans 5:1",
+      "parallel",
+      "Justification by faith is the ground Paul stands on: peace with God is why there is now no condemnation for those in Christ.",
+    ),
+    c(
+      "Zechariah 3:1-5",
+      "pattern",
+      "Joshua the high priest stands accused in filthy garments until the angel strips them off, a courtroom picture of condemnation removed by God alone.",
+    ),
+    c(
+      "John 5:24",
+      "theme",
+      "Jesus says the one who hears and believes has eternal life and does not come into judgment but has passed out of death into life, the very verdict Paul declares.",
+    ),
+  ],
+  "Acts 17:11": [
+    c(
+      "2 Timothy 3:16-17",
+      "parallel",
+      "The Bereans' daily search rests on what Scripture is for: God-breathed and profitable for teaching, reproof, correction, and training in righteousness.",
+    ),
+    c(
+      "John 5:39",
+      "theme",
+      "Jesus tells His hearers that the Scriptures they search are the very writings that testify about Him, the test the Bereans applied.",
+    ),
+    c(
+      "Isaiah 8:20",
+      "theme",
+      "Isaiah sends the same questioner back to the law and the testimony, the standard by which every claimed word is judged.",
+    ),
+  ],
+  "Luke 24:27": [
+    c(
+      "Luke 24:44",
+      "parallel",
+      "Later the same day Jesus names the three divisions, the law of Moses, the prophets, and the psalms, as the writings that speak of Him.",
+    ),
+    c(
+      "Genesis 3:15",
+      "fulfilled",
+      "The first promise in Scripture already points to the offspring who will bruise the serpent's head, one of the things concerning Himself that Jesus explained.",
+    ),
+    c(
+      "Isaiah 53:5-6",
+      "fulfilled",
+      "The servant pierced for our transgressions and crushed for our iniquities is the center of the prophetic witness Jesus opened to them.",
+    ),
+  ],
+  "John 6:37": [
+    c(
+      "John 10:28-29",
+      "parallel",
+      "Jesus says the same thing in the shepherd's voice: no one will snatch His sheep out of His hand or out of the Father's hand.",
+    ),
+    c(
+      "Isaiah 42:1-3",
+      "pattern",
+      "The servant will not break a bruised reed or quench a dimly burning wick, the picture behind Jesus' promise never to throw out the one who comes.",
+    ),
+    c(
+      "John 6:39",
+      "theme",
+      "The ones the Father gives Him are the ones He will raise up at the last day, so His welcome and His keeping are one work.",
+    ),
+  ],
+  "James 4:7": [
+    c(
+      "1 Peter 5:8-9",
+      "parallel",
+      "Peter gives the same two moves, steadfast faith and resistance, against the devil who prowls looking for someone to devour.",
+    ),
+    c(
+      "Ephesians 6:11",
+      "theme",
+      "Paul's whole armor exists for standing against the schemes of the devil, which is what submission to God makes possible.",
+    ),
+    c(
+      "Matthew 4:10-11",
+      "pattern",
+      "Jesus answers the tempter from the word and the devil leaves Him, the pattern James promises to every believer who resists.",
+    ),
+  ],
+  "Acts 1:8": [
+    c(
+      "Luke 24:48-49",
+      "parallel",
+      "Luke's Gospel ends with the same promise: the disciples are witnesses, and they are to wait until they are clothed with power from on high.",
+    ),
+    c(
+      "Acts 2:1-4",
+      "fulfilled",
+      "At Pentecost the promise arrives in wind and fire, and the witness begins in Jerusalem exactly as Jesus said.",
+    ),
+    c(
+      "Isaiah 43:10",
+      "theme",
+      "God's ancient words to Israel, that they are His witnesses, now pass to the disciples who carry the same testimony to the ends of the earth.",
+    ),
+  ],
+  "James 1:5": [
+    c(
+      "Proverbs 2:3-6",
+      "theme",
+      "Proverbs promises that the one who calls out for discernment and searches for it will find the knowledge of God, for Yahweh gives wisdom.",
+    ),
+    c(
+      "1 Kings 3:9-12",
+      "pattern",
+      "Solomon asks for an understanding heart and God gives what was asked and more, the generosity James appeals to.",
+    ),
+    c(
+      "Matthew 7:7-8",
+      "parallel",
+      "Jesus makes asking the ordinary way the Father gives, which is why a lack of wisdom is an invitation to pray rather than to despair.",
+    ),
+  ],
+  "2 Timothy 3:16-17": [
+    c(
+      "Hebrews 4:12",
+      "parallel",
+      "Hebrews describes the same word as living and active, sharper than any two-edged sword, discerning the thoughts and intentions of the heart.",
+    ),
+    c(
+      "Psalm 119:105",
+      "theme",
+      "The psalmist calls the word a lamp to his feet, the practical shape of being equipped for every good work.",
+    ),
+    c(
+      "Matthew 4:4",
+      "pattern",
+      "Jesus answers hunger in the wilderness with Scripture rather than argument, showing the sufficiency of every word that proceeds from the mouth of God.",
+    ),
+  ],
+  "Acts 2:38": [
+    c(
+      "Ezekiel 36:25-27",
+      "fulfilled",
+      "The promised clean water, new heart, and Spirit within are what Peter announces as the gift received in baptism.",
+    ),
+    c(
+      "Titus 3:5",
+      "theme",
+      "Paul names the same washing and renewal and traces them to mercy rather than to works of righteousness.",
+    ),
+    c(
+      "Mark 1:15",
+      "parallel",
+      "Jesus begins His ministry with the same call: repent and believe the Good News, because the kingdom is at hand.",
+    ),
+  ],
+  "2 Corinthians 12:9": [
+    c(
+      "Isaiah 40:29-31",
+      "theme",
+      "Isaiah promises that God gives power to the weak and increases strength for the one who has no might, which is Paul's boast.",
+    ),
+    c(
+      "1 Corinthians 1:27-29",
+      "parallel",
+      "God chooses the weak and despised so that no flesh may boast, the same logic Paul applies to his own thorn.",
+    ),
+    c(
+      "Hebrews 11:34",
+      "theme",
+      "The heroes of faith were made strong out of weakness, and Paul's paradox is that the power of Christ rests on him rather than replacing the weakness.",
+    ),
+  ],
+  "John 5:39": [
+    c(
+      "Luke 24:27",
+      "theme",
+      "On the Emmaus road Jesus does what He says here, opening Moses and all the prophets and explaining the things concerning Himself.",
+    ),
+    c(
+      "2 Timothy 3:15",
+      "theme",
+      "Paul tells Timothy that the sacred writings are able to make him wise to salvation through faith in Christ Jesus, the same testimony Jesus claims.",
+    ),
+    c(
+      "Deuteronomy 18:15-18",
+      "promise",
+      "Moses promised a prophet like himself whom God would raise and whose words must be heard, one of the writings that testify of Jesus.",
+    ),
+  ],
+  "Colossians 2:15": [
+    c(
+      "Genesis 3:15",
+      "fulfilled",
+      "The first promise already aimed at the serpent's head, and the cross is where that blow falls.",
+    ),
+    c(
+      "Hebrews 2:14-15",
+      "parallel",
+      "Hebrews says He shared flesh and blood so that through death He might destroy the one who had the power of death.",
+    ),
+    c(
+      "1 John 3:8",
+      "theme",
+      "The Son of God appeared for this purpose, to destroy the works of the devil, which is what the public triumph describes.",
+    ),
+  ],
+  "1 John 4:4": [
+    c(
+      "1 John 5:4-5",
+      "parallel",
+      "John defines the victory as faith, the same faith that overcomes the world because of the One who is in the believer.",
+    ),
+    c(
+      "2 Kings 6:16",
+      "pattern",
+      "Elisha tells his frightened servant that those with them are more than those with the enemy, and John locates that greater power in the Spirit who indwells the believer.",
+    ),
+    c(
+      "Romans 8:31",
+      "theme",
+      "If God is for us, Paul asks, who can be against us, the same confidence John places in the indwelling Spirit.",
+    ),
+  ],
+  "Genesis 1:27": [
+    c(
+      "Genesis 5:1-2",
+      "parallel",
+      "The generations of Adam restate it: God made man in His likeness, created them male and female, and blessed them.",
+    ),
+    c(
+      "Genesis 9:6",
+      "theme",
+      "The sanctity of human life rests on this verse, for God made man in His own image.",
+    ),
+    c(
+      "Colossians 3:10",
+      "theme",
+      "The new man is renewed in knowledge after the image of his Creator, so the image marred by sin is being restored in Christ.",
+    ),
+  ],
+  "1 John 4:10": [
+    c(
+      "Romans 5:8",
+      "parallel",
+      "Paul says God commends His love in that while we were yet sinners Christ died for us, love that begins entirely on God's side.",
+    ),
+    c(
+      "John 3:16",
+      "theme",
+      "The sending of the Son is the shape God's love takes in the Gospel's most familiar verse, and the initiative is His.",
+    ),
+    c(
+      "Titus 3:4-5",
+      "theme",
+      "Paul says the kindness and love of God our Savior appeared, not by works of righteousness but according to His mercy.",
+    ),
+  ],
+  "Hebrews 1:1-2": [
+    c(
+      "John 1:14",
+      "parallel",
+      "The Word who spoke through the prophets became flesh and lived among us, which is how God has now spoken in a Son.",
+    ),
+    c(
+      "Numbers 12:6-8",
+      "contrast",
+      "God speaks to prophets in visions and dreams but with Moses mouth to mouth, and Hebrews announces a Son who surpasses even that intimacy.",
+    ),
+    c(
+      "John 1:18",
+      "theme",
+      "No one has seen God at any time, but the one and only Son has declared Him, the final word Hebrews announces.",
+    ),
+  ],
+  "Philippians 1:6": [
+    c(
+      "1 Thessalonians 5:23-24",
+      "parallel",
+      "Paul prays for the Thessalonians to be preserved complete and rests on the same certainty: the One who calls is faithful and will do it.",
+    ),
+    c(
+      "Ephesians 1:13-14",
+      "theme",
+      "The Spirit is the guarantee of the inheritance until redemption, which is why the work begun cannot be left unfinished.",
+    ),
+    c(
+      "Hebrews 12:2",
+      "theme",
+      "Jesus is the author and perfecter of faith, the One who both begins and completes what He starts in His people.",
+    ),
+  ],
+  "1 John 4:1": [
+    c(
+      "Matthew 7:15-16",
+      "parallel",
+      "Jesus warns of false prophets in sheep's clothing and gives the same test John does: they are known by their fruits.",
+    ),
+    c(
+      "Deuteronomy 13:1-3",
+      "pattern",
+      "Even a prophet whose sign comes true is to be rejected if he leads away from Yahweh, which is why every spirit must be tested.",
+    ),
+    c(
+      "Acts 17:11",
+      "theme",
+      "The Bereans examined the Scriptures daily to see whether what they heard was so, the practice John commands.",
+    ),
+  ],
+  "1 Timothy 2:5": [
+    c(
+      "Job 9:32-33",
+      "pattern",
+      "Job longs for an umpire between himself and God who could lay a hand on both, a longing answered in the man Christ Jesus.",
+    ),
+    c(
+      "Hebrews 9:15",
+      "theme",
+      "Jesus is the mediator of a new covenant, whose death redeems the transgressions committed under the first.",
+    ),
+    c(
+      "Acts 4:12",
+      "theme",
+      "Peter says there is salvation in no other name under heaven given among men, the exclusive claim of the one mediator.",
+    ),
+  ],
+  "John 20:31": [
+    c(
+      "1 John 5:13",
+      "parallel",
+      "John says he wrote so that believers may know they have eternal life, the same purpose he states here.",
+    ),
+    c(
+      "John 1:12",
+      "theme",
+      "To those who received Him He gave the right to become children of God, the life that is in His name.",
+    ),
+    c(
+      "Luke 1:3-4",
+      "parallel",
+      "Luke writes so that Theophilus may know the certainty of the things he was taught, the same aim of a written witness.",
+    ),
+  ],
+  "Romans 8:32": [
+    c(
+      "Genesis 22:12-14",
+      "pattern",
+      "Abraham does not withhold his only son and God provides the ram, a picture of the Father who did not spare His own Son.",
+    ),
+    c(
+      "John 3:16",
+      "theme",
+      "The giving of the only Son is the measure of the love Paul reasons from, and the guarantee of every other gift.",
+    ),
+    c(
+      "Hebrews 11:17-19",
+      "pattern",
+      "Abraham offered Isaac believing God could raise him from the dead, and Paul's argument rests on that same God.",
+    ),
+  ],
+  "2 Corinthians 13:14": [
+    c(
+      "Matthew 28:19",
+      "parallel",
+      "The three named in the baptismal formula are the three named in the blessing, one name over one people.",
+    ),
+    c(
+      "Ephesians 2:18",
+      "theme",
+      "Through Christ we both have access in one Spirit to the Father, which is the fellowship the blessing asks for.",
+    ),
+    c(
+      "Numbers 6:24-26",
+      "pattern",
+      "The threefold Aaronic blessing asks Yahweh to bless, keep, and give peace, and the apostolic blessing fills that shape with the Father, Son, and Spirit.",
+    ),
+  ],
+  "Ephesians 1:13-14": [
+    c(
+      "2 Corinthians 1:21-22",
+      "parallel",
+      "Paul says God sealed us and gave the Spirit in our hearts as a guarantee, the same pledge of what is to come.",
+    ),
+    c(
+      "Romans 8:16",
+      "theme",
+      "The Spirit testifies with our spirit that we are children of God, which is the inward side of being sealed.",
+    ),
+    c(
+      "Romans 8:23",
+      "theme",
+      "The Spirit is the first fruits, and those who have Him groan for the redemption of the body that the seal guarantees.",
+    ),
+  ],
+  "Luke 15:20": [
+    c(
+      "Hosea 11:8",
+      "pattern",
+      "God's heart turns within Him and His compassion is aroused even as judgment looms, the prophet's version of a father running down the road.",
+    ),
+    c(
+      "Micah 7:18-19",
+      "theme",
+      "Micah celebrates a God who delights in loving kindness and casts sins into the depths of the sea, the welcome the father gives.",
+    ),
+    c(
+      "Isaiah 55:7",
+      "theme",
+      "Isaiah calls the wicked to return because God will abundantly pardon, which is what the father does before the son finishes his speech.",
+    ),
+  ],
+  "John 20:29": [
+    c(
+      "1 Peter 1:8-9",
+      "parallel",
+      "Peter blesses those who have not seen Him and yet love and believe, receiving the outcome of their faith.",
+    ),
+    c(
+      "2 Corinthians 5:7",
+      "theme",
+      "Paul states the rule Jesus blesses here: we walk by faith, not by sight.",
+    ),
+    c(
+      "Hebrews 11:1",
+      "theme",
+      "Faith is the assurance of things hoped for and the conviction of things not seen, which is why the unseen believer is called blessed.",
+    ),
+  ],
+  "Acts 2:23": [
+    c(
+      "Genesis 50:20",
+      "pattern",
+      "Joseph tells his brothers that they meant evil while God meant it for good, the earliest shape of the cross Peter preaches.",
+    ),
+    c(
+      "Isaiah 53:10",
+      "promise",
+      "It pleased Yahweh to bruise the servant and make his soul an offering for sin, the determined counsel behind the crucifixion.",
+    ),
+    c(
+      "Acts 4:27-28",
+      "parallel",
+      "The same church prays that Herod, Pilate, the Gentiles, and Israel did whatever God's hand and counsel foreordained to happen.",
+    ),
+  ],
+  "Ephesians 6:18": [
+    c(
+      "1 Thessalonians 5:17",
+      "parallel",
+      "Paul gives the shortest form of the same command elsewhere: pray without ceasing.",
+    ),
+    c(
+      "Luke 18:1",
+      "theme",
+      "Jesus tells a parable so that His disciples ought always to pray and not lose heart, the perseverance Paul asks for.",
+    ),
+    c(
+      "Romans 8:26-27",
+      "theme",
+      "The Spirit helps our weakness and intercedes for us, which is what praying in the Spirit means when we do not know how to pray.",
+    ),
+  ],
+  "Hebrews 4:12": [
+    c(
+      "Jeremiah 23:29",
+      "theme",
+      "Jeremiah hears God describe His word as fire and as a hammer that breaks the rock in pieces, the same piercing power.",
+    ),
+    c(
+      "Ephesians 6:17",
+      "theme",
+      "Paul names the word of God as the sword of the Spirit, the one offensive piece in the whole armor.",
+    ),
+    c(
+      "2 Timothy 3:16-17",
+      "parallel",
+      "Paul's charge rests on the same conviction: every Scripture is God-breathed and profitable for correction and training.",
+    ),
+  ],
+  "1 Corinthians 11:26": [
+    c(
+      "Luke 22:19-20",
+      "parallel",
+      "At the table Jesus commands that the bread and cup be done in memory of Him, the new covenant in His blood.",
+    ),
+    c(
+      "Exodus 12:14",
+      "pattern",
+      "Passover was kept as a memorial throughout every generation, the meal whose shape the Supper fulfills and reopens.",
+    ),
+    c(
+      "Matthew 26:29",
+      "promise",
+      "Jesus will not drink the fruit of the vine again until He drinks it anew with His disciples in the Father's Kingdom.",
+    ),
+  ],
+  "John 10:30": [
+    c(
+      "Deuteronomy 6:4",
+      "theme",
+      "The confession that Yahweh is one is the heart of Israel's faith, and Jesus places Himself and the Father inside that unity rather than beside it.",
+    ),
+    c(
+      "John 14:9-11",
+      "parallel",
+      "Whoever has seen Jesus has seen the Father, for He is in the Father and the Father in Him.",
+    ),
+    c(
+      "John 17:22",
+      "theme",
+      "Jesus asks that His people be one even as He and the Father are one, so that unity is both His identity and His gift.",
+    ),
+  ],
+  "1 Corinthians 13:13": [
+    c(
+      "1 Corinthians 13:8",
+      "parallel",
+      "Paul has just said that prophecies, tongues, and knowledge pass away while love never fails, which is why it is the greatest.",
+    ),
+    c(
+      "Colossians 3:14",
+      "theme",
+      "Paul calls love the bond of perfection, the thing that holds every other virtue together.",
+    ),
+    c(
+      "1 Peter 4:8",
+      "theme",
+      "Peter sets love above all things because love covers a multitude of sins.",
+    ),
+  ],
+  "Romans 5:1": [
+    c(
+      "Romans 3:24-26",
+      "theme",
+      "Paul has already shown the ground: justified freely by grace through the redemption in Christ Jesus, who is both just and the justifier.",
+    ),
+    c(
+      "Romans 5:9-10",
+      "parallel",
+      "Justified by His blood and reconciled while we were enemies, much more will we be saved by His life.",
+    ),
+    c(
+      "John 14:27",
+      "theme",
+      "The peace Jesus leaves with His disciples is not the peace the world gives, which is why it survives trouble.",
+    ),
+  ],
+  "2 Corinthians 7:10": [
+    c(
+      "Psalm 51:17",
+      "pattern",
+      "David learns that the sacrifice God wants is a broken spirit and a contrite heart He will not despise.",
+    ),
+    c(
+      "Proverbs 28:13",
+      "theme",
+      "Whoever conceals his sins does not prosper, but whoever confesses and renounces them finds mercy.",
+    ),
+    c(
+      "Matthew 27:3-5",
+      "contrast",
+      "Judas felt remorse and still went to the priests and hanged himself, the sorrow of the world that works death rather than repentance.",
+    ),
+  ],
+  "Galatians 4:6": [
+    c(
+      "Romans 8:15",
+      "parallel",
+      "Paul says the very same thing in Romans: the Spirit of adoption is the One by whom we cry Abba, Father.",
+    ),
+    c(
+      "Mark 14:36",
+      "pattern",
+      "In Gethsemane Jesus prays Abba, Father, and the Spirit puts that same Son-shaped prayer on the lips of His people.",
+    ),
+    c(
+      "Psalm 103:13",
+      "theme",
+      "As a father has compassion on his children, so Yahweh has compassion on those who fear Him.",
+    ),
+  ],
+  "Matthew 4:4": [
+    c(
+      "Deuteronomy 8:3",
+      "quotes",
+      "Jesus answers the wilderness temptation with the wilderness text itself, where God taught Israel that man lives by every word from His mouth.",
+    ),
+    c(
+      "John 6:35",
+      "theme",
+      "Jesus later names Himself the bread of life, the food the word supplies in the wilderness.",
+    ),
+    c(
+      "Luke 4:4",
+      "parallel",
+      "Luke records the same answer in his account of the temptation, confirming the saying as Jesus' own reply.",
+    ),
+  ],
+  "John 15:4-5": [
+    c(
+      "Psalm 1:3",
+      "pattern",
+      "The blessed man is like a tree planted by streams of water that yields its fruit in season, the image behind the vine and branches.",
+    ),
+    c(
+      "Jeremiah 17:7-8",
+      "pattern",
+      "Jeremiah compares the one who trusts Yahweh to a tree planted by the waters that does not cease from yielding fruit.",
+    ),
+    c(
+      "Galatians 5:22-23",
+      "theme",
+      "The fruit of the Spirit is love, joy, peace, and the rest, and fruit only grows on a branch that remains in the vine.",
+    ),
+  ],
+  "Mark 1:15": [
+    c(
+      "Daniel 2:44",
+      "promise",
+      "Daniel foretold that the God of heaven would set up a kingdom that shall never be destroyed, the kingdom Jesus announces as at hand.",
+    ),
+    c(
+      "Galatians 4:4-5",
+      "theme",
+      "When the fullness of time came God sent His Son, born under the law, to redeem those under the law.",
+    ),
+    c(
+      "Isaiah 61:1-2",
+      "fulfilled",
+      "The anointed servant preaches good news to the humble and proclaims the year of Yahweh's favor, the program Jesus claims in Nazareth.",
+    ),
+  ],
+  "2 Corinthians 1:3-4": [
+    c(
+      "Isaiah 40:1-2",
+      "theme",
+      "Comfort, comfort my people, says your God, the ancient command that shapes Paul's name for God here.",
+    ),
+    c(
+      "Psalm 34:18",
+      "theme",
+      "Yahweh is near to those who have a broken heart and saves those who have a crushed spirit.",
+    ),
+    c(
+      "2 Corinthians 1:5",
+      "parallel",
+      "As the sufferings of Christ abound toward us, so our comfort also abounds through Christ.",
+    ),
+  ],
+  "Ephesians 1:11": [
+    c(
+      "Isaiah 46:9-10",
+      "theme",
+      "God declares the end from the beginning and says His counsel shall stand, the purpose Paul says works all things.",
+    ),
+    c(
+      "Romans 8:28-30",
+      "parallel",
+      "All things work together for good for those called according to His purpose, whom He foreknew and predestined to be conformed to His Son.",
+    ),
+    c(
+      "Ephesians 1:4-5",
+      "parallel",
+      "He chose us in Him before the foundation of the world and predestined us for adoption according to the good pleasure of His will.",
+    ),
+  ],
+  "Romans 12:2": [
+    c(
+      "Ephesians 4:22-24",
+      "parallel",
+      "Put away the old man, be renewed in the spirit of your mind, and put on the new man created in righteousness and holiness of truth.",
+    ),
+    c(
+      "2 Corinthians 3:18",
+      "theme",
+      "Beholding the glory of the Lord we are transformed into the same image from glory to glory, the renewal Paul commands here.",
+    ),
+    c(
+      "Titus 3:5",
+      "theme",
+      "The renewing of the mind is the work of the Holy Spirit, given according to mercy rather than works.",
+    ),
+  ],
+  "Romans 8:26-27": [
+    c(
+      "John 14:16-17",
+      "theme",
+      "Jesus promises another Counselor, the Spirit of truth, who will be with His people and in them, which is why He can pray within them.",
+    ),
+    c(
+      "Ephesians 6:18",
+      "theme",
+      "Paul tells the church to pray at all times in the Spirit, the practice this intercession makes possible.",
+    ),
+    c(
+      "Psalm 38:9",
+      "pattern",
+      "The psalmist says his groaning is not hidden from God, prayer that outruns words long before Paul names the Spirit's intercession.",
+    ),
+  ],
+  "Romans 8:16": [
+    c(
+      "Galatians 4:6",
+      "parallel",
+      "God sent the Spirit of His Son into our hearts, crying Abba, Father, the same inward testimony of sonship.",
+    ),
+    c(
+      "1 John 4:13",
+      "theme",
+      "We know that we remain in Him and He in us because He has given us of His Spirit.",
+    ),
+    c(
+      "Ephesians 1:13-14",
+      "theme",
+      "The Spirit who testifies is also the seal and guarantee of the inheritance until redemption.",
+    ),
+  ],
+  "Romans 8:15": [
+    c(
+      "Galatians 4:6",
+      "parallel",
+      "Paul says the same in Galatians: the Spirit of His Son in our hearts cries Abba, Father.",
+    ),
+    c(
+      "Mark 14:36",
+      "pattern",
+      "The Spirit's cry is the prayer Jesus prayed in Gethsemane, making His own address to the Father the believer's.",
+    ),
+    c(
+      "Romans 8:23",
+      "theme",
+      "Having the first fruits of the Spirit, we groan waiting for adoption, the redemption of the body.",
+    ),
+  ],
+  "Hebrews 12:6": [
+    c(
+      "Proverbs 3:11-12",
+      "quotes",
+      "The appeal is drawn straight from the proverb: do not despise Yahweh's discipline, for whom He loves He reproves.",
+    ),
+    c(
+      "Revelation 3:19",
+      "parallel",
+      "The risen Christ says the same to Laodicea: as many as I love, I reprove and chasten.",
+    ),
+    c(
+      "Deuteronomy 8:5",
+      "theme",
+      "As a man disciplines his son, so Yahweh your God disciplines you, the fatherly pattern behind the chastening.",
+    ),
+  ],
 };
 
 /** Connections leaving from a verse reference. */
