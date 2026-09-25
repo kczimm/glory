@@ -69,6 +69,11 @@ In Next 16, route `params` is a **Promise** — `await params` before reading it
 When adding content, keep every study point **grounded in specific verses**,
 and wire `raises`/`followsFrom` so journeys continue organically.
 
+For the full authoring procedure and the list of traps that only fail late
+(quote-verifier thresholds, trail-order uniqueness, duplicate connection keys,
+the audio side effects of editing `raises`), see
+`.agents/skills/glory-study/SKILL.md`.
+
 ### The knowledge graph
 
 Beyond questions, Glory has **typed cross-reference edges between verses**
