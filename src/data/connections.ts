@@ -620,6 +620,16 @@ export const connections: Record<string, Connection[]> = {
       "theme",
       "The Son of Man came to give his life as a ransom for many.",
     ),
+    c(
+      "Galatians 1:8",
+      "theme",
+      "The message Paul delivered is the one he cursed anyone for changing, even an angel from heaven.",
+    ),
+    c(
+      "Romans 10:9",
+      "parallel",
+      "The same message in the mouth of a believer: Jesus is Lord, and God raised Him from the dead.",
+    ),
   ],
   "Romans 3:24": [
     c(
@@ -5875,6 +5885,129 @@ export const connections: Record<string, Connection[]> = {
       "Matthew 10:32",
       "theme",
       "Jesus promises to confess before His Father everyone who confesses Him before men.",
+    ),
+  ],
+
+  // ------------------------------------------------------------------
+  // Ecumenical: what is essential, and what is not
+  // ------------------------------------------------------------------
+  "Galatians 1:8": [
+    c(
+      "1 Corinthians 15:3-4",
+      "parallel",
+      "The good news Paul refuses to see altered is exactly this: Christ died for our sins and was raised the third day.",
+    ),
+    c(
+      "Acts 15:28",
+      "parallel",
+      "The assembly in Jerusalem refused to add to what was necessary; Paul refuses to let anything be added to the message he preached.",
+    ),
+    c(
+      "2 John 1:10-11",
+      "theme",
+      "John gives the same instruction in miniature: do not welcome the teacher who brings a different teaching.",
+    ),
+  ],
+  "Acts 15:28": [
+    c(
+      "Acts 15:10",
+      "theme",
+      "The yoke the fathers could not bear is not to be laid on disciples: the assembly names a short list and calls the rest no greater burden.",
+    ),
+    c(
+      "1 Timothy 1:3",
+      "parallel",
+      "Paul tells Timothy to command certain men not to teach a different doctrine: the category of the necessary did not end at Jerusalem.",
+    ),
+    c(
+      "Revelation 2:6",
+      "parallel",
+      "The risen Christ commends a church for hating a teaching, which is the same instinct the apostles showed here.",
+    ),
+  ],
+  "Romans 14:4": [
+    c(
+      "Philippians 3:15",
+      "parallel",
+      "Where believers genuinely differ, Paul leaves room for God to reveal what is still hidden rather than forcing the question.",
+    ),
+    c(
+      "1 Corinthians 8:2",
+      "theme",
+      "None of us yet knows as we ought; it is the Lord, not our grasp of every question, who holds His servant up.",
+    ),
+    c(
+      "1 Corinthians 3:15",
+      "theme",
+      "God's power to make a servant stand is the same confidence Paul has that the man whose work burns is still saved.",
+    ),
+  ],
+  "1 Corinthians 3:15": [
+    c(
+      "1 Corinthians 3:11",
+      "theme",
+      "The fire tests what was built on the foundation; the foundation itself, which is Jesus Christ, is never what burns.",
+    ),
+    c(
+      "Matthew 7:24-25",
+      "contrast",
+      "Jesus tests the house by the storm, and Paul tests the building by fire: both ask what was actually built, not how loudly it was claimed.",
+    ),
+    c(
+      "Philippians 1:6",
+      "promise",
+      "The work God began He will complete, which is why a badly built life can still be pulled through the fire.",
+    ),
+  ],
+  "1 John 4:2": [
+    c(
+      "John 1:14",
+      "fulfilled",
+      "The confession that Jesus Christ has come in the flesh is the confession that the Word became flesh and lived among us.",
+    ),
+    c(
+      "2 John 1:7",
+      "parallel",
+      "The same test appears in the second letter: the deceiver is the one who refuses to confess that Jesus Christ came in the flesh.",
+    ),
+    c(
+      "Colossians 2:9",
+      "theme",
+      "To deny the flesh is to deny the place where the fullness of deity was pleased to dwell bodily.",
+    ),
+  ],
+  "Matthew 7:22-23": [
+    c(
+      "1 Corinthians 13:2",
+      "theme",
+      "Prophesying, knowledge, and mountain-moving faith are nothing without love; accuracy in His name is not the same as knowing Him.",
+    ),
+    c(
+      "James 2:19",
+      "parallel",
+      "Accurate belief about God is not saving trust in God; even the demons have the former.",
+    ),
+    c(
+      "1 John 2:23",
+      "theme",
+      "Whoever denies the Son does not have the Father either: the person you are trusting and the words you confess cannot be separated.",
+    ),
+  ],
+  "Philippians 3:15": [
+    c(
+      "1 Corinthians 13:12",
+      "theme",
+      "Now we know in part and see dimly; Paul's peace about the gaps is that God will finish the revealing.",
+    ),
+    c(
+      "1 Corinthians 8:2",
+      "parallel",
+      "Anyone who thinks he knows anything does not yet know as he ought; the remedy is humility, not indifference.",
+    ),
+    c(
+      "John 16:13",
+      "promise",
+      "The Spirit of truth was promised to guide into all truth, which is why a partially wrong believer can be led further.",
     ),
   ],
 };
