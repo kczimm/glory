@@ -1656,7 +1656,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 15:3-4", "John 3:16", "Romans 3:24", "Romans 6:23"],
-    raises: ["what-is-grace", "what-is-justification", "what-is-faith", "what-is-repentance", "how-can-i-be-saved", "what-is-the-kingdom-of-god", "what-are-the-parables-of-the-kingdom-about", "does-it-matter-which-jesus-i-believe-in"],
+    raises: ["what-is-grace", "what-is-justification", "what-is-faith", "what-is-repentance", "how-can-i-be-saved", "what-is-the-kingdom-of-god", "what-are-the-parables-of-the-kingdom-about", "does-it-matter-which-jesus-i-believe-in", "how-wrong-can-i-be-and-still-be-saved"],
     followsFrom: [],
     related: ["who-is-jesus", "how-can-i-be-saved", "faith-or-works"],
     planned: [],
@@ -12903,7 +12903,7 @@ export const questions: Question[] = [
     followsFrom: ["what-does-it-look-like-to-suffer-well", "where-is-god-in-my-pain"],
     related: ["what-does-it-look-like-to-suffer-well", "where-is-god-in-my-pain", "how-do-trials-make-us-more-like-christ", "why-does-god-allow-suffering"],
     planned: ["What is the difference between suffering for Christ and suffering for my own mistakes?"],
-    order: 39,
+    order: 40,
   },
 
   // ------------------------------------------------------------------
@@ -13117,10 +13117,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["John 6:35", "John 6:51", "John 6:53-54", "John 6:63", "John 6:68-69"],
-    raises: ["what-is-the-lords-supper", "how-is-christ-present-in-the-lords-supper", "what-is-faith", "can-anyone-resist-gods-grace"],
+    raises: ["what-is-the-lords-supper", "how-is-christ-present-in-the-lords-supper", "what-is-faith", "can-anyone-resist-gods-grace", "what-does-it-mean-to-abide-in-christs-love"],
     followsFrom: ["what-is-the-lords-supper"],
     related: ["what-is-the-lords-supper", "how-is-christ-present-in-the-lords-supper", "what-is-faith", "what-does-it-mean-to-be-born-again"],
-    planned: ["What does it mean to abide in Christ?"],
+    planned: [],
     order: 57,
   },
 
@@ -15188,10 +15188,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Galatians 1:8", "2 Corinthians 11:4", "Acts 4:12", "Matthew 7:23", "2 John 1:9"],
-    raises: ["is-jesus-really-god", "what-is-the-gospel", "should-i-test-every-teaching-by-scripture", "how-can-i-be-saved", "which-modern-portraits-preach-another-jesus"],
+    raises: ["is-jesus-really-god", "what-is-the-gospel", "should-i-test-every-teaching-by-scripture", "how-can-i-be-saved", "which-modern-portraits-preach-another-jesus", "how-wrong-can-i-be-and-still-be-saved"],
     followsFrom: ["who-is-jesus", "what-is-the-gospel"],
     related: ["can-i-trust-the-bible", "why-did-jesus-have-to-die", "should-i-test-every-teaching-by-scripture"],
-    planned: ["Can someone be saved while still confused about some things concerning Jesus?"],
+    planned: [],
     order: 83,
   },
 
@@ -21974,5 +21974,139 @@ export const questions: Question[] = [
     related: ["what-is-the-church", "why-do-i-need-the-church", "what-does-it-mean-to-be-born-again", "the-churchs-mission-in-the-world"],
     planned: [],
     order: 82,
-  }
+  },
+
+  // ------------------------------------------------------------------
+  // Ecumenical: what is essential, and what is not
+  // ------------------------------------------------------------------
+  {
+    slug: "how-wrong-can-i-be-and-still-be-saved",
+    question: "How wrong can I be and still be saved?",
+    category: "church",
+    summary:
+      "Scripture does not ask you to have everything right before it will save you, and it does not let you deny everything and still be safe. It draws one line and holds it: the errors that empty the faith are the ones that take away the Christ you are trusting, and the rest are real disagreements between people God is able to make stand. Denominations live mostly on the second side of that line, but not entirely, and the test is never the length of a list. It is whether the error reaches the One your faith actually rests on.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 15,
+        title: "The message that saves, and the error that empties it",
+        lookFor: "Paul hands over the message he received \"first of all,\" then follows the logic down: if the resurrection is not true, preaching, faith, and forgiveness all collapse with it.",
+        focus: "1-19",
+      },
+      {
+        book: "Galatians",
+        chapter: 1,
+        title: "A different gospel is no gospel",
+        lookFor: "Paul does not treat the Galatian error as a variant view. He calls it desertion and pronounces God's curse on anyone who preaches it, even an angel from heaven.",
+        focus: "6-12",
+      },
+      {
+        book: "Acts",
+        chapter: 15,
+        title: "The assembly decides what is necessary",
+        lookFor: "A real doctrinal dispute, argued in the open by the apostles and elders, who refuse to lay on the Gentiles any burden beyond what is necessary.",
+        focus: "6-29",
+      },
+      {
+        book: "Romans",
+        chapter: 14,
+        title: "Disputable matters, and a servant who stands",
+        lookFor: "Believers disagree about food and days, and Paul does not settle every question. He forbids contempt and judgment, because God is able to make His servant stand.",
+        focus: "1-13",
+      },
+      {
+        book: "1 John",
+        chapter: 4,
+        title: "Test the spirits",
+        lookFor: "John gives a concrete test: the spirit that confesses Jesus Christ has come in the flesh is from God, and the spirit that refuses that confession is not.",
+        focus: "1-6",
+      },
+    ],
+    points: [
+      {
+        heading: "The line is drawn at the gospel, not at a list",
+        body:
+          "Paul calls the message he handed over the thing he delivered \"first of all,\" and he says it is the message \"by which also you are saved\" if it is held firmly. Its content is not vague: \"that Christ died for our sins according to the Scriptures, that he was buried, that he was raised on the third day according to the Scriptures.\" This is not one doctrine among many but the ground under all the others, which is why Paul can say that a message which adds to it is not a lesser gospel but no gospel at all.",
+        verses: ["1 Corinthians 15:1-2", "1 Corinthians 15:3-4", "Galatians 1:7"],
+      },
+      {
+        heading: "Some errors empty the faith itself",
+        body:
+          "Paul is willing to follow the logic all the way down. \"If Christ has not been raised, your faith is vain; you are still in your sins.\" If the dead are not raised, then the witnesses are false and those who have fallen asleep in Christ have perished. That is why denying the resurrection is not a difference of emphasis: it removes the thing faith rests on. John draws the same boundary around the incarnation, saying that the spirit which does not confess Jesus Christ come in the flesh is not of God, and that \"Whoever transgresses and doesn't remain in the teaching of Christ, doesn't have God.\" These errors do not merely wound a believer. They leave a person with a different Christ.",
+        verses: [
+          "1 Corinthians 15:17",
+          "1 Corinthians 15:18",
+          "1 John 4:2-3",
+          "2 John 1:9",
+        ],
+      },
+      {
+        heading: "Real disagreements are not always saving disagreements",
+        body:
+          "Paul assumes that believers will disagree about things that matter to them. \"One man has faith to eat all things, but he who is weak eats only vegetables,\" and one man esteems a day while another esteems every day alike. Paul does not pretend the disagreement is imaginary, and he does not settle it here. He tells each man to be \"fully assured in his own mind,\" and then he forbids both contempt and judgment: \"Don't let him who eats despise him who doesn't eat. Don't let him who doesn't eat judge him who eats, for God has accepted him.\" His reason should end the argument: \"Who are you who judge another's servant? To his own lord he stands or falls. Yes, he will be made to stand, for God has power to make him stand.\" A genuine believer can be wrong about a real question and still be held up by God. Much of what divides denominations today belongs here: the mode of baptism, the ordering of church government, the timing of Christ's return, and which gifts continue. Paul's answer is not that every question must be settled, but that we go on \"speaking truth in love\" and grow up into our head.",
+        verses: [
+          "Romans 14:1",
+          "Romans 14:2",
+          "Romans 14:3",
+          "Romans 14:4",
+          "Romans 14:5",
+          "Ephesians 4:15",
+        ],
+      },
+      {
+        heading: "The one foundation can survive bad building",
+        body:
+          "Paul gives the closest thing Scripture offers to a direct answer about how much error a saved person can carry. No one can lay a foundation other than the one already laid, which is Jesus Christ. On that foundation a man may build with gold, silver, and costly stones, or with wood, hay, and stubble, and the Day will test the work in fire. If the work burns, the man \"will suffer loss, but he himself will be saved, but as through fire.\" The loss is real, and the sentence is loss rather than acquittal. But the man is not the work. A believer can build badly on the true foundation and still be pulled through the flames, while the one who builds well on that same foundation receives a reward.",
+        verses: [
+          "1 Corinthians 3:11",
+          "1 Corinthians 3:12-13",
+          "1 Corinthians 3:14",
+          "1 Corinthians 3:15",
+        ],
+      },
+      {
+        heading: "The church has precedent for naming what is necessary",
+        body:
+          "When men came teaching that Gentiles had to be circumcised to be saved, the question was not left to private opinion. It was argued in the open, before the apostles and elders gathered together, and Peter refused to put on the disciples \"a yoke ... which neither our fathers nor we were able to bear.\" The letter the assembly sent named a short list of things to abstain from and said, \"it seemed good to the Holy Spirit, and to us, to lay no greater burden on you than these necessary things.\" So Scripture itself gives us the category of the necessary, and the first church defined it narrowly and refused to enlarge it. That is the shape an honest answer has to take: firm where Scripture is firm, silent where Scripture is silent, and quick to tell the two apart. It also shows that a dispute over essentials is not a reason to stop talking. They stayed in the room until the matter was settled.",
+        verses: ["Acts 15:1", "Acts 15:5-6", "Acts 15:10", "Acts 15:28"],
+      },
+      {
+        heading: "Correct words are not the same as knowing Him",
+        body:
+          "This is where the question turns and becomes dangerous. Jesus describes people who will arrive with an accurate confession and an impressive ministry record, saying, \"Lord, Lord, didn't we prophesy in your name, in your name cast out demons, and in your name do many mighty works?\" and they will hear, \"I never knew you. Depart from me, you who work iniquity.\" Their doctrine was not the problem; they had never known Him. James makes the same point about bare correctness: \"You believe that God is one. You do well. The demons also believe, and shudder.\" So the question worth asking is not how much error I can carry, but whether I am actually trusting the Christ the gospel describes. Paul tells the Philippians to walk by the light they have and to leave the rest with God: \"If in anything you think otherwise, God will also reveal that to you.\" That is not indifference to truth. It is confidence that the One who holds His servant up is also able to teach him.",
+        verses: [
+          "Matthew 7:21",
+          "Matthew 7:22",
+          "Matthew 7:23",
+          "James 2:19",
+          "Philippians 3:15",
+        ],
+      },
+    ],
+    keyVerses: [
+      "1 Corinthians 15:3-4",
+      "Galatians 1:8",
+      "Romans 14:4",
+      "1 Corinthians 3:15",
+      "Philippians 3:15",
+    ],
+    raises: [
+      "should-i-test-every-teaching-by-scripture",
+      "what-is-the-difference-between-assurance-and-presumption",
+      "can-i-lose-my-salvation",
+      "how-does-god-judge-people-who-never-heard-of-jesus",
+    ],
+    followsFrom: ["what-is-the-gospel", "does-it-matter-which-jesus-i-believe-in"],
+    related: [
+      "what-is-the-gospel",
+      "does-it-matter-which-jesus-i-believe-in",
+      "should-i-test-every-teaching-by-scripture",
+      "what-is-a-healthy-church",
+    ],
+    planned: [
+      "Why are there so many denominations?",
+      "How do I decide which church to join?",
+    ],
+    order: 137,
+  },
 ];
