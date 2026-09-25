@@ -21977,7 +21977,7 @@ export const questions: Question[] = [
   },
 
   // ------------------------------------------------------------------
-  // Ecumenical: what is essential, and what is not
+  // TRAIL: The Church (continued: the essentials)
   // ------------------------------------------------------------------
   {
     slug: "how-wrong-can-i-be-and-still-be-saved",
