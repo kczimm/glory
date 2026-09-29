@@ -17031,7 +17031,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 20:2", "Exodus 19:5-6", "Matthew 5:17", "Galatians 3:24"],
-    raises: ["how-is-the-new-covenant-different-from-the-old-one", "faith-or-works", "why-did-israel-worship-a-golden-calf", "what-was-the-tabernacle-for"],
+    raises: ["how-is-the-new-covenant-different-from-the-old-one", "faith-or-works", "why-did-israel-worship-a-golden-calf", "what-was-the-tabernacle-for", "must-christians-keep-the-sabbath"],
     followsFrom: ["what-does-the-exodus-show-us-about-god"],
     related: ["can-i-trust-the-bible", "what-is-grace"],
     planned: [],
@@ -18810,10 +18810,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Psalms 3:5", "Psalms 4:8", "Mark 4:39-40"],
-    raises: ["why-does-god-keep-saying-fear-not", "who-is-jesus", "why-pray-your-will-be-done"],
+    raises: ["why-does-god-keep-saying-fear-not", "who-is-jesus", "why-pray-your-will-be-done", "must-christians-keep-the-sabbath"],
     followsFrom: ["why-am-i-so-anxious", "can-i-be-anxious-and-still-trust-god"],
     related: ["how-do-i-balance-planning-with-trusting-god", "how-do-i-pray", "does-god-hear-my-prayers"],
-    planned: ["What does Sabbath rest mean, and is it still for today?"],
+    planned: [],
     order: 100,
   },
 
@@ -21298,6 +21298,97 @@ export const questions: Question[] = [
     related: ["how-is-the-new-covenant-different-from-the-old-one", "what-is-faith"],
     planned: [],
     order: 103,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Exodus & Covenant (continued: the Sabbath and Christian liberty)
+  // ------------------------------------------------------------------
+  {
+    slug: "must-christians-keep-the-sabbath",
+    question: "Must Christians keep the Sabbath?",
+    category: "exodus-and-covenant",
+    summary:
+      "Paul was in the synagogue on the Sabbath again and again, and Luke calls it his custom, but the New Testament never lays the day on a Gentile believer's conscience or makes it the test of another man's standing. Gentiles heard the gospel on Sabbaths and were never commanded to keep them. The Sabbath was a covenant sign given to Israel and a shadow whose body is Christ, and the rest it pointed to still remains for the people of God.",
+    passages: [
+      {
+        book: "Exodus",
+        chapter: 20,
+        title: "The Sabbath written into the covenant",
+        lookFor: "Redemption named before any command is given, the seventh day grounded in God's own rest at creation, and the rest extended to servants and to the stranger within the gates.",
+        focus: "2,8-11",
+      },
+      {
+        book: "Mark",
+        chapter: 2,
+        title: "Lord of the Sabbath",
+        lookFor: "Jesus claiming authority over the day rather than discarding it, and making the good of man its measure.",
+        focus: "23-28",
+      },
+      {
+        book: "Acts",
+        chapter: 13,
+        title: "Paul in the synagogue on the Sabbath",
+        lookFor: "Where Paul goes on Sabbath days, who is listening, and what the Gentiles ask for next.",
+        focus: "13-49",
+      },
+      {
+        book: "Romans",
+        chapter: 14,
+        title: "Days, conscience, and the strong and weak",
+        lookFor: "How Paul handles a day that one man esteems and another treats alike, and where he forbids judging.",
+        focus: "1-13",
+      },
+      {
+        book: "Hebrews",
+        chapter: 4,
+        title: "The rest that remains",
+        lookFor: "The argument that the promise of rest is still open, and what entering it actually means.",
+        focus: "1-11",
+      },
+    ],
+    points: [
+      {
+        heading: "The Sabbath was given to Israel as a covenant sign",
+        body:
+          "The seventh day is older than Sinai: at creation 'God blessed the seventh day, and made it holy, because he rested in it from all his work of creation which he had done.' The command itself repeats that ground: 'in six days Yahweh made heaven and earth, the sea, and all that is in them, and rested the seventh day.' But when God writes it into the covenant at Sinai, He gives the day a specific role: 'It is a sign between me and the children of Israel forever.' Ezekiel says the same, that the Sabbaths were given 'to be a sign between me and them, that they might know that I am Yahweh who sanctifies them.' Deuteronomy ties the day to redemption rather than to creation: 'You shall remember that you were a servant in the land of Egypt, and Yahweh your God brought you out of there by a mighty hand and by an outstretched arm. Therefore Yahweh your God commanded you to keep the Sabbath day.' Seventh-day readers press this language honestly: the Sabbath is called 'a perpetual covenant' (Exodus 31:16), God hallowed the day before Israel existed, and the command itself begins with 'Remember.' The covenant-theology answer is that the same permanence belongs to the whole order God was giving Israel, and that order has now been replaced: circumcision was also called 'an everlasting covenant' (Genesis 17:13), the priesthood was promised throughout their generations (Exodus 40:15), and Hebrews says the first covenant 'is becoming old and grows aged' (Hebrews 8:13).",
+        verses: ["Genesis 2:3", "Exodus 20:8-11", "Exodus 31:16", "Exodus 31:17", "Exodus 40:15", "Ezekiel 20:12", "Deuteronomy 5:15", "Genesis 17:13", "Hebrews 8:13"],
+      },
+      {
+        heading: "Jesus is Lord of the Sabbath, and He defined it by doing good",
+        body:
+          "Jesus never treated the Sabbath as nothing; He treated it as His. When the Pharisees challenged His disciples for plucking grain, He answered with two sentences that reframe the whole command: 'The Sabbath was made for man, not man for the Sabbath. Therefore the Son of Man is lord even of the Sabbath.' The day exists for human good, and its Lord was standing in front of them. He pressed the same point with the sheep in the pit: 'Of how much more value then is a man than a sheep! Therefore it is lawful to do good on the Sabbath day.' So the Sabbath is not abolished here. It is claimed and interpreted by the One who owns it, and He bends it toward the good of man.",
+        verses: ["Mark 2:27-28", "Matthew 12:11-12"],
+      },
+      {
+        heading: "Paul was in the synagogue every Sabbath, and the text shows why",
+        body:
+          "Luke records it again and again. At Antioch 'they went into the synagogue on the Sabbath day, and sat down.' At Thessalonica 'Paul, as was his custom, went in to them, and for three Sabbath days reasoned with them from the Scriptures.' At Corinth 'he reasoned in the synagogue every Sabbath, and persuaded Jews and Greeks.' So yes, Paul kept showing up on the Sabbath, and Luke calls it his custom. But notice what the custom is: he is reasoning from the Scriptures, and the synagogue is where the Scriptures were read and where Jews and God-fearers gathered. Luke uses the very same phrase of Jesus, who 'entered, as was his custom, into the synagogue on the Sabbath day,' so the custom in view is synagogue attendance on the day the synagogue met. The hardest datum for that reading is Philippi, where there was apparently no synagogue and Paul still sought the Sabbath gathering: 'On the Sabbath day we went outside of the city by a riverside, where we supposed there was a place of prayer.' Even if that shows Paul honoring the day as his own, no letter he wrote imposes it on anyone else. When the door closed at Ephesus, the pattern changed immediately to 'reasoning daily in the school of Tyrannus,' and that continued 'for two years.' His own explanation of motive is 'To the Jews I became as a Jew, that I might gain Jews.' And when he was accused of teaching Jews to forsake Moses, he went with the temple vow so that all would know that he himself continued to 'walk keeping the law.' That is the point: his Sabbath habit was Jewish identity, freely kept, and never imposed on his churches.",
+        verses: ["Acts 13:14", "Acts 16:13", "Acts 17:1-2", "Acts 18:4", "Acts 19:9-10", "1 Corinthians 9:20", "Acts 21:24", "Luke 4:16"],
+      },
+      {
+        heading: "Gentiles heard him on the Sabbath and were never required to keep it",
+        body:
+          "The Gentiles in these cities were not all proselytes who had taken the covenant's obligations on themselves; many were God-fearers already attending the synagogue, the people Paul addressed directly when he stood up: 'Men of Israel, and you who fear God, listen.' They heard the gospel in the place they already went. At Antioch 'the Gentiles begged that these words might be preached to them the next Sabbath,' and 'the next Sabbath almost the whole city was gathered together to hear the word of God.' That is a crowd of Gentiles on a Sabbath, listening. Then look at what the church actually required of them. The Jerusalem council wrote that 'it seemed good to the Holy Spirit, and to us, to lay no greater burden on you than these necessary things,' and the list is four items with no Sabbath in it. Paul later restates the ruling: 'concerning the Gentiles who believe, we have written our decision that they should observe no such thing, except that they should keep themselves from food offered to idols, from blood, from strangled things, and from sexual immorality.' Isaiah's promise is a strong argument on the other side, and it reaches past this age: in the new creation 'from one Sabbath to another, shall all flesh come to worship before me,' says Yahweh. Seventh-day readers hear there a day that never ends. That reading is serious, and this study does not settle it. What the New Testament does settle is obligation.",
+        verses: ["Acts 13:42", "Acts 13:44", "Acts 13:16", "Acts 15:28-29", "Acts 21:25", "Isaiah 56:6-7", "Isaiah 66:23"],
+      },
+      {
+        heading: "The day is now a matter of conscience, and the rest it pointed to remains",
+        body:
+          "This is where the New Testament lands. Paul tells the Romans, 'One man esteems one day as more important. Another esteems every day alike. Let each man be fully assured in his own mind,' and then forbids the judging that turns the day into a test: 'let’s not judge one another any more.' To the Colossians he is blunt: 'Let no one therefore judge you in eating, or in drinking, or with respect to a feast day or a new moon or a Sabbath day, which are a shadow of the things to come; but the body is Christ’s.' Seventh-day readers hear that list the way the Old Testament groups its own rites, 'on the Sabbaths, on the new moons, and on the set feasts,' so they take Paul to be addressing the festival calendar and not the seventh day. That reading deserves weighing. What does not change either way is his refusal to let a day become the test of another man's standing. And to the Galatians, who were sliding back into observance as a way of standing with God, he writes with alarm, 'You observe days, months, seasons, and years. I am afraid for you, that I might have wasted my labor for you.' None of this means the Sabbath was a mistake. Jesus said, 'I didn’t come to destroy, but to fulfill,' and Paul insists that faith does not nullify the law: 'No, we establish the law.' Matthew's next sentence is the reply that carries farthest: the law does not pass away 'until all things are accomplished,' and in Christ it is accomplished. That is why the shadow gives way to the body it promised. Hebrews says the rest itself is still open, that 'There remains therefore a Sabbath rest for the people of God,' and then calls us to enter it. In Troas the disciples were gathered 'on the first day of the week' to break bread, and John writes from 'the Lord’s day,' but the New Testament never turns Sunday into a new law either. What was a covenant sign for Israel, and a shadow of Christ, becomes a rest you enter by faith in Him.",
+        verses: ["Romans 14:5-6", "Romans 14:13", "1 Chronicles 23:31", "Colossians 2:16-17", "Galatians 4:10-11", "Matthew 5:17-18", "Romans 3:31", "Hebrews 4:9-11", "Acts 20:7", "Revelation 1:10"],
+      },
+    ],
+    keyVerses: ["Mark 2:27-28", "Acts 17:2", "Colossians 2:16-17", "Romans 14:5", "Hebrews 4:9"],
+    raises: [
+      "how-is-the-new-covenant-different-from-the-old-one",
+      "faith-or-works",
+      "what-do-we-do-when-we-gather",
+      "is-all-of-life-worship",
+    ],
+    followsFrom: ["why-did-god-give-israel-the-law-at-sinai", "how-can-i-rest-when-my-mind-wont-stop"],
+    related: ["why-did-god-give-israel-the-law-at-sinai", "faith-or-works", "what-is-worship"],
+    planned: ["Are the Ten Commandments still binding on Christians?"],
+    order: 104,
   },
 
   // ------------------------------------------------------------------
