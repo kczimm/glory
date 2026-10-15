@@ -1,9 +1,13 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
-import { verseSlug } from "@/data";
-import { bookSlug } from "@/data/books";
-import { questions, graphVerseRefs, bibleBooks } from "@/data/server";
+import { questions } from "@/data/server";
 import { categories } from "@/data";
+
+/**
+ * The sitemap lists the pages worth landing on: the study corpus, the trails,
+ * and the two browsing indexes. It deliberately does not list the deep reader
+ * or graph URLs (see the note below).
+ */
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -23,23 +27,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Every cross-reference hub and cited verse already has a static /verses page.
-  const verseRoutes: MetadataRoute.Sitemap = graphVerseRefs().map((ref) => ({
-    url: `${SITE_URL}/verses/${verseSlug(ref)}`,
-    lastModified: now,
-    changeFrequency: "yearly",
-    priority: 0.4,
-  }));
-
-  // Every chapter of the vendored Bible has a /bible reader page.
-  const bibleRoutes: MetadataRoute.Sitemap = bibleBooks().flatMap(({ book, chapters }) =>
-    Array.from({ length: chapters }, (_, i) => ({
-      url: `${SITE_URL}/bible/${bookSlug(book)}-${i + 1}`,
-      lastModified: now,
-      changeFrequency: "yearly" as const,
-      priority: 0.3,
-    }))
-  );
+  /* The deep reader and graph pages are deliberately NOT listed.
+     /bible enumerates 1,189 chapters and /verses roughly 1,800 hubs; feeding
+     those lists to crawlers drove the crawl of the two heaviest route
+     families on the site without bringing readers. Both indexes stay listed
+     below, and every verse and chapter is still reachable by following links
+     from the studies, so the pages are discoverable without being advertised
+     as a corpus to enumerate. */
 
   const trailRoutes: MetadataRoute.Sitemap = [...categories]
     .sort((a, b) => a.order - b.order)
@@ -50,11 +44,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  return [
-    ...staticRoutes,
-    ...trailRoutes,
-    ...questionRoutes,
-    ...verseRoutes,
-    ...bibleRoutes,
-  ];
+  return [...staticRoutes, ...trailRoutes, ...questionRoutes];
 }
