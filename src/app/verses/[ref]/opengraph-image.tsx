@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { refFromSlug, getPassageText } from "@/data/server";
 import { SITE_NAME } from "@/lib/site";
-import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
+import { getTranslationInfo } from "@/lib/translation-shared";
 
 export const alt = "Verse";
 export const size = { width: 1200, height: 630 };
@@ -21,19 +21,14 @@ const C = {
   line: "#e6ddc9",
 };
 
-export default async function Image({
-  params,
-  searchParams,
-}: {
-  params: Promise<{ ref: string }>;
-  searchParams?: Promise<{ version?: string }>;
-}) {
+export default async function Image({ params }: { params: Promise<{ ref: string }> }) {
   const { ref } = await params;
-  const sp = await searchParams;
-  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
-  const translationInfo = getTranslationInfo(version);
+  // Always the default reading. The route is cached by path under ISR, so a
+  // ?version= query could not produce a distinct cached image anyway, and
+  // nothing links here with that parameter.
+  const translationInfo = getTranslationInfo("web");
   const verse = refFromSlug(ref);
-  const text = verse ? getPassageText(verse, version) : null;
+  const text = verse ? getPassageText(verse, "web") : null;
 
   return new ImageResponse(
     (

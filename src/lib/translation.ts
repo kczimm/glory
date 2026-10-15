@@ -43,8 +43,21 @@ export function getVersionFromStorage(): TranslationCode {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored && VALID_CODES.has(stored)) return stored as TranslationCode;
   } catch {
-    /* private mode / quota: fail silently */
+    /* private mode / quota: fall through to the cookie */
   }
+  return getVersionFromCookie();
+}
+
+/** The translation cookie, for when localStorage is unavailable.
+ *
+ * It matters that the cookie is read here as well as in the pre-paint script:
+ * if the two answered differently, the page would paint one reading while the
+ * toggle and the audio controls believed another. */
+function getVersionFromCookie(): TranslationCode {
+  if (typeof document === "undefined") return "web";
+  const match = document.cookie.match(/(?:^|; )glory:translation=([^;]*)/);
+  const value = match ? decodeURIComponent(match[1]) : null;
+  if (value && VALID_CODES.has(value)) return value as TranslationCode;
   return "web";
 }
 

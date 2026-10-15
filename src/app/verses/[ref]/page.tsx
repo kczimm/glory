@@ -87,8 +87,9 @@ export default async function VersePage({ params }: Props) {
             <VerseText verse={verse} />
           </p>
           <p className="mt-3 text-[14px] font-semibold tracking-wide text-gold-deep">
-            {verse} · <span data-v="web">WEB</span>
-            <span data-v="kjv">KJV</span>
+            {verse} ·{" "}
+            <span data-v="web">{getTranslationInfo("web").shortName}</span>
+            <span data-v="kjv">{getTranslationInfo("kjv").shortName}</span>
             {chapterHref && (
               <Link
                 href={chapterHref}

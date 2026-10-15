@@ -6,11 +6,12 @@
  *   - Immutable build assets (/_next/static/*): cache-first.
  *   - Page navigations: network-first, fall back to the last cached copy,
  *     then to /offline when there is nothing cached at all.
- *   - RSC/prefetch payloads: network-first too, so a translation switch is
- *     never masked by a stale cached payload of the same URL.
- *   - The page cache separates WEB and KJV responses: the same URL returns
- *     different content depending on the glory:translation cookie, so
- *     cached entries are keyed by URL + translation and never collide.
+ *   - RSC/prefetch payloads: network-first too, so a page is never served as
+ *     a stale payload when the network is available.
+ *   - Responses are translation-independent: the server sends both readings
+ *     and CSS shows one, so a cached page is correct whatever the reader has
+ *     chosen. (Entries used to be keyed by URL + translation; that split is
+ *     gone, since the same URL no longer returns different HTML.)
  *   - Everything else (API routes, server actions, cross-origin audio):
  *     passed straight through to the network.
  *
@@ -18,7 +19,7 @@
  * caching would not pick up on its own.
  */
 
-const CACHE_VERSION = "v2";
+const CACHE_VERSION = "v3";
 const STATIC_CACHE = `glory-static-${CACHE_VERSION}`;
 const PAGES_CACHE = `glory-pages-${CACHE_VERSION}`;
 
@@ -66,7 +67,15 @@ self.addEventListener("fetch", (event) => {
   const { request } = event;
 
   if (request.method !== "GET") return;
-  const url = new URL(request.url);
+
+  // A request URL is always absolute in practice, but if parsing ever fails we
+  // simply stay out of the way and let the browser make the request.
+  let url;
+  try {
+    url = new URL(request.url);
+  } catch {
+    return;
+  }
 
   // Cross-origin (R2 audio etc.) is content-addressed and CDN-cached;
   // leave it to the browser HTTP cache.
@@ -86,10 +95,9 @@ self.addEventListener("fetch", (event) => {
   }
 
   // Remaining same-origin GETs (RSC payloads, prefetches): fetch from the
-  // network, falling back to the versioned page cache when offline. We
-  // deliberately do NOT serve cached payloads while online: the server's
-  // answer for a URL depends on the translation cookie, so a stale cached
-  // payload would show the previous translation.
+  // network, falling back to the page cache when offline. We deliberately do
+  // NOT serve cached payloads while online, so a deploy is never masked by a
+  // stale copy.
   event.respondWith(networkFirst(request));
 });
 
@@ -101,33 +109,12 @@ function isImmutableAsset(url) {
   );
 }
 
-/** The reader's translation from the request cookie ("web" by default). */
-function translationFrom(request) {
-  const cookie = request.headers.get("cookie") || "";
-  const m = cookie.match(/(?:^|; )glory:translation=(web|kjv)/);
-  return m ? m[1] : "web";
-}
-
-/**
- * A cache key for a page-data request that includes the translation, so WEB
- * and KJV responses for the same URL are stored and served separately. We
- * only use this for cache reads/writes; the network itself is always hit
- * with the original request.
- */
-function pageKey(request) {
-  const url = new URL(request.url);
-  url.searchParams.set("__transl", translationFrom(request));
-  return new Request(url, { method: request.method, headers: request.headers });
-}
-
-/** Fetch from the network and refresh the versioned page cache on success. */
+/** Fetch from the network and refresh the page cache on success. */
 async function fetchAndCache(request) {
   const response = await fetch(request);
   if (response.ok) {
     const cache = await caches.open(PAGES_CACHE);
-    cache
-      .put(pageKey(request), response.clone())
-      .then(() => trim(PAGES_CACHE));
+    cache.put(request, response.clone()).then(() => trim(PAGES_CACHE));
   }
   return response;
 }
@@ -136,10 +123,9 @@ async function handleNavigation(request) {
   try {
     return await fetchAndCache(request);
   } catch {
-    // Offline: prefer the versioned copy for this URL, then any precached
-    // shell entry, then the dedicated /offline page.
-    let cached = await caches.match(pageKey(request));
-    if (!cached) cached = await caches.match(request);
+    // Offline: the last cached copy of this URL, then any precached shell
+    // entry, then the dedicated /offline page.
+    let cached = await caches.match(request);
     if (!cached) cached = await caches.match("/offline", { ignoreSearch: true });
     if (cached) return cached;
     throw new Error("offline and nothing cached");
@@ -150,7 +136,7 @@ async function networkFirst(request) {
   try {
     return await fetchAndCache(request);
   } catch {
-    return (await caches.match(pageKey(request))) || Response.error();
+    return (await caches.match(request)) || Response.error();
   }
 }
 

@@ -21,7 +21,11 @@ export default function VerseCard({ verse }: { verse: string }) {
     target: edge.target,
     kind: edge.kind,
     note: edge.note,
-    text: <VerseText verse={edge.target} />,
+    // null when the target resolves to no text, so the row omits the quotation
+    // instead of rendering empty quote marks
+    text: getPassageText(edge.target, "web") ? (
+      <VerseText verse={edge.target} />
+    ) : null,
   }));
   return (
     <figure className="border-l-2 border-gold/60 bg-cream/50 py-3 pl-4 pr-5">

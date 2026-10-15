@@ -63,7 +63,8 @@ export default async function PrintStudyPage({ params }: Props) {
         </h1>
         <p className="mt-3 max-w-[65ch] text-ink-soft">{question.summary}</p>
         <p className="mt-3 text-[11px] text-ink-faint">
-          {SITE_URL}/questions/{slug} · Scripture quoted from the World English Bible and the King James Version
+          {SITE_URL}/questions/{slug} · Scripture quoted from the World English
+          Bible or the King James Version, whichever you have selected
         </p>
       </header>
 

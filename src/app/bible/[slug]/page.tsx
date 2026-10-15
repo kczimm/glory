@@ -5,6 +5,7 @@ import { chapterSlug, bookFromSlug } from "@/data/books";
 import { parseRef, verseKeys, verseSlug } from "@/data/ref";
 import { getChapterPair, bibleBooks, graphVerseRefs } from "@/data/server";
 import { PairedText } from "@/components/VerseText";
+import { getTranslationInfo } from "@/lib/translation-shared";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -93,8 +94,8 @@ export default async function BibleChapter({ params }: Props) {
           </h1>
           <div className="mt-4 flex items-center gap-3 text-[13px] text-ink-soft">
             <span>
-              <span data-v="web">WEB</span>
-              <span data-v="kjv">KJV</span>
+              <span data-v="web">{getTranslationInfo("web").shortName}</span>
+              <span data-v="kjv">{getTranslationInfo("kjv").shortName}</span>
             </span>
             <span aria-hidden>·</span>
             <nav className="flex gap-2" aria-label="Nearby chapters">

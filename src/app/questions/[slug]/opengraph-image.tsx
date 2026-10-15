@@ -1,8 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getQuestion, getPassageText } from "@/data/server";
 import { SITE_NAME } from "@/lib/site";
-import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
-
+import { getTranslationInfo } from "@/lib/translation-shared";
 export const alt = "Glory study";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -19,20 +18,15 @@ const C = {
   line: "#e6ddc9",
 };
 
-export default async function Image({
-  params,
-  searchParams,
-}: {
-  params: Promise<{ slug: string }>;
-  searchParams?: Promise<{ version?: string }>;
-}) {
+export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const sp = await searchParams;
-  const version: TranslationCode = (sp?.version === "kjv" ? "kjv" : "web");
-  const translationInfo = getTranslationInfo(version);
+  // Always the default reading: ISR caches this route by path, so a ?version=
+  // query cannot produce a distinct cached image, and nothing links here with
+  // that parameter. See the note in the verses opengraph-image.
+  const translationInfo = getTranslationInfo("web");
   const q = getQuestion(slug);
   const ref = q?.keyVerses[0];
-  const verseText = ref ? getPassageText(ref, version) : null;
+  const verseText = ref ? getPassageText(ref, "web") : null;
 
   return new ImageResponse(
     (

@@ -24,7 +24,10 @@ export function PairedText({
   return (
     <>
       <span data-v="web">{web}</span>
-      <span data-v="kjv">{kjv}</span>
+      {/* Fall back to the WEB reading when a verse has no KJV text. CSS hides
+          the web span whenever kjv is selected, so without this a missing
+          reading would render as nothing at all rather than the default. */}
+      <span data-v="kjv">{kjv ?? web}</span>
     </>
   );
 }
