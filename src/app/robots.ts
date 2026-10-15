@@ -27,6 +27,10 @@ const BULK_CRAWLERS = [
   "Bytespider",
   "MJ12bot",
   "DotBot",
+  // Measured at ~1,550 requests in 25 hours. Not on any published bot list,
+  // so it counts as ordinary traffic in the analytics; it is an SEO/AI
+  // visibility crawler that sends no readers.
+  "QlyzeBot",
 ];
 
 export default function robots(): MetadataRoute.Robots {
