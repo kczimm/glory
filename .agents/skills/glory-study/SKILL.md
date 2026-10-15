@@ -125,6 +125,12 @@ claims.
   `verify:graph` and fails only at `next build`. Run `npx tsc --noEmit` first.
 - **Duplicate `order` within a category** is caught by `validate.mjs` but not
   by `npm run build`.
+- **Never list the same book+chapter twice in one study's `passages[]`.**
+  Readers, React keys, the visit speech chain, and the continuation registry are
+  all keyed by book+chapter (`ChapterReader.tsx`, `server.ts`, `speech.ts`), so
+  the second passage overwrites the first's audio segment and the two readers
+  open together. Split a long chapter on `focus` inside one passage instead
+  (`focus: "1-48"`).
 - **Editing a parent's `raises` changes audio.** The study outro speaks every
   `raises` title and every `planned` title (`src/lib/audio-text.ts`), so those
   arrays are spoken text and new text means new hashes.
