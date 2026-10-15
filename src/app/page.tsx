@@ -16,7 +16,13 @@ import DailyCard from "@/components/DailyCard";
  * The home page is a static prerender: the reader's translation choice is
  * applied in the browser (both readings are in the HTML), so nothing here
  * depends on the request.
+ *
+ * The hourly revalidate is for the "Today" card, which picks its question from
+ * the UTC day. A plain static page is built once, so without this the pick
+ * would stay frozen on whatever day the last deploy happened to be.
  */
+export const revalidate = 3600;
+
 export default function Home() {
   const allTeasers = teasers();
   return (
