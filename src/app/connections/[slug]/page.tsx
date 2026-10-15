@@ -5,9 +5,6 @@ import { verseSlug } from "@/data";
 import {
   questions,
   refFromSlug,
-  graphVerseTexts,
-  graphUsages,
-  citedVersesBySlug,
 } from "@/data/server";
 import ConnectionGraph from "@/components/ConnectionGraph";
 
@@ -52,14 +49,7 @@ export default async function ConnectionsPage({ params }: Props) {
         walking the map.
       </p>
       <div className="mt-8">
-        <ConnectionGraph
-          startRef={ref}
-          graph={{
-            texts: graphVerseTexts(),
-            usages: graphUsages(),
-            cited: citedVersesBySlug(),
-          }}
-        />
+        <ConnectionGraph startRef={ref} />
       </div>
       <p className="mt-8 text-[13px] text-ink-faint">
         Prefer to read?{" "}

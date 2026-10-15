@@ -1,6 +1,12 @@
 "use client";
 
-import { useMemo, useRef, useState, useSyncExternalStore } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from "react";
 import Link from "next/link";
 import type { ConnectionKind } from "@/data/types";
 import { verseSlug, connectionKindLabel } from "@/data";
@@ -20,6 +26,57 @@ export interface GraphData {
   usages: Record<string, { slug: string; question: string }[]>;
   /** verses cited by each study (slug -> refs), for the visited ring */
   cited: Record<string, string[]>;
+}
+
+// The graph is identical for every page and session, so it is fetched once
+// and cached at module scope. Pages pass only `startRef`; without this split
+// the whole payload was inlined into each prerendered connection page.
+const EMPTY_GRAPH: GraphData = { texts: {}, usages: {}, cited: {} };
+
+let graphCache: GraphData | null = null;
+let graphPromise: Promise<GraphData> | null = null;
+
+function fetchGraph(): Promise<GraphData> {
+  if (graphCache) return Promise.resolve(graphCache);
+  if (!graphPromise) {
+    graphPromise = fetch("/api/graph")
+      .then((res) => {
+        if (!res.ok) throw new Error(`graph request failed: ${res.status}`);
+        return (res.json() as Promise<GraphData>).then((data) => {
+          graphCache = data;
+          return data;
+        });
+      })
+      .catch((err) => {
+        // Allow a later mount to retry after a transient failure.
+        graphPromise = null;
+        throw err;
+      });
+  }
+  return graphPromise;
+}
+
+/**
+ * Loads the shared graph payload after mount. Starts empty so the map still
+ * renders immediately (adjacency comes from the bundled connections data) and
+ * so server and first client render match. Failures degrade to an empty graph
+ * rather than breaking the explorer.
+ */
+function useGraphData(): GraphData {
+  const [data, setData] = useState<GraphData | null>(null);
+  useEffect(() => {
+    let alive = true;
+    fetchGraph().then(
+      (loaded) => {
+        if (alive) setData(loaded);
+      },
+      () => {},
+    );
+    return () => {
+      alive = false;
+    };
+  }, []);
+  return data ?? EMPTY_GRAPH;
 }
 
 /**
@@ -76,13 +133,8 @@ function jitter(): number {
   return jitterSeed / 233280 - 0.5;
 }
 
-export default function ConnectionGraph({
-  startRef,
-  graph,
-}: {
-  startRef: string;
-  graph: GraphData;
-}) {
+export default function ConnectionGraph({ startRef }: { startRef: string }) {
+  const graph = useGraphData();
   const { version } = useTranslation();
   // The node map is created once (seeded with the start verse) and then
   // mutated in place by the simulation; a tick counter drives re-renders.
