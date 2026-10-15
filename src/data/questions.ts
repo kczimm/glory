@@ -6939,9 +6939,9 @@ export const questions: Question[] = [
       {
         book: "John",
         chapter: 20,
-        title: "Mary at the tomb",
-        lookFor: "Mary does not know it is Jesus standing before her until He calls her name.",
-        focus: "11-18",
+        title: "Mary at the tomb, and Thomas believes",
+        lookFor: "Mary does not know it is Jesus until He calls her name, and the doubter is met with grace: reach here your finger, see my hands, and do not be unbelieving but believing.",
+        focus: "11-18,24-31",
       },
       {
         book: "John",
@@ -6956,13 +6956,6 @@ export const questions: Question[] = [
         title: "He appeared in another form",
         lookFor: "Mark notes that Jesus appeared in a different form to two of them as they walked, and later upbraided the eleven for their unbelief.",
         focus: "9-14",
-      },
-      {
-        book: "John",
-        chapter: 20,
-        title: "Show me, and I will believe",
-        lookFor: "Even the doubter is met with grace: reach here your finger, see my hands, and do not be unbelieving but believing.",
-        focus: "24-31",
       },
     ],
     points: [
