@@ -1,8 +1,7 @@
 "use client";
 
-import { useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
-import { passageText } from "@/lib/verse-text";
 import {
   dueCards,
   getServerSnapshot,
@@ -77,7 +76,43 @@ export default function MemorizePage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const session = useMemo(() => (queue ?? dueCards()), [queue, cards]);
   const card = session[0];
-  const text = card ? passageText(card.ref) : null;
+
+  /* Verse text is fetched, not imported. Importing the lookup would drag the
+     whole vendored Bible (a 1.4 MB chunk) into this page's bundle to show one
+     verse at a time. Refs already asked for are remembered so a re-queue does
+     not refetch them. */
+  const [texts, setTexts] = useState<Record<string, string>>({});
+  const [textsReady, setTextsReady] = useState(false);
+  const requested = useRef<Set<string>>(new Set());
+  const sessionKey = session.map((c) => c.ref).join("|");
+
+  useEffect(() => {
+    const missing = sessionKey
+      .split("|")
+      .filter((ref) => ref && !requested.current.has(ref));
+    if (missing.length === 0) return;
+    for (const ref of missing) requested.current.add(ref);
+
+    let cancelled = false;
+    fetch(`/api/passage?refs=${encodeURIComponent(missing.join("|"))}`)
+      .then((res) => (res.ok ? res.json() : {}))
+      .then((data: Record<string, string>) => {
+        if (cancelled) return;
+        setTexts((prev) => ({ ...prev, ...data }));
+      })
+      .catch(() => {
+        /* offline or blocked: the card simply stays quiet */
+      })
+      .finally(() => {
+        if (!cancelled) setTextsReady(true);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [sessionKey]);
+
+  const text = card ? (texts[card.ref] ?? null) : null;
   const stage = STAGE_ORDER[Math.min(stageIdx, STAGE_ORDER.length - 1)];
 
   function nextCard() {
@@ -209,6 +244,10 @@ export default function MemorizePage() {
               Skip for now →
             </button>
           </div>
+        </section>
+      ) : card && !textsReady ? (
+        <section className="mt-8 rounded-3xl border border-line bg-cream/40 p-8 text-center">
+          <p className="font-display text-xl text-ink">Fetching the verse…</p>
         </section>
       ) : (
         <section className="mt-8 rounded-3xl border border-line bg-cream/40 p-8 text-center">

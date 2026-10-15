@@ -2,8 +2,8 @@
  * Pure reference utilities: parsing and slugging verse refs.
  * Dependency-free so client components can import them without pulling
  * in the vendored Bible or the study corpus. This is the single home for
- * ref syntax: server lookups (data/server.ts) and client lookups
- * (lib/verse-text.ts) both build on it, so they can never drift.
+ * ref syntax: every server lookup in data/server.ts builds on it, so the
+ * two can never drift.
  */
 
 export const BOOK_ALIASES: Record<string, string> = { Psalm: "Psalms" };
