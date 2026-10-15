@@ -22195,7 +22195,7 @@ export const questions: Question[] = [
   },
 
   // ------------------------------------------------------------------
-  // TRAIL: The Gospels (the story of Scripture arrives)
+  // TRAIL: The Life of Jesus (the story of Scripture arrives)
   // ------------------------------------------------------------------
   {
     slug: "why-are-there-four-gospels",

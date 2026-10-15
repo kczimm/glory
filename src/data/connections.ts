@@ -6012,7 +6012,7 @@ export const connections: Record<string, Connection[]> = {
   ],
 
   // ------------------------------------------------------------------
-  // The Gospels: promises fulfilled and the King who serves
+  // The Life of Jesus: promises fulfilled and the King who serves
   // ------------------------------------------------------------------
   "Genesis 1:1": [
     c(

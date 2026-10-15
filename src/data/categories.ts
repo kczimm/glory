@@ -160,7 +160,7 @@ export const categories: Category[] = [
 
   {
     slug: "gospels",
-    title: "The Gospels",
+    title: "The Life of Jesus",
     tagline:
       "The story arrives: four witnesses to one Jesus, from the Word before Bethlehem to the empty tomb and the commission, as the Old Testament promises come true.",
     order: 19,
