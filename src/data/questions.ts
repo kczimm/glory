@@ -16668,7 +16668,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Galatians 4:4-5", "John 1:29", "Luke 1:32-33", "Hebrews 9:28"],
-    raises: ["who-is-jesus", "why-did-jesus-have-to-die", "what-is-the-new-heaven-and-new-earth", "where-do-the-wisdom-books-fit"],
+    raises: ["who-is-jesus", "why-did-jesus-have-to-die", "what-is-the-new-heaven-and-new-earth", "where-do-the-wisdom-books-fit", "why-are-there-four-gospels"],
     followsFrom: ["why-did-god-send-his-people-into-exile", "why-did-god-promise-david-an-eternal-throne", "what-is-the-bibles-big-story"],
     related: ["is-the-whole-bible-about-jesus", "how-do-i-find-christ-in-the-old-testament", "what-is-the-gospel"],
     planned: [],
@@ -22199,5 +22199,833 @@ export const questions: Question[] = [
       "How do I decide which church to join?",
     ],
     order: 137,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Gospels (the story of Scripture arrives)
+  // ------------------------------------------------------------------
+  {
+    slug: "why-are-there-four-gospels",
+    question: "Why are there four Gospels, not one?",
+    category: "gospels",
+    summary:
+      "God did not give us one biography of Jesus but four, each written from a different vantage by a different hand. They are not competing accounts but complementary witnesses: Matthew shows the promised King, Mark the powerful Son of God, Luke the Savior of the outsider, and John the eternal Word made flesh. Read together, they give a fuller portrait than any single account could, and their differences are the fingerprints of real testimony.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 1,
+        title: "Why Luke wrote",
+        lookFor: "A careful historian states his method: eyewitness sources, traced accurately, written in order so the reader may know certainty.",
+        focus: "1-4",
+      },
+      {
+        book: "John",
+        chapter: 20,
+        title: "Why John wrote",
+        lookFor: "The stated purpose of the fourth Gospel: signs selected so that you may believe and have life.",
+        focus: "30-31",
+      },
+      {
+        book: "2 Peter",
+        chapter: 1,
+        title: "Not cleverly devised fables",
+        lookFor: "An apostle insists the accounts rest on eyewitness majesty, not myth.",
+        focus: "16-21",
+      },
+    ],
+    points: [
+      {
+        heading: "Four witnesses, one gospel",
+        body:
+          "The church did not receive a single authorized biography; it received four accounts, and kept them all. Luke tells us his method: he followed the reports of those who “from the beginning were eyewitnesses and servants of the word,” and wrote in order so that Theophilus “might know the certainty concerning the things in which you were instructed.” John names his purpose too: the signs were written “that you may believe that Jesus is the Christ, the Son of God, and that believing you may have life in his name.” Four accounts serve one aim: faith in the same Lord.",
+        verses: ["Luke 1:1-4", "John 20:30-31"],
+      },
+      {
+        heading: "Each one wrote to a different reader",
+        body:
+          "Matthew opens with a genealogy and the title “the son of David, the son of Abraham,” writing for readers who knew the promises. Mark begins in a single sentence with action and the confession “the Son of God.” Luke addresses a Gentile official and traces the story back to Adam. John goes back before creation itself and writes so that readers might believe. The same Jesus, four doorways.",
+        verses: ["Matthew 1:1", "Mark 1:1", "Luke 1:3", "Luke 3:38", "John 20:31"],
+      },
+      {
+        heading: "Eyewitness testimony, not legend",
+        body:
+          "Peter denies that the apostles followed “cunningly devised fables,” grounding his claim in what he saw: “we were eyewitnesses of his majesty.” John says the one who saw “has testified, and his testimony is true.” Paul hands on the earliest summary of the faith he received, naming Peter, the twelve, and more than five hundred witnesses, most still alive when he wrote. This is history with named witnesses, not a story that grew in the dark.",
+        verses: ["2 Peter 1:16", "John 19:35", "1 Corinthians 15:3-6"],
+      },
+      {
+        heading: "Each witness selects, and together they complete",
+        body:
+          "None of the Gospels claims to be exhaustive. John says plainly that there are “many other things which Jesus did,” and that even the world itself could not hold the books if they were all written. Luke knew that many had undertaken “to set in order a narrative,” and he added his own so that Theophilus might know the certainty of what he had been taught. Each account selects; together they give us what God meant us to have.",
+        verses: ["John 21:25", "Luke 1:1-4"],
+      },
+      {
+        heading: "Read them as one story",
+        body:
+          "The Gospels are not four separate religions but four roads into one life. Jesus Himself read the whole of Scripture as being about Him: “Beginning from Moses and from all the prophets, he explained to them in all the Scriptures the things concerning himself.” Read each Gospel for its own emphasis, then read them together for the whole Christ, and follow Him into the rest of the story.",
+        verses: ["Luke 24:27"],
+      },
+    ],
+    keyVerses: ["Luke 1:1-4", "John 20:30-31", "2 Peter 1:16", "1 Corinthians 15:3-4"],
+    raises: [
+      "the-word-became-flesh",
+      "can-i-trust-the-bible",
+      "how-should-i-read-the-bible",
+      "is-the-whole-bible-about-jesus",
+    ],
+    followsFrom: ["how-does-the-old-story-reach-jesus"],
+    related: [
+      "can-i-trust-the-bible",
+      "why-do-bible-translations-differ",
+      "how-do-we-know-which-books-belong-in-the-bible",
+      "is-the-whole-bible-about-jesus",
+    ],
+    planned: ["Who wrote the Gospels, and when?"],
+    order: 1,
+  },
+
+  {
+    slug: "the-word-became-flesh",
+    question: "Why does John begin before Bethlehem?",
+    category: "gospels",
+    summary:
+      "John does not start with a manger but with the beginning of all things: the Word who was with God and was God. That eternal Word “became flesh and lived among us,” so the child in the manger is the Creator Himself, entering His own world to make the invisible God known. Christmas is not the beginning of the Son; it is the beginning of His life among us.",
+    passages: [
+      {
+        book: "John",
+        chapter: 1,
+        title: "The Word made flesh",
+        lookFor: "The prologue as a doorway: before creation, then into the world, then into a body, then into our lives.",
+        focus: "1-18",
+      },
+      {
+        book: "Philippians",
+        chapter: 2,
+        title: "He emptied Himself",
+        lookFor: "The mind of Christ: equality with God not grasped but laid down in obedience to the cross.",
+        focus: "5-11",
+      },
+      {
+        book: "Colossians",
+        chapter: 1,
+        title: "Image of the invisible God",
+        lookFor: "All things made through Him and held together in Him, and the fullness of God pleased to dwell in Him.",
+        focus: "15-20",
+      },
+    ],
+    points: [
+      {
+        heading: "Before there was a world",
+        body:
+          "John's first words are a deliberate echo of Genesis: “In the beginning, God created the heavens and the earth” becomes “In the beginning was the Word.” But John is not describing the creation of the Word; he is describing the Word already there, with God and God Himself, the one through whom “all things were made.” Before Bethlehem, before Abraham, before the first light, the Son was.",
+        verses: ["John 1:1-3", "Genesis 1:1"],
+      },
+      {
+        heading: "He became what we are",
+        body:
+          "The astonishing verb is became: “The Word became flesh, and lived among us.” Paul says the same in different words: the one who existed “in the form of God … emptied himself, taking the form of a servant, being made in the likeness of men,” and “humbled himself, becoming obedient to death, yes, the death of the cross.” The eternal Son did not stop being God; He took a human nature and pitched His tent among us.",
+        verses: ["John 1:14", "Philippians 2:6-8"],
+      },
+      {
+        heading: "He came to His own",
+        body:
+          "John tells the sad truth plainly: the world made through Him “didn't recognize him,” and when He came to His own, “those who were his own didn't receive him.” Yet to all who did receive Him, “he gave the right to become God's children.” The incarnation divides humanity not by ancestry but by reception: “born not of blood, nor of the will of the flesh, nor of the will of man, but of God.”",
+        verses: ["John 1:10-13"],
+      },
+      {
+        heading: "Grace and truth in a Person",
+        body:
+          "John says “the law was given through Moses. Grace and truth were realized through Jesus Christ.” That phrase is loaded: at Sinai God proclaimed Himself “a merciful and gracious God, slow to anger, and abundant in loving kindness and truth.” What Israel heard from the mountain, we now see in a face. “From his fullness we all received grace upon grace.”",
+        verses: ["John 1:16-17", "Exodus 34:6"],
+      },
+      {
+        heading: "He makes God known",
+        body:
+          "No one has seen God, John says, but “The one and only Son, who is in the bosom of the Father, he has declared him.” Colossians calls Him “the image of the invisible God,” the one in whom “all the fullness was pleased to dwell.” Hebrews says He is “the radiance of his glory, the very image of his substance.” If you want to know what God is like, look at Jesus.",
+        verses: ["John 1:18", "Colossians 1:15", "Colossians 1:19", "Hebrews 1:3"],
+      },
+    ],
+    keyVerses: ["John 1:1", "John 1:14", "Philippians 2:6-8", "Colossians 1:19-20"],
+    raises: [
+      "the-birth-of-jesus",
+      "is-jesus-really-god",
+      "why-did-god-become-a-man",
+      "jesus-incarnation-fathers-love",
+    ],
+    followsFrom: ["why-are-there-four-gospels"],
+    related: [
+      "who-is-jesus",
+      "what-does-it-mean-that-jesus-is-the-son-of-god",
+      "why-did-jesus-call-himself-son-of-man",
+      "does-jesus-sharing-gods-nature-mean-two-gods",
+    ],
+    planned: [],
+    order: 2,
+  },
+
+  {
+    slug: "the-birth-of-jesus",
+    question: "What did the birth of Jesus announce?",
+    category: "gospels",
+    summary:
+      "The birth of Jesus was announced not to kings but to shepherds, not with a palace but a feeding trough. The angel's message was good news of great joy for all people: a Savior, Christ the Lord, born in David's city. Foreign star-gazers came to worship, an old man in the temple saw the light of the nations, and the child was named Jesus because He would save His people from their sins. Every detail announces that God has come to rescue the lowly and the outsider.",
+    passages: [
+      {
+        book: "Luke",
+        chapter: 2,
+        title: "Good news for shepherds",
+        lookFor: "The announcement, the sign, and the song: a Savior in a feeding trough, and glory to God with peace on earth.",
+        focus: "1-20",
+      },
+      {
+        book: "Matthew",
+        chapter: 1,
+        title: "The name and the prophecy",
+        lookFor: "Joseph's dream, the name Jesus, and the Immanuel prophecy that frames the whole Gospel.",
+        focus: "18-25",
+      },
+      {
+        book: "Matthew",
+        chapter: 2,
+        title: "Wise men from the east",
+        lookFor: "Foreigners come to worship the child the local king fears.",
+        focus: "1-12",
+      },
+    ],
+    points: [
+      {
+        heading: "Announced to the wrong people",
+        body:
+          "The first announcement of the Messiah's birth went to shepherds keeping watch in a field, not to the religious elite or the court. The angel's words were “I bring you good news of great joy which will be to all the people,” and the sign was not a throne but a baby “lying in a feeding trough.” God announced His greatest gift to the ones who had the least claim on it.",
+        verses: ["Luke 2:8-14"],
+      },
+      {
+        heading: "The titles say everything",
+        body:
+          "The angel gives the child three titles in one sentence: “a Savior, who is Christ the Lord.” Savior means He rescues; Christ means He is the promised Anointed King; Lord means He is God among us. This is not a moral teacher arriving; this is rescue arriving in person, in the city of David, exactly where the prophets said the ruler would come from.",
+        verses: ["Luke 2:11", "Micah 5:2"],
+      },
+      {
+        heading: "The name Jesus",
+        body:
+          "The angel told Joseph what to call the child: “You shall call his name Jesus, for it is he who shall save his people from their sins.” The name means the LORD saves, and the reason given is not a title but a mission. Matthew then reaches back to Isaiah: “Behold, the virgin shall be with child … They shall call his name Immanuel,” which means “God with us.”",
+        verses: ["Matthew 1:20-23", "Isaiah 7:14"],
+      },
+      {
+        heading: "Worship from the nations",
+        body:
+          "Wise men from the east followed a star to Jerusalem asking, “Where is he who is born King of the Jews?” They fell down and worshiped the child and opened treasures of gold, frankincense, and myrrh. While Herod was troubled and Jerusalem with him, foreigners were on their knees. The birth already hinted at the scope of the gospel: the nations would come.",
+        verses: ["Matthew 2:1-2", "Matthew 2:11"],
+      },
+      {
+        heading: "A light for the nations",
+        body:
+          "When Mary and Joseph brought the child to the temple, old Simeon took Him in his arms and blessed God, saying his eyes had seen “your salvation, which you have prepared before the face of all peoples, a light for revelation to the nations, and the glory of your people Israel.” The birth was not a private family event. It was the lamp of the world being lit.",
+        verses: ["Luke 2:29-32"],
+      },
+    ],
+    keyVerses: ["Luke 2:10-11", "Matthew 1:21", "Isaiah 7:14", "Micah 5:2"],
+    raises: [
+      "the-baptism-and-temptation-of-jesus",
+      "what-does-scripture-show-us-about-mary",
+      "why-did-god-become-a-man",
+    ],
+    followsFrom: ["the-word-became-flesh"],
+    related: [
+      "why-did-god-become-a-man",
+      "what-does-scripture-show-us-about-mary",
+      "jesus-incarnation-fathers-love",
+      "who-is-jesus",
+    ],
+    planned: ["Why does Matthew trace Jesus' family line through Joseph?"],
+    order: 3,
+  },
+
+  {
+    slug: "the-baptism-and-temptation-of-jesus",
+    question: "Why was Jesus baptized and then tempted?",
+    category: "gospels",
+    summary:
+      "Jesus had no sin to confess, yet He stepped into the Jordan to be baptized, identifying with the sinners He came to save. As He came up, the Spirit descended and the Father declared, “This is my beloved Son.” Then the Spirit led Him into the wilderness, where He faced the same tempter who ruined Adam, and where He answered every assault with Scripture and obeyed. His baptism and temptation were the start of His work: the second Adam standing where the first fell.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 3,
+        title: "Baptized in the Jordan",
+        lookFor: "Why the sinless one insists on a baptism of repentance, and the Father's voice that answers.",
+        focus: "13-17",
+      },
+      {
+        book: "Matthew",
+        chapter: 4,
+        title: "Tempted in the wilderness",
+        lookFor: "Three temptations aimed at hunger, presumption, and power, each answered from Deuteronomy.",
+        focus: "1-11",
+      },
+      {
+        book: "Hebrews",
+        chapter: 4,
+        title: "Touched with our infirmities",
+        lookFor: "Why His temptation matters for us: a high priest who can sympathize, so we may come boldly.",
+        focus: "14-16",
+      },
+    ],
+    points: [
+      {
+        heading: "He stood with sinners in the water",
+        body:
+          "John tried to stop Him: “I need to be baptized by you, and you come to me?” Jesus answered, “Allow it now, for this is the fitting way for us to fulfill all righteousness.” His baptism was not a confession of His own sin but a vow of solidarity with ours. Paul put it plainly: God “made to be sin on our behalf” the one “who knew no sin,” so that we might become the righteousness of God.",
+        verses: ["Matthew 3:13-15", "2 Corinthians 5:21"],
+      },
+      {
+        heading: "The Father names the Son",
+        body:
+          "Coming up from the water, Jesus saw the Spirit of God descending like a dove and the heavens opened, and a voice said, “This is my beloved Son, with whom I am well pleased.” The words echo Psalm 2 and Isaiah's servant: the anointed King and the chosen Servant, both fulfilled in one Person. Before a single miracle, the Father announces who He is.",
+        verses: ["Matthew 3:16-17", "Psalms 2:7", "Isaiah 42:1"],
+      },
+      {
+        heading: "Led into the wilderness",
+        body:
+          "The same Spirit who descended then led Him out to be tempted by the devil. After forty days of fasting He was hungry, and the tempter struck at exactly that point: “If you are the Son of God, command that these stones become bread.” Testing begins where we are weakest, and Jesus did not exempt Himself.",
+        verses: ["Matthew 4:1-4", "Hebrews 4:15"],
+      },
+      {
+        heading: "He answered with Scripture",
+        body:
+          "Three times the devil attacked, and three times Jesus answered, “It is written.” He refused to turn stones to bread, refused to test the Father by throwing Himself down, refused the kingdoms of the world on the devil's terms. Where Eve listened and Adam ate, this Son quoted Deuteronomy and stood: “You shall worship the Lord your God, and you shall serve him only.”",
+        verses: ["Matthew 4:4", "Matthew 4:7", "Matthew 4:10", "Deuteronomy 8:3"],
+      },
+      {
+        heading: "The second Adam obeys",
+        body:
+          "Paul draws the line: “as through the one man's disobedience many were made sinners, even so through the obedience of the one, many will be made righteous.” Where the first Adam failed in a garden of plenty, the last Adam obeyed in a wilderness of hunger. Because He was tempted “in all points … yet without sin,” He can help those who are tempted. His victory is not just an example; it is the beginning of our rescue.",
+        verses: ["Romans 5:19", "1 Corinthians 15:22", "Hebrews 2:17-18"],
+      },
+    ],
+    keyVerses: ["Matthew 3:16-17", "Matthew 4:4", "Hebrews 4:15", "Romans 5:19"],
+    raises: [
+      "the-sermon-on-the-mount",
+      "who-does-jesus-say-that-he-is",
+      "why-did-jesus-have-to-die",
+    ],
+    followsFrom: ["the-birth-of-jesus"],
+    related: [
+      "where-does-temptation-come-from",
+      "what-is-the-difference-between-testing-and-temptation",
+      "how-do-i-fight-sin",
+      "why-did-jesus-call-himself-son-of-man",
+    ],
+    planned: [],
+    order: 4,
+  },
+
+  {
+    slug: "the-sermon-on-the-mount",
+    question: "What does the Sermon on the Mount ask of me?",
+    category: "gospels",
+    summary:
+      "The Sermon on the Mount is not a ladder to climb into God's favor but a portrait of life in His kingdom. Jesus blesses the poor in spirit, the mourners, and the merciful, then presses the law past outward behavior to the heart: anger, lust, love for enemies. He commands us to seek first His kingdom and to hear and do, not merely hear. It is impossible to keep in our own strength, which is exactly why it drives us to the King whose righteousness exceeds the scribes'.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 5,
+        title: "The blessed life and the heart of the law",
+        lookFor: "Who is called blessed, how salt and light describe a people on display, and how Jesus fulfills the law and reaches anger, lust, and enemy love.",
+        focus: "1-48",
+      },
+      {
+        book: "Matthew",
+        chapter: 6,
+        title: "Treasure and anxiety",
+        lookFor: "Where the heart goes with treasure, and why the anxious can trust the Father.",
+        focus: "19-34",
+      },
+      {
+        book: "Matthew",
+        chapter: 7,
+        title: "Two gates, two builders",
+        lookFor: "Narrow way, false prophets, and the difference between hearing and doing.",
+        focus: "13-27",
+      },
+    ],
+    points: [
+      {
+        heading: "Blessed are the unlikely",
+        body:
+          "The sermon opens with a list of the blessed, and almost none of them are the people the world would choose: the poor in spirit, those who mourn, the gentle, the hungry for righteousness, the merciful, the pure in heart, the peacemakers, the persecuted. Theirs is the kingdom of heaven. Kingdom life begins not with achievement but with need, and the reward is God Himself.",
+        verses: ["Matthew 5:3-10"],
+      },
+      {
+        heading: "Salt and light",
+        body:
+          "Jesus tells His disciples, “You are the salt of the earth” and “the light of the world.” Salt preserves and flavors; light reveals. A city on a hill cannot be hidden, and a lamp is not put under a basket. The point is not to perform for applause but that people “may see your good works, and glorify your Father who is in heaven.” Kingdom people are meant to be seen and to point past themselves.",
+        verses: ["Matthew 5:13-16"],
+      },
+      {
+        heading: "Not abolished, fulfilled, and deepened",
+        body:
+          "Jesus is not replacing the law: “I didn't come to destroy, but to fulfill.” Then He does something startling: He moves the commands from the hand to the heart. The old command forbids murder; He forbids the anger that precedes it. The old command forbids adultery; He forbids the lustful look. Unless our righteousness exceeds that of the scribes and Pharisees, He says, we cannot enter the kingdom. Only a righteousness that exceeds ours can save us.",
+        verses: ["Matthew 5:17", "Matthew 5:20-22", "Matthew 5:27-28"],
+      },
+      {
+        heading: "Love your enemies",
+        body:
+          "The hardest line in the sermon is this: “love your enemies, bless those who curse you, do good to those who hate you, and pray for those who mistreat you and persecute you.” The reason given is not that enemies deserve it but that this is what the Father is like: “he makes his sun to rise on the evil and the good.” Kingdom love is not natural; it is the family resemblance of children of God.",
+        verses: ["Matthew 5:43-45"],
+      },
+      {
+        heading: "Treasure, trust, and the narrow gate",
+        body:
+          "Jesus locates the heart by its treasure: “where your treasure is, there your heart will be also.” He tells the anxious to look at the birds and the lilies and to “seek first God's Kingdom, and his righteousness.” And He ends with a choice: a wide gate or a narrow one, and two builders, one who hears and does and one who hears only. Storms come to both houses; only the one founded on His words stands.",
+        verses: [
+          "Matthew 6:19-21",
+          "Matthew 6:25-27",
+          "Matthew 6:33",
+          "Matthew 7:13-14",
+          "Matthew 7:24-27",
+        ],
+      },
+    ],
+    keyVerses: ["Matthew 5:3-6", "Matthew 5:17", "Matthew 6:33", "Matthew 7:24"],
+    raises: [
+      "whom-did-jesus-welcome",
+      "how-do-i-fight-sin",
+      "what-does-the-bible-mean-by-holy",
+      "should-i-test-every-teaching-by-scripture",
+    ],
+    followsFrom: ["the-baptism-and-temptation-of-jesus"],
+    related: [
+      "what-is-the-kingdom-of-god",
+      "what-did-jesus-teach-about-the-kingdom-of-god",
+      "what-is-repentance",
+      "how-do-i-pray",
+    ],
+    planned: ["What did Jesus mean when He said the meek will inherit the earth?"],
+    order: 5,
+  },
+
+  {
+    slug: "whom-did-jesus-welcome",
+    question: "Whom did Jesus welcome, and why did it offend?",
+    category: "gospels",
+    summary:
+      "Jesus ate with tax collectors and sinners, spoke alone with a Samaritan woman, and let a notorious woman weep over His feet. The religious called it scandal, and Jesus answered with three parables of lost things found, a father who runs, and a physician who came for the sick. His welcome was not approval of sin but the doorway of repentance, and it exposed the self-righteous older brother lurking in every heart.",
+    passages: [
+      {
+        book: "Mark",
+        chapter: 2,
+        title: "Dinner with outcasts",
+        lookFor: "The call of Levi, the table full of sinners, and Jesus' answer to the scribes.",
+        focus: "13-17",
+      },
+      {
+        book: "Luke",
+        chapter: 15,
+        title: "Lost and found",
+        lookFor: "The sheep, the coin, and the sons, told because the religious grumbled that He welcomed sinners.",
+        focus: "1-32",
+      },
+      {
+        book: "John",
+        chapter: 4,
+        title: "The woman at the well",
+        lookFor: "A conversation across every social wall, ending with a whole town believing.",
+        focus: "1-42",
+      },
+      {
+        book: "Luke",
+        chapter: 7,
+        title: "The woman who wept",
+        lookFor: "A sinful woman, a scandalized host, and a parable of two debtors.",
+        focus: "36-50",
+      },
+    ],
+    points: [
+      {
+        heading: "A physician came for the sick",
+        body:
+          "When the scribes saw Jesus reclining at table with tax collectors and sinners, they asked His disciples why. Jesus answered for Himself: “Those who are healthy have no need for a physician, but those who are sick. I came not to call the righteous, but sinners to repentance.” He did not pretend the sin was small. He said the sickness was real and He was the doctor.",
+        verses: ["Mark 2:15-17"],
+      },
+      {
+        heading: "The grumbling that provoked the parables",
+        body:
+          "Luke tells us why Jesus told the three most famous parables of mercy: “all the tax collectors and sinners were coming close to him to hear him,” and the Pharisees and scribes murmured and said, “This man welcomes sinners, and eats with them.” The parables are an answer to that complaint. Heaven's response to a grumble about grace is a party.",
+        verses: ["Luke 15:1-2", "Luke 15:7"],
+      },
+      {
+        heading: "A father who runs",
+        body:
+          "In the parable, the younger son takes his inheritance, wastes it, and ends up feeding pigs. Then he comes home with a rehearsed apology, only to find his father running: “while he was still far off, his father saw him, and was moved with compassion, and ran, and fell on his neck, and kissed him.” The father interrupts the speech with a robe, a ring, and a feast: “this, my son, was dead, and is alive again.” This is what Jesus means by welcome.",
+        verses: ["Luke 15:11-24"],
+      },
+      {
+        heading: "The older brother in us all",
+        body:
+          "The parable does not end with the feast; it ends with the elder brother outside, angry, counting his years of service and resenting grace shown to the undeserving. “He was angry, and would not go in.” Jesus leaves him there, with the father pleading, because the first hearers were the murmuring Pharisees, and the question is aimed at us: will we go in and celebrate, or stand outside insisting we deserved it more?",
+        verses: ["Luke 15:25-32"],
+      },
+      {
+        heading: "Walls that fell at a well and a table",
+        body:
+          "Jesus asked a Samaritan woman for water, crossing barriers of race, gender, and reputation, and offered her “a well of water springing up to eternal life.” She left her jar, testified in town, and “many of the Samaritans believed in him.” In a Pharisee's house He let a weeping woman wash His feet, and said, “her sins, which are many, are forgiven, for she loved much.” Then He sent her in peace. His welcome reached the people no one else would touch.",
+        verses: [
+          "John 4:7-10",
+          "John 4:13-14",
+          "John 4:39-42",
+          "Luke 7:36-50",
+          "Luke 19:10",
+        ],
+      },
+    ],
+    keyVerses: ["Mark 2:17", "Luke 15:2", "Luke 15:20", "John 4:14", "Luke 19:10"],
+    raises: [
+      "who-does-jesus-say-that-he-is",
+      "what-is-repentance",
+      "what-is-grace",
+      "how-do-i-share-my-faith-with-others",
+    ],
+    followsFrom: ["the-sermon-on-the-mount"],
+    related: [
+      "what-is-repentance",
+      "what-is-grace",
+      "does-grace-mean-live-how-i-want",
+      "what-does-the-bible-mean-by-holy",
+    ],
+    planned: [],
+    order: 6,
+  },
+
+  {
+    slug: "who-does-jesus-say-that-he-is",
+    question: "Who does Jesus say that He is?",
+    category: "gospels",
+    summary:
+      "Jesus did not merely let others define Him. He asked His disciples directly, “Who do you say that I am?”, and accepted Peter's confession, “You are the Christ, the Son of the living God.” He took the divine name, I AM, claimed to be one with the Father, and called Himself the bread of life, the way, the truth, and the life. On the mountain the Father confirmed it, and before the high priest Jesus let the claim stand, knowing it would cost Him His life.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 16,
+        title: "The great question",
+        lookFor: "The question Jesus asks every disciple, and the confession that is revealed, not deduced.",
+        focus: "13-20",
+      },
+      {
+        book: "John",
+        chapter: 8,
+        title: "Before Abraham, I AM",
+        lookFor: "The claim that made them pick up stones: the name of God taken by Jesus.",
+        focus: "48-59",
+      },
+      {
+        book: "Matthew",
+        chapter: 17,
+        title: "The mountain of glory",
+        lookFor: "The transfiguration, the Father's voice, and the command to listen.",
+        focus: "1-13",
+      },
+      {
+        book: "John",
+        chapter: 14,
+        title: "The way, the truth, and the life",
+        lookFor: "Where Jesus claims to be the only road to the Father.",
+        focus: "1-14",
+      },
+    ],
+    points: [
+      {
+        heading: "The question",
+        body:
+          "Jesus asked two questions. First, “Who do men say that I, the Son of Man, am?” and the answers were all flattering and all wrong: John the Baptist, Elijah, Jeremiah, one of the prophets. Then He made it personal: “But who do you say that I am?” No one can hide behind the opinions of others. The question is asked of every reader of the Gospels.",
+        verses: ["Matthew 16:13-15"],
+      },
+      {
+        heading: "The confession",
+        body:
+          "Peter answered, “You are the Christ, the Son of the living God.” Jesus did not correct him; He blessed him, and said this was not flesh and blood but the Father revealing it. The confession is not a clever deduction but a gift. On it Jesus said He would build His assembly, and the gates of death would not prevail against it.",
+        verses: ["Matthew 16:16-19"],
+      },
+      {
+        heading: "The name God gave Moses",
+        body:
+          "Jesus said to a hostile crowd, “Most certainly, I tell you, before Abraham came into existence, I AM.” His hearers knew exactly what He meant, because that is the name God spoke from the burning bush: “I AM WHO I AM.” When they picked up stones to throw at Him, they were not misunderstanding a metaphor; they were accusing Him of blasphemy. He claimed the divine name.",
+        verses: ["John 8:58", "Exodus 3:14", "Mark 14:61-64"],
+      },
+      {
+        heading: "The bread, the way, and the life",
+        body:
+          "In John's Gospel Jesus piles up I am sayings: “I am the bread of life”; “I am the way, the truth, and the life”; “I am the resurrection and the life.” To Thomas He said, “No one comes to the Father, except through me.” These are not the sentences of a good teacher describing God. They are the sentences of someone claiming to be the door, the food, and the destination.",
+        verses: ["John 6:35", "John 14:6", "John 11:25", "John 10:30"],
+      },
+      {
+        heading: "Confirmed on the mountain",
+        body:
+          "Six days after Peter's confession, Jesus was transfigured before Peter, James, and John: His face shone like the sun and His clothes became white as light, and Moses and Elijah appeared with Him. A bright cloud overshadowed them and a voice said, “This is my beloved Son, in whom I am well pleased. Listen to him.” Peter later wrote that they heard that voice themselves on the holy mountain. The Father's testimony settles the question.",
+        verses: ["Matthew 17:1-8", "2 Peter 1:17-18"],
+      },
+    ],
+    keyVerses: ["Matthew 16:15-16", "John 8:58", "John 14:6", "Matthew 17:5"],
+    raises: [
+      "the-last-week-of-jesus",
+      "what-does-it-mean-that-jesus-is-the-son-of-god",
+      "what-does-the-title-christ-mean",
+      "why-did-jesus-call-himself-son-of-man",
+    ],
+    followsFrom: ["the-baptism-and-temptation-of-jesus"],
+    related: [
+      "is-jesus-really-god",
+      "who-is-jesus",
+      "what-does-the-title-christ-mean",
+      "how-can-one-person-be-fully-god-and-fully-man",
+    ],
+    planned: [],
+    order: 7,
+  },
+
+  {
+    slug: "the-last-week-of-jesus",
+    question: "What happened in the last week of Jesus' life?",
+    category: "gospels",
+    summary:
+      "Jesus entered Jerusalem on a donkey while crowds shouted “Hosanna to the son of David,” fulfilling a prophecy of a humble King. That week He washed His disciples' feet, told them one of them would betray Him, and at the Passover meal gave the bread and cup a new meaning: His body given, His blood of the new covenant poured out for the remission of sins. He called it the hour of His glorification: a grain of wheat falling into the earth to bear much fruit.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 21,
+        title: "The humble King",
+        lookFor: "The donkey, the crowds, and the prophet Zechariah read aloud by history.",
+        focus: "1-11",
+      },
+      {
+        book: "John",
+        chapter: 13,
+        title: "The King washes feet",
+        lookFor: "The Lord of all with a towel, and the example He commands us to follow.",
+        focus: "1-17",
+      },
+      {
+        book: "Matthew",
+        chapter: 26,
+        title: "The new covenant in His blood",
+        lookFor: "Bread and cup at the Passover, and the covenant language that recalls Exodus 24.",
+        focus: "26-30",
+      },
+    ],
+    points: [
+      {
+        heading: "He rode in on a donkey",
+        body:
+          "The crowd wanted a conqueror on a warhorse; Jesus rode a donkey, and Matthew says it was done “that it might be fulfilled which was spoken through the prophet,” quoting Zechariah: “your King comes to you, humble, and riding on a donkey.” The people shouted, “Hosanna to the son of David! Blessed is he who comes in the name of the Lord!” and asked who He was. He was the King, arriving in the shape of humility.",
+        verses: ["Matthew 21:1-11", "Zechariah 9:9"],
+      },
+      {
+        heading: "He washed feet",
+        body:
+          "On the night He was betrayed, knowing “that he came from God, and was going to God,” Jesus rose from supper, wrapped a towel around His waist, and washed His disciples' feet, including the feet of Judas. Peter protested; Jesus said, “If I don't wash you, you have no part with me.” Then He told them: “If I then, the Lord and the Teacher, have washed your feet, you also ought to wash one another's feet.” Greatness in His kingdom is measured downward.",
+        verses: ["John 13:1-17"],
+      },
+      {
+        heading: "The meal that explained the cross",
+        body:
+          "At the Passover meal Jesus took bread, gave thanks, broke it, and said, “Take, eat; this is my body.” Then He took the cup: “this is my blood of the new covenant, which is poured out for many for the remission of sins.” Luke records, “Do this in memory of me.” The bread and cup reached back to Moses sprinkling blood at Sinai: “this is the blood of the covenant.” The old covenant was sealed with blood; the new one would be sealed with His.",
+        verses: ["Matthew 26:26-29", "Luke 22:19-20", "Exodus 24:8"],
+      },
+      {
+        heading: "He named the hour",
+        body:
+          "When some Greeks wanted to see Him, Jesus answered, “The time has come for the Son of Man to be glorified,” and then: “unless a grain of wheat falls into the earth and dies, it remains by itself alone. But if it dies, it bears much fruit.” The cross was not a defeat to be explained away; it was the hour He had come for, and He called it glory.",
+        verses: ["John 12:23-24", "John 13:1"],
+      },
+      {
+        heading: "The King on a donkey and the King with a towel",
+        body:
+          "The last week holds two pictures together. He enters as the promised King, humble, and received by shouting crowds; He spends the night before His death on His knees with a basin. The one who had “loved his own who were in the world” now “loved them to the end.” The week that ended in agony began with an act of tenderness, and both are the same King.",
+        verses: ["John 13:1", "Matthew 21:5", "Zechariah 9:9"],
+      },
+    ],
+    keyVerses: ["Matthew 21:5", "John 13:14-15", "Matthew 26:28", "Luke 22:19"],
+    raises: [
+      "why-was-jesus-put-to-death",
+      "how-is-the-new-covenant-different-from-the-old-one",
+      "what-is-the-lords-supper",
+    ],
+    followsFrom: ["who-does-jesus-say-that-he-is"],
+    related: [
+      "what-is-the-lords-supper",
+      "how-is-the-new-covenant-different-from-the-old-one",
+      "what-is-baptism",
+      "who-may-take-the-lords-supper",
+    ],
+    planned: [],
+    order: 8,
+  },
+
+  {
+    slug: "why-was-jesus-put-to-death",
+    question: "Why was Jesus condemned to die?",
+    category: "gospels",
+    summary:
+      "Jesus was condemned by the religious leaders for blasphemy because He claimed to be the Christ, the Son of God, and by Rome for claiming to be a king. He was crucified between two criminals under a placard reading “This is the King of the Jews.” But the deeper answer is that He came to give His life, and that God made the sinless one to be sin for us. The cross was both the worst of human injustice and the will of God to save sinners.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 26,
+        title: "Condemned for blasphemy",
+        lookFor: "The high priest's question, Jesus' answer, and the verdict.",
+        focus: "57-68",
+      },
+      {
+        book: "John",
+        chapter: 18,
+        title: "Pilate and the truth",
+        lookFor: "A kingdom not of this world, and a governor who can find no guilt in Him.",
+        focus: "28-40",
+      },
+      {
+        book: "Luke",
+        chapter: 23,
+        title: "Between two criminals",
+        lookFor: "Forgiveness from the cross, mockery, and a dying thief promised Paradise.",
+        focus: "32-43",
+      },
+      {
+        book: "Isaiah",
+        chapter: 53,
+        title: "Pierced for our transgressions",
+        lookFor: "The servant who bore what we deserved, and did not open His mouth.",
+        focus: "1-7",
+      },
+    ],
+    points: [
+      {
+        heading: "Condemned for claiming to be the Christ",
+        body:
+          "The high priest put Him under oath: “tell us whether you are the Christ, the Son of God.” Jesus answered, “You have said it. Nevertheless, I tell you, after this you will see the Son of Man sitting at the right hand of Power, and coming on the clouds of the sky.” The priest tore his clothes and cried blasphemy, and the council answered, “He is worthy of death!” The charge was not disturbing the peace; it was claiming to be God.",
+        verses: ["Matthew 26:63-66"],
+      },
+      {
+        heading: "Handed over for claiming a throne",
+        body:
+          "Before Pilate the political charge was kingship: “Are you the King of the Jews?” Jesus answered, “My Kingdom is not of this world,” and yet, “You say that I am a king.” Pilate found no guilt in Him but caved to the crowd when they shouted, “Everyone who makes himself a king speaks against Caesar!” He washed his hands and delivered Him to be crucified. Both throne and temple condemned Him, for different reasons.",
+        verses: ["Matthew 27:11", "John 18:36-37", "John 19:12-16", "Matthew 27:24-26"],
+      },
+      {
+        heading: "Crucified between criminals",
+        body:
+          "They crucified Him at the Skull with two criminals, one on each side, under a sign in three languages: “THIS IS THE KING OF THE JEWS.” One criminal mocked; the other rebuked him, said, “we indeed justly, for we receive the due reward for our deeds, but this man has done nothing wrong,” and asked to be remembered. Jesus answered, “Assuredly I tell you, today you will be with me in Paradise.” Even at the cross, the door of mercy stood open.",
+        verses: ["Luke 23:32-33", "Luke 23:39-43"],
+      },
+      {
+        heading: "He laid down His own life",
+        body:
+          "The cross was not something that happened to Jesus; it was something He did. “No one takes it away from me,” He had said, “but I lay it down by myself. I have power to lay it down, and I have power to take it again.” When the work was finished He said, “It is finished,” and gave up His spirit. He did not lose His life; He gave it.",
+        verses: ["John 10:17-18", "John 19:28-30"],
+      },
+      {
+        heading: "He died for our sins",
+        body:
+          "The deepest reason for the cross is not political or religious, but this: “he was pierced for our transgressions. He was crushed for our iniquities. The punishment that brought our peace was on him; and by his wounds we are healed.” Peter says He “bore our sins in his body on the tree.” Paul says God “made to be sin on our behalf” the one “who knew no sin.” The cross is where God's justice and His love meet.",
+        verses: ["Isaiah 53:4-7", "1 Peter 2:24", "2 Corinthians 5:21", "Romans 5:8"],
+      },
+    ],
+    keyVerses: ["Matthew 26:64", "John 19:30", "Isaiah 53:5-6", "2 Corinthians 5:21"],
+    raises: [
+      "the-risen-jesus",
+      "who-is-the-suffering-servant-in-isaiah-53",
+      "what-is-the-gospel",
+      "why-did-jesus-have-to-die",
+    ],
+    followsFrom: ["the-last-week-of-jesus"],
+    related: [
+      "why-did-jesus-have-to-die",
+      "who-is-the-suffering-servant-in-isaiah-53",
+      "what-is-the-gospel",
+      "what-is-justification",
+    ],
+    planned: [],
+    order: 9,
+  },
+
+  {
+    slug: "the-risen-jesus",
+    question: "How did the risen Jesus convince His disciples?",
+    category: "gospels",
+    summary:
+      "The disciples did not expect a resurrection; they met the news first with disbelief and fear. Jesus convinced them by showing up: He let them touch His hands and side, ate with them, and opened the Scriptures from Moses and the prophets. Thomas moved from doubt to confession, “My Lord and my God!” On the Emmaus road their hearts burned as He explained the whole Bible as being about Himself. Then He sent them out and ascended, leaving witnesses and a promise.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 28,
+        title: "The empty tomb",
+        lookFor: "The angel, the rolled stone, and the women who met the risen Lord.",
+        focus: "1-10",
+      },
+      {
+        book: "John",
+        chapter: 20,
+        title: "Peace, proof, and belief",
+        lookFor: "Locked doors, wounds shown, Thomas' confession, and a blessing on those who have not seen.",
+        focus: "19-31",
+      },
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "The road to Emmaus",
+        lookFor: "Scripture opened, eyes opened, and a report that turned a room around.",
+        focus: "13-35",
+      },
+    ],
+    points: [
+      {
+        heading: "The tomb was empty",
+        body:
+          "Matthew records a great earthquake, an angel like lightning rolling back the stone, and guards frozen in fear. The women came expecting a body and heard, “He is not here, for he has risen, just like he said. Come, see the place where the Lord was lying.” The empty tomb was the first evidence, and Jesus Himself met them on the way with one word: “Rejoice!”",
+        verses: ["Matthew 28:1-9"],
+      },
+      {
+        heading: "He showed them His wounds",
+        body:
+          "That evening the disciples were locked in for fear, and Jesus came and stood in the midst: “Peace be to you.” He showed them His hands and His side, and they were glad. He was not a ghost or a vision; He was the same Jesus, bearing the marks of the cross, and He breathed on them the Holy Spirit and sent them as the Father had sent Him.",
+        verses: ["John 20:19-23"],
+      },
+      {
+        heading: "Doubt turned to worship",
+        body:
+          "Thomas missed that first visit and refused to believe without touching. A week later Jesus returned, doors still locked, and invited him: “Reach here your finger, and see my hands. Reach here your hand, and put it into my side. Don't be unbelieving, but believing.” Thomas answered, “My Lord and my God!” Jesus blessed those who believe without seeing. The resurrection does not shame honest doubt; it answers it.",
+        verses: ["John 20:24-29"],
+      },
+      {
+        heading: "He opened the Scriptures",
+        body:
+          "On the road to Emmaus two discouraged disciples explained their shattered hopes, and Jesus answered by re-reading the whole Bible: “Beginning from Moses and from all the prophets, he explained to them in all the Scriptures the things concerning himself.” Their eyes opened when He broke bread, and they said, “Weren't our hearts burning within us, while he spoke to us along the way?” The risen Christ is found in all the Scriptures.",
+        verses: ["Luke 24:13-35"],
+      },
+      {
+        heading: "He sent them as witnesses",
+        body:
+          "The resurrection is not a private comfort; it is a commission. Jesus said, “All authority has been given to me in heaven and on earth,” and sent His disciples to make disciples of all nations, promising, “I am with you always, even to the end of the age.” Before He ascended He told them they would receive power and be witnesses to the ends of the earth. Paul staked everything on the fact: “If Christ has not been raised, then our preaching is in vain, and your faith also is in vain.” But “now Christ has been raised from the dead,” “the first fruits of those who are asleep.”",
+        verses: [
+          "Matthew 28:18-20",
+          "Acts 1:8-9",
+          "1 Corinthians 15:14",
+          "1 Corinthians 15:17-20",
+        ],
+      },
+    ],
+    keyVerses: ["Matthew 28:5-6", "John 20:28", "Luke 24:27", "1 Corinthians 15:20"],
+    raises: [
+      "will-jesus-return-literally",
+      "what-is-the-resurrection",
+      "where-is-jesus-now",
+      "how-do-i-share-my-faith-with-others",
+    ],
+    followsFrom: ["why-was-jesus-put-to-death"],
+    related: [
+      "did-jesus-rise-from-the-dead",
+      "what-was-it-like-to-see-the-risen-jesus",
+      "why-did-the-disciples-not-recognize-him-after-he-rose",
+      "what-is-the-resurrection",
+    ],
+    planned: [],
+    order: 10,
   },
 ];
