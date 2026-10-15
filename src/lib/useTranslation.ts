@@ -1,96 +1,43 @@
 "use client";
 
-import { useEffect } from "react";
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import {
+  applyVersion,
+  getTranslationServerSnapshot,
+  getTranslationSnapshot,
   getVersionFromURL,
-  resolveVersion,
-  setVersionInStorage,
+  subscribeTranslation,
   type TranslationCode,
 } from "./translation";
 
 /**
  * Client hook for the active translation: exposes the current version and a
- * setter that persists it (localStorage + cookie) and navigates with the
- * ?version= URL param. On first load it syncs an explicit URL param into the
- * cookie/localStorage, so a visitor who arrives via a shared KJV link stays
- * in KJV across all internal navigation.
+ * setter that switches instantly.
+ *
+ * Switching is pure presentation: both readings are already in the document,
+ * so this only flips `data-translation` on <html> (CSS reveals the right one)
+ * and notifies the components that need the code itself. That is why it no
+ * longer navigates or reloads: the server has nothing to re-render.
+ *
+ * On first load an explicit `?version=` param is the strongest signal, so it
+ * is applied and persisted, which keeps a shared KJV link working for the
+ * rest of the session.
  */
-
-/** Subscribe/unsubscribe stub for useSyncExternalStore. */
-function subscribe(): () => void {
-  return () => {};
-}
-function getSnapshot(): string {
-  return typeof window !== "undefined"
-    ? resolveVersion(new URLSearchParams(window.location.search))
-    : "web";
-}
-function getServerSnapshot(): string {
-  return "web";
-}
-
-/** Set the translation cookie so server components pick up the preference. */
-function setVersionCookie(code: TranslationCode) {
-  document.cookie = `glory:translation=${code}; path=/; max-age=31536000; SameSite=Lax`;
-}
-
 export function useTranslation() {
   const version = useSyncExternalStore(
-    subscribe,
-    getSnapshot,
-    getServerSnapshot
+    subscribeTranslation,
+    getTranslationSnapshot,
+    getTranslationServerSnapshot,
   ) as TranslationCode;
 
   // Persist an explicit ?version= URL param (e.g. a shared KJV link opened
-  // by someone with no cookie) so the whole session stays in that version.
+  // by someone with no stored preference).
   useEffect(() => {
     const urlVersion = getVersionFromURL(
-      new URLSearchParams(window.location.search)
+      new URLSearchParams(window.location.search),
     );
-    if (urlVersion) {
-      setVersionInStorage(urlVersion);
-      setVersionCookie(urlVersion);
-    }
+    if (urlVersion) applyVersion(urlVersion);
   }, []);
 
-  // Guard against the browser's back/forward cache: a page frozen before a
-  // translation switch can be restored by the Back button without any
-  // script re-running, so it would show the previous translation. Tag the
-  // rendered page with its translation and, on a bfcache restore, reload if
-  // the current preference no longer matches.
-  useEffect(() => {
-    const root = document.documentElement;
-    root.dataset.translation = version;
-    const onShow = (e: PageTransitionEvent) => {
-      if (
-        e.persisted &&
-        root.dataset.translation !==
-          resolveVersion(new URLSearchParams(window.location.search))
-      ) {
-        window.location.reload();
-      }
-    };
-    window.addEventListener("pageshow", onShow);
-    return () => window.removeEventListener("pageshow", onShow);
-  }, [version]);
-
-
-  /** Apply a translation: persist it and navigate so the server re-renders. */
-  const setVersion = (next: TranslationCode) => {
-    setVersionInStorage(next);
-    setVersionCookie(next);
-    const params = new URLSearchParams(window.location.search);
-    if (next === "web") {
-      params.delete("version"); // web is the default; no param needed
-    } else {
-      params.set("version", next);
-    }
-    const newUrl = params.toString()
-      ? `${window.location.pathname}?${params.toString()}`
-      : window.location.pathname;
-    window.location.href = newUrl;
-  };
-
-  return { version, setVersion };
+  return { version, setVersion: applyVersion };
 }

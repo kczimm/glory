@@ -3,44 +3,34 @@ import { verseSlug, getConnections } from "@/data";
 import Link from "next/link";
 import VerseConnections, { type ConnectionRowData } from "./VerseConnections";
 import MemorizeButton from "./MemorizeButton";
-import {
-  getTranslationInfo,
-  versionedUrl,
-  type TranslationCode,
-} from "@/lib/translation-shared";
+import VerseText from "./VerseText";
+import { TRANSLATIONS } from "@/lib/translation-shared";
 
 /**
  * A scripture callout: the reference, the exact text, and any
  * cross-reference connections from the knowledge graph. Verse text and
  * connection rows are resolved here on the server.
  *
- * The `translation` prop controls which version is displayed.
- * If omitted, defaults to "web" for backward compatibility.
+ * Both readings of every passage are rendered and CSS shows the reader's
+ * choice (see VerseText), so this component needs no knowledge of the active
+ * translation. That keeps every page that contains a verse card cacheable.
  */
-export default function VerseCard({
-  verse,
-  translation = "web",
-}: {
-  verse: string;
-  translation?: TranslationCode;
-}) {
-  const text = getPassageText(verse, translation);
-  if (!text) return null;
+export default function VerseCard({ verse }: { verse: string }) {
+  if (!getPassageText(verse, "web")) return null;
   const rows: ConnectionRowData[] = getConnections(verse).map((edge) => ({
     target: edge.target,
     kind: edge.kind,
     note: edge.note,
-    text: getPassageText(edge.target, translation),
+    text: <VerseText verse={edge.target} />,
   }));
-  const translationInfo = getTranslationInfo(translation);
   return (
     <figure className="border-l-2 border-gold/60 bg-cream/50 py-3 pl-4 pr-5">
       <blockquote className="font-display text-[17px] italic leading-relaxed text-ink">
-        {text}
+        <VerseText verse={verse} />
       </blockquote>
       <figcaption className="mt-1.5 text-[13px]">
         <Link
-          href={versionedUrl(`/verses/${verseSlug(verse)}`, translation)}
+          href={`/verses/${verseSlug(verse)}`}
           className="font-semibold tracking-wide text-gold-deep underline-offset-2 hover:underline"
         >
           {verse}
@@ -51,7 +41,8 @@ export default function VerseCard({
             href="/about-translation"
             className="underline-offset-2 hover:underline"
           >
-            {translationInfo.shortName}
+            <span data-v="web">{TRANSLATIONS.web.shortName}</span>
+            <span data-v="kjv">{TRANSLATIONS.kjv.shortName}</span>
           </Link>
         </span>
         <span className="ml-2 align-middle">

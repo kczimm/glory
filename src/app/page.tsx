@@ -11,17 +11,14 @@ import QuestionCard from "@/components/QuestionCard";
 import VerseCard from "@/components/VerseCard";
 import JourneyHomeCard from "@/components/JourneyHomeCard";
 import DailyCard from "@/components/DailyCard";
-import { resolveServerTranslation } from "@/lib/translation-server";
 
-interface Props {
-  searchParams?: Promise<{ version?: string }>;
-}
-
-export default async function Home({ searchParams }: Props) {
-  const sp = await searchParams;
-  const version = await resolveServerTranslation(
-    sp as Record<string, string | undefined> | undefined,
-  );
+/**
+ * The home page is a static prerender: the reader's translation choice is
+ * applied in the browser (both readings are in the HTML), so nothing here
+ * depends on the request.
+ */
+export default function Home() {
+  const allTeasers = teasers();
   return (
     <div>
       {/* Hero */}
@@ -58,7 +55,7 @@ export default async function Home({ searchParams }: Props) {
             <SearchBox />
           </div>
           <div className="mt-10 flex justify-center sm:mt-12">
-            <VerseCard verse="John 5:39" translation={version} />
+            <VerseCard verse="John 5:39" />
           </div>
         </div>
       </section>
@@ -102,7 +99,7 @@ export default async function Home({ searchParams }: Props) {
       </section>
 
       {/* Today */}
-      <DailyCard version={version} />
+      <DailyCard />
 
       {/* Continue the journey */}
       <JourneyHomeCard titles={questionTitles()} />
@@ -173,7 +170,7 @@ export default async function Home({ searchParams }: Props) {
         </div>
       </section>
 
-      {/* All questions */}
+      {/* All questions, in brief */}
       <section className="border-t border-line bg-cream/40">
         <div className="mx-auto max-w-5xl px-5 py-14 sm:py-16">
           <div className="mb-8 flex items-end justify-between">
@@ -187,13 +184,17 @@ export default async function Home({ searchParams }: Props) {
             </div>
             <Link
               href="/questions"
-              className="text-sm font-medium text-gold-deep underline-offset-4 hover:underline sm:hidden"
+              className="text-sm font-medium text-gold-deep underline-offset-4 hover:underline"
             >
-              View all →
+              All {allTeasers.length} questions →
             </Link>
           </div>
+          {/* Twelve cards, not the whole corpus. Repeating every study here
+              made the home page the heaviest document on the site (1.1 MB of
+              HTML, with the same cards shipped twice: once as markup and once
+              as the hydration payload). The full index lives at /questions. */}
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {teasers().map((t) => (
+            {allTeasers.slice(0, 12).map((t) => (
               <QuestionCard key={t.slug} question={t} />
             ))}
           </div>

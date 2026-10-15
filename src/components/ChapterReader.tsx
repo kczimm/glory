@@ -12,18 +12,14 @@ import {
 } from "@/lib/speech";
 import type { SpeechItem } from "@/lib/speech";
 import ListenButton from "@/components/ListenButton";
-import { resolveVersion } from "@/lib/translation";
-import { hasAudio, type TranslationCode } from "@/lib/translation-shared";
+import { useTranslation } from "@/lib/useTranslation";
+import { hasAudio } from "@/lib/translation-shared";
 
-/** Subscribe/unsubscribe stub for useSyncExternalStore. */
-function subscribeVersion(): () => void {
-  return () => {};
-}
-function getVersionSnapshot(): string {
-  return typeof window !== "undefined" ? resolveVersion(new URLSearchParams(window.location.search)) : "web";
-}
-function getVersionServerSnapshot(): string {
-  return "web";
+/** One verse of a chapter, in both readings; the reader's choice is shown. */
+export interface ChapterVerse {
+  n: number;
+  web: string | null;
+  kjv: string | null;
 }
 
 /**
@@ -38,26 +34,33 @@ export default function ChapterReader({
   verses,
 }: {
   passage: Passage;
-  verses: { n: number; text: string }[] | null;
+  verses: ChapterVerse[] | null;
 }) {
   const [opened, setOpened] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
   const speech = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
-  const version = useSyncExternalStore(subscribeVersion, getVersionSnapshot, getVersionServerSnapshot) as TranslationCode;
+  const { version } = useTranslation();
   const audioAvailable = hasAudio(version);
 
   const sourceId = `chapter:${passage.book} ${passage.chapter}`;
 
+  // Speech is pre-generated from the WEB text and only WEB has an audio
+  // catalog, so the queue is built from `web` whichever reading is on screen.
+  const spoken = useMemo(
+    () => verses?.map((v) => ({ n: v.n, text: v.web ?? "" })) ?? null,
+    [verses],
+  );
+
   const items = useMemo<SpeechItem[]>(() => {
-    if (!verses) return [];
+    if (!spoken) return [];
     // Only the focus range is spoken (mirroring the pre-generated catalog);
     // the full chapter stays visible for reading.
     return chapterItems(
       passage.book,
       passage.chapter,
-      filterFocus(verses, passage.focus)
+      filterFocus(spoken, passage.focus)
     );
-  }, [verses, passage.book, passage.chapter, passage.focus]);
+  }, [spoken, passage.book, passage.chapter, passage.focus]);
 
   const active = speech.sourceId === sourceId && speech.status !== "idle";
   const activeId = active ? speech.queue[speech.index]?.id : undefined;
@@ -174,7 +177,7 @@ export default function ChapterReader({
                 >
                   {v.n}
                 </span>
-                {v.text.replace(/\n+/g, " ")}
+                {((version === "kjv" ? v.kjv : v.web) ?? v.web ?? "").replace(/\n+/g, " ")}
               </p>
             );
           })}

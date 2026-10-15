@@ -2,15 +2,13 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { verseSlug } from "@/data";
-import { questions, getQuestion, categoryOf, getPassageText, getChapterFocus } from "@/data/server";
+import { questions, getQuestion, categoryOf, getChapterFocusPair } from "@/data/server";
 import AutoPrint from "@/components/AutoPrint";
+import VerseText, { PairedText } from "@/components/VerseText";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
-import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shared";
-import { resolveServerTranslation } from "@/lib/translation-server";
 
 interface Props {
   params: Promise<{ slug: string }>;
-  searchParams?: Promise<{ version?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -32,11 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  * their grounding verses, and the key verses. Hidden from search engines;
  * opened with ?print=1 it opens the print dialog automatically.
  */
-export default async function PrintStudyPage({ params, searchParams }: Props) {
+export default async function PrintStudyPage({ params }: Props) {
   const { slug } = await params;
-  const sp = await searchParams;
-  const version: TranslationCode = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
-  const translationInfo = getTranslationInfo(version);
   const question = getQuestion(slug);
   if (!question) notFound();
 
@@ -68,7 +63,7 @@ export default async function PrintStudyPage({ params, searchParams }: Props) {
         </h1>
         <p className="mt-3 max-w-[65ch] text-ink-soft">{question.summary}</p>
         <p className="mt-3 text-[11px] text-ink-faint">
-          {SITE_URL}/questions/{slug} · Scripture quoted from the {translationInfo.name}
+          {SITE_URL}/questions/{slug} · Scripture quoted from the World English Bible and the King James Version
         </p>
       </header>
 
@@ -78,7 +73,7 @@ export default async function PrintStudyPage({ params, searchParams }: Props) {
           Begin by reading
         </h2>
         {question.passages.map((p) => {
-          const verses = getChapterFocus(p.book, p.chapter, p.focus, version);
+          const verses = getChapterFocusPair(p.book, p.chapter, p.focus);
           if (!verses) return null;
           return (
             <div key={`${p.book}-${p.chapter}`} className="mt-5 break-inside-avoid-page">
@@ -93,7 +88,7 @@ export default async function PrintStudyPage({ params, searchParams }: Props) {
                 {verses.map((v) => (
                   <p key={v.n} className="font-display text-[14.5px] leading-relaxed text-ink">
                     <sup className="mr-1 text-[9px] font-semibold text-ink-faint">{v.n}</sup>
-                    {v.text.replace(/\n+/g, " ")}
+                    <PairedText web={v.web} kjv={v.kjv} />
                   </p>
                 ))}
               </div>
@@ -112,13 +107,12 @@ export default async function PrintStudyPage({ params, searchParams }: Props) {
             </h3>
             <p className="mt-2 max-w-[70ch] text-ink">{point.body}</p>
             {point.verses.map((ref) => {
-              const text = getPassageText(ref, version);
               return (
                 <blockquote
                   key={ref}
                   className="mt-2 border-l-2 border-gold-deep pl-3 font-display text-[13.5px] italic text-ink"
                 >
-                  “{text}”
+                  &ldquo;<VerseText verse={ref} />&rdquo;
                   <Link href={`/verses/${verseSlug(ref)}`} className="ml-1 not-italic font-semibold text-gold-deep no-underline">
                     {ref}
                   </Link>

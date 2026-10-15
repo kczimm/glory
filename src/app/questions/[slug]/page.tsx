@@ -9,13 +9,14 @@ import {
   categoryOf,
   questionsByCategory,
   getPassageText,
-  getChapter,
+  getChapterPair,
   questionTitles,
   studyListenData,
   visitChainData,
   visitListenData,
 } from "@/data/server";
 import VerseCard from "@/components/VerseCard";
+import VerseText from "@/components/VerseText";
 import ChapterReader from "@/components/ChapterReader";
 import JourneyBreadcrumb from "@/components/JourneyBreadcrumb";
 import StudyListen from "@/components/StudyListen";
@@ -24,11 +25,9 @@ import VisitListen from "@/components/VisitListen";
 import ShareButton from "@/components/ShareButton";
 import HoldAllButton from "@/components/HoldAllButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
-import { resolveServerTranslation } from "@/lib/translation-server";
 
 interface Props {
   params: Promise<{ slug: string }>;
-  searchParams?: Promise<{ version?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -53,10 +52,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function QuestionPage({ params, searchParams }: Props) {
+export default async function QuestionPage({ params }: Props) {
   const { slug } = await params;
-  const sp = await searchParams;
-  const version = await resolveServerTranslation(sp as Record<string, string | undefined> | undefined);
   const question = getQuestion(slug);
   if (!question) notFound();
 
@@ -75,7 +72,7 @@ export default async function QuestionPage({ params, searchParams }: Props) {
   const parents = resolveQuestions(question.followsFrom);
   const related = resolveQuestions(question.related);
   const { prev, next } = trailOf(question);
-  const chain = visitChainData(question, version);
+  const chain = visitChainData(question);
   const visitIntro = visitListenData(question);
 
   return (
@@ -106,7 +103,7 @@ export default async function QuestionPage({ params, searchParams }: Props) {
             </Link>
             <span className="ml-auto flex items-center gap-2">
               <Link
-                href={`/questions/${question.slug}/print${version === "kjv" ? "?version=kjv" : ""}`}
+                href={`/questions/${question.slug}/print`}
                 className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
               >
                 <svg
@@ -127,9 +124,9 @@ export default async function QuestionPage({ params, searchParams }: Props) {
                 Print
               </Link>
               <ShareButton
-                url={`${SITE_URL}/questions/${question.slug}${version === "kjv" ? "?version=kjv" : ""}`}
+                url={`${SITE_URL}/questions/${question.slug}`}
                 title={question.question}
-                text={question.keyVerses[0] ? getPassageText(question.keyVerses[0], version) ?? question.summary : question.summary}
+                text={question.keyVerses[0] ? getPassageText(question.keyVerses[0], "web") ?? question.summary : question.summary}
               />
             </span>
           </div>
@@ -178,7 +175,7 @@ export default async function QuestionPage({ params, searchParams }: Props) {
           </p>
           <div className="mt-6 space-y-3">
             {question.passages.map((p) => (
-              <ChapterReader key={`${p.book}-${p.chapter}`} passage={p} verses={getChapter(p.book, p.chapter, version)} />
+              <ChapterReader key={`${p.book}-${p.chapter}`} passage={p} verses={getChapterPair(p.book, p.chapter)} />
             ))}
           </div>
         </section>
@@ -194,7 +191,7 @@ export default async function QuestionPage({ params, searchParams }: Props) {
                 What the Scripture says
               </h2>
             </div>
-            <StudyListen {...studyListenData(question, version)} />
+            <StudyListen {...studyListenData(question)} />
           </div>
           <div className="mt-8 space-y-10">
             {question.points.map((point, i) => (
@@ -212,7 +209,7 @@ export default async function QuestionPage({ params, searchParams }: Props) {
                   <div className="mt-4 space-y-2.5">
                     {point.verses.map((ref, j) => (
                       <div key={ref} id={`sp-${i}-v-${j}`}>
-                        <VerseCard verse={ref} translation={version} />
+                        <VerseCard verse={ref} />
                       </div>
                     ))}
                   </div>
@@ -242,7 +239,6 @@ export default async function QuestionPage({ params, searchParams }: Props) {
                     Continue this trail
                   </p>
                   {sameTrailAll.map((q) => {
-                    const text = getPassageText(q.keyVerses[0], version);
                     return (
                       <Link
                         key={q.slug}
@@ -255,9 +251,9 @@ export default async function QuestionPage({ params, searchParams }: Props) {
                             →
                           </span>
                         </span>
-                        {text && (
+                        {getPassageText(q.keyVerses[0], "web") && (
                           <span className="line-clamp-1 text-[13px] italic text-ink-faint">
-                            “{text}”
+                            &ldquo;<VerseText verse={q.keyVerses[0]} />&rdquo;
                           </span>
                         )}
                       </Link>
@@ -271,7 +267,6 @@ export default async function QuestionPage({ params, searchParams }: Props) {
                     Explore further
                   </p>
                   {crossTrail.map((q) => {
-                    const text = getPassageText(q.keyVerses[0], version);
                     const trail = categoryOf(q);
                     return (
                       <Link
@@ -288,9 +283,9 @@ export default async function QuestionPage({ params, searchParams }: Props) {
                         <span className="text-[12px] font-medium text-ink-faint">
                           {trail?.title ?? q.category} trail
                         </span>
-                        {text && (
+                        {getPassageText(q.keyVerses[0], "web") && (
                           <span className="line-clamp-1 text-[13px] italic text-ink-faint">
-                            “{text}”
+                            &ldquo;<VerseText verse={q.keyVerses[0]} />&rdquo;
                           </span>
                         )}
                       </Link>
@@ -330,7 +325,7 @@ export default async function QuestionPage({ params, searchParams }: Props) {
           </div>
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             {question.keyVerses.map((ref) => (
-              <VerseCard key={ref} verse={ref} translation={version} />
+              <VerseCard key={ref} verse={ref} />
             ))}
           </div>
         </section>

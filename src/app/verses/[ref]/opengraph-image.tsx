@@ -6,9 +6,11 @@ import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shar
 export const alt = "Verse";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-// Generated on demand: the /verses graph has ~1,800 hubs, so we don't
-// prerender an image per verse at build time.
-export const dynamic = "force-dynamic";
+// Generated on demand and then cached: the /verses graph has ~1,800 hubs, so
+// prerendering an image per verse at build time is wasteful, and rendering one
+// on every request burns CPU for something that never changes. ISR gives each
+// verse its image once and serves it from the cache afterwards.
+export const revalidate = 86400;
 
 const C = {
   parchment: "#fbf7ee",

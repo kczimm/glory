@@ -3,17 +3,13 @@ import { dailyPick } from "@/lib/daily";
 import { verseSlug } from "@/data";
 import { categoryOf } from "@/data/server";
 import RandomLink from "@/components/RandomLink";
-import { versionedUrl } from "@/lib/translation-shared";
+import VerseText from "@/components/VerseText";
 
 /**
  * The "Today" card on the home page: one question and its key verse,
  * chosen for the day. An entry point into the study graph.
  */
-export default async function DailyCard({
-  version = "web",
-}: {
-  version?: import("@/lib/translation-shared").TranslationCode;
-}) {
+export default function DailyCard() {
   const pick = dailyPick();
   if (!pick) return null;
   const category = categoryOf(pick.question);
@@ -29,10 +25,10 @@ export default async function DailyCard({
         </h2>
         {pick.verseText && (
           <blockquote className="mt-5 border-l-2 border-gold/60 pl-4 font-display text-[16.5px] italic leading-relaxed text-ink sm:text-[17.5px]">
-            {pick.verseText}
+            <VerseText verse={pick.verse} />
             <span className="mt-1 block text-[13px] not-italic">
               <Link
-                href={versionedUrl(`/verses/${verseSlug(pick.verse)}`, version)}
+                href={`/verses/${verseSlug(pick.verse)}`}
                 className="font-semibold tracking-wide text-gold-deep underline-offset-2 hover:underline"
               >
                 {pick.verse}

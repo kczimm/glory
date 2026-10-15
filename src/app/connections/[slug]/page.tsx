@@ -10,12 +10,9 @@ import {
   citedVersesBySlug,
 } from "@/data/server";
 import ConnectionGraph from "@/components/ConnectionGraph";
-import { versionedUrl } from "@/lib/translation-shared";
-import { resolveServerTranslation } from "@/lib/translation-server";
 
 interface Props {
   params: Promise<{ slug: string }>;
-  searchParams?: Promise<{ version?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -36,12 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ConnectionsPage({ params, searchParams }: Props) {
+export default async function ConnectionsPage({ params }: Props) {
   const { slug } = await params;
-  const sp = await searchParams;
-  const version = await resolveServerTranslation(
-    sp as Record<string, string | undefined> | undefined,
-  );
   const ref = refFromSlug(slug);
   if (!ref) notFound();
 
@@ -71,7 +64,7 @@ export default async function ConnectionsPage({ params, searchParams }: Props) {
       <p className="mt-8 text-[13px] text-ink-faint">
         Prefer to read?{" "}
         <Link
-          href={versionedUrl(`/verses/${slug}`, version)}
+          href={`/verses/${slug}`}
           className="font-semibold text-gold-deep underline-offset-2 hover:underline"
         >
           Open the verse page

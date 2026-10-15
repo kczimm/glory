@@ -2,8 +2,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getConnections, verseSlug } from "@/data";
 import { graphVerseRefs, incomingConnections } from "@/data/server";
-import { versionedUrl } from "@/lib/translation-shared";
-import { resolveServerTranslation } from "@/lib/translation-server";
 
 export const metadata: Metadata = {
   title: "The Word, connected",
@@ -80,15 +78,7 @@ const BOOKS = [
   "Revelation",
 ];
 
-export default async function VersesIndex({
-  searchParams,
-}: {
-  searchParams?: Promise<{ version?: string }>;
-}) {
-  const sp = await searchParams;
-  const version = await resolveServerTranslation(
-    sp as Record<string, string | undefined> | undefined,
-  );
+export default function VersesIndex() {
   const refs = graphVerseRefs();
   // How many cross-reference edges touch this verse (leaving + reaching it).
   const degreeCache = new Map<string, number>();
@@ -146,7 +136,7 @@ export default async function VersesIndex({
               {g.refs.map((ref) => (
                 <Link
                   key={ref}
-                  href={versionedUrl(`/verses/${verseSlug(ref)}`, version)}
+                  href={`/verses/${verseSlug(ref)}`}
                   className="rounded-full border border-line bg-surface/60 px-3 py-1 text-[13px] text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
                 >
                   {ref}

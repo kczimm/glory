@@ -3,17 +3,26 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { chapterSlug, bookFromSlug } from "@/data/books";
 import { parseRef, verseKeys, verseSlug } from "@/data/ref";
-import { getChapter, bibleBooks, graphVerseRefs } from "@/data/server";
-import {
-  getTranslationInfo,
-  versionedUrl,
-  type TranslationCode,
-} from "@/lib/translation-shared";
-import { resolveServerTranslation } from "@/lib/translation-server";
+import { getChapterPair, bibleBooks, graphVerseRefs } from "@/data/server";
+import { PairedText } from "@/components/VerseText";
 
 interface Props {
   params: Promise<{ slug: string }>;
-  searchParams?: Promise<{ version?: string }>;
+}
+
+/**
+ * Every chapter of the vendored Bible, prerendered.
+ *
+ * Without this the route rendered on demand and was never cached, so each
+ * visit (including each crawler visit) cost a Function invocation and a full
+ * origin transfer: it is the second most requested route family on the site.
+ */
+export async function generateStaticParams() {
+  return bibleBooks().flatMap(({ book, chapters }) =>
+    Array.from({ length: chapters }, (_, i) => ({
+      slug: chapterSlug(book, i + 1),
+    })),
+  );
 }
 
 /** Every single verse touched by a study citation or cross-reference edge. */
@@ -28,28 +37,20 @@ const graphVerses = (() => {
 })();
 
 /** The whole canon as an ordered (book, chapter) walk, for prev/next. */
-function getCanon(version: TranslationCode = "web") {
-  return bibleBooks(version).flatMap(({ book, chapters }) =>
+function getCanon() {
+  return bibleBooks().flatMap(({ book, chapters }) =>
     Array.from({ length: chapters }, (_, i) => ({ book, chapter: i + 1 })),
   );
 }
 
-export async function generateMetadata({
-  params,
-  searchParams,
-}: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const sp = await searchParams;
-  const version: TranslationCode = await resolveServerTranslation(
-    sp as Record<string, string | undefined> | undefined,
-  );
-  const translationInfo = getTranslationInfo(version);
   const { book, chapter } = parseChapterSlug(slug) ?? {};
   if (!book || !chapter) return {};
   const title = `${book} ${chapter}`;
   return {
     title,
-    description: `${title}: read the whole chapter in the ${translationInfo.name}, offline.`,
+    description: `${title}: read the whole chapter in the World English Bible and the King James Version, offline.`,
     alternates: { canonical: `/bible/${slug}` },
   };
 }
@@ -63,19 +64,14 @@ function parseChapterSlug(
   return book ? { book, chapter: Number(m[2]) } : null;
 }
 
-export default async function BibleChapter({ params, searchParams }: Props) {
+export default async function BibleChapter({ params }: Props) {
   const { slug } = await params;
-  const sp = await searchParams;
-  const version: TranslationCode = await resolveServerTranslation(
-    sp as Record<string, string | undefined> | undefined,
-  );
-  const translationInfo = getTranslationInfo(version);
   const parsed = parseChapterSlug(slug);
   if (!parsed) notFound();
-  const verses = getChapter(parsed.book, parsed.chapter, version);
+  const verses = getChapterPair(parsed.book, parsed.chapter);
   if (!verses) notFound();
 
-  const canon = getCanon(version);
+  const canon = getCanon();
   const idx = canon.findIndex(
     (c) => c.book === parsed.book && c.chapter === parsed.chapter,
   );
@@ -96,15 +92,15 @@ export default async function BibleChapter({ params, searchParams }: Props) {
             {parsed.book} {parsed.chapter}
           </h1>
           <div className="mt-4 flex items-center gap-3 text-[13px] text-ink-soft">
-            <span>{translationInfo.shortName}</span>
+            <span>
+              <span data-v="web">WEB</span>
+              <span data-v="kjv">KJV</span>
+            </span>
             <span aria-hidden>·</span>
             <nav className="flex gap-2" aria-label="Nearby chapters">
               {prev ? (
                 <Link
-                  href={versionedUrl(
-                    `/bible/${chapterSlug(prev.book, prev.chapter)}`,
-                    version,
-                  )}
+                  href={`/bible/${chapterSlug(prev.book, prev.chapter)}`}
                   className="transition-colors hover:text-gold-deep"
                 >
                   ← {shortLabel(prev.book, prev.chapter)}
@@ -112,10 +108,7 @@ export default async function BibleChapter({ params, searchParams }: Props) {
               ) : null}
               {next ? (
                 <Link
-                  href={versionedUrl(
-                    `/bible/${chapterSlug(next.book, next.chapter)}`,
-                    version,
-                  )}
+                  href={`/bible/${chapterSlug(next.book, next.chapter)}`}
                   className="transition-colors hover:text-gold-deep"
                 >
                   {shortLabel(next.book, next.chapter)} →
@@ -130,7 +123,6 @@ export default async function BibleChapter({ params, searchParams }: Props) {
         <div className="space-y-3">
           {verses.map((v) => {
             const ref = `${parsed.book} ${parsed.chapter}:${v.n}`;
-            const text = v.text.replace(/\n+/g, " ");
             const studied = graphVerses.has(ref);
             return (
               <p
@@ -143,14 +135,14 @@ export default async function BibleChapter({ params, searchParams }: Props) {
                 </sup>
                 {studied ? (
                   <Link
-                    href={versionedUrl(`/verses/${verseSlug(ref)}`, version)}
+                    href={`/verses/${verseSlug(ref)}`}
                     title={`${ref}: see where this verse is studied`}
                     className="underline decoration-gold/40 decoration-dotted underline-offset-4 transition-colors hover:text-gold-deep"
                   >
-                    {text}
+                    <PairedText web={v.web} kjv={v.kjv} />
                   </Link>
                 ) : (
-                  text
+                  <PairedText web={v.web} kjv={v.kjv} />
                 )}
               </p>
             );
@@ -163,10 +155,7 @@ export default async function BibleChapter({ params, searchParams }: Props) {
         >
           {prev ? (
             <Link
-              href={versionedUrl(
-                `/bible/${chapterSlug(prev.book, prev.chapter)}`,
-                version,
-              )}
+              href={`/bible/${chapterSlug(prev.book, prev.chapter)}`}
               className="rounded-full border border-line bg-surface/60 px-4 py-2 text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
             >
               ← {shortLabel(prev.book, prev.chapter)}
@@ -175,20 +164,14 @@ export default async function BibleChapter({ params, searchParams }: Props) {
             <span />
           )}
           <Link
-            href={versionedUrl(
-              `/bible/${chapterSlug(parsed.book, 1)}`,
-              version,
-            )}
+            href={`/bible/${chapterSlug(parsed.book, 1)}`}
             className="hidden text-ink-faint transition-colors hover:text-gold-deep sm:inline"
           >
             {parsed.book} 1
           </Link>
           {next ? (
             <Link
-              href={versionedUrl(
-                `/bible/${chapterSlug(next.book, next.chapter)}`,
-                version,
-              )}
+              href={`/bible/${chapterSlug(next.book, next.chapter)}`}
               className="rounded-full border border-line bg-surface/60 px-4 py-2 text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
             >
               {shortLabel(next.book, next.chapter)} →

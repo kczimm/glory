@@ -10,12 +10,12 @@ import {
   getSnapshot as journeySnapshot,
   getServerSnapshot as journeyServerSnapshot,
 } from "@/lib/journey";
-import { versionedUrl } from "@/lib/translation-shared";
 import { useTranslation } from "@/lib/useTranslation";
 
 export interface GraphData {
-  /** verse text for every reachable node (connection endpoints) */
-  texts: Record<string, string>;
+  /** verse text for every reachable node (connection endpoints), both
+   *  readings, so the map needs no server-side translation choice */
+  texts: Record<string, { web: string | null; kjv: string | null }>;
   /** studies citing each node */
   usages: Record<string, { slug: string; question: string }[]>;
   /** verses cited by each study (slug -> refs), for the visited ring */
@@ -401,11 +401,12 @@ export default function ConnectionGraph({
             </h2>
             {graph.texts[selected] && (
               <blockquote className="mt-3 border-l-2 border-gold/60 pl-3 font-display text-[15px] italic leading-relaxed text-ink">
-                {graph.texts[selected]}
+                {(version === "kjv" ? graph.texts[selected].kjv : graph.texts[selected].web) ??
+                  graph.texts[selected].web}
               </blockquote>
             )}
             <Link
-              href={versionedUrl(`/verses/${verseSlug(selected)}`, version)}
+              href={`/verses/${verseSlug(selected)}`}
               className="mt-3 inline-block text-[13px] font-semibold text-gold-deep underline-offset-2 hover:underline"
             >
               Open verse page →

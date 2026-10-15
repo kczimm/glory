@@ -6,6 +6,9 @@ import { getTranslationInfo, type TranslationCode } from "@/lib/translation-shar
 export const alt = "Glory study";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+// Cached after the first render: an OG card is identical for every crawler
+// that asks for it, so regenerating it per request only burns CPU.
+export const revalidate = 86400;
 
 const C = {
   parchment: "#fbf7ee",

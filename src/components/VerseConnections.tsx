@@ -2,24 +2,24 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { verseSlug } from "@/data";
 import { connectionKindLabel } from "@/data/connections";
-import { versionedUrl } from "@/lib/translation-shared";
-import { useTranslation } from "@/lib/useTranslation";
 import type { ConnectionKind } from "@/data/types";
 
 export interface ConnectionRowData {
   target: string;
   kind: ConnectionKind;
   note: string;
-  /** target text, resolved server-side */
-  text: string | null;
+  /** target text, resolved server-side as the pair of readings to reveal */
+  text: ReactNode;
 }
 
 /**
  * The knowledge graph on each verse: shows how this verse connects to others,
  * HOW they connect, and why it matters. Scripture interpreting Scripture.
- * Rows (including target verse text) are prepared by the server parent.
+ * Rows (including target verse text) are prepared by the server parent, which
+ * renders both translations so this stays a static, cacheable page.
  */
 export default function VerseConnections({
   verse,
@@ -29,7 +29,6 @@ export default function VerseConnections({
   rows: ConnectionRowData[];
 }) {
   const [open, setOpen] = useState(false);
-  const { version } = useTranslation();
   if (!rows.length) return null;
 
   return (
@@ -52,13 +51,13 @@ export default function VerseConnections({
       {open && (
         <ul className="mt-2.5 space-y-3">
           {rows.map((row) => (
-            <ConnectionRow key={row.target} row={row} version={version} />
+            <ConnectionRow key={row.target} row={row} />
           ))}
         </ul>
       )}
       {open && (
         <Link
-          href={versionedUrl(`/connections/${verseSlug(verse)}`, version)}
+          href={`/connections/${verseSlug(verse)}`}
           className="mt-3 inline-flex items-center gap-1 text-[12px] font-semibold text-gold-deep underline-offset-2 hover:underline"
         >
           See this verse&apos;s connection map
@@ -69,13 +68,7 @@ export default function VerseConnections({
   );
 }
 
-function ConnectionRow({
-  row,
-  version,
-}: {
-  row: ConnectionRowData;
-  version: import("@/lib/translation-shared").TranslationCode;
-}) {
+function ConnectionRow({ row }: { row: ConnectionRowData }) {
   return (
     <li className="rounded-lg bg-parchment/80 px-3 py-2.5">
       <p className="flex items-baseline gap-2">
@@ -83,7 +76,7 @@ function ConnectionRow({
           {connectionKindLabel[row.kind]}
         </span>
         <Link
-          href={versionedUrl(`/verses/${verseSlug(row.target)}`, version)}
+          href={`/verses/${verseSlug(row.target)}`}
           className="text-[12.5px] font-semibold text-gold-deep underline-offset-2 hover:underline"
         >
           {row.target}
@@ -92,7 +85,7 @@ function ConnectionRow({
       <p className="mt-1 text-[13px] leading-snug text-ink-soft">{row.note}</p>
       {row.text && (
         <p className="mt-1.5 border-l border-gold/40 pl-2.5 font-display text-[13.5px] italic leading-snug text-ink">
-          “{row.text}”
+          &ldquo;{row.text}&rdquo;
         </p>
       )}
     </li>

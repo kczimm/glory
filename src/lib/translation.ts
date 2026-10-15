@@ -1,15 +1,18 @@
 "use client";
 
 /**
- * Translation selector: manages the user's preferred Bible translation.
+ * Translation preference: the reader's WEB/KJV choice.
  *
- * Priority:
- * 1. URL param `?version=kjv` (explicit, shareable)
- * 2. localStorage `glory:translation` (persisted preference)
- * 3. Default: "web" (World English Bible)
+ * The choice lives entirely in the browser (URL param, then localStorage,
+ * then cookie). It deliberately never reaches the server render: a render that
+ * varies by cookie or by a query parameter cannot be cached at the CDN, and
+ * that is what made every page in this app cost a Function invocation and a
+ * full origin transfer on every single visit.
  *
- * This module is client-only (uses localStorage). Server components should
- * use the server-safe variant in `@/data/translation-server.ts`.
+ * Both readings ship in the HTML (see components/VerseText), so switching is a
+ * matter of showing one and hiding the other: `data-translation` on <html>
+ * drives it in CSS, and this module's subscribers let the handful of React
+ * components that need the value (audio availability, link hrefs) re-render.
  */
 
 // Re-export shared types and utilities
@@ -20,6 +23,11 @@ import type { TranslationCode } from "./translation-shared";
 import { VALID_CODES } from "./translation-shared";
 
 const STORAGE_KEY = "glory:translation";
+const COOKIE_KEY = "glory:translation";
+
+/** The active code, resolved once from the browser and then kept in memory. */
+let current: TranslationCode | null = null;
+const listeners = new Set<() => void>();
 
 /** Get the translation code from the URL param, if valid. */
 export function getVersionFromURL(searchParams?: URLSearchParams): TranslationCode | null {
@@ -41,7 +49,7 @@ export function getVersionFromStorage(): TranslationCode {
 }
 
 /** Save the translation code to localStorage. */
-export function setVersionInStorage(code: TranslationCode): void {
+function setVersionInStorage(code: TranslationCode): void {
   try {
     localStorage.setItem(STORAGE_KEY, code);
   } catch {
@@ -49,10 +57,102 @@ export function setVersionInStorage(code: TranslationCode): void {
   }
 }
 
+/** Write the cookie the pre-paint script falls back to when localStorage is
+ *  unavailable (private mode, cleared storage). */
+function setVersionCookie(code: TranslationCode): void {
+  try {
+    document.cookie = `${COOKIE_KEY}=${code}; path=/; max-age=31536000; SameSite=Lax`;
+  } catch {
+    /* cookies disabled: localStorage already covers it */
+  }
+}
+
+/** Show one reading and hide the other, by way of the CSS in globals.css.
+ *  An empty value (rather than removing the attribute) is enough: the CSS
+ *  selector matches only `kjv`. */
+function paint(code: TranslationCode): void {
+  document.documentElement.dataset.translation = code === "kjv" ? "kjv" : "";
+}
+
 /**
  * Resolve the current translation code.
- * Call from a client component with the current URL search params.
+ * Pass the current URL search params when you have them; otherwise the
+ * address bar is read.
  */
 export function resolveVersion(searchParams?: URLSearchParams): TranslationCode {
-  return getVersionFromURL(searchParams) ?? getVersionFromStorage();
+  if (current) return current;
+  if (typeof window === "undefined") return "web";
+  current =
+    getVersionFromURL(searchParams ?? new URLSearchParams(window.location.search)) ??
+    getVersionFromStorage();
+  return current;
+}
+
+/** Re-read the preference from the browser, repainting only if it moved.
+ *  Used on the `storage` event (another tab) and on a bfcache restore, where
+ *  the frozen DOM may no longer match the reader's choice. */
+function syncFromBrowser(): void {
+  const next =
+    getVersionFromURL(new URLSearchParams(window.location.search)) ??
+    getVersionFromStorage();
+  if (next === current) return;
+  current = next;
+  paint(next);
+  for (const listener of listeners) listener();
+}
+
+/** Subscribe to translation changes. Returns an unsubscribe function. */
+export function subscribeTranslation(onChange: () => void): () => void {
+  listeners.add(onChange);
+
+  const onStorage = (event: StorageEvent) => {
+    if (event.key !== null && event.key !== STORAGE_KEY) return;
+    syncFromBrowser();
+  };
+  const onPageShow = (event: PageTransitionEvent) => {
+    if (event.persisted) syncFromBrowser();
+  };
+  window.addEventListener("storage", onStorage);
+  window.addEventListener("pageshow", onPageShow);
+
+  return () => {
+    listeners.delete(onChange);
+    window.removeEventListener("storage", onStorage);
+    window.removeEventListener("pageshow", onPageShow);
+  };
+}
+
+/** The store snapshot for useSyncExternalStore. */
+export function getTranslationSnapshot(): string {
+  return resolveVersion();
+}
+
+/** The server snapshot: markup is prerendered showing the default reading. */
+export function getTranslationServerSnapshot(): string {
+  return "web";
+}
+
+/**
+ * Switch translation: paint it, persist it, keep the address bar in step so
+ * the URL stays shareable, and let subscribers re-render. No reload.
+ */
+export function applyVersion(code: TranslationCode): void {
+  current = code;
+  setVersionInStorage(code);
+  setVersionCookie(code);
+  paint(code);
+
+  if (typeof window !== "undefined") {
+    const params = new URLSearchParams(window.location.search);
+    if (code === "web") params.delete("version");
+    else params.set("version", code);
+    const query = params.toString();
+    window.history.replaceState(
+      null,
+      "",
+      query ? `${window.location.pathname}?${query}` : window.location.pathname,
+    );
+  }
+
+  for (const listener of listeners) listener();
 }

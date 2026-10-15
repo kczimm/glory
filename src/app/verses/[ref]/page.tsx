@@ -17,60 +17,42 @@ import {
 import ShareButton from "@/components/ShareButton";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { chapterSlug } from "@/data/books";
-import {
-  getTranslationInfo,
-  versionedUrl,
-  type TranslationCode,
-} from "@/lib/translation-shared";
-import { resolveServerTranslation } from "@/lib/translation-server";
+import { getTranslationInfo } from "@/lib/translation-shared";
+import VerseText, { PairedText } from "@/components/VerseText";
 
 interface Props {
   params: Promise<{ ref: string }>;
-  searchParams?: Promise<{ version?: string }>;
 }
 
 export async function generateStaticParams() {
   return graphVerseRefs().map((ref) => ({ ref: verseSlug(ref) }));
 }
 
-export async function generateMetadata({
-  params,
-  searchParams,
-}: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { ref } = await params;
-  const sp = await searchParams;
-  const version: TranslationCode = await resolveServerTranslation(
-    sp as Record<string, string | undefined> | undefined,
-  );
-  const translationInfo = getTranslationInfo(version);
   const verse = refFromSlug(ref);
   if (!verse) return {};
-  const text = getPassageText(verse, version);
+  const text = getPassageText(verse, "web");
   if (!text) return {};
   return {
     title: verse,
-    description: `${verse}: read in the ${translationInfo.name}, with the study questions and cross-references that connect to it.`,
+    description: `${verse}: read in the ${getTranslationInfo("web").name}, with the study questions and cross-references that connect to it.`,
     alternates: { canonical: `${SITE_URL}/verses/${ref}` },
     openGraph: {
       type: "article",
       title: verse,
-      description: `${verse}: read in the ${translationInfo.name}, with the study questions and cross-references that connect to it.`,
+      description: `${verse}: read in the ${getTranslationInfo("web").name}, with the study questions and cross-references that connect to it.`,
       url: `${SITE_URL}/verses/${ref}`,
       siteName: SITE_NAME,
     },
   };
 }
 
-export default async function VersePage({ params, searchParams }: Props) {
+export default async function VersePage({ params }: Props) {
   const { ref } = await params;
-  const sp = await searchParams;
-  const version: TranslationCode = await resolveServerTranslation(
-    sp as Record<string, string | undefined> | undefined,
-  );
-  const translationInfo = getTranslationInfo(version);
   const verse = refFromSlug(ref);
   if (!verse) notFound();
-  const text = getPassageText(verse, version);
+  const text = getPassageText(verse, "web");
   if (!text) notFound();
 
   const used = questionsUsing(verse);
@@ -79,10 +61,7 @@ export default async function VersePage({ params, searchParams }: Props) {
 
   const parsed = parseRef(verse);
   const chapterHref = parsed
-    ? versionedUrl(
-        `/bible/${chapterSlug(parsed.book, parsed.chapter)}`,
-        version,
-      )
+    ? `/bible/${chapterSlug(parsed.book, parsed.chapter)}`
     : null;
 
   return (
@@ -98,17 +77,18 @@ export default async function VersePage({ params, searchParams }: Props) {
             </Link>
             <span className="ml-auto">
               <ShareButton
-                url={versionedUrl(`/verses/${ref}`, version)}
+                url={`/verses/${ref}`}
                 title={verse}
                 text={text ?? undefined}
               />
             </span>
           </div>
           <p className="mt-6 font-display text-[22px] italic leading-relaxed text-ink sm:text-[28px]">
-            {text}
+            <VerseText verse={verse} />
           </p>
           <p className="mt-3 text-[14px] font-semibold tracking-wide text-gold-deep">
-            {verse} · {translationInfo.shortName}
+            {verse} · <span data-v="web">WEB</span>
+            <span data-v="kjv">KJV</span>
             {chapterHref && (
               <Link
                 href={chapterHref}
@@ -165,7 +145,6 @@ export default async function VersePage({ params, searchParams }: Props) {
                   target={e.target}
                   note={e.note}
                   kindLabel={connectionKindLabel[e.kind]}
-                  translation={version}
                 />
               ))}
             </div>
@@ -185,7 +164,6 @@ export default async function VersePage({ params, searchParams }: Props) {
                   target={e.from}
                   note={e.note}
                   kindLabel={`${connectionKindLabel[e.kind]} (this verse)`}
-                  translation={version}
                 />
               ))}
             </div>
@@ -200,14 +178,13 @@ function VerseConnectionRow({
   target,
   note,
   kindLabel,
-  translation = "web",
 }: {
   target: string;
   note: string;
   kindLabel: string;
-  translation?: TranslationCode;
 }) {
-  const text = getPassageText(target, translation);
+  const web = getPassageText(target, "web");
+  const kjv = getPassageText(target, "kjv");
   return (
     <div className="rounded-xl border border-line bg-surface/60 px-4 py-3">
       <p className="flex items-baseline gap-2">
@@ -215,16 +192,16 @@ function VerseConnectionRow({
           {kindLabel}
         </span>
         <Link
-          href={versionedUrl(`/verses/${verseSlug(target)}`, translation)}
+          href={`/verses/${verseSlug(target)}`}
           className="text-[13px] font-semibold text-gold-deep underline-offset-2 hover:underline"
         >
           {target}
         </Link>
       </p>
       <p className="mt-1.5 text-[13.5px] leading-snug text-ink-soft">{note}</p>
-      {text && (
+      {(web || kjv) && (
         <p className="mt-2 border-l border-gold/40 pl-2.5 font-display text-[14.5px] italic leading-snug text-ink">
-          “{text}”
+          &ldquo;<PairedText web={web} kjv={kjv} />&rdquo;
         </p>
       )}
     </div>

@@ -10,6 +10,16 @@ const nextConfig: NextConfig = {
         destination: "/trails/in-the-beginning",
         permanent: true,
       },
+      /* Legacy deep link: /questions?trail=<slug> became /trails/<slug>.
+         Handled at the routing layer rather than inside the page, because
+         reading searchParams in the page is what made the questions index
+         render on every request instead of being a static prerender. */
+      {
+        source: "/questions",
+        has: [{ type: "query", key: "trail", value: "(?<trail>.+)" }],
+        destination: "/trails/:trail",
+        permanent: true,
+      },
     ];
   },
   /* Allow the dev server to be reached from other devices on the LAN.

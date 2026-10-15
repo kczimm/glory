@@ -105,6 +105,50 @@ export function getChapterFocus(
   return filterFocus(ch, focus);
 }
 
+// ---- paired readings ------------------------------------------------------
+// Pages render both translations and let CSS reveal the reader's choice (see
+// components/VerseText). Reading the cookie or ?version= per request is what
+// made these pages uncacheable, so the pairing happens at build time instead.
+
+/** One verse of a chapter, in both readings. */
+export interface PairedVerse {
+  n: number;
+  web: string | null;
+  kjv: string | null;
+}
+
+/** A whole chapter as paired readings, or null when the chapter is missing. */
+export function getChapterPair(book: string, chapter: number): PairedVerse[] | null {
+  const web = getChapter(book, chapter, "web");
+  if (!web) return null;
+  const kjvByNumber = new Map(
+    (getChapter(book, chapter, "kjv") ?? []).map((v) => [v.n, v.text]),
+  );
+  return web.map((v) => ({
+    n: v.n,
+    web: v.text,
+    kjv: kjvByNumber.get(v.n) ?? null,
+  }));
+}
+
+/** A focused slice of a chapter as paired readings. */
+export function getChapterFocusPair(
+  book: string,
+  chapter: number,
+  focus?: string,
+): PairedVerse[] | null {
+  const ch = getChapterPair(book, chapter);
+  if (!ch || !focus) return ch;
+  // filterFocus only ever looks at verse numbers, so feed it the numbering.
+  const keep = new Set(
+    filterFocus(
+      ch.map((v) => ({ n: v.n, text: "" })),
+      focus,
+    ).map((v) => v.n),
+  );
+  return ch.filter((v) => keep.has(v.n));
+}
+
 // ---- whole-Bible reader ---------------------------------------------------
 
 /** Chapters per canonical book, computed once from the vendored chapters map. */
@@ -226,20 +270,18 @@ export function teasers(): QuestionTeaser[] {
   return [...questions].sort((a, b) => a.order - b.order).map(toTeaser);
 }
 
-/** Verse text for every connection endpoint, for the client graph explorer. */
-export function graphVerseTexts(
-  translation: TranslationCode = "web",
-): Record<string, string> {
-  const out: Record<string, string> = {};
+/** Verse text for every connection endpoint, in both readings. */
+export function graphVerseTexts(): Record<
+  string,
+  { web: string | null; kjv: string | null }
+> {
+  const refs = new Set<string>(Object.keys(connections));
   for (const edges of Object.values(connections)) {
-    for (const e of edges) {
-      for (const ref of [e.target]) {
-        if (!(ref in out)) out[ref] = getPassageText(ref, translation) ?? "";
-      }
-    }
+    for (const edge of edges) refs.add(edge.target);
   }
-  for (const ref of Object.keys(connections)) {
-    if (!(ref in out)) out[ref] = getPassageText(ref, translation) ?? "";
+  const out: Record<string, { web: string | null; kjv: string | null }> = {};
+  for (const ref of refs) {
+    out[ref] = { web: getPassageText(ref, "web"), kjv: getPassageText(ref, "kjv") };
   }
   return out;
 }
