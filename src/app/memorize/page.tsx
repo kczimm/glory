@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
+import { useTranslation } from "@/lib/useTranslation";
 import {
   dueCards,
   getServerSnapshot,
@@ -79,10 +80,15 @@ export default function MemorizePage() {
 
   /* Verse text is fetched, not imported. Importing the lookup would drag the
      whole vendored Bible (a 1.4 MB chunk) into this page's bundle to show one
-     verse at a time. Refs already asked for are remembered so a re-queue does
-     not refetch them. */
-  const [texts, setTexts] = useState<Record<string, string>>({});
-  const [textsReady, setTextsReady] = useState(false);
+     verse at a time. The route returns both readings, so the card follows the
+     reader's translation choice like every other page.
+     Refs are only recorded as fetched once a request has actually succeeded,
+     so a failed or rate-limited request can be retried. */
+  const [texts, setTexts] = useState<
+    Record<string, { web: string | null; kjv: string | null }>
+  >({});
+  const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
+  const [attempt, setAttempt] = useState(0);
   const requested = useRef<Set<string>>(new Set());
   const sessionKey = session.map((c) => c.ref).join("|");
 
@@ -91,28 +97,46 @@ export default function MemorizePage() {
       .split("|")
       .filter((ref) => ref && !requested.current.has(ref));
     if (missing.length === 0) return;
-    for (const ref of missing) requested.current.add(ref);
 
     let cancelled = false;
-    fetch(`/api/passage?refs=${encodeURIComponent(missing.join("|"))}`)
-      .then((res) => (res.ok ? res.json() : {}))
-      .then((data: Record<string, string>) => {
-        if (cancelled) return;
-        setTexts((prev) => ({ ...prev, ...data }));
+    // A retry deliberately bypasses the route's cache: the point of trying
+    // again is a fresh answer, not the same cached failure back.
+    const query = `refs=${encodeURIComponent(missing.join("|"))}`;
+    const url = `/api/passage?${query}${attempt > 0 ? `&retry=${attempt}` : ""}`;
+    fetch(url)
+      .then((res) => {
+        if (!res.ok) throw new Error(String(res.status));
+        return res.json();
       })
+      .then(
+        (
+          data: Record<string, { web: string | null; kjv: string | null }>,
+        ) => {
+          if (cancelled) return;
+          for (const ref of missing) requested.current.add(ref);
+          setTexts((prev) => ({ ...prev, ...data }));
+          setStatus("ready");
+        },
+      )
       .catch(() => {
-        /* offline or blocked: the card simply stays quiet */
-      })
-      .finally(() => {
-        if (!cancelled) setTextsReady(true);
+        if (!cancelled) setStatus("error");
       });
 
     return () => {
       cancelled = true;
     };
-  }, [sessionKey]);
+  }, [sessionKey, attempt]);
 
-  const text = card ? (texts[card.ref] ?? null) : null;
+  const { version } = useTranslation();
+  const pair = card ? (texts[card.ref] ?? null) : null;
+  const text = pair
+    ? ((version === "kjv" ? (pair.kjv ?? pair.web) : pair.web) ?? null)
+    : null;
+  // A card with no readable text is a failure, not an empty session: saying
+  // "nothing is waiting" would claim the reader holds nothing, which is false.
+  const failed =
+    Boolean(card) &&
+    (status === "error" || (status === "ready" && !text));
   const stage = STAGE_ORDER[Math.min(stageIdx, STAGE_ORDER.length - 1)];
 
   function nextCard() {
@@ -245,7 +269,27 @@ export default function MemorizePage() {
             </button>
           </div>
         </section>
-      ) : card && !textsReady ? (
+      ) : failed ? (
+        <section className="mt-8 rounded-3xl border border-line bg-cream/40 p-8 text-center">
+          <p className="font-display text-xl text-ink">
+            Could not load this verse.
+          </p>
+          <p className="mx-auto mt-2 max-w-[45ch] text-[14px] leading-relaxed text-ink-soft">
+            The verse text did not arrive. The verses you hold are safe; try
+            again in a moment.
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              setStatus("loading");
+              setAttempt((n) => n + 1);
+            }}
+            className="mt-5 inline-block rounded-full bg-gold-deep px-5 py-2 text-[13.5px] font-semibold text-white transition-colors hover:bg-ink"
+          >
+            Try again
+          </button>
+        </section>
+      ) : card ? (
         <section className="mt-8 rounded-3xl border border-line bg-cream/40 p-8 text-center">
           <p className="font-display text-xl text-ink">Fetching the verse…</p>
         </section>
