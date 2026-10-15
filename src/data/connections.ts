@@ -6010,6 +6010,134 @@ export const connections: Record<string, Connection[]> = {
       "The Spirit of truth was promised to guide into all truth, which is why a partially wrong believer can be led further.",
     ),
   ],
+
+  // ------------------------------------------------------------------
+  // The Gospels: promises fulfilled and the King who serves
+  // ------------------------------------------------------------------
+  "Genesis 1:1": [
+    c(
+      "John 1:1",
+      "theme",
+      "John deliberately opens with the same words as Genesis, placing the Word already present when the heavens and the earth were made.",
+    ),
+  ],
+  "Micah 5:2": [
+    c(
+      "Matthew 2:6",
+      "fulfilled",
+      "The chief priests answer Herod by quoting this verse, locating the Messiah in little Bethlehem.",
+    ),
+    c(
+      "John 7:42",
+      "theme",
+      "The crowd reasons that the Christ must come from Bethlehem, David's village, and the answer is that He did.",
+    ),
+  ],
+  "Matthew 1:23": [
+    c(
+      "Isaiah 7:14",
+      "fulfilled",
+      "Matthew reads Isaiah's sign of the virgin's son as fulfilled in Jesus, whose name Immanuel means God with us.",
+    ),
+  ],
+  "Matthew 3:17": [
+    c(
+      "Psalms 2:7",
+      "quotes",
+      "The Father's declaration at the Jordan echoes the royal psalm of the anointed Son.",
+    ),
+    c(
+      "Isaiah 42:1",
+      "quotes",
+      "The same voice names the chosen Servant on whom the Spirit rests, joining King and Servant in one Person.",
+    ),
+  ],
+  "Matthew 16:16": [
+    c(
+      "John 6:69",
+      "parallel",
+      "Peter makes the same confession in John: that Jesus is the Christ, the Son of the living God.",
+    ),
+    c(
+      "Matthew 14:33",
+      "parallel",
+      "Those in the boat had already worshiped Him as the Son of God, the confession Peter now puts into words.",
+    ),
+  ],
+  "Matthew 17:5": [
+    c(
+      "2 Peter 1:17",
+      "parallel",
+      "Peter records the same voice from the Majestic Glory that he heard on the holy mountain.",
+    ),
+    c(
+      "Deuteronomy 18:15",
+      "fulfilled",
+      "The command to listen to the beloved Son answers Moses' promise of a prophet like himself.",
+    ),
+  ],
+  "Matthew 21:5": [
+    c(
+      "Zechariah 9:9",
+      "fulfilled",
+      "The humble King on a donkey arrives exactly as Zechariah foretold, righteous and bringing salvation.",
+    ),
+  ],
+  "Matthew 26:28": [
+    c(
+      "Exodus 24:8",
+      "pattern",
+      "The blood of the covenant at Sinai, sprinkled on the people, is taken up and surpassed in the cup of the new covenant.",
+    ),
+    c(
+      "Jeremiah 31:31",
+      "fulfilled",
+      "The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.",
+    ),
+  ],
+  "Matthew 28:6": [
+    c(
+      "Psalms 16:10",
+      "fulfilled",
+      "The psalm that would not let the Holy One see decay is answered by the empty tomb.",
+    ),
+  ],
+  "Luke 19:10": [
+    c(
+      "Ezekiel 34:16",
+      "theme",
+      "God promised to seek the lost sheep Himself, and in the Son of Man He comes to do it.",
+    ),
+    c(
+      "Luke 15:4",
+      "parallel",
+      "The shepherd who leaves the ninety-nine to find the one is the Son of Man seeking the lost.",
+    ),
+  ],
+  "Luke 22:19": [
+    c(
+      "Exodus 12:14",
+      "pattern",
+      "The Passover was to be remembered through all generations, and the bread now says do this in memory of me.",
+    ),
+    c(
+      "1 Corinthians 11:24",
+      "parallel",
+      "Paul hands on the same words and the same command, making the Supper the church's ongoing remembrance.",
+    ),
+  ],
+  "John 13:14": [
+    c(
+      "Luke 22:27",
+      "parallel",
+      "Jesus names Himself the one who serves, and then acts it out with a towel and a basin.",
+    ),
+    c(
+      "Philippians 2:5",
+      "theme",
+      "The mind of Christ that counts others greater is the mind the foot washing commands.",
+    ),
+  ],
 };
 
 /** Connections leaving from a verse reference. */
