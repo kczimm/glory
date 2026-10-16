@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -71,6 +72,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <SpeechPlayer />
         <RegisterServiceWorker />
+        {/* Web Analytics. The only visitor measurement the site has: the CDN
+            request log carries no client identity, so page views and the
+            daily-reset visitor hash are how readers get counted at all.
+            Cookie-free and count-only. Vercel's bot filtering is User-Agent
+            based, and a client that runs no JavaScript never loads the script,
+            so the counts stay close to real readers. */}
+        <Analytics />
       </body>
     </html>
   );

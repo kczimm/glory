@@ -32,6 +32,11 @@ npm run verify:quotes          # verify every hand-written scripture quotation a
 node scripts/generate-icons.mjs  # regenerate brand icons (iOS home screen, PWA manifest, favicon)
 ```
 
+Adding a dependency needs npm 11 (`npx npm@11 i <pkg>`): npm 10.9.8 fails with
+`Cannot read properties of null (reading 'edgesOut')` in arborist's peer-set
+build, whatever the flag. It still *consumes* the committed lockfile fine, so
+`npm ci` and `npm install` on a clean tree are unaffected.
+
 ## Architecture
 
 Next.js 16 (App Router) + TypeScript + Tailwind CSS v4.
@@ -153,6 +158,20 @@ on the home page).
   `JourneyHomeCard` offers "pick up where you left off". Key the breadcrumb by
   `slug` so it remounts (and records) on each stop.
 - Kept browser-only: SSR snapshot is empty, so there's no hydration mismatch.
+
+### Measuring readers
+
+`<Analytics />` from `@vercel/analytics` is mounted in `src/app/layout.tsx`.
+It is the only visitor measurement the site has: the CDN request log that
+Vercel exposes carries no client identity (no IP, no session id), and the
+Firewall traffic view reports top lists rather than a visitor count. So page
+views and the daily-reset visitor hash (`Visitors` in the dashboard, which is
+what "daily readers" means) come from here.
+
+- Count-only and cookie-free; a client that runs no JavaScript never loads the
+  script, which is most of what the WAF challenges.
+- Hobby includes 50,000 events a month with a one-month reporting window,
+  pooled across every project on the team. Custom events are Pro-only.
 
 ### Search
 
