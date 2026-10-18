@@ -631,6 +631,30 @@ export const connections: Record<string, Connection[]> = {
       "The same message in the mouth of a believer: Jesus is Lord, and God raised Him from the dead.",
     ),
   ],
+  "1 Corinthians 15:5": [
+    c(
+      "Luke 24:34",
+      "parallel",
+      "Cephas, the first witness in Paul's list, is the Simon the eleven report seeing on the day itself.",
+    ),
+    c(
+      "John 1:42",
+      "theme",
+      "The Cephas Paul names is the Simon Jesus renamed, so the witness list reaches back to this first meeting with Jesus.",
+    ),
+  ],
+  "1 Corinthians 15:6": [
+    c(
+      "Acts 1:3",
+      "parallel",
+      "Luke sums up the same forty days as appearances by many proofs without counting them, which leaves room for the crowd Paul names.",
+    ),
+    c(
+      "John 20:30",
+      "theme",
+      "The five hundred are named in one book only, and John says plainly that many signs were never written down, so a Gospel can be true and still incomplete.",
+    ),
+  ],
   "Romans 3:24": [
     c(
       "Ephesians 2:8",

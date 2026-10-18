@@ -684,11 +684,109 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Corinthians 15:3-8", "1 Corinthians 15:20", "Luke 24:39", "Romans 8:11"],
-    raises: ["how-can-i-be-saved", "where-is-jesus-now", "between-the-cross-and-the-resurrection", "why-did-the-disciples-not-recognize-him-after-he-rose", "what-was-it-like-to-see-the-risen-jesus"],
+    raises: ["how-can-i-be-saved", "where-is-jesus-now", "between-the-cross-and-the-resurrection", "why-did-the-disciples-not-recognize-him-after-he-rose", "what-was-it-like-to-see-the-risen-jesus", "why-does-only-paul-mention-the-five-hundred-witnesses"],
     followsFrom: ["why-did-jesus-have-to-die"],
     related: ["is-jesus-really-god"],
     planned: [],
     order: 9,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Jesus Christ (the resurrection witnesses and the Gospels)
+  // ------------------------------------------------------------------
+  {
+    slug: "why-does-only-paul-mention-the-five-hundred-witnesses",
+    question: "Why does only Paul mention the five hundred witnesses?",
+    category: "jesus-christ",
+    summary:
+      "Paul is the only biblical writer who names the five hundred who saw the risen Jesus, and his list is also the earliest account of the resurrection we have. But the Gospels are not silent about the appearances: they report the women, Peter, the eleven, Thomas, and the disciples on the road, and Paul's roster overlaps theirs at Cephas and the twelve. Two entries in his list appear in no Gospel: the five hundred, and James. John also says plainly that he did not record everything. So the omission is not a contradiction; it is what four selective accounts look like beside one apostolic list. Paul named a crowd that could be questioned, and most of them were still alive when he wrote.",
+    passages: [
+      {
+        book: "1 Corinthians",
+        chapter: 15,
+        title: "The list, and the claim it serves",
+        lookFor: "Paul hands on what he received, names the witnesses one by one, and stakes the whole gospel on the event.",
+        focus: "1-19",
+      },
+      {
+        book: "Luke",
+        chapter: 24,
+        title: "The appearances Luke did record",
+        lookFor: "The women at the tomb, Peter, and the eleven, with the word that the Lord has appeared to Simon.",
+        focus: "1-12,33-43",
+      },
+      {
+        book: "John",
+        chapter: 20,
+        title: "Signs that were not written down",
+        lookFor: "Thomas sees and believes, and John says there were many other signs he did not record.",
+        focus: "24-31",
+      },
+      {
+        book: "John",
+        chapter: 21,
+        title: "Many other things",
+        lookFor: "The risen Jesus at the sea, and John's closing word on how much he left out.",
+        focus: "1-14,24-25",
+      },
+      {
+        book: "Acts",
+        chapter: 1,
+        title: "Forty days of proofs",
+        lookFor: "Luke summarizes the whole season of appearances in a single sentence and does not count them.",
+        focus: "1-11",
+      },
+    ],
+    points: [
+      {
+        heading: "The premise is true, and narrower than it sounds",
+        body:
+          "Only one verse in the Bible names the five hundred: Paul writes that the risen Christ 'appeared to over five hundred brothers at once, most of whom remain until now, but some have also fallen asleep.' No Gospel says it, and there is no reason to pretend otherwise. But the same verse belongs to the account Paul says he received rather than invented; he tells the Corinthians he passed on what had been handed to him. So the question is not whether the Gospels left this detail out, because they did. The question is whether leaving a detail out makes it false.",
+        verses: ["1 Corinthians 15:3-6"],
+      },
+      {
+        heading: "The Gospels do report appearances, and Paul's list overlaps theirs",
+        body:
+          "The four Gospels are not silent about the risen Jesus. Luke records the eleven saying, 'The Lord is risen indeed, and has appeared to Simon!' and Paul's first witness is Cephas, which is Simon Peter. Paul goes on to name the twelve and James, and John tells of the upper-room appearances, including the one a week later when Thomas was there. So the two accounts are not rivals. They run alongside each other and touch at more than one point, and what the Gospels lack is Paul's crowd of five hundred, not the appearances themselves.",
+        verses: ["Luke 24:33-36", "1 Corinthians 15:5-7", "John 20:19-20", "John 20:26-29", "John 1:42"],
+      },
+      {
+        heading: "The Gospel writers said they were not exhaustive",
+        body:
+          "An omission only counts against a writer who claimed to tell everything, and John says the opposite twice. He closes his account of the signs by saying, 'Jesus did many other signs in the presence of his disciples, which are not written in this book,' and he gives his reason: what he did write was written 'that you may believe.' His last line is even plainer, that there were 'also many other things which Jesus did,' and that if all of them were written down the world itself could not hold the books. Luke, for his part, says he traced the course of all things accurately and wrote in order, which is a claim to care, not a claim to completeness.",
+        verses: ["John 20:30-31", "John 21:25", "Luke 1:1-4"],
+      },
+      {
+        heading: "Luke told of forty days of appearances without counting them",
+        body:
+          "Luke wrote both a Gospel and the book of Acts, and he begins Acts by summarizing the whole season: Jesus 'showed himself alive after he suffered, by many proofs, appearing to them over a period of forty days.' That is a summary with room in it. He tells us there were many proofs and does not list them, and later he speaks of the apostles as witnesses of the resurrection rather than as a fixed register of everyone who saw it. A writer who compresses forty days of appearances into one sentence has not contradicted a list of five hundred. He has simply declined to repeat it.",
+        verses: ["Acts 1:1", "Acts 1:3", "Acts 1:22"],
+      },
+      {
+        heading: "Paul named witnesses who could have denied him",
+        body:
+          "If Paul wanted an uncheckable miracle, he had a cheaper way to get one: name no one. Instead he named a crowd and added that most of them were still alive and could be asked. Then he put himself last in the list, 'as to the child born at the wrong time,' and called himself the least of the apostles because he had once persecuted the church. He wrote this to Corinth, a church that was itself saying there is no resurrection of the dead, and the same letter answers them by insisting that the whole message stands or falls on the fact. This is not how a legend is written. It is how a man writes who expects to be checked.",
+        verses: ["1 Corinthians 15:6-9", "1 Corinthians 15:12-14", "Galatians 1:13"],
+      },
+      {
+        heading: "Paul staked everything on a public event",
+        body:
+          "Paul does not treat the resurrection as a private insight he can soften. He says that if Christ has not been raised, the preaching is empty and the faith is empty too, that believers are still in their sins, and that they are of all people most to be pitied. He puts his whole message on the table, tied to a public event with named witnesses in living memory. So the question the five hundred should raise is not why the Gospels did not repeat the number. It is why Paul would say such a thing at all if it were not true, and why so many who could have contradicted him did not.",
+        verses: ["1 Corinthians 15:14", "1 Corinthians 15:17-19", "1 Corinthians 15:6"],
+      },
+    ],
+    keyVerses: ["1 Corinthians 15:3-6", "Luke 24:34", "Acts 1:3", "John 20:30-31", "1 Corinthians 15:14"],
+    raises: ["how-can-i-understand-hard-passages-in-the-bible", "can-i-trust-the-bible"],
+    followsFrom: ["did-jesus-rise-from-the-dead", "why-did-jesus-appear-only-to-certain-people-after-his-resurrection"],
+    related: [
+      "did-jesus-rise-from-the-dead",
+      "how-did-judas-die",
+      "why-did-jesus-appear-only-to-certain-people-after-his-resurrection",
+      "how-can-i-understand-hard-passages-in-the-bible",
+      "can-i-trust-the-bible",
+    ],
+    planned: ["How much can an argument from silence prove?"],
+    order: 133,
   },
 
   {
@@ -10551,7 +10649,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Acts 10:40-41", "John 20:29", "1 Peter 1:8-9", "1 Corinthians 15:5-8", "Acts 1:8"],
-    raises: ["where-is-jesus-now", "what-is-faith", "did-jesus-rise-from-the-dead"],
+    raises: ["where-is-jesus-now", "what-is-faith", "did-jesus-rise-from-the-dead", "why-does-only-paul-mention-the-five-hundred-witnesses"],
     followsFrom: ["why-did-the-disciples-not-recognize-him-after-he-rose", "did-jesus-rise-from-the-dead"],
     related: ["did-jesus-rise-from-the-dead", "what-was-it-like-to-see-the-risen-jesus", "what-is-faith", "is-the-whole-bible-about-jesus"],
     planned: [],
