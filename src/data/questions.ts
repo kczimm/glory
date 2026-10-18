@@ -22923,6 +22923,7 @@ export const questions: Question[] = [
     keyVerses: ["Matthew 26:64", "John 19:30", "Isaiah 53:5-6", "2 Corinthians 5:21"],
     raises: [
       "the-risen-jesus",
+      "how-did-judas-die",
       "who-is-the-suffering-servant-in-isaiah-53",
       "what-is-the-gospel",
       "why-did-jesus-have-to-die",
@@ -22936,6 +22937,107 @@ export const questions: Question[] = [
     ],
     planned: [],
     order: 9,
+  },
+
+  {
+    slug: "how-did-judas-die",
+    question: "Do the Bible's accounts of Judas' death disagree?",
+    category: "gospels",
+    summary:
+      "Two accounts of how Judas died stand side by side in the New Testament, and only one of them is in a Gospel. All four Gospels tell of the betrayal and agree on it, but only Matthew narrates the end: Judas was seized with remorse, returned the thirty pieces of silver, and hanged himself. The second account is Luke's, in Acts: Judas obtained a field with the blood money and fell headlong, his body bursting open. The two differ in vantage, not in verdict: both give the field the same name, both tie the death to the silver, and both read it as the fulfillment of Scripture. Read as two witnesses to one event, the accounts enrich each other rather than compete.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 27,
+        title: "The betrayer's end",
+        lookFor: "Judas' remorse, the returned silver, the hanging, and the field bought with blood money.",
+        focus: "1-10",
+      },
+      {
+        book: "Luke",
+        chapter: 22,
+        title: "Satan enters the betrayer",
+        lookFor: "Luke's account of the bargain, and the darkness standing behind it.",
+        focus: "3-6",
+      },
+      {
+        book: "John",
+        chapter: 13,
+        title: "The betrayer at the table",
+        lookFor: "Jesus identifies Judas, gives him the morsel, and sends him out into the night.",
+        focus: "21-30",
+      },
+      {
+        book: "Acts",
+        chapter: 1,
+        title: "The other account",
+        lookFor: "Peter's speech, the field of blood, the fall, the psalms applied, and Matthias chosen.",
+        focus: "15-26",
+      },
+      {
+        book: "Zechariah",
+        chapter: 11,
+        title: "The shepherd and his price",
+        lookFor: "The rejected shepherd, the thirty pieces of silver, and the silver thrown to the potter in Yahweh's house.",
+        focus: "4-14",
+      },
+    ],
+    points: [
+      {
+        heading: "What each Gospel records",
+        body:
+          "Every Gospel tells how Judas came to hand Jesus over, and they agree. Matthew names the price, thirty pieces of silver; Mark says they promised him money, and Luke that they agreed on a price; John says the devil had already put it into his heart. Four writers, four angles, one betrayal. Only Matthew goes on to describe the death: Judas “felt remorse,” returned the silver, and “went away and hanged himself.” The second account is not another Gospel but Luke's other book, Acts, where Judas “obtained a field with the reward for his wickedness, and falling headlong, his body burst open.” There is no rival Gospel ending to contradict, only one death told twice.",
+        verses: ["Matthew 26:14-16", "Mark 14:10-11", "Luke 22:3-6", "John 13:2", "Matthew 27:3-5", "Acts 1:18"],
+      },
+      {
+        heading: "Whose field was it?",
+        body:
+          "The first apparent clash is ownership. Matthew says the chief priests “bought the potter's field with them,” using the returned silver, while Luke says Judas himself “obtained a field with the reward for his wickedness.” Both are true, because the money was his. The priests would not put blood money into the treasury, since “it is the price of blood,” so they spent it on a burying ground for strangers. Luke's line is a compressed aside about how the field got its name, not a second timeline; the purchase was theirs, made with his money, and the field carried the name of the deed and his guilt. Both accounts agree on that name: “The Field of Blood,” Akeldama in the local tongue, whether Matthew traces it to the price paid or Luke to the death itself.",
+        verses: ["Matthew 27:6-8", "Acts 1:18-19"],
+      },
+      {
+        heading: "Hanged, and fallen",
+        body:
+          "The second apparent clash is the manner of death. Matthew ends with the hanging; Luke describes a fall that burst the body open. The most natural reading is sequence, not rivalry: he hanged himself, and the fall that followed is what Luke reports. Luke tells what the city knew, that the corpse came down hard and the field earned its name from the blood. Neither writer lingers on the gore; Luke states it in a single line and moves on. Scripture has been here before: David's counselor Ahithophel, who betrayed him, also “set his house in order, and hanged himself.” Both accounts agree on the point: the betrayer died under the weight of what he had done.",
+        verses: ["Matthew 27:5", "Acts 1:18", "2 Samuel 17:23"],
+      },
+      {
+        heading: "The tree belongs to Jesus",
+        body:
+          "It is sometimes said that Judas died on a tree. The Bible never says that. Hanging is how Matthew describes his end, and the tree texts are never applied to Judas; they are applied to Jesus. The law said, “he who is hanged is accursed of God,” and the apostles take that up for the cross: Peter says the people killed Jesus “hanging him on a tree”; Paul says Christ became “a curse for us,” since it is written, “Cursed is everyone who hangs on a tree.” Judas died by his own hand, and the curse his death displays was carried by Jesus.",
+        verses: ["Deuteronomy 21:22-23", "Acts 5:30", "Galatians 3:13", "1 Peter 2:24"],
+      },
+      {
+        heading: "Scripture had said so",
+        body:
+          "Peter does not treat the death as an accident. He tells the disciples, about a hundred and twenty of them, that “it was necessary that this Scripture should be fulfilled,” and reaches for two psalms of David, bending them to the one man: where the psalm had said “Let their habitation be desolate. Let no one dwell in their tents,” Peter says “Let his habitation be made desolate. Let no one dwell therein,” and then “Let another take his office.” Those prayers describe the betrayer and then the empty seat, which is why the church chose Matthias. Zechariah had drawn the same portrait: a shepherd Israel priced at “thirty pieces of silver,” wages the prophet was told to “throw ... to the potter” in Yahweh's house. Matthew sees the priests spend that silver on a potter's field and says it fulfilled “that which was spoken through Jeremiah the prophet.” The silver and the potter are Zechariah's; the potter's house and the burial ground are Jeremiah's, who spoke of graves until there was no place left to bury. The prophets are read as one voice.",
+        verses: ["Acts 1:16", "Acts 1:20", "Psalms 69:25", "Psalms 109:8", "Zechariah 11:12-13", "Matthew 27:9-10"],
+      },
+      {
+        heading: "Remorse is not repentance",
+        body:
+          "Matthew uses a specific word for what Judas felt: “felt remorse.” He even confessed, “I have sinned in that I betrayed innocent blood,” and the priests answered with contempt, “What is that to us? You see to it.” Yet he did not turn back to the Lord he had sold; he turned to the priests, and then to a rope. Peter, who failed that same night, “went out and wept bitterly,” and the risen Jesus restored him. The difference was not the size of the sin but its direction. Paul draws the line: “godly sorrow works repentance to salvation,” but “the sorrow of the world works death.” Scripture leaves Judas' final state to God; what it shows plainly is a grief that ran from Christ rather than to Him. Jesus had warned, “woe to that man through whom the Son of Man is betrayed,” yet He had washed the feet that would run to the priests. Judas' end is told as a warning, not a sentence passed on anyone reading it, and the Lord who kept reaching for Judas has not stopped reaching for you.",
+        verses: ["Matthew 27:3-5", "Matthew 26:24", "Matthew 26:75", "John 21:15-17", "2 Corinthians 7:10"],
+      },
+    ],
+    keyVerses: ["Matthew 27:3-5", "Acts 1:18-19", "Zechariah 11:12-13", "2 Corinthians 7:10", "Galatians 3:13"],
+    raises: [
+      "how-can-i-understand-hard-passages-in-the-bible",
+      "how-do-i-know-my-repentance-is-genuine",
+      "can-gods-grace-really-cover-my-worst-sins",
+      "when-the-weight-wont-lift",
+      "does-god-control-evil",
+    ],
+    followsFrom: ["why-was-jesus-put-to-death"],
+    related: [
+      "why-was-jesus-put-to-death",
+      "can-i-trust-the-bible",
+      "how-can-i-understand-hard-passages-in-the-bible",
+      "what-is-repentance",
+      "faith-or-works",
+    ],
+    planned: ["Why did Jesus choose Judas, knowing what he would do?"],
+    order: 10,
   },
 
   {
@@ -23019,6 +23121,6 @@ export const questions: Question[] = [
       "what-is-the-resurrection",
     ],
     planned: [],
-    order: 10,
+    order: 11,
   },
 ];

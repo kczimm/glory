@@ -6138,6 +6138,178 @@ export const connections: Record<string, Connection[]> = {
       "The mind of Christ that counts others greater is the mind the foot washing commands.",
     ),
   ],
+  // how-did-judas-die: the two accounts, the blood money, and the betrayer in prophecy
+  "Matthew 27:3": [
+    c(
+      "Matthew 26:15",
+      "theme",
+      "The silver Judas now throws down is the very price he had agreed to take for Jesus.",
+    ),
+    c(
+      "2 Corinthians 7:10",
+      "contrast",
+      "Paul distinguishes a sorrow that leads to repentance from the sorrow of the world that produces death, and Judas shows the second.",
+    ),
+  ],
+  "Matthew 27:5": [
+    c(
+      "Acts 1:18",
+      "parallel",
+      "Luke tells the same death from another angle: after the hanging the body fell and burst open.",
+    ),
+    c(
+      "2 Samuel 17:23",
+      "pattern",
+      "Ahithophel, the counselor who betrayed David, also hanged himself when his counsel failed.",
+    ),
+    c(
+      "Deuteronomy 21:23",
+      "contrast",
+      "The law calls the one hanged on a tree accursed, and the apostles apply that text to the cross of Jesus, never to Judas.",
+    ),
+    c(
+      "Galatians 3:13",
+      "contrast",
+      "Christ bore the curse a hanged man's death displays, the curse Judas' death could not remove.",
+    ),
+    c(
+      "Acts 5:30",
+      "contrast",
+      "The tree in the apostles' preaching is where Jesus was hanged, not where Judas died.",
+    ),
+  ],
+  "Matthew 27:7": [
+    c(
+      "Zechariah 11:13",
+      "fulfilled",
+      "The blood money was spent on a potter's field, echoing the silver the prophet threw to the potter in Yahweh's house.",
+    ),
+    c(
+      "Jeremiah 19:11",
+      "theme",
+      "The potter's house and the burial ground are Jeremiah's: he spoke of graves in the valley until there was no place left to bury.",
+    ),
+    c(
+      "Jeremiah 32:6-9",
+      "contrast",
+      "Jeremiah bought a field as a sign of hope and return, the opposite of the field bought with blood money.",
+    ),
+  ],
+  "Matthew 27:8": [
+    c(
+      "Acts 1:19",
+      "parallel",
+      "Both writers report the same nickname rising in Jerusalem, the field of blood, Akeldama in the local tongue.",
+    ),
+  ],
+  "Matthew 27:9": [
+    c(
+      "Zechariah 11:12-13",
+      "fulfilled",
+      "Matthew quotes the words about thirty pieces of silver and the potter while naming Jeremiah, the prophet of the potter's house.",
+    ),
+  ],
+  "Acts 1:16": [
+    c(
+      "Psalms 41:9",
+      "theme",
+      "David's psalm of the trusted friend who ate bread and lifted his heel describes the guide who led them to Jesus.",
+    ),
+    c(
+      "John 13:18",
+      "parallel",
+      "Jesus applied that same psalm to Judas at the table, before the betrayal.",
+    ),
+  ],
+  "Acts 1:18": [
+    c(
+      "Matthew 27:5",
+      "parallel",
+      "Matthew records the hanging and Luke records the fall and the bursting, two parts of one death.",
+    ),
+    c(
+      "Matthew 27:7",
+      "parallel",
+      "The field Luke says Judas obtained was the one the priests bought with his returned silver.",
+    ),
+  ],
+  "Acts 1:20": [
+    c(
+      "Psalms 69:25",
+      "quotes",
+      "Peter quotes David's prayer that the dwelling of the betrayer be left desolate.",
+    ),
+    c(
+      "Psalms 109:8",
+      "quotes",
+      "The psalm that asks for the betrayer's days to be few and for another to take his office.",
+    ),
+  ],
+  "John 13:27": [
+    c(
+      "Luke 22:3",
+      "parallel",
+      "Luke also says that Satan entered Judas before he went to the chief priests.",
+    ),
+  ],
+  "Zechariah 11:12": [
+    c(
+      "Matthew 26:15",
+      "fulfilled",
+      "The shepherd whose wage was thirty pieces of silver foreshadows the exact price paid for Jesus.",
+    ),
+  ],
+  "Matthew 26:15": [
+    c(
+      "Mark 14:11",
+      "parallel",
+      "Mark also records the chief priests promising Judas money for the betrayal.",
+    ),
+    c(
+      "Luke 22:5",
+      "parallel",
+      "Luke says they were glad and agreed to give him money.",
+    ),
+    c(
+      "Exodus 21:32",
+      "theme",
+      "Thirty shekels was the price of a slave, the sum the leaders set on the Son of God.",
+    ),
+    c(
+      "Zechariah 11:12",
+      "fulfilled",
+      "The shepherd's wage of thirty pieces of silver becomes the exact price of the betrayal.",
+    ),
+  ],
+  "Mark 14:10": [
+    c(
+      "Matthew 26:14",
+      "parallel",
+      "Matthew records the same approach to the chief priests.",
+    ),
+    c(
+      "Luke 22:3",
+      "parallel",
+      "Luke adds that Satan entered Judas before he went.",
+    ),
+    c(
+      "John 13:2",
+      "parallel",
+      "John says the devil had already put the betrayal into his heart.",
+    ),
+  ],
+  "Luke 22:3": [
+    c(
+      "John 13:27",
+      "parallel",
+      "John also says Satan entered Judas, at the table, before he went out into the night.",
+    ),
+    c(
+      "Matthew 26:14",
+      "parallel",
+      "Matthew records the same turn to the chief priests.",
+    ),
+  ],
 };
 
 /** Connections leaving from a verse reference. */
