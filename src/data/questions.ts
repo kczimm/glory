@@ -23042,7 +23042,7 @@ export const questions: Question[] = [
     question: "Do the Bible's accounts of Judas' death disagree?",
     category: "gospels",
     summary:
-      "Two accounts of how Judas died stand side by side in the New Testament, and only one of them is in a Gospel. All four Gospels tell of the betrayal and agree on it, but only Matthew narrates the end: Judas was seized with remorse, returned the thirty pieces of silver, and hanged himself. The second account is Luke's, in Acts: Judas obtained a field with the blood money and fell headlong, his body bursting open. The two differ in vantage, not in verdict: both give the field the same name, both tie the death to the silver, and both read it as the fulfillment of Scripture. Read as two witnesses to one event, the accounts enrich each other rather than compete.",
+      "Only one Gospel tells how Judas died. Matthew says he returned the thirty pieces of silver in remorse and hanged himself; the second account is Luke's, in Acts, where he fell headlong in the field bought with that money and his body burst open. All four Gospels describe the betrayal and agree on it, and the two death accounts complement each other: the same field, the same silver, the same fulfillment of Scripture. The tree language belongs to Jesus, not Judas, and Judas' remorse stands beside Peter's repentance.",
     passages: [
       {
         book: "Matthew",
@@ -23050,13 +23050,6 @@ export const questions: Question[] = [
         title: "The betrayer's end",
         lookFor: "Judas' remorse, the returned silver, the hanging, and the field bought with blood money.",
         focus: "1-10",
-      },
-      {
-        book: "Luke",
-        chapter: 22,
-        title: "Satan enters the betrayer",
-        lookFor: "Luke's account of the bargain, and the darkness standing behind it.",
-        focus: "3-6",
       },
       {
         book: "John",
@@ -23082,40 +23075,34 @@ export const questions: Question[] = [
     ],
     points: [
       {
-        heading: "What each Gospel records",
+        heading: "Only one Gospel",
         body:
-          "Every Gospel tells how Judas came to hand Jesus over, and they agree. Matthew names the price, thirty pieces of silver; Mark says they promised him money, and Luke that they agreed on a price; John says the devil had already put it into his heart. Four writers, four angles, one betrayal. Only Matthew goes on to describe the death: Judas “felt remorse,” returned the silver, and “went away and hanged himself.” The second account is not another Gospel but Luke's other book, Acts, where Judas “obtained a field with the reward for his wickedness, and falling headlong, his body burst open.” There is no rival Gospel ending to contradict, only one death told twice.",
-        verses: ["Matthew 26:14-16", "Mark 14:10-11", "Luke 22:3-6", "John 13:2", "Matthew 27:3-5", "Acts 1:18"],
+          "All four Gospels tell how Judas came to hand Jesus over, and they agree: he was one of the twelve, he went to the chief priests, and money was agreed. Matthew names the price, thirty pieces of silver; Mark says they promised him money; Luke that they agreed on a price; John that the devil had already put it into his heart. But only Matthew goes on to describe the death, and the second account is not another Gospel but Acts, Luke's other book. There is no rival Gospel ending, only one death told twice.",
+        verses: ["Matthew 26:14-16", "Mark 14:10-11", "Luke 22:3-6", "John 13:2"],
       },
       {
-        heading: "Whose field was it?",
+        heading: "The field and the fall",
         body:
-          "The first apparent clash is ownership. Matthew says the chief priests “bought the potter's field with them,” using the returned silver, while Luke says Judas himself “obtained a field with the reward for his wickedness.” Both are true, because the money was his. The priests would not put blood money into the treasury, since “it is the price of blood,” so they spent it on a burying ground for strangers. Luke's line is a compressed aside about how the field got its name, not a second timeline; the purchase was theirs, made with his money, and the field carried the name of the deed and his guilt. Both accounts agree on that name: “The Field of Blood,” Akeldama in the local tongue, whether Matthew traces it to the price paid or Luke to the death itself.",
-        verses: ["Matthew 27:6-8", "Acts 1:18-19"],
-      },
-      {
-        heading: "Hanged, and fallen",
-        body:
-          "The second apparent clash is the manner of death. Matthew ends with the hanging; Luke describes a fall that burst the body open. The most natural reading is sequence, not rivalry: he hanged himself, and the fall that followed is what Luke reports. Luke tells what the city knew, that the corpse came down hard and the field earned its name from the blood. Neither writer lingers on the gore; Luke states it in a single line and moves on. Scripture has been here before: David's counselor Ahithophel, who betrayed him, also “set his house in order, and hanged himself.” Both accounts agree on the point: the betrayer died under the weight of what he had done.",
-        verses: ["Matthew 27:5", "Acts 1:18", "2 Samuel 17:23"],
+          "Matthew says Judas returned the silver and “went away and hanged himself.” Luke says he “obtained a field with the reward for his wickedness, and falling headlong, his body burst open.” The two fit as sequence, not rivalry: he hanged himself, and the fall that followed is what Luke reports. The field is one field, described from two sides. Matthew says the priests “bought the potter's field with them,” using the returned silver; Luke says Judas obtained it. Both are true, because the money was his. Both give it the same name: “The Field of Blood,” Akeldama in the local tongue.",
+        verses: ["Matthew 27:3-8", "Acts 1:18-19"],
       },
       {
         heading: "The tree belongs to Jesus",
         body:
-          "It is sometimes said that Judas died on a tree. The Bible never says that. Hanging is how Matthew describes his end, and the tree texts are never applied to Judas; they are applied to Jesus. The law said, “he who is hanged is accursed of God,” and the apostles take that up for the cross: Peter says the people killed Jesus “hanging him on a tree”; Paul says Christ became “a curse for us,” since it is written, “Cursed is everyone who hangs on a tree.” Judas died by his own hand, and the curse his death displays was carried by Jesus.",
-        verses: ["Deuteronomy 21:22-23", "Acts 5:30", "Galatians 3:13", "1 Peter 2:24"],
+          "It is sometimes said that Judas died on a tree. The Bible never says that. Hanging is how Matthew describes his end, and the tree texts are never applied to Judas; they are applied to Jesus. The law said, “he who is hanged is accursed of God,” and the apostles take that up for the cross: Peter says the people killed Jesus “hanging him on a tree”; Paul says Christ became “a curse for us,” since it is written, “Cursed is everyone who hangs on a tree.”",
+        verses: ["Deuteronomy 21:22-23", "Acts 5:30", "Galatians 3:13"],
       },
       {
         heading: "Scripture had said so",
         body:
-          "Peter does not treat the death as an accident. He tells the disciples, about a hundred and twenty of them, that “it was necessary that this Scripture should be fulfilled,” and reaches for two psalms of David, bending them to the one man: where the psalm had said “Let their habitation be desolate. Let no one dwell in their tents,” Peter says “Let his habitation be made desolate. Let no one dwell therein,” and then “Let another take his office.” Those prayers describe the betrayer and then the empty seat, which is why the church chose Matthias. Zechariah had drawn the same portrait: a shepherd Israel priced at “thirty pieces of silver,” wages the prophet was told to “throw ... to the potter” in Yahweh's house. Matthew sees the priests spend that silver on a potter's field and says it fulfilled “that which was spoken through Jeremiah the prophet.” The silver and the potter are Zechariah's; the potter's house and the burial ground are Jeremiah's, who spoke of graves until there was no place left to bury. The prophets are read as one voice.",
-        verses: ["Acts 1:16", "Acts 1:20", "Psalms 69:25", "Psalms 109:8", "Zechariah 11:12-13", "Matthew 27:9-10"],
+          "Peter reaches for two psalms of David, applying them to the one man: “Let their habitation be desolate. Let no one dwell in their tents,” and “Let another take his office.” That is why the church chose Matthias. Zechariah had drawn the same portrait: a shepherd Israel priced at “thirty pieces of silver,” wages thrown “to the potter” in Yahweh's house. Matthew sees the priests spend that silver on a potter's field and says it fulfilled “that which was spoken through Jeremiah the prophet”; the silver is Zechariah's, the potter's house and burial ground are Jeremiah's.",
+        verses: ["Acts 1:20", "Psalms 69:25", "Psalms 109:8", "Zechariah 11:12-13", "Matthew 27:9-10"],
       },
       {
         heading: "Remorse is not repentance",
         body:
-          "Matthew uses a specific word for what Judas felt: “felt remorse.” He even confessed, “I have sinned in that I betrayed innocent blood,” and the priests answered with contempt, “What is that to us? You see to it.” Yet he did not turn back to the Lord he had sold; he turned to the priests, and then to a rope. Peter, who failed that same night, “went out and wept bitterly,” and the risen Jesus restored him. The difference was not the size of the sin but its direction. Paul draws the line: “godly sorrow works repentance to salvation,” but “the sorrow of the world works death.” Scripture leaves Judas' final state to God; what it shows plainly is a grief that ran from Christ rather than to Him. Jesus had warned, “woe to that man through whom the Son of Man is betrayed,” yet He had washed the feet that would run to the priests. Judas' end is told as a warning, not a sentence passed on anyone reading it, and the Lord who kept reaching for Judas has not stopped reaching for you.",
-        verses: ["Matthew 27:3-5", "Matthew 26:24", "Matthew 26:75", "John 21:15-17", "2 Corinthians 7:10"],
+          "Matthew uses a specific word for what Judas felt: “felt remorse.” He even confessed, “I have sinned in that I betrayed innocent blood,” and the priests answered, “What is that to us? You see to it.” Yet he did not turn back to the Lord he had sold; he turned to the priests, and then to a rope. Peter, who failed that same night, “went out and wept bitterly,” and the risen Jesus restored him. Paul draws the line: “godly sorrow works repentance to salvation,” but “the sorrow of the world works death.” Judas is that second sorrow, a grief that ran from Christ rather than to Him. His end is a warning, not a sentence on anyone reading it.",
+        verses: ["Matthew 27:3-5", "Matthew 26:75", "John 21:15-17", "2 Corinthians 7:10"],
       },
     ],
     keyVerses: ["Matthew 27:3-5", "Acts 1:18-19", "Zechariah 11:12-13", "2 Corinthians 7:10", "Galatians 3:13"],
@@ -23124,7 +23111,6 @@ export const questions: Question[] = [
       "how-do-i-know-my-repentance-is-genuine",
       "can-gods-grace-really-cover-my-worst-sins",
       "when-the-weight-wont-lift",
-      "does-god-control-evil",
     ],
     followsFrom: ["why-was-jesus-put-to-death"],
     related: [
