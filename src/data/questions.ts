@@ -1824,7 +1824,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Ephesians 2:8-9", "Romans 3:24", "2 Corinthians 12:9", "Titus 2:11"],
-    raises: ["what-is-justification", "does-grace-mean-live-how-i-want", "what-is-the-difference-between-grace-and-mercy", "how-does-god-change-me"],
+    raises: ["what-is-justification", "does-grace-mean-live-how-i-want", "what-is-the-difference-between-grace-and-mercy", "how-does-god-change-me", "is-it-too-late-to-come-to-jesus"],
     followsFrom: ["what-is-the-gospel"],
     related: ["what-is-the-gospel", "how-can-i-be-saved"],
     planned: [],
@@ -7423,7 +7423,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["1 Timothy 1:15", "Romans 5:20", "Hebrews 7:25", "1 John 1:9", "Psalm 103:12"],
-    raises: ["spirits-witness-or-my-own-feelings", "what-is-justification", "does-god-use-our-failures", "when-i-feel-far-from-god"],
+    raises: ["spirits-witness-or-my-own-feelings", "what-is-justification", "does-god-use-our-failures", "when-i-feel-far-from-god", "is-it-too-late-to-come-to-jesus"],
     followsFrom: ["what-happens-when-i-sin", "spirits-witness-or-my-own-feelings"],
     related: ["what-happens-when-i-sin", "can-i-lose-my-salvation", "what-is-justification", "does-god-use-our-failures"],
     planned: [],
@@ -8222,6 +8222,98 @@ export const questions: Question[] = [
     related: ["what-is-repentance", "what-is-the-gospel", "can-gods-grace-really-cover-my-worst-sins", "what-happens-when-i-sin"],
     planned: ["Can someone repent and still struggle with the same sin?"],
     order: 35,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: The Gospel (continued: coming late)
+  // ------------------------------------------------------------------
+  {
+    slug: "is-it-too-late-to-come-to-jesus",
+    question: "Is it too late for me to come to Jesus?",
+    category: "gospel",
+    summary:
+      "No. Scripture sets no age limit on mercy, and some of its clearest promises are made to people who arrived late: laborers hired an hour before quitting time, a criminal dying beside Jesus, a king who spent his life on idols, an apostle who called himself a child born at the wrong time. Grace is not a wage paid by the hour, so a childhood you did not have cannot disqualify you. What the years cost you, God promises to restore, and He turns away no one who comes.",
+    passages: [
+      {
+        book: "Matthew",
+        chapter: 20,
+        title: "The workers hired at the eleventh hour",
+        lookFor: "Watch who is paid first and what they receive: the wage is set by the owner's generosity, not by hours worked.",
+        focus: "1-16",
+      },
+      {
+        book: "Luke",
+        chapter: 23,
+        title: "Today in paradise",
+        lookFor: "A man with no time left to make up for anything asks only to be remembered, and receives far more than he asked.",
+        focus: "39-43",
+      },
+      {
+        book: "2 Chronicles",
+        chapter: 33,
+        title: "Chains in Babylon",
+        lookFor: "Manasseh outdoes the nations God drove out of the land, and leads Judah with him; then watch what happens to him in chains.",
+        focus: "1-13",
+      },
+      {
+        book: "1 Timothy",
+        chapter: 1,
+        title: "Mercy shown as an example",
+        lookFor: "Paul says his own violent past was forgiven on purpose, so that people who feel exactly as he did would have a case to look at.",
+        focus: "12-17",
+      },
+      {
+        book: "Joel",
+        chapter: 2,
+        title: "The years the locusts ate",
+        lookFor: "God promises to give back the years the swarm consumed, which is more than forgiving the loss.",
+        focus: "18-27",
+      },
+    ],
+    points: [
+      {
+        heading: "The wage is not paid by the hour",
+        body:
+          "Jesus told a story about a landowner who hired men at dawn, again at nine, at noon, at three, and finally at the eleventh hour, one hour before quitting time. When payday came, the last men were paid first, and they received a full day's wage. The men who had worked since sunrise protested: “These last have spent one hour, and you have made them equal to us, who have borne the burden of the day and the scorching heat!” The owner answered, “Isn't it lawful for me to do what I want to with what I own?” A wage is owed; a gift is not. If grace were paid by the hour, your childhood would decide everything. Because it is a gift, it decides nothing.",
+        verses: ["Matthew 20:1-6", "Matthew 20:8-10", "Matthew 20:12", "Matthew 20:15-16"],
+      },
+      {
+        heading: "One hour was enough for Paradise",
+        body:
+          "Two criminals were crucified beside Jesus. One mocked Him. The other had nothing to offer and no time left: “we receive the due reward for our deeds.” He asked only to be remembered later, when Jesus came into His kingdom. Jesus gave him that very day: “Assuredly I tell you, today you will be with me in Paradise.” No baptism is recorded, no teaching, no believing home in childhood, no years of service. One hour of faith at the end of a wasted life, and the whole inheritance. However late you think you are, you cannot be later than that man was.",
+        verses: ["Luke 23:39-41", "Luke 23:42-43"],
+      },
+      {
+        heading: "The worst man in Judah was heard in chains",
+        body:
+          "Manasseh became king at twelve and reigned fifty-five years, and the record says he copied the abominations of the nations God had driven out before Israel and led Judah deeper into evil than they had gone. He rebuilt the high places, raised altars to the army of the sky inside the temple courts, and “made his children to pass through the fire.” God spoke to him, and “they gave no heed.” Then Assyria took him in chains, and there, in chains in Babylon at the end of a wasted life, he “humbled himself greatly before the God of his fathers.” Scripture says “he was entreated by him, and heard his supplication,” and he came home knowing that Yahweh was God. If the worst king in Judah's line was heard in chains, then no age and no record puts you past the door.",
+        verses: ["2 Chronicles 33:1-3", "2 Chronicles 33:5-6", "2 Chronicles 33:9-13"],
+      },
+      {
+        heading: "Paul called himself the child born at the wrong time",
+        body:
+          "Paul was not looking for Christ when Christ found him. He hunted Christians, and said so plainly: “beyond measure I persecuted the assembly of God, and ravaged it.” When the risen Christ stopped him on the Damascus road, Paul later described himself with a strange phrase, “as to the child born at the wrong time,” a man whose arrival seemed mistimed. He knew exactly what he had done, and he did not let it have the last word. He said the mercy was the point: he was shown mercy as “an example of those who were going to believe in him for eternal life.” His case is in the Bible on purpose, so that someone who feels the way you feel can read it and stop being afraid.",
+        verses: ["Galatians 1:13", "Acts 9:1-6", "1 Corinthians 15:8-10", "1 Timothy 1:15-16"],
+      },
+      {
+        heading: "God restores the years, not only the guilt",
+        body:
+          "The fear under the question is not only that God might refuse you. It is that the years are gone: the childhood formation, the habits, the decades. Joel spoke to a people whose fields had been stripped by locusts year after year, and God's answer went past removing the plague: “I will restore to you the years that the swarming locust has eaten, the great locust, the grasshopper, and the caterpillar, my great army, which I sent among you.” He does not offer to make up for lost time by demanding more effort from you. He offers to give the years back, and the promise ends with a people of whom He says, “my people will never again be disappointed.” Joseph learned the same thing in Egypt: “you meant evil against me, but God meant it for good.” Paul turns it into a promise for the rest of us: “all things work together for good for those who love God.”",
+        verses: ["Joel 2:25-27", "Genesis 50:20", "Romans 8:28"],
+      },
+      {
+        heading: "The door is open now, and no one is thrown out",
+        body:
+          "Scripture does not answer the fear of lateness with a timeline. It answers it with a person. Jesus said, “All those whom the Father gives me will come to me. He who comes to me I will in no way throw out,” and He attached no age requirement to the sentence. Notice what that means for someone who is already praying, reading, and sitting in church: the coming itself is what the Father gives, so your arriving was not an accident and not a late improvisation. It was His work, on His schedule. Paul wrote that “now is the acceptable time” and “now is the day of salvation,” which turns the question from how many years you have left into what you do with today. Jesus gave the invitation in His own words: “Come to me, all you who labor and are heavily burdened, and I will give you rest.” Isaiah's invitation has the same shape: “Seek Yahweh while he may be found,” and the next verse says what happens to the one who does, “he will abundantly pardon.” The only way to arrive too late is to decide not to come.",
+        verses: ["John 6:37", "2 Corinthians 6:2", "Matthew 11:28-30", "Isaiah 55:6-7"],
+      },
+    ],
+    keyVerses: ["John 6:37", "Matthew 20:16", "Luke 23:43", "1 Corinthians 15:8", "1 Timothy 1:15", "Joel 2:25"],
+    raises: ["how-can-i-be-saved", "what-is-repentance", "does-god-use-our-failures", "still-my-father-when-i-fail"],
+    followsFrom: ["what-is-grace", "can-gods-grace-really-cover-my-worst-sins", "can-a-hardened-heart-come-back"],
+    related: ["can-gods-grace-really-cover-my-worst-sins", "what-is-grace", "can-a-hardened-heart-come-back", "what-happens-when-i-die", "how-can-i-be-saved"],
+    planned: ["What do I do with the grief over the years I wasted?"],
+    order: 83,
   },
 
   // ------------------------------------------------------------------
@@ -15761,10 +15853,10 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Isaiah 55:6-7", "2 Chronicles 33:12-13", "John 6:37", "Psalm 51:17", "1 John 1:9"],
-    raises: ["what-is-the-unpardonable-sin", "how-do-i-know-my-repentance-is-genuine", "can-i-seek-god-on-my-own", "is-there-a-second-chance-after-death"],
+    raises: ["what-is-the-unpardonable-sin", "how-do-i-know-my-repentance-is-genuine", "can-i-seek-god-on-my-own", "is-there-a-second-chance-after-death", "is-it-too-late-to-come-to-jesus"],
     followsFrom: ["why-does-god-harden-hearts", "can-i-seek-god-on-my-own"],
     related: ["why-does-god-harden-hearts", "what-is-repentance", "how-do-i-know-my-repentance-is-genuine", "what-is-the-unpardonable-sin"],
-    planned: ["Can someone be saved at the very end of their life?"],
+    planned: [],
     order: 87,
   },
 

@@ -1509,6 +1509,11 @@ export const connections: Record<string, Connection[]> = {
       "promise",
       "Paradise lost in Eden is promised again: the tree of life stands in the Paradise of God for those who overcome.",
     ),
+    c(
+      "2 Chronicles 33:13",
+      "parallel",
+      "Manasseh prayed in chains and this thief prayed from a cross, and neither late prayer was refused.",
+    ),
   ],
   "Philippians 1:23": [
     c(
@@ -3333,6 +3338,11 @@ export const connections: Record<string, Connection[]> = {
       "John 6:39",
       "theme",
       "The ones the Father gives Him are the ones He will raise up at the last day, so His welcome and His keeping are one work.",
+    ),
+    c(
+      "Revelation 22:17",
+      "parallel",
+      "The Bible's last invitation says what Jesus said in Galilee: whoever is thirsty is told to come and take the water of life freely.",
     ),
   ],
   "James 4:7": [
@@ -6332,6 +6342,101 @@ export const connections: Record<string, Connection[]> = {
       "Matthew 26:14",
       "parallel",
       "Matthew records the same turn to the chief priests.",
+    ),
+  ],
+
+  // ------------------------------------------------------------------
+  // Coming late: the eleventh hour, the thief, and the years restored
+  // ------------------------------------------------------------------
+  "Matthew 20:16": [
+    c(
+      "Matthew 19:30",
+      "parallel",
+      "Jesus says it twice, once as a sentence and once as the parable's point: many who are first will be last, and the last first.",
+    ),
+    c(
+      "Luke 13:30",
+      "parallel",
+      "Luke puts the same saying at the door of the kingdom, where people come from every direction and sit down while some who thought they were first are outside.",
+    ),
+  ],
+  "1 Corinthians 15:8": [
+    c(
+      "1 Timothy 1:15",
+      "parallel",
+      "In one letter Paul is the child born at the wrong time, in another the chief of sinners, and neither title kept him out.",
+    ),
+    c(
+      "Acts 9:1-6",
+      "parallel",
+      "The appearance that made him an apostle found him mid-persecution, years after the resurrection, with nothing prepared and nothing earned.",
+    ),
+  ],
+  "1 Timothy 1:15": [
+    c(
+      "1 Corinthians 15:8",
+      "parallel",
+      "Paul says the same thing two ways: the chief of sinners, and the child born at the wrong time.",
+    ),
+    c(
+      "Luke 5:32",
+      "parallel",
+      "Jesus stated the rule Paul is applying to himself: He came to call sinners, not the righteous, to repentance.",
+    ),
+  ],
+  "2 Chronicles 33:13": [
+    c(
+      "1 Timothy 1:16",
+      "parallel",
+      "Manasseh has the shape of the case Paul says he was: the worst record in the line, one prayer in chains, and a God who was entreated by him.",
+    ),
+    c(
+      "Luke 23:43",
+      "parallel",
+      "A king taken in chains and a criminal on a cross both asked at the end of everything, and both were answered.",
+    ),
+  ],
+  "1 Timothy 1:16": [
+    c(
+      "1 Corinthians 15:10",
+      "theme",
+      "Paul never lets the mercy be a story about himself: the same grace that pardoned him was the grace that labored through him and was not futile.",
+    ),
+  ],
+  "Matthew 11:28-30": [
+    c(
+      "Isaiah 55:1",
+      "theme",
+      "Isaiah's open market and Jesus' open invitation are the same offer to the same people: come, though you have nothing to pay.",
+    ),
+    c(
+      "Revelation 22:17",
+      "parallel",
+      "The Bible's last page keeps the invitation of the Gospels open: whoever is thirsty is still told to come.",
+    ),
+  ],
+  "Joel 2:25": [
+    c(
+      "Genesis 50:20",
+      "theme",
+      "Joseph's years in slavery and prison were not erased but worked into the rescue of nations, which is the pattern behind the promise to give back what was eaten.",
+    ),
+    c(
+      "Revelation 21:5",
+      "promise",
+      "The restoring of eaten years is an installment of the final promise that He makes all things new.",
+    ),
+  ],
+  "2 Corinthians 6:2": [
+    c(
+      "Isaiah 49:8",
+      "quotes",
+      "Paul cites the servant song directly: the acceptable time and the day of salvation are the day God helps His servant.",
+    ),
+    c(
+      "Isaiah 55:6",
+      "parallel",
+      "Isaiah's own invitation runs the same way: seek Him while He may be found, because the nearness is now.",
     ),
   ],
 };
