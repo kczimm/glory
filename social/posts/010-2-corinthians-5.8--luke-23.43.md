@@ -67,8 +67,11 @@ https://glorystudy.com/questions/what-happens-when-i-die
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, 2 Corinthians 5:8. We are courageous, I say, and are willing rather to be absent from the body, and to be at home with the Lord. Verse two, Luke 23:43. Jesus said to him, “Assuredly I tell you, today you will be with me in Paradise.” Connection. Being at home with the Lord is what Jesus promised the dying thief: today with me in Paradise.
+1. 2 Corinthians 5:8. We are courageous, I say, and are willing rather to be absent from the body, and to be at home with the Lord.
+2. Luke 23:43. Jesus said to him, “Assuredly I tell you, today you will be with me in Paradise.”
+3. The connection. Being at home with the Lord is what Jesus promised the dying thief: today with me in Paradise.
+4. Keep reading. What happens when I die?
 ```

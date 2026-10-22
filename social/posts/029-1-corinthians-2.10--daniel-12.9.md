@@ -67,8 +67,11 @@ https://glorystudy.com/questions/how-can-i-understand-hard-passages-in-the-bible
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, 1 Corinthians 2:10. But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God. Verse two, Daniel 12:9. He said, Go your way, Daniel; for the words are shut up and sealed until the time of the end. Connection. What Daniel was told was sealed until the time of the end is now revealed to us by the Spirit.
+1. 1 Corinthians 2:10. But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God.
+2. Daniel 12:9. He said, Go your way, Daniel; for the words are shut up and sealed until the time of the end.
+3. The connection. What Daniel was told was sealed until the time of the end is now revealed to us by the Spirit.
+4. Keep reading. How can I understand hard passages in the Bible?
 ```

@@ -67,8 +67,11 @@ https://glorystudy.com/questions/do-believers-have-guardian-angels
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Daniel 6:22. My God has sent his angel, and has shut the lions’ mouths, and they have not hurt me; because as before him innocence was found in me; and also before you, O king, have I done no hurt. Verse two, Hebrews 11:33. who, through faith subdued kingdoms, worked out righteousness, obtained promises, stopped the mouths of lions, Connection. Hebrews names this faith among those who stopped the mouths of lions.
+1. Daniel 6:22. My God has sent his angel, and has shut the lions’ mouths, and they have not hurt me; because as before him innocence was found in me; and also before you, O king, have I done no hurt.
+2. Hebrews 11:33. who, through faith subdued kingdoms, worked out righteousness, obtained promises, stopped the mouths of lions,
+3. The connection. Hebrews names this faith among those who stopped the mouths of lions.
+4. Keep reading. Do believers have guardian angels?
 ```

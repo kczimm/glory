@@ -67,8 +67,11 @@ https://glorystudy.com/questions/the-last-week-of-jesus
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Matthew 26:28. for this is my blood of the new covenant, which is poured out for many for the remission of sins. Verse two, Jeremiah 31:31. Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah: Connection. The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
+1. Matthew 26:28. for this is my blood of the new covenant, which is poured out for many for the remission of sins.
+2. Jeremiah 31:31. Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:
+3. The connection. The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
+4. Keep reading. What happened in the last week of Jesus' life?
 ```

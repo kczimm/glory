@@ -67,8 +67,11 @@ https://glorystudy.com/questions/what-is-imputation
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Isaiah 53:6. All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all. Verse two, 2 Corinthians 5:21. For him who knew no sin he made to be sin on our behalf; so that in him we might become the righteousness of God. Connection. The LORD laid on Him the iniquity of us all: God made Him who knew no sin to be sin for us.
+1. Isaiah 53:6. All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all.
+2. 2 Corinthians 5:21. For him who knew no sin he made to be sin on our behalf; so that in him we might become the righteousness of God.
+3. The connection. The LORD laid on Him the iniquity of us all: God made Him who knew no sin to be sin for us.
+4. Keep reading. What does it mean that Christ's righteousness is 'imputed' to us?
 ```

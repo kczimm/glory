@@ -285,11 +285,14 @@ function renderPost(row, id) {
     .filter((line, i, all) => !(line === "" && all[i - 1] === ""))
     .join("\n");
 
-  const alt = [
-    `Verse one, ${row.from}. ${row.source}`,
-    `Verse two, ${row.target}. ${row.targetText}`,
-    `Connection. ${row.note}`,
-  ].join(" ");
+  // Instagram takes alt text per image, not per post, so the draft lists one
+  // line per slide rather than a paragraph to be split by hand later.
+  const alts = [
+    `${row.from}. ${row.source}`,
+    `${row.target}. ${row.targetText}`,
+    `The connection. ${row.note}`,
+    row.study ? `Keep reading. ${row.study.question}` : `Keep reading. ${SITE_URL}`,
+  ];
 
   const front = {
     id,
@@ -355,10 +358,13 @@ ${row.study ? `${url}` : SITE_URL}
 ${caption}
 \`\`\`
 
-## Alt text
+## Alt text, one per slide
 
 \`\`\`
-${alt}
+1. ${alts[0]}
+2. ${alts[1]}
+3. ${alts[2]}
+4. ${alts[3]}
 \`\`\`
 `;
   return { front, md };

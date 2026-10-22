@@ -67,8 +67,11 @@ https://glorystudy.com/questions/what-did-moses-set-before-israel
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Deuteronomy 30:14. But the word is very near to you, in your mouth and in your heart, that you may do it. Verse two, Romans 10:8. But what does it say? “The word is near you, in your mouth, and in your heart”; that is, the word of faith, which we preach: Connection. Paul quotes this sentence and applies it to the word of faith he preaches.
+1. Deuteronomy 30:14. But the word is very near to you, in your mouth and in your heart, that you may do it.
+2. Romans 10:8. But what does it say? “The word is near you, in your mouth, and in your heart”; that is, the word of faith, which we preach:
+3. The connection. Paul quotes this sentence and applies it to the word of faith he preaches.
+4. Keep reading. What did Moses set before Israel at the end?
 ```

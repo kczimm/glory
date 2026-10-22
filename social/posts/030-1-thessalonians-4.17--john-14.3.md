@@ -67,8 +67,11 @@ https://glorystudy.com/questions/what-is-heaven-like
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, 1 Thessalonians 4:17. then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever. Verse two, John 14:3. If I go and prepare a place for you, I will come again, and will receive you to myself; that where I am, you may be there also. Connection. The reception He promised arrives here: I will come again, and will receive you to myself.
+1. 1 Thessalonians 4:17. then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever.
+2. John 14:3. If I go and prepare a place for you, I will come again, and will receive you to myself; that where I am, you may be there also.
+3. The connection. The reception He promised arrives here: I will come again, and will receive you to myself.
+4. Keep reading. What is heaven like?
 ```

@@ -67,8 +67,11 @@ https://glorystudy.com/questions/what-will-worship-be-like-in-the-new-creation
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Revelation 22:3-4. There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants serve him. They will see his face, and his name will be on their foreheads. Verse two, 1 John 3:2. Beloved, now we are children of God, and it is not yet revealed what we will be. But we know that, when he is revealed, we will be like him; for we will see him just as he is. Connection. The sight promised: when he is revealed, we will be like him, for we will see him just as he is.
+1. Revelation 22:3-4. There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants serve him. They will see his face, and his name will be on their foreheads.
+2. 1 John 3:2. Beloved, now we are children of God, and it is not yet revealed what we will be. But we know that, when he is revealed, we will be like him; for we will see him just as he is.
+3. The connection. The sight promised: when he is revealed, we will be like him, for we will see him just as he is.
+4. Keep reading. What will worship be like in the new creation?
 ```

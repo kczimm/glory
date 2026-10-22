@@ -67,8 +67,11 @@ https://glorystudy.com/questions/how-do-i-approach-a-holy-god
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Hebrews 12:28-29. Therefore, receiving a Kingdom that can’t be shaken, let us have grace, through which we serve God acceptably, with reverence and awe, for our God is a consuming fire. Verse two, Deuteronomy 4:24. For Yahweh your God is a devouring fire, a jealous God. Connection. Hebrews takes Sinai's warning as a present description: for Yahweh your God is a devouring fire, and our God is a consuming fire.
+1. Hebrews 12:28-29. Therefore, receiving a Kingdom that can’t be shaken, let us have grace, through which we serve God acceptably, with reverence and awe, for our God is a consuming fire.
+2. Deuteronomy 4:24. For Yahweh your God is a devouring fire, a jealous God.
+3. The connection. Hebrews takes Sinai's warning as a present description: for Yahweh your God is a devouring fire, and our God is a consuming fire.
+4. Keep reading. If God is a consuming fire, how can anyone approach Him?
 ```

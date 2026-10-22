@@ -3,6 +3,7 @@
 //   - public/icons/icon-192.png / icon-512.png (web app manifest)
 //   - src/app/icon.svg         (rounded, browser tab)
 //   - src/app/favicon.ico      (classic fallback, 16/32/48 embedded PNGs)
+//   - social/avatar.png        (1024x1024, profile picture for the accounts)
 //
 // Run: node scripts/generate-icons.mjs
 // The design lives in the SVG strings below; the 180x180 layout is the
@@ -75,6 +76,16 @@ ${MARK}
 `;
 }
 
+// Avatar variant for the social account. No inset border: Instagram and X both
+// crop to a circle, and a square hairline cut into an arc reads as a mistake.
+// The medallion sits well inside the circle at this radius, so the mark keeps
+// its margins under either crop.
+const SVG_AVATAR = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <rect width="180" height="180" fill="url(#bg)"/>
+${MARK}
+</svg>
+`;
+
 // ---- Rendering ----
 
 async function renderPng(svg, size) {
@@ -129,6 +140,10 @@ async function main() {
   const tabSvg = roundedSvg();
   writeFileSync(resolve(ROOT, "src/app/icon.svg"), tabSvg);
   console.log("wrote src/app/icon.svg");
+
+  // Social avatar, at the largest size any platform asks for.
+  writeFileSync(resolve(ROOT, "social/avatar.png"), await renderPng(SVG_AVATAR, 1024));
+  console.log("wrote social/avatar.png (1024x1024)");
 
   // Classic favicon.ico from 16/32/48 renders of the rounded variant.
   const ico = buildIco([

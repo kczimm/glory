@@ -67,8 +67,11 @@ https://glorystudy.com/questions/why-does-god-seem-silent
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Habakkuk 2:3. For the vision is yet for the appointed time, and it hurries toward the end, and won’t prove false. Though it takes time, wait for it; because it will surely come. It won’t delay. Verse two, Galatians 4:4. But when the fullness of the time came, God sent out his Son, born to a woman, born under the law, Connection. The appointed time arrived when God sent His Son, born under the law.
+1. Habakkuk 2:3. For the vision is yet for the appointed time, and it hurries toward the end, and won’t prove false. Though it takes time, wait for it; because it will surely come. It won’t delay.
+2. Galatians 4:4. But when the fullness of the time came, God sent out his Son, born to a woman, born under the law,
+3. The connection. The appointed time arrived when God sent His Son, born under the law.
+4. Keep reading. Why does God seem silent when I pray?
 ```

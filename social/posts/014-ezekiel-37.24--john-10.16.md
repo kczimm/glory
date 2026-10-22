@@ -67,8 +67,11 @@ https://glorystudy.com/questions/can-these-bones-live
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Ezekiel 37:24. My servant David shall be king over them; and they all shall have one shepherd: they shall also walk in my ordinances, and observe my statutes, and do them. Verse two, John 10:16. I have other sheep, which are not of this fold.I must bring them also, and they will hear my voice. They will become one flock with one shepherd. Connection. Jesus speaks of one flock with one shepherd, the single shepherd Ezekiel promised.
+1. Ezekiel 37:24. My servant David shall be king over them; and they all shall have one shepherd: they shall also walk in my ordinances, and observe my statutes, and do them.
+2. John 10:16. I have other sheep, which are not of this fold.I must bring them also, and they will hear my voice. They will become one flock with one shepherd.
+3. The connection. Jesus speaks of one flock with one shepherd, the single shepherd Ezekiel promised.
+4. Keep reading. Can these bones live?
 ```

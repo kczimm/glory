@@ -67,8 +67,11 @@ https://glorystudy.com/questions/what-did-moses-set-before-israel
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Romans 10:9. that if you will confess with your mouth that Jesus is Lord, and believe in your heart that God raised him from the dead, you will be saved. Verse two, Deuteronomy 30:14. But the word is very near to you, in your mouth and in your heart, that you may do it. Connection. Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart.
+1. Romans 10:9. that if you will confess with your mouth that Jesus is Lord, and believe in your heart that God raised him from the dead, you will be saved.
+2. Deuteronomy 30:14. But the word is very near to you, in your mouth and in your heart, that you may do it.
+3. The connection. Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart.
+4. Keep reading. What did Moses set before Israel at the end?
 ```

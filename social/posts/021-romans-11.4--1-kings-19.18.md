@@ -69,8 +69,11 @@ https://glorystudy.com/questions/why-did-elijah-run-to-the-mountain
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Romans 11:4. But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.” Verse two, 1 Kings 19:18. Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal, and every mouth which has not kissed him.” Connection. The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
+1. Romans 11:4. But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
+2. 1 Kings 19:18. Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal, and every mouth which has not kissed him.”
+3. The connection. The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
+4. Keep reading. Why did Elijah run to the mountain?
 ```

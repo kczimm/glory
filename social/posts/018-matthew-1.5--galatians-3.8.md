@@ -67,8 +67,11 @@ https://glorystudy.com/questions/why-did-god-spare-rahab
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Matthew 1:5. Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse. Verse two, Galatians 3:8. The Scripture, foreseeing that God would justify the Gentiles by faith, preached the Good News beforehand to Abraham, saying, “In you all the nations will be blessed.” Connection. The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother.
+1. Matthew 1:5. Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse.
+2. Galatians 3:8. The Scripture, foreseeing that God would justify the Gentiles by faith, preached the Good News beforehand to Abraham, saying, “In you all the nations will be blessed.”
+3. The connection. The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother.
+4. Keep reading. Why did God spare Rahab?
 ```

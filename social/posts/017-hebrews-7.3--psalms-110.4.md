@@ -67,8 +67,11 @@ https://glorystudy.com/questions/who-was-melchizedek
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Hebrews 7:3. without father, without mother, without genealogy, having neither beginning of days nor end of life, but made like the Son of God), remains a priest continually. Verse two, Psalms 110:4. Yahweh has sworn, and will not change his mind: “You are a priest forever in the order of Melchizedek.” Connection. The argument rests on the psalm's oath about an order of priesthood older than Levi.
+1. Hebrews 7:3. without father, without mother, without genealogy, having neither beginning of days nor end of life, but made like the Son of God), remains a priest continually.
+2. Psalms 110:4. Yahweh has sworn, and will not change his mind: “You are a priest forever in the order of Melchizedek.”
+3. The connection. The argument rests on the psalm's oath about an order of priesthood older than Levi.
+4. Keep reading. Who was Melchizedek?
 ```

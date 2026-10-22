@@ -67,8 +67,11 @@ https://glorystudy.com/questions/how-wrong-can-i-be-and-still-be-saved
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, 1 Corinthians 3:15. If any man’s work is burned, he will suffer loss, but he himself will be saved, but as through fire. Verse two, Philippians 1:6. being confident of this very thing, that he who began a good work in you will complete it until the day of Jesus Christ. Connection. The work God began He will complete, which is why a badly built life can still be pulled through the fire.
+1. 1 Corinthians 3:15. If any man’s work is burned, he will suffer loss, but he himself will be saved, but as through fire.
+2. Philippians 1:6. being confident of this very thing, that he who began a good work in you will complete it until the day of Jesus Christ.
+3. The connection. The work God began He will complete, which is why a badly built life can still be pulled through the fire.
+4. Keep reading. How wrong can I be and still be saved?
 ```

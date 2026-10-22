@@ -67,8 +67,11 @@ https://glorystudy.com/questions/what-does-the-bible-mean-by-holy
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
 
-## Alt text
+## Alt text, one per slide
 
 ```
-Verse one, Isaiah 6:3. One called to another, and said, “Holy, holy, holy, is Yahweh of Armies! The whole earth is full of his glory!” Verse two, John 12:41. Isaiah said these things when he saw his glory, and spoke of him. Connection. John says Isaiah saw His glory, so the throne and the song belong to Christ.
+1. Isaiah 6:3. One called to another, and said, “Holy, holy, holy, is Yahweh of Armies! The whole earth is full of his glory!”
+2. John 12:41. Isaiah said these things when he saw his glory, and spoke of him.
+3. The connection. John says Isaiah saw His glory, so the throne and the song belong to Christ.
+4. Keep reading. What does the Bible mean by being 'holy'?
 ```
