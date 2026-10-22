@@ -44,6 +44,9 @@ next-env.d.ts
 # generated review packs
 scripts/packs/
 
+# generated social cards (rebuild with npm run export:social:cards)
+/social/cards/
+
 # generated audio and catalog
 /audio-out/
 /audio-manifest.json

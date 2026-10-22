@@ -27,6 +27,8 @@ npm run start        # production serve
 npm run start:lan    # production serve on LAN, port 3100
 npm run lint         # eslint
 node scripts/fetch-bible.mjs   # re-vendor the full WEB into src/data/scripture.ts
+npm run export:social          # build a queue of Instagram drafts from the graph (see social/README.md)
+npm run export:social:cards    # draw those drafts as 1080x1350 PNGs (needs fonts/, see social/README.md)
 npm run verify:bible           # re-fetch WEB and diff against the vendored copy (also checks refs)
 npm run verify:quotes          # verify every hand-written scripture quotation against the WEB (fails on misquote)
 node scripts/generate-icons.mjs  # regenerate brand icons (iOS home screen, PWA manifest, favicon)
