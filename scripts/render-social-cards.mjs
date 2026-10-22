@@ -62,7 +62,9 @@ const ROOM_VERSE = [320, 1080];
 /** Slide 3 and 4 centre a two-part group (body plus its footnote), so the gap
  *  stays constant while the group as a whole keeps to the optical centre. */
 const ROOM_GROUP = [390, 1150];
-const COUNTER_Y = 1214;
+// Kept inside the central 1080 square, because a feed thumbnail may crop the
+// 4:5 card to a square and the counter should not be the thing that vanishes.
+const COUNTER_Y = 1180;
 
 // ---- the faces --------------------------------------------------------------
 
