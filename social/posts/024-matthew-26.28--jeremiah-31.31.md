@@ -12,7 +12,7 @@
   "score": 10.5,
   "flags": [],
   "cover": "claim",
-  "first": "to",
+  "first": "from",
   "text": {
     "from": "for this is my blood of the new covenant, which is poured out for many for the remission of sins.",
     "to": "Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:"
@@ -31,25 +31,25 @@
 
 The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
 
-Ref pair: Jeremiah 31:31 · Matthew 26:28
+Ref pair: Matthew 26:28 · Jeremiah 31:31
 
 <sub>105 chars</sub>
 
 ## Slide 2, first verse
-
-Jeremiah 31:31
-
-> Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:
-
-<sub>122 chars</sub>
-
-## Slide 3, second verse
 
 Matthew 26:28
 
 > for this is my blood of the new covenant, which is poured out for many for the remission of sins.
 
 <sub>97 chars</sub>
+
+## Slide 3, second verse
+
+Jeremiah 31:31
+
+> Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:
+
+<sub>122 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -63,11 +63,11 @@ Study page: https://glorystudy.com/questions/the-last-week-of-jesus
 ```
 The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
 
-Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:
-Jeremiah 31:31
-
 for this is my blood of the new covenant, which is poured out for many for the remission of sins.
 Matthew 26:28
+
+Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:
+Jeremiah 31:31
 
 Read the study: What happened in the last week of Jesus' life?
 Link in bio.
@@ -79,7 +79,7 @@ Link in bio.
 
 ```
 1. Fulfilled here. The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
-2. Jeremiah 31:31. Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:
-3. Matthew 26:28. for this is my blood of the new covenant, which is poured out for many for the remission of sins.
+2. Matthew 26:28. For this is my blood of the new covenant, which is poured out for many for the remission of sins.
+3. Jeremiah 31:31. Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:
 4. Keep reading. What happened in the last week of Jesus' life?
 ```

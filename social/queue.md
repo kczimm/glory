@@ -35,9 +35,9 @@ lose.
 | 022 | Hebrews takes Sinai's warning as a present description: for Yahweh your God is a devouring fire, and our God is a consuming fire. | Hebrews 12:28-29 / Deuteronomy 4:24 | quotes | 10.5 |  |
 | 023 | John says Isaiah saw His glory, so the throne and the song belong to Christ. | Isaiah 6:3 / John 12:41 | fulfilled | 10.5 |  |
 | 024 | The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus. | Matthew 26:28 / Jeremiah 31:31 | fulfilled | 10.5 |  |
-| 025 | Paradise lost in Eden is promised again: the tree of life stands in the Paradise of God for those who overcome. | Luke 23:43 / Revelation 2:7 | promise | 9.5 |  |
+| 025 | Passover was kept as a memorial throughout every generation, the meal whose shape the Supper fulfills and reopens. | 1 Corinthians 11:26 / Exodus 12:14 | pattern | 8.5 |  |
 | 026 | Paul quotes the psalm and reads it of Jesus: ascended on high, He led captivity captive and gave gifts to men. | Ephesians 4:8 / Psalms 68:18 | quotes | 10.5 |  |
 | 027 | Paul cites God's word to Pharaoh about being raised up to display His power when he answers the charge that hardening is unjust. | Romans 9:17 / Exodus 9:16 | quotes | 10.5 |  |
-| 028 | The book ends its genealogy at David, and Matthew traces that exact line through Rahab, Boaz, Ruth, Obed, and Jesse straight to Jesus. | Ruth 4:22 / Matthew 1:5 | fulfilled | 10.5 |  |
+| 028 | Peter says the cities were turned to ashes as an example to those who would live ungodly. | Genesis 19:24 / 2 Peter 2:6 | fulfilled | 9.5 |  |
 | 029 | What Daniel was told was sealed until the time of the end is now revealed to us by the Spirit. | 1 Corinthians 2:10 / Daniel 12:9 | fulfilled | 9.5 |  |
 | 030 | The reception He promised arrives here: I will come again, and will receive you to myself. | 1 Thessalonians 4:17 / John 14:3 | promise | 8.5 |  |

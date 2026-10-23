@@ -25,13 +25,14 @@
  *   node scripts/export-social.mjs                build the queue (default 30 posts)
  *   node scripts/export-social.mjs --count 14     build a two-week queue
  *   node scripts/export-social.mjs --dry-run      print the queue, write nothing
+ *   node scripts/export-social.mjs --why "John 3:3"  why an edge did or did not make it
  *   node scripts/export-social.mjs --check        verify committed posts against the WEB
  *   node scripts/export-social.mjs --mark 001 002 record posts as published
  *   node scripts/export-social.mjs --force        regenerate even if posts exist
  *
  * Exit codes: 0 = ok, 1 = --check found drift or a copy violation.
  */
-import { mkdir, readFile, readdir, rename, rm, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, readdir, rename, rm, writeFile } from "node:fs/promises";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -50,6 +51,13 @@ const postDir = resolve(outDir, "posts");
  *  reuse the numbers without colliding with the record of what already ran. */
 const archiveDir = resolve(outDir, "posted");
 const statePath = resolve(outDir, "state.json");
+
+/** Does the path exist? Used to refuse overwriting an archived draft. */
+const exists = (path) =>
+  access(path).then(
+    () => true,
+    () => false
+  );
 
 // ---- knobs ------------------------------------------------------------------
 
@@ -148,9 +156,21 @@ const canonIndex = (ref) => {
  * Which end of the edge leads the two verse slides. Canonical order is not
  * chronology, but it puts the psalm before Hebrews and Isaiah before 1 Peter,
  * which is the direction the reveal should run: the original, then the echo.
+ *
+ * Within one book it falls through to chapter and then verse, so two verses of
+ * Psalm 13 cannot be shown later-first while the draft claims canonical order.
  */
-const earlierFirst = (from, target) =>
-  canonIndex(from) <= canonIndex(target) ? "from" : "to";
+function earlierFirst(from, target) {
+  const a = parseRef(from);
+  const b = parseRef(target);
+  if (!a || !b) return "from";
+  const key = (p) => [canonIndex(p.book), p.chapter, p.from];
+  const [ka, kb] = [key(a), key(b)];
+  for (let i = 0; i < ka.length; i++) {
+    if (ka[i] !== kb[i]) return ka[i] < kb[i] ? "from" : "to";
+  }
+  return "from";
+}
 
 // ---- candidates -------------------------------------------------------------
 
@@ -253,8 +273,10 @@ function studyFor(from, target) {
 function schedule(ranked, { count, posted, excluded, explain }) {
   const chosen = [];
   const usedPairs = new Set(posted.map((p) => p.pair));
-  const usedSources = new Set();
-  const usedTargets = new Set();
+  /** Every verse already used on either end. One set, not two role-specific
+   *  ones: a reader who saw Luke 23:43 as a target last week should not meet it
+   *  as a source this week. */
+  const usedVerses = new Set();
   const recentKinds = [];
   const recentBooks = [];
   const notes = [];
@@ -271,12 +293,12 @@ function schedule(ranked, { count, posted, excluded, explain }) {
     let picked = false;
     for (const row of ranked) {
       let reason = null;
-      if (excluded.has(row.ref)) reason = "excluded";
+      if (excluded.has(row.from) || excluded.has(row.target)) reason = "excluded";
       else if (usedPairs.has(pairKey(row))) reason = "pair already used";
-      else if (usedSources.has(row.from)) reason = "this verse already leads a post";
-      else if (usedTargets.has(row.target)) reason = "that target verse already appeared";
+      else if (usedVerses.has(row.from) || usedVerses.has(row.target))
+        reason = "a verse in this pair already appeared";
       else if (within(recentKinds, row.kind, 4) >= 2)
-        reason = `kind budget: 2 ${row.kind} edges in the last 4`;
+        reason = `kind budget: 3 ${row.kind} edges in the last 4`;
       else if (within(recentBooks, bookOf(row.from), 3) >= 1)
         reason = `book budget: ${bookOf(row.from)} in the last 3`;
 
@@ -291,8 +313,8 @@ function schedule(ranked, { count, posted, excluded, explain }) {
 
       chosen.push(row);
       usedPairs.add(pairKey(row));
-      usedSources.add(row.from);
-      usedTargets.add(row.target);
+      usedVerses.add(row.from);
+      usedVerses.add(row.target);
       recentKinds.push(row.kind);
       recentBooks.push(bookOf(row.from));
       picked = true;
@@ -316,6 +338,22 @@ const postSlug = (row) => `${slugOf(row.from)}--${slugOf(row.target)}`;
  *  a caption that misrepresents the text. */
 const cite = (ref, text) => `${text}\n${ref}`;
 
+/** The bare host the card and the caption name.
+ *  Guarded the same way layout.tsx guards its metadataBase, so a typo in
+ *  SITE_URL cannot kill a generation run. */
+function hostOf(url) {
+  try {
+    return new URL(url).host;
+  } catch {
+    return "glorystudy.com";
+  }
+}
+const HOST = hostOf(SITE_URL);
+
+/** Matches the card: a verse that opens mid-sentence is lifted on the image, so
+ *  the alt text has to describe the same thing a sighted reader sees. */
+const displayed = (text) => (/^[a-z]/.test(text) ? text[0].toUpperCase() + text.slice(1) : text);
+
 function renderPost(row, id) {
   const label = connectionKindLabel[row.kind];
   const url = row.study ? `${SITE_URL}/questions/${row.study.slug}` : SITE_URL;
@@ -335,14 +373,16 @@ function renderPost(row, id) {
   // Instagram captions have never contained clickable links; the bio link is the
   // only one an account gets. Putting a url here would just print a dead string
   // that nobody can tap and nobody will retype, so the caption points at the bio
-  // and the draft keeps the deep link for the record.
+  // and the draft keeps the deep link for the record. Both verses are cited
+  // either way, and the call to action is unconditional: a draft with no study
+  // still needs somewhere to send the reader.
   const caption = [
     ...(claimFirst
       ? [row.note, "", cite(first.ref, first.text), "", cite(second.ref, second.text)]
-      : [cite(first.ref, first.text), "", row.note]),
+      : [cite(first.ref, first.text), "", cite(second.ref, second.text), "", row.note]),
     "",
-    row.study ? `Read the study: ${row.study.question}` : "",
-    row.study ? "Link in bio." : "",
+    row.study ? `Read the study: ${row.study.question}` : `Read more at ${HOST}.`,
+    "Link in bio.",
     "",
     HASHTAGS,
   ]
@@ -355,13 +395,13 @@ function renderPost(row, id) {
   const alts = claimFirst
     ? [
         `${label}. ${row.note}`,
-        `${first.ref}. ${first.text}`,
-        `${second.ref}. ${second.text}`,
+        `${first.ref}. ${displayed(first.text)}`,
+        `${second.ref}. ${displayed(second.text)}`,
         readLine,
       ]
     : [
-        `${first.ref}. ${first.text}`,
-        `${second.ref}. ${second.text}`,
+        `${first.ref}. ${displayed(first.text)}`,
+        `${second.ref}. ${displayed(second.text)}`,
         `The connection. ${row.note}`,
         readLine,
       ];
@@ -455,7 +495,7 @@ ${slides}
 
 ${row.study ? `> ${row.study.question}` : "> Read the whole chapter"}
 
-Card footer: glorystudy.com
+Card footer: ${HOST}
 ${row.study ? `Study page: ${url}` : ""}
 
 ## Caption
@@ -519,16 +559,37 @@ function renderQueue(posts) {
 // ---- state ------------------------------------------------------------------
 
 async function readState() {
+  let raw;
   try {
-    return JSON.parse(await readFile(statePath, "utf8"));
-  } catch {
-    return { version: 1, posted: [], excluded: [] };
+    raw = await readFile(statePath, "utf8");
+  } catch (err) {
+    // Only a missing file means "nothing published yet". A file that exists but
+    // cannot be read or parsed is a corrupt ledger, and treating it as empty
+    // would quietly re-offer every edge already posted.
+    if (err.code === "ENOENT") return { version: 1, posted: [], excluded: [] };
+    throw err;
   }
+  let state;
+  try {
+    state = JSON.parse(raw);
+  } catch {
+    throw new Error(
+      `${statePath} is not valid JSON. Fix it by hand rather than deleting it: ` +
+        `it is the record of what has already been published.`
+    );
+  }
+  if (!Array.isArray(state.posted)) throw new Error(`${statePath} has no posted[] array.`);
+  if (!Array.isArray(state.excluded)) state.excluded = [];
+  return state;
 }
 
+/** Written through a temp file and renamed, so an interrupted write cannot
+ *  leave the ledger half-written and unreadable. */
 async function writeState(state) {
   await mkdir(outDir, { recursive: true });
-  await writeFile(statePath, JSON.stringify(state, null, 2) + "\n");
+  const tmp = `${statePath}.tmp`;
+  await writeFile(tmp, JSON.stringify(state, null, 2) + "\n");
+  await rename(tmp, statePath);
 }
 
 // ---- check ------------------------------------------------------------------
@@ -621,33 +682,58 @@ async function main() {
 
   if (has("--mark")) {
     const ids = argv.slice(argv.indexOf("--mark") + 1).filter((a) => !a.startsWith("--"));
+    await mkdir(archiveDir, { recursive: true });
     const found = [];
     for (const id of ids) {
-      const file = (await readdir(postDir).catch(() => [])).find((f) => f.startsWith(id));
-      if (!file) {
-        console.log(`No post starting with "${id}".`);
+      // Match the id and its separator, so `--mark 01` cannot silently claim
+      // post 010 to 019. Exact ids only: the queue numbers are three digits.
+      const matches = (await readdir(postDir).catch(() => [])).filter((f) => f.startsWith(`${id}-`));
+      if (matches.length !== 1) {
+        console.log(
+          matches.length === 0
+            ? `No post numbered "${id}".`
+            : `"${id}" is ambiguous (${matches.join(", ")}); nothing marked.`
+        );
         continue;
       }
+      const file = matches[0];
       const raw = await readFile(resolve(postDir, file), "utf8");
       const front = parseFront(raw);
       if (!front) {
         console.log(`${file} has malformed front matter, skipping.`);
         continue;
       }
-      state.posted.push({ id: front.id, pair: front.pair, from: front.from, to: front.to });
+
       // Retire the draft out of the way of the next queue. Without this, a
       // regenerated 001 collides with the published 001 and `--mark 001` has two
-      // files to choose from.
-      await mkdir(archiveDir, { recursive: true });
-      await rename(resolve(postDir, file), resolve(archiveDir, file));
+      // files to choose from. Refuse to overwrite an earlier archive. On a
+      // collision the ledger is not touched, so the two cannot disagree.
+      const destination = resolve(archiveDir, file);
+      if (await exists(destination)) {
+        console.log(`${file} is already archived; nothing marked.`);
+        continue;
+      }
+
+      // Record, persist, then move. A crash between these leaves the worst case
+      // as a draft that was archived but not recorded, which --check reports;
+      // the reverse would let a post be marked twice.
+      state.posted.push({ id: front.id, pair: front.pair, from: front.from, to: front.to });
+      await writeState(state);
+      await rename(resolve(postDir, file), destination);
       found.push(front.id);
     }
-    await writeState(state);
     console.log(`Recorded ${found.length} published post(s): ${found.join(", ") || "none"}`);
     return;
   }
 
-  const count = Number(value("--count", 30));
+  // Validate before anything is touched: `--count 2O` gives NaN, which makes the
+  // scheduler return nothing, and --force would already have cleared the queue.
+  const rawCount = value("--count", "30");
+  const count = Number(rawCount);
+  if (!Number.isInteger(count) || count < 1 || count > 200) {
+    console.log(`--count wants a whole number from 1 to 200, got "${rawCount}".`);
+    process.exit(1);
+  }
   const excluded = new Set(state.excluded ?? []);
   const ranked = candidates();
 
@@ -720,4 +806,11 @@ async function main() {
   );
 }
 
-await main();
+try {
+  await main();
+} catch (err) {
+  // A corrupt ledger is the one failure worth shouting about: it is the record
+  // of what has been published, and guessing at it would re-offer posted edges.
+  console.error(err instanceof Error ? err.message : err);
+  process.exit(1);
+}

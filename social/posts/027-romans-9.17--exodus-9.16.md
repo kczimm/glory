@@ -79,7 +79,7 @@ Link in bio.
 
 ```
 1. The Scripture echoes. Paul cites God's word to Pharaoh about being raised up to display His power when he answers the charge that hardening is unjust.
-2. Exodus 9:16. but indeed for this cause I have made you stand: to show you my power, and that my name may be declared throughout all the earth;
+2. Exodus 9:16. But indeed for this cause I have made you stand: to show you my power, and that my name may be declared throughout all the earth;
 3. Romans 9:17. For the Scripture says to Pharaoh, “For this very purpose I caused you to be raised up, that I might show in you my power, and that my name might be proclaimed in all the earth.”
 4. Keep reading. Why does God harden hearts?
 ```

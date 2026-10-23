@@ -129,7 +129,10 @@ then remove its entry from `social/state.json` and move the draft back from
 again.
 
 **Uncommitted studies leak into drafts.** The generator reads the working tree,
-so a study you have not deployed can end up as slide 4, linking to a 404.
+so a study you have not deployed can be picked as the study for a post. Slide 4
+only prints the bare host, so the card is safe; it is the draft's `Study page:`
+link and the question in the caption that point at a page that does not exist
+yet.
 
 **Hashtags.** `HASHTAGS` is a fixed block of five. Five is plenty; thirty reads
 as spam and the platform does not reward it.
@@ -155,6 +158,21 @@ clipped verse is the one failure a quotation card must not have.
 
 The palette is copied by hand from `src/app/globals.css`. Em dashes are banned
 in our copy (scripture's own punctuation is exempt, it is quoted text).
+
+## Guards the scripts enforce for you
+
+These exist because each one has already gone wrong once:
+
+| guard | what it stops |
+| ----- | ------------- |
+| corrupt `state.json` stops the run | silently re-offering every published edge |
+| ledger written to a temp file and renamed | a half-written ledger after an interrupt |
+| record persisted before the draft is archived | a crash marking a post twice |
+| archive collision refuses to overwrite | one published draft destroying another |
+| `--mark` matches digits plus a hyphen | `--mark 01` claiming post 010 |
+| `--count` must be an integer in range | `--count 2O` emptying the queue under `--force` |
+| missing fields skip a draft with reasons | one malformed draft aborting the whole render |
+| the renderer re-checks the note, not just the verses | a cover saying something `connections.ts` does not |
 
 ## Traps that cost real time
 

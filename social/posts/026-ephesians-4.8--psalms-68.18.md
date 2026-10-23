@@ -12,7 +12,7 @@
   "score": 10.5,
   "flags": [],
   "cover": "claim",
-  "first": "to",
+  "first": "from",
   "text": {
     "from": "Therefore he says, “When he ascended on high, he led captivity captive, and gave gifts to men.”",
     "to": "You have ascended on high. You have led away captives. You have received gifts among men, yes, among the rebellious also, that Yah God might dwell there."
@@ -31,25 +31,25 @@
 
 Paul quotes the psalm and reads it of Jesus: ascended on high, He led captivity captive and gave gifts to men.
 
-Ref pair: Psalms 68:18 · Ephesians 4:8
+Ref pair: Ephesians 4:8 · Psalms 68:18
 
 <sub>110 chars</sub>
 
 ## Slide 2, first verse
-
-Psalms 68:18
-
-> You have ascended on high. You have led away captives. You have received gifts among men, yes, among the rebellious also, that Yah God might dwell there.
-
-<sub>153 chars</sub>
-
-## Slide 3, second verse
 
 Ephesians 4:8
 
 > Therefore he says, “When he ascended on high, he led captivity captive, and gave gifts to men.”
 
 <sub>95 chars</sub>
+
+## Slide 3, second verse
+
+Psalms 68:18
+
+> You have ascended on high. You have led away captives. You have received gifts among men, yes, among the rebellious also, that Yah God might dwell there.
+
+<sub>153 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -63,11 +63,11 @@ Study page: https://glorystudy.com/questions/did-anyone-enter-heaven-before-jesu
 ```
 Paul quotes the psalm and reads it of Jesus: ascended on high, He led captivity captive and gave gifts to men.
 
-You have ascended on high. You have led away captives. You have received gifts among men, yes, among the rebellious also, that Yah God might dwell there.
-Psalms 68:18
-
 Therefore he says, “When he ascended on high, he led captivity captive, and gave gifts to men.”
 Ephesians 4:8
+
+You have ascended on high. You have led away captives. You have received gifts among men, yes, among the rebellious also, that Yah God might dwell there.
+Psalms 68:18
 
 Read the study: Did anyone enter heaven before Jesus rose?
 Link in bio.
@@ -79,7 +79,7 @@ Link in bio.
 
 ```
 1. The Scripture echoes. Paul quotes the psalm and reads it of Jesus: ascended on high, He led captivity captive and gave gifts to men.
-2. Psalms 68:18. You have ascended on high. You have led away captives. You have received gifts among men, yes, among the rebellious also, that Yah God might dwell there.
-3. Ephesians 4:8. Therefore he says, “When he ascended on high, he led captivity captive, and gave gifts to men.”
+2. Ephesians 4:8. Therefore he says, “When he ascended on high, he led captivity captive, and gave gifts to men.”
+3. Psalms 68:18. You have ascended on high. You have led away captives. You have received gifts among men, yes, among the rebellious also, that Yah God might dwell there.
 4. Keep reading. Did anyone enter heaven before Jesus rose?
 ```

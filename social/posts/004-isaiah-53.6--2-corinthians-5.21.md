@@ -12,7 +12,7 @@
   "score": 10.5,
   "flags": [],
   "cover": "claim",
-  "first": "from",
+  "first": "to",
   "text": {
     "from": "All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all.",
     "to": "For him who knew no sin he made to be sin on our behalf; so that in him we might become the righteousness of God."
@@ -31,25 +31,25 @@
 
 The LORD laid on Him the iniquity of us all: God made Him who knew no sin to be sin for us.
 
-Ref pair: Isaiah 53:6 · 2 Corinthians 5:21
+Ref pair: 2 Corinthians 5:21 · Isaiah 53:6
 
 <sub>91 chars</sub>
 
 ## Slide 2, first verse
-
-Isaiah 53:6
-
-> All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all.
-
-<sub>122 chars</sub>
-
-## Slide 3, second verse
 
 2 Corinthians 5:21
 
 > For him who knew no sin he made to be sin on our behalf; so that in him we might become the righteousness of God.
 
 <sub>113 chars</sub>
+
+## Slide 3, second verse
+
+Isaiah 53:6
+
+> All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all.
+
+<sub>122 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -63,11 +63,11 @@ Study page: https://glorystudy.com/questions/what-is-imputation
 ```
 The LORD laid on Him the iniquity of us all: God made Him who knew no sin to be sin for us.
 
-All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all.
-Isaiah 53:6
-
 For him who knew no sin he made to be sin on our behalf; so that in him we might become the righteousness of God.
 2 Corinthians 5:21
+
+All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all.
+Isaiah 53:6
 
 Read the study: What does it mean that Christ's righteousness is 'imputed' to us?
 Link in bio.
@@ -79,7 +79,7 @@ Link in bio.
 
 ```
 1. Fulfilled here. The LORD laid on Him the iniquity of us all: God made Him who knew no sin to be sin for us.
-2. Isaiah 53:6. All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all.
-3. 2 Corinthians 5:21. For him who knew no sin he made to be sin on our behalf; so that in him we might become the righteousness of God.
+2. 2 Corinthians 5:21. For him who knew no sin he made to be sin on our behalf; so that in him we might become the righteousness of God.
+3. Isaiah 53:6. All we like sheep have gone astray. Everyone has turned to his own way; and Yahweh has laid on him the iniquity of us all.
 4. Keep reading. What does it mean that Christ's righteousness is 'imputed' to us?
 ```

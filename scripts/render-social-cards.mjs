@@ -31,6 +31,7 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 import { verses } from "../src/data/scripture.ts";
+import { connections } from "../src/data/connections.ts";
 import { joinPassage, parseRef } from "../src/data/ref.ts";
 import { SITE_URL } from "../src/lib/site.ts";
 
@@ -348,18 +349,38 @@ function verseText(ref) {
 }
 
 /**
- * Refuse to draw a draft whose verses no longer match the vendored Bible. A
- * card is a quotation with no context around it, so it is the last place that
- * should ever show text the app cannot back up.
+ * Refuse to draw a draft that has drifted from its sources. A card is a
+ * quotation with no context around it, so it is the last place that should ever
+ * show text the app cannot back up.
+ *
+ * The note is checked here as well as in `--check`, because slide 1 is now the
+ * note: the one sentence the account is built on is the last thing that should
+ * be able to change without anyone noticing.
  */
 function verify(post, file) {
   const problems = [];
+
+  // Required fields, checked before use: a draft with a missing ref would
+  // otherwise throw a TypeError out of parseRef and abort the whole run.
+  for (const field of ["id", "from", "to", "kindLabel", "note", "cover", "first"]) {
+    if (typeof post[field] !== "string" || post[field] === "") problems.push(`no usable "${field}"`);
+  }
+  if (typeof post.text?.from !== "string") problems.push('no usable "text.from"');
+  if (typeof post.text?.to !== "string") problems.push('no usable "text.to"');
+  if (problems.length > 0) return problems.map((p) => `${file}: ${p}`);
+
   const actualFrom = verseText(post.from);
   const actualTo = verseText(post.to);
   if (!actualFrom) problems.push(`${post.from} does not resolve`);
-  else if (actualFrom !== post.text?.from) problems.push(`${post.from} drifted from the vendored WEB`);
+  else if (actualFrom !== post.text.from) problems.push(`${post.from} drifted from the vendored WEB`);
   if (!actualTo) problems.push(`${post.to} does not resolve`);
-  else if (actualTo !== post.text?.to) problems.push(`${post.to} drifted from the vendored WEB`);
+  else if (actualTo !== post.text.to) problems.push(`${post.to} drifted from the vendored WEB`);
+
+  const planted = (connections[post.from] ?? []).find((e) => e.target === post.to)?.note;
+  if (planted === undefined) problems.push(`${post.from} -> ${post.to} is no longer an edge`);
+  else if (planted !== post.note)
+    problems.push(`note differs from connections.ts, so the cover would say something the app does not`);
+
   return problems.map((p) => `${file}: ${p}`);
 }
 

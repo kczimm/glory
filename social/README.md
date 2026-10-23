@@ -103,10 +103,11 @@ without shrinking to 8pt, whether the note lands in one glance, whether a study
 cites both ends so slide 4 goes somewhere real, and whether a verse reads whole
 rather than as a fragment lifted mid-sentence.
 
-The scheduler then refuses to repeat a pair, to reuse a verse, to run the same
-kind twice in any four posts, or to post from the same book within three. It
-restarts the scan after every pick, so a strong edge that lost its slot to a
-diversity budget comes back at the next opening instead of vanishing.
+The scheduler then refuses to repeat a pair, to reuse a verse on either end, to
+run the same kind three times in any four posts, or to post from the same book
+within three. It restarts the scan after every pick, so a strong edge that lost
+its slot to a diversity budget comes back at the next opening instead of
+vanishing.
 
 1094 edges qualify, so a daily post is three years of material before anything
 has to be written fresh.
@@ -114,5 +115,7 @@ has to be written fresh.
 ## One gotcha
 
 Drafts are built from the working tree, so an uncommitted study can appear in a
-queue and slide 4 would link to a page that is not deployed yet. If you are
-mid-edit on `questions.ts`, deploy before you post anything from that batch.
+queue. Slide 4 only prints the bare host, so the card is safe, but the draft's
+`Study page:` link and the question in the caption point at a page that is not
+deployed yet. If you are mid-edit on `questions.ts`, deploy before you post
+anything from that batch.

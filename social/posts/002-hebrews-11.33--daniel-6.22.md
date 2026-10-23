@@ -80,6 +80,6 @@ Link in bio.
 ```
 1. The Scripture echoes. Daniel told the king that God sent His angel and shut the mouths of the lions, the deliverance Hebrews summarizes.
 2. Daniel 6:22. My God has sent his angel, and has shut the lions’ mouths, and they have not hurt me; because as before him innocence was found in me; and also before you, O king, have I done no hurt.
-3. Hebrews 11:33. who, through faith subdued kingdoms, worked out righteousness, obtained promises, stopped the mouths of lions,
+3. Hebrews 11:33. Who, through faith subdued kingdoms, worked out righteousness, obtained promises, stopped the mouths of lions,
 4. Keep reading. Why did Daniel keep praying at the window?
 ```
