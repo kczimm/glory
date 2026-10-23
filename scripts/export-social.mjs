@@ -31,7 +31,7 @@
  *
  * Exit codes: 0 = ok, 1 = --check found drift or a copy violation.
  */
-import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rename, rm, writeFile } from "node:fs/promises";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -45,6 +45,9 @@ import { SITE_URL } from "../src/lib/site.ts";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outDir = resolve(root, "social");
 const postDir = resolve(outDir, "posts");
+/** Where a draft goes once it has been published, so a regenerated queue can
+ *  reuse the numbers without colliding with the record of what already ran. */
+const archiveDir = resolve(outDir, "posted");
 const statePath = resolve(outDir, "state.json");
 
 // ---- knobs ------------------------------------------------------------------
@@ -438,10 +441,15 @@ function currentNote(from, target) {
  * src/data/connections.ts where the quote verifier and the site both see it.
  */
 async function check() {
-  let files = [];
-  try {
-    files = (await readdir(postDir)).filter((f) => f.endsWith(".md"));
-  } catch {
+  // Both the live queue and the archive: a published post was verified once, and
+  // nothing stops someone editing it in place afterwards.
+  const dirs = [postDir, archiveDir];
+  const files = [];
+  for (const dir of dirs) {
+    const names = await readdir(dir).catch(() => []);
+    for (const name of names) if (name.endsWith(".md")) files.push({ dir, name });
+  }
+  if (files.length === 0) {
     console.log("No social/posts yet. Run the generator first.");
     return 0;
   }
@@ -449,8 +457,8 @@ async function check() {
   const problems = [];
   const seen = new Map();
 
-  for (const file of files.sort()) {
-    const raw = await readFile(resolve(postDir, file), "utf8");
+  for (const { dir, name: file } of files.sort((a, b) => a.name.localeCompare(b.name))) {
+    const raw = await readFile(resolve(dir, file), "utf8");
     const front = parseFront(raw);
     if (!front) {
       problems.push(`${file}: missing or malformed front matter`);
@@ -519,6 +527,11 @@ async function main() {
         continue;
       }
       state.posted.push({ id: front.id, pair: front.pair, from: front.from, to: front.to });
+      // Retire the draft out of the way of the next queue. Without this, a
+      // regenerated 001 collides with the published 001 and `--mark 001` has two
+      // files to choose from.
+      await mkdir(archiveDir, { recursive: true });
+      await rename(resolve(postDir, file), resolve(archiveDir, file));
       found.push(front.id);
     }
     await writeState(state);
@@ -573,18 +586,10 @@ async function main() {
   await mkdir(postDir, { recursive: true });
 
   // A regeneration renumbers, so drafts from the last run would linger next to
-  // the new ones under colliding ids. Clear the drafts, keep what already
-  // shipped, and let --check still police the published set.
-  const shipped = new Set((state.posted ?? []).map((p) => p.pair));
-  const stale = [];
-  for (const file of (await readdir(postDir)).filter((f) => f.endsWith(".md"))) {
-    const raw = await readFile(resolve(postDir, file), "utf8");
-    const front = parseFront(raw);
-    if (!front || shipped.has(front.pair)) continue;
-    stale.push(file);
-  }
-  if (stale.length > 0)
-    await Promise.all(stale.map((f) => rm(resolve(postDir, f), { force: true })));
+  // the new ones under colliding ids. Clear the queue; published drafts have
+  // already moved to the archive and are not here to lose.
+  for (const file of (await readdir(postDir)).filter((f) => f.endsWith(".md")))
+    await rm(resolve(postDir, file), { force: true });
 
   const rendered = [];
   for (const [i, row] of chosen.entries()) {

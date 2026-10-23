@@ -1,7 +1,9 @@
 # Social drafts
 
-Every file in `posts/` is a draft for a four-slide carousel. Not one word in
-them was written by a model. Each post is assembled from the app's own content:
+Every file in `posts/` is a draft for a four-slide carousel. Once a draft has
+been published, `--mark` records its pair in `state.json` and moves the file to
+`posted/`, so the next queue can reuse the numbers without ever offering the
+same edge twice. Not one word in a draft was written by a model:
 
 | slide | what it shows | source |
 | --- | --- | --- |
@@ -43,7 +45,8 @@ The flags need the `--` because npm would otherwise eat them.
    by hand: `--check` compares every draft against the vendored WEB and against
    `connections.ts`, and an edit to a draft is invisible to the site.
 4. Render the cards, post them, then `--mark` the ids so the next queue moves
-   past them.
+   past them. Marking archives the draft and records the pair, so an edge cannot
+   come back in either direction.
 5. If a note really does need rewriting for a card, rewrite it in
    `src/data/connections.ts` so the study page gets the improvement too, then
    regenerate.
