@@ -51,7 +51,8 @@ The work God began He will complete, which is why a badly built life can still b
 
 > How wrong can I be and still be saved?
 
-https://glorystudy.com/questions/how-wrong-can-i-be-and-still-be-saved
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/how-wrong-can-i-be-and-still-be-saved
 
 ## Caption
 
@@ -62,7 +63,7 @@ If any man’s work is burned, he will suffer loss, but he himself will be saved
 The work God began He will complete, which is why a badly built life can still be pulled through the fire.
 
 Read the study: How wrong can I be and still be saved?
-https://glorystudy.com/questions/how-wrong-can-i-be-and-still-be-saved
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

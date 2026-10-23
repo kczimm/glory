@@ -53,7 +53,8 @@ The answer God gave Elijah at Horeb is the text Paul builds his whole argument o
 
 > Why did Elijah run to the mountain?
 
-https://glorystudy.com/questions/why-did-elijah-run-to-the-mountain
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/why-did-elijah-run-to-the-mountain
 
 ## Caption
 
@@ -64,7 +65,7 @@ Romans 11:4
 The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
 
 Read the study: Why did Elijah run to the mountain?
-https://glorystudy.com/questions/why-did-elijah-run-to-the-mountain
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

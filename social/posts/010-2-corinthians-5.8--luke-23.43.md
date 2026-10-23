@@ -51,7 +51,8 @@ Being at home with the Lord is what Jesus promised the dying thief: today with m
 
 > What happens when I die?
 
-https://glorystudy.com/questions/what-happens-when-i-die
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/what-happens-when-i-die
 
 ## Caption
 
@@ -62,7 +63,7 @@ We are courageous, I say, and are willing rather to be absent from the body, and
 Being at home with the Lord is what Jesus promised the dying thief: today with me in Paradise.
 
 Read the study: What happens when I die?
-https://glorystudy.com/questions/what-happens-when-i-die
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

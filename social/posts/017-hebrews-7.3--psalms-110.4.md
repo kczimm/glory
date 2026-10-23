@@ -51,7 +51,8 @@ The argument rests on the psalm's oath about an order of priesthood older than L
 
 > Who was Melchizedek?
 
-https://glorystudy.com/questions/who-was-melchizedek
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/who-was-melchizedek
 
 ## Caption
 
@@ -62,7 +63,7 @@ Hebrews 7:3
 The argument rests on the psalm's oath about an order of priesthood older than Levi.
 
 Read the study: Who was Melchizedek?
-https://glorystudy.com/questions/who-was-melchizedek
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

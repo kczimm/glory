@@ -72,6 +72,17 @@ capitalised on the card, since otherwise it reads as a typo. The draft keeps the
 text exactly as the WEB has it, and the repository's quoting rule already allows
 capitalisation at the edges.
 
+## No urls in captions
+
+Instagram captions have never carried clickable links, for any account. A url
+pasted there is a dead string nobody taps and nobody retypes, so captions end
+with the study question and "Link in bio." Slide 4 names the bare host for the
+same reason: the bio link lands on the front page, so promising a deep path on
+the card would name a destination the reader cannot reach. The deep link stays
+in the draft, under `## Slide 4`, where it is useful to you and invisible to
+them. Stories are the exception, since they have a link sticker; that is where a
+direct study link can actually be tapped.
+
 If a card ever looks wrong in a way this file does not explain, look at
 `ROOM_*` and the size lists at the top of the renderer. There is no other layout
 logic than those numbers.

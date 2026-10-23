@@ -51,7 +51,8 @@ What Daniel was told was sealed until the time of the end is now revealed to us 
 
 > How can I understand hard passages in the Bible?
 
-https://glorystudy.com/questions/how-can-i-understand-hard-passages-in-the-bible
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/how-can-i-understand-hard-passages-in-the-bible
 
 ## Caption
 
@@ -62,7 +63,7 @@ But to us, God revealed them through the Spirit. For the Spirit searches all thi
 What Daniel was told was sealed until the time of the end is now revealed to us by the Spirit.
 
 Read the study: How can I understand hard passages in the Bible?
-https://glorystudy.com/questions/how-can-i-understand-hard-passages-in-the-bible
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

@@ -51,7 +51,8 @@ Hebrews names this faith among those who stopped the mouths of lions.
 
 > Do believers have guardian angels?
 
-https://glorystudy.com/questions/do-believers-have-guardian-angels
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/do-believers-have-guardian-angels
 
 ## Caption
 
@@ -62,7 +63,7 @@ Daniel 6:22
 Hebrews names this faith among those who stopped the mouths of lions.
 
 Read the study: Do believers have guardian angels?
-https://glorystudy.com/questions/do-believers-have-guardian-angels
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

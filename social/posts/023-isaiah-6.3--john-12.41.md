@@ -51,7 +51,8 @@ John says Isaiah saw His glory, so the throne and the song belong to Christ.
 
 > What does the Bible mean by being 'holy'?
 
-https://glorystudy.com/questions/what-does-the-bible-mean-by-holy
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/what-does-the-bible-mean-by-holy
 
 ## Caption
 
@@ -62,7 +63,7 @@ Isaiah 6:3
 John says Isaiah saw His glory, so the throne and the song belong to Christ.
 
 Read the study: What does the Bible mean by being 'holy'?
-https://glorystudy.com/questions/what-does-the-bible-mean-by-holy
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

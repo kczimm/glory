@@ -51,7 +51,8 @@ Paul quotes this sentence and applies it to the word of faith he preaches.
 
 > What did Moses set before Israel at the end?
 
-https://glorystudy.com/questions/what-did-moses-set-before-israel
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/what-did-moses-set-before-israel
 
 ## Caption
 
@@ -62,7 +63,7 @@ Deuteronomy 30:14
 Paul quotes this sentence and applies it to the word of faith he preaches.
 
 Read the study: What did Moses set before Israel at the end?
-https://glorystudy.com/questions/what-did-moses-set-before-israel
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

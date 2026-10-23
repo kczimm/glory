@@ -51,7 +51,8 @@ The appointed time arrived when God sent His Son, born under the law.
 
 > Why does God seem silent when I pray?
 
-https://glorystudy.com/questions/why-does-god-seem-silent
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/why-does-god-seem-silent
 
 ## Caption
 
@@ -62,7 +63,7 @@ Habakkuk 2:3
 The appointed time arrived when God sent His Son, born under the law.
 
 Read the study: Why does God seem silent when I pray?
-https://glorystudy.com/questions/why-does-god-seem-silent
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

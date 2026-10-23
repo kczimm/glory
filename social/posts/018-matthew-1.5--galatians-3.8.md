@@ -51,7 +51,8 @@ The nations blessed through Abraham arrive inside Messiah's own family tree by w
 
 > Why did God spare Rahab?
 
-https://glorystudy.com/questions/why-did-god-spare-rahab
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/why-did-god-spare-rahab
 
 ## Caption
 
@@ -62,7 +63,7 @@ Matthew 1:5
 The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother.
 
 Read the study: Why did God spare Rahab?
-https://glorystudy.com/questions/why-did-god-spare-rahab
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

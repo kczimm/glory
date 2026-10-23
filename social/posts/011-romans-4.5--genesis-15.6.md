@@ -51,7 +51,8 @@ Abraham believed Yahweh and it was reckoned to him for righteousness, the verse 
 
 > Does James contradict Paul? Is it faith or works?
 
-https://glorystudy.com/questions/faith-or-works
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/faith-or-works
 
 ## Caption
 
@@ -62,7 +63,7 @@ Romans 4:5
 Abraham believed Yahweh and it was reckoned to him for righteousness, the verse Paul builds the whole argument on.
 
 Read the study: Does James contradict Paul? Is it faith or works?
-https://glorystudy.com/questions/faith-or-works
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

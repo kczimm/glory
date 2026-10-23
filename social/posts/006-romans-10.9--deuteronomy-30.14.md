@@ -51,7 +51,8 @@ Paul's word of faith is Moses' near word, now with the name of Jesus in the mout
 
 > What did Moses set before Israel at the end?
 
-https://glorystudy.com/questions/what-did-moses-set-before-israel
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/what-did-moses-set-before-israel
 
 ## Caption
 
@@ -62,7 +63,7 @@ Romans 10:9
 Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart.
 
 Read the study: What did Moses set before Israel at the end?
-https://glorystudy.com/questions/what-did-moses-set-before-israel
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

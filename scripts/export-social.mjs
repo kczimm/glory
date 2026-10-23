@@ -275,13 +275,17 @@ function renderPost(row, id) {
   const label = connectionKindLabel[row.kind];
   const url = row.study ? `${SITE_URL}/questions/${row.study.slug}` : SITE_URL;
 
+  // Instagram captions have never contained clickable links; the bio link is the
+  // only one an account gets. Putting a url here would just print a dead string
+  // that nobody can tap and nobody will retype, so the caption points at the bio
+  // and the draft keeps the deep link for the record.
   const caption = [
     cite(row.from, row.source),
     "",
     row.note,
     "",
     row.study ? `Read the study: ${row.study.question}` : "",
-    row.study ? url : "",
+    row.study ? "Link in bio." : "",
     "",
     HASHTAGS,
   ]
@@ -353,7 +357,8 @@ ${row.note}
 
 ${row.study ? `> ${row.study.question}` : "> Read the whole chapter"}
 
-${row.study ? `${url}` : SITE_URL}
+Card footer: glorystudy.com
+${row.study ? `Study page: ${url}` : ""}
 
 ## Caption
 

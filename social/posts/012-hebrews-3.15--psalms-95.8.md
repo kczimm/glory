@@ -51,7 +51,8 @@ The warning Hebrews repeats three times is drawn directly from the psalm recalli
 
 > Why does God harden hearts?
 
-https://glorystudy.com/questions/why-does-god-harden-hearts
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/why-does-god-harden-hearts
 
 ## Caption
 
@@ -62,7 +63,7 @@ Hebrews 3:15
 The warning Hebrews repeats three times is drawn directly from the psalm recalling Israel's rebellion at Meribah.
 
 Read the study: Why does God harden hearts?
-https://glorystudy.com/questions/why-does-god-harden-hearts
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

@@ -51,7 +51,8 @@ The new covenant Jeremiah promised, written on hearts and forgiving sin, is seal
 
 > What happened in the last week of Jesus' life?
 
-https://glorystudy.com/questions/the-last-week-of-jesus
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/the-last-week-of-jesus
 
 ## Caption
 
@@ -62,7 +63,7 @@ Matthew 26:28
 The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
 
 Read the study: What happened in the last week of Jesus' life?
-https://glorystudy.com/questions/the-last-week-of-jesus
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

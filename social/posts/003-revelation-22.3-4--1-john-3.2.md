@@ -51,7 +51,8 @@ The sight promised: when he is revealed, we will be like him, for we will see hi
 
 > What will worship be like in the new creation?
 
-https://glorystudy.com/questions/what-will-worship-be-like-in-the-new-creation
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/what-will-worship-be-like-in-the-new-creation
 
 ## Caption
 
@@ -62,7 +63,7 @@ Revelation 22:3-4
 The sight promised: when he is revealed, we will be like him, for we will see him just as he is.
 
 Read the study: What will worship be like in the new creation?
-https://glorystudy.com/questions/what-will-worship-be-like-in-the-new-creation
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

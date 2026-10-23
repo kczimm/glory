@@ -51,7 +51,8 @@ Hebrews takes Sinai's warning as a present description: for Yahweh your God is a
 
 > If God is a consuming fire, how can anyone approach Him?
 
-https://glorystudy.com/questions/how-do-i-approach-a-holy-god
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/how-do-i-approach-a-holy-god
 
 ## Caption
 
@@ -62,7 +63,7 @@ Hebrews 12:28-29
 Hebrews takes Sinai's warning as a present description: for Yahweh your God is a devouring fire, and our God is a consuming fire.
 
 Read the study: If God is a consuming fire, how can anyone approach Him?
-https://glorystudy.com/questions/how-do-i-approach-a-holy-god
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

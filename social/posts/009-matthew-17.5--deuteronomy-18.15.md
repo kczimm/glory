@@ -51,7 +51,8 @@ The command to listen to the beloved Son answers Moses' promise of a prophet lik
 
 > Who does Jesus say that He is?
 
-https://glorystudy.com/questions/who-does-jesus-say-that-he-is
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/who-does-jesus-say-that-he-is
 
 ## Caption
 
@@ -62,7 +63,7 @@ Matthew 17:5
 The command to listen to the beloved Son answers Moses' promise of a prophet like himself.
 
 Read the study: Who does Jesus say that He is?
-https://glorystudy.com/questions/who-does-jesus-say-that-he-is
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

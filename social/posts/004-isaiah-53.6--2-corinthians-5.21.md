@@ -51,7 +51,8 @@ The LORD laid on Him the iniquity of us all: God made Him who knew no sin to be 
 
 > What does it mean that Christ's righteousness is 'imputed' to us?
 
-https://glorystudy.com/questions/what-is-imputation
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/what-is-imputation
 
 ## Caption
 
@@ -62,7 +63,7 @@ Isaiah 53:6
 The LORD laid on Him the iniquity of us all: God made Him who knew no sin to be sin for us.
 
 Read the study: What does it mean that Christ's righteousness is 'imputed' to us?
-https://glorystudy.com/questions/what-is-imputation
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

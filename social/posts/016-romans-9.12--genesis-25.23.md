@@ -51,7 +51,8 @@ Paul quotes the oracle given before the twins were born: the elder will serve th
 
 > What did Esau trade away?
 
-https://glorystudy.com/questions/what-did-esau-trade-away
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/what-did-esau-trade-away
 
 ## Caption
 
@@ -62,7 +63,7 @@ Romans 9:12
 Paul quotes the oracle given before the twins were born: the elder will serve the younger.
 
 Read the study: What did Esau trade away?
-https://glorystudy.com/questions/what-did-esau-trade-away
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

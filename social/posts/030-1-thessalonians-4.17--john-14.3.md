@@ -51,7 +51,8 @@ The reception He promised arrives here: I will come again, and will receive you 
 
 > What is heaven like?
 
-https://glorystudy.com/questions/what-is-heaven-like
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/what-is-heaven-like
 
 ## Caption
 
@@ -62,7 +63,7 @@ then we who are alive, who are left, will be caught up together with them in the
 The reception He promised arrives here: I will come again, and will receive you to myself.
 
 Read the study: What is heaven like?
-https://glorystudy.com/questions/what-is-heaven-like
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```

@@ -32,6 +32,7 @@ import sharp from "sharp";
 
 import { verses } from "../src/data/scripture.ts";
 import { joinPassage, parseRef } from "../src/data/ref.ts";
+import { SITE_URL } from "../src/lib/site.ts";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const postDir = resolve(root, "social/posts");
@@ -235,6 +236,19 @@ async function slideConnection(post) {
   return { pipeline: frame().composite(layers), overflow: note.overflow, sizes: [note.size] };
 }
 
+/** The bare host, not the study's deep path: the bio link lands on the front
+ *  page, so printing a long path on the card would promise a destination the
+ *  reader cannot reach by tapping anything. Guarded the same way layout.tsx
+ *  guards its metadataBase, so a typo in SITE_URL cannot kill a render. */
+function hostOf(url) {
+  try {
+    return new URL(url).host;
+  } catch {
+    return "glorystudy.com";
+  }
+}
+const HOST = hostOf(SITE_URL);
+
 async function slideStudy(post) {
   const head = await header("Keep reading");
   const question = await fit(
@@ -243,10 +257,10 @@ async function slideStudy(post) {
     [68, 62, 56, 50, 45, 40, 36],
     ROOM_GROUP[1] - ROOM_GROUP[0] - 140
   );
-  const url = await textBlock((post.url ?? "glorystudy.com").replace(/^https?:\/\//, ""), {
+  const url = await textBlock(HOST, {
     face: FACES.sans,
     family: "Inter",
-    size: 20,
+    size: 22,
     color: INK_SOFT,
     tracking: 300,
   });

@@ -51,7 +51,8 @@ Jesus speaks of one flock with one shepherd, the single shepherd Ezekiel promise
 
 > Can these bones live?
 
-https://glorystudy.com/questions/can-these-bones-live
+Card footer: glorystudy.com
+Study page: https://glorystudy.com/questions/can-these-bones-live
 
 ## Caption
 
@@ -62,7 +63,7 @@ Ezekiel 37:24
 Jesus speaks of one flock with one shepherd, the single shepherd Ezekiel promised.
 
 Read the study: Can these bones live?
-https://glorystudy.com/questions/can-these-bones-live
+Link in bio.
 
 #BibleStudy #Scripture #BibleVerse #ChristianFaith #GloryStudy
 ```
