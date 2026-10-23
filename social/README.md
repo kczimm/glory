@@ -7,10 +7,18 @@ same edge twice. Not one word in a draft was written by a model:
 
 | slide | what it shows | source |
 | --- | --- | --- |
-| 1 | a verse, WEB text | `src/data/scripture.ts` |
-| 2 | the verse it connects to | `src/data/scripture.ts` |
-| 3 | the note explaining how they relate | `src/data/connections.ts` |
+| 1 | the note, stated as a claim, and the pair it rests on | `src/data/connections.ts` |
+| 2 | the earlier verse, WEB text | `src/data/scripture.ts` |
+| 3 | the verse that quotes or fulfils it | `src/data/scripture.ts` |
 | 4 | the study that raises the question | `src/data/questions.ts` |
+
+The cover leads with the claim because slide 1 is the only slide most people
+see. `COVER = "verse"` at the top of `scripts/export-social.mjs` restores the
+original order, where slide 1 was a verse and the note came third; the two are
+worth comparing over ten posts rather than argued about.
+
+The editorial rules and the trap list live in
+`.agents/skills/glory-social/SKILL.md`. Read that before changing either script.
 
 That is deliberate. The account's whole claim is "this verse is doing that
 verse, and here is how," which is the one thing in the app nobody else has, and
