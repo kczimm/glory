@@ -11,6 +11,8 @@
   "url": "https://glorystudy.com/questions/the-last-week-of-jesus",
   "score": 10.5,
   "flags": [],
+  "cover": "claim",
+  "first": "to",
   "text": {
     "from": "for this is my blood of the new covenant, which is poured out for many for the remission of sins.",
     "to": "Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:"
@@ -21,17 +23,19 @@
 
 # 024 · Matthew 26:28 to Jeremiah 31:31
 
-**Fulfilled here** (`fulfilled`) · score 10.5
+**Fulfilled here** (`fulfilled`) · score 10.5 · verses in canonical order
 
-## Slide 1, the hook
+## Slide 1, the cover
 
-Matthew 26:28
+**Fulfilled here**
 
-> for this is my blood of the new covenant, which is poured out for many for the remission of sins.
+The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
 
-<sub>97 chars</sub>
+Ref pair: Jeremiah 31:31 · Matthew 26:28
 
-## Slide 2, the verse it connects to
+<sub>105 chars</sub>
+
+## Slide 2, first verse
 
 Jeremiah 31:31
 
@@ -39,13 +43,13 @@ Jeremiah 31:31
 
 <sub>122 chars</sub>
 
-## Slide 3, the connection
+## Slide 3, second verse
 
-**Fulfilled here**
+Matthew 26:28
 
-The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
+> for this is my blood of the new covenant, which is poured out for many for the remission of sins.
 
-<sub>105 chars</sub>
+<sub>97 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -57,10 +61,13 @@ Study page: https://glorystudy.com/questions/the-last-week-of-jesus
 ## Caption
 
 ```
+The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
+
+Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:
+Jeremiah 31:31
+
 for this is my blood of the new covenant, which is poured out for many for the remission of sins.
 Matthew 26:28
-
-The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
 
 Read the study: What happened in the last week of Jesus' life?
 Link in bio.
@@ -71,8 +78,8 @@ Link in bio.
 ## Alt text, one per slide
 
 ```
-1. Matthew 26:28. for this is my blood of the new covenant, which is poured out for many for the remission of sins.
+1. Fulfilled here. The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
 2. Jeremiah 31:31. Behold, the days come, says Yahweh, that I will make a new covenant with the house of Israel, and with the house of Judah:
-3. The connection. The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus.
+3. Matthew 26:28. for this is my blood of the new covenant, which is poured out for many for the remission of sins.
 4. Keep reading. What happened in the last week of Jesus' life?
 ```

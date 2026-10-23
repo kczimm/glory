@@ -38,6 +38,7 @@ import { fileURLToPath } from "node:url";
 import { connections } from "../src/data/connections.ts";
 import { connectionKindLabel } from "../src/data/connections.ts";
 import { questions } from "../src/data/questions.ts";
+import { BIBLE_BOOKS } from "../src/data/books.ts";
 import { verses } from "../src/data/scripture.ts";
 import { joinPassage, parseRef } from "../src/data/ref.ts";
 import { SITE_URL } from "../src/lib/site.ts";
@@ -116,6 +117,41 @@ function buildCitationIndex() {
 
 const { citedBy, keyVerses } = buildCitationIndex();
 
+/**
+ * What slide 1 shows.
+ *
+ * `claim` leads with the connection note: the one sentence in the whole app
+ * that nobody else on the platform has, stated before the reader has to swipe
+ * for it. The cost is that the cover stops being a verse, so the grid reads as
+ * claims in our voice rather than scripture in the Bible's. `verse` is the
+ * original order, kept because the two are worth comparing over ten posts.
+ */
+const COVER = "claim";
+
+/**
+ * A note written for slide 3 assumes the reader has already met the verse. On a
+ * cover it points at something that is not there yet: "this faith", "this
+ * sentence", "The argument rests on". Those get flagged, not silently used.
+ */
+const POINTS_BACK =
+  /\b(?:this|these|that)\s+(?:faith|sentence|word|verse|passage|argument|point|claim|promise|line|psalm|oracle|prophecy|account)\b|\bthe (?:argument|point|claim) (?:rests|lies|is)\b/i;
+
+/** Canonical book order, used to show the earlier verse first. */
+const BOOK_ORDER = new Map(BIBLE_BOOKS.map((name, i) => [name, i]));
+
+const canonIndex = (ref) => {
+  const book = parseRef(ref)?.book;
+  return book !== undefined && BOOK_ORDER.has(book) ? BOOK_ORDER.get(book) : Number.MAX_SAFE_INTEGER;
+};
+
+/**
+ * Which end of the edge leads the two verse slides. Canonical order is not
+ * chronology, but it puts the psalm before Hebrews and Isaiah before 1 Peter,
+ * which is the direction the reveal should run: the original, then the echo.
+ */
+const earlierFirst = (from, target) =>
+  canonIndex(from) <= canonIndex(target) ? "from" : "to";
+
 // ---- candidates -------------------------------------------------------------
 
 /**
@@ -153,8 +189,15 @@ function candidates() {
       if (sourceFragment) score -= 1.5;
       if (targetFragment) score -= 1;
 
+      // In claim-first mode the note is the cover, so a note that points at text
+      // it was supposed to introduce cannot carry one.
+      const pointsBack = POINTS_BACK.test(edge.note);
+      if (COVER === "claim" && pointsBack) score -= 3;
+
       const flags = [];
       if (DEICTIC.test(edge.note)) flags.push("note needs a rewrite for a standalone card");
+      if (COVER === "claim" && pointsBack)
+        flags.push("note points back at text the cover has not shown");
       if (source.length > VERSE_TOO_LONG) flags.push(`source verse is ${source.length} chars`);
       if (target.length > VERSE_TOO_LONG) flags.push(`target verse is ${target.length} chars`);
       if (edge.note.length > NOTE_TOO_LONG) flags.push(`note is ${edge.note.length} chars`);
@@ -170,6 +213,8 @@ function candidates() {
         targetText: target,
         score,
         flags,
+        cover: COVER,
+        first: earlierFirst(from, edge.target),
         study: studyFor(from, edge.target),
       });
     }
@@ -274,15 +319,27 @@ const cite = (ref, text) => `${text}\n${ref}`;
 function renderPost(row, id) {
   const label = connectionKindLabel[row.kind];
   const url = row.study ? `${SITE_URL}/questions/${row.study.slug}` : SITE_URL;
+  const claimFirst = row.cover === "claim";
+
+  // Which verse leads. `first` is decided by canonical book order, so the reveal
+  // runs from the earlier writing to the one echoing it.
+  const first =
+    row.first === "to"
+      ? { ref: row.target, text: row.targetText }
+      : { ref: row.from, text: row.source };
+  const second =
+    row.first === "to"
+      ? { ref: row.from, text: row.source }
+      : { ref: row.target, text: row.targetText };
 
   // Instagram captions have never contained clickable links; the bio link is the
   // only one an account gets. Putting a url here would just print a dead string
   // that nobody can tap and nobody will retype, so the caption points at the bio
   // and the draft keeps the deep link for the record.
   const caption = [
-    cite(row.from, row.source),
-    "",
-    row.note,
+    ...(claimFirst
+      ? [row.note, "", cite(first.ref, first.text), "", cite(second.ref, second.text)]
+      : [cite(first.ref, first.text), "", row.note]),
     "",
     row.study ? `Read the study: ${row.study.question}` : "",
     row.study ? "Link in bio." : "",
@@ -294,12 +351,20 @@ function renderPost(row, id) {
 
   // Instagram takes alt text per image, not per post, so the draft lists one
   // line per slide rather than a paragraph to be split by hand later.
-  const alts = [
-    `${row.from}. ${row.source}`,
-    `${row.target}. ${row.targetText}`,
-    `The connection. ${row.note}`,
-    row.study ? `Keep reading. ${row.study.question}` : `Keep reading. ${SITE_URL}`,
-  ];
+  const readLine = row.study ? `Keep reading. ${row.study.question}` : `Keep reading. ${SITE_URL}`;
+  const alts = claimFirst
+    ? [
+        `${label}. ${row.note}`,
+        `${first.ref}. ${first.text}`,
+        `${second.ref}. ${second.text}`,
+        readLine,
+      ]
+    : [
+        `${first.ref}. ${first.text}`,
+        `${second.ref}. ${second.text}`,
+        `The connection. ${row.note}`,
+        readLine,
+      ];
 
   const front = {
     id,
@@ -313,37 +378,58 @@ function renderPost(row, id) {
     url: row.study ? url : null,
     score: Number(row.score.toFixed(1)),
     flags: row.flags,
+    // What slide 1 shows, and which end of the edge leads the verse slides: the
+    // renderer draws exactly this, so the draft stays the description of the
+    // post rather than an approximation of it.
+    cover: row.cover,
+    first: row.first,
     // Drift check: --check re-renders these from the vendored WEB and from
     // connections.ts, then compares.
     text: { from: row.source, to: row.targetText },
     note: row.note,
   };
 
-  const md = `---
-${JSON.stringify(front, null, 2)}
----
+  const slides = claimFirst
+    ? `## Slide 1, the cover
 
-# ${id} · ${row.from} to ${row.target}
+**${label}**
 
-**${label}** (\`${row.kind}\`) · score ${row.score.toFixed(1)}${
-    row.flags.length ? ` · FLAGS: ${row.flags.join("; ")}` : ""
-  }
+${row.note}
 
-## Slide 1, the hook
+Ref pair: ${first.ref} · ${second.ref}
 
-${row.from}
+<sub>${row.note.length} chars</sub>
 
-> ${row.source}
+## Slide 2, first verse
 
-<sub>${row.source.length} chars</sub>
+${first.ref}
+
+> ${first.text}
+
+<sub>${first.text.length} chars</sub>
+
+## Slide 3, second verse
+
+${second.ref}
+
+> ${second.text}
+
+<sub>${second.text.length} chars</sub>`
+    : `## Slide 1, the hook
+
+${first.ref}
+
+> ${first.text}
+
+<sub>${first.text.length} chars</sub>
 
 ## Slide 2, the verse it connects to
 
-${row.target}
+${second.ref}
 
-> ${row.targetText}
+> ${second.text}
 
-<sub>${row.targetText.length} chars</sub>
+<sub>${second.text.length} chars</sub>
 
 ## Slide 3, the connection
 
@@ -351,7 +437,19 @@ ${row.target}
 
 ${row.note}
 
-<sub>${row.note.length} chars</sub>
+<sub>${row.note.length} chars</sub>`;
+
+  const md = `---
+${JSON.stringify(front, null, 2)}
+---
+
+# ${id} · ${row.from} to ${row.target}
+
+**${label}** (\`${row.kind}\`) · score ${row.score.toFixed(1)} · verses in canonical order${
+    row.flags.length ? ` · FLAGS: ${row.flags.join("; ")}` : ""
+  }
+
+${slides}
 
 ## Slide 4, keep reading
 
@@ -393,18 +491,23 @@ function renderQueue(posts) {
   const lines = [
     "# Social queue",
     "",
-    "Generated by `node scripts/export-social.mjs`. Every verse and every note in",
-    "these posts comes from the app's own verified content: nothing here was",
-    "written by a model. Delete a draft you do not want, then run with `--mark`",
-    "to record what shipped so the next queue moves on.",
+    "Generated by `npm run export:social`. Every verse and every cover line comes",
+    "from the app's own verified content: nothing here was written by a model.",
+    "Delete a draft you do not want, then run with `--mark` to record what shipped",
+    "so the next queue moves on.",
     "",
-    `| # | source | target | kind | score | study | flags |`,
-    `| --- | --- | --- | --- | --- | --- | --- |`,
+    "The first column is the cover, which is what the reader sees and what the grid",
+    "shows. Read that column before anything else: it is where these posts win or",
+    "lose.",
+    "",
+    `| # | cover | verses | kind | score | flags |`,
+    `| --- | --- | --- | --- | --- | --- |`,
   ];
   for (const { front } of posts) {
-    const study = front.study ? front.study : "-";
+    const verses = `${front.from} / ${front.to}`;
+    const cover = front.cover === "claim" ? front.note : `(verse) ${front.from}`;
     lines.push(
-      `| ${front.id} | ${front.from} | ${front.to} | ${front.kind} | ${front.score} | ${study} | ${
+      `| ${front.id} | ${cover} | ${verses} | ${front.kind} | ${front.score} | ${
         front.flags.length ? front.flags.join("; ") : ""
       } |`
     );

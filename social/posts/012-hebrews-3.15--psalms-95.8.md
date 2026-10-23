@@ -11,6 +11,8 @@
   "url": "https://glorystudy.com/questions/why-does-god-harden-hearts",
   "score": 11.5,
   "flags": [],
+  "cover": "claim",
+  "first": "to",
   "text": {
     "from": "while it is said, “Today if you will hear his voice, don’t harden your hearts, as in the rebellion.”",
     "to": "Don’t harden your heart, as at Meribah, as in the day of Massah in the wilderness,"
@@ -21,17 +23,19 @@
 
 # 012 · Hebrews 3:15 to Psalms 95:8
 
-**The Scripture echoes** (`quotes`) · score 11.5
+**The Scripture echoes** (`quotes`) · score 11.5 · verses in canonical order
 
-## Slide 1, the hook
+## Slide 1, the cover
 
-Hebrews 3:15
+**The Scripture echoes**
 
-> while it is said, “Today if you will hear his voice, don’t harden your hearts, as in the rebellion.”
+The warning Hebrews repeats three times is drawn directly from the psalm recalling Israel's rebellion at Meribah.
 
-<sub>100 chars</sub>
+Ref pair: Psalms 95:8 · Hebrews 3:15
 
-## Slide 2, the verse it connects to
+<sub>113 chars</sub>
+
+## Slide 2, first verse
 
 Psalms 95:8
 
@@ -39,13 +43,13 @@ Psalms 95:8
 
 <sub>82 chars</sub>
 
-## Slide 3, the connection
+## Slide 3, second verse
 
-**The Scripture echoes**
+Hebrews 3:15
 
-The warning Hebrews repeats three times is drawn directly from the psalm recalling Israel's rebellion at Meribah.
+> while it is said, “Today if you will hear his voice, don’t harden your hearts, as in the rebellion.”
 
-<sub>113 chars</sub>
+<sub>100 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -57,10 +61,13 @@ Study page: https://glorystudy.com/questions/why-does-god-harden-hearts
 ## Caption
 
 ```
+The warning Hebrews repeats three times is drawn directly from the psalm recalling Israel's rebellion at Meribah.
+
+Don’t harden your heart, as at Meribah, as in the day of Massah in the wilderness,
+Psalms 95:8
+
 while it is said, “Today if you will hear his voice, don’t harden your hearts, as in the rebellion.”
 Hebrews 3:15
-
-The warning Hebrews repeats three times is drawn directly from the psalm recalling Israel's rebellion at Meribah.
 
 Read the study: Why does God harden hearts?
 Link in bio.
@@ -71,8 +78,8 @@ Link in bio.
 ## Alt text, one per slide
 
 ```
-1. Hebrews 3:15. while it is said, “Today if you will hear his voice, don’t harden your hearts, as in the rebellion.”
+1. The Scripture echoes. The warning Hebrews repeats three times is drawn directly from the psalm recalling Israel's rebellion at Meribah.
 2. Psalms 95:8. Don’t harden your heart, as at Meribah, as in the day of Massah in the wilderness,
-3. The connection. The warning Hebrews repeats three times is drawn directly from the psalm recalling Israel's rebellion at Meribah.
+3. Hebrews 3:15. while it is said, “Today if you will hear his voice, don’t harden your hearts, as in the rebellion.”
 4. Keep reading. Why does God harden hearts?
 ```

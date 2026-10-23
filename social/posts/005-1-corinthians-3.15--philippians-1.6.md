@@ -11,6 +11,8 @@
   "url": "https://glorystudy.com/questions/how-wrong-can-i-be-and-still-be-saved",
   "score": 9.5,
   "flags": [],
+  "cover": "claim",
+  "first": "from",
   "text": {
     "from": "If any man’s work is burned, he will suffer loss, but he himself will be saved, but as through fire.",
     "to": "being confident of this very thing, that he who began a good work in you will complete it until the day of Jesus Christ."
@@ -21,9 +23,19 @@
 
 # 005 · 1 Corinthians 3:15 to Philippians 1:6
 
-**A promise made** (`promise`) · score 9.5
+**A promise made** (`promise`) · score 9.5 · verses in canonical order
 
-## Slide 1, the hook
+## Slide 1, the cover
+
+**A promise made**
+
+The work God began He will complete, which is why a badly built life can still be pulled through the fire.
+
+Ref pair: 1 Corinthians 3:15 · Philippians 1:6
+
+<sub>106 chars</sub>
+
+## Slide 2, first verse
 
 1 Corinthians 3:15
 
@@ -31,21 +43,13 @@
 
 <sub>100 chars</sub>
 
-## Slide 2, the verse it connects to
+## Slide 3, second verse
 
 Philippians 1:6
 
 > being confident of this very thing, that he who began a good work in you will complete it until the day of Jesus Christ.
 
 <sub>120 chars</sub>
-
-## Slide 3, the connection
-
-**A promise made**
-
-The work God began He will complete, which is why a badly built life can still be pulled through the fire.
-
-<sub>106 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -57,10 +61,13 @@ Study page: https://glorystudy.com/questions/how-wrong-can-i-be-and-still-be-sav
 ## Caption
 
 ```
+The work God began He will complete, which is why a badly built life can still be pulled through the fire.
+
 If any man’s work is burned, he will suffer loss, but he himself will be saved, but as through fire.
 1 Corinthians 3:15
 
-The work God began He will complete, which is why a badly built life can still be pulled through the fire.
+being confident of this very thing, that he who began a good work in you will complete it until the day of Jesus Christ.
+Philippians 1:6
 
 Read the study: How wrong can I be and still be saved?
 Link in bio.
@@ -71,8 +78,8 @@ Link in bio.
 ## Alt text, one per slide
 
 ```
-1. 1 Corinthians 3:15. If any man’s work is burned, he will suffer loss, but he himself will be saved, but as through fire.
-2. Philippians 1:6. being confident of this very thing, that he who began a good work in you will complete it until the day of Jesus Christ.
-3. The connection. The work God began He will complete, which is why a badly built life can still be pulled through the fire.
+1. A promise made. The work God began He will complete, which is why a badly built life can still be pulled through the fire.
+2. 1 Corinthians 3:15. If any man’s work is burned, he will suffer loss, but he himself will be saved, but as through fire.
+3. Philippians 1:6. being confident of this very thing, that he who began a good work in you will complete it until the day of Jesus Christ.
 4. Keep reading. How wrong can I be and still be saved?
 ```

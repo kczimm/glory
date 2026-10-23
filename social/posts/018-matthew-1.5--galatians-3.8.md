@@ -11,6 +11,8 @@
   "url": "https://glorystudy.com/questions/why-did-god-spare-rahab",
   "score": 10.5,
   "flags": [],
+  "cover": "claim",
+  "first": "from",
   "text": {
     "from": "Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse.",
     "to": "The Scripture, foreseeing that God would justify the Gentiles by faith, preached the Good News beforehand to Abraham, saying, “In you all the nations will be blessed.”"
@@ -21,9 +23,19 @@
 
 # 018 · Matthew 1:5 to Galatians 3:8
 
-**Fulfilled here** (`fulfilled`) · score 10.5
+**Fulfilled here** (`fulfilled`) · score 10.5 · verses in canonical order
 
-## Slide 1, the hook
+## Slide 1, the cover
+
+**Fulfilled here**
+
+The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother.
+
+Ref pair: Matthew 1:5 · Galatians 3:8
+
+<sub>105 chars</sub>
+
+## Slide 2, first verse
 
 Matthew 1:5
 
@@ -31,21 +43,13 @@ Matthew 1:5
 
 <sub>115 chars</sub>
 
-## Slide 2, the verse it connects to
+## Slide 3, second verse
 
 Galatians 3:8
 
 > The Scripture, foreseeing that God would justify the Gentiles by faith, preached the Good News beforehand to Abraham, saying, “In you all the nations will be blessed.”
 
 <sub>167 chars</sub>
-
-## Slide 3, the connection
-
-**Fulfilled here**
-
-The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother.
-
-<sub>105 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -57,10 +61,13 @@ Study page: https://glorystudy.com/questions/why-did-god-spare-rahab
 ## Caption
 
 ```
+The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother.
+
 Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse.
 Matthew 1:5
 
-The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother.
+The Scripture, foreseeing that God would justify the Gentiles by faith, preached the Good News beforehand to Abraham, saying, “In you all the nations will be blessed.”
+Galatians 3:8
 
 Read the study: Why did God spare Rahab?
 Link in bio.
@@ -71,8 +78,8 @@ Link in bio.
 ## Alt text, one per slide
 
 ```
-1. Matthew 1:5. Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse.
-2. Galatians 3:8. The Scripture, foreseeing that God would justify the Gentiles by faith, preached the Good News beforehand to Abraham, saying, “In you all the nations will be blessed.”
-3. The connection. The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother.
+1. Fulfilled here. The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother.
+2. Matthew 1:5. Salmon became the father of Boaz by Rahab. Boaz became the father of Obed by Ruth. Obed became the father of Jesse.
+3. Galatians 3:8. The Scripture, foreseeing that God would justify the Gentiles by faith, preached the Good News beforehand to Abraham, saying, “In you all the nations will be blessed.”
 4. Keep reading. Why did God spare Rahab?
 ```

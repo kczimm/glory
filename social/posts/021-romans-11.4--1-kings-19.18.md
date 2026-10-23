@@ -13,6 +13,8 @@
   "flags": [
     "target verse starts or ends mid-quote"
   ],
+  "cover": "claim",
+  "first": "to",
   "text": {
     "from": "But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”",
     "to": "Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal, and every mouth which has not kissed him.”"
@@ -23,17 +25,19 @@
 
 # 021 · Romans 11:4 to 1 Kings 19:18
 
-**The Scripture echoes** (`quotes`) · score 10.5 · FLAGS: target verse starts or ends mid-quote
+**The Scripture echoes** (`quotes`) · score 10.5 · verses in canonical order · FLAGS: target verse starts or ends mid-quote
 
-## Slide 1, the hook
+## Slide 1, the cover
 
-Romans 11:4
+**The Scripture echoes**
 
-> But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
+The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
 
-<sub>114 chars</sub>
+Ref pair: 1 Kings 19:18 · Romans 11:4
 
-## Slide 2, the verse it connects to
+<sub>82 chars</sub>
+
+## Slide 2, first verse
 
 1 Kings 19:18
 
@@ -41,13 +45,13 @@ Romans 11:4
 
 <sub>129 chars</sub>
 
-## Slide 3, the connection
+## Slide 3, second verse
 
-**The Scripture echoes**
+Romans 11:4
 
-The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
+> But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
 
-<sub>82 chars</sub>
+<sub>114 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -59,10 +63,13 @@ Study page: https://glorystudy.com/questions/why-did-elijah-run-to-the-mountain
 ## Caption
 
 ```
+The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
+
+Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal, and every mouth which has not kissed him.”
+1 Kings 19:18
+
 But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
 Romans 11:4
-
-The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
 
 Read the study: Why did Elijah run to the mountain?
 Link in bio.
@@ -73,8 +80,8 @@ Link in bio.
 ## Alt text, one per slide
 
 ```
-1. Romans 11:4. But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
+1. The Scripture echoes. The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
 2. 1 Kings 19:18. Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal, and every mouth which has not kissed him.”
-3. The connection. The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
+3. Romans 11:4. But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
 4. Keep reading. Why did Elijah run to the mountain?
 ```

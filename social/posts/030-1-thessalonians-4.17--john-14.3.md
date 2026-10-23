@@ -11,6 +11,8 @@
   "url": "https://glorystudy.com/questions/what-is-heaven-like",
   "score": 8.5,
   "flags": [],
+  "cover": "claim",
+  "first": "to",
   "text": {
     "from": "then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever.",
     "to": "If I go and prepare a place for you, I will come again, and will receive you to myself; that where I am, you may be there also."
@@ -21,17 +23,19 @@
 
 # 030 · 1 Thessalonians 4:17 to John 14:3
 
-**A promise made** (`promise`) · score 8.5
+**A promise made** (`promise`) · score 8.5 · verses in canonical order
 
-## Slide 1, the hook
+## Slide 1, the cover
 
-1 Thessalonians 4:17
+**A promise made**
 
-> then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever.
+The reception He promised arrives here: I will come again, and will receive you to myself.
 
-<sub>154 chars</sub>
+Ref pair: John 14:3 · 1 Thessalonians 4:17
 
-## Slide 2, the verse it connects to
+<sub>90 chars</sub>
+
+## Slide 2, first verse
 
 John 14:3
 
@@ -39,13 +43,13 @@ John 14:3
 
 <sub>127 chars</sub>
 
-## Slide 3, the connection
+## Slide 3, second verse
 
-**A promise made**
+1 Thessalonians 4:17
 
-The reception He promised arrives here: I will come again, and will receive you to myself.
+> then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever.
 
-<sub>90 chars</sub>
+<sub>154 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -57,10 +61,13 @@ Study page: https://glorystudy.com/questions/what-is-heaven-like
 ## Caption
 
 ```
+The reception He promised arrives here: I will come again, and will receive you to myself.
+
+If I go and prepare a place for you, I will come again, and will receive you to myself; that where I am, you may be there also.
+John 14:3
+
 then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever.
 1 Thessalonians 4:17
-
-The reception He promised arrives here: I will come again, and will receive you to myself.
 
 Read the study: What is heaven like?
 Link in bio.
@@ -71,8 +78,8 @@ Link in bio.
 ## Alt text, one per slide
 
 ```
-1. 1 Thessalonians 4:17. then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever.
+1. A promise made. The reception He promised arrives here: I will come again, and will receive you to myself.
 2. John 14:3. If I go and prepare a place for you, I will come again, and will receive you to myself; that where I am, you may be there also.
-3. The connection. The reception He promised arrives here: I will come again, and will receive you to myself.
+3. 1 Thessalonians 4:17. then we who are alive, who are left, will be caught up together with them in the clouds, to meet the Lord in the air. So we will be with the Lord forever.
 4. Keep reading. What is heaven like?
 ```

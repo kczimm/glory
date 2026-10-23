@@ -11,6 +11,8 @@
   "url": "https://glorystudy.com/questions/what-will-worship-be-like-in-the-new-creation",
   "score": 10.5,
   "flags": [],
+  "cover": "claim",
+  "first": "to",
   "text": {
     "from": "There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants serve him. They will see his face, and his name will be on their foreheads.",
     "to": "Beloved, now we are children of God, and it is not yet revealed what we will be. But we know that, when he is revealed, we will be like him; for we will see him just as he is."
@@ -21,17 +23,19 @@
 
 # 003 · Revelation 22:3-4 to 1 John 3:2
 
-**Fulfilled here** (`fulfilled`) · score 10.5
+**Fulfilled here** (`fulfilled`) · score 10.5 · verses in canonical order
 
-## Slide 1, the hook
+## Slide 1, the cover
 
-Revelation 22:3-4
+**Fulfilled here**
 
-> There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants serve him. They will see his face, and his name will be on their foreheads.
+The sight promised: when he is revealed, we will be like him, for we will see him just as he is.
 
-<sub>174 chars</sub>
+Ref pair: 1 John 3:2 · Revelation 22:3-4
 
-## Slide 2, the verse it connects to
+<sub>96 chars</sub>
+
+## Slide 2, first verse
 
 1 John 3:2
 
@@ -39,13 +43,13 @@ Revelation 22:3-4
 
 <sub>175 chars</sub>
 
-## Slide 3, the connection
+## Slide 3, second verse
 
-**Fulfilled here**
+Revelation 22:3-4
 
-The sight promised: when he is revealed, we will be like him, for we will see him just as he is.
+> There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants serve him. They will see his face, and his name will be on their foreheads.
 
-<sub>96 chars</sub>
+<sub>174 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -57,10 +61,13 @@ Study page: https://glorystudy.com/questions/what-will-worship-be-like-in-the-ne
 ## Caption
 
 ```
+The sight promised: when he is revealed, we will be like him, for we will see him just as he is.
+
+Beloved, now we are children of God, and it is not yet revealed what we will be. But we know that, when he is revealed, we will be like him; for we will see him just as he is.
+1 John 3:2
+
 There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants serve him. They will see his face, and his name will be on their foreheads.
 Revelation 22:3-4
-
-The sight promised: when he is revealed, we will be like him, for we will see him just as he is.
 
 Read the study: What will worship be like in the new creation?
 Link in bio.
@@ -71,8 +78,8 @@ Link in bio.
 ## Alt text, one per slide
 
 ```
-1. Revelation 22:3-4. There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants serve him. They will see his face, and his name will be on their foreheads.
+1. Fulfilled here. The sight promised: when he is revealed, we will be like him, for we will see him just as he is.
 2. 1 John 3:2. Beloved, now we are children of God, and it is not yet revealed what we will be. But we know that, when he is revealed, we will be like him; for we will see him just as he is.
-3. The connection. The sight promised: when he is revealed, we will be like him, for we will see him just as he is.
+3. Revelation 22:3-4. There will be no curse any more. The throne of God and of the Lamb will be in it, and his servants serve him. They will see his face, and his name will be on their foreheads.
 4. Keep reading. What will worship be like in the new creation?
 ```

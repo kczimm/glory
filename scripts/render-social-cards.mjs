@@ -206,6 +206,14 @@ async function slideVerse(post, { ref, text, n }) {
   return { pipeline: frame().composite(layers), overflow: verse.overflow, sizes: [verse.size] };
 }
 
+/**
+ * The pair line, in the same order as the verse slides. The draft records that
+ * order in `first`, and the cover has to agree with the two slides behind it or
+ * it advertises a sequence the swipe does not show.
+ */
+const orderedPair = (post) =>
+  post.first === "to" ? `${post.to}  ·  ${post.from}` : `${post.from}  ·  ${post.to}`;
+
 async function slideConnection(post) {
   const head = await header(post.kindLabel);
   const note = await fit(
@@ -214,7 +222,7 @@ async function slideConnection(post) {
     [58, 52, 46, 42, 38, 34, 30, 27],
     ROOM_GROUP[1] - ROOM_GROUP[0] - 120
   );
-  const pair = await textBlock(`${post.from}  ·  ${post.to}`, {
+  const pair = await textBlock(orderedPair(post), {
     face: FACES.sans,
     family: "Inter",
     size: 17,
@@ -234,6 +242,41 @@ async function slideConnection(post) {
     { input: foot.data, left: centredLeft(foot), top: COUNTER_Y },
   ];
   return { pipeline: frame().composite(layers), overflow: note.overflow, sizes: [note.size] };
+}
+
+/**
+ * The cover in claim-first mode: the kind of connection, the claim itself, and
+ * the pair it rests on. Same geometry as the old slide 3, because it is the same
+ * block of text; only its position in the carousel changed.
+ */
+async function slideClaim(post) {
+  const head = await header(post.kindLabel);
+  const claim = await fit(
+    displayText(post.note),
+    { face: FACES.serif, family: "Fraunces", color: INK },
+    [62, 56, 50, 46, 42, 38, 34, 30, 27],
+    ROOM_GROUP[1] - ROOM_GROUP[0] - 120
+  );
+  const pair = await textBlock(orderedPair(post), {
+    face: FACES.sans,
+    family: "Inter",
+    size: 17,
+    color: INK_FAINT,
+    tracking: 1200,
+  });
+  const foot = await counter(1);
+
+  const gap = 104;
+  const groupTop = Math.round(
+    (ROOM_GROUP[0] + ROOM_GROUP[1] - (claim.height + gap + pair.height)) / 2
+  );
+  const layers = [
+    ...head.layers,
+    { input: claim.data, left: centredLeft(claim), top: groupTop },
+    { input: pair.data, left: centredLeft(pair), top: groupTop + claim.height + gap },
+    { input: foot.data, left: centredLeft(foot), top: COUNTER_Y },
+  ];
+  return { pipeline: frame().composite(layers), overflow: claim.overflow, sizes: [claim.size] };
 }
 
 /** The bare host, not the study's deep path: the bio link lands on the front
@@ -362,12 +405,29 @@ async function main() {
 
     const outDir = resolve(cardDir, post.id);
     await mkdir(outDir, { recursive: true });
-    const sheets = [
-      await slideVerse(post, { ref: post.from, text: post.text.from, n: 1 }),
-      await slideVerse(post, { ref: post.to, text: post.text.to, n: 2 }),
-      await slideConnection(post),
-      await slideStudy(post),
-    ];
+
+    // The draft decides, and the renderer obeys: `first` names which end of the
+    // edge leads, `cover` names what slide 1 shows. Neither is recomputed here,
+    // so what got reviewed is what gets drawn.
+    const firstRef = post.first === "to" ? post.to : post.from;
+    const firstText = post.first === "to" ? post.text.to : post.text.from;
+    const secondRef = post.first === "to" ? post.from : post.to;
+    const secondText = post.first === "to" ? post.text.from : post.text.to;
+
+    const sheets =
+      post.cover === "claim"
+        ? [
+            await slideClaim(post),
+            await slideVerse(post, { ref: firstRef, text: firstText, n: 2 }),
+            await slideVerse(post, { ref: secondRef, text: secondText, n: 3 }),
+            await slideStudy(post),
+          ]
+        : [
+            await slideVerse(post, { ref: firstRef, text: firstText, n: 1 }),
+            await slideVerse(post, { ref: secondRef, text: secondText, n: 2 }),
+            await slideConnection(post),
+            await slideStudy(post),
+          ];
 
     for (const [i, sheet] of sheets.entries()) {
       if (sheet.overflow) overflowed += 1;

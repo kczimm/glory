@@ -11,6 +11,8 @@
   "url": "https://glorystudy.com/questions/what-did-moses-set-before-israel",
   "score": 11.5,
   "flags": [],
+  "cover": "claim",
+  "first": "to",
   "text": {
     "from": "that if you will confess with your mouth that Jesus is Lord, and believe in your heart that God raised him from the dead, you will be saved.",
     "to": "But the word is very near to you, in your mouth and in your heart, that you may do it."
@@ -21,17 +23,19 @@
 
 # 006 · Romans 10:9 to Deuteronomy 30:14
 
-**The Scripture echoes** (`quotes`) · score 11.5
+**The Scripture echoes** (`quotes`) · score 11.5 · verses in canonical order
 
-## Slide 1, the hook
+## Slide 1, the cover
 
-Romans 10:9
+**The Scripture echoes**
 
-> that if you will confess with your mouth that Jesus is Lord, and believe in your heart that God raised him from the dead, you will be saved.
+Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart.
 
-<sub>140 chars</sub>
+Ref pair: Deuteronomy 30:14 · Romans 10:9
 
-## Slide 2, the verse it connects to
+<sub>92 chars</sub>
+
+## Slide 2, first verse
 
 Deuteronomy 30:14
 
@@ -39,13 +43,13 @@ Deuteronomy 30:14
 
 <sub>86 chars</sub>
 
-## Slide 3, the connection
+## Slide 3, second verse
 
-**The Scripture echoes**
+Romans 10:9
 
-Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart.
+> that if you will confess with your mouth that Jesus is Lord, and believe in your heart that God raised him from the dead, you will be saved.
 
-<sub>92 chars</sub>
+<sub>140 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -57,10 +61,13 @@ Study page: https://glorystudy.com/questions/what-did-moses-set-before-israel
 ## Caption
 
 ```
+Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart.
+
+But the word is very near to you, in your mouth and in your heart, that you may do it.
+Deuteronomy 30:14
+
 that if you will confess with your mouth that Jesus is Lord, and believe in your heart that God raised him from the dead, you will be saved.
 Romans 10:9
-
-Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart.
 
 Read the study: What did Moses set before Israel at the end?
 Link in bio.
@@ -71,8 +78,8 @@ Link in bio.
 ## Alt text, one per slide
 
 ```
-1. Romans 10:9. that if you will confess with your mouth that Jesus is Lord, and believe in your heart that God raised him from the dead, you will be saved.
+1. The Scripture echoes. Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart.
 2. Deuteronomy 30:14. But the word is very near to you, in your mouth and in your heart, that you may do it.
-3. The connection. Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart.
+3. Romans 10:9. that if you will confess with your mouth that Jesus is Lord, and believe in your heart that God raised him from the dead, you will be saved.
 4. Keep reading. What did Moses set before Israel at the end?
 ```
