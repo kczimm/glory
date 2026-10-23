@@ -144,6 +144,17 @@ const COVER = "claim";
 const POINTS_BACK =
   /\b(?:this|these|that)\s+(?:faith|sentence|word|verse|passage|argument|point|claim|promise|line|psalm|oracle|prophecy|account)\b|\bthe (?:argument|point|claim) (?:rests|lies|is)\b/i;
 
+/**
+ * A note that is a noun phrase reads as a caption, not a claim:
+ *
+ *   The psalm that asks for the betrayer's days to be few and for another to take his office.
+ *
+ * The verb lives inside the relative clause, so a naive "has a verb" test passes
+ * it. This pattern is the shape those notes take. It flags for review rather than
+ * scoring down, because it is a prompt to read the cover, not a verdict.
+ */
+const HEADLESS = /^The \w+ that \b/i;
+
 /** Canonical book order, used to show the earlier verse first. */
 const BOOK_ORDER = new Map(BIBLE_BOOKS.map((name, i) => [name, i]));
 
@@ -223,6 +234,8 @@ function candidates() {
       if (edge.note.length > NOTE_TOO_LONG) flags.push(`note is ${edge.note.length} chars`);
       if (sourceFragment) flags.push("source verse starts or ends mid-quote");
       if (targetFragment) flags.push("target verse starts or ends mid-quote");
+      if (COVER === "claim" && HEADLESS.test(edge.note))
+        flags.push("cover may be a noun phrase, read it as a sentence");
 
       rows.push({
         from,

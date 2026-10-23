@@ -27,7 +27,7 @@ lose.
 | 014 | Jesus speaks of one flock with one shepherd, the single shepherd Ezekiel promised. | Ezekiel 37:24 / John 10:16 | fulfilled | 10.5 |  |
 | 015 | The restoring of eaten years is an installment of the final promise that He makes all things new. | Joel 2:25 / Revelation 21:5 | promise | 9.5 |  |
 | 016 | Paul quotes the oracle given before the twins were born: the elder will serve the younger. | Romans 9:12 / Genesis 25:23 | quotes | 11.5 |  |
-| 017 | The psalm that asks for the betrayer's days to be few and for another to take his office. | Acts 1:20 / Psalms 109:8 | quotes | 10.5 |  |
+| 017 | The psalm that asks for the betrayer's days to be few and for another to take his office. | Acts 1:20 / Psalms 109:8 | quotes | 10.5 | cover may be a noun phrase, read it as a sentence |
 | 018 | The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother. | Matthew 1:5 / Galatians 3:8 | fulfilled | 10.5 |  |
 | 019 | The appointed time arrived when God sent His Son, born under the law. | Habakkuk 2:3 / Galatians 4:4 | fulfilled | 10.5 |  |
 | 020 | God promises a new heart and a new spirit, the birth from above that Nicodemus had not yet understood. | John 3:3 / Ezekiel 36:26 | promise | 9.5 |  |
