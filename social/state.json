@@ -6,6 +6,12 @@
       "pair": "Exodus 3:14 -> John 8:58",
       "from": "John 8:58",
       "to": "Exodus 3:14"
+    },
+    {
+      "id": "001",
+      "pair": "1 Peter 2:24 -> Isaiah 53:5",
+      "from": "1 Peter 2:24",
+      "to": "Isaiah 53:5"
     }
   ],
   "excluded": []
