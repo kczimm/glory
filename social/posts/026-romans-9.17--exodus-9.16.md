@@ -1,6 +1,6 @@
 ---
 {
-  "id": "027",
+  "id": "026",
   "pair": "Exodus 9:16 -> Romans 9:17",
   "from": "Romans 9:17",
   "to": "Exodus 9:16",
@@ -21,7 +21,7 @@
 }
 ---
 
-# 027 · Romans 9:17 to Exodus 9:16
+# 026 · Romans 9:17 to Exodus 9:16
 
 **The Scripture echoes** (`quotes`) · score 10.5 · verses in canonical order
 

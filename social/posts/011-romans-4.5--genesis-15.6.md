@@ -12,7 +12,7 @@
   "score": 11.5,
   "flags": [],
   "cover": "claim",
-  "first": "from",
+  "first": "to",
   "text": {
     "from": "But to him who doesn’t work, but believes in him who justifies the ungodly, his faith is accounted for righteousness.",
     "to": "He believed in Yahweh; and he reckoned it to him for righteousness."
@@ -31,25 +31,25 @@
 
 Abraham believed Yahweh and it was reckoned to him for righteousness, the verse Paul builds the whole argument on.
 
-Ref pair: Romans 4:5 · Genesis 15:6
+Ref pair: Genesis 15:6 · Romans 4:5
 
 <sub>114 chars</sub>
 
 ## Slide 2, first verse
-
-Romans 4:5
-
-> But to him who doesn’t work, but believes in him who justifies the ungodly, his faith is accounted for righteousness.
-
-<sub>117 chars</sub>
-
-## Slide 3, second verse
 
 Genesis 15:6
 
 > He believed in Yahweh; and he reckoned it to him for righteousness.
 
 <sub>67 chars</sub>
+
+## Slide 3, second verse
+
+Romans 4:5
+
+> But to him who doesn’t work, but believes in him who justifies the ungodly, his faith is accounted for righteousness.
+
+<sub>117 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -63,11 +63,11 @@ Study page: https://glorystudy.com/questions/faith-or-works
 ```
 Abraham believed Yahweh and it was reckoned to him for righteousness, the verse Paul builds the whole argument on.
 
-But to him who doesn’t work, but believes in him who justifies the ungodly, his faith is accounted for righteousness.
-Romans 4:5
-
 He believed in Yahweh; and he reckoned it to him for righteousness.
 Genesis 15:6
+
+But to him who doesn’t work, but believes in him who justifies the ungodly, his faith is accounted for righteousness.
+Romans 4:5
 
 Read the study: Does James contradict Paul? Is it faith or works?
 Link in bio.
@@ -79,7 +79,7 @@ Link in bio.
 
 ```
 1. The Scripture echoes. Abraham believed Yahweh and it was reckoned to him for righteousness, the verse Paul builds the whole argument on.
-2. Romans 4:5. But to him who doesn’t work, but believes in him who justifies the ungodly, his faith is accounted for righteousness.
-3. Genesis 15:6. He believed in Yahweh; and he reckoned it to him for righteousness.
+2. Genesis 15:6. He believed in Yahweh; and he reckoned it to him for righteousness.
+3. Romans 4:5. But to him who doesn’t work, but believes in him who justifies the ungodly, his faith is accounted for righteousness.
 4. Keep reading. Does James contradict Paul? Is it faith or works?
 ```

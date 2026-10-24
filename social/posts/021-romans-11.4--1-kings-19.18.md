@@ -14,7 +14,7 @@
     "target verse starts or ends mid-quote"
   ],
   "cover": "claim",
-  "first": "from",
+  "first": "to",
   "text": {
     "from": "But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”",
     "to": "Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal, and every mouth which has not kissed him.”"
@@ -33,25 +33,25 @@
 
 The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
 
-Ref pair: Romans 11:4 · 1 Kings 19:18
+Ref pair: 1 Kings 19:18 · Romans 11:4
 
 <sub>82 chars</sub>
 
 ## Slide 2, first verse
-
-Romans 11:4
-
-> But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
-
-<sub>114 chars</sub>
-
-## Slide 3, second verse
 
 1 Kings 19:18
 
 > Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal, and every mouth which has not kissed him.”
 
 <sub>129 chars</sub>
+
+## Slide 3, second verse
+
+Romans 11:4
+
+> But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
+
+<sub>114 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -65,11 +65,11 @@ Study page: https://glorystudy.com/questions/why-did-elijah-run-to-the-mountain
 ```
 The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
 
-But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
-Romans 11:4
-
 Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal, and every mouth which has not kissed him.”
 1 Kings 19:18
+
+But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
+Romans 11:4
 
 Read the study: Why did Elijah run to the mountain?
 Link in bio.
@@ -81,7 +81,7 @@ Link in bio.
 
 ```
 1. The Scripture echoes. The answer God gave Elijah at Horeb is the text Paul builds his whole argument on.
-2. Romans 11:4. But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
-3. 1 Kings 19:18. Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal, and every mouth which has not kissed him.”
+2. 1 Kings 19:18. Yet will I leave seven thousand in Israel, all the knees which have not bowed to Baal, and every mouth which has not kissed him.”
+3. Romans 11:4. But how does God answer him? “I have reserved for myself seven thousand men, who have not bowed the knee to Baal.”
 4. Keep reading. Why did Elijah run to the mountain?
 ```

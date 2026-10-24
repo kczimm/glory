@@ -1,6 +1,6 @@
 ---
 {
-  "id": "022",
+  "id": "017",
   "pair": "Deuteronomy 4:24 -> Hebrews 12:28-29",
   "from": "Hebrews 12:28-29",
   "to": "Deuteronomy 4:24",
@@ -21,7 +21,7 @@
 }
 ---
 
-# 022 · Hebrews 12:28-29 to Deuteronomy 4:24
+# 017 · Hebrews 12:28-29 to Deuteronomy 4:24
 
 **The Scripture echoes** (`quotes`) · score 10.5 · verses in canonical order
 

@@ -17,27 +17,27 @@ lose.
 | 004 | The LORD laid on Him the iniquity of us all: God made Him who knew no sin to be sin for us. | Isaiah 53:6 / 2 Corinthians 5:21 | fulfilled | 10.5 |  |
 | 005 | The work God began He will complete, which is why a badly built life can still be pulled through the fire. | 1 Corinthians 3:15 / Philippians 1:6 | promise | 9.5 |  |
 | 006 | Paul's word of faith is Moses' near word, now with the name of Jesus in the mouth and heart. | Romans 10:9 / Deuteronomy 30:14 | quotes | 11.5 |  |
-| 007 | Jesus takes the name God revealed in the burning bush, 'I AM WHO I AM,' as His own. | John 8:58 / Exodus 3:14 | quotes | 11.5 |  |
+| 007 | The warning Hebrews repeats three times is drawn directly from the psalm recalling Israel's rebellion at Meribah. | Hebrews 3:15 / Psalms 95:8 | quotes | 11.5 |  |
 | 008 | Peter calls the flood waters a symbol of baptism, and Paul explains the reality: burial with Christ in baptism and rising with Him to newness of life. | 1 Peter 3:21 / Romans 6:4 | fulfilled | 10.5 |  |
-| 009 | The command to listen to the beloved Son answers Moses' promise of a prophet like himself. | Matthew 17:5 / Deuteronomy 18:15 | fulfilled | 10.5 |  |
+| 009 | The fullness of deity dwells in Him bodily: the Word made flesh. | John 1:14 / Colossians 2:9 | fulfilled | 10.5 |  |
 | 010 | Being at home with the Lord is what Jesus promised the dying thief: today with me in Paradise. | 2 Corinthians 5:8 / Luke 23:43 | promise | 9.5 |  |
 | 011 | Abraham believed Yahweh and it was reckoned to him for righteousness, the verse Paul builds the whole argument on. | Romans 4:5 / Genesis 15:6 | quotes | 11.5 |  |
-| 012 | The warning Hebrews repeats three times is drawn directly from the psalm recalling Israel's rebellion at Meribah. | Hebrews 3:15 / Psalms 95:8 | quotes | 11.5 |  |
-| 013 | The fullness of deity dwells in Him bodily: the Word made flesh. | John 1:14 / Colossians 2:9 | fulfilled | 10.5 |  |
+| 012 | The psalm that asks for the betrayer's days to be few and for another to take his office. | Acts 1:20 / Psalms 109:8 | quotes | 10.5 | cover may be a noun phrase, read it as a sentence |
+| 013 | The command to listen to the beloved Son answers Moses' promise of a prophet like himself. | Matthew 17:5 / Deuteronomy 18:15 | fulfilled | 10.5 |  |
 | 014 | Jesus speaks of one flock with one shepherd, the single shepherd Ezekiel promised. | Ezekiel 37:24 / John 10:16 | fulfilled | 10.5 |  |
-| 015 | The restoring of eaten years is an installment of the final promise that He makes all things new. | Joel 2:25 / Revelation 21:5 | promise | 9.5 |  |
+| 015 | God promises a new heart and a new spirit, the birth from above that Nicodemus had not yet understood. | John 3:3 / Ezekiel 36:26 | promise | 9.5 |  |
 | 016 | Paul quotes the oracle given before the twins were born: the elder will serve the younger. | Romans 9:12 / Genesis 25:23 | quotes | 11.5 |  |
-| 017 | The psalm that asks for the betrayer's days to be few and for another to take his office. | Acts 1:20 / Psalms 109:8 | quotes | 10.5 | cover may be a noun phrase, read it as a sentence |
+| 017 | Hebrews takes Sinai's warning as a present description: for Yahweh your God is a devouring fire, and our God is a consuming fire. | Hebrews 12:28-29 / Deuteronomy 4:24 | quotes | 10.5 |  |
 | 018 | The nations blessed through Abraham arrive inside Messiah's own family tree by way of a Canaanite mother. | Matthew 1:5 / Galatians 3:8 | fulfilled | 10.5 |  |
 | 019 | The appointed time arrived when God sent His Son, born under the law. | Habakkuk 2:3 / Galatians 4:4 | fulfilled | 10.5 |  |
-| 020 | God promises a new heart and a new spirit, the birth from above that Nicodemus had not yet understood. | John 3:3 / Ezekiel 36:26 | promise | 9.5 |  |
+| 020 | The restoring of eaten years is an installment of the final promise that He makes all things new. | Joel 2:25 / Revelation 21:5 | promise | 9.5 |  |
 | 021 | The answer God gave Elijah at Horeb is the text Paul builds his whole argument on. | Romans 11:4 / 1 Kings 19:18 | quotes | 10.5 | target verse starts or ends mid-quote |
-| 022 | Hebrews takes Sinai's warning as a present description: for Yahweh your God is a devouring fire, and our God is a consuming fire. | Hebrews 12:28-29 / Deuteronomy 4:24 | quotes | 10.5 |  |
+| 022 | Paul quotes the psalm and reads it of Jesus: ascended on high, He led captivity captive and gave gifts to men. | Ephesians 4:8 / Psalms 68:18 | quotes | 10.5 |  |
 | 023 | John says Isaiah saw His glory, so the throne and the song belong to Christ. | Isaiah 6:3 / John 12:41 | fulfilled | 10.5 |  |
 | 024 | The new covenant Jeremiah promised, written on hearts and forgiving sin, is sealed in the blood of Jesus. | Matthew 26:28 / Jeremiah 31:31 | fulfilled | 10.5 |  |
 | 025 | Passover was kept as a memorial throughout every generation, the meal whose shape the Supper fulfills and reopens. | 1 Corinthians 11:26 / Exodus 12:14 | pattern | 8.5 |  |
-| 026 | Paul quotes the psalm and reads it of Jesus: ascended on high, He led captivity captive and gave gifts to men. | Ephesians 4:8 / Psalms 68:18 | quotes | 10.5 |  |
-| 027 | Paul cites God's word to Pharaoh about being raised up to display His power when he answers the charge that hardening is unjust. | Romans 9:17 / Exodus 9:16 | quotes | 10.5 |  |
-| 028 | Peter says the cities were turned to ashes as an example to those who would live ungodly. | Genesis 19:24 / 2 Peter 2:6 | fulfilled | 9.5 |  |
+| 026 | Paul cites God's word to Pharaoh about being raised up to display His power when he answers the charge that hardening is unjust. | Romans 9:17 / Exodus 9:16 | quotes | 10.5 |  |
+| 027 | Hebrews says Esau afterward sought the blessing with tears and found no place for a change of mind. | Genesis 27:34 / Hebrews 12:17 | quotes | 10.5 |  |
+| 028 | Stephen says God delivered Joseph out of all his afflictions and gave him favor before Pharaoh. | Psalms 105:19 / Acts 7:10 | fulfilled | 9.5 |  |
 | 029 | What Daniel was told was sealed until the time of the end is now revealed to us by the Spirit. | 1 Corinthians 2:10 / Daniel 12:9 | fulfilled | 9.5 |  |
 | 030 | The reception He promised arrives here: I will come again, and will receive you to myself. | 1 Thessalonians 4:17 / John 14:3 | promise | 8.5 |  |

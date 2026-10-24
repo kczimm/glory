@@ -155,13 +155,13 @@ const POINTS_BACK =
  */
 const HEADLESS = /^The \w+ that \b/i;
 
-/** Canonical book order, used to show the earlier verse first. */
+/** Canonical book order, used to show the earlier verse first. Takes the book
+ *  name, not a ref: `parseRef` rejects a bare book, and passing one in here
+ *  silently collapsed every comparison to the same value. */
 const BOOK_ORDER = new Map(BIBLE_BOOKS.map((name, i) => [name, i]));
 
-const canonIndex = (ref) => {
-  const book = parseRef(ref)?.book;
-  return book !== undefined && BOOK_ORDER.has(book) ? BOOK_ORDER.get(book) : Number.MAX_SAFE_INTEGER;
-};
+const canonIndex = (book) =>
+  BOOK_ORDER.has(book) ? BOOK_ORDER.get(book) : Number.MAX_SAFE_INTEGER;
 
 /**
  * Which end of the edge leads the two verse slides. Canonical order is not
@@ -622,6 +622,25 @@ function currentNote(from, target) {
  * it needs the same work on the study page, so the fix belongs in
  * src/data/connections.ts where the quote verifier and the site both see it.
  */
+/**
+ * Does `a` belong before `b` on the verse slides?
+ *
+ * Deliberately not `earlierFirst`: a check that reuses the code it is checking
+ * only catches stale drafts, and this invariant has now been broken twice, once
+ * by the generator and once by a fix to the generator. Written out plainly: book
+ * order, then chapter, then verse.
+ */
+function belongsBefore(a, b) {
+  const pa = parseRef(a);
+  const pb = parseRef(b);
+  if (!pa || !pb) return true;
+  const bookA = BOOK_ORDER.get(pa.book) ?? Number.MAX_SAFE_INTEGER;
+  const bookB = BOOK_ORDER.get(pb.book) ?? Number.MAX_SAFE_INTEGER;
+  if (bookA !== bookB) return bookA < bookB;
+  if (pa.chapter !== pb.chapter) return pa.chapter < pb.chapter;
+  return pa.from <= pb.from;
+}
+
 async function check() {
   // Both the live queue and the archive: a published post was verified once, and
   // nothing stops someone editing it in place afterwards.
@@ -668,6 +687,16 @@ async function check() {
     if (front.pair) {
       if (seen.has(front.pair)) problems.push(`${file}: duplicate of ${seen.get(front.pair)}`);
       else seen.set(front.pair, file);
+    }
+
+    // Slide 1 is the cover, so in claim mode the verse slides are 2 and 3 and the
+    // earlier one has to come first. A stale draft after a generator change shows
+    // up here rather than in a published carousel.
+    if (front.cover === "claim" && typeof front.first === "string" && front.from && front.to) {
+      const lead = front.first === "to" ? front.to : front.from;
+      const follow = front.first === "to" ? front.from : front.to;
+      if (!belongsBefore(lead, follow))
+        problems.push(`${file}: slide 2 is ${lead}, which comes after ${follow} in canonical order`);
     }
   }
 

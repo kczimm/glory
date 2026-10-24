@@ -12,7 +12,7 @@
   "score": 11.5,
   "flags": [],
   "cover": "claim",
-  "first": "from",
+  "first": "to",
   "text": {
     "from": "it was said to her, “The elder will serve the younger.”",
     "to": "Yahweh said to her, “Two nations are in your womb. Two peoples will be separated from your body. The one people will be stronger than the other people. The elder will serve the younger.”"
@@ -31,25 +31,25 @@
 
 Paul quotes the oracle given before the twins were born: the elder will serve the younger.
 
-Ref pair: Romans 9:12 · Genesis 25:23
+Ref pair: Genesis 25:23 · Romans 9:12
 
 <sub>90 chars</sub>
 
 ## Slide 2, first verse
-
-Romans 9:12
-
-> it was said to her, “The elder will serve the younger.”
-
-<sub>55 chars</sub>
-
-## Slide 3, second verse
 
 Genesis 25:23
 
 > Yahweh said to her, “Two nations are in your womb. Two peoples will be separated from your body. The one people will be stronger than the other people. The elder will serve the younger.”
 
 <sub>186 chars</sub>
+
+## Slide 3, second verse
+
+Romans 9:12
+
+> it was said to her, “The elder will serve the younger.”
+
+<sub>55 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -63,11 +63,11 @@ Study page: https://glorystudy.com/questions/what-did-esau-trade-away
 ```
 Paul quotes the oracle given before the twins were born: the elder will serve the younger.
 
-it was said to her, “The elder will serve the younger.”
-Romans 9:12
-
 Yahweh said to her, “Two nations are in your womb. Two peoples will be separated from your body. The one people will be stronger than the other people. The elder will serve the younger.”
 Genesis 25:23
+
+it was said to her, “The elder will serve the younger.”
+Romans 9:12
 
 Read the study: What did Esau trade away?
 Link in bio.
@@ -79,7 +79,7 @@ Link in bio.
 
 ```
 1. The Scripture echoes. Paul quotes the oracle given before the twins were born: the elder will serve the younger.
-2. Romans 9:12. It was said to her, “The elder will serve the younger.”
-3. Genesis 25:23. Yahweh said to her, “Two nations are in your womb. Two peoples will be separated from your body. The one people will be stronger than the other people. The elder will serve the younger.”
+2. Genesis 25:23. Yahweh said to her, “Two nations are in your womb. Two peoples will be separated from your body. The one people will be stronger than the other people. The elder will serve the younger.”
+3. Romans 9:12. It was said to her, “The elder will serve the younger.”
 4. Keep reading. What did Esau trade away?
 ```

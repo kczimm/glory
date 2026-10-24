@@ -12,7 +12,7 @@
   "score": 9.5,
   "flags": [],
   "cover": "claim",
-  "first": "from",
+  "first": "to",
   "text": {
     "from": "But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God.",
     "to": "He said, Go your way, Daniel; for the words are shut up and sealed until the time of the end."
@@ -31,25 +31,25 @@
 
 What Daniel was told was sealed until the time of the end is now revealed to us by the Spirit.
 
-Ref pair: 1 Corinthians 2:10 · Daniel 12:9
+Ref pair: Daniel 12:9 · 1 Corinthians 2:10
 
 <sub>94 chars</sub>
 
 ## Slide 2, first verse
-
-1 Corinthians 2:10
-
-> But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God.
-
-<sub>113 chars</sub>
-
-## Slide 3, second verse
 
 Daniel 12:9
 
 > He said, Go your way, Daniel; for the words are shut up and sealed until the time of the end.
 
 <sub>93 chars</sub>
+
+## Slide 3, second verse
+
+1 Corinthians 2:10
+
+> But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God.
+
+<sub>113 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -63,11 +63,11 @@ Study page: https://glorystudy.com/questions/how-can-i-understand-hard-passages-
 ```
 What Daniel was told was sealed until the time of the end is now revealed to us by the Spirit.
 
-But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God.
-1 Corinthians 2:10
-
 He said, Go your way, Daniel; for the words are shut up and sealed until the time of the end.
 Daniel 12:9
+
+But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God.
+1 Corinthians 2:10
 
 Read the study: How can I understand hard passages in the Bible?
 Link in bio.
@@ -79,7 +79,7 @@ Link in bio.
 
 ```
 1. Fulfilled here. What Daniel was told was sealed until the time of the end is now revealed to us by the Spirit.
-2. 1 Corinthians 2:10. But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God.
-3. Daniel 12:9. He said, Go your way, Daniel; for the words are shut up and sealed until the time of the end.
+2. Daniel 12:9. He said, Go your way, Daniel; for the words are shut up and sealed until the time of the end.
+3. 1 Corinthians 2:10. But to us, God revealed them through the Spirit. For the Spirit searches all things, yes, the deep things of God.
 4. Keep reading. How can I understand hard passages in the Bible?
 ```

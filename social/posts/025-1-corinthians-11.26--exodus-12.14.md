@@ -12,7 +12,7 @@
   "score": 8.5,
   "flags": [],
   "cover": "claim",
-  "first": "from",
+  "first": "to",
   "text": {
     "from": "For as often as you eat this bread and drink this cup, you proclaim the Lord’s death until he comes.",
     "to": "This day shall be to you for a memorial, and you shall keep it a feast to Yahweh: throughout your generations you shall keep it a feast by an ordinance forever."
@@ -31,25 +31,25 @@
 
 Passover was kept as a memorial throughout every generation, the meal whose shape the Supper fulfills and reopens.
 
-Ref pair: 1 Corinthians 11:26 · Exodus 12:14
+Ref pair: Exodus 12:14 · 1 Corinthians 11:26
 
 <sub>114 chars</sub>
 
 ## Slide 2, first verse
-
-1 Corinthians 11:26
-
-> For as often as you eat this bread and drink this cup, you proclaim the Lord’s death until he comes.
-
-<sub>100 chars</sub>
-
-## Slide 3, second verse
 
 Exodus 12:14
 
 > This day shall be to you for a memorial, and you shall keep it a feast to Yahweh: throughout your generations you shall keep it a feast by an ordinance forever.
 
 <sub>160 chars</sub>
+
+## Slide 3, second verse
+
+1 Corinthians 11:26
+
+> For as often as you eat this bread and drink this cup, you proclaim the Lord’s death until he comes.
+
+<sub>100 chars</sub>
 
 ## Slide 4, keep reading
 
@@ -63,11 +63,11 @@ Study page: https://glorystudy.com/questions/who-may-take-the-lords-supper
 ```
 Passover was kept as a memorial throughout every generation, the meal whose shape the Supper fulfills and reopens.
 
-For as often as you eat this bread and drink this cup, you proclaim the Lord’s death until he comes.
-1 Corinthians 11:26
-
 This day shall be to you for a memorial, and you shall keep it a feast to Yahweh: throughout your generations you shall keep it a feast by an ordinance forever.
 Exodus 12:14
+
+For as often as you eat this bread and drink this cup, you proclaim the Lord’s death until he comes.
+1 Corinthians 11:26
 
 Read the study: Who may take the Lord's Supper?
 Link in bio.
@@ -79,7 +79,7 @@ Link in bio.
 
 ```
 1. A pattern of. Passover was kept as a memorial throughout every generation, the meal whose shape the Supper fulfills and reopens.
-2. 1 Corinthians 11:26. For as often as you eat this bread and drink this cup, you proclaim the Lord’s death until he comes.
-3. Exodus 12:14. This day shall be to you for a memorial, and you shall keep it a feast to Yahweh: throughout your generations you shall keep it a feast by an ordinance forever.
+2. Exodus 12:14. This day shall be to you for a memorial, and you shall keep it a feast to Yahweh: throughout your generations you shall keep it a feast by an ordinance forever.
+3. 1 Corinthians 11:26. For as often as you eat this bread and drink this cup, you proclaim the Lord’s death until he comes.
 4. Keep reading. Who may take the Lord's Supper?
 ```
