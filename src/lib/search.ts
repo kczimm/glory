@@ -1,6 +1,7 @@
 import "server-only";
 import { verses as defaultVerses, questions, graphVerseRefs } from "@/data/server";
 import { getCategory } from "@/data";
+import { parseRef, verseKeys } from "@/data/ref";
 import type { Question } from "@/data/types";
 import type { TranslationCode } from "@/lib/translation-shared";
 
@@ -239,11 +240,26 @@ export function searchQuestions(term: string, limit = 6): Question[] {
 
 // ---- scripture ------------------------------------------------------------
 
-/** Every verse the studies cite or the graph touches: the "known" verses. */
+/**
+ * Every verse the studies cite or the graph touches: the "known" verses.
+ *
+ * The graph's refs are not verse keys: they are ranges ("Acts 17:11-12") and
+ * content-side aliases ("Psalm 23:1"), while the verse index is keyed by
+ * canonical single verses ("Psalms 23:1"). Comparing the raw refs against
+ * those keys meant a range or an aliased ref never counted as known, so most
+ * study-cited verses silently failed to float to the top. Both sides are
+ * normalized here, through the same parseRef/verseKeys the rest of the app
+ * uses.
+ */
 let knownRefs: Set<string> | null = null;
 function knownVerseRefs(): Set<string> {
   if (knownRefs) return knownRefs;
-  knownRefs = new Set(graphVerseRefs());
+  knownRefs = new Set<string>();
+  for (const ref of graphVerseRefs()) {
+    const parsed = parseRef(ref);
+    if (!parsed) continue;
+    for (const key of verseKeys(parsed)) knownRefs.add(key);
+  }
   return knownRefs;
 }
 
