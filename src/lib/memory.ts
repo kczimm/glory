@@ -26,19 +26,45 @@ export type Grade = 0 | 1 | 2;
 const KEY = "glory:memory";
 const CAP = 300;
 
+/** A finite number, or the fallback when the stored value is missing or junk. */
+function num(value: unknown, fallback: number): number {
+  return typeof value === "number" && Number.isFinite(value) ? value : fallback;
+}
+
+/**
+ * Turn a stored entry into a usable card, or null when it cannot be one.
+ *
+ * The shape is validated in full, not just `ref` and `due`: a card that lost
+ * `interval`/`ease`/`reps` (an older store, a hand-edited value) used to pass
+ * the guard, and grading it wrote `due: NaN`. NaN is never `<= now`, so the
+ * verse stopped coming due while still showing as held. Missing schedule
+ * fields are repaired to a fresh card's defaults (due now) so the reader keeps
+ * the verse they chose to hold instead of silently losing it.
+ */
+function toCard(entry: unknown): MemoryCard | null {
+  if (typeof entry !== "object" || entry === null) return null;
+  const e = entry as Partial<Record<keyof MemoryCard, unknown>>;
+  if (typeof e.ref !== "string" || !e.ref.trim()) return null;
+  const now = Date.now();
+  return {
+    ref: e.ref,
+    addedAt: num(e.addedAt, now),
+    due: num(e.due, now),
+    interval: Math.max(0, num(e.interval, 0)),
+    ease: Math.min(2.8, Math.max(1.3, num(e.ease, 2.5))),
+    reps: Math.max(0, Math.floor(num(e.reps, 0))),
+  };
+}
+
 function read(): MemoryCard[] {
   try {
     const raw = localStorage.getItem(KEY);
     if (!raw) return [];
     const parsed: unknown = JSON.parse(raw);
     if (!Array.isArray(parsed)) return [];
-    return parsed.filter(
-      (e): e is MemoryCard =>
-        typeof e === "object" &&
-        e !== null &&
-        typeof (e as MemoryCard).ref === "string" &&
-        typeof (e as MemoryCard).due === "number"
-    );
+    return parsed
+      .map(toCard)
+      .filter((c): c is MemoryCard => c !== null);
   } catch {
     return [];
   }
