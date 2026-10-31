@@ -23,38 +23,16 @@
  *
  * Exit codes: 0 = graph healthy, 1 = violations found.
  */
-import { readFileSync } from "node:fs";
-import { resolve, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
-
-const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const src = readFileSync(resolve(root, "src/data/questions.ts"), "utf8");
+import { field, list, loadQuestionBlocks } from "./lib/source.mjs";
 
 // ---- parse each study block --------------------------------------------------
-// Blocks start at "    slug: ..." and run until the next one.
-const blocks = src
- .split(/\n    slug:/)
- .slice(1)
- .map((b) => "    slug:" + b);
-
-const list = (block, key) =>
- block
-  .match(new RegExp(`${key}:\\s*\\[([^\\]]*)\\]`, "s"))?.[1]
-  ?.match(/"([^"]+)"/g)
-  ?.map((s) => s.slice(1, -1)) ?? [];
-
-const studies = blocks.map((b) => ({
- slug: b.match(/slug:\s*"([^"]+)"/)?.[1] ?? "",
- question: b.match(/\n    question:\s*"((?:[^"\\]|\\.)*)"/)?.[1] ?? "",
- raises: list(b, "raises"),
- followsFrom: list(b, "followsFrom"),
- planned: list(b, "planned"),
+const studies = loadQuestionBlocks().map(({ slug, body }) => ({
+  slug,
+  question: field(body, "question") ?? "",
+  raises: list(body, "raises"),
+  followsFrom: list(body, "followsFrom"),
+  planned: list(body, "planned"),
 }));
-
-if (studies.some((s) => !s.slug)) {
- console.error("verify:graph: could not parse a slug in every study block");
- process.exit(1);
-}
 
 const errors = [];
 const fail = (msg) => errors.push(msg);

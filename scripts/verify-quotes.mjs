@@ -32,42 +32,30 @@
  *
  * Exit codes: 0 = all quotations verified, 1 = misquote or unattributed span.
  */
-import { readFileSync, readdirSync } from "node:fs";
-import { resolve, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import { readdirSync } from "node:fs";
+import { resolve } from "node:path";
+import {
+  expandChapter,
+  expandRef,
+  fail,
+  loadQuestionBlocks,
+  loadScripture,
+  readSource,
+  root,
+} from "./lib/source.mjs";
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const SIM_FAIL = 0.75;
 
 // ---- load allowlist ----------------------------------------------------------
 let allowlist = {};
 try {
-  allowlist = JSON.parse(readFileSync(resolve(root, "scripts/quote-allowlist.json"), "utf8"));
+  allowlist = JSON.parse(readSource("scripts/quote-allowlist.json"));
 } catch {
   /* no allowlist yet */
 }
 
 // ---- parse scripture ---------------------------------------------------------
-const file = readFileSync(resolve(root, "src/data/scripture.ts"), "utf8");
-const STR = '"(?:[^"\\\\]|\\\\.)*"';
-const versesStart = file.indexOf("export const verses");
-const chaptersStart = file.indexOf("export const chapters");
-const versesBlock = file.slice(versesStart, chaptersStart);
-
-/** Parse one string literal from the generated scripture module. Malformed
- *  entries are a broken checkout, not a quote problem: say so and stop. */
-function parseLiteral(literal) {
-  try {
-    return JSON.parse(literal);
-  } catch {
-    console.error(`verify:quotes: could not parse scripture literal ${literal.slice(0, 60)}`);
-    process.exit(1);
-  }
-}
-
-const verses = new Map();
-for (const m of versesBlock.matchAll(new RegExp(`^  (${STR}): (${STR}),$`, "gm")))
-  verses.set(parseLiteral(m[1]), parseLiteral(m[2]));
+const { verses } = loadScripture();
 
 const norm = (t) =>
   t.toLowerCase()
@@ -270,37 +258,21 @@ const isCodeShaped = (span) =>
   /[\p{L}\d]-[\p{L}\d]|[\[\]{}<>=|\\/+*#%^~`_@]|https?:|\p{L}:\p{L}|\p{L}:\d/u.test(span);
 
 const REF_IN_ARRAY = /"((?:\d\s)?[A-Za-z]+(?:\s[A-Za-z]+)*\s\d+:\d+(?:-\d+)?)"|\{ book: "([^"]+)", chapter: (\d+)/g;
-function expandRef(ref) {
-  const m = ref.match(/^(.*?)\s(\d+):(\d+)(?:-(\d+))?$/);
-  if (!m) return [];
-  const book = m[1] === "Psalm" ? "Psalms" : m[1];
-  const out = [];
-  for (let v = +m[3]; v <= +(m[4] ?? m[3]); v++) {
-    const k = `${book} ${m[2]}:${v}`;
-    if (verses.has(k)) out.push(k);
-  }
-  return out;
-}
-function expandChapter(book, ch) {
-  const b = book === "Psalm" ? "Psalms" : book;
-  const out = [];
-  for (const [k] of verses)
-    if (k.startsWith(`${b} ${ch}:`)) out.push(k);
-  return out;
-}
 
 function collectQuestions() {
-  const src = readFileSync(resolve(root, "src/data/questions.ts"), "utf8");
   const checks = [];
-  const blocks = src.split(/slug: "/).slice(1);
-  for (const b of blocks) {
-    const slug = b.slice(0, b.indexOf('"'));
+  for (const { slug, body } of loadQuestionBlocks()) {
     const refs = new Set();
-    for (const m of b.matchAll(REF_IN_ARRAY)) {
-      if (m[1]) expandRef(m[1]).forEach((k) => refs.add(k));
-      else if (m[2]) expandChapter(m[2], +m[3]).forEach((k) => refs.add(k));
+    for (const m of body.matchAll(REF_IN_ARRAY)) {
+      if (m[1]) expandRef(m[1], verses).forEach((k) => refs.add(k));
+      else if (m[2]) expandChapter(m[2], +m[3], verses).forEach((k) => refs.add(k));
     }
-    for (const span of quotedSpans(b)) {
+    const spans = quotedSpans(body);
+    // Quote marks but no extracted span means the extraction, not the copy,
+    // changed: fail instead of quietly checking one study less.
+    if (!spans.length && /\\"|\u201C/u.test(body))
+      fail(`verify:quotes: ${slug} contains quote marks but no span was extracted`);
+    for (const span of spans) {
       if (isCodeShaped(span)) continue;
       checks.push({ span, where: slug, refs });
     }
@@ -309,16 +281,20 @@ function collectQuestions() {
 }
 
 function collectConnections() {
-  const src = readFileSync(resolve(root, "src/data/connections.ts"), "utf8");
+  const src = readSource("src/data/connections.ts");
   const checks = [];
   // split at top-level keys: lines starting with  "Book C:V": [
   const entries = [...src.matchAll(/^  "((?:\d\s)?[A-Za-z]+(?:\s[A-Za-z]+)*\s\d+:\d+(?:-\d+)?)": \[/gm)];
   for (let e = 0; e < entries.length; e++) {
     const keyRef = entries[e][1];
     const body = src.slice(entries[e].index, entries[e + 1]?.index ?? src.length);
-    const refs = new Set(expandRef(keyRef));
-    for (const m of body.matchAll(/c\("([^"]+)"/g)) expandRef(m[1]).forEach((k) => refs.add(k));
-    for (const span of quotedSpans(body)) {
+    const refs = new Set(expandRef(keyRef, verses));
+    for (const m of body.matchAll(/c\("([^"]+)"/g))
+      expandRef(m[1], verses).forEach((k) => refs.add(k));
+    const spans = quotedSpans(body);
+    if (!spans.length && /\\"|\u201C/u.test(body))
+      fail(`verify:quotes: connections ${keyRef} contains quote marks but no span was extracted`);
+    for (const span of spans) {
       if (isCodeShaped(span)) continue;
       checks.push({ span, where: `connections:${keyRef}`, refs });
     }
@@ -338,14 +314,8 @@ function collectConnections() {
 let kjvNormalized = null;
 function kjvCorpus() {
   if (kjvNormalized) return kjvNormalized;
-  const src = readFileSync(resolve(root, "src/data/scripture-kjv.ts"), "utf8");
-  const block = src.slice(
-    src.indexOf("export const verses"),
-    src.indexOf("export const chapters"),
-  );
-  kjvNormalized = [];
-  for (const m of block.matchAll(new RegExp(`^  (${STR}): (${STR}),$`, "gm")))
-    kjvNormalized.push([parseLiteral(m[1]), norm(parseLiteral(m[2]))]);
+  const { verses: kjv } = loadScripture("src/data/scripture-kjv.ts");
+  kjvNormalized = [...kjv].map(([ref, text]) => [ref, norm(text)]);
   return kjvNormalized;
 }
 function findVerbatimKjv(frag) {
@@ -378,7 +348,7 @@ function collectComponents() {
     for (const rel of readdirSync(resolve(root, dir), { recursive: true })) {
       if (!/\.(tsx?|jsx?)$/.test(rel)) continue;
       const where = `${dir}/${rel}`;
-      const src = readFileSync(resolve(root, where), "utf8");
+      const src = readSource(where);
       for (const span of quotedSpans(src)) {
         if (isCodeShaped(span)) continue;
         checks.push({ span, where, refs: new Set(), allowKjv: true });
@@ -389,19 +359,16 @@ function collectComponents() {
 }
 
 // ---- run ----------------------------------------------------------------------
-const componentChecks = collectComponents();
-// A refactor of the file walk would otherwise quietly stop checking the UI copy.
-if (componentChecks.length === 0) {
-  console.error(
-    "verify:quotes: no quoted spans found in src/components or src/app; the UI copy is not being checked",
-  );
-  process.exit(1);
-}
-const checks = [
-  ...collectQuestions(),
-  ...collectConnections(),
-  ...componentChecks,
-];
+const bySource = {
+  questions: collectQuestions(),
+  connections: collectConnections(),
+  components: collectComponents(),
+};
+// A refactor of the file walk would otherwise quietly stop checking a source.
+for (const [name, list] of Object.entries(bySource))
+  if (list.length === 0)
+    fail(`verify:quotes: no quoted spans found in ${name}; that copy is no longer being checked`);
+const checks = [...bySource.questions, ...bySource.connections, ...bySource.components];
 console.log(`checking ${checks.length} quoted spans against ${verses.size} vendored WEB verses`);
 
 const problems = [];

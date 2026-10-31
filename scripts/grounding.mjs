@@ -3,41 +3,32 @@
 // its cited verse texts (from vendored scripture.ts) and the passage focus ranges.
 // The reviewer reads this pack + the relevant questions.ts region and verifies
 // quote accuracy and grounding without needing shell access.
-import { readFileSync } from "node:fs";
+import {
+  canonicalBook as canonical,
+  loadQuestionBlocks,
+  loadScripture,
+  parseRef,
+  verseKeys,
+} from "./lib/source.mjs";
 
-const questionsSrc = readFileSync("src/data/questions.ts", "utf8");
-const scriptureSrc = readFileSync("src/data/scripture.ts", "utf8");
-
-const verses = {};
-for (const m of scriptureSrc.matchAll(/^\s{2}"([^"]+)": "((?:[^"\\]|\\.)*)",$/gm)) verses[m[1]] = m[2];
-const chapters = {};
-for (const m of scriptureSrc.matchAll(/^\s{2}"([^"]+)": \[/gm)) chapters[m[1]] = true;
-const BOOK_ALIASES = { Psalm: "Psalms" };
-const canonical = (b) => BOOK_ALIASES[b] ?? b;
+const { verses, chapters } = loadScripture();
 
 const target = process.argv[2];
-const blocks = questionsSrc.split(/slug: "/).slice(1);
-let found = null;
-for (const b of blocks) {
-  const slug = b.slice(0, b.indexOf('"'));
-  if (slug === target) { found = b; break; }
+const found = loadQuestionBlocks().find((b) => b.slug === target)?.body ?? null;
+if (!found) {
+  console.error("slug not found:", target);
+  process.exit(1);
 }
-if (!found) { console.error("slug not found:", target); process.exit(1); }
 
 const get = (re) => { const m = found.match(re); return m ? m[1] : null; };
 const refs = (re) => { const m = found.match(re); return m && m[1].trim() ? [...m[1].matchAll(/(?:"([^"]+)")/g)].map((s) => s[1]) : []; };
 
 const refText = (ref) => {
-  const m = ref.match(/^(.*?)\s(\d+):(\d+)(?:-(\d+))?$/);
-  if (!m) return "UNPARSEABLE";
-  const book = canonical(m[1]);
-  const c = +m[2];
-  const parts = [];
-  for (let v = +m[3]; v <= +(m[4] ?? m[3]); v++) {
-    const k = `${book} ${c}:${v}`;
-    parts.push(`[${k}] ${verses[k] ?? "MISSING"}`);
-  }
-  return parts.join("\n");
+  const parsed = parseRef(ref);
+  if (!parsed) return "UNPARSEABLE";
+  return verseKeys(parsed)
+    .map((key) => `[${key}] ${verses.get(key) ?? "MISSING"}`)
+    .join("\n");
 };
 
 let out = `# Grounding pack for question: ${target}\n\n`;
@@ -53,7 +44,7 @@ if (pm) {
     const title = p.match(/title: "([^"]+)"/)?.[1];
     const focus = p.match(/focus: "([^"]+)"/)?.[1];
     const key = canonical(book) + " " + chapter;
-    out += `- ${book} ${chapter} "${title}" focus ${focus ?? "whole chapter"} — chapter exists: ${chapters[key] === true ? "yes" : "MISSING"}\n`;
+    out += `- ${book} ${chapter} "${title}" focus ${focus ?? "whole chapter"} — chapter exists: ${chapters.has(key) ? "yes" : "MISSING"}\n`;
   }
 }
 out += "\n## Study points\n";
