@@ -6082,7 +6082,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Romans 3:23", "Romans 6:23", "Romans 3:19", "Psalm 51:4", "Romans 8:1"],
-    raises: ["why-did-jesus-have-to-die", "how-can-i-be-saved", "what-is-justification", "what-is-hell"],
+    raises: ["why-did-jesus-have-to-die", "how-can-i-be-saved", "what-is-justification", "what-is-hell", "what-happens-to-children-who-die"],
     followsFrom: ["what-is-sin", "what-does-it-mean-to-be-made-in-gods-image"],
     related: ["what-is-sin", "why-did-jesus-have-to-die", "what-happens-when-i-die", "is-god-in-control"],
     planned: [],
@@ -12778,11 +12778,196 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Genesis 1:27", "Psalm 8:4-5", "Genesis 9:6", "Psalm 139:13-14", "Matthew 16:26"],
-    raises: ["what-is-sin", "what-does-it-mean-to-be-made-in-gods-image", "made-for-relationship"],
+    raises: ["what-is-sin", "what-does-it-mean-to-be-made-in-gods-image", "made-for-relationship", "what-does-the-bible-say-about-the-life-of-the-unborn"],
     followsFrom: ["what-does-it-mean-to-be-made-in-gods-image", "what-is-sin"],
     related: ["what-does-it-mean-to-be-made-in-gods-image", "what-is-sin", "made-for-relationship", "what-is-the-resurrection"],
-    planned: ["How should the image of God shape how I treat the poor and the unborn?"],
+    planned: ["How should the image of God shape how I treat the poor?"],
     order: 53,
+  },
+
+  {
+    slug: "what-does-the-bible-say-about-the-life-of-the-unborn",
+    question: "What does the Bible say about the life of the unborn?",
+    category: "who-we-are",
+    summary:
+      "Scripture describes the unborn as God's own workmanship, known and written in His book before a single day had passed: a neighbor, not raw material. It calls the blood of children innocent, and it forbids human hands to shed it. It also refuses to hide that God claims the right over life and death for Himself, which is why the case against taking an unborn life rests on the worth of the child rather than on a claim about what God would never do.",
+    passages: [
+      {
+        book: "Psalms",
+        chapter: 139,
+        title: "Knitted together in the womb",
+        lookFor: "The psalmist speaks of himself in the womb as known, seen, and written in God's book before a single day had passed.",
+        focus: "13-16",
+      },
+      {
+        book: "Psalms",
+        chapter: 106,
+        title: "Innocent blood, the blood of sons and daughters",
+        lookFor: "Israel adopts the worship of Canaan, and the psalm names what it cost: the blood of their own children, which God calls innocent.",
+        focus: "34-43",
+      },
+      {
+        book: "Numbers",
+        chapter: 5,
+        title: "The water of bitterness",
+        lookFor: "A husband who suspects and cannot prove must bring his wife before God rather than judge her himself. Notice what the passage does say about her, and what it never mentions at all.",
+        focus: "11-31",
+      },
+      {
+        book: "Genesis",
+        chapter: 7,
+        title: "The flood: who died",
+        lookFor: "God said He would destroy man whom He had created, and the account insists that all flesh died, every man, every living thing on dry land.",
+        focus: "11-24",
+      },
+      {
+        book: "Genesis",
+        chapter: 9,
+        title: "Blood required at the hand of man",
+        lookFor: "God reserves the taking of life to Himself and puts the sword of justice into human hands, on the ground of His own image.",
+        focus: "1-7",
+      },
+      {
+        book: "Exodus",
+        chapter: 21,
+        title: "The pregnant woman struck in a fight",
+        lookFor: "The law counts the harm done to the woman and to the child she carries, and it sets the price of a life at a life.",
+        focus: "22-25",
+      },
+    ],
+    points: [
+      {
+        heading: "Knitted together in the womb",
+        body:
+          "The psalmist is not describing a candidate for personhood; he is describing himself. 'For you formed my inmost being. You knit me together in my mother's womb,' and then, 'Your eyes saw my body. In your book they were all written, the days that were ordained for me, when as yet there were none of them.' Job reasons from the same ground when he pleads that servant and master share one Maker: 'Didn't one fashion us in the womb?' Jeremiah is told the call reached him before he drew breath: 'Before I formed you in the belly, I knew you. Before you came out of the womb, I sanctified you.' And the New Testament has no vocabulary of potential. When Elizabeth greets Mary, 'the baby leaped in my womb for joy.'",
+        verses: ["Psalms 139:13", "Psalms 139:16", "Job 31:15", "Jeremiah 1:5", "Luke 1:44"],
+      },
+      {
+        heading: "God calls that blood innocent",
+        body:
+          "The Bible's plainest words about killing children are not ambiguous, and they are not softened. Recounting Israel's idolatry, the psalm says, 'They shed innocent blood, even the blood of their sons and of their daughters.' Proverbs puts the same crime among the things Yahweh hates: 'hands that shed innocent blood.' And God does not treat the victims as someone else's property to dispose of. Through Ezekiel He says of the children sacrificed to idols, 'you have slain my children,' and through Jeremiah He denies that the practice ever came from Him: 'which I didn't command, nor did it come into my mind.' Whatever the water of bitterness turns out to mean, it cannot be turned into a warrant for what God here calls the shedding of innocent blood.",
+        verses: ["Psalms 106:38", "Proverbs 6:17", "Ezekiel 16:21", "Jeremiah 7:31"],
+      },
+      {
+        heading: "Numbers 5 is a case about an accusation",
+        body:
+          "Notice first what the passage does not say: it never mentions a child. The case it describes is a husband who suspects and cannot prove, where a man has lain with her 'and it is hidden from the eyes of her husband,' so that 'there is no witness against her.' The law explicitly covers the possibility that the suspicion is false: 'or if the spirit of jealousy comes on him, and he is jealous of his wife, and she isn't defiled.' The offering is the cheapest grain offering the Torah allows, 'the tenth part of an ephah of barley meal,' with no oil and no frankincense, because this is a plea for a verdict rather than a feast. And the verdict in favor of the innocent woman is stated in the language of fertility: 'then she shall be free, and shall conceive seed.' The curse is the exact mirror of that blessing. The stakes the text names are her capacity to bear children, not the life of a child it never names.",
+        verses: ["Numbers 5:13", "Numbers 5:14", "Numbers 5:15", "Numbers 5:28"],
+      },
+      {
+        heading: "It takes the case out of the husband's hands",
+        body:
+          "Whatever the ordeal means, its direction is plain: it takes judgment away from the man who feels wronged. 'The priest shall bring her near, and set her before Yahweh,' not before her accuser. He may not pronounce her guilty, may not punish her, and does not carry out the sentence. He pays for an offering that gains him nothing, and the case becomes God's. The verdict even closes with a word about him: 'The man shall be free from iniquity, and that woman shall bear her iniquity.' Two things should be said plainly rather than excused. The law is asymmetric, since only a wife can be brought to the water, and it is public, with her hair let loose and an oath spoken over her. It is a hard text in a hard world. It is also a restraint: it refuses the husband the private vengeance that came naturally to his neighbors.",
+        verses: ["Numbers 5:16", "Numbers 5:15", "Numbers 5:18", "Numbers 5:31"],
+      },
+      {
+        heading: "God claims the right over life and death",
+        body:
+          "Here the honest answer has to become uncomfortable. Scripture never says that God leaves the lives of the young alone. He says of Himself, 'I kill and I make alive. I wound and I heal,' and Hannah sings, 'Yahweh kills, and makes alive.' At the flood God says, 'I will destroy man whom I have created from the surface of the ground,' and the account is unsparing: 'All flesh died that moved on the earth.' In Egypt, 'Yahweh struck all the firstborn in the land of Egypt.' Nathan tells David that 'Yahweh struck the child that Uriah's wife bore to David.' When Korah rebels, 'The earth opened its mouth and swallowed them up, with their households.' Any argument that begins by denying this can be refuted from the Bible in a single verse, and it does not need to be made. The prohibition on murder is not a limit on God's freedom over life; it is a command He gave to us.",
+        verses: ["Deuteronomy 32:39", "1 Samuel 2:6", "Genesis 6:7", "Genesis 7:21", "Exodus 12:29", "2 Samuel 12:15", "Numbers 16:32"],
+      },
+      {
+        heading: "The law that counts the child, and the hands it binds",
+        body:
+          "The passage that actually speaks to this question is in the case law, and it counts the child: 'If men fight and hurt a pregnant woman so that she gives birth prematurely,' the offender is fined if no further harm follows, but 'if any harm follows, then you must take life for life.' The law prices a life at a life. And the command that protects it is given to human hands, on a ground that is not ours to claim: 'Whoever sheds man's blood, his blood will be shed by man, for God made man in his own image.' Scripture shows what that looks like when the powerful order otherwise. Pharaoh commanded the Hebrew boys to be killed, but 'the midwives feared God, and didn't do what the king of Egypt commanded them, but saved the baby boys alive,' and God dealt well with them. The same distinction holds at the cross, the one event Scripture attributes to two kinds of hands at once: 'being delivered up by the determined counsel and foreknowledge of God, you have taken by the hand of lawless men, crucified and killed.' God gave the life, and the men who took it were guilty.",
+        verses: ["Exodus 21:22", "Exodus 21:23", "Genesis 9:6", "Exodus 1:17", "Exodus 1:20", "Acts 2:23"],
+      },
+    ],
+    keyVerses: ["Psalms 139:13-14", "Psalms 106:38", "Numbers 5:28", "Deuteronomy 32:39", "Exodus 21:22-23"],
+    raises: ["what-does-the-flood-show-us-about-god", "why-did-god-test-abraham-with-isaac", "how-can-i-understand-hard-passages-in-the-bible", "does-everyone-deserve-gods-judgment"],
+    followsFrom: ["why-does-every-human-life-have-dignity-and-worth"],
+    related: ["why-does-every-human-life-have-dignity-and-worth", "what-does-it-mean-to-be-made-in-gods-image", "what-is-sin", "what-does-the-flood-show-us-about-god"],
+    planned: ["How should the church care for a woman who has had an abortion?"],
+    order: 57,
+  },
+
+  {
+    slug: "what-happens-to-children-who-die",
+    question: "What happens to children who die before they can believe?",
+    category: "who-we-are",
+    summary:
+      "The Bible never states a formula in either direction, and it never names an age. What it does give is a principle: guilt tracks knowledge, so the little ones who cannot yet refuse the evil and choose the good are not the ones the warnings are aimed at. Jesus took children in His arms and blessed them, and told us that the will of the Father in heaven is set against any of them perishing. But Scripture will not let us call them innocent either. It calls them children of Adam, and it saves them the way it saves anyone: by the Lamb of God, who takes away the sin of the world.",
+    passages: [
+      {
+        book: "Deuteronomy",
+        chapter: 1,
+        title: "The little ones who could not tell good from evil",
+        lookFor: "A whole generation is barred from the land for unbelief, and God names the one group who still goes in.",
+        focus: "34-40",
+      },
+      {
+        book: "2 Samuel",
+        chapter: 12,
+        title: "The child of David and Bathsheba dies",
+        lookFor: "Watch what David does before the child dies and what he does after, and listen to the reason he gives for the change.",
+        focus: "15-23",
+      },
+      {
+        book: "Matthew",
+        chapter: 18,
+        title: "A child in the middle of the room",
+        lookFor: "Jesus makes a child the standard of the kingdom, then speaks about the will of the Father in heaven toward little ones.",
+        focus: "1-14",
+      },
+      {
+        book: "Mark",
+        chapter: 10,
+        title: "He took them in his arms and blessed them",
+        lookFor: "The disciples treat children as an interruption. Notice what Jesus feels about that, and what he does with his hands.",
+        focus: "13-16",
+      },
+      {
+        book: "Romans",
+        chapter: 5,
+        title: "In Adam, and in Christ",
+        lookFor: "Paul traces death and life back to two men. Notice the one sentence in the middle that says when sin is not charged.",
+        focus: "12-21",
+      },
+    ],
+    points: [
+      {
+        heading: "The ones who cannot yet refuse the evil",
+        body:
+          "Scripture draws a line at knowledge, and it draws it in the plainest places. Barring a whole generation from the land for unbelief, God names the one group who still goes in: 'your children, who this day have no knowledge of good or evil, they shall go in there.' Isaiah dates a child's moral awakening the same way, saying of the promised son that he will 'eat butter and honey when he knows to refuse the evil, and choose the good,' and that before that day comes, two kingdoms will fall. Jonah ends with God measuring a city by the same clock, sparing Nineveh partly because it holds 'more than one hundred twenty thousand persons who can't discern between their right hand and their left hand.' None of these is a doctrine of infant salvation, and none of them mentions death. All three assume the same thing: there is a season of life that judgment does not treat the way it treats the rest of us.",
+        verses: ["Deuteronomy 1:39", "Isaiah 7:15-16", "Jonah 4:11"],
+      },
+      {
+        heading: "Sin is not charged where there is no law",
+        body:
+          "Paul says something in Romans 5 that is easy to read past. Having claimed that death passed to all men because all sinned, he adds a qualification in the very next verse: 'sin is not charged when there is no law.' Death still reigned, he insists, even 'over those whose sins weren't like Adam's disobedience,' but charging is another matter. He describes his own boyhood the same way: 'I was alive apart from the law once, but when the commandment came, sin revived, and I died.' Jesus makes the principle explicit. The servant 'who didn't know, and did things worthy of stripes, will be beaten with few stripes,' because responsibility is measured by what was given. He tells the Pharisees, 'If you were blind, you would have no sin,' and then turns the blade: their claim to see is what leaves their sin in place. He says of the nations, 'If I had not come and spoken to them, they would not have had sin.' And James states the rule plainly: 'To him therefore who knows to do good, and doesn't do it, to him it is sin.'",
+        verses: ["Romans 5:13", "Romans 5:14", "Romans 7:9", "Luke 12:48", "John 9:41", "John 15:22", "James 4:17"],
+      },
+      {
+        heading: "The Father does not will that they perish",
+        body:
+          "Jesus put a child in the middle of the room and made that child the standard: 'Most certainly I tell you, unless you turn, and become as little children, you will in no way enter into the Kingdom of Heaven.' Then He warned that whoever causes 'one of these little ones who believe in me to stumble' would be better off at the bottom of the sea, and added, 'See that you don't despise one of these little ones, for I tell you that in heaven their angels always see the face of my Father who is in heaven.' The paragraph closes on the sentence this whole question turns on: 'Even so it is not the will of your Father who is in heaven that one of these little ones should perish.' Be honest about the grammar. The little ones in view here are the ones who believe in Him, so this is a promise about disciples who are childlike before it is a statement about infants. But it tells us what the Father's will is like, it is the clearest sentence in Scripture on the subject, and it exists in order to deny that these little ones perish. Mark's account shows the same heart with no argument attached. Jesus was moved with indignation at the disciples and said, 'Allow the little children to come to me! Don't forbid them, for the Kingdom of God belongs to such as these,' and then 'took them in his arms, and blessed them, laying his hands on them.'",
+        verses: ["Matthew 18:3", "Matthew 18:6", "Matthew 18:10", "Matthew 18:14", "Mark 10:14", "Mark 10:16"],
+      },
+      {
+        heading: "David went to him",
+        body:
+          "One place in Scripture lets us watch a father lose a child and say out loud what he expects. David fasted and lay all night on the ground and would not eat, and when the child died he washed, worshiped, and ate. His servants could not follow the logic, and his answer is the line this whole conversation rests on: 'I shall go to him, but he will not return to me.' He is not speaking in the abstract. He is refusing to grieve as a man with no hope, on the ground that the road between them runs one way and he is already on it. There is a second witness in 1 Kings 14. Jeroboam's whole house is under sentence, and of that house only one boy comes to a grave, 'because in him there is found some good thing toward Yahweh.' And Jeremiah answers Rachel, who refuses to be comforted for her children, with a command and a promise: 'Refrain your voice from weeping, and your eyes from tears; for your work shall be rewarded... and your children shall come again to their own border.' Matthew takes that same Rachel and sets her weeping at Bethlehem over the slaughtered infants, and calls it fulfilled. Be careful here: narrative is not a formula, and none of these texts was written to settle a doctrine. But they are the shape Scripture keeps making around a child's death, and it is never the shape of despair.",
+        verses: ["2 Samuel 12:16", "2 Samuel 12:20", "2 Samuel 12:23", "1 Kings 14:13", "Jeremiah 31:16-17", "Matthew 2:18"],
+      },
+      {
+        heading: "Not innocent, but Adam's and Christ's",
+        body:
+          "Here the honest answer has to resist the sentimental one. Scripture does not call children neutral. David says, 'Behold, I was born in iniquity. In sin my mother conceived me.' Paul says that we all 'were by nature children of wrath, even as the rest.' And the sentence that makes infants a problem in the first place is Adam's: 'through one trespass, all men were condemned.' So the hope for a child who dies cannot rest on that child's innocence, and any account that builds the hope there will collapse the moment it is pressed. It rests on the second Adam instead. 'For as in Adam all die, so also in Christ all will be made alive.' The Lamb of God 'takes away the sin of the world,' and John says He is 'the atoning sacrifice for our sins, and not for ours only, but also for the whole world.' Whatever else that means, it means the supply is not the bottleneck. The question was never whether the cross is sufficient for a child. It is whether the cross is applied to a child, and there Scripture gives us one sure ground and no arithmetic.",
+        verses: ["Psalms 51:5", "Ephesians 2:3", "Romans 5:18", "1 Corinthians 15:22", "John 1:29", "1 John 2:2"],
+      },
+      {
+        heading: "What Scripture does not give",
+        body:
+          "Scripture never names an age, and it never states the doctrine. Anyone who tells you otherwise is adding to the text. What it does give is the character of the God who decides. He announces Himself as 'Yahweh, Yahweh, a merciful and gracious God, slow to anger, and abundant in loving kindness and truth.' He swears that He takes no pleasure in anyone's death: 'I have no pleasure in the death of the wicked.' He says His will is the opposite of perishing, 'not wishing that any should perish, but that all should come to repentance,' and Paul says He is the One 'who desires all people to be saved and come to full knowledge of the truth.' He denies that He wounds for its own sake: 'he does not afflict willingly, nor grieve the children of men.' And when He speaks of children being burned in the fire, He says it is a thing 'which I didn't command, nor did it come into my mind.' Now weigh the conclusion. If guilt is charged against knowledge, if the Father's will is set against their perishing, if the Judge of all the earth does right, and if Scripture never once says of a dead child that the child is lost, then the burden of proof runs the other way. We are not asked to be certain about what God has not told us. We are asked to trust Him about it, and to stop treating a child's death as the one subject on which the Bible has no mercy.",
+        verses: ["Exodus 34:6", "Ezekiel 33:11", "2 Peter 3:9", "1 Timothy 2:4", "Lamentations 3:33", "Jeremiah 7:31", "Genesis 18:25"],
+      },
+    ],
+    keyVerses: ["Deuteronomy 1:39", "2 Samuel 12:23", "Matthew 18:14", "Mark 10:16", "Romans 5:13"],
+    raises: ["for-whom-did-christ-die", "how-does-god-judge-people-who-never-heard-of-jesus", "will-i-see-them-again"],
+    followsFrom: ["does-everyone-deserve-gods-judgment"],
+    related: ["does-everyone-deserve-gods-judgment", "how-does-god-judge-people-who-never-heard-of-jesus", "what-does-the-bible-say-about-the-life-of-the-unborn", "for-whom-did-christ-die"],
+    planned: ["Why does Scripture record God commanding the death of children?", "How do we talk with a child about death and heaven?"],
+    order: 58,
   },
 
   {

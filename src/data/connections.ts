@@ -6439,6 +6439,79 @@ export const connections: Record<string, Connection[]> = {
       "Isaiah's own invitation runs the same way: seek Him while He may be found, because the nearness is now.",
     ),
   ],
+
+  // ------------------------------------------------------------------
+  // The life of the unborn: innocent blood, and the hands that shed it
+  // ------------------------------------------------------------------
+  "Psalms 139:13": [
+    c(
+      "Jeremiah 1:5",
+      "parallel",
+      "Jeremiah says the same of himself: God knew him and set him apart before he came out of the womb.",
+    ),
+    c(
+      "Luke 1:44",
+      "pattern",
+      "Elizabeth hears the unborn John leap at the sound of Mary's greeting, so the child in the womb answers before he is born.",
+    ),
+  ],
+  "Psalms 106:38": [
+    c(
+      "Proverbs 6:17",
+      "theme",
+      "Proverbs lists hands that shed innocent blood among the things Yahweh hates, the same charge the psalm brings against Israel.",
+    ),
+    c(
+      "Matthew 2:16",
+      "parallel",
+      "Herod kills the male children of Bethlehem, and the New Testament records it as murder rather than as a king's prerogative.",
+    ),
+  ],
+  "Exodus 1:17": [
+    c(
+      "Acts 5:29",
+      "pattern",
+      "Peter and the apostles take the stand the midwives took: when a ruler commands what God forbids, the command loses.",
+    ),
+  ],
+  "Genesis 9:6": [
+    c(
+      "James 3:9",
+      "theme",
+      "James applies the same ground to the tongue: the image of God is why a human being may not even be cursed.",
+    ),
+  ],
+  "Exodus 21:23": [
+    c(
+      "Matthew 5:38-39",
+      "contrast",
+      "Jesus neither abolishes the eye for eye nor copies it; He absorbs the injury instead of repaying it.",
+    ),
+  ],
+  "Numbers 5:31": [
+    c(
+      "Ezekiel 18:20",
+      "theme",
+      "Ezekiel states the principle the closing line assumes: each person answers for his own sin.",
+    ),
+  ],
+  "Deuteronomy 32:39": [
+    c(
+      "1 Samuel 2:6",
+      "parallel",
+      "Hannah's song confesses the same prerogative in nearly the same words.",
+    ),
+    c(
+      "Job 1:21",
+      "theme",
+      "Job names the same right in his grief: Yahweh gave, and Yahweh has taken away.",
+    ),
+    c(
+      "Revelation 1:18",
+      "fulfilled",
+      "The risen Christ holds the keys of Death and of Hades, so the prerogative Moses declares belongs to Him.",
+    ),
+  ],
 };
 
 /** Connections leaving from a verse reference. */
