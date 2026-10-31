@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getPassageText } from "@/data/server";
+import { MAX_REFS_PER_REQUEST } from "@/lib/passage";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
-
-/** Most refs any single page needs at once. */
-const MAX_REFS = 60;
 
 /**
  * Verse text for a set of references, resolved on the server.
@@ -20,6 +18,10 @@ const MAX_REFS = 60;
  *
  * Responses are cacheable: the same refs always return the same text, so a
  * repeated request is served from the CDN instead of re-rendering.
+ *
+ * A request resolves at most MAX_REFS_PER_REQUEST refs. That cap is part of the
+ * contract, not a silent truncation: clients batch to it (see @/lib/passage),
+ * and only refs that come back in the response count as fetched.
  */
 export const revalidate = 3600;
 
@@ -37,7 +39,7 @@ export function GET(req: NextRequest) {
     .split("|")
     .map((r) => r.trim())
     .filter(Boolean)
-    .slice(0, MAX_REFS);
+    .slice(0, MAX_REFS_PER_REQUEST);
 
   const passages: Record<string, { web: string | null; kjv: string | null }> = {};
   for (const ref of refs) {
