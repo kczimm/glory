@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { resolveVersion } from "@/lib/translation";
+import { useTranslation } from "@/lib/useTranslation";
 
 export interface SearchHit {
   ref: string;
@@ -35,8 +35,15 @@ export interface SearchState extends ApiResults {
  * Debounced, abortable search against /api/search. The Bible index lives on
  * the server; the browser only ever sees the matched slice. `status` lets
  * callers show pending and failure UI instead of a silently empty dropdown.
+ *
+ * The active translation is a real dependency (and a subscription, via
+ * useTranslation): snippets are rendered in the language the API returned, so
+ * switching WEB/KJV with results on screen has to refetch. Reading the version
+ * inside the fetch without depending on it left stale-language snippets until
+ * the reader retyped.
  */
 export function useSearch(term: string, verseLimit = 5, qLimit = 4): SearchState {
+  const { version } = useTranslation();
   const [results, setResults] = useState<ApiResults>(EMPTY);
   const [status, setStatus] = useState<SearchStatus>("idle");
 
@@ -55,9 +62,7 @@ export function useSearch(term: string, verseLimit = 5, qLimit = 4): SearchState
         const params = new URLSearchParams({ q: term.trim() });
         if (verseLimit !== 8) params.set("verses", String(verseLimit));
         if (qLimit !== 6) params.set("studies", String(qLimit));
-        // Pass current translation to the search API
-        const translation = resolveVersion(new URLSearchParams(window.location.search));
-        if (translation !== "web") params.set("version", translation);
+        if (version !== "web") params.set("version", version);
         const res = await fetch(`/api/search?${params}`, { signal: ctrl.signal });
         if (!res.ok) {
           setStatus("error");
@@ -75,7 +80,7 @@ export function useSearch(term: string, verseLimit = 5, qLimit = 4): SearchState
       ctrl.abort();
       window.clearTimeout(timer);
     };
-  }, [term, verseLimit, qLimit]);
+  }, [term, verseLimit, qLimit, version]);
 
   return { ...results, status };
 }
