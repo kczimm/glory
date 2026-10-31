@@ -32,6 +32,7 @@ import {
   studyItems,
   visitIntroItems,
 } from "../src/lib/audio-text.ts";
+import { joinPassage, parseRef } from "../src/data/ref.ts";
 import { verses, chapters } from "../src/data/scripture.ts";
 import { questions } from "../src/data/questions.ts";
 
@@ -44,29 +45,16 @@ function arg(name, fallback) {
 const VOICE = arg("--voice", "kokoro-am_michael");
 const OUT = arg("--out", "audio-manifest.json");
 
-// ---- verse text resolution (mirrors getPassageText in src/data/index.ts) ----
+// ---- verse text resolution --------------------------------------------------
+// The app's own ref parser (src/data/ref.ts) and verse joiner, the same pair
+// getPassageText in src/data/server.ts is built from. Importing them instead of
+// re-implementing the grammar is what keeps this pipeline's text, and therefore
+// its hashes and file names, byte-identical to playback.
 
-function parseRef(ref) {
-  const m = ref.match(/^(.+?)\s(\d+):(\d+)(?:-(\d+))?$/);
-  if (!m) return null;
-  return {
-    book: canonicalBook(m[1]),
-    chapter: Number(m[2]),
-    start: Number(m[3]),
-    end: Number(m[4] ?? m[3]),
-  };
-}
-
+/** The verses a ref covers, joined exactly as playback joins them. */
 function verseText(ref) {
-  const p = parseRef(ref);
-  if (!p) return null;
-  const parts = [];
-  for (let v = p.start; v <= p.end; v++) {
-    const t = verses[`${p.book} ${p.chapter}:${v}`];
-    if (!t) return null;
-    parts.push(t.replace(/\n+/g, " "));
-  }
-  return parts.join(" ");
+  const parsed = parseRef(ref);
+  return parsed ? joinPassage((key) => verses[key], parsed) : null;
 }
 
 // ---- build the manifest ----------------------------------------------------
