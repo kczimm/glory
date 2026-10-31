@@ -335,6 +335,37 @@ function findVerbatimKjv(frag) {
 }
 
 /**
+ * Quoted copy this file cannot see, or null when the file is fine.
+ *
+ * Two shapes count as quoted copy:
+ *
+ *  1. the shapes quotedSpans recognises (curly double quotes, escaped straight
+ *     pairs inside strings): if one is present, extraction must have yielded a
+ *     span, otherwise the extractor, not the copy, changed;
+ *  2. `&ldquo;...&rdquo;` entities around prose. The extractor cannot see those
+ *     at all, which is precisely how the footer's Acts 17:11 went unchecked
+ *     before finding 2, and how a rewrite of any component quote today would
+ *     drop out of coverage without a word. The rule is therefore: hand-written
+ *     quotations are written with curly quote characters, so they are
+ *     checked; if a file quotes prose with entities, fail and say which run.
+ *
+ * The 6-character minimum and the code-shape exclusion are the extractor's own,
+ * so JSX such as `&ldquo;<VerseText verse={ref} />&rdquo;` and short labels such
+ * as `&ldquo;Hold&rdquo;` are not mistaken for hand-written copy.
+ */
+function uncheckedQuotedCopy(src, spans) {
+  const marked = src.replace(/\\"/g, "\u0001");
+  if (!spans.length && /\u0001[^\u0001\n]{6,}\u0001|\u201C[^\u201D\n]{6,}\u201D/u.test(marked))
+    return "has quote marks in a shape the extractor recognises but yielded no span";
+  for (const m of src.matchAll(/&ldquo;([\s\S]*?)&rdquo;/g)) {
+    const run = m[1];
+    if (run.length >= 6 && !isCodeShaped(run))
+      return `quotes ${JSON.stringify(run.trim().slice(0, 40))} with HTML entities, which this checker cannot read`;
+  }
+  return null;
+}
+
+/**
  * Quoted spans in the UI copy: components and pages render scripture by hand in
  * places (the footer's Acts 17:11, the search page's John 5:39) and there is
  * nothing structural tying a span to a ref there. They are therefore checked
@@ -349,7 +380,12 @@ function collectComponents() {
       if (!/\.(tsx?|jsx?)$/.test(rel)) continue;
       const where = `${dir}/${rel}`;
       const src = readSource(where);
-      for (const span of quotedSpans(src)) {
+      const spans = quotedSpans(src);
+      // Per file, not per directory: one component losing its extractable
+      // quotes must fail by name, not hide behind the others' spans.
+      const unchecked = uncheckedQuotedCopy(src, spans);
+      if (unchecked) fail(`verify:quotes: ${where} ${unchecked}`);
+      for (const span of spans) {
         if (isCodeShaped(span)) continue;
         checks.push({ span, where, refs: new Set(), allowKjv: true });
       }

@@ -60,6 +60,20 @@ const scriptureCache = new Map();
  *
  * Returns `verses` (Map of ref -> text, in canonical order), `chapters`
  * (Map of "Book N" -> highest verse number), and the raw `source`.
+ *
+ * The parse is cross-checked against a second, independent reading of the same
+ * file: the chapters block lists every verse again as `{ n, text }` entries, in
+ * a different shape and in a different block, so a formatting drift that costs
+ * the verses block some lines shows up as a per-chapter disagreement here
+ * instead of quietly shrinking the corpus every verifier loads.
+ *
+ * Note on the number of verses: summing the chapter maxima is NOT a usable
+ * cross-check, because verse numbering is not contiguous in the WEB. The
+ * chapters block numbers each chapter to its full length (31099 in total)
+ * while the verses block carries 31095, four of them absent from the WEB
+ * corpus altogether (Acts 8:37, Acts 15:34, Acts 24:7, Luke 17:36). The KJV
+ * agrees both ways at 31102. Counting the chapters block's verse entries is
+ * exact for both files.
  */
 export function loadScripture(file = "src/data/scripture.ts") {
   const cached = scriptureCache.get(file);
@@ -77,15 +91,36 @@ export function loadScripture(file = "src/data/scripture.ts") {
     verses.set(parseLiteral(m[1], file), parseLiteral(m[2], file));
 
   const chapters = new Map();
+  /** verses the chapters block itself lists, per chapter */
+  const chapterVerseLines = new Map();
   for (const m of source.matchAll(/^  "([^"]+)": \[([\s\S]*?)\n  \],/gm)) {
     const nums = [...m[2].matchAll(/\{ n: (\d+),/g)].map((x) => +x[1]);
     chapters.set(m[1], nums.length ? Math.max(...nums) : 0);
+    chapterVerseLines.set(m[1], nums.length);
   }
 
   if (!verses.size || !chapters.size)
     fail(
       `${file}: parsed ${verses.size} verses and ${chapters.size} chapters; the file's shape has changed`,
     );
+
+  // Independent count: how many verses the chapters block lists, per chapter,
+  // against how many verse lines the verses block yielded for that chapter.
+  const parsedPerChapter = new Map();
+  for (const key of verses.keys()) {
+    const chapter = key.slice(0, key.lastIndexOf(":"));
+    parsedPerChapter.set(chapter, (parsedPerChapter.get(chapter) ?? 0) + 1);
+  }
+  for (const [chapter, listed] of chapterVerseLines) {
+    const parsed = parsedPerChapter.get(chapter) ?? 0;
+    if (parsed !== listed)
+      fail(
+        `${file}: ${chapter} lists ${listed} verses in the chapters block but ${parsed} verse lines parsed; the verses block's shape has drifted`,
+      );
+  }
+  for (const chapter of parsedPerChapter.keys())
+    if (!chapterVerseLines.has(chapter))
+      fail(`${file}: parsed verses for "${chapter}", which is not a chapter in this file`);
 
   const loaded = { source, verses, chapters };
   scriptureCache.set(file, loaded);
