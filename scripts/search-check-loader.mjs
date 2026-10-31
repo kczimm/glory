@@ -25,6 +25,12 @@ function tryResolve(spec) {
 }
 
 export async function resolve(specifier, context, nextResolve) {
+  // The app's server-side modules import the `server-only` marker, whose default
+  // export throws on import. Under node there is no server/client build, so an
+  // empty module stands in for it and the real search code can be exercised.
+  if (specifier === "server-only") {
+    return { url: "data:text/javascript,export {}", shortCircuit: true };
+  }
   let base = null;
   let spec = null;
   if (specifier.startsWith("@/")) {

@@ -12,55 +12,35 @@
 //  6. planned[] entries do not match an existing question (no stale "Coming soon").
 //  7. Duplicate slugs, duplicate orders within a category.
 
-import { readFileSync } from "node:fs";
+import { parseFocus } from "../src/lib/focus.ts";
+import {
+  allLists,
+  canonicalBook,
+  field,
+  list,
+  loadQuestionBlocks,
+  loadScripture,
+  parseRef,
+  readSource,
+  verseKeys,
+} from "./lib/source.mjs";
 
-const questionsSrc = readFileSync("src/data/questions.ts", "utf8");
-const scriptureSrc = readFileSync("src/data/scripture.ts", "utf8");
+const questionsSrc = readSource("src/data/questions.ts");
 
 // ---- parse vendored verse keys -------------------------------------------------
-const verseKeys = new Set(
-  [...scriptureSrc.matchAll(/^\s{2}"([^"]+)": "/gm)].map((m) => m[1])
-);
-const chapterKeys = new Set(
-  [...scriptureSrc.matchAll(/^\s{2}"([^"]+)": \[/gm)].map((m) => m[1])
-);
-const chapterLens = new Map();
-for (const m of scriptureSrc.matchAll(/^\s{2}"([^"]+)": \[([\s\S]*?)\n\s*\],/gm)) {
-  const nums = [...m[2].matchAll(/\{ n: (\d+),/g)].map((x) => +x[1]);
-  if (nums.length) chapterLens.set(m[1], Math.max(...nums));
-}
-const BOOK_ALIASES = { Psalm: "Psalms" };
-const canonicalBook = (b) => BOOK_ALIASES[b] ?? b;
+const { verses, chapters } = loadScripture();
 
-// ---- parse questions.ts (crude but reliable given consistent formatting) -------
-const blocks = questionsSrc.split(/slug: "/).slice(1);
+// ---- parse questions.ts --------------------------------------------------------
 const questions = [];
-for (const b of blocks) {
-  const slug = b.slice(0, b.indexOf('"'));
-  const get = (re) => {
-    const m = b.match(re);
-    return m ? m[1] : null;
-  };
-  const arr = (re) => {
-    const m = b.match(re);
-    return m && m[1].trim() ? [...m[1].matchAll(/"([^"]+)"/g)].map((s) => s[1]) : [];
-  };
-  // All `verses: [...]` arrays in the block, across EVERY study point (and any
-  // other spot that cites verses). `.match()` only returns the first array per
-  // block, which is how a broken ref in a later point used to slip through.
-  const allRefs = (arrName) => {
-    const out = [];
-    for (const m of b.matchAll(new RegExp(`${arrName}: \\[([^\\]]*)\\]`, "g"))) {
-      out.push(...(m[1].trim() ? [...m[1].matchAll(/"(?:[^"\\]|\\.)*"/g)].map((s) => s[0].slice(1, -1)) : []));
-    }
-    return out;
-  };
+for (const { slug, body: b } of loadQuestionBlocks(questionsSrc)) {
   questions.push({
     slug,
-    question: get(/question: "([^"]+)"/),
-    category: get(/category: "([^"]+)"/),
-    summary: get(/summary:\s*\n?\s*"([\s\S]*?)",\n\s*passages/) ?? get(/summary:\s*"([^"]+)"/),
-    order: get(/order: (\d+)/),
+    question: field(b, "question"),
+    category: field(b, "category"),
+    summary:
+      b.match(/summary:\s*\n?\s*"([\s\S]*?)",\n\s*passages/)?.[1] ??
+      field(b, "summary"),
+    order: b.match(/order: (\d+)/)?.[1] ?? null,
     passages: (() => {
       const pm = b.match(/passages: \[([\s\S]*?)\n\s*\],/);
       if (!pm) return [];
@@ -72,11 +52,11 @@ for (const b of blocks) {
         focus: blk.match(/focus: "([^"]+)"/)?.[1],
       }));
     })(),
-    verses: [...new Set([...allRefs("verses"), ...allRefs("keyVerses")])],
-    raises: arr(/raises: \[([^\]]*)\]/),
-    followsFrom: arr(/followsFrom: \[([^\]]*)\]/),
-    related: arr(/related: \[([^\]]*)\]/),
-    planned: arr(/planned: \[([^\]]*)\]/),
+    verses: [...new Set([...allLists(b, "verses"), ...allLists(b, "keyVerses")])],
+    raises: list(b, "raises"),
+    followsFrom: list(b, "followsFrom"),
+    related: list(b, "related"),
+    planned: list(b, "planned"),
   });
 }
 
@@ -87,33 +67,28 @@ const ok = (cond, msg) => {
 };
 
 // ---- 1 & 2: verse refs and passages resolve ------------------------------------
-const REF_RE = /^(.*?)\s(\d+):(\d+)(?:-(\d+))?$/;
 for (const q of questions) {
   for (const ref of q.verses) {
-    const m = ref.match(REF_RE);
-    if (!m) {
+    const parsed = parseRef(ref);
+    if (!parsed) {
       ok(false, `${q.slug}: unparseable ref "${ref}"`);
       continue;
     }
-    const book = canonicalBook(m[1]);
-    const c = +m[2];
-    for (let v = +m[3]; v <= +(m[4] ?? m[3]); v++) {
-      ok(verseKeys.has(`${book} ${c}:${v}`), `${q.slug}: missing verse ${book} ${c}:${v} (ref "${ref}")`);
+    for (const key of verseKeys(parsed)) {
+      ok(verses.has(key), `${q.slug}: missing verse ${key} (ref "${ref}")`);
     }
   }
   for (const p of q.passages) {
     const ckey = `${canonicalBook(p.book)} ${p.chapter}`;
-    ok(chapterKeys.has(ckey), `${q.slug}: missing chapter ${p.book} ${p.chapter}`);
+    ok(chapters.has(ckey), `${q.slug}: missing chapter ${p.book} ${p.chapter}`);
     if (!p.focus) continue;
-    const parts = p.focus.split(",").map((s) => s.trim());
-    const fms = parts.map((part) => part.match(/^(\d+)(?:-(\d+))?$/));
-    ok(fms.every((fm) => fm), `${q.slug}: unparseable focus "${p.focus}" in ${p.book} ${p.chapter}`);
-    const len = chapterLens.get(ckey) ?? 0;
-    for (const fm of fms) {
-      if (!fm) continue;
-      const start = +fm[1];
-      const end = fm[2] === undefined ? start : +fm[2];
-      ok(start >= 1 && end <= len, `${q.slug}: focus ${p.focus} out of bounds for ${p.book} ${p.chapter} (chapter has ${len ? len : "unknown"} verses)`);
+    // The focus grammar lives in src/lib/focus.ts, shared with the reader and
+    // the audio queue; null means it could not be parsed.
+    const ranges = parseFocus(p.focus);
+    ok(ranges !== null, `${q.slug}: unparseable focus "${p.focus}" in ${p.book} ${p.chapter}`);
+    const len = chapters.get(ckey) ?? 0;
+    for (const r of ranges ?? []) {
+      ok(r.start >= 1 && r.end <= len, `${q.slug}: focus ${p.focus} out of bounds for ${p.book} ${p.chapter} (chapter has ${len ? len : "unknown"} verses)`);
     }
   }
 }

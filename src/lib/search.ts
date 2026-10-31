@@ -1,6 +1,7 @@
 import "server-only";
 import { verses as defaultVerses, questions, graphVerseRefs } from "@/data/server";
 import { getCategory } from "@/data";
+import { parseRef, verseKeys } from "@/data/ref";
 import type { Question } from "@/data/types";
 import type { TranslationCode } from "@/lib/translation-shared";
 
@@ -23,20 +24,95 @@ interface Entry {
   haystack: string;
 }
 
-// Indexes per translation, cached
-const indexes: Map<TranslationCode, Entry[]> = new Map();
+/**
+ * One translation's search index.
+ *
+ * The haystacks are kept per verse (a single joined string was measured here
+ * and lost: it becomes a two-byte string because some verses carry curly
+ * quotes, so scanning it costs about twice per byte). Instead, `byChar` is a
+ * necessary-condition prefilter: a verse that contains a query necessarily
+ * contains each of the query's characters, so we only run `includes` over the
+ * verses that contain the query's rarest character. On a free-text query that
+ * is a few hundred verses instead of 31,000.
+ */
+interface VerseIndex {
+  entries: Entry[];
+  /** bucket -> entry indexes (ascending), one bucket per [0-9a-z] character */
+  byChar: Int32Array[];
+  /** every entry index, ascending; used when a query has no indexed character */
+  all: Int32Array;
+}
 
-function buildIndex(translation: TranslationCode = "web"): Entry[] {
+const BUCKETS = 36; // 0-9 then a-z
+
+/** Bucket for a lowercased char code, or -1 when it is not indexed. */
+function bucketOf(code: number): number {
+  if (code >= 48 && code <= 57) return code - 48; // 0-9
+  if (code >= 97 && code <= 122) return 10 + code - 97; // a-z
+  return -1;
+}
+
+// Indexes per translation, cached
+const indexes: Map<TranslationCode, VerseIndex> = new Map();
+
+const NO_ENTRIES = new Int32Array(0);
+
+function buildIndex(translation: TranslationCode = "web"): VerseIndex {
   const cached = indexes.get(translation);
   if (cached) return cached;
   const verses = translation === "web" ? defaultVerses : getTranslationVerses(translation);
-  const idx: Entry[] = new Array(Object.keys(verses).length);
-  let i = 0;
-  for (const ref of Object.keys(verses)) {
-    idx[i++] = { ref, haystack: `${ref} ${verses[ref]}`.toLowerCase() };
+  const keys = Object.keys(verses);
+  const entries: Entry[] = new Array(keys.length);
+  const lists: number[][] = Array.from({ length: BUCKETS }, () => []);
+  const seen = new Uint8Array(BUCKETS);
+  const touched: number[] = [];
+
+  for (let i = 0; i < keys.length; i++) {
+    const ref = keys[i];
+    const haystack = `${ref} ${verses[ref]}`.toLowerCase();
+    entries[i] = { ref, haystack };
+    for (let j = 0; j < haystack.length; j++) {
+      const b = bucketOf(haystack.charCodeAt(j));
+      if (b >= 0 && !seen[b]) {
+        seen[b] = 1;
+        touched.push(b);
+      }
+    }
+    for (const b of touched) lists[b].push(i);
+    for (const b of touched) seen[b] = 0;
+    touched.length = 0;
   }
-  indexes.set(translation, idx);
-  return idx;
+
+  const all = new Int32Array(keys.length);
+  for (let i = 0; i < keys.length; i++) all[i] = i;
+
+  const index: VerseIndex = {
+    entries,
+    byChar: lists.map((l) => Int32Array.from(l)),
+    all,
+  };
+  indexes.set(translation, index);
+  return index;
+}
+
+/**
+ * The shortest bucket list among the query's characters, i.e. the fewest verses
+ * that could possibly contain it. Empty when a query character occurs in no
+ * verse at all (so the query cannot match); `all` when it has no indexed
+ * character to filter on.
+ */
+function candidates(index: VerseIndex, query: string): Int32Array {
+  let best: Int32Array | null = null;
+  const tested = new Uint8Array(BUCKETS);
+  for (let i = 0; i < query.length; i++) {
+    const b = bucketOf(query.charCodeAt(i));
+    if (b < 0 || tested[b]) continue;
+    tested[b] = 1;
+    const list = index.byChar[b];
+    if (!list.length) return NO_ENTRIES;
+    if (!best || list.length < best.length) best = list;
+  }
+  return best ?? index.all;
 }
 
 /** Get verses for a specific translation. */
@@ -239,31 +315,58 @@ export function searchQuestions(term: string, limit = 6): Question[] {
 
 // ---- scripture ------------------------------------------------------------
 
-/** Every verse the studies cite or the graph touches: the "known" verses. */
+/**
+ * Every verse the studies cite or the graph touches: the "known" verses.
+ *
+ * The graph's refs are not verse keys: they are ranges ("Acts 17:11-12") and
+ * content-side aliases ("Psalm 23:1"), while the verse index is keyed by
+ * canonical single verses ("Psalms 23:1"). Comparing the raw refs against
+ * those keys meant a range or an aliased ref never counted as known, so most
+ * study-cited verses silently failed to float to the top. Both sides are
+ * normalized here, through the same parseRef/verseKeys the rest of the app
+ * uses.
+ */
 let knownRefs: Set<string> | null = null;
 function knownVerseRefs(): Set<string> {
   if (knownRefs) return knownRefs;
-  knownRefs = new Set(graphVerseRefs());
+  knownRefs = new Set<string>();
+  for (const ref of graphVerseRefs()) {
+    const parsed = parseRef(ref);
+    if (!parsed) continue;
+    for (const key of verseKeys(parsed)) knownRefs.add(key);
+  }
   return knownRefs;
 }
 
 /** Case-insensitive substring search of the whole Bible, known verses first. */
 export function searchScripture(term: string, limit = 8, translation: TranslationCode = "web"): VerseHit[] {
   const t = term.trim().toLowerCase().replace(/\s+/g, " ");
-  if (!t) return [];
+  if (!t || limit <= 0) return [];
   const verses = translation === "web" ? defaultVerses : getTranslationVerses(translation);
-  const idx = buildIndex(translation);
+  const index = buildIndex(translation);
   const known = knownVerseRefs();
 
-  const knownHits: Entry[] = [];
-  const otherHits: Entry[] = [];
-  for (const e of idx) {
-    if (e.haystack.includes(t)) {
-      (known.has(e.ref) ? knownHits : otherHits).push(e);
+  // Only the verses that could contain the query are scanned, in verse order,
+  // and the loop stops as soon as the known bucket holds a full page (from
+  // then on `pick` is knownHits alone). Common words used to walk all 31k
+  // verses and collect thousands of hits only to slice them away.
+  const knownHits: number[] = [];
+  const otherHits: number[] = [];
+  for (const i of candidates(index, t)) {
+    const entry = index.entries[i];
+    if (!entry.haystack.includes(t)) continue;
+    if (known.has(entry.ref)) {
+      knownHits.push(i);
+      if (knownHits.length >= limit) break;
+    } else if (otherHits.length < limit) {
+      otherHits.push(i);
     }
   }
+
   const pick = knownHits.length >= limit ? knownHits : [...knownHits, ...otherHits];
-  return pick.slice(0, limit).map((e) => ({ ref: e.ref, text: verses[e.ref] }));
+  return pick
+    .slice(0, limit)
+    .map((i) => ({ ref: index.entries[i].ref, text: verses[index.entries[i].ref] }));
 }
 
 export interface SearchResults {

@@ -35,8 +35,8 @@ function SearchView() {
       </h1>
       <p className="mt-3 text-[15px] leading-relaxed text-ink-soft sm:text-[16px]">
         Every word of the Word, offline, and the studies that point to it.
-        Search the Scriptures, “because in them you think you have eternal life”
-        (John 5:39).
+        Search the Scriptures, “because you think that in them you have eternal
+        life” (John 5:39).
       </p>
 
       <div className="mt-7 flex items-center gap-3 rounded-2xl border border-line bg-surface px-5 py-4 focus-within:border-gold/60">

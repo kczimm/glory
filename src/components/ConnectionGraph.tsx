@@ -125,12 +125,30 @@ function radius(degree: number): number {
   return Math.min(9 + degree * 1.6, 22);
 }
 
-// Deterministic pseudo-jitter in [-0.5, 0.5]: avoids Math.random inside the
-// component (render purity) while still spreading overlapping nodes apart.
-let jitterSeed = 42;
-function jitter(): number {
-  jitterSeed = (jitterSeed * 9301 + 49297) % 233280;
-  return jitterSeed / 233280 - 0.5;
+// Deterministic pseudo-random values derived from a key.
+//
+// The simulation needs a few arbitrary offsets (to split coincident nodes and
+// to fan new nodes out), but Math.random is out: render output must not depend
+// on it, and a module-level seed made the layout depend on how many graphs had
+// been mounted and in what order, so the same verse mapped differently across
+// tabs and re-renders. A hash of the node's own ref is stable everywhere.
+function hashKey(key: string): number {
+  let h = 0x811c9dc5; // FNV-1a, 32-bit
+  for (let i = 0; i < key.length; i++) {
+    h ^= key.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}
+
+/** A stable value in [0, 1) for a key (and optional salt). */
+function unit(key: string, salt = 0): number {
+  return hashKey(`${key}#${salt}`) / 0x1_0000_0000;
+}
+
+/** A stable offset in [-0.5, 0.5) that spreads overlapping nodes apart. */
+function jitter(key: string, salt = 0): number {
+  return unit(key, salt) - 0.5;
 }
 
 export default function ConnectionGraph({ startRef }: { startRef: string }) {
@@ -196,8 +214,9 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
         let dy = b.y - a.y;
         let d2 = dx * dx + dy * dy;
         if (d2 < 1) {
-          dx = jitter();
-          dy = jitter();
+          const pair = `${a.ref}|${b.ref}`;
+          dx = jitter(pair, 1);
+          dy = jitter(pair, 2);
           d2 = 1;
         }
         const repulse = (2600 / d2) * alpha;
@@ -266,7 +285,7 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
   function expand(ref: string) {
     const map = nodesMap;
     const src = map.get(ref);
-    const baseAngle = jitter() * Math.PI * 2 + 3.14;
+    const baseAngle = unit(`expand:${ref}`) * Math.PI * 2 + 3.14;
     let i = 0;
     for (const e of edgesOf(ref)) {
       if (!kinds.has(e.kind)) continue;
@@ -275,8 +294,8 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
       const angle = baseAngle + (i * 2 * Math.PI) / 7;
       map.set(other, {
         ref: other,
-        x: (src?.x ?? W / 2) + Math.cos(angle) * 120 + jitter() * 30,
-        y: (src?.y ?? H / 2) + Math.sin(angle) * 120 + jitter() * 30,
+        x: (src?.x ?? W / 2) + Math.cos(angle) * 120 + jitter(other, 1) * 30,
+        y: (src?.y ?? H / 2) + Math.sin(angle) * 120 + jitter(other, 2) * 30,
         vx: 0,
         vy: 0,
         degree: edgesOf(other).length,

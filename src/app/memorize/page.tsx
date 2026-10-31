@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { useTranslation } from "@/lib/useTranslation";
+import { chunkRefs } from "@/lib/passage";
 import {
   dueCards,
   getServerSnapshot,
@@ -82,8 +83,10 @@ export default function MemorizePage() {
      whole vendored Bible (a 1.4 MB chunk) into this page's bundle to show one
      verse at a time. The route returns both readings, so the card follows the
      reader's translation choice like every other page.
-     Refs are only recorded as fetched once a request has actually succeeded,
-     so a failed or rate-limited request can be retried. */
+     The route caps a request at MAX_REFS_PER_REQUEST refs, so due verses are
+     fetched in batches of that size; refs are only recorded as fetched once
+     the response has actually carried them, so a dropped or failed batch can
+     be retried. */
   const [texts, setTexts] = useState<
     Record<string, { web: string | null; kjv: string | null }>
   >({});
@@ -93,34 +96,40 @@ export default function MemorizePage() {
   const sessionKey = session.map((c) => c.ref).join("|");
 
   useEffect(() => {
-    const missing = sessionKey
-      .split("|")
-      .filter((ref) => ref && !requested.current.has(ref));
-    if (missing.length === 0) return;
+    const wanted = sessionKey.split("|").filter(Boolean);
+    const missing = wanted.filter((ref) => !requested.current.has(ref));
 
     let cancelled = false;
     // A retry deliberately bypasses the route's cache: the point of trying
     // again is a fresh answer, not the same cached failure back.
-    const query = `refs=${encodeURIComponent(missing.join("|"))}`;
-    const url = `/api/passage?${query}${attempt > 0 ? `&retry=${attempt}` : ""}`;
-    fetch(url)
-      .then((res) => {
+    const suffix = attempt > 0 ? `&retry=${attempt}` : "";
+    (async () => {
+      if (missing.length === 0) {
+        // Everything this session needs is already in hand (or there is no
+        // session at all), e.g. after a retry that found nothing left to ask.
+        if (wanted.length > 0) setStatus("ready");
+        return;
+      }
+      setStatus("loading");
+      for (const batch of chunkRefs(missing)) {
+        const query = `refs=${encodeURIComponent(batch.join("|"))}`;
+        const res = await fetch(`/api/passage?${query}${suffix}`);
         if (!res.ok) throw new Error(String(res.status));
-        return res.json();
-      })
-      .then(
-        (
-          data: Record<string, { web: string | null; kjv: string | null }>,
-        ) => {
-          if (cancelled) return;
-          for (const ref of missing) requested.current.add(ref);
-          setTexts((prev) => ({ ...prev, ...data }));
-          setStatus("ready");
-        },
-      )
-      .catch(() => {
-        if (!cancelled) setStatus("error");
-      });
+        const data = (await res.json()) as Record<
+          string,
+          { web: string | null; kjv: string | null }
+        >;
+        if (cancelled) return;
+        // Only the refs the response actually carries are done. A ref it did
+        // not answer stays missing, so the next attempt asks for it again
+        // instead of leaving the card stranded on "could not load".
+        for (const ref of Object.keys(data)) requested.current.add(ref);
+        setTexts((prev) => ({ ...prev, ...data }));
+      }
+      if (!cancelled) setStatus("ready");
+    })().catch(() => {
+      if (!cancelled) setStatus("error");
+    });
 
     return () => {
       cancelled = true;

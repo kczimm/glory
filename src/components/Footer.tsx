@@ -4,10 +4,11 @@ import Link from "next/link";
 import { getTranslationInfo } from "@/lib/translation";
 import { useTranslation } from "@/lib/useTranslation";
 
-/** Acts 17:11 in each translation */
+/** Acts 17:11 in each translation, quoted so the checker in
+ *  scripts/verify-quotes.mjs can hold it to the vendored text word for word. */
 const ACTS_17_11: Record<string, string> = {
-  web: "searching the Scriptures daily to see whether these things were so",
-  kjv: "searched the scriptures daily, whether those things were so",
+  web: "“examining the Scriptures daily to see whether these things were so”",
+  kjv: "“searched the scriptures daily, whether those things were so”",
 };
 
 export default function Footer() {
@@ -27,7 +28,8 @@ export default function Footer() {
           <Link href="/about-translation" className="underline-offset-2 hover:underline">
             {info.name}
           </Link>{" "}
-          (Public Domain). Study with the Bereans in mind: &ldquo;{ACTS_17_11[version]} (Acts 17:11).
+          (Public Domain). Study with the Bereans in mind: {ACTS_17_11[version]}{" "}
+          (Acts 17:11).
         </p>
       </div>
     </footer>

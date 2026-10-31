@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useSyncExternalStore } from "react";
 import type { Passage } from "@/data/types";
 import { chapterItems, filterFocus } from "@/lib/audio-text";
+import { inFocus, parseFocus } from "@/lib/focus";
 import {
   getServerSnapshot,
   getSnapshot,
@@ -96,20 +97,10 @@ export default function ChapterReader({
 
   if (!verses) return null;
 
-  // Same semantics as filterFocus in audio-text.ts: "5-15", "16", or "1-4, 12".
-  const focusRanges = (() => {
-    if (!passage.focus) return null;
-    const ranges: [number, number][] = [];
-    for (const part of passage.focus.split(",")) {
-      const m = part.trim().match(/^(\d+)(?:-(\d+))?$/);
-      if (!m) return null;
-      const start = Number(m[1]);
-      const end = Number(m[2] ?? m[1]);
-      if (end < start) return null;
-      ranges.push([start, end]);
-    }
-    return ranges.length ? ranges : null;
-  })();
+  // Focus "5-15", "16", or "1-4, 12" (same parser as the audio queue). A focus
+  // that cannot be parsed highlights nothing, so the reader is never shown a
+  // highlight the passage did not ask for.
+  const focusRanges = parseFocus(passage.focus);
 
   return (
     <div className="rounded-xl border border-line bg-surface/50">
@@ -156,7 +147,7 @@ export default function ChapterReader({
         >
           {verses.map((v) => {
             const vId = `${passage.book} ${passage.chapter}:${v.n}`;
-            const focused = focusRanges?.some(([s, e]) => v.n >= s && v.n <= e) ?? false;
+            const focused = focusRanges ? inFocus(focusRanges, v.n) : false;
             const speaking = matchesVerse(activeId, vId);
             return (
               <p
