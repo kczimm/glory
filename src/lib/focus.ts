@@ -8,7 +8,14 @@
 
 export type FocusRange = { start: number; end: number };
 
-/** Parse a focus string into inclusive ranges; null when absent/unparseable. */
+/**
+ * Parse a focus string into inclusive ranges; null when absent or unparseable.
+ *
+ * The two null cases are deliberately treated alike (there is no focus to
+ * apply) and each caller decides what that means: the audio queue keeps the
+ * whole chapter, while the reader highlights nothing. That is the behaviour
+ * both surfaces have always had; only the parser is shared.
+ */
 export function parseFocus(focus: string | undefined): FocusRange[] | null {
   if (!focus) return null;
   const ranges: FocusRange[] = [];

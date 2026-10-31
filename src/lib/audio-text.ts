@@ -184,6 +184,8 @@ function hardSplit(text: string): string[] {
 // Ref parsing and canonicalization live in data/ref (the single home for ref
 // syntax); parseRefRaw keeps the book as written so spoken text is stable.
 import { parseRefRaw } from "../data/ref.ts";
+// Focus parsing lives in lib/focus, shared with the chapter reader.
+import { inFocus, parseFocus } from "./focus.ts";
 export { canonicalBook } from "../data/ref.ts";
 
 /** Format a verse ref for the ear: "John chapter 3, verse 16". */
@@ -197,23 +199,23 @@ export function speechRef(ref: string): string {
 
 // ---- verse slicing ---------------------------------------------------------
 
-/** Keep only verses within an optional focus range like "5-15", "16", or "1-4, 12". */
+/**
+ * Keep only verses within an optional focus range like "5-15", "16", or
+ * "1-4, 12".
+ *
+ * An unparseable focus is ignored here (the whole chapter is kept, which is
+ * what this function has always done and what the audio catalog was generated
+ * from). The chapter reader, by contrast, highlights nothing for a focus it
+ * cannot parse; that difference is deliberate at the call sites, and both
+ * share one parser.
+ */
 export function filterFocus(
   verses: AudioTextVerse[],
   focus: string | undefined
 ): AudioTextVerse[] {
-  if (!focus) return verses;
-  const ranges: [number, number][] = [];
-  for (const part of focus.split(",")) {
-    const m = part.trim().match(/^(\d+)(?:-(\d+))?$/);
-    if (!m) return verses;
-    const start = Number(m[1]);
-    const end = Number(m[2] ?? m[1]);
-    if (end < start) return verses;
-    ranges.push([start, end]);
-  }
-  if (!ranges.length) return verses;
-  return verses.filter((v) => ranges.some(([s, e]) => v.n >= s && v.n <= e));
+  const ranges = parseFocus(focus);
+  if (!ranges) return verses;
+  return verses.filter((v) => inFocus(ranges, v.n));
 }
 
 // ---- queue builders (must mirror the components exactly) -------------------
