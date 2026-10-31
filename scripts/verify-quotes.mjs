@@ -7,11 +7,17 @@
  * span to the verse references cited around it and compares word by word:
  *
  *  1. Parse src/data/scripture.ts into verses + per-chapter token flows.
- *  2. Extract quoted spans (curly/straight quotes, >= 5 words) from the two
+ *  2. Extract quoted spans (curly/straight quotes, >= 5 words) from the
  *     hand-written content files: src/data/questions.ts and src/data/connections.ts.
  *     For each span, collect the refs cited in its own block (verses[] /
  *     keyVerses[] arrays for questions; key + targets for connections) plus the
  *     full text of cited passage chapters.
+ *     The same extraction runs over the component and page copy
+ *     (src/components/**, src/app/**): those files carry hand-written scripture
+ *     too, and that is exactly where the footer's and the search page's
+ *     misquotes lived. They cite no refs of their own, so their spans are
+ *     attributed by searching the whole Bible, which is stricter in practice:
+ *     a near-match anywhere is reported as a misquote.
  *  3. Each span is split on ellipses into fragments. A fragment passes when it
  *     appears VERBATIM (after normalization) inside a single WEB verse or a run
  *     of consecutive verses in one chapter.
@@ -26,7 +32,7 @@
  *
  * Exit codes: 0 = all quotations verified, 1 = misquote or unattributed span.
  */
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -47,9 +53,21 @@ const STR = '"(?:[^"\\\\]|\\\\.)*"';
 const versesStart = file.indexOf("export const verses");
 const chaptersStart = file.indexOf("export const chapters");
 const versesBlock = file.slice(versesStart, chaptersStart);
+
+/** Parse one string literal from the generated scripture module. Malformed
+ *  entries are a broken checkout, not a quote problem: say so and stop. */
+function parseLiteral(literal) {
+  try {
+    return JSON.parse(literal);
+  } catch {
+    console.error(`verify:quotes: could not parse scripture literal ${literal.slice(0, 60)}`);
+    process.exit(1);
+  }
+}
+
 const verses = new Map();
 for (const m of versesBlock.matchAll(new RegExp(`^  (${STR}): (${STR}),$`, "gm")))
-  verses.set(JSON.parse(m[1]), JSON.parse(m[2]));
+  verses.set(parseLiteral(m[1]), parseLiteral(m[2]));
 
 const norm = (t) =>
   t.toLowerCase()
@@ -130,7 +148,7 @@ function findVerbatim(frag) {
 
 /** Best-matching verses across the WHOLE Bible, anchored on the fragment's
  *  rarest tokens; each anchor position yields a scored window. */
-function globalCandidates(frag) {
+function globalCandidates(frag, floor = 0.45) {
   const f = tokens(frag);
   if (f.length < 4) return [];
   // rank tokens by frequency, take two rarest as anchors
@@ -145,7 +163,7 @@ function globalCandidates(frag) {
       const [s0, e0] = verseRange.get(v);
       const win = stream.slice(s0, Math.min(e0 + f.length, owner.length));
       const sim = similarity(f, win);
-      if (sim >= 0.45) scored.set(v, sim);
+      if (sim >= floor) scored.set(v, sim);
     }
   }
   return [...scored.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(([v]) => v);
@@ -194,11 +212,14 @@ function renderDiff(ops) {
   return parts.join(" ");
 }
 
-/** Best fuzzy attribution for a fragment among given verse keys. */
-function bestMatch(frag, candidateRefs) {
+/** Best fuzzy attribution for a fragment among given verse keys.
+ *  `floor` is the similarity a global candidate needs to be considered; spans
+ *  from component copy have no cited refs to lean on, so they pass a lower one
+ *  and get a word-level diff instead of "no similar text". */
+function bestMatch(frag, candidateRefs, floor = 0.45) {
   const f = tokens(frag);
   let best = null;
-  for (const ref of [...candidateRefs, ...globalCandidates(frag)]) {
+  for (const ref of [...candidateRefs, ...globalCandidates(frag, floor)]) {
     const start = verseTokenStart.get(ref);
     if (start === undefined) continue;
     // window: this verse joined with the next (covers most run-ons)
@@ -305,15 +326,89 @@ function collectConnections() {
   return checks;
 }
 
+/**
+ * Verbatim match in the KJV reading, as one verse or two consecutive verses.
+ *
+ * Component copy legitimately quotes either reading (the footer shows both),
+ * and the KJV is vendored and generated just like the WEB, so a span the WEB
+ * does not contain is retried here before it is reported. Built only when a
+ * span actually needs it. Content files do not use this: their rule is still
+ * "quotes must match the WEB word for word".
+ */
+let kjvNormalized = null;
+function kjvCorpus() {
+  if (kjvNormalized) return kjvNormalized;
+  const src = readFileSync(resolve(root, "src/data/scripture-kjv.ts"), "utf8");
+  const block = src.slice(
+    src.indexOf("export const verses"),
+    src.indexOf("export const chapters"),
+  );
+  kjvNormalized = [];
+  for (const m of block.matchAll(new RegExp(`^  (${STR}): (${STR}),$`, "gm")))
+    kjvNormalized.push([parseLiteral(m[1]), norm(parseLiteral(m[2]))]);
+  return kjvNormalized;
+}
+function findVerbatimKjv(frag) {
+  const corpus = kjvCorpus();
+  for (let i = 0; i < corpus.length; i++) {
+    const [ref, text] = corpus[i];
+    if (text.includes(frag)) return ref;
+    const next = corpus[i + 1];
+    if (
+      next &&
+      next[0].split(":")[0] === ref.split(":")[0] &&
+      `${text} ${next[1]}`.includes(frag)
+    )
+      return `${ref}-${next[0].split(":")[1]}`;
+  }
+  return null;
+}
+
+/**
+ * Quoted spans in the UI copy: components and pages render scripture by hand in
+ * places (the footer's Acts 17:11, the search page's John 5:39) and there is
+ * nothing structural tying a span to a ref there. They are therefore checked
+ * against the whole Bible: verbatim passes (in either vendored reading, since
+ * the UI shows both), a near-match is a misquote anywhere it lives, and
+ * intentional non-scripture labels are allowlisted.
+ */
+function collectComponents() {
+  const checks = [];
+  for (const dir of ["src/components", "src/app"]) {
+    for (const rel of readdirSync(resolve(root, dir), { recursive: true })) {
+      if (!/\.(tsx?|jsx?)$/.test(rel)) continue;
+      const where = `${dir}/${rel}`;
+      const src = readFileSync(resolve(root, where), "utf8");
+      for (const span of quotedSpans(src)) {
+        if (isCodeShaped(span)) continue;
+        checks.push({ span, where, refs: new Set(), allowKjv: true });
+      }
+    }
+  }
+  return checks;
+}
+
 // ---- run ----------------------------------------------------------------------
-const checks = [...collectQuestions(), ...collectConnections()];
+const componentChecks = collectComponents();
+// A refactor of the file walk would otherwise quietly stop checking the UI copy.
+if (componentChecks.length === 0) {
+  console.error(
+    "verify:quotes: no quoted spans found in src/components or src/app; the UI copy is not being checked",
+  );
+  process.exit(1);
+}
+const checks = [
+  ...collectQuestions(),
+  ...collectConnections(),
+  ...componentChecks,
+];
 console.log(`checking ${checks.length} quoted spans against ${verses.size} vendored WEB verses`);
 
 const problems = [];
 let passedExact = 0;
 const seen = new Set();
 
-for (const { span, where, refs } of checks) {
+for (const { span, where, refs, allowKjv } of checks) {
   const key = norm(span);
   if (seen.has(key)) continue;
   seen.add(key);
@@ -328,7 +423,7 @@ for (const { span, where, refs } of checks) {
   let allVerbatim = true;
   const matches = [];
   for (const frag of fragments) {
-    const hit = findVerbatim(frag);
+    const hit = findVerbatim(frag) ?? (allowKjv ? findVerbatimKjv(frag) : null);
     if (hit) { matches.push({ frag, ref: hit }); passedExact++; }
     else { allVerbatim = false; matches.push({ frag, ref: null }); }
   }
@@ -342,7 +437,7 @@ for (const { span, where, refs } of checks) {
     const detail = [];
     for (const m of matches) {
       if (m.ref) { detail.push(`  OK   "${m.frag}" -> ${m.ref}`); continue; }
-      const bm = bestMatch(m.frag, refs);
+      const bm = bestMatch(m.frag, refs, allowKjv ? 0.25 : 0.45);
       if (!bm) { detail.push(`  ???  "${m.frag}" -> no cited verse contains similar text`); continue; }
       const ops = diffWords(tokens(m.frag), bm.win);
       detail.push(`  DIFF vs ${bm.ref} (similarity ${(bm.sim * 100).toFixed(0)}%):\n       ${renderDiff(ops)}`);
