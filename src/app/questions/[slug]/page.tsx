@@ -9,7 +9,6 @@ import {
   categoryOf,
   questionsByCategory,
   getPassageText,
-  getChapterPair,
   questionTitles,
   studyListenData,
   visitChainData,
@@ -175,7 +174,7 @@ export default async function QuestionPage({ params }: Props) {
           </p>
           <div className="mt-6 space-y-3">
             {question.passages.map((p) => (
-              <ChapterReader key={`${p.book}-${p.chapter}`} passage={p} verses={getChapterPair(p.book, p.chapter)} />
+              <ChapterReader key={`${p.book}-${p.chapter}`} passage={p} />
             ))}
           </div>
         </section>

@@ -21,15 +21,22 @@ import { hasAudio } from "@/lib/translation-shared";
  * A small Listen control. Starts reading `items` (tagged with `sourceId`),
  * then flips to pause/resume plus stop while this source is the active one.
  * Hidden entirely for translations without audio (e.g. KJV).
+ *
+ * `prepare` is for callers whose queue is not known until the moment of the
+ * click: the chapter reader fetches its text on demand, so it hands over a
+ * resolver instead of a prebuilt queue. Either one works; `items` is the
+ * cheap path for callers that already hold a server-built queue.
  */
 export default function ListenButton({
   sourceId,
   items,
+  prepare,
   label = "Listen",
   onStart,
 }: {
   sourceId: string;
-  items: SpeechItem[];
+  items?: SpeechItem[];
+  prepare?: () => Promise<SpeechItem[]>;
   label?: string;
   onStart?: () => void;
 }) {
@@ -69,13 +76,17 @@ export default function ListenButton({
     );
   }
 
+  const start = async () => {
+    const queue = prepare ? await prepare() : (items ?? []);
+    if (queue.length === 0) return;
+    playPassage(sourceId, queue);
+    onStart?.();
+  };
+
   return (
     <button
       type="button"
-      onClick={() => {
-        playPassage(sourceId, items);
-        onStart?.();
-      }}
+      onClick={() => void start()}
       className="flex shrink-0 items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
     >
       <PlayIcon size={11} />

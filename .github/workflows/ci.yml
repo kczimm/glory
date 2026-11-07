@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# The repo's invariants live in four places: eslint, the typechecker, the
+# vitest suite, and the three verifier scripts (quotes, graph, audio catalog).
+# Before this workflow they only ran when a person remembered to run them or
+# when Vercel built a deployment, so a broken invariant could sit on main until
+# the next deploy failed. Run all of it on every push and pull request.
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Test
+        run: npm test
+
+      - name: Verify quotes
+        run: npm run verify:quotes
+
+      - name: Verify graph
+        run: npm run verify:graph
+
+      # Rebuilds the audio catalog from the current content and checks that
+      # every chunk the app can speak is in it. Offline: no R2, no SDK.
+      - name: Verify audio catalog
+        run: npm run audio:check

@@ -30,18 +30,36 @@ import type { TranslationCode } from "../lib/translation";
 
 // ---- translation support --------------------------------------------------
 
-/** Lazy-load the KJV translation so it is not bundled into every deployment.
- *  Caches the result after first load so subsequent requests are instant. */
-let kjvCache: {
+interface ScriptureModule {
   verses: Record<string, string>;
   chapters: Record<string, { n: number; text: string }[]>;
-} | null = null;
-function getKJV() {
+}
+
+/** Lazy-load the KJV translation so it is not parsed into every server start.
+ *  Caches the result after first load so subsequent requests are instant. */
+let kjvCache: ScriptureModule | null = null;
+
+/** Test seam. A `require` is the only synchronous lazy load available inside
+ *  Next's server bundle, and it cannot resolve a TypeScript module under
+ *  vitest, which left this whole file (the app's most-used data path) with no
+ *  tests. Tests hand the module over directly instead; production never calls
+ *  this, so the lazy path is still the one that runs. */
+let kjvLoader: (() => ScriptureModule) | null = null;
+export function setKJVLoader(loader: (() => ScriptureModule) | null) {
+  kjvLoader = loader;
+  kjvCache = null;
+}
+
+function getKJV(): ScriptureModule {
   if (!kjvCache) {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    kjvCache = require("./scripture-kjv");
+    if (kjvLoader) {
+      kjvCache = kjvLoader();
+    } else {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      kjvCache = require("./scripture-kjv") as ScriptureModule;
+    }
   }
-  return kjvCache!;
+  return kjvCache;
 }
 
 /** Get the scripture data for a given translation code. */

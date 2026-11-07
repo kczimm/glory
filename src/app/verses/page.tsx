@@ -1,99 +1,38 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getConnections, verseSlug } from "@/data";
-import { graphVerseRefs, incomingConnections } from "@/data/server";
+import { BIBLE_BOOKS, bookSlug } from "@/data/books";
+import { parseRef } from "@/data/ref";
+import { graphVerseRefs } from "@/data/server";
 
 export const metadata: Metadata = {
   title: "The Word, connected",
   description:
-    "Browse the cross-reference knowledge graph of Glory: every verse and the other scriptures it connects to.",
+    "Browse the cross-reference knowledge graph of Glory: every verse and the other scriptures it connects to, book by book.",
 };
 
-const BOOKS = [
-  "Genesis",
-  "Exodus",
-  "Leviticus",
-  "Numbers",
-  "Deuteronomy",
-  "Joshua",
-  "Judges",
-  "Ruth",
-  "1 Samuel",
-  "2 Samuel",
-  "1 Kings",
-  "2 Kings",
-  "1 Chronicles",
-  "2 Chronicles",
-  "Ezra",
-  "Nehemiah",
-  "Esther",
-  "Job",
-  "Psalms",
-  "Proverbs",
-  "Ecclesiastes",
-  "Song of Solomon",
-  "Isaiah",
-  "Jeremiah",
-  "Lamentations",
-  "Ezekiel",
-  "Daniel",
-  "Hosea",
-  "Joel",
-  "Amos",
-  "Obadiah",
-  "Jonah",
-  "Micah",
-  "Nahum",
-  "Habakkuk",
-  "Zephaniah",
-  "Haggai",
-  "Zechariah",
-  "Malachi",
-  "Matthew",
-  "Mark",
-  "Luke",
-  "John",
-  "Acts",
-  "Romans",
-  "1 Corinthians",
-  "2 Corinthians",
-  "Galatians",
-  "Ephesians",
-  "Philippians",
-  "Colossians",
-  "1 Thessalonians",
-  "2 Thessalonians",
-  "1 Timothy",
-  "2 Timothy",
-  "Titus",
-  "Philemon",
-  "Hebrews",
-  "James",
-  "1 Peter",
-  "2 Peter",
-  "1 John",
-  "2 John",
-  "3 John",
-  "Jude",
-  "Revelation",
-];
-
-export default function VersesIndex() {
-  const refs = graphVerseRefs();
-  // How many cross-reference edges touch this verse (leaving + reaching it).
-  const degreeCache = new Map<string, number>();
-  for (const r of refs) {
-    degreeCache.set(
-      r,
-      getConnections(r).length + incomingConnections(r).length,
-    );
+/** Prerendered once: the graph's book tally does not change per request. */
+function bookCounts() {
+  const counts = new Map<string, number>();
+  for (const ref of graphVerseRefs()) {
+    const book = parseRef(ref)?.book;
+    if (book) counts.set(book, (counts.get(book) ?? 0) + 1);
   }
-  const groups = BOOKS.map((book) => ({
-    book,
-    refs: refs
-      .filter((r) => r.startsWith(book + " "))
-      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true })),
-  })).filter((g) => g.refs.length > 0);
+  return counts;
+}
+
+/**
+ * The hub of the verse index: one card per book, with the number of verses
+ * the graph touches in it.
+ *
+ * This page used to list all of the graph's refs inline, which made it 1.7 MB
+ * of HTML for 3,359 links. The per-book lists now live on /verses/book/[book]
+ * (see that page), so the hub stays small and each book page is the size of a
+ * normal reading page.
+ */
+export default function VersesIndex() {
+  const counts = bookCounts();
+  const total = [...counts.values()].reduce((a, b) => a + b, 0);
+  const books = BIBLE_BOOKS.filter((b) => counts.has(b));
 
   return (
     <div className="mx-auto max-w-5xl px-5 py-16">
@@ -106,14 +45,14 @@ export default function VersesIndex() {
         </h1>
         <p className="mt-4 text-[16px] leading-relaxed text-ink-soft">
           Every verse below has its own page: where it is studied, and the
-          cross-references that tie it to the rest of the Word. {refs.length}{" "}
-          verses in the graph so far. Looking for a verse that is not yet in the
-          graph?{" "}
+          cross-references that tie it to the rest of the Word. {total} verses
+          in the graph so far, across {books.length} books. Pick a book to walk
+          them, or{" "}
           <Link
             href="/bible"
             className="text-gold-deep underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
           >
-            Read any chapter of the Bible →
+            read any chapter of the Bible →
           </Link>{" "}
           Or wander where Scripture connects to Scripture in{" "}
           <Link
@@ -127,27 +66,25 @@ export default function VersesIndex() {
       </header>
 
       <div className="grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-        {groups.map((g) => (
-          <section key={g.book}>
+        {books.map((book) => (
+          <section key={book}>
             <h2 className="font-display text-lg font-medium text-ink">
-              {g.book}
+              <Link
+                href={`/verses/book/${bookSlug(book)}`}
+                className="transition-colors hover:text-gold-deep"
+              >
+                {book}
+              </Link>
             </h2>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {g.refs.map((ref) => (
-                <Link
-                  key={ref}
-                  href={`/verses/${verseSlug(ref)}`}
-                  className="rounded-full border border-line bg-surface/60 px-3 py-1 text-[13px] text-ink-soft transition-colors hover:border-gold/50 hover:text-gold-deep"
-                >
-                  {ref}
-                  {degreeCache.get(ref)! > 0 && (
-                    <span className="ml-1 text-[10.5px] text-gold">
-                      · {degreeCache.get(ref)}
-                    </span>
-                  )}
-                </Link>
-              ))}
-            </div>
+            <p className="mt-1 text-[13px] text-ink-soft">
+              <Link
+                href={`/verses/book/${bookSlug(book)}`}
+                className="underline decoration-line underline-offset-4 transition-colors hover:text-gold-deep"
+              >
+                {counts.get(book)}{" "}
+                {counts.get(book) === 1 ? "verse" : "verses"} in the graph
+              </Link>
+            </p>
           </section>
         ))}
       </div>

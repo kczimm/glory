@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useSyncExternalStore } from "react";
 import type { Passage } from "@/data/types";
 import { chapterItems, filterFocus } from "@/lib/audio-text";
 import { inFocus, parseFocus } from "@/lib/focus";
+import { loadChapter } from "@/lib/chapter";
+import type { ChapterVerse } from "@/lib/chapter";
 import {
   getServerSnapshot,
   getSnapshot,
@@ -16,28 +18,27 @@ import ListenButton from "@/components/ListenButton";
 import { useTranslation } from "@/lib/useTranslation";
 import { hasAudio } from "@/lib/translation-shared";
 
-/** One verse of a chapter, in both readings; the reader's choice is shown. */
-export interface ChapterVerse {
-  n: number;
-  web: string | null;
-  kjv: string | null;
-}
-
 /**
  * An expandable full-chapter reader. This is where the learner actually
  * goes "through relevant verses and chapters of the Bible". The Listen
  * control reads the chapter aloud (or just the focus range); the verse
- * being read is highlighted and kept in view. The chapter text is passed
- * in from the server so the vendored Bible never enters the client bundle.
+ * being read is highlighted and kept in view.
+ *
+ * The chapter text is NOT passed in as props. A study page typically carries
+ * three or four passages, and the reader starts collapsed, so shipping every
+ * chapter (in both readings) inside the page meant several tens of kilobytes
+ * of payload the reader might never open. The text is fetched from
+ * /api/chapter the first time the chapter is opened, or when the audio player
+ * chains into it, and cached for the rest of the session by `loadChapter`.
+ * The vendored Bible still never enters the client bundle.
  */
-export default function ChapterReader({
-  passage,
-  verses,
-}: {
-  passage: Passage;
-  verses: ChapterVerse[] | null;
-}) {
+export default function ChapterReader({ passage }: { passage: Passage }) {
   const [opened, setOpened] = useState(false);
+  const [verses, setVerses] = useState<ChapterVerse[] | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const pending = useRef<Promise<ChapterVerse[] | null> | null>(null);
+  const mounted = useRef(true);
   const listRef = useRef<HTMLDivElement>(null);
   const speech = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   const { version } = useTranslation();
@@ -45,29 +46,61 @@ export default function ChapterReader({
 
   const sourceId = `chapter:${passage.book} ${passage.chapter}`;
 
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+    };
+  }, []);
+
+  /** Load the chapter once; later calls reuse the settled promise or state. */
+  const ensure = useCallback(async (): Promise<ChapterVerse[] | null> => {
+    if (verses) return verses;
+    const request = pending.current ?? loadChapter(passage.book, passage.chapter);
+    pending.current = request;
+    if (mounted.current) {
+      setLoading(true);
+      setFailed(false);
+    }
+    const loaded = await request;
+    if (!mounted.current) return loaded;
+    setLoading(false);
+    if (loaded) setVerses(loaded);
+    else {
+      // Keep a failure retryable: the next open starts a fresh request.
+      pending.current = null;
+      setFailed(true);
+    }
+    return loaded;
+  }, [passage.book, passage.chapter, verses]);
+
   // Speech is pre-generated from the WEB text and only WEB has an audio
   // catalog, so the queue is built from `web` whichever reading is on screen.
-  const spoken = useMemo(
-    () => verses?.map((v) => ({ n: v.n, text: v.web ?? "" })) ?? null,
-    [verses],
+  // Only the focus range is spoken (mirroring the pre-generated catalog); the
+  // full chapter stays visible for reading.
+  const queueFor = useCallback(
+    (loaded: ChapterVerse[]): SpeechItem[] =>
+      chapterItems(
+        passage.book,
+        passage.chapter,
+        filterFocus(
+          loaded.map((v) => ({ n: v.n, text: v.web ?? "" })),
+          passage.focus,
+        ),
+      ),
+    [passage.book, passage.chapter, passage.focus],
   );
-
-  const items = useMemo<SpeechItem[]>(() => {
-    if (!spoken) return [];
-    // Only the focus range is spoken (mirroring the pre-generated catalog);
-    // the full chapter stays visible for reading.
-    return chapterItems(
-      passage.book,
-      passage.chapter,
-      filterFocus(spoken, passage.focus)
-    );
-  }, [spoken, passage.book, passage.chapter, passage.focus]);
 
   const active = speech.sourceId === sourceId && speech.status !== "idle";
   const activeId = active ? speech.queue[speech.index]?.id : undefined;
   // Playback of this chapter opens the reader (derived, so the highlight is
   // visible while it reads); the user can still collapse it when idle.
   const open = opened || active;
+
+  // Chained playback can arrive before the text was ever opened here.
+  useEffect(() => {
+    if (active && !verses) void ensure();
+  }, [active, verses, ensure]);
 
   // Keep the spoken verse in view inside the scroll container.
   useEffect(() => {
@@ -93,9 +126,13 @@ export default function ChapterReader({
         behavior: "smooth",
       });
     }
-  }, [speech, open, sourceId]);
+  }, [speech, open, sourceId, verses]);
 
-  if (!verses) return null;
+  const toggle = () => {
+    const next = !opened;
+    setOpened(next);
+    if (next && !verses) void ensure();
+  };
 
   // Focus "5-15", "16", or "1-4, 12" (same parser as the audio queue). A focus
   // that cannot be parsed highlights nothing, so the reader is never shown a
@@ -107,7 +144,7 @@ export default function ChapterReader({
       <div className="flex items-center gap-2 px-4 py-4 sm:px-5">
         <button
           type="button"
-          onClick={() => setOpened((o) => !o)}
+          onClick={toggle}
           className="flex min-w-0 flex-1 items-center justify-between gap-3 text-left"
           aria-expanded={open}
           aria-controls={`reader-${sourceId.replace(/[^a-z0-9]+/gi, "-")}`}
@@ -134,7 +171,12 @@ export default function ChapterReader({
         {audioAvailable && (
           <ListenButton
             sourceId={sourceId}
-            items={items}
+            prepare={async () => {
+              const loaded = await ensure();
+              // Build the queue at click time: the text may not have been
+              // fetched when this button was rendered.
+              return loaded ? queueFor(loaded) : [];
+            }}
             onStart={() => setOpened(true)}
           />
         )}
@@ -145,36 +187,55 @@ export default function ChapterReader({
           id={`reader-${sourceId.replace(/[^a-z0-9]+/gi, "-")}`}
           className="reader-scroll max-h-[420px] overflow-y-auto border-t border-line px-6 py-5"
         >
-          {verses.map((v) => {
-            const vId = `${passage.book} ${passage.chapter}:${v.n}`;
-            const focused = focusRanges ? inFocus(focusRanges, v.n) : false;
-            const speaking = matchesVerse(activeId, vId);
-            return (
-              <p
-                key={v.n}
-                data-verse-id={vId}
-                className={`mb-3 font-display text-[16.5px] leading-relaxed text-ink ${
-                  speaking
-                    ? "rounded-md bg-gold-wash/80 px-3 py-1.5 ring-1 ring-gold/40"
-                    : focused
-                      ? "rounded-md bg-gold-wash/60 px-3 py-1.5"
-                      : ""
-                }`}
+          {verses ? (
+            <>
+              {verses.map((v) => {
+                const vId = `${passage.book} ${passage.chapter}:${v.n}`;
+                const focused = focusRanges ? inFocus(focusRanges, v.n) : false;
+                const speaking = matchesVerse(activeId, vId);
+                return (
+                  <p
+                    key={v.n}
+                    data-verse-id={vId}
+                    className={`mb-3 font-display text-[16.5px] leading-relaxed text-ink ${
+                      speaking
+                        ? "rounded-md bg-gold-wash/80 px-3 py-1.5 ring-1 ring-gold/40"
+                        : focused
+                          ? "rounded-md bg-gold-wash/60 px-3 py-1.5"
+                          : ""
+                    }`}
+                  >
+                    <span
+                      className={`mr-2 align-super text-[11px] font-semibold ${
+                        focused ? "text-gold-deep" : "text-ink-faint"
+                      }`}
+                    >
+                      {v.n}
+                    </span>
+                    {((version === "kjv" ? v.kjv : v.web) ?? v.web ?? "").replace(/\n+/g, " ")}
+                  </p>
+                );
+              })}
+              {passage.focus && (
+                <p className="mt-2 text-[12px] italic text-ink-faint">
+                  Highlighted verses {passage.focus} are the heart of this reading.
+                </p>
+              )}
+            </>
+          ) : failed ? (
+            <p className="text-[13.5px] text-ink-soft">
+              Could not load this chapter.{" "}
+              <button
+                type="button"
+                onClick={() => void ensure()}
+                className="font-semibold text-gold-deep underline underline-offset-2 hover:text-gold"
               >
-                <span
-                  className={`mr-2 align-super text-[11px] font-semibold ${
-                    focused ? "text-gold-deep" : "text-ink-faint"
-                  }`}
-                >
-                  {v.n}
-                </span>
-                {((version === "kjv" ? v.kjv : v.web) ?? v.web ?? "").replace(/\n+/g, " ")}
-              </p>
-            );
-          })}
-          {passage.focus && (
-            <p className="mt-2 text-[12px] italic text-ink-faint">
-              Highlighted verses {passage.focus} are the heart of this reading.
+                Try again
+              </button>
+            </p>
+          ) : (
+            <p className="text-[13.5px] text-ink-faint" aria-live="polite">
+              {loading ? "Loading the chapter…" : "Chapter"}
             </p>
           )}
         </div>
