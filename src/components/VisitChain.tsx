@@ -9,6 +9,7 @@ import {
   registerContinuation,
   stop,
 } from "@/lib/speech";
+import { loadOptionQueues } from "@/lib/optionQueues";
 
 
 /**
@@ -20,6 +21,9 @@ import {
  *
  * Every queue is prebuilt on the server (it needs verse text) and arrives as
  * serializable props: this component only wires the playback graph together.
+ * The one exception is the "What next?" options: their queues are fetched when
+ * the reader picks one (see @/lib/optionQueues), because prebuilding them
+ * serialized several whole studies into every study page.
  *
  * The study's continuation is always the visual menu (`presentChoices`): it
  * needs no microphone and no user gesture, so it works on every browser,
@@ -44,10 +48,6 @@ export interface ChainOption {
   slug: string;
   /** the choice label shown in the player-bar "What next?" panel */
   label: string;
-  /** prebuilt queue for the option's first chapter, if it has passages */
-  firstChapter: ChainQueue | null;
-  /** prebuilt study queue for the option */
-  study: ChainQueue | null;
 }
 
 export default function VisitChain({
@@ -103,8 +103,14 @@ export default function VisitChain({
               // start its first queue. From here the new visit chains forward
               // under the destination page's own VisitChain.
               router.push(`/questions/${next.slug}`);
-              const queue = next.firstChapter ?? next.study;
-              if (queue) playPassage(queue.sourceId, queue.items);
+              // The queue is built on demand: a pick may outlive this
+              // component (navigation unmounts it), so the promise is not
+              // gated on the disposed flag. The player is a module singleton.
+              void loadOptionQueues(next.slug).then((queues) => {
+                if (!queues) return;
+                const queue = queues.firstChapter ?? queues.study;
+                playPassage(queue.sourceId, queue.items);
+              });
             },
           );
         })

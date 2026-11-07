@@ -1,6 +1,6 @@
-import { connections, getConnections } from "@/data/connections";
+import { connections } from "@/data/connections";
 import type { ConnectionKind } from "@/data/types";
-import { parseRef } from "../data/ref";
+import { canonicalRef, parseRef } from "../data/ref";
 
 /**
  * Graph helpers for the connection explorer: the adjacency of the knowledge
@@ -14,33 +14,49 @@ export interface GraphEdge {
   note: string;
 }
 
-// Adjacency memoized once at module load: the connections data is static,
-// and the explorer calls edgesOf in hot loops (per frame, per node).
-const edgeCache = new Map<string, GraphEdge[]>();
+/**
+ * One undirected adjacency, built once: every edge appears under both of its
+ * endpoints, both endpoints are canonical refs, and nothing is listed twice.
+ *
+ * The previous version walked `connections` raw on every call (memoized per
+ * ref, but re-scanning all 478 keys for the incoming half) and compared
+ * target strings exactly, so a verse written "Psalm 23:1" in one place and
+ * "Psalms 23:1" in another produced two nodes, and an edge could be counted
+ * twice when both directions existed.
+ */
+let adjacency: Map<string, GraphEdge[]> | null = null;
 
-/** All edges touching a verse, either direction. */
-export function edgesOf(ref: string): GraphEdge[] {
-  const cached = edgeCache.get(ref);
-  if (cached) return cached;
-  const out: GraphEdge[] = [];
-  for (const e of getConnections(ref)) {
-    out.push({ source: ref, target: e.target, kind: e.kind, note: e.note });
-  }
+function graphEdges(): Map<string, GraphEdge[]> {
+  if (adjacency) return adjacency;
+  const map = new Map<string, GraphEdge[]>();
+  const add = (at: string, edge: GraphEdge) => {
+    const rows = map.get(at);
+    if (rows) rows.push(edge);
+    else map.set(at, [edge]);
+  };
   for (const [from, edges] of Object.entries(connections)) {
+    const source = canonicalRef(from);
     for (const e of edges) {
-      if (e.target === ref) out.push({ source: from, target: ref, kind: e.kind, note: e.note });
+      const edge: GraphEdge = {
+        source,
+        target: canonicalRef(e.target),
+        kind: e.kind,
+        note: e.note,
+      };
+      add(edge.source, edge);
+      if (edge.target !== edge.source) add(edge.target, edge);
     }
   }
-  edgeCache.set(ref, out);
-  return out;
+  adjacency = map;
+  return map;
 }
 
-/** Degree of a verse in the undirected graph (for node sizing). */
-export function degreeOf(ref: string): number {
-  return edgesOf(ref).length;
+/** All edges touching a verse, either direction, deduped. */
+export function edgesOf(ref: string): GraphEdge[] {
+  return graphEdges().get(canonicalRef(ref)) ?? [];
 }
 
-/** Short display form of a ref for graph labels ("1 Corinthians 13:4-7" stays whole; we clip in SVG). */
+/** A short label for a ref: "1 Corinthians 15:3-4" -> "1 Corinthians 15:3". */
 export function shortRef(ref: string): string {
   const p = parseRef(ref);
   return p ? `${p.book} ${p.chapter}:${p.from}` : ref;

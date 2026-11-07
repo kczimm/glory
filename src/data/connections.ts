@@ -1,4 +1,5 @@
 import type { Connection, ConnectionKind } from "./types";
+import { canonicalRef } from "./ref";
 
 /**
  * The knowledge graph: typed cross-reference edges between verses.
@@ -6514,9 +6515,34 @@ export const connections: Record<string, Connection[]> = {
   ],
 };
 
-/** Connections leaving from a verse reference. */
+/** Connections leaving from a verse reference.
+ *
+ * Lookups and targets are canonicalized, so a study that writes "Psalm 23:1"
+ * and one that writes "Psalms 23:1" reach the same edges, and the map the
+ * reader walks never carries two spellings of one verse. */
 export function getConnections(ref: string): Connection[] {
-  return connections[ref] ?? [];
+  return canonicalIndex().get(canonicalRef(ref)) ?? [];
+}
+
+/** Every node of the graph, canonical and deduped, in content order. */
+export function connectionRefs(): string[] {
+  return [...canonicalIndex().keys()];
+}
+
+/** The graph keyed by canonical ref, built once on first use. Raw keys and
+ *  targets that differ only by book alias are merged into one node. */
+let index: Map<string, Connection[]> | null = null;
+function canonicalIndex(): Map<string, Connection[]> {
+  if (index) return index;
+  const map = new Map<string, Connection[]>();
+  for (const [ref, edges] of Object.entries(connections)) {
+    const key = canonicalRef(ref);
+    const rows = edges.map((e) => ({ ...e, target: canonicalRef(e.target) }));
+    const existing = map.get(key);
+    map.set(key, existing ? [...existing, ...rows] : rows);
+  }
+  index = map;
+  return map;
 }
 /** Human-readable label for a connection kind. */
 export const connectionKindLabel: Record<ConnectionKind, string> = {

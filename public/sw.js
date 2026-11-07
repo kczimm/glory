@@ -16,12 +16,22 @@
  *     passed straight through to the network.
  *
  * Bump CACHE_VERSION whenever the shell changes in a way the runtime
- * caching would not pick up on its own.
+ * caching would not pick up on its own. Bumping it keeps the previous
+ * version's static cache for one generation (see activate): a tab that was
+ * open before a deploy still needs the old hashed chunks it has not loaded
+ * yet, and deleting them made those chunks 404.
  */
 
-const CACHE_VERSION = "v3";
+const CACHE_VERSION = "v4";
 const STATIC_CACHE = `glory-static-${CACHE_VERSION}`;
 const PAGES_CACHE = `glory-pages-${CACHE_VERSION}`;
+
+/** Names kept from the previous generation, so in-flight pages keep working. */
+function previousGeneration(): string[] {
+  const current = Number(CACHE_VERSION.replace(/^v/, ""));
+  if (!Number.isFinite(current) || current <= 1) return [];
+  return [`glory-static-v${current - 1}`, `glory-pages-v${current - 1}`];
+}
 
 // Small, stable, always-useful set. Scripture content itself ships inside
 // the JS bundles under /_next/static, so caching the shell plus whatever
@@ -50,13 +60,10 @@ self.addEventListener("install", (event) => {
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     (async () => {
+      const keep = new Set([STATIC_CACHE, PAGES_CACHE, ...previousGeneration()]);
       const names = await caches.keys();
       await Promise.all(
-        names
-          .filter(
-            (name) => name !== STATIC_CACHE && name !== PAGES_CACHE,
-          )
-          .map((name) => caches.delete(name)),
+        names.filter((name) => !keep.has(name)).map((name) => caches.delete(name)),
       );
       await self.clients.claim();
     })(),

@@ -123,3 +123,33 @@ body {
   border-radius: 10px;
   transition: background 0.2s ease, box-shadow 0.2s ease;
 }
+
+/* Keyboard focus is always visible. Tailwind preflight leaves the browser
+   default in place; this makes it match the palette instead of a blue halo. */
+:where(a, button, [role="button"], summary, input, select, textarea):focus-visible {
+  outline: 2px solid var(--color-gold-deep);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* The connection map is an SVG: a focused node shows its ring instead of a
+   box outline, which does not render usefully around a circle. */
+[data-graph-node]:focus-visible {
+  outline: none;
+}
+[data-graph-node]:focus-visible .node-ring {
+  stroke: var(--color-gold-deep);
+}
+
+/* Respect a reader's motion preference: the graph settles without animating
+   and every transition/scroll becomes instant. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

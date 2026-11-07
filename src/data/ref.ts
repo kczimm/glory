@@ -63,7 +63,22 @@ export function joinPassage(
   return parts.join(" ");
 }
 
-/** A URL-safe slug for a verse ref, e.g. "John 3:16" -> "john-3.16". */
+/** A URL-safe slug for a verse ref, e.g. "John 3:16" -> "john-3.16".
+ *
+ * The book is canonicalized first, so one verse has exactly one slug however
+ * the content spells it ("Psalm 23:1" and "Psalms 23:1" both become
+ * "psalms-23.1"). Before this, the alias produced a second URL for the same
+ * verse and half the Psalm pages were prerendered under the alias while the
+ * canonical spelling rendered on demand. */
 export function verseSlug(ref: string): string {
-  return ref.trim().toLowerCase().replace(/\s+/g, "-").replace(/:/g, ".");
+  return canonicalRef(ref).trim().toLowerCase().replace(/\s+/g, "-").replace(/:/g, ".");
+}
+
+/** Rebuild a ref with the canonical book name and no stray spacing.
+ *  "Psalm 23:1-3" -> "Psalms 23:1-3". Unparsable input comes back trimmed. */
+export function canonicalRef(ref: string): string {
+  const p = parseRef(ref);
+  if (!p) return ref.trim().replace(/\s+/g, " ");
+  const range = p.from === p.to ? `${p.from}` : `${p.from}-${p.to}`;
+  return `${p.book} ${p.chapter}:${range}`;
 }

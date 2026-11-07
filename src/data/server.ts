@@ -7,10 +7,10 @@ import {
   visitIntroItems,
 } from "../lib/audio-text";
 import type { AudioChunk } from "../lib/audio-text";
-import { canonicalBook, joinPassage, parseRef } from "./ref";
+import { canonicalBook, canonicalRef, joinPassage, parseRef } from "./ref";
 import { BIBLE_BOOKS } from "./books";
 import { questions } from "./questions";
-import { connections } from "./connections";
+import { connections, connectionRefs } from "./connections";
 import {
   questionsUsing,
   incomingConnections,
@@ -288,14 +288,18 @@ export function teasers(): QuestionTeaser[] {
   return [...questions].sort((a, b) => a.order - b.order).map(toTeaser);
 }
 
-/** Verse text for every connection endpoint, in both readings. */
+/** Verse text for every connection endpoint, in both readings.
+ *
+ * Keys are canonical refs, matching what `edgesOf` and the verse index use,
+ * so the explorer never looks up a node under a different spelling than the
+ * one it holds. */
 export function graphVerseTexts(): Record<
   string,
   { web: string | null; kjv: string | null }
 > {
-  const refs = new Set<string>(Object.keys(connections));
+  const refs = new Set<string>(connectionRefs());
   for (const edges of Object.values(connections)) {
-    for (const edge of edges) refs.add(edge.target);
+    for (const edge of edges) refs.add(canonicalRef(edge.target));
   }
   const out: Record<string, { web: string | null; kjv: string | null }> = {};
   for (const ref of refs) {
@@ -309,9 +313,9 @@ export function graphUsages(): Record<
   string,
   { slug: string; question: string }[]
 > {
-  const refs = new Set<string>(Object.keys(connections));
+  const refs = new Set<string>(connectionRefs());
   for (const edges of Object.values(connections))
-    for (const e of edges) refs.add(e.target);
+    for (const e of edges) refs.add(canonicalRef(e.target));
   const out: Record<string, { slug: string; question: string }[]> = {};
   for (const ref of refs) {
     const used = questionsUsing(ref);
@@ -392,6 +396,36 @@ export function visitListenData(q: Question): { slug: string; items: AudioChunk[
   return { slug: q.slug, items: queue.items };
 }
 
+/** The queues a "what next?" option needs, built on demand.
+ *
+ * VisitChain used to receive these fully built for every option, which inlined
+ * several whole studies (heading, body, grounding verses, outro) into the page
+ * payload for a menu most listeners never reach. Measured on the heaviest study
+ * page, prebuilt queues were 24% of the RSC flight data and the options were
+ * about two thirds of that. The list now carries slugs and labels; the queue
+ * is fetched when the reader actually picks one (see /api/queue). */
+export function optionQueues(
+  slug: string,
+  translation: TranslationCode = "web",
+): {
+  slug: string;
+  label: string;
+  firstChapter: ChainQueue | null;
+  study: ChainQueue;
+} | null {
+  const q = getQuestion(slug);
+  if (!q) return null;
+  const first = q.passages[0];
+  return {
+    slug: q.slug,
+    label: q.question,
+    firstChapter: first
+      ? chapterQueue(first.book, first.chapter, first.focus, translation)
+      : null,
+    study: studyQueue(q, { cue: "And now, the study.", translation }),
+  };
+}
+
 /** Props for VisitChain: every queue the visit may play, fully prebuilt. */
 export function visitChainData(
   q: Question,
@@ -399,12 +433,7 @@ export function visitChainData(
 ): {
   slug: string;
   segments: ChainQueue[];
-  options: {
-    slug: string;
-    label: string;
-    firstChapter: ChainQueue | null;
-    study: ChainQueue;
-  }[];
+  options: { slug: string; label: string }[];
 } {
   // The whole visit opens with the question and summary, then VisitChain's
   // continuation carries on through each chapter and into the study.
@@ -419,16 +448,7 @@ export function visitChainData(
   return {
     slug: q.slug,
     segments,
-    options: voiceMenu(q).map((o) => {
-      const first = o.passages[0];
-      return {
-        slug: o.slug,
-        label: o.question,
-        firstChapter: first
-          ? chapterQueue(first.book, first.chapter, first.focus, translation)
-          : null,
-        study: studyQueue(o, { cue: "And now, the study.", translation }),
-      };
-    }),
+    // Slugs and labels only: see optionQueues for why.
+    options: voiceMenu(q).map((o) => ({ slug: o.slug, label: o.question })),
   };
 }

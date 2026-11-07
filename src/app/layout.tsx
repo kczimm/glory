@@ -67,8 +67,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-full flex flex-col">
+        {/* Keyboard users land on the nav first; this lets them jump straight
+            to the reading instead of tabbing through every link. */}
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:border focus:border-gold/50 focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-gold-deep focus:shadow-sm"
+        >
+          Skip to content
+        </a>
         <Nav />
-        <main className="flex-1">{children}</main>
+        <main id="main" tabIndex={-1} className="flex-1 outline-none">
+          {children}
+        </main>
         <Footer />
         <SpeechPlayer />
         <RegisterServiceWorker />

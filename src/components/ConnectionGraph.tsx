@@ -151,9 +151,23 @@ function jitter(key: string, salt = 0): number {
   return unit(key, salt) - 0.5;
 }
 
+/** True when the reader asked the OS to reduce motion. */
+function usePrefersReducedMotion(): boolean {
+  return useSyncExternalStore(
+    (onChange) => {
+      const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+      query.addEventListener("change", onChange);
+      return () => query.removeEventListener("change", onChange);
+    },
+    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    () => false,
+  );
+}
+
 export default function ConnectionGraph({ startRef }: { startRef: string }) {
   const graph = useGraphData();
   const { version } = useTranslation();
+  const reducedMotion = usePrefersReducedMotion();
   // The node map is created once (seeded with the start verse) and then
   // mutated in place by the simulation; a tick counter drives re-renders.
   const [nodesMap] = useState<Map<string, SimNode>>(() => {
@@ -196,6 +210,12 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
   const alphaRef = useRef(1);
   const runningRef = useRef(false);
   function heat(amount = 1) {
+    // Reduced motion: the nodes keep the positions expand() gave them (around
+    // their parent) and the map re-renders without a single frame of drift.
+    if (reducedMotion) {
+      setTick((t) => t + 1);
+      return;
+    }
     alphaRef.current = Math.max(alphaRef.current, amount);
     if (!runningRef.current) {
       runningRef.current = true;
@@ -409,6 +429,18 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
                   key={n.ref}
                   transform={`translate(${n.x},${n.y})`}
                   onClick={() => expand(n.ref)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      expand(n.ref);
+                    }
+                  }}
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`${n.ref}, ${n.degree} ${
+                    n.degree === 1 ? "connection" : "connections"
+                  }. Expand in the map`}
+                  data-graph-node=""
                   className="cursor-pointer group/node"
                 >
                   <circle
@@ -416,7 +448,7 @@ export default function ConnectionGraph({ startRef }: { startRef: string }) {
                     fill="transparent"
                     stroke={isSel ? "var(--color-gold)" : "transparent"}
                     strokeWidth="2"
-                    className="transition-all group-hover/node:stroke-gold"
+                    className="node-ring transition-all group-hover/node:stroke-gold"
                   />
                   <circle
                     r={r}

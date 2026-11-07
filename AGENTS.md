@@ -86,9 +86,10 @@ Next.js 16 (App Router, Turbopack) + TypeScript + Tailwind CSS v4 + React 19.
 
 Route handlers: `/api/search` (rate limited, `revalidate = 60`), `/api/passage`
 (verse text for the review room), `/api/chapter` (one chapter, both readings,
-for the expandable reader), `/api/graph` (`force-static` payload for the
-explorer). Metadata routes: `sitemap.ts`, `robots.ts`, `manifest.ts`, the
-opengraph-image routes, `apple-icon.png`, `icon.svg`.
+for the expandable reader), `/api/queue` (one study's speech queues, fetched
+when the player's "What next?" menu is picked), `/api/graph` (`force-static`
+payload for the explorer). Metadata routes: `sitemap.ts`, `robots.ts`,
+`manifest.ts`, the opengraph-image routes, `apple-icon.png`, `icon.svg`.
 
 PWA: `public/sw.js` (cache version bump when the shell changes) registered by
 `RegisterServiceWorker` in production only.
@@ -126,11 +127,14 @@ Browsing: `SearchBox`, `SearchPage`, `ConnectionGraph`, `DailyCard`,
   carry its own copy with "Song of Solomon" where the data says "Song of
   Songs", and every Song of Songs verse was silently dropped from the page.
 - `src/data/ref.ts`: `parseRef` (canonicalizes the `Psalm` → `Psalms` alias),
-  `canonicalBook`, `verseSlug` (`John 3:16` → `john-3.16`), `verseKeys`.
-- `src/data/verseIndex.ts`: `graphVerseRefs`, `questionsUsing`,
-  `incomingConnections`, `refFromSlug`. Note that `graphVerseRefs()` returns
-  refs **as authored**, so group them through `parseRef` rather than by string
-  prefix when you need canonical book names.
+  `canonicalRef` (rebuilds a ref with the canonical book name),
+  `canonicalBook`, `verseSlug` (`John 3:16` → `john-3.16`, canonicalized so one
+  verse owns one URL), `verseKeys`.
+- `src/data/verseIndex.ts`: `graphVerseRefs` (canonical and deduped),
+  `questionsUsing`, `incomingConnections` (alias-aware), `refFromSlug`.
+- `src/data/connections.ts`: `connections` is the raw content map;
+  `getConnections` and `connectionRefs` serve it through a canonical index, so
+  either spelling of a verse reaches the same edges.
 
 ### Payload rules
 
@@ -151,6 +155,11 @@ chapter text and prebuilt audio queues travelled as props.
 - Sound queues are built server side (`studyListenData` and friends) because
   they need verse text, and `ListenButton` accepts either `items` or a
   `prepare()` resolver when the queue only exists after a fetch.
+- The one exception is the player's "What next?" options: `visitChainData`
+  ships only `{ slug, label }` and `VisitChain` fetches the picked study's
+  queues from `/api/queue` (`src/lib/optionQueues.ts`). Prebuilding them
+  serialized several whole studies into every study page (about 40 KB on the
+  heaviest page).
 
 ### Rendering
 
@@ -322,10 +331,11 @@ identical queries are CDN-cached for 60s.
 - `/api/search?q=&verses=&studies=&version=` → `{ verses, questions, translation }`
 - `/api/passage?refs=a|b|c` → `{ [ref]: { web, kjv } }`, capped by `MAX_REFS_PER_REQUEST`
 - `/api/chapter?book=&chapter=` → `{ book, chapter, verses: [{ n, web, kjv }] }`
+- `/api/queue?study=<slug>` → `{ slug, label, firstChapter, study }` (speech queues for one study)
 - `/api/graph` → `{ texts, usages, cited }` (`force-static`)
 
-All three dynamic handlers rate limit per client IP (`src/lib/rateLimit.ts`,
-in-memory, per instance: a cost control, not a hard security boundary).
+All four dynamic handlers rate limit per client IP (`src/lib/rateLimit.ts`,
+in-memory, per instance, bounded: a cost control, not a security boundary).
 
 ## Design system
 
@@ -337,6 +347,17 @@ in-memory, per instance: a cost control, not a hard security boundary).
   `ref` is a React reserved prop and breaks Server Components.
 - `ChapterReader` is a client component (collapsible full-chapter reader,
   highlights the `focus` range, fetches its text on first open).
+
+### Accessibility
+
+- Focus is styled once in `globals.css` (`:focus-visible`, gold ring) and the
+  layout ships a skip-to-content link. Do not remove an outline to "clean up"
+  a control; style it there instead.
+- `prefers-reduced-motion` disables the connection map's force simulation and
+  collapses every transition and smooth scroll. Keep new animation behind it.
+- Graph nodes are focusable (`role="button"`, Enter/Space expands). New
+  interactive SVG needs the same treatment, since a mouse-only map has no
+  keyboard path at all.
 
 ## Tests
 

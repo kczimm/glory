@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { connections, verseSlug } from "@/data";
-import { connectionKindLabel } from "@/data/connections";
+import { verseSlug } from "@/data";
+import { connectionKindLabel, connectionRefs } from "@/data/connections";
 import type { ConnectionKind } from "@/data/types";
 import { edgesOf, shortRef } from "@/lib/graph";
 
@@ -23,7 +23,7 @@ function kindSummary(ref: string): ConnectionKind[] {
  * into the interactive map at /connections/[slug].
  */
 export default function ConnectionsIndexPage() {
-  const ranked = Object.keys(connections)
+  const ranked = connectionRefs()
     .map((ref) => ({ ref, degree: edgesOf(ref).length }))
     .filter((r) => r.degree >= 2)
     .sort((a, b) => b.degree - a.degree)

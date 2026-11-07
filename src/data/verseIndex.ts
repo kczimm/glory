@@ -1,7 +1,7 @@
 import { questions } from "./questions";
 import { connections } from "./connections";
 import { verses } from "./scripture";
-import { parseRef, type ParsedRef, verseSlug } from "./ref";
+import { parseRef, canonicalRef, type ParsedRef, verseSlug } from "./ref";
 import type { Connection } from "./types";
 
 /**
@@ -51,25 +51,36 @@ export function questionsUsing(ref: string): Usage[] {
     .map(({ slug, question }) => ({ slug, question }));
 }
 
-/** The edges (from other verses) that point TO this verse. */
+/** The edges (from other verses) that point TO this verse.
+ *
+ * Compared and returned canonicalized: the content may spell a verse either
+ * way ("Psalm 23:1" / "Psalms 23:1"), and an incoming edge must be found from
+ * either spelling and reported in exactly one form. */
 export function incomingConnections(ref: string): (Connection & { from: string })[] {
+  const target = canonicalRef(ref);
   const out: (Connection & { from: string })[] = [];
   for (const [from, edges] of Object.entries(connections)) {
     for (const e of edges) {
-      if (e.target === ref) out.push({ ...e, from });
+      if (canonicalRef(e.target) === target) {
+        out.push({ ...e, target, from: canonicalRef(from) });
+      }
     }
   }
   return out;
 }
 
-/** All verse refs worth a static page: every connection source, target, and cited verse. */
+/** All verse refs worth a static page: every connection source, target, and cited verse.
+ *
+ * Returned canonical and deduped, so one verse yields one page and one URL
+ * however the content spelled it. */
 export function graphVerseRefs(): string[] {
   const set = new Set<string>();
-  for (const edges of Object.values(connections)) for (const e of edges) set.add(e.target);
-  for (const ref of Object.keys(connections)) set.add(ref);
+  for (const edges of Object.values(connections))
+    for (const e of edges) set.add(canonicalRef(e.target));
+  for (const ref of Object.keys(connections)) set.add(canonicalRef(ref));
   for (const q of questions) {
-    for (const r of q.keyVerses) set.add(r);
-    for (const p of q.points) for (const r of p.verses) set.add(r);
+    for (const r of q.keyVerses) set.add(canonicalRef(r));
+    for (const p of q.points) for (const r of p.verses) set.add(canonicalRef(r));
   }
   return [...set];
 }
