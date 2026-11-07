@@ -10,19 +10,20 @@ import { categories } from "@/data";
  */
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
+  /* No `lastModified`. Every URL used to be stamped with build-time `now()`,
+     which told crawlers the whole corpus changed on every deploy; an
+     inaccurate timestamp is worse than none, and the content layer has no
+     per-study publication date to use instead. */
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: SITE_URL, lastModified: now, changeFrequency: "weekly", priority: 1 },
-    { url: `${SITE_URL}/questions`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${SITE_URL}/search`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${SITE_URL}/verses`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${SITE_URL}/bible`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: SITE_URL, changeFrequency: "weekly", priority: 1 },
+    { url: `${SITE_URL}/questions`, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${SITE_URL}/search`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SITE_URL}/verses`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${SITE_URL}/bible`, changeFrequency: "monthly", priority: 0.5 },
   ];
 
   const questionRoutes: MetadataRoute.Sitemap = questions.map((q) => ({
     url: `${SITE_URL}/questions/${q.slug}`,
-    lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8,
   }));
@@ -39,7 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .sort((a, b) => a.order - b.order)
     .map((c) => ({
       url: `${SITE_URL}/trails/${c.slug}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));

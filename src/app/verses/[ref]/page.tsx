@@ -31,9 +31,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { ref } = await params;
   const verse = refFromSlug(ref);
-  if (!verse) return {};
+  // This route renders arbitrary verse slugs on demand, so a slug that does
+  // not resolve has to answer a real 404. Throwing here rather than in the
+  // page body sets the status before the response starts streaming; from the
+  // render path an unknown ref came back as a 200 carrying not-found UI.
+  if (!verse) notFound();
   const text = getPassageText(verse, "web");
-  if (!text) return {};
+  if (!text) notFound();
   return {
     title: verse,
     description: `${verse}: read in the ${getTranslationInfo("web").name}, with the study questions and cross-references that connect to it.`,

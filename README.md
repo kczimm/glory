@@ -5,75 +5,98 @@ A question-driven study of the Word of God.
 **Come with a question. Leave with Scripture.**
 
 Instead of linear reading plans, Glory is a journey of questions: you ask what
-you genuinely want to know — *who is Jesus? who is the Holy Spirit? how am I
-saved?* — and Glory sends you into the Word itself. Every answer is grounded in
-specific verses, with whole chapters to read. And what you read raises the next
-question, so the study continues naturally, Scripture leading you deeper into
-the knowledge of God.
+you genuinely want to know, and Glory sends you into the Word itself. Every
+answer is grounded in specific verses, with whole chapters to read. And what
+you read raises the next question, so the study continues naturally, Scripture
+leading you deeper into the knowledge of God.
 
 ## How it works
 
 1. **Come with a question** — ask anything about God, Jesus, or your own soul.
 2. **Read the Scripture** — whole chapters, with study points grounded in exact
-   verses (World English Bible, public domain).
-3. **Let the Word lead** — each question lists the questions its Scripture
+   verses (World English Bible and King James Version, both public domain).
+3. **Let the Word lead** — each study lists the questions its Scripture
    naturally raises. Follow them.
+
+Everything is browsable without a study: the whole Bible, every verse that
+carries a cross-reference, an interactive map of those cross-references, and
+a search over all 31k verses plus the studies. It installs as a PWA and reads
+offline once visited. Studies can be listened to: the audio is pre-generated,
+with the device's own speech synthesis as a fallback.
 
 ## Tech
 
-- Next.js (App Router) + TypeScript + Tailwind CSS v4
-- Scripture text: the full [World English Bible](https://ebible.org/web/)
-  (public domain), vendored offline (~31k verses) and bundled statically — no
-  runtime network calls
-- Content lives in `src/data/` as typed data files
+- Next.js 16 (App Router, Turbopack) + React 19 + TypeScript + Tailwind CSS v4
+- The full WEB and KJV are vendored as typed data (`src/data/scripture*.ts`,
+  generated) and bundled statically: every reference resolves with no network
+  call, and lookups happen on the server so the Bible never enters the browser
+  bundle
+- Content lives in `src/data/` as typed data files; the study corpus and the
+  cross-reference graph are the heart of the app
+- Deployed on Vercel; analytics is Vercel's cookie-free Web Analytics
 
-## Adding a question
+## Pages
 
-1. Add study content to `src/data/questions.ts` — a `Question` entry with
-   passages (whole chapters to read), points (each with verse references),
-   key verses, and `raises` (the questions it naturally leads to).
-2. Tell the "as you read" engine where it leads: put question slugs in
-   `raises`, and future ones in `planned`.
-3. Scripture is vendored as the **full World English Bible** (~31k verses) —
-   regenerate it with:
+| Route | What it is |
+| --- | --- |
+| `/` | home: search, today's verse, continue-your-journey, trails |
+| `/questions`, `/trails/[slug]` | the study index, one trail's ordered studies |
+| `/questions/[slug]` | the study: passages, points, what it raises |
+| `/bible`, `/bible/[slug]` | the whole-Bible reader (both readings) |
+| `/verses`, `/verses/book/[book]`, `/verses/[ref]` | the verse graph: hubs by book, one page per verse |
+| `/connections`, `/connections/[slug]` | the interactive cross-reference map |
+| `/search` | search across the Bible and the studies |
+| `/memorize` | a browser-local review room for the verses you are learning |
+| `/random` | a surprise study |
+| `/about-translation` | where the text comes from |
 
-   ```bash
-   node scripts/fetch-bible.mjs
-   ```
+## Adding a study
 
-The fetch script pulls all 66 books from getbible.net once, validates that
-every verse reference used in `src/` resolves, and rewrites
-`src/data/scripture.ts`. Because the whole Bible is vendored, the app is fully
-offline and can look up *any* verse or chapter — which is what powers the
-cross-reference knowledge graph.
+1. Add a `Question` entry to `src/data/questions.ts`: `passages` (whole chapters
+   to read), `points` (each grounded in verse references), `keyVerses`, and
+   `raises` (the questions it leads to). Future questions go in `planned`.
+2. Add cross-reference edges in `src/data/connections.ts` if the study opens
+   one: `{ target, kind, note }`, where the note says HOW the verses relate.
+3. Run `npm run verify:quotes` and `npm run verify:graph` (both run in
+   `npm run build`): quotation wording must match the vendored WEB word for
+   word, and every edge must resolve.
 
-## Development
+The full authoring procedure, including the traps that only fail late, is in
+`.agents/skills/glory-study/SKILL.md`. `AGENTS.md` describes the architecture
+for agents working in this repo.
+
+## Commands
 
 ```bash
-npm run dev        # local dev server (localhost:3000)
-npm run build      # production build
-npm run lint       # eslint
+npm run dev            # local dev server (localhost:3000)
+npm run dev:lan        # dev server on port 3100, reachable on the LAN
+npm run build          # verify:quotes + verify:graph + audio:check + next build
+npm run start          # production serve (start:lan for the LAN)
+npm run lint           # eslint
+npx tsc --noEmit       # typecheck
+npm test               # vitest: data layer, search, refs, audio chunking, stores
+npm run test:e2e       # browser smoke tests (needs a build first)
+
+npm run verify:quotes    # every hand-written quotation against the WEB
+npm run verify:graph     # edges, orphans, dead ends, stale planned questions
+npm run audio:check      # every playable audio chunk exists in the catalog
+npm run verify:bible     # re-fetch the WEB and diff it against the vendored copy
+
+npm run audio:manifest   # emit the audio catalog
+npm run audio:generate   # synthesize it locally (Kokoro, needs ffmpeg)
+npm run export:social    # build a queue of Instagram drafts from the graph
+npm run export:social:cards  # render those drafts as PNGs
 ```
 
-## Viewing on your network (LAN)
+CI runs lint, the typecheck, the unit tests, and the three verifiers on every
+push and pull request, then a Chromium smoke run over the built app.
 
-To view Glory from a phone/tablet on the same Wi-Fi, expose the server on
-your local network:
+## Scripture
 
-```bash
-npm run dev:lan      # dev server on port 3100, bound to 0.0.0.0
-npm run start:lan    # production serve on port 3100
-```
+Scripture quotations are from the World English Bible (public domain), with the
+King James Version offered alongside it. The reader's choice is remembered in
+the browser only. The text is vendored, so the app makes no request to a Bible
+API at runtime.
 
-Then on any device on the same network, open `http://<your-ip>:3100`, where
-`<your-ip>` is the host machine's address on that network (e.g.
-`ipconfig getifaddr en0` on macOS).
-
-Notes:
-- Next 16 blocks non-localhost dev requests unless allowed — LAN origins are
-  whitelisted in `next.config.ts` (`allowedDevOrigins`). If your machine's IP
-  changes (DHCP), update it there, or set a static/reserved IP in your router.
-
-Scripture quotations are from the World English Bible (public domain), used by
-permission. Study with the Bereans: *"searching the Scriptures daily to see
-whether these things were so"* (Acts 17:11).
+Study with the Bereans: *"searching the Scriptures daily to see whether these
+things were so"* (Acts 17:11).

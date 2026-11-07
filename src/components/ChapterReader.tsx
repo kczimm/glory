@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useSyncExternalStore } from "react";
 import type { Passage } from "@/data/types";
+import { chapterSlug } from "@/data/books";
 import { chapterItems, filterFocus } from "@/lib/audio-text";
 import { inFocus, parseFocus } from "@/lib/focus";
 import { loadChapter } from "@/lib/chapter";
@@ -181,6 +182,21 @@ export default function ChapterReader({ passage }: { passage: Passage }) {
           />
         )}
       </div>
+      {/* Without JavaScript this reader cannot expand, and the chapter text is
+          fetched on open rather than shipped in the page. Point those readers
+          at the prerendered chapter instead of leaving them on a dead button. */}
+      <noscript>
+        <p className="border-t border-line px-4 py-3 text-[13.5px] text-ink-soft sm:px-5">
+          Read{" "}
+          <a
+            href={`/bible/${chapterSlug(passage.book, passage.chapter)}`}
+            className="font-semibold text-gold-deep underline underline-offset-2"
+          >
+            {passage.book} {passage.chapter}
+          </a>{" "}
+          in the reader.
+        </p>
+      </noscript>
       {open && (
         <div
           ref={listRef}

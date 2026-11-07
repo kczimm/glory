@@ -37,6 +37,10 @@ const byBook = (() => {
  * reading page, and the links are still plain server-rendered anchors, so
  * they work without JavaScript.
  */
+/** Every valid value is generated below, so an unknown one is a real 404
+ *  instead of a rendered not-found page carrying a 200. */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [...byBook.keys()].map((book) => ({ book: bookSlug(book) }));
 }

@@ -22,8 +22,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const ref = refFromSlug(slug);
+  // Any verse slug may be visited; one that does not resolve is a real 404.
+  // Thrown from metadata so the status is set before streaming begins.
+  if (!ref) notFound();
   return {
-    title: ref ? `${ref} in Scripture's own words` : "Connections",
+    title: `${ref} in Scripture's own words`,
     description:
       "An interactive map of how Scripture interprets Scripture: cross references, echoes, fulfillments, and contrasts.",
     robots: { index: false },

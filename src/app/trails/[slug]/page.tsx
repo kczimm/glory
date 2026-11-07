@@ -11,6 +11,10 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+/** Every valid value is generated below, so an unknown one is a real 404
+ *  instead of a rendered not-found page carrying a 200. */
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return categories.map((c) => ({ slug: c.slug }));
 }

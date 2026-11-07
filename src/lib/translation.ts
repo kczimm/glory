@@ -15,9 +15,10 @@
  * components that need the value (audio availability, link hrefs) re-render.
  */
 
-// Re-export shared types and utilities
-export type { TranslationCode, TranslationInfo } from "./translation-shared";
-export { TRANSLATIONS, getTranslationInfo, hasAudio, isValidTranslationCode } from "./translation-shared";
+// Re-export the shared helpers this module's callers use
+// (TRANSLATIONS, getTranslationInfo, hasAudio, and the code type).
+export type { TranslationCode } from "./translation-shared";
+export { TRANSLATIONS, getTranslationInfo, hasAudio } from "./translation-shared";
 
 import type { TranslationCode } from "./translation-shared";
 import { VALID_CODES } from "./translation-shared";
@@ -38,7 +39,7 @@ export function getVersionFromURL(searchParams?: URLSearchParams): TranslationCo
 }
 
 /** Get the translation code from localStorage. */
-export function getVersionFromStorage(): TranslationCode {
+function getVersionFromStorage(): TranslationCode {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored && VALID_CODES.has(stored)) return stored as TranslationCode;
@@ -88,11 +89,11 @@ function paint(code: TranslationCode): void {
 }
 
 /**
- * Resolve the current translation code.
- * Pass the current URL search params when you have them; otherwise the
- * address bar is read.
+ * Resolve the current translation code for the store snapshot. Pass the
+ * current URL search params when you have them; otherwise the address bar is
+ * read. Not exported: `getTranslationSnapshot` is the public reader.
  */
-export function resolveVersion(searchParams?: URLSearchParams): TranslationCode {
+function resolveVersion(searchParams?: URLSearchParams): TranslationCode {
   if (current) return current;
   if (typeof window === "undefined") return "web";
   current =

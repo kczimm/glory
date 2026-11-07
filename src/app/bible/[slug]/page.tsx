@@ -18,6 +18,10 @@ interface Props {
  * visit (including each crawler visit) cost a Function invocation and a full
  * origin transfer: it is the second most requested route family on the site.
  */
+/** Every valid value is generated below, so an unknown one is a real 404
+ *  instead of a rendered not-found page carrying a 200. */
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return bibleBooks().flatMap(({ book, chapters }) =>
     Array.from({ length: chapters }, (_, i) => ({

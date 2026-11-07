@@ -1,0 +1,98 @@
+name: Live site
+
+# Production sits behind Vercel's Security Checkpoint, so a plain HTTP client
+# gets a challenge page instead of the app. The narrow fix is a Vercel
+# "Protection Bypass for Automation" secret, sent as the
+# x-vercel-protection-bypass header.
+#
+# Setup (once):
+#   1. Vercel dashboard -> Project -> Settings -> Deployment Protection ->
+#      Protection Bypass for Automation -> generate the secret.
+#   2. Add it to this repo's Actions secrets as VERCEL_AUTOMATION_BYPASS_SECRET.
+#
+# Until that secret exists the job exits early and green, so it never blocks a
+# merge while the secret is being set up.
+
+on:
+  schedule:
+    - cron: "17 13 * * *" # daily, 13:17 UTC
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for the bypass secret
+        id: creds
+        env:
+          SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+        run: |
+          if [ -z "$SECRET" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Skipping live checks: VERCEL_AUTOMATION_BYPASS_SECRET is not set."
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Probe production
+        if: steps.creds.outputs.ready == 'true'
+        env:
+          SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+          BASE: https://glorystudy.com
+        run: |
+          set -uo pipefail
+          fail=0
+
+          body() { # path -> body on stdout
+            curl -sS --compressed --max-time 45 \
+              -H "x-vercel-protection-bypass: $SECRET" \
+              -H "accept: */*" "$BASE$1"
+          }
+          code() { # path -> status code on stdout
+            curl -sS --compressed --max-time 45 -o /dev/null -w '%{http_code}' \
+              -H "x-vercel-protection-bypass: $SECRET" "$BASE$1"
+          }
+
+          # If the bypass secret does not satisfy the checkpoint, say so plainly
+          # rather than reporting a dozen mysterious content failures.
+          if body "/" | grep -q "Vercel Security Checkpoint"; then
+            echo "::error::The bypass secret did not get past the Security Checkpoint. Either the secret is wrong or the firewall needs an allow rule for automation."
+            exit 1
+          fi
+
+          check() { # path, expected substring
+            if body "$1" | grep -qF "$2"; then
+              echo "ok   $1"
+            else
+              echo "::error::Live check failed for $1 (expected to contain: $2)"
+              fail=1
+            fi
+          }
+
+          # The data layer and the surfaces that depend on it.
+          check "/api/queue?study=who-is-the-holy-spirit" "study:who-is-the-holy-spirit"
+          check "/api/chapter?book=John&chapter=3" "For God so loved"
+          check "/api/search?q=shepherd" '"ref"'
+          check "/questions/who-is-the-holy-spirit" "Who is the Holy Spirit"
+          check "/verses" "verses in the graph"
+          check "/" "Skip to content"
+
+          # Unknown chapters must be real 404s, not a 200 carrying not-found UI.
+          got=$(code "/bible/narnia-1")
+          if [ "$got" = "404" ]; then
+            echo "ok   /bible/narnia-1 -> 404"
+          else
+            echo "::error::/bible/narnia-1 answered $got, expected 404"
+            fail=1
+          fi
+
+          # A known study must still be a 200.
+          got=$(code "/questions/what-is-the-trinity")
+          if [ "$got" = "200" ]; then
+            echo "ok   /questions/what-is-the-trinity -> 200"
+          else
+            echo "::error::/questions/what-is-the-trinity answered $got, expected 200"
+            fail=1
+          fi
+
+          exit "$fail"

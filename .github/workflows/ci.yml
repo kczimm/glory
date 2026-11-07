@@ -5,11 +5,11 @@ on:
     branches: [main]
   pull_request:
 
-# The repo's invariants live in four places: eslint, the typechecker, the
-# vitest suite, and the three verifier scripts (quotes, graph, audio catalog).
-# Before this workflow they only ran when a person remembered to run them or
-# when Vercel built a deployment, so a broken invariant could sit on main until
-# the next deploy failed. Run all of it on every push and pull request.
+# The repo's invariants live in five places: eslint, the typechecker, the vitest
+# suite, the three verifier scripts (quotes, graph, audio catalog), and a
+# browser smoke run over the built app. Before this workflow they only ran when
+# a person remembered or when Vercel built a deployment, so a broken invariant
+# could sit on main until the next deploy failed.
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -42,3 +42,36 @@ jobs:
       # every chunk the app can speak is in it. Offline: no R2, no SDK.
       - name: Verify audio catalog
         run: npm run audio:check
+
+  # The seams unit tests cannot reach: a chapter fetched on open, the player's
+  # "What next?" fetch, the verse hub, the connection map's keyboard path, and
+  # real 404s. Runs against `next start`, not the dev server.
+  e2e:
+    runs-on: ubuntu-latest
+    needs: verify
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build
+        run: npm run build
+
+      - name: Smoke test the built app
+        run: npm run test:e2e
+
+      - name: Keep the traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-results
+          path: test-results/
+          retention-days: 7

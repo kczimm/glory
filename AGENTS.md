@@ -34,6 +34,8 @@ npm run lint         # eslint
 npx tsc --noEmit     # typecheck (catches duplicate connection keys, which
                      # only `next build` would otherwise report)
 npm test             # vitest: lib + data-layer tests (tests/*.test.ts)
+npm run test:e2e     # playwright smoke tests against a build (e2e/*.spec.ts;
+                     # needs `npm run build` first)
 
 npm run verify:quotes   # every hand-written quotation against the WEB (in build)
 npm run verify:graph    # edges, orphans, dead ends, stale `planned` (in build)
@@ -57,8 +59,10 @@ Adding a dependency needs npm 11 (`npx npm@11 i <pkg>`): npm 10.9.8 fails with
 build, whatever the flag. It still *consumes* the committed lockfile fine, so
 `npm ci` and `npm install` on a clean tree are unaffected.
 
-CI (`.github/workflows/ci.yml`) runs lint, `tsc --noEmit`, `npm test`, and the
-three verifiers on every push and pull request. Keep it green.
+CI runs two jobs on every push and pull request: `verify` (lint,
+`tsc --noEmit`, `npm test`, and the three verifiers) and `e2e` (build, then the
+Playwright smoke suite on Chromium). `live.yml` probes production daily once a
+`VERCEL_AUTOMATION_BYPASS_SECRET` exists. Keep all of it green.
 
 ## Architecture
 
@@ -346,7 +350,17 @@ in-memory, per instance, bounded: a cost control, not a security boundary).
 - `VerseCard` renders a scripture callout. Its prop is **`verse`**, *not* `ref` —
   `ref` is a React reserved prop and breaks Server Components.
 - `ChapterReader` is a client component (collapsible full-chapter reader,
-  highlights the `focus` range, fetches its text on first open).
+  highlights the `focus` range, fetches its text on first open) with a
+  `<noscript>` link to the prerendered chapter.
+- There is deliberately **no root `src/app/loading.tsx`**. It wrapped every
+  page in a Suspense boundary, so the content arrived inside a `<template>`
+  that only JavaScript unpacked (a reader without JS sat on "Turning the page…"
+  forever) and `notFound()` in a dynamic route answered 200 instead of 404.
+  Adding it back reintroduces both problems.
+- Routes that enumerate every valid param set `dynamicParams = false`, so an
+  unknown value is a real 404. The catch-all verse routes (`/verses/[ref]`,
+  `/connections/[slug]`) stay dynamic for on-demand verse pages and call
+  `notFound()` from `generateMetadata` so the status is set early.
 
 ### Accessibility
 
@@ -368,10 +382,14 @@ aliased and `server-only` is stubbed in `vitest.config.ts`).
   contract, search ranking, the journey store, the review-room store, and
   `src/data/server.ts` lookups (verse, passage, chapter, both readings, focus,
   chapter counts, the KJV loader seam, `loadChapter` caching).
-- Not covered: the audio subsystem (`speech.ts`, `audio-text.ts`,
-  `audioFiles.ts`) and the components. The audio stack is the largest untested
-  surface and the most stateful; be careful there, and prefer adding a test
-  over a visual check.
+- Covered in the browser (`npm run test:e2e`): the chapter reader fetching its
+  text on open, the study page with JavaScript disabled, the verse hub walking
+  into a book and a verse, the connection map expanding a node from the
+  keyboard and respecting reduced motion, the API contracts (`/api/chapter`,
+  `/api/queue`, `/api/search`), and real 404s.
+- Not covered: the audio player itself (`speech.ts`) and `audioFiles.ts`. The
+  audio stack is the stateful surface with the least coverage; prefer adding a
+  test over a visual check.
 - Content invariants are not in vitest; they are the verifier scripts, which is
   where content rules belong.
 
