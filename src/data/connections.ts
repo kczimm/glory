@@ -6513,6 +6513,38 @@ export const connections: Record<string, Connection[]> = {
       "The risen Christ holds the keys of Death and of Hades, so the prerogative Moses declares belongs to Him.",
     ),
   ],
+
+  // ------------------------------------------------------------------
+  // Food, table fellowship, and the clean and unclean
+  // ------------------------------------------------------------------
+  "Leviticus 11:47": [
+    c(
+      "Acts 10:15",
+      "contrast",
+      "The law draws the line between clean and unclean, and the voice from heaven forbids Peter to draw it again over what God has cleansed.",
+    ),
+  ],
+  "Mark 7:19": [
+    c(
+      "1 Timothy 4:4",
+      "theme",
+      "Mark's verdict that all foods are purified is Paul's ground for saying every creature of God is good.",
+    ),
+  ],
+  "Acts 10:15": [
+    c(
+      "Mark 7:19",
+      "parallel",
+      "The cleansing the voice declares is the same verdict Jesus pronounced when He said nothing entering a man defiles him.",
+    ),
+  ],
+  "Acts 10:28": [
+    c(
+      "Acts 15:20",
+      "theme",
+      "The vision opens the table to Gentiles, and the council names only the necessities that keep that table holy.",
+    ),
+  ],
 };
 
 /** Connections leaving from a verse reference.

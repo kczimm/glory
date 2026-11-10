@@ -21752,11 +21752,111 @@ export const questions: Question[] = [
       "faith-or-works",
       "what-do-we-do-when-we-gather",
       "is-all-of-life-worship",
+      "can-i-eat-unclean-food",
     ],
     followsFrom: ["why-did-god-give-israel-the-law-at-sinai", "how-can-i-rest-when-my-mind-wont-stop"],
     related: ["why-did-god-give-israel-the-law-at-sinai", "faith-or-works", "what-is-worship"],
     planned: ["Are the Ten Commandments still binding on Christians?"],
     order: 104,
+  },
+
+  // ------------------------------------------------------------------
+  // TRAIL: Exodus & Covenant (continued: food laws and the table)
+  // ------------------------------------------------------------------
+  {
+    slug: "can-i-eat-unclean-food",
+    question: "Can I eat unclean food?",
+    category: "exodus-and-covenant",
+    summary:
+      "Peter's vision is about people, and Peter says so: God showed him not to call any man unholy or unclean, and the church's first quarrel over it was about eating with Gentiles, not about pork. So Acts 10 by itself does not settle the menu. The food question is answered elsewhere, and explicitly: Jesus said that nothing entering a man defiles him, and Mark adds that this purifies all foods; the Jerusalem council refused to lay the food laws on Gentile believers; and Paul writes that nothing is unclean of itself and that every creature of God is good. The food code was a covenant distinction given to Israel, not a creation order, and the New Testament never makes it a boundary of the new covenant. Keeping it remains a permissible conviction, but it cannot be required of others or used to judge them.",
+    passages: [
+      {
+        book: "Acts",
+        chapter: 10,
+        title: "A sheet, a voice, and a lesson about men",
+        lookFor: "What Peter is told to do with the animals, what he refuses, and the sentence where he tells us what the vision meant.",
+        focus: "9-35",
+      },
+      {
+        book: "Leviticus",
+        chapter: 11,
+        title: "The clean and the unclean",
+        lookFor: "The animals Israel may not eat, and the reason God gives for drawing the distinction.",
+        focus: "1-23,44-47",
+      },
+      {
+        book: "Mark",
+        chapter: 7,
+        title: "What actually defiles a man",
+        lookFor: "The quarrel begins over unwashed hands; watch how wide Jesus makes His answer.",
+        focus: "1-23",
+      },
+      {
+        book: "Acts",
+        chapter: 15,
+        title: "What the council required of Gentiles",
+        lookFor: "The four things the apostles and elders call necessary, and what they never mention.",
+        focus: "6-29",
+      },
+      {
+        book: "Romans",
+        chapter: 14,
+        title: "The strong, the weak, and the table",
+        lookFor: "Who is judging whom over food, and what Paul says about the food itself.",
+        focus: "1-23",
+      },
+    ],
+    points: [
+      {
+        heading: "The vision is about people, and Peter says what it meant",
+        body:
+          "Start with the reading a Messianic believer gives, because it is the text's own reading. Peter is on the housetop, hungry, and a sheet comes down holding “all kinds of four-footed animals of the earth, wild animals, reptiles, and birds of the sky.” A voice says, “Rise, Peter, kill and eat!” Peter refuses: “Not so, Lord; for I have never eaten anything that is common or unclean.” The voice answers, “What God has cleansed, you must not call unclean.” Peter never eats in the vision. The interpretation is the point, and Peter gives it in Cornelius's house: “God has shown me that I shouldn't call any man unholy or unclean.” He says it again in the sermon: “God doesn't show favoritism; but in every nation he who fears him and works righteousness is acceptable to him.” The quarrel that follows is not about pork. When Peter returns to Jerusalem, the charge is “You went in to uncircumcised men, and ate with them!” The vision's stated meaning is the table, and the people at the table are the point. Acts 10 by itself does not settle the menu.",
+        verses: ["Acts 10:11-16", "Acts 10:28", "Acts 10:34-35", "Acts 11:3"],
+      },
+      {
+        heading: "The food code was a covenant distinction, not a creation order",
+        body:
+          "Before Sinai, God gave Noah every moving thing for food and reserved only the blood: “Every moving thing that lives will be food for you. As I gave you the green herb, I have given everything to you. But flesh with its life, that is, its blood, you shall not eat.” The food code as Israel's covenant law comes later. Leviticus gives it to “the children of Israel” and grounds it in the holiness of Yahweh: “For I am Yahweh your God. Sanctify yourselves therefore, and be holy; for I am holy.” The chapter ends with its purpose: “to make a distinction between the unclean and the clean, and between the living thing that may be eaten and the living thing that may not be eaten.” That distinction did what circumcision and the Sabbath did: it marked out a people. It was given at Sinai, inside the covenant, and its reason is Israel's separation to God. This is why the question cannot be answered by saying the law was bad or that the Old Testament was a mistake. The food code was good, and it was a sign. The question is whether the sign still marks the covenant people now that the covenant has been reconstituted around Christ. Paul puts eating and drinking among the shadows whose body is Christ: “Let no one therefore judge you in eating, or in drinking, or with respect to a feast day or a new moon or a Sabbath day, which are a shadow of the things to come; but the body is Christ's.”",
+        verses: ["Genesis 9:3-4", "Leviticus 11:2", "Leviticus 11:44-45", "Leviticus 11:46-47", "Colossians 2:16-17"],
+      },
+      {
+        heading: "Jesus said that nothing entering a man defiles him",
+        body:
+          "The dispute in Mark 7 begins with unwashed hands. The Pharisees saw some of His disciples “eating bread with defiled, that is, unwashed, hands,” and challenged Him over “the tradition of the elders.” Jesus answers by calling the crowd and stating a principle wider than the quarrel: “There is nothing from outside of the man, that going into him can defile him; but the things which proceed out of the man are those that defile the man.” The disciples do not understand, and He repeats it: “whatever goes into the man from outside can't defile him, because it doesn't go into his heart, but into his stomach, then into the latrine, thus purifying all foods.” Then He names what does defile: “evil thoughts, adulteries, sexual sins, murders, thefts,” and the rest of the list. The occasion is handwashing. The sentence is not limited to hands. If nothing entering a man can defile him, the defilement Leviticus assigned to certain foods has no foothold left, and Mark says so in his own words: this purifies all foods. A reader may answer that the clause belongs to Mark and not to Jesus. But Mark is Scripture, and his comment is the inspired explanation of the saying. The early church did not have to guess: the voice in Acts 10 speaks of God cleansing, and Paul later writes that nothing is unclean of itself.",
+        verses: ["Mark 7:2-3", "Mark 7:14-15", "Mark 7:18-19", "Mark 7:20-23", "Romans 14:14"],
+      },
+      {
+        heading: "The Jerusalem council did not lay the food laws on Gentiles",
+        body:
+          "The council met because some taught that Gentiles had to be circumcised and keep the law of Moses to be saved. Peter answered with the yoke: “Now therefore why do you tempt God, that you should put a yoke on the neck of the disciples which neither our fathers nor we were able to bear?” James gave the judgment: “we don't trouble those from among the Gentiles who turn to God,” and the letter asked them to abstain from “the pollution of idols, from sexual immorality, from what is strangled, and from blood.” The letter calls these “necessary things.” Notice what is absent. There is no list of clean and unclean animals, no requirement of kosher slaughter, no distinction of meats at all. If the food code still bounded the covenant people, the council's short list would be unthinkable. The four items it did name are the ancient requirements for the stranger who lives among Israel: the sanctity of blood, the rejection of idolatry, and sexual sin. The council was not inventing a new morality; it was applying the covenant's moral and blood-related absolutes to a table where Jews and Gentiles now eat together.",
+        verses: ["Acts 15:10", "Acts 15:19-21", "Acts 15:28-29", "Acts 21:25", "Leviticus 17:10-12", "Leviticus 18:26", "Genesis 9:4"],
+      },
+      {
+        heading: "Food is a gift, and conscience still rules the table",
+        body:
+          "The New Testament does not replace one food code with another. It says the category has changed: “I know, and am persuaded in the Lord Jesus, that nothing is unclean of itself; except that to him who considers anything to be unclean, to him it is unclean.” Paul can say “All things indeed are clean” and still warn that it is evil for a man to eat against his conscience or to wound a brother with his freedom. To Timothy he describes the false teachers who command “to abstain from foods which God created to be received with thanksgiving,” and answers them: “every creature of God is good, and nothing is to be rejected, if it is received with thanksgiving, for it is sanctified through the word of God and prayer.” To the Corinthians he writes, “food will not commend us to God.” So the freedom is real, and it is not a new law either. No one is required to eat what he once called unclean, and no one may despise the brother who abstains. A Messianic believer may keep the food laws as conviction, heritage, and love, and Paul's warning about the weak conscience protects that choice. What the gospel does not allow is turning the food code into a test of another believer's standing, or teaching that Gentiles must keep it in order to be faithful. The table is now governed by love, not by the menu.",
+        verses: ["Romans 14:3", "Romans 14:14", "Romans 14:20-21", "1 Corinthians 8:8", "1 Timothy 4:3-5"],
+      },
+    ],
+    keyVerses: ["Acts 10:28", "Mark 7:18-19", "Acts 15:20", "Romans 14:20", "1 Timothy 4:4"],
+    raises: [
+      "must-christians-keep-the-sabbath",
+      "how-is-the-new-covenant-different-from-the-old-one",
+      "faith-or-works",
+    ],
+    followsFrom: ["who-are-gods-chosen-people", "must-christians-keep-the-sabbath"],
+    related: [
+      "must-christians-keep-the-sabbath",
+      "who-are-gods-chosen-people",
+      "what-did-circumcision-seal",
+      "how-wrong-can-i-be-and-still-be-saved",
+      "how-is-the-new-covenant-different-from-the-old-one",
+    ],
+    planned: [
+      "Does Isaiah 66:17 mean unclean food is still an abomination?",
+      "How do I share a table with a believer whose convictions differ from mine?",
+    ],
+    order: 105,
   },
 
   // ------------------------------------------------------------------
@@ -22428,7 +22528,7 @@ export const questions: Question[] = [
       },
     ],
     keyVerses: ["Exodus 19:6", "1 Peter 2:9-10", "Ephesians 2:14", "Ephesians 3:6", "Romans 11:17"],
-    raises: ["why-do-i-need-the-church", "how-is-the-new-covenant-different-from-the-old-one", "the-churchs-mission-in-the-world"],
+    raises: ["why-do-i-need-the-church", "how-is-the-new-covenant-different-from-the-old-one", "the-churchs-mission-in-the-world", "can-i-eat-unclean-food"],
     followsFrom: ["what-is-the-church", "what-is-the-gospel", "how-can-i-be-saved"],
     related: ["what-is-the-church", "why-do-i-need-the-church", "what-does-it-mean-to-be-born-again", "the-churchs-mission-in-the-world"],
     planned: [],
