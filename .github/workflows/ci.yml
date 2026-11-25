@@ -21,7 +21,11 @@ jobs:
           node-version: 22
           cache: npm
 
+      # The GPU ONNX runtime binary is only for local TTS generation and its
+      # upstream asset 404s on GitHub runners; the tests do not need it.
       - run: npm ci
+        env:
+          ONNXRUNTIME_NODE_INSTALL_CUDA: skip
 
       - name: Lint
         run: npm run lint
@@ -61,6 +65,8 @@ jobs:
           cache: npm
 
       - run: npm ci
+        env:
+          ONNXRUNTIME_NODE_INSTALL_CUDA: skip
 
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
