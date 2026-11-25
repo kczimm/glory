@@ -11,7 +11,8 @@ import {
   graphVerseRefs,
   setKJVLoader,
 } from "../src/data/server";
-import { loadChapter, parseChapterParams } from "../src/lib/chapter";
+import { loadChapterData, parseChapterParams } from "../src/lib/chapter";
+import { chapterBackground } from "../src/data/background";
 import { canonicalRef, parseRef, verseSlug } from "../src/data/ref";
 import { refFromSlug, incomingConnections } from "../src/data/verseIndex";
 import { graphUsages, graphVerseTexts, optionQueues, visitChainData } from "../src/data/server";
@@ -127,25 +128,58 @@ describe("chapter requests", () => {
   });
 });
 
-describe("loadChapter", () => {
+describe("loadChapterData", () => {
   it("fetches a chapter once and reuses it", async () => {
     const calls: string[] = [];
     vi.stubGlobal("fetch", async (url: string) => {
       calls.push(String(url));
       return {
         ok: true,
-        json: async () => ({ verses: [{ n: 1, web: "In the beginning", kjv: "In the beginning" }] }),
+        json: async () => ({
+          verses: [{ n: 1, web: "In the beginning", kjv: "In the beginning" }],
+          background: null,
+        }),
       };
     });
 
-    const first = await loadChapter("Genesis", 1);
-    const second = await loadChapter("Genesis", 1);
+    const first = await loadChapterData("Genesis", 1);
+    const second = await loadChapterData("Genesis", 1);
 
-    expect(first?.[0].web).toBe("In the beginning");
+    expect(first?.verses[0].web).toBe("In the beginning");
+    expect(first?.background).toBeNull();
     expect(second).toBe(first);
     expect(calls).toHaveLength(1);
     expect(calls[0]).toContain("book=Genesis");
     expect(calls[0]).toContain("chapter=1");
+    vi.unstubAllGlobals();
+  });
+
+  it("carries the chapter's notes when the route sends them", async () => {
+    const notes = chapterBackground("Acts", 2);
+    vi.stubGlobal("fetch", async () => ({
+      ok: true,
+      json: async () => ({
+        verses: [{ n: 1, web: "text", kjv: null }],
+        background: notes,
+      }),
+    }));
+
+    const payload = await loadChapterData("Acts", 2);
+    expect(payload?.background?.terms?.length).toBeGreaterThan(0);
+    vi.unstubAllGlobals();
+  });
+
+  it("shares one request across a book's aliases", async () => {
+    const calls: string[] = [];
+    vi.stubGlobal("fetch", async (url: string) => {
+      calls.push(String(url));
+      return { ok: true, json: async () => ({ verses: [{ n: 1, web: "text", kjv: null }] }) };
+    });
+
+    await loadChapterData("Psalm", 23);
+    await loadChapterData("Psalms", 23);
+
+    expect(calls).toHaveLength(1);
     vi.unstubAllGlobals();
   });
 
@@ -157,10 +191,28 @@ describe("loadChapter", () => {
       return { ok: true, json: async () => ({ verses: [{ n: 1, web: "text", kjv: null }] }) };
     });
 
-    expect(await loadChapter("Genesis", 2)).toBeNull();
-    expect(await loadChapter("Genesis", 2)).not.toBeNull();
+    expect(await loadChapterData("Genesis", 2)).toBeNull();
+    expect(await loadChapterData("Genesis", 2)).not.toBeNull();
     expect(attempt).toBe(2);
     vi.unstubAllGlobals();
+  });
+});
+
+describe("chapter background", () => {
+  it("resolves notes by chapter and returns null where none are written", () => {
+    expect(chapterBackground("Acts", 2)?.setting).toContain("Pentecost");
+    expect(chapterBackground("Genesis", 1)).toBeNull();
+  });
+
+  it("only names words that occur in the chapter it is attached to", () => {
+    for (const [book, chapter] of [["Acts", 2], ["Romans", 8], ["Luke", 24]] as const) {
+      const entry = chapterBackground(book, chapter);
+      expect(entry, `${book} ${chapter}`).not.toBeNull();
+      const text = getChapter(book, chapter)!.map((v) => v.text).join(" ").toLowerCase();
+      for (const term of entry!.terms ?? []) {
+        expect(text, `${book} ${chapter}: ${term.term}`).toContain(term.term.toLowerCase());
+      }
+    }
   });
 });
 

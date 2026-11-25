@@ -38,6 +38,9 @@ jobs:
       - name: Verify graph
         run: npm run verify:graph
 
+      - name: Verify chapter notes
+        run: npm run verify:background
+
       # Rebuilds the audio catalog from the current content and checks that
       # every chunk the app can speak is in it. Offline: no R2, no SDK.
       - name: Verify audio catalog

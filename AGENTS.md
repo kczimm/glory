@@ -27,7 +27,7 @@ catalog, and it deploys to Vercel.
 ```bash
 npm run dev          # local dev (localhost:3000)
 npm run dev:lan      # dev on LAN, port 3100
-npm run build        # verify:quotes + verify:graph + audio:check + next build
+npm run build        # verify:quotes + verify:graph + verify:background + audio:check + next build
 npm run start        # production serve
 npm run start:lan    # production serve on LAN, port 3100
 npm run lint         # eslint
@@ -38,6 +38,7 @@ npm run test:e2e     # playwright smoke tests against a build (e2e/*.spec.ts;
                      # needs `npm run build` first)
 
 npm run verify:quotes   # every hand-written quotation against the WEB (in build)
+npm run verify:background # chapter notes: real chapters, real terms, verbatim quotes (in build)
 npm run verify:graph    # edges, orphans, dead ends, stale `planned` (in build)
 npm run audio:check     # every playable chunk is in the catalog (in build)
 npm run verify:bible    # re-fetch the WEB and diff the vendored copy (network;
@@ -60,7 +61,7 @@ build, whatever the flag. It still *consumes* the committed lockfile fine, so
 `npm ci` and `npm install` on a clean tree are unaffected.
 
 CI runs two jobs on every push and pull request: `verify` (lint,
-`tsc --noEmit`, `npm test`, and the three verifiers) and `e2e` (build, then the
+`tsc --noEmit`, `npm test`, and the four verifiers) and `e2e` (build, then the
 Playwright smoke suite on Chromium). `live.yml` probes production daily once a
 `VERCEL_AUTOMATION_BYPASS_SECRET` exists. Keep all of it green.
 
@@ -90,7 +91,7 @@ Next.js 16 (App Router, Turbopack) + TypeScript + Tailwind CSS v4 + React 19.
 
 Route handlers: `/api/search` (rate limited, `revalidate = 60`), `/api/passage`
 (verse text for the review room), `/api/chapter` (one chapter, both readings,
-for the expandable reader), `/api/queue` (one study's speech queues, fetched
+plus its reading notes, for the expandable reader), `/api/queue` (one study's speech queues, fetched
 when the player's "What next?" menu is picked), `/api/graph` (`force-static`
 payload for the explorer). Metadata routes: `sitemap.ts`, `robots.ts`,
 `manifest.ts`, the opengraph-image routes, `apple-icon.png`, `icon.svg`.
@@ -104,7 +105,8 @@ Layout/global: `Nav`, `Footer`, `ThemeToggle`, `TranslationToggle`,
 `SpeechPlayer`, `RegisterServiceWorker`, `JourneyBreadcrumb`, `JourneyHomeCard`.
 
 Study surfaces: `ChapterReader` (expandable full chapter, fetches its text from
-`/api/chapter` on first open), `VerseCard`, `VerseText`, `VerseConnections`,
+`/api/chapter` on first open), `ChapterNotes` (the collapsed reading notes the
+same response carries), `VerseCard`, `VerseText`, `VerseConnections`,
 `QuestionCard`, `QuestionsIndex`, `StudyListen`, `StudyFollowAlong`,
 `VisitChain`, `VisitListen`, `HoldAllButton`, `ShareButton`, `AutoPrint`.
 
@@ -126,6 +128,13 @@ Browsing: `SearchBox`, `SearchPage`, `ConnectionGraph`, `DailyCard`,
   (`graphVerseTexts`, `graphUsages`, `citedVersesBySlug`), and the prebuilt
   speech queues (`studyListenData`, `visitListenData`, `visitChainData`).
 - **`src/lib/search.ts` is `server-only`** too: it scans all 31k verses.
+- `src/data/background.ts` holds the chapter reading notes, keyed `"Book
+  Chapter"`: setting, genre, original-language terms, reception, sources. One
+  entry serves every study that reads that chapter. It is prose, so its rules
+  are enforced by `scripts/verify-background.mjs` (real chapter, every term
+  present in a single verse, cited verse numbers inside the chapter, at least
+  one verbatim WEB quotation per entry, word caps, no em dashes, unique
+  sources).
 - `src/data/books.ts` is the canon: `BIBLE_BOOKS`, `bookSlug`, `bookFromSlug`,
   `chapterSlug`. **Never hardcode a book list.** The `/verses` index used to
   carry its own copy with "Song of Solomon" where the data says "Song of
@@ -150,7 +159,10 @@ chapter text and prebuilt audio queues travelled as props.
 
 - Chapter text goes through `/api/chapter`, fetched by `ChapterReader` when the
   chapter is opened (or chained into by the player), cached per chapter by
-  `src/lib/chapter.ts`.
+  `src/lib/chapter.ts`. The same response carries the chapter's reading notes
+  (`src/data/background.ts`), so notes cost no study-page payload: they are
+  fetched only with a chapter a reader actually opened, and the player never
+  speaks them.
 - Verse text for client-local state goes through `/api/passage`
   (`MAX_REFS_PER_REQUEST` in `src/lib/passage.ts` is the contract; batch with
   `chunkRefs`).
@@ -334,7 +346,8 @@ identical queries are CDN-cached for 60s.
 
 - `/api/search?q=&verses=&studies=&version=` → `{ verses, questions, translation }`
 - `/api/passage?refs=a|b|c` → `{ [ref]: { web, kjv } }`, capped by `MAX_REFS_PER_REQUEST`
-- `/api/chapter?book=&chapter=` → `{ book, chapter, verses: [{ n, web, kjv }] }`
+- `/api/chapter?book=&chapter=` → `{ book, chapter, verses: [{ n, web, kjv }], background }`
+  (`background` is `null` for chapters with no notes yet)
 - `/api/queue?study=<slug>` → `{ slug, label, firstChapter, study }` (speech queues for one study)
 - `/api/graph` → `{ texts, usages, cited }` (`force-static`)
 
@@ -416,7 +429,8 @@ npm test
 npm run build
 ```
 
-`npm run build` runs `verify:quotes`, `verify:graph`, and `audio:check` first,
+`npm run build` runs `verify:quotes`, `verify:graph`, `verify:background`, and
+`audio:check` first,
 so a content or wiring mistake fails there rather than in production. If you
 touched `src/data/questions.ts`, `src/data/connections.ts`, or anything the
 audio queues are built from, expect the verifiers to be the thing that tells

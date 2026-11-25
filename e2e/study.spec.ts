@@ -28,6 +28,32 @@ test("the chapter reader loads its text when opened", async ({ page }) => {
   });
 });
 
+test("chapter notes arrive with the text and stay collapsed", async ({ page }) => {
+  await page.goto("/questions/who-is-the-holy-spirit");
+
+  // Notes ride the chapter fetch, so nothing about them is in the page payload
+  // until the reader is opened. Asserting on the served HTML is the point: the
+  // absence of a rendered node would not catch notes serialized into the RSC
+  // flight data.
+  expect(await page.content()).not.toContain("glōssais");
+
+  const reader = page.locator("#reader-chapter-Acts-2").first();
+  await page.getByRole("button", { name: /Acts 2/ }).first().click();
+  await expect(reader).toContainText(/mighty works of God/i, { timeout: 15_000 });
+  expect(await page.content()).toContain("glōssais");
+
+  // The notes sit below the scrolling text, so they never get buried inside
+  // the 420px window the chapter reads through.
+  const notes = page.locator("#notes-reader-chapter-Acts-2");
+  await expect(notes).toBeVisible();
+  await expect(notes.getByText("Notes on this chapter")).toBeVisible();
+  expect(await notes.getAttribute("open")).toBeNull();
+
+  await notes.getByText("Notes on this chapter").click();
+  await expect(notes).toContainText("Pentecost");
+  await expect(notes).toContainText("glōssais");
+});
+
 test("the study itself is server-rendered without JavaScript", async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();

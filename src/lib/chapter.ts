@@ -13,12 +13,23 @@
 
 import { canonicalBook } from "@/data/ref";
 import { BIBLE_BOOKS } from "@/data/books";
+import type { ChapterBackground } from "@/data/types";
 
 /** One verse of a chapter, in both readings. The reader shows its choice. */
 export interface ChapterVerse {
   n: number;
   web: string | null;
   kjv: string | null;
+}
+
+/**
+ * What a chapter load carries: the text, and whatever reading tools have been
+ * written for that chapter. `background` is null for the chapters that have
+ * none yet, which is most of them, so the reader must treat it as optional.
+ */
+export interface ChapterPayload {
+  verses: ChapterVerse[];
+  background: ChapterBackground | null;
 }
 
 /** Upper bound on a chapter number; the longest chapter is Psalm 119. */
@@ -52,14 +63,14 @@ export function parseChapterParams(
 /** In-flight and settled chapter loads, so several readers on one page (and a
  *  repeated open) share a single request. Failures are not kept, so a reader
  *  can retry after a network blip. */
-const loads = new Map<string, Promise<ChapterVerse[] | null>>();
+const loads = new Map<string, Promise<ChapterPayload | null>>();
 
 /** Fetch a chapter's text from /api/chapter, cached per (book, chapter). */
-export function loadChapter(
+export function loadChapterData(
   book: string,
   chapter: number,
-): Promise<ChapterVerse[] | null> {
-  const key = `${book} ${chapter}`;
+): Promise<ChapterPayload | null> {
+  const key = `${canonicalBook(book)} ${chapter}`;
   const cached = loads.get(key);
   if (cached) return cached;
 
@@ -68,11 +79,15 @@ export function loadChapter(
     { headers: { accept: "application/json" } },
   )
     .then((res) => (res.ok ? res.json() : null))
-    .then((data: { verses?: ChapterVerse[] } | null) => data?.verses ?? null)
+    .then((data: ChapterPayload | null) =>
+      data?.verses?.length
+        ? { verses: data.verses, background: data.background ?? null }
+        : null,
+    )
     .catch(() => null)
-    .then((verses) => {
-      if (!verses) loads.delete(key);
-      return verses;
+    .then((payload) => {
+      if (!payload) loads.delete(key);
+      return payload;
     });
 
   loads.set(key, request);

@@ -69,6 +69,41 @@ export interface Question {
 }
 
 /**
+ * Reading guidance for a whole chapter, opened after the text and keyed by
+ * chapter rather than by study: one entry serves every study that reads that
+ * chapter (413 distinct chapters carry all 321 studies, and the ratio only
+ * improves as studies are added).
+ *
+ * This is the seminary layer: setting, genre, and the original-language words
+ * that decide a passage. It is deliberately not commentary. Every claim is
+ * anchored to the chapter or to a listed source, and it renders collapsed
+ * after the verses, never before them.
+ */
+export interface BackgroundTerm {
+  /** the word or phrase as it appears in the WEB text of this chapter */
+  term: string;
+  /** transliteration of the underlying Greek or Hebrew */
+  original: string;
+  /** plain-English sense, kept short */
+  gloss: string;
+  /** one sentence on why this word matters here */
+  note: string;
+}
+
+export interface ChapterBackground {
+  /** who, where, when, why: the situation the chapter opens into */
+  setting: string;
+  /** how to read it: genre, structure, the shape of the argument */
+  genre: string;
+  /** words whose original-language sense changes how the chapter reads */
+  terms?: BackgroundTerm[];
+  /** how the church has read and argued over this chapter, held neutrally */
+  reception?: string;
+  /** works and passages this entry rests on; never empty */
+  sources: string[];
+}
+
+/**
  * The knowledge graph: typed cross-reference edges between verses.
  * Scripture interprets Scripture: these edges show HOW verses connect.
  */

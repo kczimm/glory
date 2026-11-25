@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:lan": "next dev -H 0.0.0.0 -p 3100",
-    "build": "npm run verify:quotes && npm run verify:graph && npm run audio:check && next build",
+    "build": "npm run verify:quotes && npm run verify:graph && npm run verify:background && npm run audio:check && next build",
     "start": "next start",
     "start:lan": "next start -H 0.0.0.0 -p 3100",
     "lint": "eslint",
@@ -24,6 +24,7 @@
     "verify:bible": "node scripts/verify-bible.mjs",
     "verify:quotes": "node scripts/verify-quotes.mjs",
     "verify:graph": "node scripts/verify-graph.mjs",
+    "verify:background": "node --experimental-strip-types scripts/verify-background.mjs",
     "test": "vitest run",
     "test:e2e": "playwright test"
   },

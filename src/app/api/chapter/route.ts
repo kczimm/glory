@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getChapterPair } from "@/data/server";
+import { chapterBackground } from "@/data/background";
 import { parseChapterParams } from "@/lib/chapter";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
 
@@ -46,5 +47,9 @@ export function GET(req: NextRequest) {
     book: parsed.book,
     chapter: parsed.chapter,
     verses,
+    // Reading tools for this chapter, or null when none are written yet. It
+    // rides the same response as the text because both are chapter-keyed and
+    // both are wasted payload unless the reader opens the chapter.
+    background: chapterBackground(parsed.book, parsed.chapter),
   });
 }

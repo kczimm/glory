@@ -17,6 +17,14 @@ test("chapter API returns both readings", async ({ request }) => {
   expect(v16.kjv).toContain("only begotten");
 });
 
+test("chapter API carries reading notes when they exist", async ({ request }) => {
+  const acts = await (await request.get("/api/chapter?book=Acts&chapter=2")).json();
+  expect(acts.background.setting).toContain("Pentecost");
+
+  const john = await (await request.get("/api/chapter?book=John&chapter=3")).json();
+  expect(john.background).toBeNull();
+});
+
 test("chapter API rejects bad input and missing chapters", async ({ request }) => {
   expect((await request.get("/api/chapter?book=Narnia&chapter=1")).status()).toBe(400);
   expect((await request.get("/api/chapter?book=John&chapter=99")).status()).toBe(404);
