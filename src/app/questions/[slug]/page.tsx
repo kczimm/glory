@@ -14,6 +14,8 @@ import {
   visitChainData,
   visitListenData,
 } from "@/data/server";
+import { chapterBackground } from "@/data/background";
+import { canonicalBook } from "@/data/ref";
 import VerseCard from "@/components/VerseCard";
 import VerseText from "@/components/VerseText";
 import ChapterReader from "@/components/ChapterReader";
@@ -178,7 +180,11 @@ export default async function QuestionPage({ params }: Props) {
           </p>
           <div className="mt-6 space-y-3">
             {question.passages.map((p) => (
-              <ChapterReader key={`${p.book}-${p.chapter}`} passage={p} />
+              <ChapterReader
+                key={`${p.book}-${p.chapter}`}
+                passage={p}
+                hasNotes={chapterBackground(canonicalBook(p.book), p.chapter) !== null}
+              />
             ))}
           </div>
         </section>

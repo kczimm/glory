@@ -176,11 +176,15 @@ for (const [key, entry] of entries) {
   for (const text of prose) {
     if (text.includes("\u2014")) fail(`${where}: em dash in copy`);
     for (const [, span] of text.matchAll(/[“"]([^”"]+)[”"]/g)) {
-      quoteCount += 1;
       const fragments = span
         .split(/ ?\.\.\.? ?| ?\u2026 ?/)
         .map(norm)
         .filter((f) => f.split(" ").length >= 3);
+      if (fragments.length === 0) {
+        fail(`${where}: quoted "${span.trim()}" is too short to check`);
+        continue;
+      }
+      quoteCount += 1;
       for (const fragment of fragments) {
         if (!corpus.some((v) => v.includes(fragment))) {
           fail(`${where}: quoted "${fragment}" is not in the vendored WEB`);
@@ -196,7 +200,9 @@ for (const [key, entry] of entries) {
   const notes = [entry.setting, entry.genre, entry.reception, ...terms.map((t) => t.note)]
     .filter((s) => typeof s === "string")
     .join(" ");
-  const cited = [...notes.matchAll(/\bverses? (\d+)(?:\s*(?:and|,|-)\s*(\d+))?/gi)];
+  const cited = [
+    ...notes.matchAll(/\bverses? (\d+)(?:\s*(?:and|,|-|through|to)\s*(\d+))?/gi),
+  ];
   const numbers = chapterVerseNumbers.get(key);
   for (const [, a, b] of cited) {
     for (const n of [a, b].filter(Boolean).map(Number)) {

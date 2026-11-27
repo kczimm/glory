@@ -162,7 +162,8 @@ chapter text and prebuilt audio queues travelled as props.
   `src/lib/chapter.ts`. The same response carries the chapter's reading notes
   (`src/data/background.ts`), so notes cost no study-page payload: they are
   fetched only with a chapter a reader actually opened, and the player never
-  speaks them.
+  speaks them. The one thing that ships is a boolean `hasNotes` marker per
+  passage, so a reader knows notes exist before opening.
 - Verse text for client-local state goes through `/api/passage`
   (`MAX_REFS_PER_REQUEST` in `src/lib/passage.ts` is the contract; batch with
   `chunkRefs`).

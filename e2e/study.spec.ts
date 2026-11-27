@@ -37,8 +37,14 @@ test("chapter notes arrive with the text and stay collapsed", async ({ page }) =
   // flight data.
   expect(await page.content()).not.toContain("glōssais");
 
+  // The marker is the only thing that ships in the page: a boolean saying
+  // notes exist, so a reader knows before opening.
+  const actsToggle = page.getByRole("button", { name: /Acts 2/ }).first();
+  await expect(actsToggle.getByText("Notes", { exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: /John 16/ }).first()).not.toContainText("Notes");
+
   const reader = page.locator("#reader-chapter-Acts-2").first();
-  await page.getByRole("button", { name: /Acts 2/ }).first().click();
+  await actsToggle.click();
   await expect(reader).toContainText(/mighty works of God/i, { timeout: 15_000 });
   expect(await page.content()).toContain("glōssais");
 
@@ -69,6 +75,10 @@ test("the study itself is server-rendered without JavaScript", async ({ browser 
 
   // The chapter reader cannot expand without JS, so it hands the reader the
   // prerendered chapter instead of a dead button.
+  // The "Notes" marker advertises a panel that needs JavaScript, so it is
+  // hidden on this path rather than pointing at a surface that cannot show it.
+  await expect(page.getByText("Notes", { exact: true }).first()).toBeHidden();
+
   const readInstead = page.getByRole("link", { name: "John 14", exact: true }).first();
   await expect(readInstead).toBeVisible();
   await expect(readInstead).toHaveAttribute("href", "/bible/john-14");

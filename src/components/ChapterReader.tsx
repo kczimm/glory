@@ -34,7 +34,14 @@ import { hasAudio } from "@/lib/translation-shared";
  * chains into it, and cached for the rest of the session by `loadChapter`.
  * The vendored Bible still never enters the client bundle.
  */
-export default function ChapterReader({ passage }: { passage: Passage }) {
+export default function ChapterReader({
+  passage,
+  hasNotes = false,
+}: {
+  passage: Passage;
+  /** Whether this chapter has reading notes, so the collapsed header can say so. */
+  hasNotes?: boolean;
+}) {
   const [opened, setOpened] = useState(false);
   // The loaded key travels with the data, so a passage change cannot show a
   // previous chapter's text or notes even if the caller forgets to key this
@@ -165,8 +172,16 @@ export default function ChapterReader({ passage }: { passage: Passage }) {
           aria-controls={domId}
         >
           <div>
-            <p className="font-display text-lg font-medium text-ink">
+            <p className="flex flex-wrap items-center gap-2 font-display text-lg font-medium text-ink">
               {passage.book} {passage.chapter}
+              {hasNotes && (
+                <span
+                  data-notes-marker
+                  className="rounded-full border border-gold/40 bg-gold-wash px-2 py-0.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-deep"
+                >
+                  Notes
+                </span>
+              )}
             </p>
             <p className="text-[13px] text-ink-soft">
               {passage.title}: {passage.lookFor}
@@ -200,6 +215,9 @@ export default function ChapterReader({ passage }: { passage: Passage }) {
           fetched on open rather than shipped in the page. Point those readers
           at the prerendered chapter instead of leaving them on a dead button. */}
       <noscript>
+        {/* The chapter notes live in the reader, which needs JavaScript, so a
+            marker advertising them would be a promise this surface cannot keep. */}
+        <style>{"[data-notes-marker]{display:none}"}</style>
         <p className="border-t border-line px-4 py-3 text-[13.5px] text-ink-soft sm:px-5">
           Read{" "}
           <a
