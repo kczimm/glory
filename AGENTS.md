@@ -163,7 +163,9 @@ chapter text and prebuilt audio queues travelled as props.
   (`src/data/background.ts`), so notes cost no study-page payload: they are
   fetched only with a chapter a reader actually opened, and the player never
   speaks them. The one thing that ships is a boolean `hasNotes` marker per
-  passage, so a reader knows notes exist before opening.
+  passage, so a reader knows notes exist before opening. The whole-Bible
+  reader at `/bible/[slug]` prerenders the same notes after the text for the
+  chapters that have them, so the two surfaces cannot disagree.
 - Verse text for client-local state goes through `/api/passage`
   (`MAX_REFS_PER_REQUEST` in `src/lib/passage.ts` is the contract; batch with
   `chunkRefs`).

@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import { chapterSlug, bookFromSlug } from "@/data/books";
 import { parseRef, verseKeys, verseSlug } from "@/data/ref";
 import { getChapterPair, bibleBooks, graphVerseRefs } from "@/data/server";
+import { chapterBackground } from "@/data/background";
 import { PairedText } from "@/components/VerseText";
+import ChapterNotes from "@/components/ChapterNotes";
 import { getTranslationInfo } from "@/lib/translation-shared";
 
 interface Props {
@@ -75,6 +77,11 @@ export default async function BibleChapter({ params }: Props) {
   if (!parsed) notFound();
   const verses = getChapterPair(parsed.book, parsed.chapter);
   if (!verses) notFound();
+  // Reading notes are chapter-level, so the whole-Bible reader is their
+  // natural home too. Prerendered with the page (no fetch), which means the
+  // 28 note-bearing chapters carry their notes twice, as markup and as flight
+  // data, like every other prerendered element.
+  const notes = chapterBackground(parsed.book, parsed.chapter);
 
   const canon = getCanon();
   const idx = canon.findIndex(
@@ -153,6 +160,12 @@ export default async function BibleChapter({ params }: Props) {
             );
           })}
         </div>
+
+        {notes && (
+          <div className="mt-10">
+            <ChapterNotes background={notes} chapterId={`bible-${slug}`} headingLevel={2} />
+          </div>
+        )}
 
         <nav
           className="mt-12 flex items-center justify-between border-t border-line pt-6 text-sm"

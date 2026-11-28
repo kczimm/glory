@@ -175,10 +175,7 @@ export default function ChapterReader({
             <p className="flex flex-wrap items-center gap-2 font-display text-lg font-medium text-ink">
               {passage.book} {passage.chapter}
               {hasNotes && (
-                <span
-                  data-notes-marker
-                  className="rounded-full border border-gold/40 bg-gold-wash px-2 py-0.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-deep"
-                >
+                <span className="rounded-full border border-gold/40 bg-gold-wash px-2 py-0.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-deep">
                   Notes
                 </span>
               )}
@@ -215,9 +212,6 @@ export default function ChapterReader({
           fetched on open rather than shipped in the page. Point those readers
           at the prerendered chapter instead of leaving them on a dead button. */}
       <noscript>
-        {/* The chapter notes live in the reader, which needs JavaScript, so a
-            marker advertising them would be a promise this surface cannot keep. */}
-        <style>{"[data-notes-marker]{display:none}"}</style>
         <p className="border-t border-line px-4 py-3 text-[13.5px] text-ink-soft sm:px-5">
           Read{" "}
           <a

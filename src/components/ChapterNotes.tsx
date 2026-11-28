@@ -13,10 +13,15 @@ import type { ChapterBackground } from "@/data/types";
 export default function ChapterNotes({
   background,
   chapterId,
+  headingLevel = 3,
 }: {
   background: ChapterBackground;
   chapterId: string;
+  /** The heading level the surrounding page expects (study uses h2 above it,
+   *  the Bible page has only h1), so the outline never skips a level. */
+  headingLevel?: 2 | 3;
 }) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
   return (
     <details
       id={`notes-${chapterId}`}
@@ -33,18 +38,18 @@ export default function ChapterNotes({
 
       <div className="mt-4 space-y-4 border-t border-line pt-4 text-[14px] leading-relaxed text-ink-soft">
         <section>
-          <h3 className="mb-1 font-display text-[15px] font-medium text-ink">The setting</h3>
+          <Heading className="mb-1 font-display text-[15px] font-medium text-ink">The setting</Heading>
           <p>{background.setting}</p>
         </section>
 
         <section>
-          <h3 className="mb-1 font-display text-[15px] font-medium text-ink">How to read it</h3>
+          <Heading className="mb-1 font-display text-[15px] font-medium text-ink">How to read it</Heading>
           <p>{background.genre}</p>
         </section>
 
         {background.terms && background.terms.length > 0 && (
           <section>
-            <h3 className="mb-2 font-display text-[15px] font-medium text-ink">Words worth knowing</h3>
+            <Heading className="mb-2 font-display text-[15px] font-medium text-ink">Words worth knowing</Heading>
             <dl className="space-y-3">
               {background.terms.map((t) => (
                 <div key={t.term}>
@@ -62,17 +67,17 @@ export default function ChapterNotes({
 
         {background.reception && (
           <section>
-            <h3 className="mb-1 font-display text-[15px] font-medium text-ink">
+            <Heading className="mb-1 font-display text-[15px] font-medium text-ink">
               How the church has read it
-            </h3>
+            </Heading>
             <p>{background.reception}</p>
           </section>
         )}
 
         <section>
-          <h3 className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-faint">
+          <Heading className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-faint">
             Sources
-          </h3>
+          </Heading>
           <ul className="flex flex-wrap gap-x-3 gap-y-1 text-[12.5px] text-ink-soft">
             {background.sources.map((s) => (
               <li key={s}>{s}</li>

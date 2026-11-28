@@ -84,10 +84,6 @@ test("the study itself is server-rendered without JavaScript", async ({ browser 
 
   // The chapter reader cannot expand without JS, so it hands the reader the
   // prerendered chapter instead of a dead button.
-  // The "Notes" marker advertises a panel that needs JavaScript, so it is
-  // hidden on this path rather than pointing at a surface that cannot show it.
-  await expect(page.getByText("Notes", { exact: true }).first()).toBeHidden();
-
   const readInstead = page.getByRole("link", { name: "John 14", exact: true }).first();
   await expect(readInstead).toBeVisible();
   await expect(readInstead).toHaveAttribute("href", "/bible/john-14");
