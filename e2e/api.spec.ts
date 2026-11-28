@@ -21,8 +21,8 @@ test("chapter API carries reading notes when they exist", async ({ request }) =>
   const acts = await (await request.get("/api/chapter?book=Acts&chapter=2")).json();
   expect(acts.background.setting).toContain("Pentecost");
 
-  const john = await (await request.get("/api/chapter?book=John&chapter=3")).json();
-  expect(john.background).toBeNull();
+  const genesis = await (await request.get("/api/chapter?book=Genesis&chapter=1")).json();
+  expect(genesis.background).toBeNull();
 });
 
 test("chapter API rejects bad input and missing chapters", async ({ request }) => {

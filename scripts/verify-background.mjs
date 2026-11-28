@@ -47,6 +47,9 @@ const CAPS = {
   gloss: 30,
 };
 
+const TRANSLIT_RE =
+  /^[A-Za-z\u0100-\u024F\u02B0-\u02FF\u1E00-\u1EFF][A-Za-z\u0100-\u024F\u02B0-\u02FF\u1E00-\u1EFF -]*$/;
+
 const errors = [];
 const fail = (msg) => errors.push(msg);
 
@@ -138,7 +141,10 @@ for (const [key, entry] of entries) {
     if (!chapterVerses.some((v) => termRe.test(v))) {
       fail(`${at}.term: "${t.term}" does not occur in ${key}`);
     }
-    if (typeof t.original !== "string" || !/^[A-Za-z][A-Za-z\u0100-\u024F -]*$/.test(t.original)) {
+    // Latin transliteration, including the macrons, h-dots, and modifier
+    // letters a Hebrew or Greek word needs. Greek and Hebrew script are
+    // outside these ranges and are rejected.
+    if (typeof t.original !== "string" || !TRANSLIT_RE.test(t.original)) {
       fail(`${at}.original: "${t.original}" is not a Latin-alphabet transliteration`);
     }
     if (typeof t.gloss !== "string" || !t.gloss.trim()) {

@@ -41,7 +41,7 @@ test("chapter notes arrive with the text and stay collapsed", async ({ page }) =
   // notes exist, so a reader knows before opening.
   const actsToggle = page.getByRole("button", { name: /Acts 2/ }).first();
   await expect(actsToggle.getByText("Notes", { exact: true })).toBeVisible();
-  await expect(page.getByRole("button", { name: /John 16/ }).first()).not.toContainText("Notes");
+  await expect(page.getByRole("button", { name: /John 16/ }).first()).toContainText("Notes");
 
   const reader = page.locator("#reader-chapter-Acts-2").first();
   await actsToggle.click();
@@ -58,6 +58,15 @@ test("chapter notes arrive with the text and stay collapsed", async ({ page }) =
   await notes.getByText("Notes on this chapter").click();
   await expect(notes).toContainText("Pentecost");
   await expect(notes).toContainText("glōssais");
+});
+
+test("the notes marker shows only where notes exist", async ({ page }) => {
+  await page.goto("/questions/what-is-the-trinity");
+  await expect(page.getByRole("button", { name: /Hebrews 1/ }).first().getByText("Notes", { exact: true })).toBeVisible();
+
+  const matthew = page.getByRole("button", { name: /Matthew 28/ }).first();
+  await expect(matthew).toBeVisible();
+  await expect(matthew.getByText("Notes", { exact: true })).toHaveCount(0);
 });
 
 test("the study itself is server-rendered without JavaScript", async ({ browser }) => {
